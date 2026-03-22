@@ -69,23 +69,26 @@ $$
 $$
 
 To obtain the Keynesian-cross representation, loglinearise the stochastic discount factor. This yields:[^3]
-
-$$q_{t,t+i}^j = ln\left(\frac{U_c(C_{t+i}^j)}{U_c(C_t^j)}\right) = -\sigma^{-1}(c_{t+i}^j - c_t^j)$$
-, where lower case variables represent log deviations from steady state. Loglinearising the Euler equation gives
-
-$$c_t = E_t c_{t+1} - \sigma r_t.$$
-
-$$c_t = E_t c_{t+1} + \sigma E_t q_{t,t+1}^j.$$
+$$
+q_{t,t+i}^j = \ln\left(\frac{U_c(C_{t+i}^j)}{U_c(C_t^j)}\right) = -\sigma^{-1}(c_{t+i}^j - c_t^j),
+$$
+where lower case variables represent log deviations from steady state. Loglinearising the Euler equation gives
+$$
+\begin{aligned}
+c_t &= E_t c_{t+1} - \sigma r_t.\\
+ &= E_t c_{t+1} + \sigma E_t q_{t,t+1}^j.
+\end{aligned}
+$$
 
 [^3]: The full derivation is for completion in the Appendix, and in the NK cross paper Bilbiie (2020) and its Appendix.
 
-Substituting the loglinearised Euler into the loglinearised IBC yields the consumption function of agent j, expressing consumption as a linear function of present and future real interest rates and output:
+Substituting the loglinearised Euler into the loglinearised IBC yields the consumption function of agent $j$, expressing consumption as a linear function of present and future real interest rates and output:
 $$
-c_t^j = -\delta\beta \sum_{i=0}^{\infty} \beta^i E_t r_{t+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i E_t y_{t+i}.
+c_t^j = -\sigma\beta \sum_{i=0}^{\infty} \beta^i E_t r_{t+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i E_t y_{t+i}.
 $$
 In recursive form, this is given by:
 $$
-c_t^j = (1 - \beta)y_t^j - \delta\beta r_t + \beta E_t c_{t+1}^j.
+c_t^j = (1 - \beta)y_t^j - \sigma\beta r_t + \beta E_t c_{t+1}^j.
 $$
 From this consumption function, it is clear that the marginal propensity to consume (MPC) out of purely transitory changes in income is equal to $1 − \beta$.
 
@@ -168,7 +171,7 @@ The FG puzzle can be illustrated in a simple RANK model with a static Phillips c
 $$
 \pi_t = \kappa c_t
 $$
-where κ is the elasticity of inflation to changes in consumption. Substituting this into the Euler-IS equation gives:
+where $\kappa$ is the elasticity of inflation to changes in consumption. Substituting this into the Euler-IS equation gives:
 $$
 c_t = E_t c_{t+1} - \sigma(i_t - E_t \pi_{t+1}) = v_0 E_t c_{t+1} - \sigma i_t,
 $$
@@ -177,7 +180,7 @@ $$
 v_0 \equiv 1 + \kappa \sigma \ge 1.
 $$
 
-The term $v_0$ is the elasticity of consumption to changes in expected future consumption. This is the effect of new shocks on aggregate demand when the central bank uses a nominal interest rate peg (i.e. the central bank follows a Taylor rule with a unit coefficient on expected inflation). Crucially $v_0$ is weakly larger than one as the elasticity of intertemporal substitution $\delta$ and the elasticity of inflation to consumption $\kappa$ are weakly positive.
+The term $v_0$ is the elasticity of consumption to changes in expected future consumption. This is the effect of new shocks on aggregate demand when the central bank uses a nominal interest rate peg (i.e. the central bank follows a Taylor rule with a unit coefficient on expected inflation). Crucially $v_0$ is weakly larger than one as the elasticity of intertemporal substitution $\sigma$ and the elasticity of inflation to consumption $\kappa$ are weakly positive.
 
 Iterating the Euler equation forward by T periods shows that:
 $$
@@ -189,11 +192,12 @@ When $v_0 > 1$, we have that $v_0^j$ is strictly increasing in $j$. This means t
 [^5]: The FG puzzle is still present with a forward-looking NKPC, though this is not necessary to drive the result.
 
 In the case where prices are fixed, $\kappa = 0$, we can see that $v_0 = 1$. A FG puzzle still exists in this scenario. Here, forward guidance always has the same effect regardless of how far into the future the central bank promises to cut the nominal interest rate.
+
 #### Supply Shocks
 
 A second area in which the RANK model produces counterfactual results is in the response of the output gap to supply shocks. In the RANK model, a positive shock to Total Factor Productivity leads to a negative output gap. This is counterintuitive, requiring that the central bank respond to a positive supply shock with expansionary monetary policy.
 
-The intuition behind this result can be shown within a very simple RANKstyle framework. Suppose that output is produced using a constant returns to scale production technology:
+The intuition behind this result can be shown within a very simple RANK-style framework. Suppose that output is produced using a constant returns to scale production technology:
 $$
 Y_t = A_t L_t
 $$
