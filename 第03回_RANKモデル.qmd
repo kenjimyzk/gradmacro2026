@@ -1,0 +1,770 @@
+---
+title: "第3回：RANKモデル"
+subtitle: "マクロ経済学B"
+author: "宮﨑憲治"
+date: "2026-04-04"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    code-fold: false
+    html-math-method: katex
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption: [lualatex, ja=standard, 12pt, a4paper]
+    toc: true
+    number-sections: true
+lang: ja
+---
+
+# 講義の目的と位置づけ
+
+## 講義の目的
+
+本講義では、代表的家計をもつニューケインジアン・モデルである **RANK (Representative Agent New Keynesian)** モデルを扱います。
+
+1. モデルの経済環境と主体ごとの問題設定
+2. 非線形均衡条件の導出
+3. 定常状態の計算
+4. 対数線形化による3本のニューケインジアン方程式
+5. 金融政策ショック・技術ショック・政府支出ショックの比較静学
+
+RANK は、RBC モデルに価格硬直性と金融政策を導入した最も基本的な DSGE モデルであり、その後の HANK や TANK を理解する基礎になります。
+
+
+
+## DSGEモデルとしての位置づけ
+
+DSGE モデルの分析は、基本的に次の3段階で進みます。
+
+1. 家計・企業・政府の最適化問題を定式化し、一階条件を導出する。
+2. 集計条件と市場均衡条件を加えて、モデル全体の均衡条件を得る。
+3. 非線形モデルを定常状態の周りで対数線形化し、状態空間表現やインパルス応答で分析する。
+
+RBC モデルでは景気変動の主因は技術ショックでしたが、RANK では独占的競争と価格硬直性を導入することで、金融政策や需要ショックが実体経済に影響します。ここでは Rotemberg 型の価格調整費用を用います。
+
+
+
+# モデルの設定と各主体の最適化
+
+## 経済環境
+
+### 主な変数
+
+| 記号 | 意味 |
+|---|---|
+| $Y_t$ | 産出 |
+| $C_t$ | 消費 |
+| $N_t$ | 労働投入 |
+| $W_t$ | 賃金率 |
+| $MC_t$ | 実質限界費用 |
+| $D_t$ | 配当 |
+| $R_t^N$ | 名目利子率 |
+| $R_t$ | 実質利子率 |
+| $\Pi_t$  | 粗インフレ率 |
+| $a_t$ | 技術ショック |
+| $m_t$ | 金融政策ショック |
+| $g_t$ | 政府支出ショック |
+| $x_t$ | 需給ギャップ（output gap） |
+| $y_t^f$ | 自然産出量 |
+| $r_t^f$ | 自然利子率 |
+
+### 補助的な記号と添字
+
+| 記号 | 意味 |
+|---|---|
+| $h$ | 家計の添字 |
+| $j$ | 中間財企業の添字 |
+| $B_t$ | 家計の債券保有 |
+| $\Theta_t$ | 家計の企業持分保有 |
+| $V_t$ | 株式価値、企業価値 |
+| $TX_t^H$ | 家計に課される一括税 |
+| $TX_t^I$ | 中間財企業に課される一括税 |
+| $P_t$ | 最終財の物価水準 |
+| $P_t^I(j)$ | 中間財企業 $j$ の価格 |
+| $Y_t^I(j)$ | 中間財企業 $j$ の産出 |
+| $N_t(j)$ | 中間財企業 $j$ の労働投入 |
+| $G_t$ | 政府支出 |
+| $G_Y$ | 定常状態の政府支出比率 $G/Y$ |
+| $\Lambda_t$ | 家計の限界効用 |
+| $U(\cdot)$ | 家計の効用関数 |
+| $F(\cdot)$ | 生産関数 |
+| $f_P(\cdot)$ | 価格調整費用関数 |
+
+### 対数線形化の記法
+
+本資料では、大文字は水準、小文字は定常状態からの対数乖離を表します。したがって
+$$
+y_t \equiv \log Y_t - \log Y,
+\quad
+c_t \equiv \log C_t - \log C,
+\quad
+n_t \equiv \log N_t - \log N
+$$
+のように書きます。同様に、$w_t, mc_t, d_t, r_t, r_t^N, \pi_t$ はそれぞれ $W_t, MC_t, D_t, R_t, R_t^N, \Pi_t$ の対数線形化後の変数です。また、$\Delta z_{t+1}\equiv z_{t+1}-z_t$ は一階差分を表します。
+
+ここで、政府支出と配当については
+$$
+g_t=\frac{G_t-G}{Y},
+\qquad
+d_t=\frac{D_t-D}{Y}
+$$
+と定義します。
+
+### 主なパラメータ
+
+| 記号 | 意味 |
+|||
+| $0\leq\alpha<1$ | 資本分配率に対応するパラメータ（労働分配率は $1-\alpha$） |
+| $0<\beta<1$ | 割引因子 |
+| $\gamma>0$ | 異時点間代替弾力性の逆数 |
+| $\varphi>0$ | フリッシュ弾力性の逆数 |
+| $\psi>1$ | 中間財の代替弾力性 |
+| $\eta\geq 0$ | 価格調整費用パラメータ |
+| $\phi>1$ | テーラールールのインフレ反応係数 |
+| $0<\rho_a,\rho_m,\rho_g<1$ | 各ショックの持続性 |
+| $0\leq\sigma<1/(\psi-1)$ | 中間財企業への補助金率 |
+
+
+
+
+## 家計
+
+家計 $h \in [0,1]$ は無限期間にわたって期待生涯効用
+$$
+\mathbb{E}_0 \sum_{t=0}^{\infty} \beta^t U(C_t(h), N_t(h))
+$$
+を最大化します。予算制約は
+
+$$
+C_t(h)+B_t(h)+\Theta_t(h)V_t+TX_t^H
+\le
+R_{t-1}^N \frac{P_{t-1}}{P_t} B_{t-1}(h)
++\Theta_{t-1}(h)\bigl(V_t+D_t\bigr)+W_t N_t(h)
+$$
+です。
+
+対称均衡では $C_t(h)=C_t$, $N_t(h)=N_t$, $\Theta_t(h)=1$ となり、以下の条件を得ます。
+
+### 家計の一階条件
+
+限界効用を
+$$
+\Lambda_t = U_C(C_t, N_t)
+$$
+とおくと、
+$$
+W_t = -\frac{U_N(C_t, N_t)}{\Lambda_t}
+$$
+となります。この式は、**実質賃金が消費と余暇の限界代替率に等しい**ことを意味します。すなわち、家計は 1 単位労働を増やしたときの限界不効用と、その対価として得られる賃金を通じた限界効用とが一致するように労働供給を選びます。
+$$
+1 = \mathbb{E}_t \left[ \beta \frac{\Lambda_{t+1}}{\Lambda_t} \frac{R_t^N}{\Pi_{t+1}} \right]
+$$
+が成立します。最後の式は家計の **Euler 方程式** であり、実質利子率と消費成長率を結びつけます。
+
+ここで、名目利子率 $R_t^N$、実質利子率 $R_t$、インフレ率 $\Pi_{t+1}$ の関係は **フィッシャー方程式**
+$$
+R_t = \mathbb{E}_t \left(\frac{R_t^N}{\Pi_{t+1}}\right)
+$$
+で与えられます。すなわち、実質利子率は名目利子率を期待インフレ率で調整したものです。対数線形近似の下では
+$$
+r_t = r_t^N - \mathbb{E}_t \pi_{t+1}
+$$
+となります。
+
+また、株式価値は
+$$
+V_t
+=
+\mathbb{E}_t \left[
+\beta \frac{\Lambda_{t+1}}{\Lambda_t}(V_{t+1}+D_{t+1})
+\right]
+$$
+で与えられます。これを前向きに繰り返し代入すると、
+$$
+V_t
+=
+\mathbb{E}_{t}\left[\sum^{\infty}_{i=1}\beta^{i}\frac{\Lambda_{t+i}}{\Lambda_{t}}D_{t+i}\right]=\left[\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i}R_{s}}\right]
+$$
+となります。つまり、株式価値は **将来の配当の割引現在価値** に等しくなります。
+
+ここで
+$$
+\beta\frac{\Lambda_{t+1}}{\Lambda_t}
+$$
+は **確率的割引因子** または **確率的割引率** と呼ばれます。将来の 1 単位の支払いを、家計の限界効用で評価した現在価値に変換する役割を持ちます。
+
+さらに上式を $V_t$ で割ると、
+$$
+1
+=
+\mathbb{E}_{t}\left[
+\beta\frac{\Lambda_{t+1}}{\Lambda_t}
+\frac{V_{t+1}+D_{t+1}}{V_t}
+\right]
+$$
+を得ます。これは、株式の総収益率（キャピタルゲイン＋インカムゲイン）を確率的割引因子で評価した期待値が 1 になる、という **資産価格の裁定条件** です。
+
+同様に、無リスク名目債券については
+$$
+1
+=
+\mathbb{E}_{t}\left[
+\beta\frac{\Lambda_{t+1}}{\Lambda_t}
+\frac{R_t^N}{\Pi_{t+1}}
+\right]
+$$
+が成立します。したがって、株式と債券はいずれも同じ確率的割引因子で価格づけされていることがわかります。
+
+
+## 企業
+
+### 最終財企業
+
+最終財市場は完全競争で、代表的最終財企業が中間財を束ねて最終財を生産します。
+
+生産関数は CES 型で、
+$$
+Y_t
+=
+\left(
+\int_0^1 Y_t^I(j)^{\frac{\psi-1}{\psi}} dj
+\right)^{\frac{\psi}{\psi-1}},
+\qquad \psi > 1
+$$
+です。利潤最大化から中間財需要関数と物価指数が得られます。
+
+$$\begin{aligned}
+Y_t^I(j) &= Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi}\\
+P_t&=
+\left[
+\int_0^1 P_t^I(j)^{1-\psi} dj
+\right]^{\frac{1}{1-\psi}}
+\end{aligned}$$
+
+### 中間財企業
+
+中間財企業 $j \in [0,1]$ は独占的競争市場で価格設定を行います。Rotemberg 型価格調整費用を導入すると、企業の配当は
+$$
+D_t(j)
+=
+(1+\sigma)\frac{P_t^I(j)}{P_t}Y_t^I(j)
+- f_P\!\left(\frac{P_t^I(j)}{P_{t-1}^I(j)}\right) Y_t
+- W_t N_t(j)
+- TX_t^I
+$$
+です。生産技術は
+$$
+Y_t^I(j) = e^{a_t} F(N_t(j))
+$$
+であり、技術ショック $a_t$ は以下にしたがいます：
+$$
+a_t = \rho_a a_{t-1} + e_t^a
+$$
+
+対称均衡では $P_t^I(j)=P_t$, $Y_t^I(j)=Y_t$ となり、
+$$\begin{aligned}
+W_t &= MC_t e^{a_t} F_N(N_t)\\
+Y_t &= e^{a_t} F(N_t)
+\end{aligned}$$
+となります。ここで$$
+および価格設定条件
+$$
+\Pi_t f_P'(\Pi_t)
+=
+\psi \left[ MC_t - (1+\sigma)\left(1-\frac{1}{\psi}\right) \right]
++ \beta \mathbb{E}_t \left[
+\frac{\Lambda_{t+1}}{\Lambda_t}
+\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1} f_P'(\Pi_{t+1})
+\right]
+$$
+を得ます。
+
+
+
+## 政府
+
+### 金融政策
+
+政府はテーラールールにより名目利子率を設定します。
+$$\begin{aligned}
+R_t^N &= \frac{1}{\beta} e^{-m_t} \Pi_t^\phi\\
+m_t &= \rho_m m_{t-1} + e_t^m
+\end{aligned}$$
+$m_t>0$ は予想外の利下げ、すなわち金融緩和ショックを表します。安定的な金融政策のためには、通常 $\phi>1$ が重要です。
+
+### 財政政策
+
+政府は中間財企業に補助金を与え、その財源として一括税を徴収します。また家計から一括税を徴収して政府支出 $G_t=g_t Y = TX_t^H$ を行います。 つまり$\sigma Y_t = TX^I$ および $G_t=g_t Y = TX_t^H$ です。政府支出ショックは以下の AR(1) プロセスに従います。
+$$\begin{aligned}
+g_t &= \rho_g g_{t-1} + e_t^g\\
+g_ t&=(G_t-G)/Y
+\end{aligned}$$
+
+
+
+# 均衡条件と定常状態
+
+## 均衡条件
+
+債券市場の均衡では
+$$
+B_t = 0
+$$
+が成り立ちます。財市場の均衡条件は、家計・企業・政府の予算制約をまとめることで
+$$
+C_t + G_t + f_P(\Pi_t)Y_t = Y_t
+$$
+となります。Rotemberg 型価格調整費用は、最終財の資源を消費するため、この形になります。
+
+
+
+## 関数形の特定化
+
+以下の標準的な関数形を用います。
+
+### 効用関数
+
+$$
+U(C_t,N_t)
+=
+\frac{C_t^{1-\gamma}}{1-\gamma}
+- \frac{N_t^{1+\varphi}}{1+\varphi}
+$$
+したがって
+$$
+U_C(C_t,N_t)=C_t^{-\gamma},
+\qquad
+-U_N(C_t,N_t)=N_t^\varphi
+$$
+です。
+
+### 生産関数
+
+$$
+F(N_t) =  N_t^{1-\alpha}
+$$
+
+### 価格調整費用関数
+
+Rotemberg 型価格調整費用関数を
+$$
+f_P(\Pi_t)=\frac{\eta}{2}(\Pi_t-1)^2
+$$
+とすると、
+$$
+f_P'(\Pi_t)=\eta(\Pi_t-1)
+$$
+です。
+
+
+
+## 非線形均衡条件
+
+上の特定化の下で、モデルは以下の非線形方程式系にまとめられます。
+
+### 家計
+
+$$\begin{aligned}
+1 &= \beta E_t \left( \frac{C_{t+1}^{-\gamma}}{C_t^{-\gamma}} \frac{R_t^N}{\Pi_{t+1}} \right)\\
+W_t &= C_t^\gamma N_t^\varphi\\
+R_t &= E_t \left( \frac{R_t^N}{\Pi_{t+1}} \right)
+\end{aligned}$$
+
+### 企業
+
+$$\begin{aligned}
+\eta \Pi_t(\Pi_t-1)
+=&
+\psi \left[MC_t-(1+\sigma)\left(1-\frac{1}{\psi}\right)\right]\\
+&+ \beta \eta E_t \left[
+\frac{C_{t+1}^{-\gamma}}{C_t^{-\gamma}}
+\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}(\Pi_{t+1}-1)
+\right]\\
+W_t =& (1-\alpha)MC_t \frac{Y_t}{N_t}\\
+D_t =& Y_t - \frac{\eta}{2}(\Pi_t-1)^2 Y_t - W_t N_t\\
+Y_t =& e^{a_t} N_t^{1-\alpha}
+\end{aligned}$$
+
+### 金融政策
+
+$$
+R_t^N = \frac{1}{\beta} e^{-m_t} \Pi_t^\phi
+$$
+
+### 資源制約
+
+$$
+Y_t = C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2 Y_t
+$$
+
+
+## 定常状態
+
+定常状態では
+$$
+\Pi = 1,
+\qquad
+R^N = R = \frac{1}{\beta},
+\qquad
+MC=(1+\sigma)\left(1-\frac{1}{\psi}\right)
+$$
+とします。また、政府支出比率 $G_Y \equiv G/Y$ を所与とすると、
+
+$$\begin{aligned}
+N
+&=
+\left[
+\frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
+\right]^{\frac{1}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+Y
+&=
+\left[
+\frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
+\right]^{\frac{1-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+C &= (1-G_Y)Y\\
+D &= \alpha Y
+\end{aligned}
+$$
+
+を得ます。特に $\alpha=G_Y=0$ かつ $MC=1$ なら、$N=Y=W=C=1$ です。
+
+
+
+# 対数線形化とニューケインジアン方程式
+
+## 対数線形化
+
+（$d_t$ と $g_t$ を除いて）定常状態の周りで各変数を対数線形化します。たとえば $x_t \equiv \log X_t - \log X$ と書きます。
+
+### 家計
+
+$$\begin{aligned}
+r_t &= \gamma E_t \Delta c_{t+1}\\
+w_t &= \gamma c_t + \varphi n_t\\
+r_t &= r_t^N - E_t \pi_{t+1}
+\end{aligned}$$
+
+### 企業
+
+$$\begin{aligned}
+\pi_t &= \frac{\psi}{\eta} mc_t + \beta E_t \pi_{t+1}\\
+w_t &= mc_t + y_t - n_t\\
+d_t &= (1-MC)y_t-(1-\alpha)MC\\
+y_t &= a_t + (1-\alpha)n_t
+\end{aligned}$$
+
+### 政策・集計
+
+$$\begin{aligned}
+r_t^N &= \phi \pi_t - m_t\\
+y_t &= (1-G_Y)c_t + g_t
+\end{aligned}$$
+
+
+
+## 限界費用と自然産出量
+
+上の式を用いると、限界費用は
+$$ 
+mc_t
+=
+\tilde{\gamma}(y_t-g_t)
++ \tilde{\varphi}(y_t-a_t)
+- y_t
+=
+(\tilde{\gamma}+\tilde{\varphi})
+\left(
+y_t-\zeta_a a_t-\zeta_g g_t
+\right)
+$$
+と整理できます。ここで
+$$
+\tilde{\varphi}=\frac{\varphi+\alpha}{1-\alpha},
+\qquad
+\tilde{\gamma}=\frac{\gamma}{1-G_Y}
+$$
+
+$$
+\zeta_a=\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}},
+\qquad
+\zeta_g=\frac{\tilde{\gamma}}{\tilde{\varphi}+\tilde{\gamma}}
+$$
+です。
+
+ここで重要なのは、以後の解が $\alpha$ と $G_Y$ そのものではなく、$\tilde{\varphi}$ と $\tilde{\gamma}$ を通じて書けることです。したがって、表記を簡単にするために $\alpha=0$, $G_Y=0$ と置いても、本質的には一般性を失いません。これらのパラメータの効果は、再定義された $\tilde{\varphi}$ と $\tilde{\gamma}$ の中に織り込まれているからです。
+
+$mc_t=0$、つまり価格が柔軟に調整されるときの産出量と利子率を自然産出量および自然利子率と呼びます。自然産出量は
+$$
+y_t^f = \zeta_a a_t + \zeta_g g_t
+$$
+となり、自然利子率は
+$$
+r_t^f
+=
+\tilde{\gamma} E_t \Delta y_{t+1}^f
+=
+-\tilde{\gamma}
+\left[
+(1-\rho_a)\zeta_a a_t + (1-\rho_g)\zeta_g g_t
+\right]
+$$
+となります。ここで、$\zeta_a$ は技術ショックの自然産出量への寄与度、$\zeta_g$ は政府支出ショックの自然産出量への寄与度を表します。$\zeta_a>0$および$0<\zeta_g<1$であり、$\tilde\gamma>1$の時、$0<\zeta_a<1$ となります。
+
+
+
+## 3本のニューケインジアン方程式
+
+需給ギャップを
+$$
+x_t = y_t - y_t^f
+$$
+と定義すると、RANK モデルは次の 3 本の式に集約されます。
+
+### 動学的IS曲線
+
+$$
+r_t = r_t^f + \tilde{\gamma} E_t[\Delta x_{t+1} - \Delta g_{t+1}]
+$$
+
+### ニューケインジアン・フィリップス曲線
+
+$$
+\pi_t = \kappa x_t + \beta E_t \pi_{t+1}
+$$
+ただし
+$$
+\kappa = MC(\tilde{\varphi}+\tilde{\gamma})\frac{\psi}{\eta}
+$$
+
+
+### 金融政策ルール
+
+$$
+r_t = \phi \pi_t - E_t \pi_{t+1} - m_t
+$$
+
+この 3 本が、大学院マクロで扱う標準的な NK モデルの中心です。
+
+
+
+# ショック別の比較静学
+
+## ショック別の数値解
+
+### 1. 金融政策ショックのみ
+
+$a_t=g_t=0$ のとき、$x_t=y_t$ かつ $r_t^f=0$ です。また
+$E_t\pi_{t+1}=\rho_m\pi_t$、$E_tx_{t+1}=\rho_m x_t$ なので、
+$$\begin{aligned}
+r_t &= \tilde{\gamma}(\rho_m-1)x_t\\
+\pi_t &= \kappa_m x_t\\
+r_t &= (\phi-\rho_m)\pi_t - m_t
+\end{aligned}$$
+です。ここで
+$$
+\kappa_m = \frac{\kappa}{1-\beta\rho_m}
+$$
+となります。したがって AD-AS 表現は
+$$\begin{aligned}
+\pi_t &= \frac{\tilde{\gamma}(\rho_m-1)x_t+m_t}{\phi-\rho_m}\\
+\pi_t &= \kappa_m x_t
+\end{aligned}$$
+となり、
+$$
+x_t = \Omega m_t,
+\qquad
+\pi_t = \kappa_m \Omega m_t,
+\qquad
+r_t = -\Omega_m m_t
+$$
+となります。ここで
+$$\begin{aligned}
+   \Omega
+=&
+\frac{1}{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)},\\
+\Omega_m
+=&\tilde{\gamma}(1-\rho_m)\Omega,
+\quad0<\Omega,\Omega_m<1
+\end{aligned}$$
+です。金融緩和ショックは需給ギャップとインフレを押し上げ、実質利子率を低下させます。
+
+### 2. 技術ショックのみ
+
+$m_t=g_t=0$ のとき、
+$$\begin{aligned}
+r_t &= r_t^f+\tilde{\gamma}(\rho_a-1)x_t\\
+\pi_t &= \kappa_a x_t\\
+r_t &= (\phi-\rho_a)\pi_t
+\end{aligned}$$
+です。ここで
+$$r_t^f=\tilde{\gamma}\zeta_a(\rho_a-1)a_t,\qquad
+x_t=y_t-\zeta_a a_t$$
+です。したがって、AD-AS 表現は
+$$\begin{aligned}
+\pi_t
+&=
+\frac{\tilde{\gamma}(\rho_a-1)x_t+\tilde{\gamma}\zeta_a(\rho_a-1)a_t}{\phi-\rho_a}\\
+\pi_t &= \kappa_a x_t
+\end{aligned}$$
+です。ここで
+$$ 
+\kappa_a = \frac{\kappa}{1-\beta\rho_a}
+$$
+となります。したがって
+$$
+x_t = -\zeta_a \Omega_a a_t,
+\qquad
+\pi_t = -\kappa_a \zeta_a \Omega_a a_t,
+\qquad
+r_t = -(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
+$$
+です。ここで
+$$
+\Omega_a
+=
+\frac{\tilde{\gamma}(1-\rho_a)}{\kappa_a(\phi-\rho_a)+\tilde{\gamma}(1-\rho_a)},
+\qquad 0<\Omega_a<1
+$$
+とです。技術ショックが正であれば自然産出量が上がるため、価格硬直性のもとでは需給ギャップとインフレが低下しうることがわかります。
+
+### 3. 政府支出ショックのみ
+
+$m_t=a_t=0$ のとき、
+$$\begin{aligned}
+r_t &= r_t^f+\tilde{\gamma}(\rho_g-1)(x_t-g_t)\\
+\pi_t &= \kappa_g x_t\\
+r_t &= (\phi-\rho_g)\pi_t
+\end{aligned}$$
+となります。ここで
+$$
+r_t^f=\tilde{\gamma}\zeta_g(\rho_g-1)g_t,
+\qquad
+x_t=y_t-\zeta_g g_t
+$$
+です。AD-AS 表現は
+$$\begin{aligned}
+\pi_t
+&=
+\frac{\tilde{\gamma}(\rho_g-1)x_t+\tilde{\gamma}(1-\zeta_g)(\rho_g-1)g_t}{\phi-\rho_g}\\
+\pi_t &= \kappa_g x_t
+\end{aligned}$$
+です。ここで
+$$ 
+\kappa_g = \frac{\kappa}{1-\beta\rho_g}
+$$
+です。したがって
+$$
+x_t = (1-\zeta_g)\Omega_g g_t,
+\qquad
+\pi_t = \kappa_g (1-\zeta_g)\Omega_g g_t,
+\qquad
+r_t = (\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
+$$
+です。ここで
+$$
+\Omega_g
+=
+\frac{\tilde{\gamma}(1-\rho_g)}{\kappa_g(\phi-\rho_g)+\tilde{\gamma}(1-\rho_g)},
+\qquad 0<\Omega_g<1
+$$
+です。政府支出拡大は総需要を押し上げるため、需給ギャップとインフレを上昇させます。
+
+### 4. まとめ
+
+以上をまとめると、
+
+$$\begin{aligned}
+x_t
+&=
+\Omega m_t
+- \zeta_a \Omega_a a_t
++ (1-\zeta_g)\Omega_g g_t\\
+\pi_t
+&=
+\kappa_m \Omega m_t
+- \kappa_a \zeta_a \Omega_a a_t
++ \kappa_g (1-\zeta_g)\Omega_g g_t\\
+r_t
+&=
+-\Omega_m m_t
+-(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
++(\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
+\end{aligned}$$
+
+です。また、
+$$
+y_t = x_t + y_t^f
+$$
+より、
+$$\begin{aligned}
+y_t
+&=
+\Omega_m m_t
++\zeta_a(1-\Omega_a)a_t
++\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t\\
+(1-G_Y)c_t
+=
+y_t-g_t
+&=
+\Omega_m m_t
++\zeta_a(1-\Omega_a)a_t
+-(1-\zeta_g)(1-\Omega_g)g_t\\
+(1-\alpha)n_t
+=
+y_t-a_t
+&=
+\Omega_m m_t
+-\{1-\zeta_a(1-\Omega_a)\}a_t
++\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t
+\end{aligned}$$
+と、産出・消費・労働の反応も復元できます。
+
+この式から、各ショックの直観的な効果も読み取れます。
+
+- 金融政策ショック $m_t$ は、$y_t$, $c_t$, $n_t$ のすべてを押し上げます。金融緩和によって実質利子率が低下し、総需要が拡大するためです。
+- 技術ショック $a_t$ は、$y_t$ を押し上げます。生産性の改善によって自然産出量が増加するためです。
+- 技術ショック $a_t$ は、$c_t$ にもプラスです。より少ない労働でより多くの財を生産できるため、消費可能資源が増えます。
+- 技術ショック $a_t$ は、$n_t$ には $\tilde\gamma>1$ の時、明確にマイナスです。生産性上昇により同じ産出をより少ない労働で達成できるためです。
+- 政府支出ショック $g_t$ は、$y_t$ にはプラスです。総需要の増加が産出を押し上げるためです。
+- 政府支出ショック $g_t$ は、$c_t$ にはマイナスです。資源制約のもとで政府支出の増加が民間消費を押しのけるためです。
+- 政府支出ショック $g_t$ は、$n_t$ にはプラスです。政府需要の増加に対応して生産を増やすため、労働投入が増加します。
+
+
+
+# 直観的な含意とまとめ
+
+## 直観的な含意
+
+1. **金融政策の実体効果**  
+   価格硬直性があるため、名目金利の変更は実質金利を通じて需要に影響し、産出とインフレを動かします。
+
+2. **自然産出量と需給ギャップの分離**  
+   技術ショックや政府支出ショックは自然産出量を動かすため、単に産出の動きだけでは景気の過熱・不足を判断できません。
+
+3. **テーラー原則の重要性**  
+   $\phi>1$ はインフレ上昇時に実質金利を十分引き上げるため、均衡の安定性に重要です。
+
+4. **RANK の限界**  
+   代表的家計を仮定しているため、異質性や流動性制約、分配面の効果は捨象されています。これが次の TANK や HANK への出発点です。
+
+
+
+## まとめ
+
+本講義では、RANK モデルを
+
+1. 家計・企業・政府の最適化問題
+2. 非線形均衡条件
+3. 定常状態
+4. 対数線形化された 3 本の NK 方程式
+5. ショック別の均衡反応
+
+という順に整理しました。
+
+RANK は、ニューケインジアン・マクロの最小限の作業台です。以後の発展モデルでは、ここで得た IS 曲線、フィリップス曲線、政策ルールの構造を保ったまま、家計異質性・金融摩擦・資本蓄積などを追加していきます。
