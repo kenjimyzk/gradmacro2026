@@ -117,7 +117,7 @@ $$
 ### 主なパラメータ
 
 | 記号 | 意味 |
-|||
+|---|---|
 | $0\leq\alpha<1$ | 資本分配率に対応するパラメータ（労働分配率は $1-\alpha$） |
 | $0<\beta<1$ | 割引因子 |
 | $\gamma>0$ | 異時点間代替弾力性の逆数 |
@@ -270,8 +270,7 @@ $$\begin{aligned}
 W_t &= MC_t e^{a_t} F_N(N_t)\\
 Y_t &= e^{a_t} F(N_t)
 \end{aligned}$$
-となります。ここで$$
-および価格設定条件
+となります。また、価格設定条件は
 $$
 \Pi_t f_P'(\Pi_t)
 =
@@ -380,7 +379,8 @@ R_t &= E_t \left( \frac{R_t^N}{\Pi_{t+1}} \right)
 $$\begin{aligned}
 \eta \Pi_t(\Pi_t-1)
 =&
-\psi \left[MC_t-(1+\sigma)\left(1-\frac{1}{\psi}\right)\right]\\
+\psi \left[MC_t-(1+\sigma)\left(
+   1-\frac{1}{\psi}\right)\right]\\
 &+ \beta \eta E_t \left[
 \frac{C_{t+1}^{-\gamma}}{C_t^{-\gamma}}
 \frac{Y_{t+1}}{Y_t}
