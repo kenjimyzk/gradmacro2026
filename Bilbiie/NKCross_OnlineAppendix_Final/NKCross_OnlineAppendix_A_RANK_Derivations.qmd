@@ -1,0 +1,184 @@
+---
+title: "NKCross_OnlineAppendix: A RANK Derivations"
+subtitle: "式展開の補完と日本語解説"
+format:
+  pdf:
+    documentclass: ltjsarticle
+    classoption:
+      - a4paper
+      - 12pt
+      - ja=standard
+      - lualatex
+    toc: true
+    number-sections: true
+    pdf-engine: lualatex
+---
+
+# A RANK Derivations: RANKモデルにおける式展開
+
+この資料は、Bilbiie "The New Keynesian Cross" の Online Appendixにある「A RANK Derivations」の式展開を日本語で解説し、省略されている途中の計算過程を補完するものです。
+
+## 1. 家計の最適化問題とフローの予算制約
+
+主体 $j$ は、無限期間にわたり消費 $C_t^j$、労働供給 $N_t^j$、および資産保有量を最適に選択し、以下の期待生涯効用を最大化します。
+$$
+\max \mathbb{E}_0 \sum_{t=0}^{\infty} \beta^t U\left(C_t^j, N_t^j\right)
+$$
+これを満たす制約条件は、以下のフロー予算制約の列です。
+$$
+B_t^j + \Omega_{t+1}^j V_t \le Z_t^j + \Omega_t^j (V_t + P_t D_t) + W_t N_t^j - P_t C_t^j
+$$
+ここで、各変数は以下の通りです。
+- $B_t^j$: 期末に保有する**状態条件付資産 (state-contingent assets)** の名目価値（企業株式を除く）
+- $Z_t^j$: 期首における、保有状態条件付資産からのペイオフ（当初の富）
+- $V_t$: 株式の平均市場価値
+- $D_t$: 株式の実質配当
+- $\Omega_t^j$: 株式保有シェア
+- $W_t N_t^j$ は名目労働所得、$P_t C_t^j$ は名目消費支出
+
+裁定機会の不在（No-arbitrage）により、確率的割引因子（Stochastic Discount Factor, SDF）$Q_{t,t+1}^j$ が存在し、不確実なペイオフを持つ資産価格は以下で評価されます。
+$$
+\frac{B_{t}^j}{P_t} = \mathbb{E}_t \left[ Q_{t,t+1}^j \frac{Z_{t+1}^j}{P_{t+1}} \right] 
+\quad \text{および} \quad
+\frac{V_t}{P_t} = \mathbb{E}_t \left[ Q_{t,t+1}^j \left( \frac{V_{t+1}}{P_{t+1}} + D_{t+1} \right) \right] \tag{1}
+$$
+株式価格の式を将来に向かって逐次代入（Forward iteration）し、無泡沫条件（No-bubble condition）を適用すると、ファンダメンタル価格方程式が得られます。
+$$
+\frac{V_t}{P_t} = \mathbb{E}_t \sum_{i=1}^{\infty} Q_{t,t+i}^j D_{t+i} \tag{1'}
+$$
+また、無リスクの実質利子率 $R_t$ および名目利子率 $I_t$ は、SDFを用いて以下のように定義されます。
+$$
+\frac{1}{R_t} = \mathbb{E}_t Q_{t,t+1}^j \tag{2}
+$$
+$$
+\frac{1}{I_t} = \mathbb{E}_t \left[ \frac{P_t}{P_{t+1}} Q_{t,t+1}^j \right]
+$$
+
+## 2. 異時点間予算制約 (Intertemporal Budget Constraint) の導出
+
+(1)の裁定条件を富の動学方程式に代入し、異時点間予算制約を導びきます。
+総資産（期首）を $X_t^j = Z_t^j + \Omega^j (V_t + P_t D_t)$ と定義します。$(1')$ 式を用いると、総資産は将来の配当の割引現在価値を含めて表現できます。
+$$
+\begin{aligned}
+X_t^j 
+&= Z_t^j + \Omega^j P_t \left( \frac{V_t}{P_t} + D_t \right)\\
+&= Z_t^j + \Omega^j P_t \left( \mathbb{E}_t \sum_{i=1}^{\infty} Q_{t,t+i}^j D_{t+i} + D_t \right)\\
+&= Z_t^j + \Omega^j \left( \mathbb{E}_t \sum_{i=0}^{\infty} P_t Q_{t,t+i}^j D_{t+i} \right)
+\end{aligned}
+$$
+(※ ただし $Q_{t,t}^j = 1$ としています)
+
+フロー予算制約において、株式の売買がない（$\Omega_{t+1}^j = \Omega_t^j = \Omega^j$）とすると、
+$$
+B_t^j \le Z_t^j + \Omega^j P_t D_t + W_t N_t^j - P_t C_t^j
+$$
+この式の両辺を $P_t$ で割り、$B_t^j/P_t = \mathbb{E}_t\left[Q_{t,t+1}^j Z_{t+1}^j / P_{t+1}\right]$ を代入します。ここで $X_{t+1}^j = Z_{t+1}^j + \Omega^j (V_{t+1} + P_{t+1}D_{t+1})$ より、これを前向きに解き、（ポンジ・ゲーム排除の）トランスバーサリティ条件 $\lim_{i\to\infty} \mathbb{E}_t \left[ Q_{t,t+i}^j X_{t+i}^j \right] = 0$ を用いると、標準的な異時点間予算制約が得られます。
+$$
+\mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j C_{t+i}^j \leq \frac{X_t^j}{P_t} + \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j \frac{W_{t+i}}{P_{t+i}} N_{t+i}^j
+$$
+ここで、$Z_t^j=0$（状態条件付資産が総供給ゼロのもとでの初期保有ゼロ）を仮定すれば $\frac{X_t^j}{P_t} = \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j (\Omega^j D_{t+i})$ となるため、上式は次のようにまとめることができます。
+$$
+\mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j C_{t+i}^j \leq \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j Y_{t+i}^j \tag{3}
+$$
+ただし、$Y_{t+i}^j$ は主体 $j$ の実質所得であり、
+$$
+Y_{t+i}^j = \Omega^j D_{t+i} + \frac{W_{t+i}}{P_{t+i}} N_{t+i}^j \tag{4}
+$$
+と定義されます。
+
+## 3. 最適化の1階条件とオイラー方程式
+
+制約付き最適化問題の1階条件より、SDFと限界効用の関係は次のように与えられます。
+$$
+Q_{t,t+1}^j = \beta \frac{U_C(C_{t+1}^j)}{U_C(C_t^j)}
+$$
+これを (2)式に代入すると、標準的なオイラー方程式となります。
+$$
+\frac{1}{R_t} = \mathbb{E}_t \left[ \beta \frac{U_C(C_{t+1}^j)}{U_C(C_t^j)} \right]
+$$
+
+### 変数の対数線形化
+定常状態からの対数乖離（log deviations）を小文字で表します（収益率については差分）。SDFについて、任意の期間 $i$ では
+$$
+Q_{t,t+i}^j = \beta^i \frac{U_C(C_{t+i}^j)}{U_C(C_t^j)}
+$$
+定常状態では $Q_i = \beta^i$ であり、（CRRA効用関数の性質 $U_C \propto C^{-\sigma^{-1}}$ などから）その対数乖離 $q_{t,t+i}^j$ は
+$$
+q_{t,t+i}^j \equiv \ln \frac{Q_{t,t+i}^j}{Q_i^j} 
+= \ln \left( \frac{C_{t+i}^j}{C_t^j} \right)^{-\sigma^{-1}}
+= -\sigma^{-1} (c_{t+i}^j - c_t^j)
+$$
+となります。これを書き換えると、任意の時点間での消費の関係が得られます。
+$$
+c_t^j = c_{t+i}^j + \sigma q_{t,t+i}^j
+$$
+期待値をとると、
+$$
+c_t^j = \mathbb{E}_t c_{t+i}^j + \sigma \mathbb{E}_t q_{t,t+i}^j \tag{5}
+$$
+また、$q$ の定義から、$q_{t,t+i}^j = q_{t,t+1}^j + q_{t+1,t+2}^j + \dots + q_{t+i-1,t+i}^j$ が成り立ちます。
+1期間のオイラー方程式 $r_t = - \mathbb{E}_t q_{t,t+1}^j$ を繰り返すと、
+$$
+\mathbb{E}_t q_{t,t+i}^j = \mathbb{E}_t \sum_{k=0}^{i-1} q_{t+k, t+k+1}^j = - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k}
+$$
+と表現できます。
+
+## 4. 消費関数 (Consumption Function) の導出
+
+次に、異時点間予算制約 (3)式を定常状態の周りで対数線形化します。定常状態では $\bar{C}^j = \bar{Y}^j$ を仮定すると、線形化された式は
+$$
+\mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (q_{t,t+i}^j + c_{t+i}^j) = \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (q_{t,t+i}^j + y_{t+i}^j)
+$$
+となります。この両辺に $(\sigma - 1) \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t q_{t,t+i}^j$ を加えます。
+$$
+\mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + c_{t+i}^j) = \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + y_{t+i}^j)
+$$
+
+### 左辺の整理
+左辺の各項の括弧内は、式(5)よりそのまま現在の消費 $c_t^j$ になります。（$\sigma \mathbb{E}_{t} q_{t,t+i}^j + \mathbb{E}_{t}c_{t+i}^j = c_t^j$）
+$$
+\text{左辺} = \sum_{i=0}^{\infty} \beta^i c_t^j = \frac{1}{1-\beta} c_t^j
+$$
+
+### 右辺の整理
+右辺は $\sigma \sum \beta^i \mathbb{E}_t q_{t,t+i}^j + \sum \beta^i \mathbb{E}_t y_{t+i}^j$ です。$q$ の和について、$\mathbb{E}_t q_{t,t+i}^j = - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k}$ を用いて計算します（ただし $q_{t,t}^j = 0$ なので $i=1$ から開始します）。
+シグマの順序を交換して整理します。
+$$
+\begin{aligned}
+\sum_{i=1}^{\infty} \beta^i \left( - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k} \right)
+&= - \mathbb{E}_t \sum_{k=0}^{\infty} r_{t+k} \sum_{i=k+1}^{\infty} \beta^i \\
+&= - \mathbb{E}_t \sum_{k=0}^{\infty} r_{t+k} \frac{\beta^{k+1}}{1-\beta} \\
+&= - \frac{\beta}{1-\beta} \sum_{k=0}^{\infty} \beta^k \mathbb{E}_t r_{t+k}
+\end{aligned}
+$$
+ここでインデックス $k$ を $i$ に書き直すと、右辺は
+$$
+\text{右辺} = - \sigma \frac{\beta}{1-\beta} \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+$$
+
+### 消費の再帰的表現 (Recursive Form) の獲得
+左辺と右辺を結びつけ、全体に $(1-\beta)$ を乗じます。
+$$
+c_t^j = - \sigma \beta \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+$$
+ここで $i=0$ の項（現在の項）と、$i \ge 1$ の項（将来の項）に分解します。
+$$
+c_t^j = - \sigma \beta r_t + (1-\beta)y_t^j 
+- \sigma \beta \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t r_{t+i} 
++ (1-\beta) \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+$$
+一方で、$t+1$ 期における同様の式を考え、その期待値をとり $\beta$ をかけたもの $\beta \mathbb{E}_t c_{t+1}^j$ は以下のようになります。
+$$
+\begin{aligned}
+\beta \mathbb{E}_t c_{t+1}^j 
+&= \beta \mathbb{E}_t \left[ - \sigma \beta \sum_{i=0}^{\infty} \beta^i r_{t+1+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i y_{t+1+i}^j \right] \\
+&= - \sigma \beta \sum_{i=0}^{\infty} \beta^{i+1} \mathbb{E}_t r_{t+1+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^{i+1} \mathbb{E}_t y_{t+1+i}^j \\
+&= - \sigma \beta \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + (1-\beta) \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+\end{aligned}
+$$
+これは、上で分解した $c_t^j$ の「将来の項（$i \ge 1$）」と完全に一致します。
+したがって、将来の項を丸ごと $\beta \mathbb{E}_t c_{t+1}^j$ で置き換えることで、最終的な再帰的表現の消費関数が得られます。
+$$
+c_t^j = (1-\beta) y_t^j - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}^j \tag{6}
+$$
+この式は、RANKモデルにおける代表的家計の消費が、「現在の所得」「現在の実質利子率」および「明日の消費の期待値」によって直感的に決定されることを示しています。
