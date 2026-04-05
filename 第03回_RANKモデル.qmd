@@ -366,11 +366,9 @@ f_P'(\Pi_t)=\eta(\Pi_t-1)
 $$
 です。
 
-
-
 ## 非線形均衡条件
 
-上の特定化の下で、モデルは以下の非線形方程式系にまとめられます。
+上の特定化の下で、$\Pi_t=P_t/P_{t-1}$ とすると、モデルは以下の非線形方程式系にまとめられます。
 
 ### 家計
 
@@ -405,9 +403,10 @@ $$
 
 ### 資源制約
 
-$$
-Y_t = C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2 Y_t
-$$
+$$\begin{aligned}
+Y_t &= C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2\\
+G_t &= G + g_t Y
+\end{aligned}$$
 
 
 ## 定常状態
@@ -570,7 +569,7 @@ $\pi_t=(\psi/\eta)mc_t+beta \mathbb{E}_t\pi_{t+1}$に代入すると、
 $$
 \pi_t = \kappa x_t + \beta \mathbb{E}_t \pi_{t+1}
 $$
-になリマス。ただし
+になります。ただし
 $$
 \kappa = MC(\tilde{\varphi}+\tilde{\gamma})\frac{\psi}{\eta}
 $$
@@ -772,7 +771,7 @@ y_t-a_t
 -\{1-\zeta_a(1-\Omega_a)\}a_t
 +\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t
 \end{aligned}$$
-と、産出・消費・労働の反応も復元できます。特に価格が硬直的な時、$y_t=m_t/{\tilde{\gamma}(1-\rho_m)} + g_t$ となります。
+と、産出・消費・労働の反応も復元できます。特に価格が硬直的な時、$y_t=m_t/\{\tilde{\gamma}(1-\rho_m)\} + g_t$ となります。
 
 この式から、各ショックの直観的な効果も読み取れます。
 
