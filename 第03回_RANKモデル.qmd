@@ -66,7 +66,7 @@ RBC モデルでは景気変動の主因は技術ショックでしたが、RANK
 | $R_t$ | 実質利子率 |
 | $\Pi_t$  | 粗インフレ率 |
 | $a_t$ | 技術ショック |
-| $m_t$ | 金融政策ショック |
+| $m_t$ | 金融緩和ショック |
 | $g_t$ | 政府支出ショック |
 | $x_t$ | 需給ギャップ（output gap） |
 | $y_t^f$ | 自然産出量 |
@@ -247,7 +247,9 @@ P_t&=
 
 ### 中間財企業
 
-中間財企業 $j \in [0,1]$ は独占的競争市場で価格設定を行います。Rotemberg 型価格調整費用を導入すると、企業の配当は
+中間財企業 $j \in [0,1]$ は独占的競争市場で価格設定を行います。独占的競争では企業はマークアップを課すため、産出が社会的に最適な水準を下回ります。そこで政府が補助金率 $\sigma$ を与えてこの歪みを緩和します。特に $\sigma = 1/(\psi-1)$ とすると定常状態での実質限界費用が 1 となり、独占の歪みが完全に除去されます。
+
+Rotemberg 型価格調整費用を導入すると、企業の配当は
 $$
 D_t(j)
 =
@@ -256,11 +258,11 @@ D_t(j)
 - W_t N_t(j)
 - TX_t^I
 $$
-です。生産技術は
+です。第 1 項は補助金込みの売上収入、第 2 項は価格変更に伴う調整費用、第 3 項は人件費、第 4 項は一括税です。生産技術は
 $$
 Y_t^I(j) = e^{a_t} F(N_t(j))
 $$
-であり、技術ショック $a_t$ は以下にしたがいます：
+であり、技術ショック $a_t$ は以下の AR(1) プロセスに従います。
 $$
 a_t = \rho_a a_{t-1} + e_t^a
 $$
@@ -270,7 +272,9 @@ $$\begin{aligned}
 W_t &= MC_t e^{a_t} F_N(N_t)\\
 Y_t &= e^{a_t} F(N_t)
 \end{aligned}$$
-となります。また、価格設定条件は
+となります。
+
+企業は株式価値（将来の配当の割引現在価値）を最大化するように価格 $P_t^I(j)$ を設定します。その一階条件を導出し、対称均衡を適用すると、価格設定条件は
 $$
 \Pi_t f_P'(\Pi_t)
 =
@@ -281,7 +285,7 @@ $$
 \Pi_{t+1} f_P'(\Pi_{t+1})
 \right]
 $$
-を得ます。
+となります。この式は動学的な「限界収入＝限界費用」条件の一般化です。左辺は価格変更の限界費用、右辺第 1 項は現在の限界収入と限界費用の乖離、第 2 項は将来の価格調整費用の現在価値を表します。すなわち、企業は今期のマークアップだけでなく、将来の価格調整費用も考慮して価格を決めます。
 
 
 
@@ -294,14 +298,14 @@ $$\begin{aligned}
 R_t^N &= \frac{1}{\beta} e^{-m_t} \Pi_t^\phi\\
 m_t &= \rho_m m_{t-1} + e_t^m
 \end{aligned}$$
-$m_t>0$ は予想外の利下げ、すなわち金融緩和ショックを表します。安定的な金融政策のためには、通常 $\phi>1$ が重要です。
+$m_t>0$ は予想外の利下げ、すなわち金融緩和ショックを表します。均衡の安定性のためには $\phi>1$（**テーラー原則**）が必要であり、これはインフレが上昇したときに名目利子率をそれ以上に引き上げることで実質利子率を上昇させ、需要を抑制する条件です。
 
 ### 財政政策
 
-政府は中間財企業に補助金を与え、その財源として一括税を徴収します。また家計から一括税を徴収して政府支出 $G_t=g_t Y = TX_t^H$ を行います。 つまり$\sigma Y_t = TX^I$ および $G_t=g_t Y = TX_t^H$ です。政府支出ショックは以下の AR(1) プロセスに従います。
+政府は中間財企業に補助金 $\sigma$ を与え、その財源として中間財企業から一括税 $TX_t^I = \sigma Y_t$ を徴収します。また、家計から一括税 $TX_t^H = G_t$ を徴収して政府支出 $G_t$ を賄います。政府支出ショックは以下の AR(1) プロセスに従います。
 $$\begin{aligned}
 g_t &= \rho_g g_{t-1} + e_t^g\\
-g_ t&=(G_t-G)/Y
+g_t &= (G_t-G)/Y
 \end{aligned}$$
 
 
@@ -318,7 +322,7 @@ $$
 $$
 C_t + G_t + f_P(\Pi_t)Y_t = Y_t
 $$
-となります。Rotemberg 型価格調整費用は、最終財の資源を消費するため、この形になります。
+となります。なお、補助金収入 $\sigma Y_t$ と一括税 $TX_t^I = \sigma Y_t$ は相殺されるため、資源制約には現れません。Rotemberg 型価格調整費用 $f_P(\Pi_t)Y_t$ は、企業が価格を変更する際に実物資源を消費することを表しており、インフレがゼロでないときに経済全体の利用可能資源が減少します。
 
 
 
@@ -406,7 +410,7 @@ $$
 
 ## 定常状態
 
-定常状態では
+定常状態ではすべてのショックがゼロで、各変数が一定です。$\Pi = 1$（ゼロインフレ）とすると、価格調整費用がゼロとなり、Euler 方程式とテーラールールからそれぞれ $R = 1/\beta$、$R^N = 1/\beta$ が得られます。また、価格設定条件で $\Pi=1$ とすると、左辺がゼロになるため
 $$
 \Pi = 1,
 \qquad
@@ -414,7 +418,13 @@ R^N = R = \frac{1}{\beta},
 \qquad
 MC=(1+\sigma)\left(1-\frac{1}{\psi}\right)
 $$
-とします。また、政府支出比率 $G_Y \equiv G/Y$ を所与とすると、
+となります。政府支出比率 $G_Y \equiv G/Y$ を所与とすると、資源制約から $C = (1-G_Y)Y$、生産関数から $Y = N^{1-\alpha}$ です。賃金の一階条件 $W = C^\gamma N^\varphi$ と労働需要条件 $W = (1-\alpha)MC \cdot Y/N$ を等置し、$C$ と $Y$ を $N$ で表すと
+$$
+[(1-G_Y)N^{1-\alpha}]^\gamma N^\varphi
+=
+(1-\alpha)MC \cdot N^{-\alpha}
+$$
+となります。$N$ についてまとめると
 
 $$\begin{aligned}
 N
@@ -424,6 +434,8 @@ N
 \right]^{\frac{1}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
 Y
 &=
+N^{1-\alpha}
+=
 \left[
 \frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
 \right]^{\frac{1-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
@@ -455,9 +467,19 @@ r_t &= r_t^N - E_t \pi_{t+1}
 $$\begin{aligned}
 \pi_t &= \frac{\psi}{\eta} mc_t + \beta E_t \pi_{t+1}\\
 w_t &= mc_t + y_t - n_t\\
-d_t &= (1-MC)y_t-(1-\alpha)MC\\
+d_t &= (1-MC)y_t - (1-\alpha)MC \cdot w_t\\
 y_t &= a_t + (1-\alpha)n_t
 \end{aligned}$$
+
+配当の式は以下のように導出します。定常状態では $\Pi=1$（価格調整費用ゼロ）かつ補助金と税が相殺するため、$D_t = Y_t - W_t N_t$ です。定常状態の賃金条件 $W = (1-\alpha)MC \cdot Y/N$ より $WN = (1-\alpha)MC \cdot Y$ なので、$d_t = (D_t - D)/Y$ と定義すると
+$$
+d_t = y_t - \frac{WN}{Y}(w_t + n_t) = y_t - (1-\alpha)MC(w_t + n_t)
+$$
+となります。さらに生産関数から $(1-\alpha)n_t = y_t$ を用いると
+$$
+d_t = y_t - (1-\alpha)MC \cdot w_t - MC \cdot y_t = (1-MC)y_t - (1-\alpha)MC \cdot w_t
+$$
+を得ます。
 
 ### 政策・集計
 
@@ -470,7 +492,11 @@ y_t &= (1-G_Y)c_t + g_t
 
 ## 限界費用と自然産出量
 
-上の式を用いると、限界費用は
+上の対数線形化された式を用いて、限界費用 $mc_t$ を産出 $y_t$ と外生ショックのみで表します。まず、賃金の 2 つの式を等置すると
+$$
+mc_t = w_t - (y_t - n_t) = \gamma c_t + \varphi n_t - (y_t - n_t)
+$$
+となります。資源制約 $y_t = (1-G_Y)c_t + g_t$ から $c_t = (y_t - g_t)/(1-G_Y)$、生産関数 $y_t = a_t + (1-\alpha)n_t$ から $n_t = (y_t - a_t)/(1-\alpha)$ を代入すると
 $$ 
 mc_t
 =
@@ -528,9 +554,11 @@ $$
 
 ### 動学的IS曲線
 
+Euler 方程式 $r_t = \gamma E_t \Delta c_{t+1}$ に資源制約 $c_t = (y_t - g_t)/(1-G_Y)$ を代入すると $r_t = \tilde{\gamma} E_t [\Delta y_{t+1} - \Delta g_{t+1}]$ となります。$y_t = x_t + y_t^f$ を用いて自然利子率 $r_t^f$ の定義を適用すると
 $$
 r_t = r_t^f + \tilde{\gamma} E_t[\Delta x_{t+1} - \Delta g_{t+1}]
 $$
+を得ます。この式は、実質利子率が高いほど消費（需要）の成長率が高まることを表しており、IS 曲線の動学版です。$G_Y = 0$ のとき $\Delta g_{t+1}$ の項は消え、標準的な形 $r_t = r_t^f + \tilde{\gamma} E_t \Delta x_{t+1}$ になります。
 
 ### ニューケインジアン・フィリップス曲線
 
@@ -570,10 +598,10 @@ r_t &= (\phi-\rho_m)\pi_t - m_t
 $$
 \kappa_m = \frac{\kappa}{1-\beta\rho_m}
 $$
-となります。したがって AD-AS 表現は
+となります。この体系を $(\pi_t, x_t)$ 平面上の 2 本の直線として描くことができます。IS 曲線＋政策ルールを組み合わせた式が**総需要（AD）曲線**、フィリップス曲線が**総供給（AS）曲線**に対応します。
 $$\begin{aligned}
-\pi_t &= \frac{\tilde{\gamma}(\rho_m-1)x_t+m_t}{\phi-\rho_m}\\
-\pi_t &= \kappa_m x_t
+\pi_t &= \frac{\tilde{\gamma}(\rho_m-1)x_t+m_t}{\phi-\rho_m} & \text{(AD)}\\
+\pi_t &= \kappa_m x_t & \text{(AS)}
 \end{aligned}$$
 となり、
 $$
@@ -590,9 +618,16 @@ $$\begin{aligned}
 \frac{1}{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)},\\
 \Omega_m
 =&\tilde{\gamma}(1-\rho_m)\Omega,
-\quad0<\Omega,\Omega_m<1
+\quad0\leq\Omega,\Omega_m\leq1
 \end{aligned}$$
 です。金融緩和ショックは需給ギャップとインフレを押し上げ、実質利子率を低下させます。
+
+名目利子率は
+$$\begin{aligned}
+r_t^N &= r_t + E_t \pi_{t+1}=r_t+\rho_m \pi_t\\
+&=\frac{\rho_{m}\kappa_{m}-\tilde{\gamma}(1-\rho_{m})}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}m_{t}
+\end{aligned}$$
+となります。金融緩和ショック（$m_t > 0$）は直接的には名目利子率を引き下げますが、インフレ期待の上昇を通じて名目利子率を押し上げる効果もあり、パラメータ次第では名目利子率が上昇しうることがわかります。
 
 ### 2. 技術ショックのみ
 
@@ -629,9 +664,9 @@ $$
 \Omega_a
 =
 \frac{\tilde{\gamma}(1-\rho_a)}{\kappa_a(\phi-\rho_a)+\tilde{\gamma}(1-\rho_a)},
-\qquad 0<\Omega_a<1
+\qquad 0\leq\Omega_a\leq1
 $$
-とです。技術ショックが正であれば自然産出量が上がるため、価格硬直性のもとでは需給ギャップとインフレが低下しうることがわかります。
+です。技術ショックが正であれば自然産出量が上がるため、価格硬直性のもとでは需給ギャップとインフレが低下しうることがわかります。
 
 ### 3. 政府支出ショックのみ
 
@@ -671,7 +706,7 @@ $$
 \Omega_g
 =
 \frac{\tilde{\gamma}(1-\rho_g)}{\kappa_g(\phi-\rho_g)+\tilde{\gamma}(1-\rho_g)},
-\qquad 0<\Omega_g<1
+\qquad 0\leq\Omega_g\leq1
 $$
 です。政府支出拡大は総需要を押し上げるため、需給ギャップとインフレを上昇させます。
 
@@ -696,8 +731,10 @@ r_t
 -(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
 +(\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
 \end{aligned}$$
+です。なお、価格が柔軟な時（$\kappa\to\infty$）、$\Omega,\;\Omega_{m},\;\Omega_{a},\;\Omega_{g}\to 0$なので、$x_t=0$。
+価格が硬直的な時（$\kappa\to0$）、$\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1$なので、$x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}$となります。
 
-です。また、
+また、
 $$
 y_t = x_t + y_t^f
 $$
@@ -723,7 +760,7 @@ y_t-a_t
 -\{1-\zeta_a(1-\Omega_a)\}a_t
 +\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t
 \end{aligned}$$
-と、産出・消費・労働の反応も復元できます。
+と、産出・消費・労働の反応も復元できます。特に価格が硬直的な時、$y_t=m_t/{\tilde{\gamma}(1-\rho_m)} + g_t$ となります。
 
 この式から、各ショックの直観的な効果も読み取れます。
 
