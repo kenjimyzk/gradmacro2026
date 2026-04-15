@@ -1,4 +1,24 @@
-# Bilbiie, *Heterogeneous Agent Macroeconomics* Chapter 2: トピックセンテンス一覧（日本語版）
+---
+title: "Bilbiie, *Heterogeneous Agent Macroeconomics* Chapter 2"
+subtitle: "トピックセンテンス一覧（日本語版）"
+author: "宮﨑憲治"
+date: "2026-04-14"
+format:
+  html: default
+  pdf:
+    documentclass: ltjsarticle
+    classoption:
+      - a4paper
+      - 12pt
+      - ja=standard
+      - lualatex
+    toc: true
+    number-sections: false
+    pdf-engine: lualatex
+---
+
+# トピックセンテンス一覧
+
 
 ## 導入部
 

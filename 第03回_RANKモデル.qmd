@@ -98,11 +98,11 @@ RBC モデルでは景気変動の主因は技術ショックでしたが、RANK
 
 本資料では、大文字は水準、小文字は定常状態からの対数乖離を表します。したがって
 $$
-y_t \equiv \log Y_t - \log Y,
+y_t \equiv \ln Y_t - \ln Y,
 \quad
-c_t \equiv \log C_t - \log C,
+c_t \equiv \ln C_t - \ln C,
 \quad
-n_t \equiv \log N_t - \log N
+n_t \equiv \ln N_t - \ln N
 $$
 のように書きます。同様に、$w_t, mc_t, d_t, r_t, r_t^N, \pi_t$ はそれぞれ $W_t, MC_t, D_t, R_t, R_t^N, \Pi_t$ の対数線形化後の変数です。また、$\Delta z_{t+1}\equiv z_{t+1}-z_t$ は一階差分を表します。
 
@@ -156,7 +156,7 @@ V_t&=
 \beta \frac{U_{C,t+1}}{U_{C,t}}(V_{t+1}+D_{t+1})
 \right]
 \end{aligned}$$
-ただし、$U_{C,t}=U_C(C_t, N_t)$、$U_{N,t}=U_N(C_t, N_t)$です。
+ただし、$\Pi_t=P_t/P_{t-1}$、$U_{C,t}=U_C(C_t, N_t)$、$U_{N,t}=U_N(C_t, N_t)$です。
 
 ### 家計の一階条件
 
@@ -242,7 +242,7 @@ D_t(j)
 $$
 です。第 1 項は補助金込みの売上収入、第 2 項は価格変更に伴う調整費用、第 3 項は人件費、第 4 項は一括税です。生産技術は
 $$
-Y_t^I(j) = e^{a_t} F(N_t(j))
+Y_t^I(j) = \exp(a_t) F(N_t(j))
 $$
 であり、技術ショック $a_t$ は以下の AR(1) プロセスに従います。
 $$
@@ -251,8 +251,8 @@ $$
 
 対称均衡では $P_t^I(j)=P_t$, $Y_t^I(j)=Y_t$ となり、
 $$\begin{aligned}
-W_t &= MC_t e^{a_t} F_N(N_t)\\
-Y_t &= e^{a_t} F(N_t)
+W_t &= MC_t \exp(a_t) F_N(N_t)\\
+Y_t &= \exp(a_t) F(N_t)
 \end{aligned}$$
 となります。
 
@@ -277,7 +277,7 @@ $$
 
 政府はテーラールールにより名目利子率を設定します。
 $$\begin{aligned}
-R_t^N &= \frac{1}{\beta} e^{-m_t} \Pi_t^\phi\\
+R_t^N &= \frac{1}{\beta} \exp(-m_t) \Pi_t^\phi\\
 m_t &= \rho_m m_{t-1} + e_t^m
 \end{aligned}$$
 $m_t>0$ は予想外の利下げ、すなわち金融緩和ショックを表します。均衡の安定性のためには $\phi>1$（**テーラー原則**）が必要であり、これはインフレが上昇したときに名目利子率をそれ以上に引き上げることで実質利子率を上昇させ、需要を抑制する条件です。
@@ -447,7 +447,7 @@ $$
 
 ## 対数線形化
 
-（$d_t$ と $g_t$ を除いて）定常状態の周りで各変数を対数線形化します。たとえば $x_t \equiv \log X_t - \log X$ と書きます。
+（$d_t$ と $g_t$ を除いて）定常状態の周りで各変数を対数線形化します。たとえば $x_t \equiv \ln X_t - \ln X$ と書きます。
 
 ### 家計
 
@@ -462,7 +462,7 @@ r_t &= r_t^N - \mathbb{E}_t \pi_{t+1}
 $$\begin{aligned}
 \pi_t &= \frac{\psi}{\eta} mc_t + \beta \mathbb{E}_t \pi_{t+1}\\
 w_t &= mc_t + y_t - n_t\\
-d_t &= (1-MC)y_t - (1-\alpha)MC \cdot w_t\\
+d_t &= y_t - (1-\alpha)MC(w_t+n_t)\\
 y_t &= a_t + (1-\alpha)n_t
 \end{aligned}$$
 
@@ -470,11 +470,7 @@ y_t &= a_t + (1-\alpha)n_t
 $$
 d_t = y_t - \frac{WN}{Y}(w_t + n_t) = y_t - (1-\alpha)MC(w_t + n_t)
 $$
-となります。さらに生産関数から $(1-\alpha)n_t = y_t$ を用いると
-$$
-d_t = y_t - (1-\alpha)MC \cdot w_t - MC \cdot y_t = (1-MC)y_t - (1-\alpha)MC \cdot w_t
-$$
-を得ます。
+となります。
 
 ### 政策・集計
 
@@ -492,25 +488,24 @@ $$
 mc_t = w_t - (y_t - n_t) = \gamma c_t + \varphi n_t - (y_t - n_t)
 $$
 となります。資源制約 $y_t = (1-G_Y)c_t + g_t$ から $c_t = (y_t - g_t)/(1-G_Y)$、生産関数 $y_t = a_t + (1-\alpha)n_t$ から $n_t = (y_t - a_t)/(1-\alpha)$ を代入すると
-$$ 
+$$\begin{aligned}
 mc_t
-=
+&=
 \tilde{\gamma}(y_t-g_t)
-+ \tilde{\varphi}(y_t-a_t)
-- y_t
-=
++ (\tilde{\varphi}+1)(y_t-a_t)
+- y_t\\
+&=
 (\tilde{\gamma}+\tilde{\varphi})
 \left(
 y_t-\zeta_a a_t-\zeta_g g_t
 \right)
-$$
+\end{aligned}$$
 と整理できます。ここで
 $$
 \tilde{\varphi}=\frac{\varphi+\alpha}{1-\alpha},
 \qquad
 \tilde{\gamma}=\frac{\gamma}{1-G_Y}
 $$
-
 $$
 \zeta_a=\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}},
 \qquad
@@ -525,13 +520,13 @@ $$
 y_t^f = \zeta_a a_t + \zeta_g g_t
 $$
 となり、自然利子率は
-$$
+$$\begin{aligned}
 r_t^f
-=
-\tilde{\gamma} \mathbb{E}_t \Delta y_{t+1}^f
-=
--\tilde{\gamma}(1-\rho_a)\zeta_a a_t -\tilde{\gamma} (1-\rho_g)\zeta_g g_t
-$$
+&=
+\tilde{\gamma} \mathbb{E}_t [\Delta y_{t+1}^f-\Deltag_{t+1}]\\
+&=
+-\tilde{\gamma}(1-\rho_a)\zeta_a a_t + \tilde{\gamma} (1-\rho_g)(1-\zeta_g) g_t
+\end{aligned}$$
 となります。ここで、$\zeta_a$ は技術ショックの自然産出量への寄与度、$\zeta_g$ は政府支出ショックの自然産出量への寄与度を表します。$\zeta_a>0$ および $0<\zeta_g<1$ は常に成り立ちます。
 
 $\zeta_a$ と 1 の大小関係は $\tilde{\gamma}$ と 1 の大小で決まります。生産関数 $y_t = a_t + (1-\alpha)n_t$ から自然産出量のもとでの労働反応は
@@ -558,14 +553,14 @@ $$
 
 Euler 方程式 $r_t = \gamma \mathbb{E}_t \Delta c_{t+1}$ に資源制約 $c_t = (y_t - g_t)/(1-G_Y)$ を代入すると $r_t = \tilde{\gamma} \mathbb{E}_t [ \Delta y_{t+1} - \Delta g_{t+1} ]$ となります。$y_t = x_t + y_t^f$ を用いて自然利子率 $r_t^f$ の定義を適用すると
 $$
-r_t = r_t^f + \tilde{\gamma} \mathbb{E}_t [\Delta x_{t+1} - \Delta g_{t+1} ]
+r_t = r_t^f + \tilde{\gamma} \mathbb{E}_t \Delta x_{t+1} 
 $$
 を得ます。この式は、実質利子率が高いほど消費（需要）の成長率が高まることを表しており、IS 曲線の動学版です
 
 ### ニューケインジアン・フィリップス曲線
 
 $mc_t=(\tilde{\varphi}+\tilde{\gamma})(x_t-\zeta_a a_t-\zeta_g g_t)$を
-$\pi_t=(\psi/\eta)mc_t+beta \mathbb{E}_t\pi_{t+1}$に代入すると、
+$\pi_t=(\psi/\eta)mc_t+\beta \mathbb{E}_t\pi_{t+1}$に代入すると、
 $$
 \pi_t = \kappa x_t + \beta \mathbb{E}_t \pi_{t+1}
 $$
@@ -683,13 +678,13 @@ $$
 
 $m_t=a_t=0$ のとき、
 $$\begin{aligned}
-r_t &= r_t^f+\tilde{\gamma}(\rho_g-1)(x_t-g_t)\\
+r_t &= r_t^f+\tilde{\gamma}(\rho_g-1)x_t\\
 \pi_t &= \kappa_g x_t\\
 r_t &= (\phi-\rho_g)\pi_t
 \end{aligned}$$
 となります。ここで
 $$
-r_t^f=\tilde{\gamma}\zeta_g(\rho_g-1)g_t,
+r_t^f=\tilde{\gamma}(1-\zeta_g)(1-\rho_g)g_t,
 \qquad
 x_t=y_t-\zeta_g g_t
 $$
@@ -697,7 +692,7 @@ $$
 $$\begin{aligned}
 \pi_t
 &=
-\frac{\tilde{\gamma}(\rho_g-1)x_t+\tilde{\gamma}(1-\zeta_g)(\rho_g-1)g_t}{\phi-\rho_g}\\
+\frac{\tilde{\gamma}(\rho_g-1)x_t+\tilde{\gamma}(1-\zeta_g)(1-\rho_g)g_t}{\phi-\rho_g}\\
 \pi_t &= \kappa_g x_t
 \end{aligned}$$
 です。ここで
@@ -743,7 +738,7 @@ r_t
 +(\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
 \end{aligned}$$
 です。なお、価格が柔軟な時（$\kappa\to\infty$）、$\Omega,\;\Omega_{m},\;\Omega_{a},\;\Omega_{g}\to 0$なので、$x_t=0$。
-価格が硬直的な時（$\kappa\to0$）、$\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1$なので、$x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}$となります。
+価格が一定の時（$\kappa\to0$）、$\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1$なので、$x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}$となります。
 
 また、
 $$
@@ -755,7 +750,7 @@ y_t
 &=
 \Omega_m m_t
 +\zeta_a(1-\Omega_a)a_t
-+\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t\\
++\{1-(1-\zeta_g)(1-\Omega_g)\}g_t\\
 (1-G_Y)c_t
 =
 y_t-g_t
@@ -769,9 +764,9 @@ y_t-a_t
 &=
 \Omega_m m_t
 -\{1-\zeta_a(1-\Omega_a)\}a_t
-+\bigl(\zeta_g+(1-\zeta_g)\Omega_g\bigr)g_t
++\{1-(1-\zeta_g)(1-\Omega_g)\}g_t
 \end{aligned}$$
-と、産出・消費・労働の反応も復元できます。特に価格が硬直的な時、$y_t=m_t/\{\tilde{\gamma}(1-\rho_m)\} + g_t$ となります。
+と、産出・消費・労働の反応も復元できます。特に価格が一定の時、$y_t=m_t/\{\tilde{\gamma}(1-\rho_m)\} + g_t$ となります。
 
 この式から、各ショックの直観的な効果も読み取れます。
 

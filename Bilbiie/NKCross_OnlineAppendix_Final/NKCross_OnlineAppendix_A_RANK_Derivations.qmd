@@ -2,6 +2,7 @@
 title: "NKCross_OnlineAppendix: A RANK Derivations"
 subtitle: "式展開の補完と日本語解説"
 format:
+  html: default
   pdf:
     documentclass: ltjsarticle
     classoption:
@@ -10,15 +11,15 @@ format:
       - ja=standard
       - lualatex
     toc: true
-    number-sections: true
+    number-sections: false
     pdf-engine: lualatex
 ---
 
-# A RANK Derivations: RANKモデルにおける式展開
+## A RANK Derivations: RANKモデルにおける式展開
 
 この資料は、Bilbiie "The New Keynesian Cross" の Online Appendixにある「A RANK Derivations」の式展開を日本語で解説し、省略されている途中の計算過程を補完するものです。
 
-## 1. 家計の最適化問題とフローの予算制約
+### 家計の最適化問題とフローの予算制約
 
 主体 $j$ は、無限期間にわたり消費 $C_t^j$、労働供給 $N_t^j$、および資産保有量を最適に選択し、以下の期待生涯効用を最大化します。
 $$
@@ -29,6 +30,7 @@ $$
 B_t^j + \Omega_{t+1}^j V_t \le Z_t^j + \Omega_t^j (V_t + P_t D_t) + W_t N_t^j - P_t C_t^j
 $$
 ここで、各変数は以下の通りです。
+
 - $B_t^j$: 期末に保有する**状態条件付資産 (state-contingent assets)** の名目価値（企業株式を除く）
 - $Z_t^j$: 期首における、保有状態条件付資産からのペイオフ（当初の富）
 - $V_t$: 株式の平均市場価値
@@ -54,7 +56,7 @@ $$
 \frac{1}{I_t} = \mathbb{E}_t \left[ \frac{P_t}{P_{t+1}} Q_{t,t+1}^j \right]
 $$
 
-## 2. 異時点間予算制約 (Intertemporal Budget Constraint) の導出
+### 異時点間予算制約 (Intertemporal Budget Constraint) の導出
 
 (1)の裁定条件を富の動学方程式に代入し、異時点間予算制約を導びきます。
 総資産（期首）を $X_t^j = Z_t^j + \Omega^j (V_t + P_t D_t)$ と定義します。$(1')$ 式を用いると、総資産は将来の配当の割引現在価値を含めて表現できます。
@@ -86,7 +88,7 @@ Y_{t+i}^j = \Omega^j D_{t+i} + \frac{W_{t+i}}{P_{t+i}} N_{t+i}^j \tag{4}
 $$
 と定義されます。
 
-## 3. 最適化の1階条件とオイラー方程式
+### 最適化の1階条件とオイラー方程式
 
 制約付き最適化問題の1階条件より、SDFと限界効用の関係は次のように与えられます。
 $$
@@ -97,7 +99,7 @@ $$
 \frac{1}{R_t} = \mathbb{E}_t \left[ \beta \frac{U_C(C_{t+1}^j)}{U_C(C_t^j)} \right]
 $$
 
-### 変数の対数線形化
+#### 変数の対数線形化
 定常状態からの対数乖離（log deviations）を小文字で表します（収益率については差分）。SDFについて、任意の期間 $i$ では
 $$
 Q_{t,t+i}^j = \beta^i \frac{U_C(C_{t+i}^j)}{U_C(C_t^j)}
@@ -123,7 +125,7 @@ $$
 $$
 と表現できます。
 
-## 4. 消費関数 (Consumption Function) の導出
+### 消費関数 (Consumption Function) の導出
 
 次に、異時点間予算制約 (3)式を定常状態の周りで対数線形化します。定常状態では $\bar{C}^j = \bar{Y}^j$ を仮定すると、線形化された式は
 $$
@@ -134,13 +136,13 @@ $$
 \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + c_{t+i}^j) = \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + y_{t+i}^j)
 $$
 
-### 左辺の整理
+#### 左辺の整理
 左辺の各項の括弧内は、式(5)よりそのまま現在の消費 $c_t^j$ になります。（$\sigma \mathbb{E}_{t} q_{t,t+i}^j + \mathbb{E}_{t}c_{t+i}^j = c_t^j$）
 $$
 \text{左辺} = \sum_{i=0}^{\infty} \beta^i c_t^j = \frac{1}{1-\beta} c_t^j
 $$
 
-### 右辺の整理
+#### 右辺の整理
 右辺は $\sigma \sum \beta^i \mathbb{E}_t q_{t,t+i}^j + \sum \beta^i \mathbb{E}_t y_{t+i}^j$ です。$q$ の和について、$\mathbb{E}_t q_{t,t+i}^j = - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k}$ を用いて計算します（ただし $q_{t,t}^j = 0$ なので $i=1$ から開始します）。
 シグマの順序を交換して整理します。
 $$
@@ -156,7 +158,7 @@ $$
 \text{右辺} = - \sigma \frac{\beta}{1-\beta} \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
 $$
 
-### 消費の再帰的表現 (Recursive Form) の獲得
+#### 消費の再帰的表現 (Recursive Form) の獲得
 左辺と右辺を結びつけ、全体に $(1-\beta)$ を乗じます。
 $$
 c_t^j = - \sigma \beta \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
