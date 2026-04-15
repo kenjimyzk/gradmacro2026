@@ -523,7 +523,7 @@ $$
 $$\begin{aligned}
 r_t^f
 &=
-\tilde{\gamma} \mathbb{E}_t [\Delta y_{t+1}^f-\Deltag_{t+1}]\\
+\tilde{\gamma} \mathbb{E}_t [\Delta y_{t+1}^f-\Delta g_{t+1}]\\
 &=
 -\tilde{\gamma}(1-\rho_a)\zeta_a a_t + \tilde{\gamma} (1-\rho_g)(1-\zeta_g) g_t
 \end{aligned}$$
