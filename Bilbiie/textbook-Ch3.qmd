@@ -42,7 +42,7 @@ In addition, the government implements the optimal New Keynesian sales subsidy (
 $$
 d_t = -w_t
 $$
-where $d_t \equiv \ln D_t / Y_t$. As real wages are procyclical in the model, profits will be procyclical (a common feature of most New Keynesian models).
+where $d_t \equiv D_t / Y$. As real wages are procyclical in the model, profits will be procyclical (a common feature of most New Keynesian models).
 
 While the model introduces heterogeneity in earnings and income, assume that both types of households have identical separable preferences over consumption and leisure. The intertemporal elasticity of substitution and the Frisch elasticity are given by:
 $$\begin{aligned}

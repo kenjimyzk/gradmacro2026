@@ -10,6 +10,7 @@
 
 
 ## textbook-Ch3
++ Page 3 15th line: $d\equiv\ln \frac{D_t}{Y}$ should be $d_t\equiv\frac{D_t}{Y}$.
 + Page 5 Table 1: $\frac{W_t}{P_t}$ should be $W_t$
 + Page 9 7th line from the bottom: $\tilde{\lambda}$ should be $\lambda$.
 + Page 19th line: $\hat{y}_t$ is not defined.
