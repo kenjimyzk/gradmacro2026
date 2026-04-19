@@ -18,3 +18,11 @@
 + Page 15 8th line: $\lambda=\tilde{\lambda C^H}/C$ should be $\lambda=\tilde{\lambda} C^H/C$.
 + Page 27 3rd line: Figure 1 should be Figure 2.
 + Page 27 14th line: Figure 1 should be Figure 2.
+
+## textbook-Ch6
+
++ Page 12 3rd line from the bottom: "Table 4" -> "Table 1".
++ Page 13 4th line: "Table 4" -> "Table 1".
++ Page 13 5th line: "Table 4" -> "Table 1".
++ Page 14 2nd line from the top: "Table 5" -> "Table 2".
++ Page 14 6th line from the bottom: "Table 6" -> "Table 3".
