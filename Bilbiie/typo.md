@@ -13,3 +13,8 @@
 + Page 5 Table 1: $\frac{W_t}{P_t}$ should be $W_t$
 + Page 9 7th line from the bottom: $\tilde{\lambda}$ should be $\lambda$.
 + Page 19th line: $\hat{y}_t$ is not defined.
+
+## textbook-Ch4
++ Page 15 8th line: $\lambda=\tilde{\lambda C^H}/C$ should be $\lambda=\tilde{\lambda} C^H/C$.
++ Page 27 3rd line: Figure 1 should be Figure 2.
++ Page 27 14th line: Figure 1 should be Figure 2.
