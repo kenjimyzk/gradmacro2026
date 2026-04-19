@@ -145,9 +145,9 @@ The unresponsiveness of households to income changes and the lack of indirect ef
 
 #### Fiscal Multipliers
 
-We can also analyse the effect of government spending on output and consumption using the Keynesian-cross representation of the RANK model. Suppose that the government introduces a one-time increase in government spending, which is financed by taxation: $g^t = t^t$ .
+We can also analyse the effect of government spending on output and consumption using the Keynesian-cross representation of the RANK model. Suppose that the government introduces a one-time increase in government spending, which is financed by taxation: $g_t = t_t$ .
 
-Replacing output $y^t$ with disposable income $\hat{y}^t - t^t$, the PE curve is equal to:
+Replacing output $y_t$ with disposable income $\hat{y}_t = y_t- t_t$, the PE curve is equal to:
 $$
 c_t = (1 - \beta)\hat{y}_t - \sigma\beta r_t + \beta E_t c_{t+1}.
 $$
