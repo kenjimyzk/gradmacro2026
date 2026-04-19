@@ -1,0 +1,425 @@
+---
+title: "Chapter 2–3 数式展開の補足メモ"
+subtitle: "RANKモデルとTANKモデルにおける式導出の補完"
+author: "宮﨑憲治"
+date: "2026-04-19"
+format:
+  html: default
+  pdf:
+    documentclass: ltjsarticle
+    classoption:
+      - a4paper
+      - 12pt
+      - ja=standard
+      - lualatex
+    toc: true
+    number-sections: false
+    pdf-engine: lualatex
+---
+
+## はじめに
+
+この資料は、Bilbiie *Heterogeneous Agent Macroeconomics* の Chapter 2（**RANKモデル**）および Chapter 3（**TANKモデル**）における数式展開を日本語で解説し、教科書で省略されている途中の計算過程を補完するものです。
+
+表記規則として、大文字は水準変数、小文字は定常状態からの対数偏差を表します。
+
+---
+
+## Chapter 2: RANKモデル
+
+### RANKモデルの基本体系
+
+Chapter 2 で導出されるRANKモデルの基本体系は、以下の4本の方程式から構成されます。
+
+$$
+\begin{aligned}
+c_t &= \mathbb{E}_t c_{t+1} - \sigma r_t \\
+y_t &= c_t \\
+\pi_t &= \kappa c_t \\
+r_t &= \phi \mathbb{E}_t \pi_{t+1} - m_t
+\end{aligned}
+$$
+
+- 第1式：**オイラー方程式**（**IS曲線**）。消費は将来の期待消費と実質利子率で決まる。
+- 第2式：**財市場均衡**。政府支出がない場合、産出は消費に等しい。
+- 第3式：**静学フィリップス曲線**。インフレは消費（**産出ギャップ**）に比例する。
+- 第4式：**テイラー・ルール**。名目利子率が期待インフレに反応する金融政策ルール。$m_t$ は金融政策ショック。
+
+### 消費関数による再帰的表現
+
+教科書の Appendix（**Bilbiie, 2020**）で示されるように、異時点間予算制約とオイラー方程式を組み合わせると、消費関数の再帰的表現が得られます。
+
+$$
+c_t = (1-\beta) y_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1} \tag{6}
+$$
+
+この式の導出過程は [NKCross_OnlineAppendix_A_RANK_Derivations.qmd](Bilbiie/NKCross_OnlineAppendix_Final/NKCross_OnlineAppendix_A_RANK_Derivations.qmd) に詳しく記述されています。
+
+#### 消費関数からIS曲線を復元する
+
+消費関数 (6) において $y_t = c_t$（**財市場均衡**）を代入すると、
+
+$$
+c_t = (1-\beta) c_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+$$
+
+両辺を整理すると、
+
+$$
+c_t - (1-\beta) c_t = - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+$$
+$$
+\beta c_t = - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+$$
+
+$\beta$ で両辺を割ると、
+
+$$
+c_t = \mathbb{E}_t c_{t+1} - \sigma r_t
+$$
+
+したがって、消費関数 (6) に財市場均衡条件を代入すると、標準的なオイラー-IS方程式が復元されます。これは、消費関数とIS曲線が同一モデルの異なる表現であることを確認しています。
+
+### テイラー・ルールの変形
+
+テイラー・ルールについて、教科書では名目利子率 $i_t$ が期待インフレに反応する形で書かれています。
+
+$$
+i_t = \phi \mathbb{E}_t \pi_{t+1} - \varepsilon_t
+$$
+
+フィッシャー方程式 $r_t = i_t - \mathbb{E}_t \pi_{t+1}$ を用いると、実質利子率は
+
+$$
+r_t = \phi \mathbb{E}_t \pi_{t+1} - \varepsilon_t - \mathbb{E}_t \pi_{t+1} = (\phi - 1) \mathbb{E}_t \pi_{t+1} - \varepsilon_t
+$$
+
+これが補足メモの第2ブロックに対応します。ここで $\varepsilon_t$ は金融政策ショックです。
+
+---
+
+## Chapter 2: 政府支出を含むRANKモデル
+
+### モデルの拡張
+
+政府支出 $g_t$ を導入すると、モデルは以下のように拡張されます。
+
+$$
+\begin{aligned}
+c_t &= (1-\beta) \hat{y}_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1} \\
+\hat{y}_t &= y_t - t_t \\
+t_t &= g_t \\
+y_t &= c_t + g_t \\
+\pi_t &= \kappa \left( y_t - \frac{g_t}{1+(\varphi\sigma)^{-1}} \right) = \kappa c_t + \kappa \zeta g_t \\
+r_t &= \phi \mathbb{E}_t \pi_{t+1} - m_t
+\end{aligned}
+$$
+
+ここで、$\hat{y}_t = y_t - t_t$ は**可処分所得**（**課税後の産出**）の対数偏差、$t_t = g_t$ は均衡財政（**税収が政府支出に等しい**）を表します。
+
+### パラメータ $\zeta$ の定義
+
+フィリップス曲線に現れるパラメータ $\zeta$ は以下のように定義されます。
+
+$$
+\zeta = \frac{1}{1+(\varphi\sigma)^{-1}} = \frac{\varphi\sigma}{1+\varphi\sigma}
+$$
+
+ここで $\varphi$ はフリッシュ労働供給弾力性の逆数、$\sigma$ は異時点間代替弾力性です。$\zeta \in (0,1)$ であり、政府支出が自然産出水準に与える影響の度合いを表します。
+
+### フィリップス曲線の変形
+
+フィリップス曲線がなぜ $\kappa c_t + \kappa \zeta g_t$ と書けるかを確認します。財市場均衡 $y_t = c_t + g_t$ より $c_t = y_t - g_t$ なので、
+
+$$
+\pi_t = \kappa \left( y_t - \frac{g_t}{1+(\varphi\sigma)^{-1}} \right) = \kappa y_t - \kappa \zeta g_t
+$$
+
+一方、$\kappa c_t + \kappa \zeta g_t = \kappa(y_t - g_t) + \kappa \zeta g_t = \kappa y_t - \kappa(1-\zeta) g_t$ です。
+
+これらが等しくなるためには $\zeta = 1 - \zeta$ 、すなわち $\zeta = 1/2$ となるはずですが、一般にはそうなりません。正しくは、自然産出水準を $y_t^n$ としたとき、
+
+$$
+\pi_t = \kappa (y_t - y_t^n), \quad y_t^n = \zeta g_t
+$$
+
+であり、$y_t - y_t^n = c_t + g_t - \zeta g_t = c_t + (1-\zeta) g_t$ です。したがって、
+
+$$
+\pi_t = \kappa c_t + \kappa(1-\zeta) g_t
+$$
+
+となります。元の補足メモの表記 $\pi_t = \kappa c_t + \kappa \zeta g_t$ は、$\zeta$ の定義を $1 - \frac{1}{1+(\varphi\sigma)^{-1}} = \frac{(\varphi\sigma)^{-1}}{1+(\varphi\sigma)^{-1}} = \frac{1}{1+\varphi\sigma}$ と読み替える必要があるかもしれません。文脈に応じて確認してください。
+
+---
+
+## Chapter 3: TANKモデル（**政府支出なし**）
+
+### モデルの設定
+
+Two-Agent New Keynesian（**TANK**）モデルでは、経済に2種類の家計が存在します。
+
+- **セイバー（**Saver, $S$**）**：割合 $1-\lambda$。資産市場にアクセスでき、貯蓄・借入が可能。
+- **ハンド・トゥ・マウス（**Hand-to-Mouth, $H$**）**：割合 $\lambda$。資産を保有できず、毎期の所得をすべて消費に充てる。
+
+政府支出がない場合のモデル体系は以下の通りです。
+
+$$
+\begin{aligned}
+c^S_t &= \mathbb{E}_t c^S_{t+1} - \sigma r_t & &\text{（セイバーのオイラー方程式）} \\
+\varphi n^S_t &= w_t - \sigma^{-1} c^S_t & &\text{（セイバーの労働供給）} \\
+\varphi n^H_t &= w_t - \sigma^{-1} c^H_t & &\text{（HtMの労働供給）} \\
+c^H_t &= w_t + n^H_t + \frac{\tau^D}{\lambda} d_t & &\text{（HtMの予算制約）} \\
+d_t &= -w_t & &\text{（配当の定義）} \\
+c_t &= \lambda c^H_t + (1-\lambda) c^S_t & &\text{（集計消費）} \\
+n_t &= \lambda n^H_t + (1-\lambda) n^S_t & &\text{（集計労働）} \\
+y_t &= c_t & &\text{（財市場均衡）} \\
+y_t &= n_t & &\text{（生産関数）} \\
+\pi_t &= \kappa c_t & &\text{（フィリップス曲線）} \\
+r_t &= \phi \mathbb{E}_t \pi_{t+1} - m_t & &\text{（テイラー・ルール）}
+\end{aligned}
+$$
+
+ここで $\tau^D$ は配当への課税率、$d_t$ は企業の実質配当（**対数偏差**）です。
+
+### HtM家計の消費関数 $c^H_t = \chi y_t$ の導出
+
+HtM家計の消費は、予算制約と労働供給条件から閉じた形で求まります。
+
+**ステップ1**：配当の代入
+
+$d_t = -w_t$ を予算制約に代入します。
+
+$$
+c^H_t = w_t + n^H_t + \frac{\tau^D}{\lambda}(-w_t) = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + n^H_t
+$$
+
+**ステップ2**：労働供給条件の代入
+
+HtMの労働供給条件 $\varphi n^H_t = w_t - \sigma^{-1} c^H_t$ より $n^H_t = \frac{w_t - \sigma^{-1} c^H_t}{\varphi}$ を代入します。
+
+$$
+c^H_t = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + \frac{w_t - \sigma^{-1} c^H_t}{\varphi}
+= \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - \frac{\sigma^{-1}}{\varphi} c^H_t
+$$
+
+**ステップ3**：$c^H_t$ について整理
+
+$$
+\left(1 + \frac{\sigma^{-1}}{\varphi}\right) c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t
+$$
+
+$$
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \cdot w_t
+$$
+
+**ステップ4**：賃金を集計変数で表現
+
+労働供給条件 $\varphi n_t = w_t - \sigma^{-1} c_t$（**集計版**）より $w_t = \varphi n_t + \sigma^{-1} c_t$ です。財市場均衡 $y_t = c_t$ と生産関数 $y_t = n_t$ を用いると、
+
+$$
+w_t = (\varphi + \sigma^{-1}) y_t
+$$
+
+これを代入すると、
+
+$$
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \cdot (\varphi + \sigma^{-1}) y_t
+= \left[1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)\right] y_t
+\equiv \chi \, y_t
+$$
+
+ここで、
+
+$$
+\chi \equiv 1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)
+$$
+
+がHtM家計の**個別MPC**（**限界消費性向**）です。$\tau^D < \lambda$ のとき $\chi > 1$ となり、HtM家計の消費は産出よりも大きく変動します。
+
+### セイバーの消費の導出
+
+集計消費の定義 $c_t = \lambda c^H_t + (1-\lambda) c^S_t$ から、セイバーの消費は
+
+$$
+c^S_t = \frac{c_t - \lambda c^H_t}{1-\lambda} = \frac{c_t - \lambda \chi y_t}{1-\lambda} = \frac{1 - \lambda\chi}{1-\lambda} \, y_t
+$$
+
+$y_t = c_t$ を使いました。
+
+### TANKモデルのIS曲線の導出
+
+セイバーのオイラー方程式にセイバーの消費を代入します。
+
+$$
+\frac{1-\lambda\chi}{1-\lambda} y_t = \frac{1-\lambda\chi}{1-\lambda} \mathbb{E}_t y_{t+1} - \sigma r_t
+$$
+
+両辺に $\frac{1-\lambda}{1-\lambda\chi}$ を乗じると、TANKモデルのIS曲線が得られます。
+
+$$
+y_t = \mathbb{E}_t y_{t+1} - \sigma \frac{1-\lambda}{1-\lambda\chi} \, r_t
+$$
+
+$\lambda\chi < 1$ のとき、利子率の係数 $\sigma \frac{1-\lambda}{1-\lambda\chi}$ はRANKの $\sigma$ より小さくなります。逆に $\lambda\chi > 1$ のとき（**Bilbiieの「反転領域」**）、利子率の効果の符号が反転します。
+
+### 消費関数の再帰的表現（**TANKモデル**）
+
+セイバーの消費関数の再帰的表現は、RANKの場合と同様に
+
+$$
+c^S_t = (1-\beta) y^S_t - \sigma \beta r_t + \beta \mathbb{E}_t c^S_{t+1}
+$$
+
+と書けます。ここで $y^S_t = \frac{1-\lambda\chi}{1-\lambda} y_t$ はセイバーの所得です。
+
+集計消費 $c_t = \lambda c^H_t + (1-\lambda) c^S_t$ にこれを代入して展開します。
+
+$$
+\begin{aligned}
+c_t &= \lambda \chi y_t + (1-\lambda) \left[ (1-\beta) \frac{1-\lambda\chi}{1-\lambda} y_t - \sigma\beta r_t + \beta \frac{1-\lambda\chi}{1-\lambda} \mathbb{E}_t c_{t+1} \right] \\
+&= \lambda\chi y_t + (1-\beta)(1-\lambda\chi) y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1} \\
+&= \left[\lambda\chi + (1-\beta)(1-\lambda\chi)\right] y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1}
+\end{aligned}
+$$
+
+第1項の係数を整理します。
+
+$$
+\lambda\chi + (1-\beta)(1-\lambda\chi) = \lambda\chi + 1 - \lambda\chi - \beta + \beta\lambda\chi = 1 - \beta(1-\lambda\chi)
+$$
+
+したがって、TANKモデルの集計消費関数は
+
+$$
+c_t = \left[1 - \beta(1-\lambda\chi)\right] y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1}
+$$
+
+$\lambda = 0$（**全員がセイバー、すなわちRANK**）の場合、$\chi$ の値にかかわらず $(1-\beta) y_t - \sigma\beta r_t + \beta \mathbb{E}_t c_{t+1}$ に帰着し、RANK消費関数 (6) が復元されることが確認できます。
+
+---
+
+## Chapter 3: 政府支出を含むTANKモデル
+
+### モデルの拡張
+
+政府支出 $g_t$ を含むTANKモデルでは、HtMの予算制約に税負担が加わります。
+
+$$
+c^H_t = w_t + n^H_t + \frac{\tau^D}{\lambda} d_t - t^H_t
+$$
+
+ここで $t^H_t$ はHtM家計の一人当たり税負担であり、
+
+$$
+t^H_t = g_t - \left(1 - \frac{\alpha}{\lambda}\right) t_t
+$$
+
+と定義されます。$\alpha$ は税負担の分配パラメータです。均衡財政 $t_t = g_t$ のもとで、
+
+$$
+t^H_t = g_t - \left(1 - \frac{\alpha}{\lambda}\right) g_t = \frac{\alpha}{\lambda} g_t
+$$
+
+となります。
+
+### HtM家計の消費関数の導出
+
+**ステップ1**：配当と税の代入
+
+$d_t = -w_t$ を代入します。
+
+$$
+c^H_t = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + n^H_t - t^H_t
+$$
+
+**ステップ2**：労働供給条件の代入
+
+$$
+c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - \frac{\sigma^{-1}}{\varphi} c^H_t - t^H_t
+$$
+
+$$
+\left(1 + \frac{\sigma^{-1}}{\varphi}\right) c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - t^H_t
+$$
+
+**ステップ3**：賃金の代入
+
+生産関数 $y_t = n_t$ と $y_t = c_t + g_t$ より、
+
+$$
+w_t = \varphi n_t + \sigma^{-1} c_t = (\varphi + \sigma^{-1}) c_t + \varphi g_t
+$$
+
+これを代入すると、
+
+$$
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \left[(\varphi + \sigma^{-1}) c_t + \varphi g_t\right] - \zeta t^H_t
+$$
+
+ここで $\zeta = \frac{\varphi\sigma}{1+\varphi\sigma}$ です。中括弧内を整理すると、
+
+$$
+= \left[1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)\right](c_t + \zeta g_t) - \zeta t^H_t
+= \chi c_t + \chi \zeta g_t - \zeta t^H_t
+$$
+
+$t^H_t = \frac{\alpha}{\lambda} g_t$ を代入して最終的に、
+
+$$
+c^H_t = \chi c_t + \zeta\left(1 - \frac{\alpha}{\lambda}\right) g_t
+$$
+
+$\hat{y}_t = y_t - t_t = c_t + g_t - g_t = c_t$ なので、$c^H_t = \chi \hat{y}_t + \zeta\left(1 - \frac{\alpha}{\lambda}\right) g_t$ とも書けます。
+
+### セイバーの消費
+
+$$
+c^S_t = \frac{c_t - \lambda c^H_t}{1-\lambda} = \frac{1 - \lambda\chi}{1-\lambda} \hat{y}_t - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda} g_t
+$$
+
+### 集計消費関数の導出
+
+セイバーの再帰的消費関数 $c^S_t = (1-\beta) y^S_t - \sigma\beta r_t + \beta \mathbb{E}_t c^S_{t+1}$ を用いて、集計消費 $c_t = \lambda c^H_t + (1-\lambda) c^S_t$ を展開します。
+
+$$
+\begin{aligned}
+c_t ={}& \lambda\chi \hat{y}_t + \lambda\zeta(1-\alpha/\lambda) g_t \\
+& + (1-\lambda)(1-\beta)\left[\frac{1-\lambda\chi}{1-\lambda}\hat{y}_t - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda} g_t\right] \\
+& - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\left[\mathbb{E}_t c_{t+1} - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi} \mathbb{E}_t g_{t+1}\right]
+\end{aligned}
+$$
+
+$\hat{y}_t$ の係数を整理すると $1 - \beta(1-\lambda\chi)$、$g_t$ の項は
+
+$$
+\lambda\zeta(1-\alpha/\lambda) - (1-\beta)\lambda\zeta(1-\alpha/\lambda) = \beta\lambda\zeta(1-\alpha/\lambda)
+$$
+
+したがって、
+
+$$
+c_t = [1-\beta(1-\lambda\chi)]\hat{y}_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1} + \beta\lambda\zeta(1-\alpha/\lambda)[g_t - \mathbb{E}_t g_{t+1}]
+$$
+
+### IS曲線の導出
+
+$c_t = \hat{y}_t$ を代入して整理します。
+
+$$
+\beta(1-\lambda\chi) c_t = -(1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1} + \beta\lambda\zeta(1-\alpha/\lambda)[g_t - \mathbb{E}_t g_{t+1}]
+$$
+
+$\beta$ で割り、$(1-\lambda\chi)$ で割ると、
+
+$$
+c_t = \mathbb{E}_t c_{t+1} - \frac{1-\lambda}{1-\lambda\chi}\sigma r_t + \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi}[g_t - \mathbb{E}_t g_{t+1}]
+$$
+
+$y_t = c_t + g_t$ を用いて産出で表現すると、
+
+$$
+y_t = \mathbb{E}_t y_{t+1} - \frac{1-\lambda}{1-\lambda\chi}\sigma r_t + \left[1 + \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi}\right][g_t - \mathbb{E}_t g_{t+1}]
+$$
+
+これが政府支出を含むTANKモデルのIS曲線です。右辺第3項の $[g_t - \mathbb{E}_t g_{t+1}]$ は、政府支出の変化（**予期されない部分**）が総需要に与える影響を表します。その係数は $1$ より大きく、HtM家計の存在による**財政乗数の増幅効果**を反映しています。
