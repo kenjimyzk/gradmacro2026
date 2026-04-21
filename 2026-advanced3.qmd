@@ -110,7 +110,7 @@ c_t &= (1-\beta) \hat{y}_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1} \\
 \hat{y}_t &= y_t - t_t \\
 t_t &= g_t \\
 y_t &= c_t + g_t \\
-\pi_t &= \kappa \left( y_t - \frac{g_t}{1+(\varphi\sigma)^{-1}} \right) = \kappa c_t + \kappa \zeta g_t \\
+\pi_t &=  \kappa c_t + \kappa \zeta g_t \\
 r_t &= \phi \mathbb{E}_t \pi_{t+1} - m_t
 \end{aligned}
 $$
@@ -129,27 +129,21 @@ $$
 
 ### フィリップス曲線の変形
 
-フィリップス曲線がなぜ $\kappa c_t + \kappa \zeta g_t$ と書けるかを確認します。財市場均衡 $y_t = c_t + g_t$ より $c_t = y_t - g_t$ なので、
-
+フィリップス曲線がなぜ $\kappa c_t + \kappa \zeta g_t$ と書けるかを確認します。一般に
 $$
-\pi_t = \kappa \left( y_t - \frac{g_t}{1+(\varphi\sigma)^{-1}} \right) = \kappa y_t - \kappa \zeta g_t
+\pi_t = \kappa (y_t - y_t^n), \quad y_t^n =\frac{\sigma^{-1}}{\varphi+\sigma^{-1}}g_t
 $$
-
-一方、$\kappa c_t + \kappa \zeta g_t = \kappa(y_t - g_t) + \kappa \zeta g_t = \kappa y_t - \kappa(1-\zeta) g_t$ です。
-
-これらが等しくなるためには $\zeta = 1 - \zeta$ 、すなわち $\zeta = 1/2$ となるはずですが、一般にはそうなりません。正しくは、自然産出水準を $y_t^n$ としたとき、
-
+であることが知られています。これと財市場均衡 $y_t = c_t + g_t$ より、
 $$
-\pi_t = \kappa (y_t - y_t^n), \quad y_t^n = \zeta g_t
+\pi_t = \kappa \left( c_t + g_t - 
+\frac{\sigma^{-1}}{\varphi+\sigma^{-1}}
+g_t \right) =
+\kappa \left( c_t + 
+\frac{\varphi}{\varphi+\sigma^{-1}}
+g_t \right) =
+\kappa c_t + \kappa \zeta g_t
 $$
-
-であり、$y_t - y_t^n = c_t + g_t - \zeta g_t = c_t + (1-\zeta) g_t$ です。したがって、
-
-$$
-\pi_t = \kappa c_t + \kappa(1-\zeta) g_t
-$$
-
-となります。元の補足メモの表記 $\pi_t = \kappa c_t + \kappa \zeta g_t$ は、$\zeta$ の定義を $1 - \frac{1}{1+(\varphi\sigma)^{-1}} = \frac{(\varphi\sigma)^{-1}}{1+(\varphi\sigma)^{-1}} = \frac{1}{1+\varphi\sigma}$ と読み替える必要があるかもしれません。文脈に応じて確認してください。
+となります。
 
 ---
 
