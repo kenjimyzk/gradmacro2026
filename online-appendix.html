@@ -99,7 +99,213 @@ window.Quarto = {
 <section id="model-description" class="level1">
 <h1>Model Description</h1>
 <p>The appendix first states the nonlinear problems of the labor packer, households, firms, and government. It then collects a reduced nonlinear equilibrium system sufficient for the first-order approximation, and finally reports the nonredundant log-linear system used in Section 3 of the main text.</p>
-<p>Throughout, upper-case letters denote level variables. The index <span class="math inline">\(h\in[0,1]\)</span> refers to households, and the index <span class="math inline">\(j\in[0,1]\)</span> refers to intermediate-goods firms. A superscript <span class="math inline">\(i\in\{H,S\}\)</span> indicates the household type, where (<span class="math inline">\(H\)</span>) denotes hand-to-mouth households and <span class="math inline">\(S\)</span> denotes saver households. <span class="math inline">\(P_{t}\)</span> denotes the final-good price index, <span class="math inline">\(W^{N}_{t}\)</span> the aggregate nominal wage, and <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> the aggregate real wage. For each household type <span class="math inline">\(i\)</span>, <span class="math inline">\(C^{i}_{t}\)</span>, <span class="math inline">\(N^{i}_{t}\)</span>, and <span class="math inline">\(W^{N,i}_{t}\)</span> denote consumption, labor supply, and the nominal wage, while <span class="math inline">\(W^{i}_{t}\equiv W^{N,i}_{t}/P_{t}\)</span> denotes the corresponding real wage. Aggregate price inflation is defined as <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span>, and type-specific wage inflation is defined as <span class="math inline">\(\Pi^{i}_{t}\equiv W^{N,i}_{t}/W^{N,i}_{t-1}\)</span>. Preferences are represented by a general period utility function <span class="math inline">\(U(C,N)\)</span>, with marginal utilities <span class="math inline">\(U_{C}(C,N)&gt;0\)</span> and <span class="math inline">\(U_{N}(C,N)&lt;0\)</span>. The marginal rate of substitution is <span class="math inline">\(MRS(C,N)\equiv-U_{N}(C,N)/U_{C}(C,N)\)</span>. Intermediate firms use the general technology <span class="math inline">\(Y=A_{t}F(N)\)</span>, with <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The type-<span class="math inline">\(i\)</span> wage markup is <span class="math inline">\(MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})\)</span>, and the price markup is <span class="math inline">\(MU^{p}_{t}\equiv A_{t}F_{N}(N_{t})/W_{t}\)</span>. Finally, <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate and <span class="math inline">\(D_{t}\)</span> firm dividends. Here <span class="math inline">\(T^{i}_{t}\)</span> denotes the net fiscal liability of type-<span class="math inline">\(i\)</span> households. A negative value therefore corresponds to a transfer received by that household type. The variable <span class="math inline">\(Z_{t}\)</span> denotes the transfer directed to Type H households, and <span class="math inline">\(z_{t}\)</span> is the redistribution shock that drives <span class="math inline">\(Z_{t}\)</span> through <span class="math inline">\(Z_{t}=z_{t}Y\)</span>.</p>
+<p><a href="#tbl-nonlinear-variables" class="quarto-xref">Table&nbsp;1</a> summarizes the main variables and objects that appear before the log-linear approximation.</p>
+<div id="tbl-nonlinear-variables" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[22,28,50]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nonlinear-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Nonlinear variables and objects introduced before log-linearization
+</figcaption>
+<div aria-describedby="tbl-nonlinear-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 28%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Indices</td>
+<td><span class="math inline">\(h\in[0,1]\)</span></td>
+<td>Household or labor-variety index</td>
+</tr>
+<tr class="even">
+<td>Indices</td>
+<td><span class="math inline">\(j\in[0,1]\)</span></td>
+<td>Intermediate-good firm or goods-variety index</td>
+</tr>
+<tr class="odd">
+<td>Types</td>
+<td><span class="math inline">\(i\in\{H,S\}\)</span></td>
+<td>Household type: hand-to-mouth (<span class="math inline">\(H\)</span>) or saver (<span class="math inline">\(S\)</span>)</td>
+</tr>
+<tr class="even">
+<td>Prices and wages</td>
+<td><span class="math inline">\(P_{t}\)</span></td>
+<td>Final-good price index</td>
+</tr>
+<tr class="odd">
+<td>Prices and wages</td>
+<td><span class="math inline">\(P_{t}(j)\)</span></td>
+<td>Price set by intermediate-good firm <span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even">
+<td>Prices and wages</td>
+<td><span class="math inline">\(W^{N}_{t}\)</span>, <span class="math inline">\(W^{N}_{t}(h)\)</span></td>
+<td>Aggregate nominal wage and household-specific nominal wage</td>
+</tr>
+<tr class="odd">
+<td>Prices and wages</td>
+<td><span class="math inline">\(W^{N,i}_{t}\)</span></td>
+<td>Type-<span class="math inline">\(i\)</span> nominal wage</td>
+</tr>
+<tr class="even">
+<td>Prices and wages</td>
+<td><span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span></td>
+<td>Aggregate real wage</td>
+</tr>
+<tr class="odd">
+<td>Prices and wages</td>
+<td><span class="math inline">\(W^{i}_{t}\equiv W^{N,i}_{t}/P_{t}\)</span></td>
+<td>Type-<span class="math inline">\(i\)</span> real wage</td>
+</tr>
+<tr class="even">
+<td>Inflation rates</td>
+<td><span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span></td>
+<td>Gross price inflation</td>
+</tr>
+<tr class="odd">
+<td>Inflation rates</td>
+<td><span class="math inline">\(\Pi^{i}_{t}\equiv W^{N,i}_{t}/W^{N,i}_{t-1}\)</span></td>
+<td>Type-<span class="math inline">\(i\)</span> gross wage inflation</td>
+</tr>
+<tr class="even">
+<td>Inflation rates</td>
+<td><span class="math inline">\(\Pi^{w}_{t}\)</span></td>
+<td>Gross inflation of the aggregate wage index</td>
+</tr>
+<tr class="odd">
+<td>Quantities</td>
+<td><span class="math inline">\(C_{t}\)</span>, <span class="math inline">\(C_{t}(h)\)</span>, <span class="math inline">\(C^{i}_{t}\)</span></td>
+<td>Aggregate, household-specific, and type-<span class="math inline">\(i\)</span> consumption</td>
+</tr>
+<tr class="even">
+<td>Quantities</td>
+<td><span class="math inline">\(N_{t}\)</span>, <span class="math inline">\(N_{t}(h)\)</span>, <span class="math inline">\(N^{i}_{t}\)</span></td>
+<td>Aggregate, household-specific, and type-<span class="math inline">\(i\)</span> labor</td>
+</tr>
+<tr class="odd">
+<td>Quantities</td>
+<td><span class="math inline">\(Y_{t}\)</span>, <span class="math inline">\(Y_{t}(j)\)</span></td>
+<td>Aggregate final output and output of intermediate-good firm <span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even">
+<td>Preferences</td>
+<td><span class="math inline">\(U(C,N)\)</span></td>
+<td>Period utility function</td>
+</tr>
+<tr class="odd">
+<td>Preferences</td>
+<td><span class="math inline">\(U_{C}(C,N)\)</span>, <span class="math inline">\(U_{N}(C,N)\)</span></td>
+<td>Marginal utilities of consumption and labor</td>
+</tr>
+<tr class="even">
+<td>Preferences</td>
+<td><span class="math inline">\(MRS(C,N)\equiv -U_{N}(C,N)/U_{C}(C,N)\)</span></td>
+<td>Marginal rate of substitution</td>
+</tr>
+<tr class="odd">
+<td>Technology</td>
+<td><span class="math inline">\(A_{t}\equiv \exp(a_{t})\)</span></td>
+<td>Aggregate productivity</td>
+</tr>
+<tr class="even">
+<td>Technology</td>
+<td><span class="math inline">\(F(N)\)</span>, <span class="math inline">\(F_{N}(N)\)</span></td>
+<td>Production function and marginal product component</td>
+</tr>
+<tr class="odd">
+<td>Technology</td>
+<td><span class="math inline">\(MPN_{t}\equiv A_{t}F_{N}(N_{t})\)</span></td>
+<td>Marginal product of labor</td>
+</tr>
+<tr class="even">
+<td>Markups</td>
+<td><span class="math inline">\(MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})\)</span></td>
+<td>Type-<span class="math inline">\(i\)</span> wage markup</td>
+</tr>
+<tr class="odd">
+<td>Markups</td>
+<td><span class="math inline">\(MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})\)</span></td>
+<td>Aggregate wage markup</td>
+</tr>
+<tr class="even">
+<td>Markups</td>
+<td><span class="math inline">\(MU^{p}_{t}\equiv MPN_{t}/W_{t}\)</span></td>
+<td>Price markup</td>
+</tr>
+<tr class="odd">
+<td>Assets and policy</td>
+<td><span class="math inline">\(B^{N}_{t}(h)\)</span>, <span class="math inline">\(B^{N}_{t}\)</span></td>
+<td>Household nominal bond holdings and aggregate nominal bond supply</td>
+</tr>
+<tr class="even">
+<td>Assets and policy</td>
+<td><span class="math inline">\(V_{t}\)</span>, <span class="math inline">\(\Omega_{t}(h)\)</span></td>
+<td>Ex-dividend equity value and household equity holdings</td>
+</tr>
+<tr class="odd">
+<td>Assets and policy</td>
+<td><span class="math inline">\(Q_{t,t+i}\)</span></td>
+<td>Saver stochastic discount factor from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+i\)</span></td>
+</tr>
+<tr class="even">
+<td>Assets and policy</td>
+<td><span class="math inline">\(R^{N}_{t}\)</span>, <span class="math inline">\(R_{t}\)</span></td>
+<td>Gross nominal interest rate and ex ante gross real interest rate</td>
+</tr>
+<tr class="odd">
+<td>Fiscal variables</td>
+<td><span class="math inline">\(T^{H}_{t}\)</span>, <span class="math inline">\(T^{S}_{t}\)</span>, <span class="math inline">\(T^{M}_{t}\)</span></td>
+<td>Net fiscal liabilities of Type H households, Type S households, and firms</td>
+</tr>
+<tr class="even">
+<td>Fiscal variables</td>
+<td><span class="math inline">\(Z_{t}\)</span>, <span class="math inline">\(Z\)</span></td>
+<td>Transfer to Type H households and its steady-state component</td>
+</tr>
+<tr class="odd">
+<td>Fiscal variables</td>
+<td><span class="math inline">\(G_{t}\)</span>, <span class="math inline">\(G\)</span></td>
+<td>Government purchases and their steady-state component</td>
+</tr>
+<tr class="even">
+<td>Firms</td>
+<td><span class="math inline">\(D_{t}(j)\)</span>, <span class="math inline">\(D_{t}\)</span></td>
+<td>Firm-<span class="math inline">\(j\)</span> and aggregate real dividends</td>
+</tr>
+<tr class="odd">
+<td>Shocks</td>
+<td><span class="math inline">\(a_{t}\)</span>, <span class="math inline">\(m_{t}\)</span>, <span class="math inline">\(z_{t}\)</span>, <span class="math inline">\(g_{t}\)</span></td>
+<td>Productivity, monetary-policy, redistribution, and government-spending shocks</td>
+</tr>
+<tr class="even">
+<td>Innovations</td>
+<td><span class="math inline">\(e^{a}_{t}\)</span>, <span class="math inline">\(e^{m}_{t}\)</span>, <span class="math inline">\(e^{z}_{t}\)</span>, <span class="math inline">\(e^{g}_{t}\)</span></td>
+<td>Innovations to the exogenous processes</td>
+</tr>
+<tr class="odd">
+<td>Multipliers</td>
+<td><span class="math inline">\(\Lambda^{L}_{t}\)</span>, <span class="math inline">\(\Lambda^{F}_{t}\)</span>, <span class="math inline">\(\Lambda^{M}_{t}(j)\)</span></td>
+<td>Multipliers for the labor packer, final-goods firm, and intermediate firm</td>
+</tr>
+<tr class="even">
+<td>Multipliers</td>
+<td><span class="math inline">\(\Lambda^{H}_{t}(h)\)</span>, <span class="math inline">\(\Lambda^{S}_{t}(h)\)</span></td>
+<td>Type-H and Type-S household budget multipliers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Throughout, upper-case letters denote level variables. The index <span class="math inline">\(h\in[0,1]\)</span> refers to households, and the index <span class="math inline">\(j\in[0,1]\)</span> refers to intermediate-goods firms. A superscript <span class="math inline">\(i\in\{H,S\}\)</span> indicates the household type, where (<span class="math inline">\(H\)</span>) denotes hand-to-mouth households and <span class="math inline">\(S\)</span> denotes saver households. <span class="math inline">\(P_{t}\)</span> denotes the final-good price index, <span class="math inline">\(W^{N}_{t}\)</span> the aggregate nominal wage, and <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> the aggregate real wage. For each household type <span class="math inline">\(i\)</span>, <span class="math inline">\(C^{i}_{t}\)</span>, <span class="math inline">\(N^{i}_{t}\)</span>, and <span class="math inline">\(W^{N,i}_{t}\)</span> denote consumption, labor supply, and the nominal wage, while <span class="math inline">\(W^{i}_{t}\equiv W^{N,i}_{t}/P_{t}\)</span> denotes the corresponding real wage. Aggregate price inflation is defined as <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span>, and type-specific wage inflation is defined as <span class="math inline">\(\Pi^{i}_{t}\equiv W^{N,i}_{t}/W^{N,i}_{t-1}\)</span>. Preferences are represented by a general period utility function <span class="math inline">\(U(C,N)\)</span>, with marginal utilities <span class="math inline">\(U_{C}(C,N)&gt;0\)</span> and <span class="math inline">\(U_{N}(C,N)&lt;0\)</span>. The marginal rate of substitution is <span class="math inline">\(MRS(C,N)\equiv-U_{N}(C,N)/U_{C}(C,N)\)</span>. Intermediate firms use the general technology <span class="math inline">\(Y=A_{t}F(N)\)</span>, with <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The marginal product of labor is <span class="math inline">\(MPN_{t}\equiv A_{t}F_{N}(N_{t})\)</span>. The type-<span class="math inline">\(i\)</span> wage markup is <span class="math inline">\(MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})\)</span>, and the price markup is <span class="math inline">\(MU^{p}_{t}\equiv MPN_{t}/W_{t}\)</span>. Finally, <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate and <span class="math inline">\(D_{t}\)</span> firm dividends. The ex-dividend value of the aggregate equity claim is <span class="math inline">\(V_t\)</span>, and <span class="math inline">\(\Omega_t(h)\)</span> denotes household <span class="math inline">\(h\)</span>’s equity holdings. Saver households price claims with <span class="math inline">\(Q_{t,t+i}\equiv\beta^i U_C(C^S_{t+i},N^S_{t+i})/U_C(C^S_t,N^S_t)\)</span>. Here <span class="math inline">\(T^{i}_{t}\)</span> denotes the net fiscal liability of type-<span class="math inline">\(i\)</span> households. A negative value therefore corresponds to a transfer received by that household type. The variable <span class="math inline">\(Z_{t}\)</span> denotes the transfer directed to Type H households. Government purchases are denoted by <span class="math inline">\(G_{t}\)</span>, and <span class="math inline">\(\Gamma\equiv G/Y\)</span> is the steady-state government-spending share. In the redistribution rule considered below, the steady-state transfer is chosen so that type-specific steady-state consumption is equalized, <span class="math inline">\(C^{H}=C^{S}\)</span>.</p>
 <section id="labor-packer" class="level2">
 <h2 class="anchored" data-anchor-id="labor-packer">Labor Packer</h2>
 <p>The labor packer is a competitive aggregator that combines differentiated household labor into a homogeneous labor input sold to intermediate-goods firms. Household <span class="math inline">\(h\)</span> supplies labor <span class="math inline">\(N_{t}(h)\)</span> and is paid the nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, while the packer sells the aggregate labor input <span class="math inline">\(N_{t}\)</span> at the aggregate nominal wage <span class="math inline">\(W^{N}_{t}\)</span>. The parameter <span class="math inline">\(\psi_{w}&gt;1\)</span> is the elasticity of substitution across labor varieties, and <span class="math inline">\(\Lambda^{L}_{t}\)</span> is the multiplier on the constant-elasticity-of-substitution aggregation constraint. Taking the household-specific wages <span class="math inline">\(\{W^{N}_{t}(h)\}_{h\in[0,1]}\)</span> as given, the labor packer chooses <span class="math inline">\(\{N_{t}(h)\}_{h\in[0,1]}\)</span> and <span class="math inline">\(N_{t}\)</span>, which yields the labor demand schedule for each household and the aggregate nominal wage index.</p>
@@ -165,15 +371,15 @@ N^{H}_{t} &amp; =N_{t}\left(\frac{W^{N,H}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
 </section>
 <section id="type-s" class="level3">
 <h3 class="anchored" data-anchor-id="type-s">Type S</h3>
-<p>A Type S household chooses consumption <span class="math inline">\(C_{t}(h)\)</span>, labor supply <span class="math inline">\(N_{t}(h)\)</span>, its own nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, and one-period nominal bond holdings <span class="math inline">\(B^{N}_{t}(h)\)</span>. In addition to current after-subsidy labor income, it receives gross nominal bond returns <span class="math inline">\(R^{N}_{t-1}B^{N}_{t-1}(h)\)</span>, firm dividends <span class="math inline">\(D_{t}\)</span>, and faces the net fiscal liability <span class="math inline">\(T^{S}_{t}\)</span>. A positive value of <span class="math inline">\(T^{S}_{t}\)</span> is therefore a levy, while a negative value corresponds to a transfer. Here <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate on the bond purchased in period <span class="math inline">\(t\)</span>, and <span class="math inline">\(B^{N}_{t}(h)/P_{t}\)</span> is the household’s real bond position. The optimality conditions deliver both an Euler equation governing intertemporal consumption smoothing and a wage-setting equation analogous to that of Type H households. In symmetric equilibrium, these conditions are summarized by the Type S real wage <span class="math inline">\(W^{S}_{t}\)</span>, wage inflation <span class="math inline">\(\Pi^{S}_{t}\)</span>, marginal rate of substitution <span class="math inline">\(MRS^{S}_{t}\equiv MRS(C^{S}_{t},N^{S}_{t})\)</span>, and wage markup <span class="math inline">\(MU^{S}_{t}\equiv W^{S}_{t}/MRS^{S}_{t}\)</span>.</p>
+<p>A Type S household chooses consumption <span class="math inline">\(C_{t}(h)\)</span>, labor supply <span class="math inline">\(N_{t}(h)\)</span>, its own nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, one-period nominal bond holdings <span class="math inline">\(B^{N}_{t}(h)\)</span>, and equity holdings <span class="math inline">\(\Omega_{t}(h)\)</span>. In addition to current after-subsidy labor income, it receives gross nominal bond returns <span class="math inline">\(R^{N}_{t-1}B^{N}_{t-1}(h)\)</span> and the payoff on its equity holdings, <span class="math inline">\(\Omega_{t-1}(h)(V_t+D_t)\)</span>, where <span class="math inline">\(V_t\)</span> is the ex-dividend value of the aggregate equity claim. It also faces the net fiscal liability <span class="math inline">\(T^{S}_{t}\)</span>. A positive value of <span class="math inline">\(T^{S}_{t}\)</span> is therefore a levy, while a negative value corresponds to a transfer. Here <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate on the bond purchased in period <span class="math inline">\(t\)</span>, and <span class="math inline">\(B^{N}_{t}(h)/P_{t}\)</span> is the household’s real bond position. The optimality conditions deliver intertemporal asset-pricing equations and a wage-setting equation analogous to that of Type H households. In symmetric equilibrium, equity-market clearing gives <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>, so Type S households receive the per-capita dividend <span class="math inline">\(D_t/(1-\lambda)\)</span>.</p>
 <ul>
-<li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},R^{N}_{t},D_{t},N_{t},Y_{t},T^{S}_{t},W^{N}_{t-1}(h),B^{N}_{t-1}(h)\)</span></p></li>
-<li><p>Choice variables: <span class="math inline">\(C_{t}(h),N_{t}(h),W^{N}_{t}(h),B^{N}_{t}(h)\)</span></p></li>
+<li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},R^{N}_{t},V_t,D_{t},N_{t},Y_{t},T^{S}_{t},W^{N}_{t-1}(h),B^{N}_{t-1}(h),\Omega_{t-1}(h)\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(C_{t}(h),N_{t}(h),W^{N}_{t}(h),B^{N}_{t}(h),\Omega_t(h)\)</span></p></li>
 <li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U(C_{t}(h),N_{t}(h))\]</span></p></li>
 <li><p>Constraints: <span class="math display">\[\begin{aligned}
-&amp; C_{t}(h)+\frac{B^{N}_{t}(h)}{P_{t}}+T^{S}_{t}\\
+&amp; C_{t}(h)+\frac{B^{N}_{t}(h)}{P_{t}}+\Omega_t(h)V_t+T^{S}_{t}\\
 &amp; =(1+\tau_{w})\frac{W^{N}_{t}(h)}{P_{t}}N_{t}(h)-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
-&amp; +R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}\\
+&amp; +R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+\Omega_{t-1}(h)(V_t+D_t)\\
 &amp; N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}
 \end{aligned}\]</span></p></li>
 <li><p>Lagrangian: <span class="math display">\[\begin{aligned}
@@ -181,26 +387,32 @@ N^{H}_{t} &amp; =N_{t}\left(\frac{W^{N,H}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
 \mathcal{L}_{t}= &amp; U\left(C_{t}(h),N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\right)\\
 &amp; +\Lambda^{S}_{t}(h)\left(\begin{array}{c}
 (1+\tau_{w})\frac{W^{N}_{t}N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{1-\psi_{w}}-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
-+R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}-C_{t}(h)-\frac{B^{N}_{t}(h)}{P_{t}}-T^{S}_{t}
++R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+\Omega_{t-1}(h)(V_t+D_t)-C_{t}(h)-\frac{B^{N}_{t}(h)}{P_{t}}-\Omega_t(h)V_t-T^{S}_{t}
 \end{array}\right)
 \end{aligned}\]</span></p></li>
 <li><p>FOC wrt <span class="math inline">\(C_{t}(h)\)</span>: <span class="math display">\[\Lambda^{S}_{t}(h)=U_{C}(C_{t}(h),N_{t}(h))\]</span></p></li>
+</ul>
+<p>Define the saver stochastic discount factor from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+i\)</span> as <span class="math display">\[Q_{t,t+i}\equiv\beta^i\frac{U_C(C^S_{t+i},N^S_{t+i})}{U_C(C^S_t,N^S_t)}.\]</span></p>
+<ul>
 <li><p>FOC wrt <span class="math inline">\(W^{N}_{t}(h)\)</span>: <span class="math display">\[\begin{aligned}
 -\psi_{w}\frac{N_{t}}{W^{N}_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}-1}U_{N}(C_{t}(h),N_{t}(h))\\
 +(1-\psi_{w})\Lambda^{S}_{t}(h)(1+\tau_{w})\frac{N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\\
 -\Lambda^{S}_{t}(h)\eta_{w}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)\frac{Y_{t}}{W^{N}_{t-1}(h)}\\
-+\beta \mathbb{E}_{t}\Lambda^{S}_{t+1}(h)\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}} &amp; =0
++\Lambda^{S}_{t}(h)\mathbb{E}_{t}\left[Q_{t,t+1}\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}}\right] &amp; =0
 \end{aligned}\]</span></p></li>
-<li><p>FOC wrt <span class="math inline">\(B^{N}_{t}(h)\)</span>: <span class="math display">\[\frac{\Lambda^{S}_{t}(h)}{P_{t}}=\beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{\Lambda^{S}_{t+1}(h)}{P_{t+1}}\right]\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(B^{N}_{t}(h)\)</span>: <span class="math display">\[\frac{1}{P_t}=\mathbb{E}_{t}\left[Q_{t,t+1}\frac{R^N_t}{P_{t+1}}\right]\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(\Omega_t(h)\)</span>: <span class="math display">\[V_t=\mathbb{E}_{t}\left[Q_{t,t+1}(V_{t+1}+D_{t+1})\right]\]</span></p></li>
 <li><p>Symmetric Equilibrium (<span class="math inline">\(\Lambda^{S}_{t}(h)=\Lambda^{S}_{t}\)</span>, <span class="math inline">\(C_{t}(h)=C^{S}_{t}\)</span>, <span class="math inline">\(N_{t}(h)=N^{S}_{t}\)</span>, <span class="math inline">\(W^{N}_{t}(h)=W^{N,S}_{t}\)</span>, where <span class="math inline">\(W^{S}_{t}\)</span> is the real wage of type <span class="math inline">\(S\)</span>): <span class="math display">\[\begin{aligned}
 N^{S}_{t} &amp; =N_{t}\left(\frac{W^{N,S}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
 \Lambda^{S}_{t} &amp; =U_{C}(C^{S}_{t},N^{S}_{t})\\
-1= &amp; \beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{P_{t}}{P_{t+1}}\right]
+1= &amp; \mathbb{E}_{t}\left[Q_{t,t+1}R^{N}_{t}\frac{P_{t}}{P_{t+1}}\right]\\
+V_t= &amp; \mathbb{E}_t\left[Q_{t,t+1}(V_{t+1}+D_{t+1})\right]\\
+= &amp; \mathbb{E}_{t}\sum_{i=1}^{\infty}Q_{t,t+i}D_{t+i}
 \end{aligned}\]</span> <span class="math display">\[\begin{aligned}
 \eta_{w}\frac{Y_{t}}{N^{S}_{t}}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= &amp; \psi_{w}\left[MRS^{S}_{t}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\frac{W^{N,S}_{t}}{P_{t}}\right]\\
-&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{N^{S}_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]\\
+&amp; +\eta_{w}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{N^{S}_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]\\
 \Leftrightarrow\eta_{w}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= &amp; \psi_{w}\frac{W^{N,S}_{t}N^{S}_{t}}{P_{t}Y_{t}}\left[\frac{1}{MU^{S}_{t}}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\right]\\
-&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]
+&amp; +\eta_{w}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]
 \end{aligned}\]</span> where <span class="math inline">\(MRS^{S}_{t}=MRS(C^{S}_{t},N^{S}_{t})\)</span> is Type S marginal rate of substitution, and <span class="math inline">\(MU^{S}_{t}=W^{S}_{t}/MRS^{S}_{t}\)</span> is Type S wage markup.</p></li>
 </ul>
 </section>
@@ -224,18 +436,18 @@ N^{S}_{t} &amp; =N_{t}\left(\frac{W^{N,S}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
 </section>
 <section id="intermediate-goods-firms" class="level2">
 <h2 class="anchored" data-anchor-id="intermediate-goods-firms">Intermediate Goods Firms</h2>
-<p>Intermediate-good firm <span class="math inline">\(j\)</span> produces output <span class="math inline">\(Y_{t}(j)\)</span> using labor <span class="math inline">\(N_{t}(j)\)</span> according to the general technology <span class="math inline">\(Y_{t}(j)=A_{t}F(N_{t}(j))\)</span>, where <span class="math inline">\(A_{t}\equiv\exp(a_{t})\)</span> denotes aggregate labor productivity and <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The firm hires homogeneous labor from the labor packer at the nominal wage <span class="math inline">\(W^{N}_{t}\)</span>, sets its own price <span class="math inline">\(P_{t}(j)\)</span>, and faces Rotemberg price adjustment costs governed by <span class="math inline">\(\eta_{p}\)</span>. Its real profits are denoted by <span class="math inline">\(D_{t}(j)\)</span>, the government levies the lump-sum tax <span class="math inline">\(T^{M}_{t}\)</span>, and the sales subsidy rate is <span class="math inline">\(\tau_{p}\)</span>. The firm’s objective is the date-0 present discounted value of profits, discounted by the saver household’s stochastic discount factor. The optimality conditions determine labor demand, real marginal cost, and the price-setting equation. In symmetric equilibrium, the price markup is <span class="math inline">\(MU^{p}_{t}\equiv P_{t}MPN_{t}/W^{N}_{t}=MPN_{t}/W_{t}\)</span> and <span class="math inline">\(MPN_{t}\equiv A_{t}F_{N}(N_{t})\)</span> is the marginal product of labor.</p>
+<p>Intermediate-good firm <span class="math inline">\(j\)</span> produces output <span class="math inline">\(Y_{t}(j)\)</span> using labor <span class="math inline">\(N_{t}(j)\)</span> according to the general technology <span class="math inline">\(Y_{t}(j)=A_{t}F(N_{t}(j))\)</span>, where <span class="math inline">\(A_{t}\equiv\exp(a_{t})\)</span> denotes aggregate labor productivity and <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The firm hires homogeneous labor from the labor packer at the nominal wage <span class="math inline">\(W^{N}_{t}\)</span>, sets its own price <span class="math inline">\(P_{t}(j)\)</span>, and faces Rotemberg price adjustment costs governed by <span class="math inline">\(\eta_{p}\)</span>. Its real profits are denoted by <span class="math inline">\(D_{t}(j)\)</span>, the government levies the lump-sum tax <span class="math inline">\(T^{M}_{t}\)</span>, and the sales subsidy rate is <span class="math inline">\(\tau_{p}\)</span>. The firm’s objective is the date-0 present discounted value of profits, discounted by the saver household’s stochastic discount factor <span class="math inline">\(Q_{0,t}\)</span>. The optimality conditions determine labor demand, real marginal cost, and the price-setting equation. In symmetric equilibrium, the price markup is <span class="math inline">\(MU^{p}_{t}\equiv P_{t}MPN_{t}/W^{N}_{t}=MPN_{t}/W_{t}\)</span> and <span class="math inline">\(MPN_{t}\equiv A_{t}F_{N}(N_{t})\)</span> is the marginal product of labor.</p>
 <ul>
 <li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},Y_{t},A_{t},T^{M}_{t},C^{S}_{t},P_{t-1}(j)\)</span></p></li>
 <li><p>Choice variables: <span class="math inline">\(N_{t}(j),P_{t}(j),Y_{t}(j)\)</span></p></li>
-<li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}D_{t}(j)\]</span></p></li>
+<li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}Q_{0,t}D_{t}(j)\]</span></p></li>
 <li><p>Constraints: <span class="math display">\[\begin{aligned}
 D_{t}(j) &amp; =(1+\tau_{p})\frac{P_{t}(j)}{P_{t}}Y_{t}(j)-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)-T^{M}_{t}\\
 Y_{t}(j) &amp; =Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\\
 Y_{t}(j) &amp; =A_{t}F(N_{t}(j))
 \end{aligned}\]</span></p></li>
 <li><p>Lagrangian: <span class="math display">\[\begin{aligned}
-\mathbb{L}= &amp; \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}\mathcal{L}_{t}\\
+\mathbb{L}= &amp; \mathbb{E}_{0}\sum^{\infty}_{t=0}Q_{0,t}\mathcal{L}_{t}\\
 \mathcal{L}_{t}= &amp; (1+\tau_{p})Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{1-\psi_{p}}-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)\\
 &amp; -T^{M}_{t}+\Lambda^{M}_{t}(j)\left(A_{t}F(N_{t}(j))-Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\right)
 \end{aligned}\]</span></p></li>
@@ -244,13 +456,14 @@ Y_{t}(j) &amp; =A_{t}F(N_{t}(j))
 \end{aligned}\]</span></p></li>
 <li><p>FOC wrt <span class="math inline">\(P_{t}(j)\)</span>: <span class="math display">\[\begin{aligned}
 &amp; U_{C}(C^{S}_{t},N^{S}_{t})(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-U_{C}(C^{S}_{t},N^{S}_{t})\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
-&amp; +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}+\beta\eta_{p}\mathbb{E}_{t}\left[U_{C}(C^{S}_{t+1},N^{S}_{t+1})Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
+&amp; +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}\\
+&amp; +U_C(C^S_t,N^S_t)\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
 \end{aligned}\]</span></p></li>
 <li><p>Symmetric Equilibrium (<span class="math inline">\(N_{t}(j)=N_{t}\)</span>, <span class="math inline">\(\Lambda^{M}_{t}(j)=\Lambda^{M}_{t}\)</span>, <span class="math inline">\(P_{t}(j)=P_{t}\)</span>, <span class="math inline">\(Y_{t}(j)=Y_{t}\)</span>): <span class="math display">\[\begin{aligned}
 \eta_{p}\frac{P_{t}}{P_{t-1}}\left(\frac{P_{t}}{P_{t-1}}-1\right)= &amp; \psi_{p}\left[\frac{W^{N}_{t}/P_{t}}{MPN_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
-&amp; +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]\\
+&amp; +\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]\\
 = &amp; \psi_{p}\left[\frac{1}{MU^{p}_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
-&amp; +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]
+&amp; +\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]
 \end{aligned}\]</span></p></li>
 <li><p>Profits: <span class="math display">\[\begin{aligned}
 D_{t} &amp; =(1+\tau_{p})Y_{t}-\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}-T^{M}_{t}
@@ -259,15 +472,20 @@ D_{t} &amp; =(1+\tau_{p})Y_{t}-\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\r
 </section>
 <section id="government" class="level2">
 <h2 class="anchored" data-anchor-id="government">Government</h2>
-<p>The government performs three functions in the model. First, it provides the wage subsidy <span class="math inline">\(\tau_{w}\)</span> and the sales subsidy <span class="math inline">\(\tau_{p}\)</span>, eliminating steady-state markups under the baseline specialization introduced below. Second, it redistributes resources across household types through the lump-sum components <span class="math inline">\(T^{H}_{t}\)</span> and <span class="math inline">\(T^{S}_{t}\)</span>. Here <span class="math inline">\(Z_{t}\)</span> denotes the transfer received by Type H households, while Type S households finance that transfer through a balanced-budget levy. Because <span class="math inline">\(T^{i}_{t}\)</span> denotes net fiscal liability, the transfer implies <span class="math inline">\(T^{H}_{t}&lt;0\)</span> for the recipient household type and a positive levy on Type S through <span class="math inline">\(T^{S}_{t}\)</span>. Third, the monetary authority sets the gross nominal interest rate <span class="math inline">\(R^{N}_{t}\)</span> according to a Taylor rule that responds to gross price inflation <span class="math inline">\(\Pi^{p}_{t}\)</span> and to the monetary policy shock <span class="math inline">\(m_{t}\)</span>. The redistribution shock <span class="math inline">\(z_{t}\)</span> follows an autoregressive process and determines <span class="math inline">\(Z_{t}\)</span> through <span class="math inline">\(Z_{t}=z_{t}Y\)</span>, where <span class="math inline">\(Y\)</span> is steady-state output.</p>
+<p>The government performs three functions in the model. First, it provides the wage subsidy <span class="math inline">\(\tau_{w}\)</span> and the sales subsidy <span class="math inline">\(\tau_{p}\)</span>, eliminating steady-state markups under the baseline specialization introduced below. Second, it redistributes resources across household types through the lump-sum components <span class="math inline">\(T^{H}_{t}\)</span> and <span class="math inline">\(T^{S}_{t}\)</span>, and finances government purchases <span class="math inline">\(G_{t}\)</span> with type-invariant lump-sum liabilities. Here <span class="math inline">\(Z_{t}\)</span> denotes the transfer received by Type H households, while Type S households finance that transfer through a balanced-budget levy. Because <span class="math inline">\(T^{i}_{t}\)</span> denotes net fiscal liability, the transfer implies <span class="math inline">\(T^{H}_{t}&lt;0\)</span> for the recipient household type and a positive levy on Type S through <span class="math inline">\(T^{S}_{t}\)</span>. The steady-state component of the transfer is chosen to equalize type-specific consumption in the steady state. Third, the monetary authority sets the gross nominal interest rate <span class="math inline">\(R^{N}_{t}\)</span> according to a Taylor rule that responds to gross price inflation <span class="math inline">\(\Pi^{p}_{t}\)</span> and to the monetary policy shock <span class="math inline">\(m_{t}\)</span>.</p>
 <p>Fiscal policy: <span class="math display">\[\begin{aligned}
-T^{H}_{t} &amp; =-Z_{t}+\tau_{w}W^{H}_{t}N^{H}_{t}\\
-T^{S}_{t} &amp; =\frac{\lambda}{1-\lambda}Z_{t}+\tau_{w}W^{S}_{t}N^{S}_{t}\\
+T^{H}_{t} &amp; =-Z_{t}+\tau_{w}W^{H}_{t}N^{H}_{t}+G_{t}\\
+T^{S}_{t} &amp; =\frac{\lambda}{1-\lambda}Z_{t}+\tau_{w}W^{S}_{t}N^{S}_{t}+G_{t}\\
 T^{M}_{t} &amp; =\tau_{p}Y_{t}\\
 \tau_{w} &amp; =1/(\psi_{w}-1)\\
 \tau_{p} &amp; =1/(\psi_{p}-1)\\
-Z_{t} &amp; =z_{t}Y\\
-z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+Z_{t} &amp; =Z+z_{t}Y\\
+Z &amp; =D\\
+C^{H} &amp; =C^{S}\\
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}\\
+G_{t} &amp; =G+g_{t}Y\\
+\Gamma &amp; =G/Y\\
+g_{t} &amp; =\rho_{g}g_{t-1}+e^{g}_{t}
 \end{aligned}\]</span></p>
 <p>Monetary Policy:</p>
 <p><span class="math display">\[\begin{aligned}
@@ -277,17 +495,18 @@ m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}
 </section>
 <section id="equilibrium-conditions" class="level2">
 <h2 class="anchored" data-anchor-id="equilibrium-conditions">Equilibrium conditions</h2>
-<p>Equilibrium requires market clearing in goods and bond markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy <span class="math inline">\(B^{N}_{t}=0\)</span>. Aggregate consumption <span class="math inline">\(C_{t}\)</span> is the population-weighted average of <span class="math inline">\(C^{H}_{t}\)</span> and <span class="math inline">\(C^{S}_{t}\)</span>, and final output <span class="math inline">\(Y_{t}\)</span> is allocated to private consumption and to price and wage adjustment costs.</p>
+<p>Equilibrium requires market clearing in goods, bond, and equity markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy <span class="math inline">\(B^{N}_{t}=0\)</span>. Equity supply is normalized to one, so equity-market clearing requires <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>. Aggregate consumption <span class="math inline">\(C_{t}\)</span> is the population-weighted average of <span class="math inline">\(C^{H}_{t}\)</span> and <span class="math inline">\(C^{S}_{t}\)</span>, and final output <span class="math inline">\(Y_{t}\)</span> is allocated to private consumption, government purchases, and price and wage adjustment costs.</p>
 <p>Final goods market: <span class="math display">\[\begin{aligned}
-Y_{t} &amp; =C_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
+Y_{t} &amp; =C_{t}+G_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
 &amp; +\lambda\frac{\eta_{w}}{2}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)^{2}Y_{t}
 \end{aligned}\]</span></p>
 <p>Bond market: <span class="math inline">\(B^{N}_{t}=0\)</span>.</p>
+<p>Equity market: <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>.</p>
 <p>Aggregation condition: <span class="math display">\[C_{t}=\lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\]</span></p>
 </section>
 <section id="reduced-nonlinear-equilibrium-system" class="level2">
 <h2 class="anchored" data-anchor-id="reduced-nonlinear-equilibrium-system">Reduced nonlinear equilibrium system</h2>
-<p>Before summarizing the model, I collect the key real variables and inflation rates used below. In particular, <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> denotes the aggregate real wage, <span class="math inline">\(W^{H}_{t}\equiv W^{N,H}_{t}/P_{t}\)</span> and <span class="math inline">\(W^{S}_{t}\equiv W^{N,S}_{t}/P_{t}\)</span> denote type-specific real wages, <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span> denotes gross price inflation, and <span class="math inline">\(\Pi^{H}_{t}\)</span>, <span class="math inline">\(\Pi^{S}_{t}\)</span>, and <span class="math inline">\(\Pi^{w}_{t}\)</span> denote the corresponding gross wage inflation rates for Type H, Type S, and the aggregate wage index. The aggregate wage markup is defined as <span class="math inline">\(MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})\)</span>.</p>
+<p>Before summarizing the model, I collect the key real variables and inflation rates used below. In particular, <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> denotes the aggregate real wage, <span class="math inline">\(W^{H}_{t}\equiv W^{N,H}_{t}/P_{t}\)</span> and <span class="math inline">\(W^{S}_{t}\equiv W^{N,S}_{t}/P_{t}\)</span> denote type-specific real wages, <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span> denotes gross price inflation, and <span class="math inline">\(\Pi^{H}_{t}\)</span>, <span class="math inline">\(\Pi^{S}_{t}\)</span>, and <span class="math inline">\(\Pi^{w}_{t}\)</span> denote the corresponding gross wage inflation rates for Type H, Type S, and the aggregate wage index. The aggregate wage markup is defined as <span class="math inline">\(MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})\)</span>. The saver stochastic discount factor is <span class="math inline">\(Q_{t,t+i}\equiv\beta^iU_C(C^S_{t+i},N^S_{t+i})/U_C(C^S_t,N^S_t)\)</span>.</p>
 <p>The following block collects a reduced set of nonlinear equilibrium conditions that is sufficient for the log-linearization below.</p>
 <p>I report only the nonlinear conditions needed to obtain the first-order system below. Conditions omitted here are either redundant or recoverable by symmetry and aggregation.</p>
 <p>The nonlinear equilibrium conditions can be summarized as follows:</p>
@@ -298,7 +517,7 @@ N_{t} &amp; =\left[\lambda(N^{H}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}+(1-\lambda)(
 \end{aligned}\]</span></p></li>
 <li><p>Type H: <span class="math display">\[\begin{aligned}
 N^{H}_{t}= &amp; N_{t}\left(\frac{W^{H}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
-C^{H}_{t}= &amp; W^{H}_{t}N^{H}_{t}+Z_{t}-\frac{\eta_{w}}{2}\left(\Pi^{H}_{t}-1\right)^{2}Y_{t}\\
+C^{H}_{t}= &amp; W^{H}_{t}N^{H}_{t}+Z_{t}-G_{t}-\frac{\eta_{w}}{2}\left(\Pi^{H}_{t}-1\right)^{2}Y_{t}\\
 \eta_{w}\Pi^{H}_{t}\left(\Pi^{H}_{t}-1\right)= &amp; \psi_{w}\left\{ \frac{1}{MU^{H}_{t}}-1\right\} \frac{W^{H}_{t}N^{H}_{t}}{Y_{t}}\\
 &amp; +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{H}_{t+1}\left(\Pi^{H}_{t+1}-1\right)\right]\\
 \Pi^{H}_{t}= &amp; \frac{W^{H}_{t}}{W^{H}_{t-1}}\Pi^{p}_{t}\\
@@ -306,9 +525,12 @@ MU^{H}_{t}= &amp; \frac{W^{H}_{t}}{MRS(C^{H}_{t},N^{H}_{t})}
 \end{aligned}\]</span></p></li>
 <li><p>Type S: <span class="math display">\[\begin{aligned}
 N^{S}_{t}= &amp; N_{t}\left(\frac{W^{S}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
-1= &amp; \beta\mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\right]\\
+Q_{t,t+i}= &amp; \beta^i\frac{U_C(C^S_{t+i},N^S_{t+i})}{U_C(C^S_t,N^S_t)}\\
+1= &amp; \mathbb{E}_{t}\left[Q_{t,t+1}\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
+V_t= &amp; \mathbb{E}_t\left[Q_{t,t+1}(V_{t+1}+D_{t+1})\right]=\mathbb{E}_{t}\sum_{i=1}^{\infty}Q_{t,t+i}D_{t+i}\\
+C^{S}_{t}= &amp; W^{S}_{t}N^{S}_{t}+\frac{D_{t}}{1-\lambda}-\frac{\lambda}{1-\lambda}Z_{t}-G_{t}-\frac{\eta_{w}}{2}\left(\Pi^{S}_{t}-1\right)^{2}Y_{t}\\
 \eta_{w}\Pi^{S}_{t}\left(\Pi^{S}_{t}-1\right)= &amp; \psi_{w}\left\{ \frac{1}{MU^{S}_{t}}-1\right\} \frac{W^{S}_{t}N^{S}_{t}}{Y_{t}}\\
-&amp; +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{S}_{t+1}\left(\Pi^{S}_{t+1}-1\right)\right]\\
+&amp; +\eta_{w}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{Y_{t}}\Pi^{S}_{t+1}\left(\Pi^{S}_{t+1}-1\right)\right]\\
 \Pi^{S}_{t}= &amp; \frac{W^{S}_{t}}{W^{S}_{t-1}}\Pi^{p}_{t}\\
 MU^{S}_{t}= &amp; \frac{W^{S}_{t}}{MRS(C^{S}_{t},N^{S}_{t})}
 \end{aligned}\]</span></p></li>
@@ -317,22 +539,27 @@ A_{t} &amp; =\exp(a_{t})\\
 Y_{t} &amp; =A_{t}F(N_{t})\\
 a_{t} &amp; =\rho_{a}a_{t-1}+e^{a}_{t}\\
 \eta_{p}\Pi^{p}_{t}\left(\Pi^{p}_{t}-1\right) &amp; =\psi_{p}\left\{ \frac{1}{MU^{p}_{t}}-1\right\} \\
-&amp; +\eta_{p}\beta \mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{p}_{t+1}\left(\Pi^{p}_{t+1}-1\right)\right]\\
+&amp; +\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}\frac{Y_{t+1}}{Y_{t}}\Pi^{p}_{t+1}\left(\Pi^{p}_{t+1}-1\right)\right]\\
 MU^{p}_{t} &amp; =\frac{A_{t}F_{N}(N_{t})}{W_{t}}\\
 D_{t} &amp; =Y_{t}-\frac{\eta_{p}}{2}\left(\Pi^{p}_{t}-1\right)^{2}Y_{t}-W_{t}N_{t}
 \end{aligned}\]</span></p></li>
 <li><p>Government: <span class="math display">\[\begin{aligned}
 R^{N}_{t} &amp; =\frac{\exp(-m_{t})}{\beta}(\Pi^{p}_{t})^{\phi}\\
 m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}\\
-Z_{t} &amp; =z_{t}Y\\
-z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+Z_{t} &amp; =Z+z_{t}Y\\
+Z &amp; =D\\
+G_{t} &amp; =G+g_{t}Y\\
+\Gamma &amp; =G/Y\\
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}\\
+g_{t} &amp; =\rho_{g}g_{t-1}+e^{g}_{t}\\
 \end{aligned}\]</span></p></li>
 <li><p>Market clearing and others:</p></li>
 </ul>
 <p><span class="math display">\[\begin{aligned}
-Y_{t}= &amp; C_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
+Y_{t}= &amp; C_{t}+G_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
 &amp; +\lambda\frac{\eta_{w}}{2}(\Pi^{H}_{t}-1)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}(\Pi^{S}_{t}-1)^{2}Y_{t}\\
 C_{t}= &amp; \lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\\
+(1-\lambda)\Omega_t= &amp; 1\\
 R_{t}= &amp; \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
 \Pi^{w}_{t}= &amp; \frac{W_{t}}{W_{t-1}}\Pi^{p}_{t}\\
 MU^{w}_{t}= &amp; \frac{W_{t}}{MRS(C_{t},N_{t})}
@@ -340,21 +567,26 @@ MU^{w}_{t}= &amp; \frac{W_{t}}{MRS(C_{t},N_{t})}
 </section>
 <section id="functional-specialization-and-log-linear-approximation" class="level2">
 <h2 class="anchored" data-anchor-id="functional-specialization-and-log-linear-approximation">Functional specialization and log-linear approximation</h2>
-<p>From this section onward, I specialize the primitives to the separable CRRA-Frisch utility function and the linear production function: <span class="math display">\[\begin{aligned}
+<p>From this section onward, I specialize the primitives to the separable CRRA-Frisch utility function and set <span class="math inline">\(F(N)=N^{1-\alpha}\)</span>: <span class="math display">\[\begin{aligned}
 U(C,N) &amp; =\frac{C^{1-\gamma}}{1-\gamma}-\frac{N^{1+\varphi}}{1+\varphi},\\
 MRS(C,N) &amp; =C^{\gamma}N^{\varphi},\\
-F(N) &amp; =N.
+F(N) &amp; =N^{1-\alpha},\\
+F_{N}(N) &amp; =(1-\alpha)N^{-\alpha}.
 \end{aligned}\]</span></p>
-<p>In the log-linearized system, lower-case letters denote log deviations from the symmetric zero-inflation steady state; for example, <span class="math inline">\(c_{t}\equiv\log(C_{t}/C)\)</span>, <span class="math inline">\(n_{t}\equiv\log(N_{t}/N)\)</span>, and <span class="math inline">\(w_{t}\equiv\log(W_{t}/W)\)</span>. Inflation variables are log deviations of gross inflation rates, and profits are scaled by steady-state output, <span class="math inline">\(d_{t}\equiv D_{t}/Y\)</span>. The ex ante real interest rate is <span class="math inline">\(r_{t}\equiv r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\)</span>, where <span class="math inline">\(r^{N}_{t}\)</span> is the log deviation of the gross nominal rate <span class="math inline">\(R^{N}_{t}\)</span>. The variables <span class="math inline">\(a_{t}\)</span>, <span class="math inline">\(m_{t}\)</span>, and <span class="math inline">\(z_{t}\)</span> are exogenous deviation processes. In what follows, upper-case <span class="math inline">\(MU\)</span> denotes level markups, whereas lower-case <span class="math inline">\(\mu\)</span> denotes their log-linear deviations. Around the symmetric zero-inflation steady state, the quadratic price- and wage-adjustment costs are second-order terms and therefore drop out from the first-order resource constraint, which implies <span class="math inline">\(y_{t}=c_{t}\)</span> at first order.</p>
-<p>The steady-state values are as follows: <span class="math display">\[\begin{aligned}
-N= &amp; N^{S}=N^{H}=1\\
-Y=C= &amp; C^{S}=C^{H}=1\\
-MU^{w}= &amp; MU^{S}=MU^{H}=1\\
-\Pi^{w}= &amp; \Pi^{S}=\Pi^{H}=\Pi^{p}=1\\
-W= &amp; W^{S}=W^{H}=1\\
-D= &amp; 0
+<p>In the log-linearized system, lower-case letters denote log deviations from the symmetric zero-inflation steady state; for example, <span class="math inline">\(c_{t}\equiv\log(C_{t}/C)\)</span>, <span class="math inline">\(n_{t}\equiv\log(N_{t}/N)\)</span>, and <span class="math inline">\(w_{t}\equiv\log(W_{t}/W)\)</span>. Inflation variables are log deviations of gross inflation rates. The dividend variable is the deviation of dividends from their steady-state value, scaled by steady-state output, <span class="math inline">\(d_{t}\equiv(D_{t}-D)/Y\)</span>. The ex ante real interest rate is <span class="math inline">\(r_{t}\equiv r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\)</span>, where <span class="math inline">\(r^{N}_{t}\)</span> is the log deviation of the gross nominal rate <span class="math inline">\(R^{N}_{t}\)</span>. The variables <span class="math inline">\(a_{t}\)</span>, <span class="math inline">\(m_{t}\)</span>, <span class="math inline">\(z_{t}\equiv(Z_{t}-Z)/Y\)</span>, and <span class="math inline">\(g_{t}\equiv(G_{t}-G)/Y\)</span> are exogenous deviation processes. In what follows, upper-case <span class="math inline">\(MU\)</span> denotes level markups, whereas lower-case <span class="math inline">\(\mu\)</span> denotes their log-linear deviations. Around the symmetric zero-inflation steady state, the quadratic price- and wage-adjustment costs are second-order terms and therefore drop out from the first-order resource constraint, which implies <span class="math inline">\(y_{t}=(1-\Gamma)c_{t}+g_{t}\)</span> at first order. The steady-state labor share remains <span class="math inline">\(WN/Y=1-\alpha\)</span>.</p>
+<p>The steady-state restrictions used below are as follows: <span class="math display">\[\begin{aligned}
+N &amp; =N^{S}=N^{H}=\left(\frac{1-\alpha}{(1-\Gamma)^{\gamma}}\right)^{\frac{1}{\gamma(1-\alpha)+\varphi+\alpha}}\\
+Y &amp; =N^{1-\alpha}\\
+C&amp;=C^{S}=C^{H}=(1-\Gamma)Y\\
+W &amp; =W^{S}=W^{H}=(1-\alpha)N^{-\alpha}\\
+MU^p &amp;=MU^{w}= MU^{S}=MU^{H}=1\\
+\Pi^{p}&amp;=\Pi^{w}=  \Pi^{S}=\Pi^{H}=1\\
+D/Y&amp;=  \alpha\\
+G/Y&amp;= \Gamma\\
+V/Y&amp;= \frac{\beta}{1-\beta}\alpha\\
+\Omega&amp;= \frac{1}{1-\lambda}
 \end{aligned}\]</span></p>
-<p>The log-linear approximation, with <span class="math inline">\(d_{t}:=D_{t}/Y\)</span>, is then given by:</p>
+<p>The log-linear approximation, with <span class="math inline">\(d_{t}:=(D_{t}-D)/Y\)</span>, is then given by:</p>
 <ul>
 <li><p>Labor Packer: <span class="math display">\[\begin{aligned}
 w_{t} &amp; =\lambda w^{H}_{t}+(1-\lambda)w^{S}_{t}\\
@@ -362,53 +594,55 @@ n_{t} &amp; =\lambda n^{H}_{t}+(1-\lambda)n^{S}_{t}
 \end{aligned}\]</span></p></li>
 <li><p>Type H: <span class="math display">\[\begin{aligned}
 n^{H}_{t} &amp; =n_{t}-\psi_{w}(w^{H}_{t}-w_{t})\\
-c^{H}_{t} &amp; =w^{H}_{t}+n^{H}_{t}+z_{t}\\
-\pi^{H}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta\mathbb{E}_{t}\pi^{H}_{t+1}\\
+c^{H}_{t} &amp; =\frac{1-\alpha}{1-\Gamma}(w^{H}_{t}+n^{H}_{t})+\frac{1}{1-\Gamma}(z_{t}-g_{t})\\
+\pi^{H}_{t} &amp; =-(1-\alpha)(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta\mathbb{E}_{t}\pi^{H}_{t+1}\\
 \pi^{H}_{t} &amp; =w^{H}_{t}-w^{H}_{t-1}+\pi^{p}_{t}\\
 \mu^{H}_{t} &amp; =w^{H}_{t}-(\gamma c^{H}_{t}+\varphi n^{H}_{t})\\
 \end{aligned}\]</span></p></li>
 <li><p>Type S: <span class="math display">\[\begin{aligned}
 n^{S}_{t} &amp; =n_{t}-\psi_{w}(w^{S}_{t}-w_{t})\\
 r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1} &amp; =\gamma\mathbb{E}_{t}\Delta c^{S}_{t+1}\\
-\pi^{S}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{S}_{t}+\beta\mathbb{E}_{t}\pi^{S}_{t+1}\\
+c^{S}_{t} &amp; =\frac{1-\alpha}{1-\Gamma}(w^{S}_{t}+n^{S}_{t})+\frac{1}{(1-\lambda)(1-\Gamma)}d_{t}-\frac{\lambda}{(1-\lambda)(1-\Gamma)}z_{t}-\frac{1}{1-\Gamma}g_{t}\\
+\pi^{S}_{t} &amp; =-(1-\alpha)(\psi_{w}/\eta_{w})\mu^{S}_{t}+\beta\mathbb{E}_{t}\pi^{S}_{t+1}\\
 \pi^{S}_{t} &amp; =w^{S}_{t}-w^{S}_{t-1}+\pi^{p}_{t}\\
 \mu^{S}_{t} &amp; =w^{S}_{t}-(\gamma c^{S}_{t}+\varphi n^{S}_{t})
 \end{aligned}\]</span></p></li>
 <li><p>Firms: <span class="math display">\[\begin{aligned}
-y_{t} &amp; =a_{t}+n_{t}\\
+y_{t} &amp; =a_{t}+(1-\alpha)n_{t}\\
 a_{t} &amp; =\rho_{a}a_{t-1}+e^{a}_{t}\\
 \pi^{p}_{t} &amp; =-(\psi_{p}/\eta_{p})\mu^{p}_{t}+\beta\mathbb{E}_{t}\pi^{p}_{t+1}\\
-\mu^{p}_{t} &amp; =a_{t}-w_{t}\\
-d_{t} &amp; =a_{t}-w_{t}
+\mu^{p}_{t} &amp; =y_{t}-n_{t}-w_{t}\\
+d_{t} &amp; =y_{t}-(1-\alpha)(w_{t}+n_{t})
 \end{aligned}\]</span></p></li>
 <li><p>Government: <span class="math display">\[\begin{aligned}
 r^{N}_{t} &amp; =\phi\pi^{p}_{t}-m_{t}\\
 m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}\\
-z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}\\
+g_{t} &amp; =\rho_{g}g_{t-1}+e^{g}_{t}
 \end{aligned}\]</span></p></li>
 <li><p>Market clearing and others:</p></li>
 </ul>
 <p><span class="math display">\[\begin{aligned}
-y_{t} &amp; =c_{t}\\
+y_{t} &amp; =(1-\Gamma)c_{t}+g_{t}\\
 r_{t} &amp; =r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\\
 c_{t} &amp; =\lambda c^{H}_{t}+(1-\lambda)c^{S}_{t}\\
 \pi^{w}_{t} &amp; =\lambda\pi^{H}_{t}+(1-\lambda)\pi^{S}_{t}\\
 \pi^{w}_{t} &amp; =w_{t}-w_{t-1}+\pi^{p}_{t}\\
-\pi^{w}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta\mathbb{E}_{t}\pi^{w}_{t+1}\\
+\pi^{w}_{t} &amp; =-(1-\alpha)(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta\mathbb{E}_{t}\pi^{w}_{t+1}\\
 \mu^{w}_{t} &amp; =w_{t}-(\gamma c_{t}+\varphi n_{t})
 \end{aligned}\]</span></p>
-<p>After eliminating redundant equations and the nominal rate <span class="math inline">\(r^{N}_{t}\)</span>, <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;1</a> reports the nonredundant 20-equation representation used in the main text. The system is written in nonredundant form. Some type-specific relations are not reported separately because they are recoverable from symmetry, aggregation, and the displayed household block.</p>
-<div id="tbl-nonredundant-20eq" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[5,57,38]">
+<p>After eliminating the nominal rate <span class="math inline">\(r^{N}_{t}\)</span>, <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;2</a> reports the extended first-order representation. Relative to the baseline system, the table uses the dividend gap <span class="math inline">\(d_{t}\equiv(D_{t}-D)/Y\)</span>, includes the government-spending deviation <span class="math inline">\(g_{t}\equiv(G_{t}-G)/Y\)</span>, and keeps the steady-state labor share fixed at <span class="math inline">\(1-\alpha\)</span>.</p>
+<div id="tbl-nonredundant-20eq" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[5,52,43]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nonredundant-20eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Nonredundant 20-equation representation
+Table&nbsp;2: Extended first-order representation
 </figcaption>
 <div aria-describedby="tbl-nonredundant-20eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
-<col style="width: 56%">
-<col style="width: 38%">
+<col style="width: 52%">
+<col style="width: 43%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -426,7 +660,7 @@ Table&nbsp;1: Nonredundant 20-equation representation
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td>Type H budget constraint</td>
-<td><span class="math inline">\(c^{H}_{t}=w^{H}_{t}+n^{H}_{t}+z_{t}\)</span></td>
+<td><span class="math inline">\(c^{H}_{t}=\frac{1-\alpha}{1-\Gamma}(w^{H}_{t}+n^{H}_{t})+\frac{1}{1-\Gamma}(z_{t}-g_{t})\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
@@ -441,7 +675,7 @@ Table&nbsp;1: Nonredundant 20-equation representation
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td>Aggregate wage Phillips curve</td>
-<td><span class="math inline">\(\pi^{w}_{t}=-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta \mathbb{E}_{t}\pi^{w}_{t+1}\)</span></td>
+<td><span class="math inline">\(\pi^{w}_{t}=-(1-\alpha)(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta \mathbb{E}_{t}\pi^{w}_{t+1}\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
@@ -456,7 +690,7 @@ Table&nbsp;1: Nonredundant 20-equation representation
 <tr class="even">
 <td style="text-align: right;">8</td>
 <td>Type H wage Phillips curve</td>
-<td><span class="math inline">\(\pi^{H}_{t}=-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta \mathbb{E}_{t}\pi^{H}_{t+1}\)</span></td>
+<td><span class="math inline">\(\pi^{H}_{t}=-(1-\alpha)(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta \mathbb{E}_{t}\pi^{H}_{t+1}\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">9</td>
@@ -496,22 +730,22 @@ Table&nbsp;1: Nonredundant 20-equation representation
 <tr class="even">
 <td style="text-align: right;">16</td>
 <td>Price-markup definition</td>
-<td><span class="math inline">\(\mu^{p}_{t}=a_{t}-w_{t}\)</span></td>
+<td><span class="math inline">\(\mu^{p}_{t}=y_{t}-n_{t}-w_{t}\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">17</td>
-<td>Dividend share</td>
-<td><span class="math inline">\(d_{t}=a_{t}-w_{t}\)</span></td>
+<td>Dividend gap</td>
+<td><span class="math inline">\(d_{t}=y_{t}-(1-\alpha)(w_{t}+n_{t})\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">18</td>
 <td>Resource constraint</td>
-<td><span class="math inline">\(y_{t}=c_{t}\)</span></td>
+<td><span class="math inline">\(y_{t}=(1-\Gamma)c_{t}+g_{t}\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">19</td>
 <td>Production function</td>
-<td><span class="math inline">\(y_{t}=a_{t}+n_{t}\)</span></td>
+<td><span class="math inline">\(y_{t}=a_{t}+(1-\alpha)n_{t}\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">20</td>
@@ -523,11 +757,11 @@ Table&nbsp;1: Nonredundant 20-equation representation
 </div>
 </figure>
 </div>
-<p>For convenience, <a href="#tbl-variables" class="quarto-xref">Table&nbsp;2</a> lists the endogenous variables appearing in <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;1</a>, and <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;3</a> reports the core structural parameters used below.</p>
+<p>For convenience, <a href="#tbl-variables" class="quarto-xref">Table&nbsp;3</a> lists the endogenous variables appearing in <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;2</a>, and <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;4</a> reports the core structural parameters used below.</p>
 <div id="tbl-variables" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[6,72,22]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Endogenous variables in the nonredundant system
+Table&nbsp;3: Endogenous variables in the nonredundant system
 </figcaption>
 <div aria-describedby="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -566,7 +800,7 @@ Table&nbsp;2: Endogenous variables in the nonredundant system
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
-<td>Dividend share</td>
+<td>Dividend gap</td>
 <td><span class="math inline">\(d_{t}\)</span></td>
 </tr>
 <tr class="even">
@@ -652,7 +886,7 @@ Table&nbsp;2: Endogenous variables in the nonredundant system
 <div id="tbl-parameters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[6,72,22]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Core structural parameters
+Table&nbsp;4: Core structural parameters
 </figcaption>
 <div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -713,6 +947,16 @@ Table&nbsp;3: Core structural parameters
 <td style="text-align: right;">9</td>
 <td>Share of Type H households</td>
 <td><span class="math inline">\(0\leq\lambda&lt;1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>Production curvature</td>
+<td><span class="math inline">\(0\leq\alpha&lt;1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>Steady-state government-spending share</td>
+<td><span class="math inline">\(0\leq\Gamma&lt;1\)</span></td>
 </tr>
 </tbody>
 </table>
