@@ -104,7 +104,7 @@ c_t \equiv \ln C_t - \ln C,
 \quad
 n_t \equiv \ln N_t - \ln N
 $$
-のように書きます。同様に、$w_t, mc_t, d_t, r_t, r_t^N, \pi_t$ はそれぞれ $W_t, MC_t, D_t, R_t, R_t^N, \Pi_t$ の対数線形化後の変数です。また、$\Delta z_{t+1}\equiv z_{t+1}-z_t$ は一階差分を表します。
+のように書きます。同様に、$w_t, mc_t, r_t, r_t^N, \pi_t$ はそれぞれ $W_t, MC_t, R_t, R_t^N, \Pi_t$ の対数線形化後の変数です。また、$\Delta z_{t+1}\equiv z_{t+1}-z_t$ は一階差分を表します。
 
 ここで、政府支出と配当については
 $$
@@ -126,7 +126,7 @@ $$
 | $\eta\geq 0$ | 価格調整費用パラメータ |
 | $\phi>1$ | テーラールールのインフレ反応係数 |
 | $0<\rho_a,\rho_m,\rho_g<1$ | 各ショックの持続性 |
-| $0\leq\sigma<1/(\psi-1)$ | 中間財企業への補助金率 |
+| $0\leq\sigma\leq1/(\psi-1)$ | 中間財企業への補助金率 |
 
 
 
@@ -182,13 +182,18 @@ $$
 $$
 V_t
 =
-\mathbb{E}_t\left[\sum^{\infty}_{i=1}\beta^{i}\frac{U_{C,t+i}}{U_{C,t}}D_{t+i}\right]=\left[\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i}R_{s}}\right]
+\mathbb{E}_t\left[\sum^{\infty}_{i=1}\beta^{i}\frac{U_{C,t+i}}{U_{C,t}}D_{t+i}\right]
 $$
 となります。つまり、株式価値は **将来の配当の割引現在価値** に等しくなります。
+不確実性がない場合には、これは
+$$
+V_t=\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i-1}R_{s}}
+$$
+と書けます。
 
 2番目の式（Euler方程式）と3番目の式（株式価値）はそれぞれ
 $$
-\mathbb{E}_t\left[Q_{t,t+1}\right] R_t = 1,
+\mathbb{E}_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right] = 1,
 \qquad
 \mathbb{E}_t\left[
 Q_{t,t+1}
@@ -337,7 +342,7 @@ $$
 
 労働の不効用 $N^{1+\varphi}/(1+\varphi)$ におけるパラメータ $\varphi$ は
 $$
-\varphi = -\frac{N\,U_{NN}}{U_N}
+\varphi = \frac{N\,U_{NN}}{U_N}
 $$
 で定義されます。$1/\varphi$ は **フリッシュ弾力性**（*Frisch elasticity*）、すなわち限界効用一定のもとでの労働供給の賃金弾力性です。$\varphi$ が大きいほど労働供給は賃金変化に対して非弾力的になります。
 
