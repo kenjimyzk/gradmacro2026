@@ -243,7 +243,7 @@ Table&nbsp;1: Nonlinear variables and objects introduced before log-linearizatio
 <tr class="odd">
 <td>Assets and policy</td>
 <td><span class="math inline">\(B^{N}_{t}(h)\)</span>, <span class="math inline">\(B^{N}_{t}\)</span></td>
-<td>Household nominal bond holdings and aggregate nominal bond supply</td>
+<td>Household and Type-S per-capita nominal bond holdings</td>
 </tr>
 <tr class="even">
 <td>Assets and policy</td>
@@ -455,9 +455,9 @@ Y_{t}(j) &amp; =A_{t}F(N_{t}(j))
 \Lambda^{M}_{t}(j)A_{t}F_{N}(N_{t}(j)) &amp; =W^{N}_{t}/P_{t}
 \end{aligned}\]</span></p></li>
 <li><p>FOC wrt <span class="math inline">\(P_{t}(j)\)</span>: <span class="math display">\[\begin{aligned}
-&amp; U_{C}(C^{S}_{t},N^{S}_{t})(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-U_{C}(C^{S}_{t},N^{S}_{t})\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
-&amp; +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}\\
-&amp; +U_C(C^S_t,N^S_t)\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
+&amp; Q_{0,t}(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-Q_{0,t}\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
+&amp; +Q_{0,t}\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}\\
+&amp; +\eta_{p}\mathbb{E}_{t}\left[Q_{0,t+1}Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
 \end{aligned}\]</span></p></li>
 <li><p>Symmetric Equilibrium (<span class="math inline">\(N_{t}(j)=N_{t}\)</span>, <span class="math inline">\(\Lambda^{M}_{t}(j)=\Lambda^{M}_{t}\)</span>, <span class="math inline">\(P_{t}(j)=P_{t}\)</span>, <span class="math inline">\(Y_{t}(j)=Y_{t}\)</span>): <span class="math display">\[\begin{aligned}
 \eta_{p}\frac{P_{t}}{P_{t-1}}\left(\frac{P_{t}}{P_{t-1}}-1\right)= &amp; \psi_{p}\left[\frac{W^{N}_{t}/P_{t}}{MPN_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
@@ -495,12 +495,12 @@ m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}
 </section>
 <section id="equilibrium-conditions" class="level2">
 <h2 class="anchored" data-anchor-id="equilibrium-conditions">Equilibrium conditions</h2>
-<p>Equilibrium requires market clearing in goods, bond, and equity markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy <span class="math inline">\(B^{N}_{t}=0\)</span>. Equity supply is normalized to one, so equity-market clearing requires <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>. Aggregate consumption <span class="math inline">\(C_{t}\)</span> is the population-weighted average of <span class="math inline">\(C^{H}_{t}\)</span> and <span class="math inline">\(C^{S}_{t}\)</span>, and final output <span class="math inline">\(Y_{t}\)</span> is allocated to private consumption, government purchases, and price and wage adjustment costs.</p>
+<p>Equilibrium requires market clearing in goods, bond, and equity markets, together with consistency between aggregate variables and type-specific allocations. Let <span class="math inline">\(B^N_t\)</span> denote Type-S per-capita nominal bond holdings in symmetric equilibrium. Bond-market clearing requires zero net bond supply, so <span class="math inline">\((1-\lambda)B^{N}_{t}=0\)</span>. Equity supply is normalized to one, so equity-market clearing requires <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>. Aggregate consumption <span class="math inline">\(C_{t}\)</span> is the population-weighted average of <span class="math inline">\(C^{H}_{t}\)</span> and <span class="math inline">\(C^{S}_{t}\)</span>, and final output <span class="math inline">\(Y_{t}\)</span> is allocated to private consumption, government purchases, and price and wage adjustment costs.</p>
 <p>Final goods market: <span class="math display">\[\begin{aligned}
 Y_{t} &amp; =C_{t}+G_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
 &amp; +\lambda\frac{\eta_{w}}{2}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)^{2}Y_{t}
 \end{aligned}\]</span></p>
-<p>Bond market: <span class="math inline">\(B^{N}_{t}=0\)</span>.</p>
+<p>Bond market: <span class="math inline">\((1-\lambda)B^{N}_{t}=0\)</span>.</p>
 <p>Equity market: <span class="math inline">\((1-\lambda)\Omega_t=1\)</span>.</p>
 <p>Aggregation condition: <span class="math display">\[C_{t}=\lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\]</span></p>
 </section>
@@ -559,6 +559,7 @@ g_{t} &amp; =\rho_{g}g_{t-1}+e^{g}_{t}\\
 Y_{t}= &amp; C_{t}+G_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
 &amp; +\lambda\frac{\eta_{w}}{2}(\Pi^{H}_{t}-1)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}(\Pi^{S}_{t}-1)^{2}Y_{t}\\
 C_{t}= &amp; \lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\\
+(1-\lambda)B^N_t= &amp; 0\\
 (1-\lambda)\Omega_t= &amp; 1\\
 R_{t}= &amp; \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
 \Pi^{w}_{t}= &amp; \frac{W_{t}}{W_{t-1}}\Pi^{p}_{t}\\
