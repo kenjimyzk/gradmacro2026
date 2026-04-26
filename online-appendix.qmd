@@ -36,7 +36,7 @@ The appendix first states the nonlinear problems of the labor packer, households
 | Markups | $MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})$ | Type-$i$ wage markup |
 | Markups | $MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})$ | Aggregate wage markup |
 | Markups | $MU^{p}_{t}\equiv MPN_{t}/W_{t}$ | Price markup |
-| Assets and policy | $B^{N}_{t}(h)$, $B^{N}_{t}$ | Household nominal bond holdings and aggregate nominal bond supply |
+| Assets and policy | $B^{N}_{t}(h)$, $B^{N}_{t}$ | Household and Type-S per-capita nominal bond holdings |
 | Assets and policy | $V_{t}$, $\Omega_{t}(h)$ | Ex-dividend equity value and household equity holdings |
 | Assets and policy | $Q_{t,t+i}$ | Saver stochastic discount factor from $t$ to $t+i$ |
 | Assets and policy | $R^{N}_{t}$, $R_{t}$ | Gross nominal interest rate and ex ante gross real interest rate |
@@ -236,9 +236,9 @@ Intermediate-good firm $j$ produces output $Y_{t}(j)$ using labor $N_{t}(j)$ acc
   \end{aligned}$$
 
 - FOC wrt $P_{t}(j)$: $$\begin{aligned}
-   & U_{C}(C^{S}_{t},N^{S}_{t})(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-U_{C}(C^{S}_{t},N^{S}_{t})\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
-   & +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}\\
-   & +U_C(C^S_t,N^S_t)\eta_{p}\mathbb{E}_{t}\left[Q_{t,t+1}Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
+   & Q_{0,t}(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-Q_{0,t}\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
+   & +Q_{0,t}\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}\\
+   & +\eta_{p}\mathbb{E}_{t}\left[Q_{0,t+1}Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
   \end{aligned}$$
 
 - Symmetric Equilibrium ($N_{t}(j)=N_{t}$, $\Lambda^{M}_{t}(j)=\Lambda^{M}_{t}$, $P_{t}(j)=P_{t}$, $Y_{t}(j)=Y_{t}$): $$\begin{aligned}
@@ -280,14 +280,14 @@ m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}
 
 ## Equilibrium conditions
 
-Equilibrium requires market clearing in goods, bond, and equity markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy $B^{N}_{t}=0$. Equity supply is normalized to one, so equity-market clearing requires $(1-\lambda)\Omega_t=1$. Aggregate consumption $C_{t}$ is the population-weighted average of $C^{H}_{t}$ and $C^{S}_{t}$, and final output $Y_{t}$ is allocated to private consumption, government purchases, and price and wage adjustment costs.
+Equilibrium requires market clearing in goods, bond, and equity markets, together with consistency between aggregate variables and type-specific allocations. Let $B^N_t$ denote Type-S per-capita nominal bond holdings in symmetric equilibrium. Bond-market clearing requires zero net bond supply, so $(1-\lambda)B^{N}_{t}=0$. Equity supply is normalized to one, so equity-market clearing requires $(1-\lambda)\Omega_t=1$. Aggregate consumption $C_{t}$ is the population-weighted average of $C^{H}_{t}$ and $C^{S}_{t}$, and final output $Y_{t}$ is allocated to private consumption, government purchases, and price and wage adjustment costs.
 
 Final goods market: $$\begin{aligned}
 Y_{t} & =C_{t}+G_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
  & +\lambda\frac{\eta_{w}}{2}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)^{2}Y_{t}
 \end{aligned}$$
 
-Bond market: $B^{N}_{t}=0$.
+Bond market: $(1-\lambda)B^{N}_{t}=0$.
 
 Equity market: $(1-\lambda)\Omega_t=1$.
 
@@ -356,6 +356,7 @@ $$\begin{aligned}
 Y_{t}= & C_{t}+G_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
  & +\lambda\frac{\eta_{w}}{2}(\Pi^{H}_{t}-1)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}(\Pi^{S}_{t}-1)^{2}Y_{t}\\
 C_{t}= & \lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\\
+(1-\lambda)B^N_t= & 0\\
 (1-\lambda)\Omega_t= & 1\\
 R_{t}= & \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
 \Pi^{w}_{t}= & \frac{W_{t}}{W_{t-1}}\Pi^{p}_{t}\\
