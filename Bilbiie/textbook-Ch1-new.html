@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>textbook-ch1-new</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch1-new_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch1-new_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch1-new_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch1-new_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch1-new_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch1-new_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch1-new_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="heterogeneous-agent-macroeconomics" class="level1">
+<h1>Heterogeneous Agent Macroeconomics</h1>
+</section>
+<section id="a-tractable-new-keynesian-framework" class="level1">
+<h1>A Tractable New Keynesian Framework</h1>
+<p>Florin O. Bilbiie</p>
+<p>University of Cambridge &amp; CEPR</p>
+<p>Forthcoming, MIT Press</p>
+<p>First version 2019, this version November 2025</p>
+<section id="chapter-11" class="level4">
+<h4 class="anchored" data-anchor-id="chapter-11">Chapter 1<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</h4>
+<p>Preliminary and Incomplete. Comments Requested</p>
+<p>© Florin O. Bilbiie 2019</p>
+</section>
+<section id="inspiring-quotes" class="level4">
+<h4 class="anchored" data-anchor-id="inspiring-quotes">Inspiring Quotes</h4>
+<p>“Simplicity is not an objective in art, but one achieves simplicity despite one’s self by entering into the real sense of things.” Constantin Brancusi</p>
+<p>“Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.” William P. Thurston</p>
+<p>“It can scarcely be denied that the supreme goal of all theory is to make the irreducible basic elements as simple and as few as possible without having to surrender the adequate representation of a single datum of experience.” Albert Einstein (aka “Everything should be made as simple as possible, but not simpler”)</p>
+<p>“The art of doing mathematics is finding that special case that contains all the germs of generality.” David Hilbert</p>
+<p>“If you can’t solve a problem, then there is an easier problem you can solve: find it.” George Polya - not to be confused with the “streetlight effec” (Nasreddin?)</p>
+<p>And to keep things in perspective—with a touch of humor—two lighter lines:</p>
+<p>“Like all people who tried to exhaust a subject, he exhausted his listeners” Oscar Wilde</p>
+<p>“If I have not seen as far as others, it is because there were giants standing on my shoulders.” Hal Abelson</p>
+</section>
+</section>
+<section id="preface" class="level1">
+<h1>Preface</h1>
+<p>This book grew out of more than two decades of thinking about heterogeneity in macroeconomics—sometimes quietly, sometimes stubbornly, and often with the unmistakable feeling of swimming against the current. When I began working on analytically tractable heterogeneous-agent models as a student in the early 2000s, the prevailing view was that heterogeneity was numerically interesting but conceptually unimportant. “Hand-to-mouth” behavior, liquidity constraints, and distributional channels of policy were regarded as details that complicated analysis but did not alter the fundamental logic of macroeconomic fluctuations. Why, then, bother with analytics, reviving Keynesian crosses or aggregate demand logic, and swiveling IS curves?</p>
+<p>I did not share that view. And I was hardly alone. Empirical work was documenting consumption heterogeneity, income risk, and wealth inequality with increasing clarity. The consumption-theory tradition of Zeldes, Campbell-Mankiw, Carroll-Kimball or Deaton had long emphasized marginal propensities to consume, liquidity constraints, and buffer-stock behavior. And the early incomplete-markets models—from Bewley to Aiyagari, from Huggett to Imrohoroglu to R´ıos-Rull—had already shown how much economic life sits beneath the surface of aggregates.</p>
+<p>Yet the challenge was always the same: how to incorporate economically meaningful heterogeneity without losing the transparency and discipline of the New Keynesian framework. My early attempts, which later became the analytical TANK models, were an effort to keep the economics front and center—to show how a few well-chosen heterogeneities could fundamentally change the transmission of monetary and fiscal policy.</p>
+<p>For years, these ideas developed quietly. Then, in the mid-2010s, the field experienced a tectonic shift. A new generation of HANK models demonstrated, with computational force, how deeply heterogeneity matters for aggregate dynamics. Many mechanisms that once seemed peripheral became central. Ideas that once felt speculative became standard. And concepts that had been difficult to articulate with clarity found new resonance across empirical, numerical, and theoretical literatures. HANK moved heterogeneity from the periphery into the core: taught in graduate programs, used in policy institutions, and increasingly relied on to interpret monetary and fiscal policy.</p>
+<p>My goal in writing this book is simple: <strong>to provide coherence</strong>. It is not to claim priority—anyone with a calendar, a browser, and an interest in giving appropriate credit can reconstruct who did what when—but to provide a unified, tractable framework that makes transparent what we have learned so far and how the pieces fit together. Many of the mechanisms that appear formidable in quantitative HANK models have clean analytical representations once one knows where to look. A central mission of this book is to make those representations visible. To connect the early analytical insights, the empirical foundations, and the modern quantitative advances. If I borrow a line from Hal Abelson<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>—“If I have not seen as far as others, it is because there were giants standing on my shoulders”—it is only to acknowledge that intellectual progress is rarely linear. Ideas return in new forms. Mechanisms once overlooked gain new importance. And the field advances by revisiting old questions with new tools, new data, and renewed clarity.</p>
+<p>If the original New Keynesian model was built around a representative intertemporal Euler equation, a Phillips curve, and a Taylor rule, the heterogeneousagent version largely preserves this architecture. The difference is that the “aggregate Euler equation” now embeds distributional forces—cyclical inequality, precautionary saving, cyclical risk—that give rise to amplification mechanisms absent in the representative-agent benchmark. One of the themes of the book is that tracking these wedges is not only analytically feasible but conceptually clarifying: they distill a sprawling literature into a small number of economically meaningful channels.</p>
+<p>The aim is pedagogical, but without oversimplifying. If you can understand RANK, you can understand TANK; and if you can understand TANK and are ready to embrace some well-chosen extensions, you can understand most of HANK. Tractability is not an aesthetic preference but a methodological one: it keeps the model honest, the mechanisms explicit, and the comparative statics sharp. As my illustrious compatriot Brancusi said, “Simplicity is not an objective (in art), but one achieves it despite one’s self by entering into the real sense of things.” This book tries to enter into the real sense of things. This book aims for that variety of simplicity: as simple as possible, but not simpler. It uses the quotes at the outset as a manifesto.</p>
+<p>A useful way to think about tractability is through what I call the “giraffe projection” metaphor. Suppose you want to describe a giraffe, but you can only show a two-dimensional projection of it on a wall. From the wrong angle—above, below, or head-on—the projection is a distorted mass, all legs or all neck, and reveals nothing essential. But from the right angle, the silhouette is unmistakable: a giraffe in all its characteristic structure.</p>
+<p>Tractable modeling is exactly this exercise. We take a high-dimensional economic object—the full distribution of households—and project it along the dimensions that reveal the essence. If the projection is chosen well, the economic giraffe is visible: not in every detail, but in precisely the dimensions that matter for the questions we ask.</p>
+<p>Tractability is therefore not simplification for its own sake; it is the art of choosing the right projection so that the economics remains legible.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>The tractable models developed here are in no way meant to “replace” high-dimensional HANK models, nor to oversimplify the complexity of real economies. They are strongly complementary. They are meant to clarify the economics: to show where heterogeneity matters, why it matters, and how to build models that illuminate rather than obscure.</p>
+<p>If these pages help future students and researchers see the structure of heterogeneous agent macroeconomics more clearly, or help policy institutions think more systematically about distributional channels, this book will have served its purpose. And if it succeeds, it will be because the organizing principles were always there, waiting to be clarified.</p>
+<p><strong>A note on intellectual debts.</strong> Several parts of this book build on research conducted over more than two decades, often in collaboration with coauthors from whom I have learned a great deal. These include Roland Straub, Gernot M¨uller, and Andr´e Meier during my graduate-school years; Tommaso Monacelli and Roberto Perotti; Diego Kanzig and Paolo Surico; Giorgio Primiceri and Andrea Tambalotti; Refet G¨urkaynak; Sigurd Galaasen, Mathis Maehlum, and Krisztina Moln´ar; Fergal Hanks and Sean Lavender (who also provided outstanding RA work, transcribing my lectures and helping with the drafting); and, on related but complementary work, Marc Melitz, whose insistence on intuition and economic clarity has shaped my thinking in important ways. Their contributions are acknowledged more specifically in the chapters where they arise; here I want simply to record my intellectual debt and my gratitude.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Macroeconomics has a simplicity problem. For decades, the representative-agent New Keynesian (NK) model gave us a clean and elegant framework to think about the business cycle and stabilization policy. It was analytically sharp, tractable, and—perhaps most importantly—teachable. You could explain its logic in a lecture or two, derive the canonical IS and Phillips curves on a blackboard, and carry the whole structure in your head.</p>
+<p>But that simplicity came at a cost. The representative household behaves very little like actual households. Its consumption Euler equation, intertemporal smoothing, and frictionless balance sheet evolution bear little resemblance to what empirical microdata say about marginal propensities to consume, wealth heterogeneity, liquidity constraints, and the transmission of policy through income, wages, dividends, and credit. If macroeconomics wants to speak credibly about inequality, distributional effects of policy, or heterogeneity in responses to shocks, the representative agent cannot carry the weight. Enter the heterogeneous-agent revolution.</p>
+<p>In many ways, modern macroeconomics is the journey from Aggregate to Aggregated demand and supply: from models that suppress heterogeneity to models where aggregation is an economic problem rather than a trivial step.</p>
+<p>A generation of work—from Bewley and Aiyagari to Krusell–Smith to modern HANK models—has pushed macro toward realism. But that realism has too often come at the expense of transparency. High-dimensional state spaces, numerical value functions, hundreds of grids, and a black box of computational machinery stand between the student and the underlying economic mechanism. One can prove existence and uniqueness, but not intuition. One can simulate, but not derive. In many cases, the models have become so complex that we struggle to answer the most basic pedagogical questions: What is the mechanism? How does policy work? Which margins matter?</p>
+<p>This book resolves that tension—to bridge the elegance of the NK framework with the realism of heterogeneous agents, without getting lost in computational thickets. The central idea is that we can retain the macroeconomic insights and the policy clarity of the New Keynesian tradition while embedding economically meaningful heterogeneity in a way that is analytically tractable, empirically grounded, and intuitively transparent.</p>
+<p>The cornerstone of the approach is <strong>tractable heterogeneity</strong>: simple forms of household heterogeneity—enough to break the representative-agent logic, but structured so that the aggregate dynamics remain low-dimensional and solvable on a whiteboard. The “THANK” (Tractable Heterogeneous-Agent New Keynesian) framework builds on the logic of two-agent models (TANK), generalized marginal propensities to consume, and distributional effects that can be captured through a handful of sufficient statistics. The goal is not to approximate a full-blown quantitative HANK model in every detail, but to understand the mechanisms that matter: how different households respond to shocks, how policy redistributes, how aggregates emerge from microstructure, and how heterogeneity fundamentally reshapes the transmission of monetary and fiscal policy.</p>
+<p>A second guiding principle is that two is not too little. Economists sometimes dismiss two-agent models as crude approximations. But simplicity in representation does not imply simplicity in content. Much of modern life—from digital images to genomic sequences—is encoded using nothing more than zeros and ones. Complexity emerges from combinations, not from the size of the alphabet. In the same spirit, TANK and THANK models use a small number of household types and a handful of transition dynamics to encode the mechanisms that quantitative HANK models reveal. The point is not to capture every detail of the distribution, but to represent the economically relevant dimensions in the most transparent possible way.</p>
+<p>The core block of this approach is Aggregate(d) Demand, captured through the lens of an aggregate(d) Euler equation. At the RANK level, the Euler equation is just an intertemporal condition. Already at the TANK level, the aggregate Euler equation acts as a primitive “master equation”—in the metaphorical rather than the technical mean-field-game sense: a single forward-looking law of motion that encapsulates how the distribution shapes aggregate dynamics. At the THANK level, the analogy becomes tighter. The wedges in the aggregate Euler equation arise from the same distributional transition forces that, in full HANK environments, are described by the mean-field (or “master”) equation in the sense of Lasry–Lions and Huang–Malham´e–Caines, and increasingly used in heterogeneous-agent macro (e.g.&nbsp;Moll; Ahn et al; Achdou et al). The tractable approach distills these forces to their analytical essence without requiring the reader to solve a high-dimensional distributional fixed point.</p>
+<p>The payoff is large. Once we step away from the representative agent, traditional NK logic stops being the whole story. Monetary policy has direct distributional effects. Fiscal multipliers depend on who receives transfers, not only on aggregate spending. Business cycles can be amplified or dampened by the interaction between liquidity, wealth, and income heterogeneity. The Phillips curve, the IS curve, and even the natural rate of interest acquire new interpretations. Crucially, the framework gives policy institutions—central banks, finance ministries, macro-stabilization teams—tools to reason about distributional channels within the familiar NK architecture, rather than bolting them on as an afterthought.</p>
+<p>A striking—and pedagogically lucky—feature of the core framework is how close it remains to the baseline New Keynesian model familiar from Woodford (2003) and Gal´ı (2008). Despite incorporating distributional channels, the aggregated system is still a three-equation model: an aggregate demand block, an aggregate supply block, and a policy rule. Heterogeneity reshapes these equations, but it does not drown them in micro detail. For teaching purposes, this is invaluable: students can see exactly where and how inequality enters, without losing sight of the canonical structure that has guided policy modeling for two decades.</p>
+<p>This book aims to provide a coherent, unified, and accessible path through this landscape. It develops the core TANK and THANK models from first principles, deriving the equations and mechanisms with minimal algebra and maximal clarity. The exposition is deliberately analytical: equations that matter are derived; equations that do not matter are avoided. The focus is on mechanisms, not on simulation algorithms. The point is to understand the economics, not the grids.</p>
+<p>My hope is that Heterogeneous Agent Macroeconomics will serve as a modern successor to the simple NK model for graduate teaching, a bridge from theory to policy for central banks and economic and finance ministries; and a conceptual backbone for researchers seeking to understand heterogeneity without sacrificing tractability.</p>
+<p>We will see that heterogeneity is not a complication to be added to macro—it is a way to understand macro more deeply. And with the right structure, it can be done cleanly, analytically, and transparently. In short: heterogeneity, but the New Keynesian way.</p>
+<section id="scope-and-disclaimers" class="level4">
+<h4 class="anchored" data-anchor-id="scope-and-disclaimers">Scope and Disclaimers</h4>
+<p>Heterogeneity in macroeconomics spans many domains: households, firms, financial intermediaries, beliefs, labor markets, and more. This book takes a deliberately narrow focus: <strong>household heterogeneity</strong> within a <strong>tractable New Keynesian framework</strong>. The ambition is modest but strategic. By insisting on tractability, the framework remains transparent enough to be extended—to richer forms of household heterogeneity, and eventually to firms, banks, or other sectors where distributional channels matter. Tractability is therefore not a limitation of the approach but a design principle: a way to build models that can be expanded without losing their economics.</p>
+<p>A second disclaimer is that this is not an exhaustive review of the full HANK literature. Instead, it is a synthesis of the tractable strand of heterogeneous-agent macro—centered on my own work and on related contributions that share the same analytical spirit. The hope is that the reader will emerge with a clear toolkit: sufficient to navigate modern quantitative HANK models, and flexible enough to adapt or enrich tractable models in other directions.</p>
+</section>
+</section>
+<section id="some-history-of-thought-from-representative-agents-to-hank-via-bewley-models-and-consumption-theoryand-back-to-tractability" class="level1">
+<h1>Some History of Thought: From Representative Agents to HANK via Bewley Models and Consumption Theory—and Back to Tractability</h1>
+<p>The intellectual history of heterogeneous agent macroeconomics is a story of two traditions that spent decades developing in parallel—almost like two schools separated by geography, ideology, and computational culture—and that have only recently converged into a unified field. Understanding this evolution helps clarify why tractability matters today—and why the modern HANK and THANK approaches take the shape they do.</p>
+<p>One major tradition begins with the Bewley–Huggett–Aiyagari—Imrohoroglu-R´ıos-Rull lineage. These models were full general equilibrium environments with incomplete markets and idiosyncratic income risk. They delivered stationary wealth distributions, precautionary saving motives, and realistic heterogeneity long before anyone talked about HANK. An entire early computational macro generation deepened this tradition, with important policy applications: e.g.&nbsp;Heathcote’s early work showed how fiscal policy interacts with inequality even in these pre-NK settings. But this literature lacked aggregate shocks until Krusell–Smith (1998) and den Haan (1997). The extension of idiosyncratic-risk economies to aggregate business-cycle dynamics was a technical breakthrough, but the models remained computationally intensive and difficult to integrate with the dynamic New Keynesian apparatus.</p>
+<p>A second tradition, largely in consumption theory, developed in parallel. This strand includes Zeldes, Flavin, Deaton, Campbell–Mankiw, Constantinides, Kimball, and, centrally, Chris Carroll. Here the focus was on micro behavior: excess sensitivity, hand-to-mouth consumption, buffer-stock saving, impatience conditions, and the structure of consumption responses to income fluctuations. These models were typically partial equilibrium—no price setting, no general equilibrium feedback—but they delivered powerful intuitions about marginal propensities to consume and liquidity constraints. Carroll, in particular, provided the structural dynamic-programming foundation that the earlier “rule-of-thumb” literature lacked. His work became a crucial bridge: rigorous micro heterogeneity without full GE machinery, but with deep behavioral insights that later became central to quantitative HANK.</p>
+<p>For a long time these two traditions barely spoke to each other (I suggest the excellent overview by Cherrier, Duarte, and Saidi, 2025 for a proper historical perspective). One was computational, the other analytical. One was quantitative, the other interpretive. One was freshwater-coded, the other saltwater-coded. And macro largely lived in the middle, using representative agents because anything more realistic either required 200 grid points (and the electricity of a small city), or violated the sacrosanct intertemporal Euler equation.</p>
+<p>The convergence began, slowly and unevenly, from <strong>two directions</strong>.</p>
+<section id="adding-a-little-ha-to-nk-top-down-lets-disaggregate-a-little" class="level4">
+<h4 class="anchored" data-anchor-id="adding-a-little-ha-to-nk-top-down-lets-disaggregate-a-little">(1) Adding a little HA to NK (top-down, “let’s disaggregate a little”)</h4>
+<p><strong>First</strong>, in the 2000s, macroeconomists began adding modest heterogeneity to the NK model—what we now call TANK (two-agent). This included rule-of-thumb households, hand-to-mouth agents, and liquidity constraints: not full-blown heterogeneous agent models, but meaningful departures from representative-agent logic. This research came both analytically and numerically. On the analytical side, work like my own thesis (e.g.&nbsp;Bilbiie, 2008) aimed to preserve the NK analytical structure while making heterogeneity systematic rather than ad hoc. On the quantitative, numerical side, contributions such as Gal´ı–L´opez-Salido–Vall´es (2007) showed how even modest heterogeneity can dramatically alter fiscal and monetary policy effects. These papers were the first cracks in the representativeagent edifice: small changes in microstructure with large implications for policy transmission.</p>
+</section>
+<section id="adding-nk-to-ha-bottom-up-lets-aggregate" class="level4">
+<h4 class="anchored" data-anchor-id="adding-nk-to-ha-bottom-up-lets-aggregate">(2) Adding NK to HA (bottom-up, “let’s aggregate”)</h4>
+<p><strong>Second</strong>, in the 2010s, the movement ran in the opposite direction: the heterogeneous-agent literature began adding NK features—sticky prices, monetary policy rules, and business-cycle shocks—into the full Bewley–Aiyagari world. This was the birth of modern <strong>HANK</strong>.</p>
+<p>Important context for understanding the force of that development comes, as it often does, from the data. For meanwhile, during the 2000s, empirical work had also exploded. Household-level datasets—PSID, CEX, SCF, administrative tax records—gave us Guvenen on income dynamics and growth heterogeneity, Heathcote–Perri–Violante on inequality and insurance, Storesletten–Telmer–Yaron on life-cycle risk, and a generation of micro studies documenting the heterogeneity in consumption, income, and wealth responses that no representative-agent model could hope to match. The evidence, and in particular an important paper by Kaplan and Violante on the “wealthy hand-to-mouth” made clear that marginal propensities to consume are large for many households, that liquidity heterogeneity matters enormously, and that the distribution of income risk is far from homogenous.</p>
+<p>The “full HANK” literature emerged out of that movement. The first wave of seminal contributions included four papers, that can further be split into two subsets. The first “HANK” in the sense of Bewley-Aiyagari-Huggett (incomplete markets but no aggregate risk) meets NK were two papers by Oh-Reis and Guerrieri-Lorenzoni; both used these models to answer applied, narrow questions—the effects of transfers and deleveraging and credit crises, respectively. The second “HANK” in the sense of Krusell-Smith (incomplete markets and aggregate risk) meets NK were McKay-Reis and Gornemann–Kuester–Nakajima. Both papers tried to be more methodological and laid the foundations for what came after. Soon after, in the rapidly achieved “maturity” stage of the field, McKay–Nakamura– Steinsson; Kaplan–Moll–Violante; Auclert; Bayer–Luetticke–Pham-Dao–Tjaden made substantial contributions sedimenting the general framework. Other important early HANK papers included Den Haan–Rendahl–Riegler; Hagedorn– Manovskii–Mitman, Auclert–Rognlie–Straub, Bhandari–Evans–Golosov–Sargent, and many others. These models used (and often developed) frontier computation techniques to handle high-dimensional distributions and show that heterogeneity fundamentally reshapes aggregate dynamics and the the transmission of monetary and fiscal policy. They demonstrated the central role of marginal propensities to consume, liquidity positions, and income versus wealth heterogeneity. And they did so by fully embracing computation, taking micro data moments and embedding them into DSGE structures.</p>
+<p>A defining moment in this convergence was the “HANK paper”—Kaplan, Moll, and Violante—which crystallized two insights. First, the quantitative models revealed that hand-to-mouth behavior is pervasive across the wealth distribution, not just among the poor. This undermined the common belief (which held back the early TANK literature) that hand-to-mouth agents must be few, economically “small”, and irrelevant for aggregates; adding the liquid-illiquid Kaplan-Violante setup made a large difference: Second, using continuous-time methods that built on pioneering methods by Reiter, they showed how rich heterogeneous-agent behavior could be embedded into a coherent GE macro framework, making HANK not only empirically relevant but solvable and interpretable. This firmly planted HANK as a numerically-tractable model that could fit both micro and macro business cycle moments, and so went on to explode in uses for any business cycle question.</p>
+<p>The field is now converging rapidly. The computational frontier is moving fast, with methods by Auclert–Rognlie–Straub, Bayer–Luetticke, Le Grand–Ragot, and several others; anyone wanting to go deep into this literature will have to learn those tools (and will not find them here). At the same time, there has been a growing recognition that the mechanisms uncovered by quantitative HANK models can often be captured—and understood—through <strong>simpler, transparent structures</strong>.</p>
+<p>This is where tractability reenters the stage.</p>
+<p>Over the past decade, a parallel set of analytical frameworks has emerged: my own work on the THANK model built upon my older analytical TANK structure; it embeds in a still-tractable way the mechanisms that we learned from the quantitative HANK model are important for the way in which heterogeneity shapes aggregate fluctuations. There have been other, important contributions within the tractable realm, focusing on other channels and using different “simplifying heterogeneity” approaches: they have shaped our understanding of the economics of these issues. These include chiefly contributions focusing on the role of income risk and precautionary saving, as well as liquidity: by Ravn–Sterk; Werning; Acharya– Dogra; Hagedorn; Holm; Challe, and others. The common spirit is to condense the essence of heterogeneity into a handful of empirically measurable elasticities and shares. These frameworks show that you can obtain some of the most important conceptual insights of full HANK models without relying on numerical methods for intuition. And they help unify the lessons of the quantitative literature with the clarity of NK economics.</p>
+<p>The result is a field that now spans the entire complexity spectrum: from computationally heavy, fully-specified quantitative HANK models at one end, to analytical THANK models at the other. The goal of this book is to occupy the middle lane: to build a tractable New Keynesian framework that captures the essential insights of the heterogeneous-agent revolution without losing the analytical discipline and pedagogical clarity that made the NK model so powerful in the first place. Not to replicate every computational detail of the full HANK frontier—an impossible and unnecessary goal—but to distill the key mechanisms that empirical and quantitative work have shown to be essential. MPC heterogeneity, liquidity constraints, self-insurance, precautionary saving, intertemporal MPCs, the income–wealth mix, distributional channels of policy, and the way microstructure shapes business cycles: all of this can be understood with simple, elegant models if they are built the right way.</p>
+<p>A final perspective connects these tractable models to a broader mathematical structure. The aggregate Euler equations in both TANK and THANK models play a role that is loosely analogous to the “master equation” in the meanfield games (MFG) literature (Lasry–Lions; Huang–Malham´e–Caines): a single forward-looking object that summarizes how heterogeneity feeds into aggregate dynamics. The analogy is conceptual—not technical. In genuine MFG environments, the master equation is an infinite-dimensional partial differential equation governing the joint evolution of value functions and population distributions. In contrast, the tractable T(H)ANK frameworks collapse heterogeneity into a finite set of wedges or sufficient statistics that directly enter the law of motion for aggregate consumption.</p>
+<p>This conceptual parallel has begun to surface explicitly in macroeconomics. In fact, one of the first papers to make the MFG connection operational in a fully heterogeneous-agent macro setting is Ahn, Kaplan, Moll, Winberry, and Wolf (2017), which casts heterogeneous-agent dynamics within a mean-field approximation and derives an explicit Kolmogorov–forward-type equation for distributions. Their work highlights precisely what the tractable THANK framework leans on: the fact that, for many macro-policy questions, the impact of heterogeneity on aggregates can be summarized by a small number of elasticities rather than a full distributional PDE.</p>
+<p>The tractable approach does not aim to solve the full master equation. Rather, it distills the minimal set of distributional statistics that shape aggregate dynamics a low-dimensional representation of heterogeneous dynamics that preserves the economics without the mathematical machinery.</p>
+<p>Tractability, in this sense, is not an aesthetic preference; it is a way of seeing the economics clearly.</p>
+<p>If these pages succeed, the reader will see the forest and the trees—the mechanisms illuminated, not hidden; the simplicity earned, not assumed; and the economic intuition front and center, where it belongs.</p>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Based on notes used to teach advanced mini-courses over the last years at the International Monetary Fund, European Central Bank Research Department, Norges Bank, Paris School of Economics (Summer School and APE program), Brown University, HEC Lausanne, Bonn Graduate School of Economics, Goethe University, and Cambridge. I thank Sean Lavender, who provided excellent RA work and help with transcribing the lectures and drafting. TBC<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Abelson’s quip turns on its head a well-known line from one illustrious intertemporal neighbor of mine; another such neighbor—so often invoked in these pages—lurks quietly in the background.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Taking the analogy to the world of visual arts, this would be known as anamorphosis. Finally, this is not a “victory lap” for a particular line of research. It is instead an attempt to consolidate a field that has grown rapidly and sometimes unevenly, to connect analytical and quantitative approaches, and to lay out a roadmap for students, researchers, and policymakers who want to understand the macroeconomic consequences of heterogeneity.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

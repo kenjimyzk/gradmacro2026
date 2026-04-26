@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="宮﨑憲治">
+<meta name="dcterms.date" content="2026-04-20">
+
+<title>Bilbiie, Heterogeneous Agent Macroeconomics Chapter 6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch6-ja_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch6-ja_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch6-ja_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch6-ja_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch6-ja_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch6-ja_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch6-ja_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../textbook-Ch6-ja.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bilbiie, <em>Heterogeneous Agent Macroeconomics</em> Chapter 6</h1>
+<p class="subtitle lead">非流動性、不均等な貯蓄、物理的資本投資：乗数・加速度モデルの再来（日本語訳）</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>宮﨑憲治 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="第6章非流動性不均等な貯蓄物理的資本投資乗数加速度モデルの再来12" class="level1">
+<h1>第6章：非流動性、不均等な貯蓄、物理的資本投資——乗数・加速度モデルの再来<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h1>
+<p>本章では、第4章および第5章で展開したTHANKモデルの重要な拡張を考察する。モデルに物理的資本への投資を導入し、総需要増幅の生成における所得不平等と資産不平等の補完性を示す。</p>
+<p>これまで考察してきたTHANKモデル、そしてRANKモデルの教科書的な扱いにおいても、物理的資本は捨象されてきた。しかし、資本はマクロ経済学と景気循環の研究において中心的な役割を果たす。例えば、リアルビジネスサイクル・モデル<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>の重要な特徴は、資本投資がGDPの約4倍の変動を示すことである。</p>
+<p>もっとも、HANK文献の急速な発展により、ニューケインジアン・モデルにおける資本の役割の再評価が促されている。Bilbiie et al.（<strong>2022年</strong>）が展開したモデルでは、異質性が金融政策ショックに対する消費反応の決定において資本を最前線に押し出すことを示す。決定的に重要なのは、モデルが金融政策の二つの増幅チャネルを分離することである。第一のチャネルは循環的所得不平等チャネルであり、これまでのTHANKモデル分析の焦点であった。資本の導入は第二の資本不平等チャネルをもたらし、Samuelson（<strong>1939年</strong>）の乗数・加速度モデル<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>を復活させる。これらのチャネルはモデルにおける金融政策の増幅において補完的であり、資本と所得不平等の結合効果は個別効果の合算を超えることを示す。</p>
+<section id="二つの不平等の物語" class="level4">
+<h4 class="anchored" data-anchor-id="二つの不平等の物語">二つの不平等の物語</h4>
+<p>資本と所得不平等の補完性を検討するために、まず単純な異質的エージェント・モデルを考える。この枠組みでは、家計 <span class="math inline">\(j\)</span> の予算制約は以下で与えられる： <span class="math display">\[C^{j} + S^{j} = (WN)^{j} + (rK + D)^{j} + T^{j} \equiv Y^{j}.\]</span> ここで <span class="math inline">\(C^{j}\)</span> は家計 <span class="math inline">\(j\)</span> の消費、<span class="math inline">\(S^j\)</span> は家計の貯蓄を表す。家計の貯蓄は物理的資本 <span class="math inline">\(K\)</span> で行われる。家計は労働所得 <span class="math inline">\((WN)^{j}\)</span> および資本収益 <span class="math inline">\(rK\)</span> と配当 <span class="math inline">\(D\)</span> からなる金融所得を得る。</p>
+<p>予算制約は、モデルにおける二つの不平等の源泉を浮き彫りにする。第一に、資本のないTHANKモデルでは予算制約は以下のようになる： <span class="math display">\[C^j = (WN)^j + D^j + T^j \equiv Y^j.\]</span> ここでは、家計は消費支出と所得において異なる。この所得不平等がTHANKモデルの分析の主要な焦点であった。逆に、資本を持つモデルでは、家計は異質的な貯蓄（<strong>資本不平等</strong>）も持つ。資本不平等チャネルを分離するために、移転が家計間で所得を均等化すると仮定できる。これにより以下の予算制約が得られる： <span class="math display">\[C^j + S^j = Y.\]</span></p>
+</section>
+<section id="資本を持つ単純な異質的エージェントモデル" class="level4">
+<h4 class="anchored" data-anchor-id="資本を持つ単純な異質的エージェントモデル">資本を持つ単純な異質的エージェント・モデル</h4>
+<p>THANKモデルと同様に、二つのタイプの家計で構成される経済を考える。家計の割合 <span class="math inline">\(\lambda\)</span> はH家計であり、全所得を消費する。残りの割合 <span class="math inline">\(1 - \lambda\)</span> はS家計であり、消費と物理的資本への貯蓄を行う。対称的な定常状態の周りでモデルを対数線形化すると、オイラー方程式が得られる<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>： <span class="math display">\[c_t^S = E_t c_{t+1}^S - r_t.\]</span> 家計の予算制約を対数線形化すると以下が得られる： <span class="math display">\[\begin{aligned}
+C_Y c_t^S + \frac{I_Y}{1 - \lambda} i_t &amp;= Y_Y^S y_t^S\\
+c_t^H &amp;= y_t^H = \chi y_t
+\end{aligned}\]</span> ここで <span class="math inline">\(i_t\)</span> は投資、<span class="math inline">\(\chi\)</span> は集計所得に対するH家計所得の弾力性を表す。<span class="math inline">\(X_Y\)</span> は変数の定常状態における産出に対する比率を表す。</p>
+<p>簡単のため、家計は外生的な等弾力性の投資関数に従うと仮定する： <span class="math display">\[i_t = \eta y_t.\]</span> 集計消費と投資は以下で与えられる： <span class="math display">\[\begin{aligned}
+c_t &amp;= \lambda c_t^H + (1 - \lambda)c_t^S\\
+y_t &amp;= \lambda Y_Y^H y_t^H + (1 - \lambda)Y_Y^S y_t^S.
+\end{aligned}\]</span> 財市場の均衡は以下を要求する： <span class="math display">\[y_t = C_Y c_t + I_Y i_t.\]</span></p>
+<p>資本不平等の役割を分離するために、所得不平等チャネルが金融政策の増幅をもたらさない <span class="math inline">\(\chi = 1\)</span> のケースを考える。このケースの含意は家計の所得が比例的であり <span class="math inline">\(y_t = y_t^S = y_t^H\)</span> を意味する。集計消費の式から、S家計の消費は以下のように表される： <span class="math display">\[c_t^S = \frac{c_t - \lambda c_t^H}{1 - \lambda} = \frac{c_t - \lambda y_t}{1 - \lambda}.\]</span> 財市場の均衡条件から以下が得られる： <span class="math display">\[c_t = \frac{y_t - I_Y i_t}{C_Y}.\]</span> 定常状態の財市場均衡条件は以下を与える： <span class="math display">\[C_Y + I_Y = 1.\]</span> したがって、投資関数を用いて集計消費を以下のように表すことができる： <span class="math display">\[c_t = \frac{1 - \eta I_Y}{1 - I_Y} y_t.\]</span></p>
+<p>これらの式をS家計のオイラー方程式に代入すると、集計オイラー方程式が得られる： <span class="math display">\[c_t = E_t c_{t+1} - \underbrace{\frac{1 - \lambda}{1 - \lambda \frac{1 - I_Y}{1 - \eta I_Y}}}_{\text{乗数}} r_t.\]</span> このモデルでは、一時的な実質利子率変化に対する消費の反応は以下で与えられる： <span class="math display">\[\left| \frac{\partial c_t}{\partial r_t} \right|_{K\text{ 不平等}} = \frac{1 - \lambda}{1 - \lambda \frac{1 - I_Y}{1 - \eta I_Y}}.\]</span> RANKモデルの集計オイラー方程式では実質利子率の係数が1であったことを想起されたい。したがって資本の導入は、<span class="math inline">\(\eta &gt; 1\)</span> の場合にかぎり、もう一つのケインジアン・クロスの乗数を導入し金融政策の効果を増幅する。この条件は、投資が順循環的かつ産出よりも変動が大きいことを要求する。よく知られた景気循環の統計量は、この条件が現実に満たされることを示している。</p>
+<p>この乗数が存在するのは、S家計の投資がH家計に部分的に受け取られる所得を生み出すためである。S家計が投資すると、資本所得の増加により集計所得が上昇する。この所得上昇の一部はH家計に帰属する。この再分配は税制を通じて直接的に、あるいは労働需要の増加によるH家計の労働所得の増大を通じて間接的に生じ得る。所得の上昇はH家計の消費増加を引き起こし、さらなる所得の上昇をもたらす。S家計はこの所得上昇の <span class="math inline">\(\eta\)</span> の割合を投資に充て、さらなる所得増加のサイクルを引き起こす。これはケインジアン・クロスの乗数 <span class="math inline">\(\frac{1-I_Y}{1-\eta I_Y}\)</span> に要約され、Samuelson（<strong>1939年</strong>）の乗数・加速度の論理に本質的に従う。</p>
+</section>
+<section id="総需要の補完性乗数の乗数" class="level3">
+<h3 class="anchored" data-anchor-id="総需要の補完性乗数の乗数">総需要の補完性：「乗数の乗数」</h3>
+<p>上記の節では、所得が比例的なケースにおいても、資本不平等の導入が金融政策の消費効果を増幅することを示した。反循環的所得不平等を再導入すると、乗数は以下のようになる： <span class="math display">\[\left|\frac{\partial c_t}{\partial r_t}\right|_{K \&amp; Y\text{ 不平等}} = \frac{1-\lambda}{1-\lambda\chi\frac{1-I_Y}{1-\eta I_Y}}.\]</span></p>
+<p>重要なのは、投資が十分に順循環的（<span class="math inline">\(\eta &gt; 1\)</span>）かつH家計所得が集計所得よりも変動しやすい（<span class="math inline">\(\chi &gt; 1\)</span>）場合、所得不平等と資本不平等が相互作用して、二つの不平等チャネルの合算を超える増幅を生み出すことである。この補完性を確認するため、所得不平等のみを持つモデルの乗数を想起されたい： <span class="math display">\[\left| \frac{\partial c_t}{\partial r_t} \right|_{Y\text{ 不平等}} = \frac{1 - \lambda}{1 - \lambda \chi}.\]</span> したがって以下が成り立つ： <span class="math display">\[\begin{aligned}
+\left| \frac{\partial c_t}{\partial r_t} \right|_{K \&amp; Y\text{ 不平等}} &amp;&gt; \left| \frac{\partial c_t}{\partial r_t} \right|_{K\text{ 不平等}} \times \left| \frac{\partial c_t}{\partial r_t} \right|_{Y\text{ 不平等}} \\
+\frac{1-\lambda}{1-\lambda\chi\frac{1-I_Y}{1-\eta I_Y}} &amp;&gt; \frac{1-\lambda}{1-\lambda\frac{1-I_Y}{1-\eta I_Y}} \times \frac{1-\lambda}{1-\lambda\chi}
+\end{aligned}\]</span> これは <span class="math inline">\(\eta &gt; 1\)</span> かつ <span class="math inline">\(\chi &gt; 1\)</span> のとき成立する。資本不平等は所得不平等の効果を増幅する役割を果たし、「乗数の乗数」として機能する。乗数の分子は利子率変化の「直接効果」を表し、<span class="math inline">\(1 - \lambda\)</span> のS家計が利下げに伴う異時点間代替により消費を増加させる。分母は利子率変化の間接効果を表す。したがって、資本と所得不平等の両方を持つモデルの乗数は、間接効果が各サイクルにおいて非線形に相互作用し、互いの乗数として機能することを示している。</p>
+<p>S家計が投資すると集計所得が上昇する。<span class="math inline">\(\chi &gt; 1\)</span> のとき、H家計の所得は集計所得以上に上昇する。これがH家計の消費需要の増加と集計所得のさらなる上昇をもたらす。<span class="math inline">\(\eta &gt; 1\)</span> のとき、S家計はこの集計所得の上昇に対して投資をさらに増加させ、消費増加の新たなサイクルが始まる。</p>
+<section id="単純な検証可能な予測" class="level4">
+<h4 class="anchored" data-anchor-id="単純な検証可能な予測">単純な検証可能な予測</h4>
+<p>この資本不平等を持つ単純なTANKモデルは、二つの検証可能な予測を生む。第一に、所得不平等と消費不平等は以下のように表される： <span class="math display">\[\begin{aligned}
+y_t^S - y_t^H &amp;= \frac{1 - \chi}{(1 - \lambda)Y_Y^S} y_t\\
+c_t^S - c_t^H &amp;= \frac{1 - \chi C_Y - \eta I_Y}{(1 - \lambda)C_Y} y_t.
+\end{aligned}\]</span> 所得不平等は <span class="math inline">\(\chi &gt; 1\)</span> のとき反循環的である。消費不平等が反循環的となる条件は以下の通りである： <span class="math display">\[C_Y(\chi - 1) + I_Y(\eta - 1) &gt; 0.\]</span> これは、投資が十分に順循環的であれば、所得不平等が反循環的でなくとも消費不平等が反循環的になり得ることを意味する。</p>
+<p>第二に、<span class="math inline">\(\eta &gt; 1\)</span> のとき消費不平等は所得不平等よりも強く反循環的である。この理論的予測は最近の実証研究と整合的である。例えば、Coibion et al.（<strong>2017年</strong>）は米国の消費者調査データを用いて、引き締め的金融政策ショックの後に支出の不平等が所得の不平等以上に上昇することを示した。これは、消費不平等が所得不平等よりも強く反循環的であることを示唆する。</p>
+</section>
+<section id="政策的含意決定性とフォワードガイダンス" class="level4">
+<h4 class="anchored" data-anchor-id="政策的含意決定性とフォワードガイダンス">政策的含意：決定性とフォワードガイダンス</h4>
+<p>資本不平等の決定性とフォワードガイダンスへの含意を考察するために単純なモデルを修正する。THANKモデルと同様に、家計が固有の所得リスクに直面し、S家計が次期にH家計となる確率が <span class="math inline">\(1 - s\)</span> であるとする。この場合の自己保険オイラー方程式は以下の通りである： <span class="math display">\[c_t^S = sE_t c_{t+1}^S + (1-s)E_t c_{t+1}^H - r_t.\]</span> この単純なTHANKモデルは以下の集計オイラー方程式を与える：</p>
+<p><span class="math display">\[\begin{aligned}
+c_t &amp;= \Theta E_t c_{t+1} - \Omega r_t\\
+\text{ここで } \Theta &amp;\equiv 1 + (1 - s) \frac{\chi \frac{1 - I_Y}{1 - \eta I_Y} - 1}{1 - \lambda \chi \frac{1 - I_Y}{1 - \eta I_Y}}\\
+\text{かつ } \Omega &amp;\equiv \frac{1 - \lambda}{1 - \lambda \chi \frac{1 - I_Y}{1 - \eta I_Y}}.
+\end{aligned}\]</span></p>
+<p>ニュース・ショックの複利化をモデルが生成するためには、期待消費の係数が1を超えなければならない。これには以下が必要である： <span class="math display">\[\begin{aligned}
+\chi \frac{1 - I_Y}{1 - \eta I_Y} &amp;&gt; 1\\
+\Rightarrow \eta &amp;&gt; 1 + (1 - \chi) \frac{1 - I_Y}{I_Y}.
+\end{aligned}\]</span> 投資が十分に順循環的な場合、資本不平等を持つモデルは複利化を生成する。順循環的な投資の下では、将来の集計産出に関する「良いニュース・ショック」<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>が将来の投資のより大きな上昇をもたらす。この投資は将来の集計所得の上昇とH家計の将来所得の上昇をもたらす。その結果、予備的貯蓄動機が弱まり、期待される将来のショックに対して家計は現在の消費をより大きく増加させる。</p>
+<p>所得不平等のみを持つTHANKモデルの場合と同様に、ニュース・ショックの複利化はフォワードガイダンス・パズルと利子率ルール下の決定性条件に重要な含意を持つ。</p>
+<p>時点 <span class="math inline">\(t + T\)</span> における発表された利下げに対する現在の消費反応は以下で与えられる： <span class="math display">\[\frac{\partial c_t}{\partial (-r_{t+T})} = \Theta^T \Omega.\]</span> 投資が十分に順循環的で <span class="math inline">\(\Omega &gt; 1\)</span> の場合、利下げに対する消費反応はそのホライズンとともに増大する。資本不平等の導入は、非循環的または順循環的な所得不平等の場合でもフォワードガイダンス・パズルが存続し得ることを意味する。したがって、順循環的所得不平等がフォワードガイダンス・パズルを解決するという結果は、所得と資本の両不平等を持つ本設定には必ずしも一般化されない。</p>
+<p>決定性への資本不平等の含意を分析するために、中央銀行がテイラー・ルールに従って名目利子率を設定し、単純な静学的フィリップス曲線を導入する： <span class="math display">\[\begin{aligned}
+r_t^n \equiv r_t + E_t \pi_{t+1} &amp;= \phi_\pi \pi_t\\
+\pi_t &amp;= \kappa c_t.
+\end{aligned}\]</span> これらの均衡条件を集計オイラー方程式に代入すると以下が得られる： <span class="math display">\[c_t = \frac{\Theta + \kappa \Omega}{1 + \phi_\pi \kappa \Omega} E_t c_{t+1}.\]</span> テイラー・ルール下の決定性には、期待消費の係数が1未満でなければならない。これにより <span class="math inline">\(\phi_\pi\)</span> に関する以下の条件が得られる： <span class="math display">\[\phi_{\pi} &gt; 1 + \frac{\Theta - 1}{\kappa \Omega}.\]</span></p>
+<p>したがって決定性条件は、投資が十分に順循環的で <span class="math inline">\(\Theta &gt; 1\)</span> の場合、テイラー原理<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>（<span class="math inline">\(\phi_\pi &gt; 1\)</span>）よりも厳しくなる。資本不平等チャネルは、予備的貯蓄と固有リスクからの内生的な減衰効果を弱め、ニュース・ショックの複利化をもたらす。中央銀行はサン・スポット<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>の自己実現を防ぐために、インフレの上昇に対してより強力に反応しなければならない。</p>
+</section>
+<section id="資本を持つ扱いやすいhank" class="level4">
+<h4 class="anchored" data-anchor-id="資本を持つ扱いやすいhank">資本を持つ扱いやすいHANK</h4>
+<p>資本と所得不平等チャネルの効果と補完性を定量化するために、Bilbiie et al.（<strong>2022年</strong>）は非流動的な資本を持つTHANKモデルを展開した<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>。所得不平等のみを持つTHANKモデルと同様に、家計は固有リスクに直面し、H家計の定常的な割合は再び以下で与えられる： <span class="math display">\[ \lambda = \frac{1-s}{2-s-h}. \]</span></p>
+<p>家計は流動的な債券、非流動的な株式、または非流動的な資本に貯蓄できる。資本の発展は以下で与えられる： <span class="math display">\[K_{t+1} = (1 - \delta)K_t + \Phi\left(\frac{I_t}{K_t}\right)K_t\]</span> ここで関数 <span class="math inline">\(\Phi()\)</span> は資本調整費用を表す。賃金は労働組合によって設定され、当初は伸縮的であり、価格は粘着的である。政府は資本および/または利潤への課税を通じて再分配を行う。</p>
+<p>S家計のみが債券と資本への貯蓄を選択する。流動的債券に対する最適化条件は自己保険オイラー方程式で与えられる： <span class="math display">\[(C_t^S)^{-\frac{1}{\sigma}} = \beta E_t \left\{ \frac{1 + r_t^n}{1 + \pi_{t+1}} \left[ s(C_{t+1}^S)^{-\frac{1}{\sigma}} + (1 - s)(C_{t+1}^H)^{-\frac{1}{\sigma}} \right] \right\}.\]</span> 投資に対する最適化条件は以下で与えられる： <span class="math display">\[Q_{t} = \beta E_{t} \left\{ \left( \frac{C_{t+1}^{S}}{C_{t}^{S}} \right)^{-\frac{1}{\sigma}} \left[ (1 - \tau^{K}) R_{t+1}^{K} + Q_{t+1} \left( 1 - \delta + \Phi_{t+1} - \frac{I_{t+1}}{K_{t+1}} \Phi'_{t+1} \right) \right] \right\}.\]</span></p>
+<p>H家計は所得を全て消費し、その所得は労働所得と移転から構成される： <span class="math display">\[C_t^H = w_t N_t + T_t^H.\]</span> 政府はS家計の資本所得と利潤所得に課税し、税収をH家計に移転して予算を均衡させる： <span class="math display">\[\lambda T_t^H = \tau^D + \tau^K r_t^K K_t.\]</span> 所得不平等チャネルを消去し <span class="math inline">\(\chi = 1\)</span> を実現するために、以下の完全再分配スキームを導入できる： <span class="math display">\[\tau^D = \tau^K = \lambda.\]</span> 全ての家計は同じ労働時間を供給し同じ賃金を受け取る（組合の一員である）ため、この再分配スキームにより所得は均等化される。</p>
+</section>
+<section id="補完性の定量化" class="level4">
+<h4 class="anchored" data-anchor-id="補完性の定量化">補完性の定量化</h4>
+<p><a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a> は、資本のないRANKモデルを基準とした金融政策の増幅に対する資本導入の効果を示す。第一に、RANKモデルへの資本の導入は金融政策の効果を減衰させ、資本なしモデルの0.66倍の効果しか生まない。これは投資が産出に対してより敏感であるため、消費反応が小さくなることによる。</p>
+<p><a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a> の第3列は、所得比例的なTANKモデルにおける資本不平等チャネルの影響を示す。第3章で論じたように、<span class="math inline">\(\chi = 1\)</span> の資本なしTANKモデルはRANKモデルに対して増幅を提供しない（<strong>これがCampbell-Mankiwのベンチマーク・ケースである</strong>）。資本の導入は消費反応を11%増幅する。これは、所得不平等がないケースにおいても資本不平等チャネルが金融政策の効果を増幅することを実証する。</p>
+<p>第4列では、反循環的所得不平等を持つTHANKモデルにおける増幅を確認できる。所得不平等は実質的な増幅をもたらし、金融政策に対して51%大きな消費反応を生む。重要なのは、第4列が所得と資本不平等チャネルの強い補完性を示すことである。TANKモデルが資本と所得不平等の両方を持つ場合、消費反応はベースラインRANKモデルの2.25倍になる。上述の通り、この結合乗数は二つの個別チャネルの積より大きい（<span class="math inline">\(2.25 &gt; 1.51 \times 1.11\)</span>）。</p>
+<p><a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a> の最終列は、固有リスクを持つTHANKモデルにおける増幅を示す。固有リスクは資本と所得不平等チャネルの補完性を強化し、RANKの場合の2.62倍の消費反応をもたらす。</p>
+<div id="tbl-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: 資本の有無によるRANK、TANK、THANKモデルにおける金融政策の消費への増幅効果。
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>RANK</th>
+<th>異質的エージェント</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Y不平等なし</td>
+<td>Y不平等あり</td>
+<td>+ リスク</td>
+</tr>
+<tr class="even">
+<td>Kなし</td>
+<td>1</td>
+<td>1 (=RANK)</td>
+<td>1.51</td>
+<td>1.60</td>
+</tr>
+<tr class="odd">
+<td>Kあり</td>
+<td>0.66</td>
+<td>1.11</td>
+<td>2.25</td>
+<td>2.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>THANKモデルと資本を用いて、財政的再分配の役割をより詳細に検討することもできる。<a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a> と同様に、<a href="#tbl-2" class="quarto-xref">Table&nbsp;2</a> は完全再分配と再分配なしのケースがそれぞれ11%と162%の増幅を達成することを示す<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>。しかし、資本所得と利潤所得の再分配は相反する効果を持つ。資本を持つTHANKモデルで利潤所得のみを再分配する場合、金融政策に対する消費反応は減衰する。利潤は反循環的であるため、利潤再分配の増加はH家計所得の循環性を低下させる（<span class="math inline">\(\chi\)</span> の値が低くなる）。逆に、資本所得のみを再分配するケースでは大幅な増幅が生じ、消費反応はRANKの4.34倍になる。資本所得は強く順循環的であるため、資本所得の再分配はH家計の所得をより順循環的にする。これにより所得不平等がより反循環的になり、金融政策の増幅をもたらす。投資は利潤よりも循環的であるため、資本再分配の下での増幅は利潤再分配の下での減衰よりも強い。</p>
+<div id="tbl-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: 資本を持つTHANKモデルにおける財政的再分配が金融政策の増幅に与える効果。
+</figcaption>
+<div aria-describedby="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>所得再分配</th>
+<th></th>
+<th>利潤所得 D</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>あり</td>
+<td>なし</td>
+</tr>
+<tr class="even">
+<td>資本所得 <span class="math inline">\(r^K K\)</span></td>
+<td>あり</td>
+<td>1.11</td>
+<td>4.34</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>なし</td>
+<td>0.50</td>
+<td>2.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>最後に、<a href="#tbl-3" class="quarto-xref">Table&nbsp;3</a> は粘着賃金を持つRANK、TANK、THANKモデルにおける金融政策の増幅を示す<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>。資本なしモデルでは、粘着賃金の追加が所得不平等チャネルによる増幅を低下させることがわかる。これは、粘着賃金を加えることで利潤の反循環性が除去されるためである。利潤の反循環性はTANKおよびTHANKモデルにおけるショック増幅の重要なメカニズムであった。</p>
+<div id="tbl-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: 粘着賃金を持つRANK、TANK、THANKモデルにおける金融政策の消費への増幅効果。
+</figcaption>
+<div aria-describedby="tbl-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>RANK</th>
+<th>異質的エージェント</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Y不平等なし</td>
+<td>Y不平等あり</td>
+<td>+ リスク</td>
+</tr>
+<tr class="even">
+<td>Kなし</td>
+<td>1</td>
+<td>1 (=RANK)</td>
+<td>1.01</td>
+<td>1.02</td>
+</tr>
+<tr class="odd">
+<td>Kあり</td>
+<td>0.94</td>
+<td>1.53</td>
+<td>1.77</td>
+<td>1.95</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>粘着価格のケースと同様に、資本不平等のみでは金融政策の増幅は限定的である。資本を持つTANKモデルと資本を持つRANKモデルを比較すると、資本不平等が金融政策を約63%増幅させることがわかる（比率 <span class="math inline">\(1.53 / 0.94\)</span>）。これは粘着価格ケースにおける資本不平等の役割（比率 <span class="math inline">\(1.11 / 0.66\)</span> で約68%の増幅）と同等である。</p>
+<p>重要なのは、資本と所得不平等が補完的であるという核心的な結果が粘着賃金モデルにおいても頑健であることである。資本と所得不平等の両方がある場合の増幅は、再び個別チャネルの積を上回る（<span class="math inline">\(1.77 &gt; 1.53 \times 1.01\)</span>）。固有リスクの追加によりこの補完性はさらに強化され、資本と所得不平等を持つTHANKモデルは1.95の増幅を生む。</p>
+</section>
+<section id="文献ノート" class="level4">
+<h4 class="anchored" data-anchor-id="文献ノート">文献ノート</h4>
+<p>本章はBilbiie et al.（<strong>2022年</strong>）に基づく。前章でも触れたように、TANKモデルに関する最初期の重要な論文の一つであるGalí et al.（<strong>2007年</strong>）は、まさに物理的資本を最適化エージェントと「経験則」エージェントを区別する保有資産として焦点を当てていた。そのため、その分析は必然的に定量的であった。資本を持つモデルの解析解は容易には得られないためである。本章の分析は、所得不平等、投資、MPC異質性のそれぞれの役割を解きほぐす解析的ツールを提供する。多くの定量的HANKモデルも資本投資を含んでおり、したがって本章で導入した資本不平等チャネルを暗黙に含んでいる。Kaplan et al.（<strong>2018年</strong>）の流動・非流動資産を持つHANKモデルでは、順循環的投資の反応が金融政策ショックに対する消費反応の重要な推進力であり、Alves et al.（<strong>2020年</strong>）も参照されたい。これはBayer et al.（<strong>2019年、2024年</strong>）、Luetticke（<strong>2021年</strong>）、Gornemann et al.（<strong>2016年</strong>）、Hagedorn et al.（<strong>2019年</strong>）にも見られる。Auclert et al.（<strong>2020年</strong>）もベースラインHANKモデルの拡張において投資を含めており、推定の結果、この投資チャネルがモデルにおける集計変動の主要な寄与要因であることを発見した。ただし、このモデルは不平等の循環性を捨象しており、順循環的投資と反循環的不平等の補完性はモデルの特徴ではない。</p>
+</section>
+<section id="要約" class="level4">
+<h4 class="anchored" data-anchor-id="要約">要約</h4>
+<p>本章では、第4章および第5章で展開したTHANKモデルの重要な拡張を扱った。物理的資本が金融政策に対する消費反応の推進において重要な役割を果たすことを示した。特に、資本不平等と所得不平等は「乗数の乗数」を通じた増幅をもたらす二つの補完的チャネルであることを明らかにした。資本を持つTHANKモデルの定量分析は、物理的資本と利潤の再分配が金融政策の波及力に重要な含意を持つことを示した。これらの知見は、最適政策の設計と、資本投資を含む定量的HANKモデルの結果を駆動するメカニズムの理解の両方にとって重要な洞察を提供する。</p>
+</section>
+</section>
+<section id="参考文献" class="level2">
+<h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
+<ul>
+<li>Felipe Alves, Greg Kaplan, Benjamin Moll, and Giovanni L. Violante. A Further Look at the Propagation of Monetary Policy Shocks in HANK. Journal of Money, Credit and Banking, 52(S2):521–559, 2020. doi: 10.1111/jmcb.12760.</li>
+<li>Adrien Auclert, Matthew Rognlie, and Ludwig Straub. Micro jumps, macro humps: Monetary policy and business cycles in an estimated hank model. Technical report, National Bureau of Economic Research, 2020.</li>
+<li>Christian Bayer, Ralph Lütticke, Lien Pham-Dao, and Volker Tjaden. Precautionary Savings, Illiquid Assets, and the Aggregate Consequences of Shocks to Household Income Risk. Econometrica, 87(1):255–290, 2019. doi: 10.3982/ECTA14321.</li>
+<li>Christian Bayer, Benjamin Born, and Ralph Luetticke. Shocks, Frictions, and Inequality in US Business Cycles. American Economic Review, 114(5):1211–1247, 2024. doi: 10.1257/aer.20211386. Conditionally accepted.</li>
+<li>Florin O Bilbiie, Diego R Känzig, and Paolo Surico. Capital and income inequality: An aggregate-demand complementarity. Journal of Monetary Economics, 126:154–169, 2022. doi: 10.1016/j.jmoneco.2022.01.002.</li>
+<li>Olivier Coibion, Yuriy Gorodnichenko, Lorenz Kueng, and John Silvia. Innocent bystanders? monetary policy and inequality. Journal of Monetary Economics, 88:70–89, 2017.</li>
+<li>Jordi Galí, J. David López-Salido, and Javier Vallés. Understanding the Effects of Government Spending on Consumption. Journal of the European Economic Association, 5(1):227–270, 2007. doi: 10.1162/JEEA.2007.5.1.227.</li>
+<li>Nils Gornemann, Keith Kuester, and Makoto Nakajima. Doves for the Rich, Hawks for the Poor? Distributional Consequences of Monetary Policy. 2016. CEPR Discussion Paper No.&nbsp;DP11233.</li>
+<li>Marcus Hagedorn, Iourii Manovskii, and Kurt Mitman. The Fiscal Multiplier. Working Paper 25571, NBER, 2019.</li>
+<li>Greg Kaplan, Benjamin Moll, and Giovanni L Violante. Monetary policy according to hank. American Economic Review, 108(3):697–743, 2018. doi: 10.1257/aer.20160042.</li>
+<li>Ralph Luetticke. Transmission of Monetary Policy with Heterogeneity in Household Portfolios. American Economic Journal: Macroeconomics, 13(2):1–25, 2021. doi: 10.1257/mac.20190064.</li>
+<li>Paul A Samuelson. Interactions between the multiplier analysis and the principle of acceleration. The Review of Economics and statistics, 21(2):75–78, 1939.</li>
+</ul>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>本章は、国際通貨基金、欧州中央銀行調査局、ノルウェー銀行、パリ経済学院（サマースクールおよびAPEプログラム）、ブラウン大学、HECローザンヌ、ボン大学院経済学研究科、ゲーテ大学、ケンブリッジ大学における上級ミニコースの講義ノートに基づく。講義の文字起こしと草稿作成に優れたRA業務を提供してくれたSean Lavenderに感謝する。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Diego KänzigおよびPaolo Suricoとの共同研究に一部基づく。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><strong>訳注</strong>: リアルビジネスサイクル（RBC）モデル。技術ショックなどの実物的なショックが景気循環の主な要因であると考えるマクロ経済モデル。通常、価格の粘着性などを仮定しない。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><strong>訳注</strong>: 乗数・加速度（Multiplier-Accelerator）モデル。消費が所得に依存する「乗数効果」と、投資が所得の変動に依存する「加速度原理」を組み合わせることで、景気循環の自己生成的なサイクルを説明するモデル。サミュエルソン（1939）によって定式化された。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>対称的な定常状態では、移転が家計間で消費を均等化し <span class="math inline">\(C^{S} = C^{H} = C\)</span> となる。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><strong>訳注</strong>: ニュース・ショック（News shock）。現在のファンダメンタルズには変化がないものの、将来の経済状態（生産性など）が変化するという情報が事前にもたらされることによるショック。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><strong>訳注</strong>: テイラー原理（Taylor principle）。中央銀行がインフレ率の上昇に対して名目利子率を1対1以上の割合で引き上げるべきとする原則。マクロモデルにおいて物価水準の決定性（一意の均衡）を確保するための標準的な条件。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><strong>訳注</strong>: サン・スポット（Sunspot）。経済のファンダメンタルズとは無関係な自己実現的な期待の変動（人々の心理的な揺れなど）が経済の均衡を変化させる現象。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>モデルとその対数線形化された均衡条件の完全な記述については、Bilbiie et al.（<strong>2022年</strong>）の付録Bを参照。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>再分配なしのケースは税率ゼロのケースを指す。労働所得の変動を通じた再分配はモデル内で依然として生じる。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>粘着賃金モデルは二つの名目硬直性の源泉を持つ。これはマネー・ニュートラリティのもう一つの破れを生み出し、金融政策効果を強化する。したがって、粘着賃金モデルのRANKベースラインは、粘着価格のみのモデルよりも大きな消費反応を特徴とする。<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

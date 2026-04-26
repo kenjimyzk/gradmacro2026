@@ -1,0 +1,480 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  japanese,
+]{bxjsarticle}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,provide=*]{babel}
+\else
+\usepackage[bidi=default,provide=*]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{目次}
+\else
+  \newcommand\contentsname{目次}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{図一覧}
+\else
+  \newcommand\listfigurename{図一覧}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{表一覧}
+\else
+  \newcommand\listtablename{表一覧}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{図}
+\else
+  \newcommand\figurename{図}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{表}
+\else
+  \newcommand\tablename{表}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{コード}
+\newcommand*\listoflistings{\listof{codelisting}{コード一覧}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={第2回：時系列分析・対数線形近似・制約つき最適化},
+  pdfauthor={講師名},
+  pdflang={ja},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{第2回：時系列分析・対数線形近似・制約つき最適化}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{マクロ経済学B}
+\author{講師名}
+\date{2025-12-04}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{目次}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{講義の目的}\label{ux8b1bux7fa9ux306eux76eeux7684}
+
+本講義では、動学的マクロ経済モデル（特にDSGEモデル）を理解し分析するために不可欠な数学的・統計的ツールを習得します。具体的には以下の3つのトピックを扱います：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{時系列分析の基礎}：定常性、自己相関、インパルス応答関数
+\item
+  \textbf{対数線形近似}：非線形モデルを線形近似する手法
+\item
+  \textbf{動学的最適化}：ラグランジュ未定乗数法とオイラー方程式の導出
+\end{enumerate}
+
+これらのツールは、次回以降のRBCモデルやニューケインジアンモデルの分析で頻繁に使用します。
+
+\section{時系列分析の基礎}\label{ux6642ux7cfbux5217ux5206ux6790ux306eux57faux790e}
+
+マクロ経済データ（GDP、インフレ率、金利など）は時間の経過とともに観測される\textbf{時系列データ}です。
+
+\subsection{定常性
+(Stationarity)}\label{ux5b9aux5e38ux6027-stationarity}
+
+時系列分析において最も重要な概念の一つが\textbf{定常性}です。
+
+\textbf{弱定常性 (Weak Stationarity)} の定義： 確率過程 \(\{y_t\}\)
+が以下の条件を満たすとき、弱定常であるといいます。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{平均が一定}：\(E[y_t] = \mu\) （すべての \(t\) について）
+\item
+  \textbf{分散が一定}：\(Var(y_t) = E[(y_t - \mu)^2] = \sigma^2\)
+  （すべての \(t\) について）
+\item
+  \textbf{自己共分散が時点差（ラグ）のみに依存}：\(Cov(y_t, y_{t-k}) = E[(y_t - \mu)(y_{t-k} - \mu)] = \gamma_k\)
+  （\(t\) に依存しない）
+\end{enumerate}
+
+経済モデルの解が定常であれば、変数は長期的には一定の値（定常状態）の周りを変動することになります。
+
+\subsection{自己回帰過程 (AR
+Process)}\label{ux81eaux5df1ux56deux5e30ux904eux7a0b-ar-process}
+
+マクロ経済学で最もよく使われる時系列モデルは、1次の自己回帰過程
+\textbf{AR(1)} です。 \[
+y_t = \rho y_{t-1} + \epsilon_t
+\] ここで、 - \(|\rho| < 1\)：自己回帰係数（持続性を表すパラメータ） -
+\(\epsilon_t \sim i.i.d. N(0, \sigma^2)\)：ホワイトノイズ（外生的なショック）
+
+\textbf{AR(1)過程の性質：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{期待値}：\(E[y_t] = 0\)
+\item
+  \textbf{分散}：\(Var(y_t) = \frac{\sigma^2}{1 - \rho^2}\)
+\item
+  \textbf{自己相関}：\(Corr(y_t, y_{t-k}) = \rho^k\)
+\end{itemize}
+
+\(\rho\) が1に近いほど、ショックの影響が長く持続します。\(\rho = 1\)
+の場合は\textbf{ランダムウォーク}となり、非定常過程となります。
+
+\subsection{インパルス応答関数 (Impulse Response
+Function)}\label{ux30a4ux30f3ux30d1ux30ebux30b9ux5fdcux7b54ux95a2ux6570-impulse-response-function}
+
+\textbf{インパルス応答関数}は、ある時点 \(t\) で外生的なショック
+\(\epsilon_t\) が1単位発生したとき、その後の変数 \(y_{t+k}\)
+がどのように反応するかを示すものです。
+
+AR(1)モデル \(y_t = \rho y_{t-1} + \epsilon_t\) の場合：
+
+\begin{itemize}
+\tightlist
+\item
+  \(t\) 期：\(\epsilon_t = 1\) が発生 \(\Rightarrow y_t = 1\)
+\item
+  \(t+1\) 期：\(y_{t+1} = \rho y_t = \rho\)
+\item
+  \(t+2\) 期：\(y_{t+2} = \rho y_{t+1} = \rho^2\)
+\item
+  \(t+k\) 期：\(y_{t+k} = \rho^k\)
+\end{itemize}
+
+時間が経つにつれてショックの影響は減衰し、最終的には0（定常状態）に戻ります。
+
+\section{対数線形近似 (Log-Linear
+Approximation)}\label{ux5bfeux6570ux7ddaux5f62ux8fd1ux4f3c-log-linear-approximation}
+
+DSGEモデルの多くは非線形の方程式系で記述されますが、解析的に解くことは困難です。そこで、定常状態の周りで\textbf{対数線形近似}を行い、線形の差分方程式系に変換して分析します。
+
+\subsection{テイラー展開による近似}\label{ux30c6ux30a4ux30e9ux30fcux5c55ux958bux306bux3088ux308bux8fd1ux4f3c}
+
+変数 \(X_t\) の定常状態の値を \(\bar{X}\) とします。 \(X_t\)
+の対数偏差を \(\hat{x}_t\) と定義します： \[
+\hat{x}_t \equiv \ln X_t - \ln \bar{X} \approx \frac{X_t - \bar{X}}{\bar{X}}
+\] これは、\(X_t\) が定常状態から何％乖離しているかを表します。
+
+関数 \(F(X_t, Y_t)\) を定常状態 \((\bar{X}, \bar{Y})\)
+の周りで1次のテイラー展開すると： \[
+F(X_t, Y_t) \approx F(\bar{X}, \bar{Y}) + F_X(\bar{X}, \bar{Y})(X_t - \bar{X}) + F_Y(\bar{X}, \bar{Y})(Y_t - \bar{Y})
+\] これを対数偏差 \(\hat{x}_t, \hat{y}_t\)
+を用いて書き換えると、便利な近似式が得られます。
+
+\subsection{便利な近似公式}\label{ux4fbfux5229ux306aux8fd1ux4f3cux516cux5f0f}
+
+以下の公式は頻繁に使用します（\(\hat{x}_t, \hat{y}_t\) は対数偏差）：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{積の近似}：\(Z_t = X_t Y_t \Rightarrow \hat{z}_t = \hat{x}_t + \hat{y}_t\)
+\item
+  \textbf{商の近似}：\(Z_t = X_t / Y_t \Rightarrow \hat{z}_t = \hat{x}_t - \hat{y}_t\)
+\item
+  \textbf{べき乗の近似}：\(Z_t = X_t^\alpha \Rightarrow \hat{z}_t = \alpha \hat{x}_t\)
+\end{enumerate}
+
+\textbf{例：コブ＝ダグラス型生産関数} \[
+Y_t = A_t K_t^\alpha L_t^{1-\alpha}
+\] これを対数線形化すると： \[
+\hat{y}_t = \hat{a}_t + \alpha \hat{k}_t + (1-\alpha) \hat{l}_t
+\]
+非線形の生産関数が、変数の変化率（対数偏差）の線形結合として表現されました。
+
+\section{制約つき最適化問題}\label{ux5236ux7d04ux3064ux304dux6700ux9069ux5316ux554fux984c}
+
+経済主体の行動は、制約条件の下での目的関数の最大化として定式化されます。
+
+\subsection{ラグランジュ未定乗数法}\label{ux30e9ux30b0ux30e9ux30f3ux30b8ux30e5ux672aux5b9aux4e57ux6570ux6cd5}
+
+以下の問題を考えます：
+
+\[
+\max_{x, y} U(x, y) \quad \text{s.t.} \quad g(x, y) = c
+\]
+
+\textbf{ラグランジュ関数}を定義します：
+
+\[
+\mathcal{L} = U(x, y) + \Lambda [c - g(x, y)]
+\]
+
+ここで \(\Lambda\) は\textbf{ラグランジュ乗数}です。
+
+\textbf{一階条件 (FOCs)}：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\frac{\partial \mathcal{L}}{\partial x} = U_x - \Lambda g_x = 0 \Rightarrow U_x = \Lambda g_x\)
+\item
+  \(\frac{\partial \mathcal{L}}{\partial y} = U_y - \Lambda g_y = 0 \Rightarrow U_y = \Lambda g_y\)
+\item
+  \(\frac{\partial \mathcal{L}}{\partial \Lambda} = c - g(x, y) = 0\)
+\end{enumerate}
+
+これらより、ミクロ経済学でおなじみの条件が得られます：
+
+\[
+\frac{U_x}{U_y} = \frac{g_x}{g_y} \quad (\text{限界代替率} = \text{限界変形率})
+\]
+
+\textbf{ラグランジュ乗数の経済学的解釈}： \(\Lambda\) は、制約条件 \(c\)
+が1単位緩和されたときに、目的関数の最大値がどれだけ増加するかを表します（\textbf{シャドープライス}）。
+
+\subsection{動学的最適化とオイラー方程式}\label{ux52d5ux5b66ux7684ux6700ux9069ux5316ux3068ux30aaux30a4ux30e9ux30fcux65b9ux7a0bux5f0f}
+
+家計が生涯効用を最大化する問題を考えます。
+
+\[
+\max_{\{C_t\}_{t=0}^\infty} \sum_{t=0}^\infty \beta^t U(C_t)
+\]
+
+制約条件（予算制約式）：
+
+\[
+A_{t+1} = R_t A_t + Y_t - C_t
+\]
+
+ここで、 - \(\beta \in (0, 1)\)：主観的割引因子 - \(C_t\)：消費 -
+\(A_t\)：資産 - \(r_t\)：実質利子率 - \(Y_t\)：所得
+
+ラグランジュ関数：
+
+\[
+\mathcal{L} = \sum_{t=0}^\infty \beta^t \left\{ U(C_t) + \Lambda_t [ R_t A_t + Y_t - C_t - A_{t+1} ] \right\}
+\]
+
+\textbf{一階条件}：
+
+\(C_t\) について： \[
+\beta^t U'(C_t) - \beta^t \Lambda_t = 0 \Rightarrow \Lambda_t = U'(C_t)
+\]
+
+\(A_{t+1}\) について（\(t\) 期と \(t+1\) 期の項に関係することに注意）：
+\[
+-\beta^t \Lambda_t + \beta^{t+1} \Lambda_{t+1} R_{t+1} = 0
+\]
+
+これらを整理すると、\textbf{オイラー方程式 (Euler Equation)}
+が得られます：
+
+\[
+U'(C_t) = \beta R_{t+1} U'(C_{t+1})
+\]
+
+または
+
+\[
+1 = \beta R_{t+1} \frac{U'(C_{t+1})}{U'(C_t)}
+\]
+
+\textbf{解釈}： 今日の消費を1単位減らして貯蓄すると、効用は \(U'(C_t)\)
+減少します（限界費用）。 一方、貯蓄した分は次期に \(R_{t+1}\)
+倍になって戻り、次期の消費を増やせます。その効用増加分を現在価値に割り引くと
+\(\beta R_{t+1} U'(C_{t+1})\) となります（限界便益）。
+最適化行動においては、これらが等しくなります。
+
+\subsection{横断性条件 (Transversality
+Condition)}\label{ux6a2aux65adux6027ux6761ux4ef6-transversality-condition}
+
+無限期間の最適化問題では、一階条件に加えて\textbf{横断性条件 (TVC)}
+が必要です。
+
+\[
+\lim_{T \to \infty} \beta^T \Lambda_T A_{T+1} = 0
+\]
+
+これは、無限の将来において、価値ある資産を残したまま死ぬことはない（使い切る）、あるいは借金を無限に膨らませることはできない（ポンジ・ゲームの禁止）ことを意味します。
+
+\section{まとめ}\label{ux307eux3068ux3081}
+
+\subsection{本日のポイント}\label{ux672cux65e5ux306eux30ddux30a4ux30f3ux30c8}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{時系列分析}：AR(1)プロセスはマクロ変数の持続性を表現する基本的なモデルであり、インパルス応答関数によってショックの波及効果を可視化できる。
+\item
+  \textbf{対数線形近似}：非線形なDSGEモデルを線形近似することで、解析的な取り扱いや数値計算が可能になる。\(\hat{z}_t = \hat{x}_t + \hat{y}_t\)
+  などの公式は非常に便利。
+\item
+  \textbf{動学的最適化}：ラグランジュ未定乗数法を用いて、異時点間の最適配分条件である\textbf{オイラー方程式}を導出できる。これは消費の平準化行動を表している。
+\end{enumerate}
+
+\subsection{次回予告}\label{ux6b21ux56deux4e88ux544a}
+
+次回（第3回）は、今回学んだツールを用いて、\textbf{リアル・ビジネス・サイクル（RBC）モデル}を構築します。
+技術ショックがどのように景気変動を引き起こすのか、そのメカニズムを数理モデルで解明していきます。
+
+\section{演習問題}\label{ux6f14ux7fd2ux554fux984c}
+
+\subsection{問題1：AR(1)プロセス}\label{ux554fux984c1ar1ux30d7ux30edux30bbux30b9}
+
+以下のAR(1)プロセスを考えます。 \[
+y_t = 0.8 y_{t-1} + \epsilon_t
+\] ここで、\(\epsilon_t\) は平均0、分散1のホワイトノイズです。 \(t=0\)
+において \(\epsilon_0 = 1\)
+というショックが発生し、それ以降はショックがない（\(\epsilon_t = 0, t \ge 1\)）とします。また、\(y_{-1} = 0\)
+とします。 \(t=0, 1, 2, 3\) における \(y_t\)
+の値を計算し、グラフの概形を描いてください。
+
+\subsection{問題2：対数線形近似}\label{ux554fux984c2ux5bfeux6570ux7ddaux5f62ux8fd1ux4f3c}
+
+貨幣数量説の方程式 \(M_t V_t = P_t Y_t\) を対数線形化してください。
+（ヒント：各変数の対数偏差を
+\(\hat{m}_t, \hat{v}_t, \hat{p}_t, \hat{y}_t\)
+と定義し、積の近似公式を利用してください）
+
+\subsection{問題3：対数効用関数のオイラー方程式}\label{ux554fux984c3ux5bfeux6570ux52b9ux7528ux95a2ux6570ux306eux30aaux30a4ux30e9ux30fcux65b9ux7a0bux5f0f}
+
+効用関数が対数型 \(U(C_t) = \ln C_t\) であるとします。
+このときのオイラー方程式
+\(1 = \beta R_{t+1} \frac{U'(C_{t+1})}{U'(C_t)}\)
+を具体的に書き下し、消費の成長率 \(C_{t+1}/C_t\)
+が何によって決まるか説明してください。
+
+
+
+
+\end{document}

@@ -1,0 +1,28 @@
+%% LyX 2.5.0 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,autodetect-engine, dvi=dvipdfmx, ja=standard]{bxjsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\begin{document}
+\begin{align*}
+E[\ln Y^{S}_{t+1}|\ln Y^{S}_{t}] & =s(Y^{S}_{t+1})\ln Y^{S}_{t+1}+(1-s(Y^{S}_{t+1}))\ln Y^{H}_{t+1}\\
+V[\ln Y^{S}_{t+1}|\ln Y^{S}_{t}] & =E[(\ln Y^{S}_{t+1})^{2}|\ln Y^{S}_{t}]-\{E[\ln Y^{S}_{t+1}|\ln Y^{S}_{t}]\}^{2}\\
+\end{align*}
+\begin{align*}
+E[(\ln Y^{S}_{t+1})^{2}|\ln Y^{S}_{t}]= & s(Y^{S}_{t+1})[\ln Y^{S}_{t+1}]^{2}+(1-s(Y^{S}_{t+1}))[\ln Y^{H}_{t+1}]^{2}\\
+\{E[\ln Y^{S}_{t+1}|\ln Y^{S}_{t}]\}^{2}= & s(Y^{S}_{t+1})^{2}[\ln Y^{S}_{t+1}]^{2}+(1-s(Y^{S}_{t+1}))^{2}[\ln Y^{H}_{t+1}]^{2}\\
+ & +2s(Y^{S}_{t+1})(1-s(Y^{S}_{t+1}))\ln Y^{S}_{t+1}\ln Y^{H}_{t+1}
+\end{align*}
+Thus
+\begin{align*}
+V[\ln Y^{S}_{t+1}|\ln Y^{S}_{t}]= & s(Y^{S}_{t+1})\{1-s(Y^{S}_{t+1})\}[\ln Y^{S}_{t+1}]^{2}+s(Y^{S}_{t+1})\{1-s(Y^{S}_{t+1})\}[\ln Y^{H}_{t+1}]^{2}\\
+ & -2s(Y^{S}_{t+1})(1-s(Y^{S}_{t+1}))\ln Y^{S}_{t+1}\ln Y^{H}_{t+1}\\
+= & s(Y^{S}_{t+1})\{1-s(Y^{S}_{t+1})\}\{[\ln Y^{S}_{t+1}]^{2}+\}[\ln Y^{H}_{t+1}]^{2}-2\ln Y^{S}_{t+1}\ln Y^{H}_{t+1}\}\\
+= & s(Y^{S}_{t+1})\{1-s(Y^{S}_{t+1})\}\{\ln Y^{S}_{t+1}-\ln Y^{H}_{t+1}\}^{2}\\
+= & s(Y^{S}_{t+1})\{1-s(Y^{S}_{t+1})\}[\ln Y^{S}_{t+1}/Y^{H}_{t+1}]^{2}\\
+= & s(Y^{S}_{t+1})(1-s(Y^{S}_{t+1}))(\ln\Gamma_{t+1})^{2}
+\end{align*}
+
+\end{document}

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NKCross_OnlineAppendix: A RANK Derivations</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/clipboard/clipboard.min.js"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/popper.min.js"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/anchor.min.js"></script>
+<link href="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="NKCross_OnlineAppendix_A_RANK_Derivations_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../../NKCross_OnlineAppendix_A_RANK_Derivations.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">NKCross_OnlineAppendix: A RANK Derivations</h1>
+<p class="subtitle lead">式展開の補完と日本語解説</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="a-rank-derivations-rankモデルにおける式展開" class="level2">
+<h2 class="anchored" data-anchor-id="a-rank-derivations-rankモデルにおける式展開">A RANK Derivations: RANKモデルにおける式展開</h2>
+<p>この資料は、Bilbiie “The New Keynesian Cross” の Online Appendixにある「A RANK Derivations」の式展開を日本語で解説し、省略されている途中の計算過程を補完するものです。</p>
+<section id="家計の最適化問題とフローの予算制約" class="level3">
+<h3 class="anchored" data-anchor-id="家計の最適化問題とフローの予算制約">家計の最適化問題とフローの予算制約</h3>
+<p>主体 <span class="math inline">\(j\)</span> は、無限期間にわたり消費 <span class="math inline">\(C_t^j\)</span>、労働供給 <span class="math inline">\(N_t^j\)</span>、および資産保有量を最適に選択し、以下の期待生涯効用を最大化します。 <span class="math display">\[
+\max \mathbb{E}_0 \sum_{t=0}^{\infty} \beta^t U\left(C_t^j, N_t^j\right)
+\]</span> これを満たす制約条件は、以下のフロー予算制約の列です。 <span class="math display">\[
+B_t^j + \Omega_{t+1}^j V_t \le Z_t^j + \Omega_t^j (V_t + P_t D_t) + W_t N_t^j - P_t C_t^j
+\]</span> ここで、各変数は以下の通りです。</p>
+<ul>
+<li><span class="math inline">\(B_t^j\)</span>: 期末に保有する<strong>状態条件付資産 (state-contingent assets)</strong> の名目価値（企業株式を除く）</li>
+<li><span class="math inline">\(Z_t^j\)</span>: 期首における、保有状態条件付資産からのペイオフ（当初の富）</li>
+<li><span class="math inline">\(V_t\)</span>: 株式の平均市場価値</li>
+<li><span class="math inline">\(D_t\)</span>: 株式の実質配当</li>
+<li><span class="math inline">\(\Omega_t^j\)</span>: 株式保有シェア</li>
+<li><span class="math inline">\(W_t N_t^j\)</span> は名目労働所得、<span class="math inline">\(P_t C_t^j\)</span> は名目消費支出</li>
+</ul>
+<p>裁定機会の不在（No-arbitrage）により、確率的割引因子（Stochastic Discount Factor, SDF）<span class="math inline">\(Q_{t,t+1}^j\)</span> が存在し、不確実なペイオフを持つ資産価格は以下で評価されます。 <span class="math display">\[
+\frac{B_{t}^j}{P_t} = \mathbb{E}_t \left[ Q_{t,t+1}^j \frac{Z_{t+1}^j}{P_{t+1}} \right]
+\quad \text{および} \quad
+\frac{V_t}{P_t} = \mathbb{E}_t \left[ Q_{t,t+1}^j \left( \frac{V_{t+1}}{P_{t+1}} + D_{t+1} \right) \right] \tag{1}
+\]</span> 株式価格の式を将来に向かって逐次代入（Forward iteration）し、無泡沫条件（No-bubble condition）を適用すると、ファンダメンタル価格方程式が得られます。 <span class="math display">\[
+\frac{V_t}{P_t} = \mathbb{E}_t \sum_{i=1}^{\infty} Q_{t,t+i}^j D_{t+i} \tag{1'}
+\]</span> また、無リスクの実質利子率 <span class="math inline">\(R_t\)</span> および名目利子率 <span class="math inline">\(I_t\)</span> は、SDFを用いて以下のように定義されます。 <span class="math display">\[
+\frac{1}{R_t} = \mathbb{E}_t Q_{t,t+1}^j \tag{2}
+\]</span> <span class="math display">\[
+\frac{1}{I_t} = \mathbb{E}_t \left[ \frac{P_t}{P_{t+1}} Q_{t,t+1}^j \right]
+\]</span></p>
+</section>
+<section id="異時点間予算制約-intertemporal-budget-constraint-の導出" class="level3">
+<h3 class="anchored" data-anchor-id="異時点間予算制約-intertemporal-budget-constraint-の導出">異時点間予算制約 (Intertemporal Budget Constraint) の導出</h3>
+<p>(1)の裁定条件を富の動学方程式に代入し、異時点間予算制約を導びきます。 総資産（期首）を <span class="math inline">\(X_t^j = Z_t^j + \Omega^j (V_t + P_t D_t)\)</span> と定義します。<span class="math inline">\((1')\)</span> 式を用いると、総資産は将来の配当の割引現在価値を含めて表現できます。 <span class="math display">\[
+\begin{aligned}
+X_t^j
+&amp;= Z_t^j + \Omega^j P_t \left( \frac{V_t}{P_t} + D_t \right)\\
+&amp;= Z_t^j + \Omega^j P_t \left( \mathbb{E}_t \sum_{i=1}^{\infty} Q_{t,t+i}^j D_{t+i} + D_t \right)\\
+&amp;= Z_t^j + \Omega^j \left( \mathbb{E}_t \sum_{i=0}^{\infty} P_t Q_{t,t+i}^j D_{t+i} \right)
+\end{aligned}
+\]</span> (※ ただし <span class="math inline">\(Q_{t,t}^j = 1\)</span> としています)</p>
+<p>フロー予算制約において、株式の売買がない（<span class="math inline">\(\Omega_{t+1}^j = \Omega_t^j = \Omega^j\)</span>）とすると、 <span class="math display">\[
+B_t^j \le Z_t^j + \Omega^j P_t D_t + W_t N_t^j - P_t C_t^j
+\]</span> この式の両辺を <span class="math inline">\(P_t\)</span> で割り、<span class="math inline">\(B_t^j/P_t = \mathbb{E}_t\left[Q_{t,t+1}^j Z_{t+1}^j / P_{t+1}\right]\)</span> を代入します。ここで <span class="math inline">\(X_{t+1}^j = Z_{t+1}^j + \Omega^j (V_{t+1} + P_{t+1}D_{t+1})\)</span> より、これを前向きに解き、（ポンジ・ゲーム排除の）トランスバーサリティ条件 <span class="math inline">\(\lim_{i\to\infty} \mathbb{E}_t \left[ Q_{t,t+i}^j X_{t+i}^j \right] = 0\)</span> を用いると、標準的な異時点間予算制約が得られます。 <span class="math display">\[
+\mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j C_{t+i}^j \leq \frac{X_t^j}{P_t} + \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j \frac{W_{t+i}}{P_{t+i}} N_{t+i}^j
+\]</span> ここで、<span class="math inline">\(Z_t^j=0\)</span>（状態条件付資産が総供給ゼロのもとでの初期保有ゼロ）を仮定すれば <span class="math inline">\(\frac{X_t^j}{P_t} = \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j (\Omega^j D_{t+i})\)</span> となるため、上式は次のようにまとめることができます。 <span class="math display">\[
+\mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j C_{t+i}^j \leq \mathbb{E}_t \sum_{i=0}^{\infty} Q_{t,t+i}^j Y_{t+i}^j \tag{3}
+\]</span> ただし、<span class="math inline">\(Y_{t+i}^j\)</span> は主体 <span class="math inline">\(j\)</span> の実質所得であり、 <span class="math display">\[
+Y_{t+i}^j = \Omega^j D_{t+i} + \frac{W_{t+i}}{P_{t+i}} N_{t+i}^j \tag{4}
+\]</span> と定義されます。</p>
+</section>
+<section id="最適化の1階条件とオイラー方程式" class="level3">
+<h3 class="anchored" data-anchor-id="最適化の1階条件とオイラー方程式">最適化の1階条件とオイラー方程式</h3>
+<p>制約付き最適化問題の1階条件より、SDFと限界効用の関係は次のように与えられます。 <span class="math display">\[
+Q_{t,t+1}^j = \beta \frac{U_C(C_{t+1}^j)}{U_C(C_t^j)}
+\]</span> これを (2)式に代入すると、標準的なオイラー方程式となります。 <span class="math display">\[
+\frac{1}{R_t} = \mathbb{E}_t \left[ \beta \frac{U_C(C_{t+1}^j)}{U_C(C_t^j)} \right]
+\]</span></p>
+<section id="変数の対数線形化" class="level4">
+<h4 class="anchored" data-anchor-id="変数の対数線形化">変数の対数線形化</h4>
+<p>定常状態からの対数乖離（log deviations）を小文字で表します（収益率については差分）。SDFについて、任意の期間 <span class="math inline">\(i\)</span> では <span class="math display">\[
+Q_{t,t+i}^j = \beta^i \frac{U_C(C_{t+i}^j)}{U_C(C_t^j)}
+\]</span> 定常状態では <span class="math inline">\(Q_i = \beta^i\)</span> であり、（CRRA効用関数の性質 <span class="math inline">\(U_C \propto C^{-\sigma^{-1}}\)</span> などから）その対数乖離 <span class="math inline">\(q_{t,t+i}^j\)</span> は <span class="math display">\[
+q_{t,t+i}^j \equiv \ln \frac{Q_{t,t+i}^j}{Q_i^j}
+= \ln \left( \frac{C_{t+i}^j}{C_t^j} \right)^{-\sigma^{-1}}
+= -\sigma^{-1} (c_{t+i}^j - c_t^j)
+\]</span> となります。これを書き換えると、任意の時点間での消費の関係が得られます。 <span class="math display">\[
+c_t^j = c_{t+i}^j + \sigma q_{t,t+i}^j
+\]</span> 期待値をとると、 <span class="math display">\[
+c_t^j = \mathbb{E}_t c_{t+i}^j + \sigma \mathbb{E}_t q_{t,t+i}^j \tag{5}
+\]</span> また、<span class="math inline">\(q\)</span> の定義から、<span class="math inline">\(q_{t,t+i}^j = q_{t,t+1}^j + q_{t+1,t+2}^j + \dots + q_{t+i-1,t+i}^j\)</span> が成り立ちます。 1期間のオイラー方程式 <span class="math inline">\(r_t = - \mathbb{E}_t q_{t,t+1}^j\)</span> を繰り返すと、 <span class="math display">\[
+\mathbb{E}_t q_{t,t+i}^j = \mathbb{E}_t \sum_{k=0}^{i-1} q_{t+k, t+k+1}^j = - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k}
+\]</span> と表現できます。</p>
+</section>
+</section>
+<section id="消費関数-consumption-function-の導出" class="level3">
+<h3 class="anchored" data-anchor-id="消費関数-consumption-function-の導出">消費関数 (Consumption Function) の導出</h3>
+<p>次に、異時点間予算制約 (3)式を定常状態の周りで対数線形化します。定常状態では <span class="math inline">\(\bar{C}^j = \bar{Y}^j\)</span> を仮定すると、線形化された式は <span class="math display">\[
+\mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (q_{t,t+i}^j + c_{t+i}^j) = \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (q_{t,t+i}^j + y_{t+i}^j)
+\]</span> となります。この両辺に <span class="math inline">\((\sigma - 1) \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t q_{t,t+i}^j\)</span> を加えます。 <span class="math display">\[
+\mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + c_{t+i}^j) = \mathbb{E}_t \sum_{i=0}^{\infty} \beta^i (\sigma q_{t,t+i}^j + y_{t+i}^j)
+\]</span></p>
+<section id="左辺の整理" class="level4">
+<h4 class="anchored" data-anchor-id="左辺の整理">左辺の整理</h4>
+<p>左辺の各項の括弧内は、式(5)よりそのまま現在の消費 <span class="math inline">\(c_t^j\)</span> になります。（<span class="math inline">\(\sigma \mathbb{E}_{t} q_{t,t+i}^j + \mathbb{E}_{t}c_{t+i}^j = c_t^j\)</span>） <span class="math display">\[
+\text{左辺} = \sum_{i=0}^{\infty} \beta^i c_t^j = \frac{1}{1-\beta} c_t^j
+\]</span></p>
+</section>
+<section id="右辺の整理" class="level4">
+<h4 class="anchored" data-anchor-id="右辺の整理">右辺の整理</h4>
+<p>右辺は <span class="math inline">\(\sigma \sum \beta^i \mathbb{E}_t q_{t,t+i}^j + \sum \beta^i \mathbb{E}_t y_{t+i}^j\)</span> です。<span class="math inline">\(q\)</span> の和について、<span class="math inline">\(\mathbb{E}_t q_{t,t+i}^j = - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k}\)</span> を用いて計算します（ただし <span class="math inline">\(q_{t,t}^j = 0\)</span> なので <span class="math inline">\(i=1\)</span> から開始します）。 シグマの順序を交換して整理します。 <span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{\infty} \beta^i \left( - \mathbb{E}_t \sum_{k=0}^{i-1} r_{t+k} \right)
+&amp;= - \mathbb{E}_t \sum_{k=0}^{\infty} r_{t+k} \sum_{i=k+1}^{\infty} \beta^i \\
+&amp;= - \mathbb{E}_t \sum_{k=0}^{\infty} r_{t+k} \frac{\beta^{k+1}}{1-\beta} \\
+&amp;= - \frac{\beta}{1-\beta} \sum_{k=0}^{\infty} \beta^k \mathbb{E}_t r_{t+k}
+\end{aligned}
+\]</span> ここでインデックス <span class="math inline">\(k\)</span> を <span class="math inline">\(i\)</span> に書き直すと、右辺は <span class="math display">\[
+\text{右辺} = - \sigma \frac{\beta}{1-\beta} \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+\]</span></p>
+</section>
+<section id="消費の再帰的表現-recursive-form-の獲得" class="level4">
+<h4 class="anchored" data-anchor-id="消費の再帰的表現-recursive-form-の獲得">消費の再帰的表現 (Recursive Form) の獲得</h4>
+<p>左辺と右辺を結びつけ、全体に <span class="math inline">\((1-\beta)\)</span> を乗じます。 <span class="math display">\[
+c_t^j = - \sigma \beta \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+\]</span> ここで <span class="math inline">\(i=0\)</span> の項（現在の項）と、<span class="math inline">\(i \ge 1\)</span> の項（将来の項）に分解します。 <span class="math display">\[
+c_t^j = - \sigma \beta r_t + (1-\beta)y_t^j
+- \sigma \beta \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t r_{t+i}
++ (1-\beta) \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+\]</span> 一方で、<span class="math inline">\(t+1\)</span> 期における同様の式を考え、その期待値をとり <span class="math inline">\(\beta\)</span> をかけたもの <span class="math inline">\(\beta \mathbb{E}_t c_{t+1}^j\)</span> は以下のようになります。 <span class="math display">\[
+\begin{aligned}
+\beta \mathbb{E}_t c_{t+1}^j
+&amp;= \beta \mathbb{E}_t \left[ - \sigma \beta \sum_{i=0}^{\infty} \beta^i r_{t+1+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^i y_{t+1+i}^j \right] \\
+&amp;= - \sigma \beta \sum_{i=0}^{\infty} \beta^{i+1} \mathbb{E}_t r_{t+1+i} + (1-\beta) \sum_{i=0}^{\infty} \beta^{i+1} \mathbb{E}_t y_{t+1+i}^j \\
+&amp;= - \sigma \beta \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t r_{t+i} + (1-\beta) \sum_{i=1}^{\infty} \beta^i \mathbb{E}_t y_{t+i}^j
+\end{aligned}
+\]</span> これは、上で分解した <span class="math inline">\(c_t^j\)</span> の「将来の項（<span class="math inline">\(i \ge 1\)</span>）」と完全に一致します。 したがって、将来の項を丸ごと <span class="math inline">\(\beta \mathbb{E}_t c_{t+1}^j\)</span> で置き換えることで、最終的な再帰的表現の消費関数が得られます。 <span class="math display">\[
+c_t^j = (1-\beta) y_t^j - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}^j \tag{6}
+\]</span> この式は、RANKモデルにおける代表的家計の消費が、「現在の所得」「現在の実質利子率」および「明日の消費の期待値」によって直感的に決定されることを示しています。</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

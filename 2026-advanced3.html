@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="宮﨑憲治">
+<meta name="dcterms.date" content="2026-04-19">
+
+<title>Chapter 2–3 数式展開の補足メモ</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="2026-advanced3_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2026-advanced3_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="2026-advanced3_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="2026-advanced3_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="2026-advanced3_files/libs/quarto-html/popper.min.js"></script>
+<script src="2026-advanced3_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="2026-advanced3_files/libs/quarto-html/anchor.min.js"></script>
+<link href="2026-advanced3_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2026-advanced3_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="2026-advanced3_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="2026-advanced3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="2026-advanced3_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2026-advanced3.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chapter 2–3 数式展開の補足メモ</h1>
+<p class="subtitle lead">RANKモデルとTANKモデルにおける式導出の補完</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>宮﨑憲治 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 19, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="はじめに" class="level2">
+<h2 class="anchored" data-anchor-id="はじめに">はじめに</h2>
+<p>この資料は、Bilbiie <em>Heterogeneous Agent Macroeconomics</em> の Chapter 2（<strong>RANKモデル</strong>）および Chapter 3（<strong>TANKモデル</strong>）における数式展開を日本語で解説し、教科書で省略されている途中の計算過程を補完するものです。</p>
+<p>表記規則として、大文字は水準変数、小文字は定常状態からの対数偏差を表します。</p>
+<hr>
+</section>
+<section id="chapter-2-rankモデル" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-rankモデル">Chapter 2: RANKモデル</h2>
+<section id="rankモデルの基本体系" class="level3">
+<h3 class="anchored" data-anchor-id="rankモデルの基本体系">RANKモデルの基本体系</h3>
+<p>Chapter 2 で導出されるRANKモデルの基本体系は、以下の4本の方程式から構成されます。</p>
+<p><span class="math display">\[
+\begin{aligned}
+c_t &amp;= \mathbb{E}_t c_{t+1} - \sigma r_t \\
+y_t &amp;= c_t \\
+\pi_t &amp;= \kappa c_t \\
+r_t &amp;= \phi \mathbb{E}_t \pi_{t+1} - m_t
+\end{aligned}
+\]</span></p>
+<ul>
+<li>第1式：<strong>オイラー方程式</strong>（<strong>IS曲線</strong>）。消費は将来の期待消費と実質利子率で決まる。</li>
+<li>第2式：<strong>財市場均衡</strong>。政府支出がない場合、産出は消費に等しい。</li>
+<li>第3式：<strong>静学フィリップス曲線</strong>。インフレは消費（<strong>産出ギャップ</strong>）に比例する。</li>
+<li>第4式：<strong>テイラー・ルール</strong>。名目利子率が期待インフレに反応する金融政策ルール。<span class="math inline">\(m_t\)</span> は金融政策ショック。</li>
+</ul>
+</section>
+<section id="消費関数による再帰的表現" class="level3">
+<h3 class="anchored" data-anchor-id="消費関数による再帰的表現">消費関数による再帰的表現</h3>
+<p>教科書の Appendix（<strong>Bilbiie, 2020</strong>）で示されるように、異時点間予算制約とオイラー方程式を組み合わせると、消費関数の再帰的表現が得られます。</p>
+<p><span class="math display">\[
+c_t = (1-\beta) y_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1} \tag{6}
+\]</span></p>
+<p>この式の導出過程は <a href="Bilbiie/NKCross_OnlineAppendix_Final/NKCross_OnlineAppendix_A_RANK_Derivations.qmd">NKCross_OnlineAppendix_A_RANK_Derivations.qmd</a> に詳しく記述されています。</p>
+<section id="消費関数からis曲線を復元する" class="level4">
+<h4 class="anchored" data-anchor-id="消費関数からis曲線を復元する">消費関数からIS曲線を復元する</h4>
+<p>消費関数 (6) において <span class="math inline">\(y_t = c_t\)</span>（<strong>財市場均衡</strong>）を代入すると、</p>
+<p><span class="math display">\[
+c_t = (1-\beta) c_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+\]</span></p>
+<p>両辺を整理すると、</p>
+<p><span class="math display">\[
+c_t - (1-\beta) c_t = - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+\]</span> <span class="math display">\[
+\beta c_t = - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1}
+\]</span></p>
+<p><span class="math inline">\(\beta\)</span> で両辺を割ると、</p>
+<p><span class="math display">\[
+c_t = \mathbb{E}_t c_{t+1} - \sigma r_t
+\]</span></p>
+<p>したがって、消費関数 (6) に財市場均衡条件を代入すると、標準的なオイラー-IS方程式が復元されます。これは、消費関数とIS曲線が同一モデルの異なる表現であることを確認しています。</p>
+</section>
+</section>
+<section id="テイラールールの変形" class="level3">
+<h3 class="anchored" data-anchor-id="テイラールールの変形">テイラー・ルールの変形</h3>
+<p>テイラー・ルールについて、教科書では名目利子率 <span class="math inline">\(i_t\)</span> が期待インフレに反応する形で書かれています。</p>
+<p><span class="math display">\[
+i_t = \phi \mathbb{E}_t \pi_{t+1} - \varepsilon_t
+\]</span></p>
+<p>フィッシャー方程式 <span class="math inline">\(r_t = i_t - \mathbb{E}_t \pi_{t+1}\)</span> を用いると、実質利子率は</p>
+<p><span class="math display">\[
+r_t = \phi \mathbb{E}_t \pi_{t+1} - \varepsilon_t - \mathbb{E}_t \pi_{t+1} = (\phi - 1) \mathbb{E}_t \pi_{t+1} - \varepsilon_t
+\]</span></p>
+<p>これが補足メモの第2ブロックに対応します。ここで <span class="math inline">\(\varepsilon_t\)</span> は金融政策ショックです。</p>
+<hr>
+</section>
+</section>
+<section id="chapter-2-政府支出を含むrankモデル" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-政府支出を含むrankモデル">Chapter 2: 政府支出を含むRANKモデル</h2>
+<section id="モデルの拡張" class="level3">
+<h3 class="anchored" data-anchor-id="モデルの拡張">モデルの拡張</h3>
+<p>政府支出 <span class="math inline">\(g_t\)</span> を導入すると、モデルは以下のように拡張されます。</p>
+<p><span class="math display">\[
+\begin{aligned}
+c_t &amp;= (1-\beta) \hat{y}_t - \sigma \beta r_t + \beta \mathbb{E}_t c_{t+1} \\
+\hat{y}_t &amp;= y_t - t_t \\
+t_t &amp;= g_t \\
+y_t &amp;= c_t + g_t \\
+\pi_t &amp;=  \kappa c_t + \kappa \zeta g_t \\
+r_t &amp;= \phi \mathbb{E}_t \pi_{t+1} - m_t
+\end{aligned}
+\]</span></p>
+<p>ここで、<span class="math inline">\(\hat{y}_t = y_t - t_t\)</span> は<strong>可処分所得</strong>（<strong>課税後の産出</strong>）の対数偏差、<span class="math inline">\(t_t = g_t\)</span> は均衡財政（<strong>税収が政府支出に等しい</strong>）を表します。</p>
+</section>
+<section id="パラメータ-zeta-の定義" class="level3">
+<h3 class="anchored" data-anchor-id="パラメータ-zeta-の定義">パラメータ <span class="math inline">\(\zeta\)</span> の定義</h3>
+<p>フィリップス曲線に現れるパラメータ <span class="math inline">\(\zeta\)</span> は以下のように定義されます。</p>
+<p><span class="math display">\[
+\zeta = \frac{1}{1+(\varphi\sigma)^{-1}} = \frac{\varphi\sigma}{1+\varphi\sigma}
+\]</span></p>
+<p>ここで <span class="math inline">\(\varphi\)</span> はフリッシュ労働供給弾力性の逆数、<span class="math inline">\(\sigma\)</span> は異時点間代替弾力性です。<span class="math inline">\(\zeta \in (0,1)\)</span> であり、政府支出が自然産出水準に与える影響の度合いを表します。</p>
+</section>
+<section id="フィリップス曲線の変形" class="level3">
+<h3 class="anchored" data-anchor-id="フィリップス曲線の変形">フィリップス曲線の変形</h3>
+<p>フィリップス曲線がなぜ <span class="math inline">\(\kappa c_t + \kappa \zeta g_t\)</span> と書けるかを確認します。一般に <span class="math display">\[
+\pi_t = \kappa (y_t - y_t^n), \quad y_t^n =\frac{\sigma^{-1}}{\varphi+\sigma^{-1}}g_t
+\]</span> であることが知られています。これと財市場均衡 <span class="math inline">\(y_t = c_t + g_t\)</span> より、 <span class="math display">\[
+\pi_t = \kappa \left( c_t + g_t -
+\frac{\sigma^{-1}}{\varphi+\sigma^{-1}}
+g_t \right) =
+\kappa \left( c_t +
+\frac{\varphi}{\varphi+\sigma^{-1}}
+g_t \right) =
+\kappa c_t + \kappa \zeta g_t
+\]</span> となります。</p>
+<hr>
+</section>
+</section>
+<section id="chapter-3-tankモデル政府支出なし" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-tankモデル政府支出なし">Chapter 3: TANKモデル（<strong>政府支出なし</strong>）</h2>
+<section id="モデルの設定" class="level3">
+<h3 class="anchored" data-anchor-id="モデルの設定">モデルの設定</h3>
+<p>Two-Agent New Keynesian（<strong>TANK</strong>）モデルでは、経済に2種類の家計が存在します。</p>
+<ul>
+<li><strong>セイバー（</strong>Saver, <span class="math inline">\(S\)</span><strong>）</strong>：割合 <span class="math inline">\(1-\lambda\)</span>。資産市場にアクセスでき、貯蓄・借入が可能。</li>
+<li><strong>ハンド・トゥ・マウス（</strong>Hand-to-Mouth, <span class="math inline">\(H\)</span><strong>）</strong>：割合 <span class="math inline">\(\lambda\)</span>。資産を保有できず、毎期の所得をすべて消費に充てる。</li>
+</ul>
+<p>政府支出がない場合のモデル体系は以下の通りです。</p>
+<p><span class="math display">\[
+\begin{aligned}
+c^S_t &amp;= \mathbb{E}_t c^S_{t+1} - \sigma r_t &amp; &amp;\text{（セイバーのオイラー方程式）} \\
+\varphi n^S_t &amp;= w_t - \sigma^{-1} c^S_t &amp; &amp;\text{（セイバーの労働供給）} \\
+\varphi n^H_t &amp;= w_t - \sigma^{-1} c^H_t &amp; &amp;\text{（HtMの労働供給）} \\
+c^H_t &amp;= w_t + n^H_t + \frac{\tau^D}{\lambda} d_t &amp; &amp;\text{（HtMの予算制約）} \\
+d_t &amp;= -w_t &amp; &amp;\text{（配当の定義）} \\
+c_t &amp;= \lambda c^H_t + (1-\lambda) c^S_t &amp; &amp;\text{（集計消費）} \\
+n_t &amp;= \lambda n^H_t + (1-\lambda) n^S_t &amp; &amp;\text{（集計労働）} \\
+y_t &amp;= c_t &amp; &amp;\text{（財市場均衡）} \\
+y_t &amp;= n_t &amp; &amp;\text{（生産関数）} \\
+\pi_t &amp;= \kappa c_t &amp; &amp;\text{（フィリップス曲線）} \\
+r_t &amp;= \phi \mathbb{E}_t \pi_{t+1} - m_t &amp; &amp;\text{（テイラー・ルール）}
+\end{aligned}
+\]</span></p>
+<p>ここで <span class="math inline">\(\tau^D\)</span> は配当への課税率、<span class="math inline">\(d_t\)</span> は企業の実質配当（<strong>対数偏差</strong>）です。</p>
+</section>
+<section id="htm家計の消費関数-ch_t-chi-y_t-の導出" class="level3">
+<h3 class="anchored" data-anchor-id="htm家計の消費関数-ch_t-chi-y_t-の導出">HtM家計の消費関数 <span class="math inline">\(c^H_t = \chi y_t\)</span> の導出</h3>
+<p>HtM家計の消費は、予算制約と労働供給条件から閉じた形で求まります。</p>
+<p><strong>ステップ1</strong>：配当の代入</p>
+<p><span class="math inline">\(d_t = -w_t\)</span> を予算制約に代入します。</p>
+<p><span class="math display">\[
+c^H_t = w_t + n^H_t + \frac{\tau^D}{\lambda}(-w_t) = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + n^H_t
+\]</span></p>
+<p><strong>ステップ2</strong>：労働供給条件の代入</p>
+<p>HtMの労働供給条件 <span class="math inline">\(\varphi n^H_t = w_t - \sigma^{-1} c^H_t\)</span> より <span class="math inline">\(n^H_t = \frac{w_t - \sigma^{-1} c^H_t}{\varphi}\)</span> を代入します。</p>
+<p><span class="math display">\[
+c^H_t = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + \frac{w_t - \sigma^{-1} c^H_t}{\varphi}
+= \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - \frac{\sigma^{-1}}{\varphi} c^H_t
+\]</span></p>
+<p><strong>ステップ3</strong>：<span class="math inline">\(c^H_t\)</span> について整理</p>
+<p><span class="math display">\[
+\left(1 + \frac{\sigma^{-1}}{\varphi}\right) c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t
+\]</span></p>
+<p><span class="math display">\[
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \cdot w_t
+\]</span></p>
+<p><strong>ステップ4</strong>：賃金を集計変数で表現</p>
+<p>労働供給条件 <span class="math inline">\(\varphi n_t = w_t - \sigma^{-1} c_t\)</span>（<strong>集計版</strong>）より <span class="math inline">\(w_t = \varphi n_t + \sigma^{-1} c_t\)</span> です。財市場均衡 <span class="math inline">\(y_t = c_t\)</span> と生産関数 <span class="math inline">\(y_t = n_t\)</span> を用いると、</p>
+<p><span class="math display">\[
+w_t = (\varphi + \sigma^{-1}) y_t
+\]</span></p>
+<p>これを代入すると、</p>
+<p><span class="math display">\[
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \cdot (\varphi + \sigma^{-1}) y_t
+= \left[1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)\right] y_t
+\equiv \chi \, y_t
+\]</span></p>
+<p>ここで、</p>
+<p><span class="math display">\[
+\chi \equiv 1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)
+\]</span></p>
+<p>がHtM家計の<strong>個別MPC</strong>（<strong>限界消費性向</strong>）です。<span class="math inline">\(\tau^D &lt; \lambda\)</span> のとき <span class="math inline">\(\chi &gt; 1\)</span> となり、HtM家計の消費は産出よりも大きく変動します。</p>
+</section>
+<section id="セイバーの消費の導出" class="level3">
+<h3 class="anchored" data-anchor-id="セイバーの消費の導出">セイバーの消費の導出</h3>
+<p>集計消費の定義 <span class="math inline">\(c_t = \lambda c^H_t + (1-\lambda) c^S_t\)</span> から、セイバーの消費は</p>
+<p><span class="math display">\[
+c^S_t = \frac{c_t - \lambda c^H_t}{1-\lambda} = \frac{c_t - \lambda \chi y_t}{1-\lambda} = \frac{1 - \lambda\chi}{1-\lambda} \, y_t
+\]</span></p>
+<p><span class="math inline">\(y_t = c_t\)</span> を使いました。</p>
+</section>
+<section id="tankモデルのis曲線の導出" class="level3">
+<h3 class="anchored" data-anchor-id="tankモデルのis曲線の導出">TANKモデルのIS曲線の導出</h3>
+<p>セイバーのオイラー方程式にセイバーの消費を代入します。</p>
+<p><span class="math display">\[
+\frac{1-\lambda\chi}{1-\lambda} y_t = \frac{1-\lambda\chi}{1-\lambda} \mathbb{E}_t y_{t+1} - \sigma r_t
+\]</span></p>
+<p>両辺に <span class="math inline">\(\frac{1-\lambda}{1-\lambda\chi}\)</span> を乗じると、TANKモデルのIS曲線が得られます。</p>
+<p><span class="math display">\[
+y_t = \mathbb{E}_t y_{t+1} - \sigma \frac{1-\lambda}{1-\lambda\chi} \, r_t
+\]</span></p>
+<p><span class="math inline">\(\lambda\chi &lt; 1\)</span> のとき、利子率の係数 <span class="math inline">\(\sigma \frac{1-\lambda}{1-\lambda\chi}\)</span> はRANKの <span class="math inline">\(\sigma\)</span> より小さくなります。逆に <span class="math inline">\(\lambda\chi &gt; 1\)</span> のとき（<strong>Bilbiieの「反転領域」</strong>）、利子率の効果の符号が反転します。</p>
+</section>
+<section id="消費関数の再帰的表現tankモデル" class="level3">
+<h3 class="anchored" data-anchor-id="消費関数の再帰的表現tankモデル">消費関数の再帰的表現（<strong>TANKモデル</strong>）</h3>
+<p>セイバーの消費関数の再帰的表現は、RANKの場合と同様に</p>
+<p><span class="math display">\[
+c^S_t = (1-\beta) y^S_t - \sigma \beta r_t + \beta \mathbb{E}_t c^S_{t+1}
+\]</span></p>
+<p>と書けます。ここで <span class="math inline">\(y^S_t = \frac{1-\lambda\chi}{1-\lambda} y_t\)</span> はセイバーの所得です。</p>
+<p>集計消費 <span class="math inline">\(c_t = \lambda c^H_t + (1-\lambda) c^S_t\)</span> にこれを代入して展開します。</p>
+<p><span class="math display">\[
+\begin{aligned}
+c_t &amp;= \lambda \chi y_t + (1-\lambda) \left[ (1-\beta) \frac{1-\lambda\chi}{1-\lambda} y_t - \sigma\beta r_t + \beta \frac{1-\lambda\chi}{1-\lambda} \mathbb{E}_t c_{t+1} \right] \\
+&amp;= \lambda\chi y_t + (1-\beta)(1-\lambda\chi) y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1} \\
+&amp;= \left[\lambda\chi + (1-\beta)(1-\lambda\chi)\right] y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1}
+\end{aligned}
+\]</span></p>
+<p>第1項の係数を整理します。</p>
+<p><span class="math display">\[
+\lambda\chi + (1-\beta)(1-\lambda\chi) = \lambda\chi + 1 - \lambda\chi - \beta + \beta\lambda\chi = 1 - \beta(1-\lambda\chi)
+\]</span></p>
+<p>したがって、TANKモデルの集計消費関数は</p>
+<p><span class="math display">\[
+c_t = \left[1 - \beta(1-\lambda\chi)\right] y_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi) \mathbb{E}_t c_{t+1}
+\]</span></p>
+<p><span class="math inline">\(\lambda = 0\)</span>（<strong>全員がセイバー、すなわちRANK</strong>）の場合、<span class="math inline">\(\chi\)</span> の値にかかわらず <span class="math inline">\((1-\beta) y_t - \sigma\beta r_t + \beta \mathbb{E}_t c_{t+1}\)</span> に帰着し、RANK消費関数 (6) が復元されることが確認できます。</p>
+<hr>
+</section>
+</section>
+<section id="chapter-3-政府支出を含むtankモデル" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-政府支出を含むtankモデル">Chapter 3: 政府支出を含むTANKモデル</h2>
+<section id="モデルの拡張-1" class="level3">
+<h3 class="anchored" data-anchor-id="モデルの拡張-1">モデルの拡張</h3>
+<p>政府支出 <span class="math inline">\(g_t\)</span> を含むTANKモデルでは、HtMの予算制約に税負担が加わります。</p>
+<p><span class="math display">\[
+c^H_t = w_t + n^H_t + \frac{\tau^D}{\lambda} d_t - t^H_t
+\]</span></p>
+<p>ここで <span class="math inline">\(t^H_t\)</span> はHtM家計の一人当たり税負担であり、</p>
+<p><span class="math display">\[
+t^H_t = g_t - \left(1 - \frac{\alpha}{\lambda}\right) t_t
+\]</span></p>
+<p>と定義されます。<span class="math inline">\(\alpha\)</span> は税負担の分配パラメータです。均衡財政 <span class="math inline">\(t_t = g_t\)</span> のもとで、</p>
+<p><span class="math display">\[
+t^H_t = g_t - \left(1 - \frac{\alpha}{\lambda}\right) g_t = \frac{\alpha}{\lambda} g_t
+\]</span></p>
+<p>となります。</p>
+</section>
+<section id="htm家計の消費関数の導出" class="level3">
+<h3 class="anchored" data-anchor-id="htm家計の消費関数の導出">HtM家計の消費関数の導出</h3>
+<p><strong>ステップ1</strong>：配当と税の代入</p>
+<p><span class="math inline">\(d_t = -w_t\)</span> を代入します。</p>
+<p><span class="math display">\[
+c^H_t = \left(1 - \frac{\tau^D}{\lambda}\right) w_t + n^H_t - t^H_t
+\]</span></p>
+<p><strong>ステップ2</strong>：労働供給条件の代入</p>
+<p><span class="math display">\[
+c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - \frac{\sigma^{-1}}{\varphi} c^H_t - t^H_t
+\]</span></p>
+<p><span class="math display">\[
+\left(1 + \frac{\sigma^{-1}}{\varphi}\right) c^H_t = \left(\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}\right) w_t - t^H_t
+\]</span></p>
+<p><strong>ステップ3</strong>：賃金の代入</p>
+<p>生産関数 <span class="math inline">\(y_t = n_t\)</span> と <span class="math inline">\(y_t = c_t + g_t\)</span> より、</p>
+<p><span class="math display">\[
+w_t = \varphi n_t + \sigma^{-1} c_t = (\varphi + \sigma^{-1}) c_t + \varphi g_t
+\]</span></p>
+<p>これを代入すると、</p>
+<p><span class="math display">\[
+c^H_t = \frac{\frac{1}{\varphi} + 1 - \frac{\tau^D}{\lambda}}{1 + \sigma^{-1}\varphi^{-1}} \left[(\varphi + \sigma^{-1}) c_t + \varphi g_t\right] - \zeta t^H_t
+\]</span></p>
+<p>ここで <span class="math inline">\(\zeta = \frac{\varphi\sigma}{1+\varphi\sigma}\)</span> です。中括弧内を整理すると、</p>
+<p><span class="math display">\[
+= \left[1 + \varphi\left(1 - \frac{\tau^D}{\lambda}\right)\right](c_t + \zeta g_t) - \zeta t^H_t
+= \chi c_t + \chi \zeta g_t - \zeta t^H_t
+\]</span></p>
+<p><span class="math inline">\(t^H_t = \frac{\alpha}{\lambda} g_t\)</span> を代入して最終的に、</p>
+<p><span class="math display">\[
+c^H_t = \chi c_t + \zeta\left(1 - \frac{\alpha}{\lambda}\right) g_t
+\]</span></p>
+<p><span class="math inline">\(\hat{y}_t = y_t - t_t = c_t + g_t - g_t = c_t\)</span> なので、<span class="math inline">\(c^H_t = \chi \hat{y}_t + \zeta\left(1 - \frac{\alpha}{\lambda}\right) g_t\)</span> とも書けます。</p>
+</section>
+<section id="セイバーの消費" class="level3">
+<h3 class="anchored" data-anchor-id="セイバーの消費">セイバーの消費</h3>
+<p><span class="math display">\[
+c^S_t = \frac{c_t - \lambda c^H_t}{1-\lambda} = \frac{1 - \lambda\chi}{1-\lambda} \hat{y}_t - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda} g_t
+\]</span></p>
+</section>
+<section id="集計消費関数の導出" class="level3">
+<h3 class="anchored" data-anchor-id="集計消費関数の導出">集計消費関数の導出</h3>
+<p>セイバーの再帰的消費関数 <span class="math inline">\(c^S_t = (1-\beta) y^S_t - \sigma\beta r_t + \beta \mathbb{E}_t c^S_{t+1}\)</span> を用いて、集計消費 <span class="math inline">\(c_t = \lambda c^H_t + (1-\lambda) c^S_t\)</span> を展開します。</p>
+<p><span class="math display">\[
+\begin{aligned}
+c_t ={}&amp; \lambda\chi \hat{y}_t + \lambda\zeta(1-\alpha/\lambda) g_t \\
+&amp; + (1-\lambda)(1-\beta)\left[\frac{1-\lambda\chi}{1-\lambda}\hat{y}_t - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda} g_t\right] \\
+&amp; - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\left[\mathbb{E}_t c_{t+1} - \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi} \mathbb{E}_t g_{t+1}\right]
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\hat{y}_t\)</span> の係数を整理すると <span class="math inline">\(1 - \beta(1-\lambda\chi)\)</span>、<span class="math inline">\(g_t\)</span> の項は</p>
+<p><span class="math display">\[
+\lambda\zeta(1-\alpha/\lambda) - (1-\beta)\lambda\zeta(1-\alpha/\lambda) = \beta\lambda\zeta(1-\alpha/\lambda)
+\]</span></p>
+<p>したがって、</p>
+<p><span class="math display">\[
+c_t = [1-\beta(1-\lambda\chi)]\hat{y}_t - (1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1} + \beta\lambda\zeta(1-\alpha/\lambda)[g_t - \mathbb{E}_t g_{t+1}]
+\]</span></p>
+</section>
+<section id="is曲線の導出" class="level3">
+<h3 class="anchored" data-anchor-id="is曲線の導出">IS曲線の導出</h3>
+<p><span class="math inline">\(c_t = \hat{y}_t\)</span> を代入して整理します。</p>
+<p><span class="math display">\[
+\beta(1-\lambda\chi) c_t = -(1-\lambda)\sigma\beta r_t + \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1} + \beta\lambda\zeta(1-\alpha/\lambda)[g_t - \mathbb{E}_t g_{t+1}]
+\]</span></p>
+<p><span class="math inline">\(\beta\)</span> で割り、<span class="math inline">\((1-\lambda\chi)\)</span> で割ると、</p>
+<p><span class="math display">\[
+c_t = \mathbb{E}_t c_{t+1} - \frac{1-\lambda}{1-\lambda\chi}\sigma r_t + \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi}[g_t - \mathbb{E}_t g_{t+1}]
+\]</span></p>
+<p><span class="math inline">\(y_t = c_t + g_t\)</span> を用いて産出で表現すると、</p>
+<p><span class="math display">\[
+y_t = \mathbb{E}_t y_{t+1} - \frac{1-\lambda}{1-\lambda\chi}\sigma r_t + \left[1 + \frac{\lambda\zeta(1-\alpha/\lambda)}{1-\lambda\chi}\right][g_t - \mathbb{E}_t g_{t+1}]
+\]</span></p>
+<p>これが政府支出を含むTANKモデルのIS曲線です。右辺第3項の <span class="math inline">\([g_t - \mathbb{E}_t g_{t+1}]\)</span> は、政府支出の変化（<strong>予期されない部分</strong>）が総需要に与える影響を表します。その係数は <span class="math inline">\(1\)</span> より大きく、HtM家計の存在による<strong>財政乗数の増幅効果</strong>を反映しています。</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,926 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Heterogeneous Agent Macroeconomics",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          130.375,
+          99.6385498046875
+        ],
+        [
+          459.0970764160156,
+          99.6385498046875
+        ],
+        [
+          459.0970764160156,
+          116.85400390625
+        ],
+        [
+          130.375,
+          116.85400390625
+        ]
+      ]
+    },
+    {
+      "title": "A Tractable New Keynesian Framework",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          153.07421875,
+          157.717529296875
+        ],
+        [
+          447.58203125,
+          157.717529296875
+        ],
+        [
+          447.58203125,
+          174.9329833984375
+        ],
+        [
+          153.07421875,
+          174.9329833984375
+        ]
+      ]
+    },
+    {
+      "title": "Chapter 5",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          268.0059814453125,
+          457.1365966796875
+        ],
+        [
+          327.2320251464844,
+          457.1365966796875
+        ],
+        [
+          327.2320251464844,
+          469.091796875
+        ],
+        [
+          268.0059814453125,
+          469.091796875
+        ]
+      ]
+    },
+    {
+      "title": "Chapter 5: Introducing Liquidity \u2013 Analytics of\nPrecautionary Savings and iMPCs",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          87.82367758186398,
+          106.46838824577026
+        ],
+        [
+          496.91687657430725,
+          106.46838824577026
+        ],
+        [
+          496.91687657430725,
+          149.65234375
+        ],
+        [
+          87.82367758186398,
+          149.65234375
+        ]
+      ]
+    },
+    {
+      "title": "THANK with Bonds-Liquidity",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          88.57430730478589,
+          312.0498046875
+        ],
+        [
+          306.25692695214104,
+          312.0498046875
+        ],
+        [
+          306.25692695214104,
+          326.0283203125
+        ],
+        [
+          88.57430730478589,
+          326.0283203125
+        ]
+      ]
+    },
+    {
+      "title": "Demand for Bonds-Liquidity in THANK",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          87.88671875,
+          105.25
+        ],
+        [
+          377.73828125,
+          105.25
+        ],
+        [
+          377.73828125,
+          119.85015869140625
+        ],
+        [
+          87.88671875,
+          119.85015869140625
+        ]
+      ]
+    },
+    {
+      "title": "iMPCS and Intertemporal Propagation",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          87.82367758186398,
+          106.072265625
+        ],
+        [
+          367.80856423173805,
+          106.072265625
+        ],
+        [
+          367.80856423173805,
+          119.228515625
+        ],
+        [
+          87.82367758186398,
+          119.228515625
+        ]
+      ]
+    },
+    {
+      "title": "iMPCs in the Oscillating THANK",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          87.82367758186398,
+          288.615234375
+        ],
+        [
+          291.9949622166247,
+          288.615234375
+        ],
+        [
+          291.9949622166247,
+          300.126953125
+        ],
+        [
+          87.82367758186398,
+          300.126953125
+        ]
+      ]
+    },
+    {
+      "title": "iMPCs in the General THANK: Analytics meets Quantitative meets\nthe Data",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          87.3046875,
+          600.3406219482422
+        ],
+        [
+          494.7265625,
+          600.3406219482422
+        ],
+        [
+          494.7265625,
+          630.2228240966797
+        ],
+        [
+          87.3046875,
+          630.2228240966797
+        ]
+      ]
+    },
+    {
+      "title": "Virtuous Policies in HANK: Debt Quantity Rule",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          88.46875,
+          158.79193115234375
+        ],
+        [
+          434.61932373046875,
+          158.79193115234375
+        ],
+        [
+          434.61932373046875,
+          173.13818359375
+        ],
+        [
+          88.46875,
+          173.13818359375
+        ]
+      ]
+    },
+    {
+      "title": "Notes on the Literature",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          88.46875,
+          261.35888671875
+        ],
+        [
+          257.09942626953125,
+          261.35888671875
+        ],
+        [
+          257.09942626953125,
+          275.70513916015625
+        ],
+        [
+          88.46875,
+          275.70513916015625
+        ]
+      ]
+    },
+    {
+      "title": "Summary",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          88.46875,
+          284.28289794921875
+        ],
+        [
+          157.1484375,
+          284.28289794921875
+        ],
+        [
+          157.1484375,
+          298.629150390625
+        ],
+        [
+          88.46875,
+          298.629150390625
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          89.05078125,
+          477.3251953125
+        ],
+        [
+          179.86221313476562,
+          477.3251953125
+        ],
+        [
+          179.86221313476562,
+          495.6099853515625
+        ],
+        [
+          89.05078125,
+          495.6099853515625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          37
+        ],
+        [
+          "Line",
+          16
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          29
+        ],
+        [
+          "Span",
+          18
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          23
+        ],
+        [
+          "Span",
+          10
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          340
+        ],
+        [
+          "Line",
+          90
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          26
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          167
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          34
+        ],
+        [
+          "Span",
+          21
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          25
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          256
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          36
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          36
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          161
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          209
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          63
+        ],
+        [
+          "Line",
+          28
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          56
+        ],
+        [
+          "Line",
+          25
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          54
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/textbook-Ch5"
+}
