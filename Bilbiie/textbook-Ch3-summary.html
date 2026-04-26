@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>textbook-ch3-summary</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch3-summary_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch3-summary_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch3-summary_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch3-summary_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch3-summary_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch3-summary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch3-summary_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="bilbiie-heterogeneous-agent-macroeconomics-chapter-3-トピックセンテンス一覧日本語版" class="level1">
+<h1>Bilbiie, <em>Heterogeneous Agent Macroeconomics</em> Chapter 3: トピックセンテンス一覧（日本語版）</h1>
+<section id="導入部" class="level2">
+<h2 class="anchored" data-anchor-id="導入部">導入部</h2>
+<ol type="1">
+<li><strong>本章はBilbiie（2008, 2020）に基づくTANKモデルを提示し、RANKに欠けていた二つの特徴——ケインズ的な性質と一般均衡増幅——を実現する</strong>: TANKモデルは、より高い財政乗数と所得変化に対して敏感なエージェントを持ち（<strong>「よりケインズ的」</strong>）、また金融政策の伝達において異時点間代替の直接効果よりも一般均衡的な間接効果がより大きな役割を果たす（<strong>「より一般均衡的」</strong>）。</li>
+</ol>
+</section>
+<section id="two-agent-new-keynesian-modeltankモデルの設定" class="level2">
+<h2 class="anchored" data-anchor-id="two-agent-new-keynesian-modeltankモデルの設定">Two-Agent New Keynesian Model（<strong>TANKモデルの設定</strong>）</h2>
+<ol start="2" type="1">
+<li><p><strong>TANKモデルには二種類の家計が存在する：資産市場から排除されたH（手元消費）家計と、完全市場にアクセスできるS（貯蓄者）家計</strong>: H家計（<strong>割合 <span class="math inline">\(\lambda\)</span></strong>）は移転と労働所得を全て消費し、S家計（<strong>割合 <span class="math inline">\(1-\lambda\)</span></strong>）は完全市場にアクセスし、独占的競争企業の株式を保有して利潤を受け取る。</p></li>
+<li><p><strong>政府は利潤税を通じた再分配を行い、定常状態で両家計の消費を等しくする最適補助金を実施する</strong>: 利潤は税率 <span class="math inline">\(\tau^D\)</span> で課税されH家計に一括移転される。最適NK販売補助金により定常状態で <span class="math inline">\(D=0\)</span>、<span class="math inline">\(C^H = C^S\)</span> が達成される。対数線形化すると利潤は実質賃金と逆に動く（<span class="math inline">\(d_t = -w_t\)</span>）。</p></li>
+<li><p><strong>両タイプの家計は同一の分離可能な選好を持ち、異時点間代替弾力性 <span class="math inline">\(\sigma\)</span> とフリッシュ弾力性 <span class="math inline">\(\varphi\)</span> で特徴づけられる</strong>: 異質性は所得・資産アクセスに限定され、選好構造は共通である。これにより、個別の労働供給条件が集計レベルでもそのまま成立する。</p></li>
+<li><p><strong>財市場均衡 <span class="math inline">\(y_t = c_t = n_t\)</span> と集計労働供給から、実質賃金は集計消費の線形関数 <span class="math inline">\(w_t = (\varphi + \sigma^{-1})c_t\)</span> として表される</strong>: この関係が、以降のH家計消費の集計所得への弾力性の導出において中心的な役割を果たす。</p></li>
+</ol>
+</section>
+<section id="deriving-aggregated-demand-in-tanktankにおける集計された需要の導出" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-aggregated-demand-in-tanktankにおける集計された需要の導出">Deriving AggregateD Demand in TANK（<strong>TANKにおける集計（された）需要の導出</strong>）</h2>
+<ol start="6" type="1">
+<li><p><strong>H家計の消費は集計所得の <span class="math inline">\(\chi\)</span> 倍として表され、<span class="math inline">\(\chi\)</span> がTANKモデルの核心パラメータとなる</strong>: H家計の予算制約に労働供給と利潤の式を代入し、均衡条件を用いることで <span class="math inline">\(c_t^H = \chi y_t\)</span> が得られる。ここで <span class="math inline">\(\chi \equiv 1 + \varphi(1 - \tau^D/\lambda)\)</span> である。</p></li>
+<li><p><strong><span class="math inline">\(\chi\)</span> はCampbell–Mankiw（1989–91）の仮定（<span class="math inline">\(\chi=1\)</span>）からの本質的な逸脱であり、H消費が集計所得と1対1とは限らないことを意味する</strong>: Campbell–Mankiwはルール・オブ・サム家計が集計所得の一定割合を消費すると仮定したが、TANKではH家計は「自分自身の所得」全てを消費する。<span class="math inline">\(\chi\)</span> が1より大きくも小さくもなりうるため、H消費は集計所得と非比例的に変動する。</p></li>
+<li><p><strong>S家計の消費はH消費を通じて間接的に決まり、<span class="math inline">\(\chi&gt;1\)</span> のとき所得格差は反循環的となる</strong>: S消費の集計所得への弾力性は <span class="math inline">\(\frac{1-\lambda\chi}{1-\lambda}\)</span> となり、<span class="math inline">\(\chi&gt;1\)</span> ならS消費は集計所得より緩やかに動く。所得不平等 <span class="math inline">\(\gamma_t^y = y_t^S - y_t^H\)</span> は <span class="math inline">\(\chi&gt;1\)</span> のとき反循環的（<strong>好況でH所得がより速く増加</strong>）、<span class="math inline">\(\chi&lt;1\)</span> のとき順循環的となる。</p></li>
+<li><p><strong>H消費が集計所得を超えて上昇できるメカニズムは「利潤の再分配」にある——実質賃金上昇→利潤低下→S家計の労働供給増→H消費のさらなる増加</strong>: 集計需要が増加すると実質賃金が上昇し、利潤が低下する。利潤低下の負担がS家計に集中する場合（<span class="math inline">\(\tau^D &lt; \lambda\)</span>）、S家計は所得効果により労働供給を増やし、H家計の需要増を支える。この一般均衡効果がH消費を集計所得以上に引き上げる。</p></li>
+<li><p><strong><span class="math inline">\(\chi\)</span> は労働市場の弾力性と財政再分配の積で構成され、利潤の帰属先が <span class="math inline">\(\chi \gtrless 1\)</span> を決定する</strong>: <span class="math inline">\(\chi = 1 + \varphi \times (1 - \tau^D/\lambda)\)</span> において、<span class="math inline">\(\tau^D = \lambda\)</span>（<strong>均一再分配</strong>）なら所得効果が消え <span class="math inline">\(\chi=1\)</span>（<strong>Campbell–Mankiw</strong>）となり、<span class="math inline">\(\varphi=0\)</span>（<strong>無限弾力的労働供給</strong>）なら賃金が動かず利潤も変化しないため同様に <span class="math inline">\(\chi=1\)</span> となる。<span class="math inline">\(\tau^D &lt; \lambda\)</span> ならH家計は利潤低下を十分に内部化せず <span class="math inline">\(\chi&gt;1\)</span>、<span class="math inline">\(\tau^D &gt; \lambda\)</span> なら <span class="math inline">\(\chi&lt;1\)</span> となる。</p></li>
+</ol>
+</section>
+<section id="the-aggregated-euler-equation集計されたオイラー方程式" class="level2">
+<h2 class="anchored" data-anchor-id="the-aggregated-euler-equation集計されたオイラー方程式">The Aggregate(d) Euler Equation（<strong>集計（された）オイラー方程式</strong>）</h2>
+<ol start="11" type="1">
+<li><p><strong>TANKの集計オイラー方程式はRANKと同じ形式だが、実質利子率の係数が異質性を反映して変わる</strong>: 分子 <span class="math inline">\(1-\lambda\)</span> は利子率変化に直接反応する家計の割合（<strong>S家計のシェア</strong>）を表し、分母 <span class="math inline">\(1-\lambda\chi\)</span> は間接的な一般均衡乗数（<strong>H家計を通じた所得フィードバック</strong>）を表す。<span class="math inline">\(\lambda\chi\)</span> がケインジアン乗数のMPCに対応する。</p></li>
+<li><p><strong>TANKの集計オイラー方程式は異質性を少数の十分統計量に凝縮する「集約装置」であり、平均場ゲームのマスター方程式と概念的に類似する</strong>: ただしこの類推は暗示的なものであり、厳密に技術的な対応ではない。MFGのマスター方程式が無限次元PDEであるのに対し、TANKの集約装置は有限次元で代数的である。</p></li>
+<li><p><strong>集計オイラー方程式を消費格差 <span class="math inline">\(\gamma_t\)</span> を用いて書き直すと、分配的ウェッジ <span class="math inline">\(\lambda(\gamma_t - E_t\gamma_{t+1})\)</span> が循環的不平等チャネルとして現れる</strong>: このウェッジが集計動学に関連する全ての異質性を凝縮している。消費（<strong>所得</strong>）不平等が反循環的であるとき、利下げに対する一般均衡効果はRANKより大きくなる——好況時により多くの資源が制約された（<strong>高MPC</strong>）家計に配分され、好況そのものを増幅するからである。</p></li>
+</ol>
+</section>
+<section id="新keynesian-cross-representationケインジアンクロス表現" class="level2">
+<h2 class="anchored" data-anchor-id="新keynesian-cross-representationケインジアンクロス表現">（<strong>新</strong>）Keynesian Cross Representation（<strong>ケインジアン・クロス表現</strong>）</h2>
+<ol start="14" type="1">
+<li><p><strong>ケインジアン・クロス表現の系譜は著者の2004年博士論文防衛審査まで遡り、Galíの提案に端を発する</strong>: Galíが審査官として増幅メカニズムをケインジアン・クロスで表現することを提案し、著者はこれを取り入れた。しかし匿名査読者の要請で出版時に削除された。10年後、HANK文献の加速とともにこの表現が再び中心的な分析装置として復活した。</p></li>
+<li><p><strong>TANKのPE曲線とケインジアン・クロスは、ショックがRANKに比べて増幅されるか減衰されるかの条件、および直接効果と間接効果の相対的重要性を分析可能にする</strong>: RANKの消費関数と同じ手順でS家計の消費関数を出発点とし、H消費を代入することで、TANKのPE曲線が導出される。</p></li>
+<li><p><strong>中央銀行が持続性 <span class="math inline">\(p\)</span> の利下げを実施した場合の総効果 <span class="math inline">\(\Omega\)</span> はH家計の割合 <span class="math inline">\(\lambda\)</span> とともに増加する——ただし <span class="math inline">\(\chi&gt;1\)</span> の場合に限る</strong>: <span class="math inline">\(\chi&gt;1\)</span>（<strong>反循環的所得不平等</strong>）のときTANKはRANKに比べ増幅を生み、<span class="math inline">\(\chi&lt;1\)</span>（<strong>順循環的</strong>）のとき減衰する。増幅にはH所得が集計所得より速く上昇する必要がある。</p></li>
+<li><p><strong>間接効果のシェア（集計MPC）<span class="math inline">\(\omega\)</span> は、H家計の割合 <span class="math inline">\(\lambda\)</span> が増えるほど常に上昇する——<span class="math inline">\(\chi\)</span> の値に関係なく</strong>: TANKはRANKを必ずしも増幅しないが、常にRANKより「一般均衡的」である。これはモデル内に所得変化に対してより敏感な家計が存在するためであり、金融政策の伝達メカニズムとしての異時点間代替への反事実的依存という、RANKの中核的欠点を解消する。</p></li>
+<li><p><strong>TANKがRANKに比べ増幅を生むには、間接効果の強化が直接効果の弱体化を上回る必要がある——これは <span class="math inline">\(\chi&gt;1\)</span> のときに限り成立する</strong>: <span class="math inline">\(\chi&gt;1\)</span> のとき、集計需要増→利潤低下→S家計の労働供給増→H所得のさらなる増加という一般均衡メカニズムが、利子率への直接的反応力の低下を十分に補う。</p></li>
+</ol>
+</section>
+<section id="inverted-keynesian-logic逆転したケインジアン論理" class="level2">
+<h2 class="anchored" data-anchor-id="inverted-keynesian-logic逆転したケインジアン論理">Inverted Keynesian Logic（<strong>逆転したケインジアン論理</strong>）</h2>
+<ol start="19" type="1">
+<li><p><strong><span class="math inline">\(\lambda &gt; \chi^{-1}\)</span> のとき集計需要論理が逆転し、利上げが消費を増加させる</strong>: Bilbiie（<strong>2008年</strong>）が示したように、このケースでは通常のテイラー・ルールではなく「逆転テイラー・ルール」が均衡の決定性に必要となる。中央銀行は期待インフレの上昇に対し名目金利を1対1未満で引き上げ、実質金利を低下させてサンスポットを排除する。</p></li>
+<li><p><strong>逆転IS曲線の実証的含意：1970年代の米国で集計需要論理が逆転していた可能性がある</strong>: Bilbiie–Straub（<strong>2012, 2013年</strong>）の推定は、1970年代に逆転が生じ、1980年代の金融自由化で通常の論理が回復した可能性を示唆する。大インフレーション期のFRBの受動的金融政策や、ヴォルカー・ディスインフレーションの積極策がそれぞれの時代の均衡決定性と整合的であった。</p></li>
+</ol>
+</section>
+<section id="fiscal-multipliers-according-to-tanktankにおける財政乗数" class="level2">
+<h2 class="anchored" data-anchor-id="fiscal-multipliers-according-to-tanktankにおける財政乗数">Fiscal Multipliers According to TANK（<strong>TANKにおける財政乗数</strong>）</h2>
+<ol start="21" type="1">
+<li><p><strong>政府支出と再分配的課税を導入すると、H家計の消費は <span class="math inline">\(c_t^H = \chi \hat{y}_t + \zeta(\chi - \alpha/\lambda)g_t\)</span> と表される</strong>: パラメータ <span class="math inline">\(\zeta\)</span> は移転に対するH家計消費の弾力性であり、課税の累進度 <span class="math inline">\(\alpha/\lambda\)</span> がH家計の政府支出への反応を決定する。</p></li>
+<li><p><strong>TANKの財政乗数は <span class="math inline">\(\mathcal{M} = 1 + \frac{\lambda\zeta}{1-\lambda\chi}(\chi - \alpha/\lambda)\)</span> であり、<span class="math inline">\(\chi &gt; \alpha/\lambda\)</span> のとき消費に対して正の乗数を持つ——RANKより「よりケインズ的」な結果である</strong>: RANKでは消費乗数がゼロ（<span class="math inline">\(\mathcal{M}=1\)</span>）であったが、TANKではH家計の存在により正の消費乗数が実現しうる。</p></li>
+<li><p><strong>財政乗数は二つの要素に分解できる：NKクロス・チャネル（<span class="math inline">\(\chi-1\)</span>）と外生的再分配チャネル（<span class="math inline">\(1-\alpha/\lambda\)</span>）</strong>: 均一課税（<span class="math inline">\(\alpha=\lambda\)</span>）では <span class="math inline">\(\chi&gt;1\)</span> のときのみRANKを上回り（<strong>NKクロス効果</strong>）、Campbell–Mankiwベンチマークではこの項は消失する。一方、累進的課税（<span class="math inline">\(\alpha&lt;\lambda\)</span>）の再分配効果は <span class="math inline">\(\chi\)</span> の値に関係なく作用し、所得不平等が順循環的でも財政移転が消費を押し上げうる。</p></li>
+<li><p><strong>ケインジアン・クロスの用語では、<span class="math inline">\(\chi\)</span> はPE曲線の傾きを、<span class="math inline">\(\chi&gt;1\)</span> と課税の累進度がPE曲線のシフトを決定する</strong>: TANKはRANKに比べ、政府支出の消費乗数を正にする能力においても「よりケインズ的」である。</p></li>
+</ol>
+</section>
+<section id="adding-the-phillips-curveフィリップス曲線の追加" class="level2">
+<h2 class="anchored" data-anchor-id="adding-the-phillips-curveフィリップス曲線の追加">Adding the Phillips Curve（<strong>フィリップス曲線の追加</strong>）</h2>
+<ol start="25" type="1">
+<li><strong>粘着価格とテイラー・ルールを導入すると、持続的な政府支出は期待インフレを通じて中央銀行の利上げを誘発し、乗数を低下させる</strong>: RANKでは乗数が1未満に低下するが、TANKでは <span class="math inline">\(\chi\)</span> が十分大きく <span class="math inline">\(\alpha\)</span> が十分小さければ、引き締め的な金融政策反応にもかかわらず1を超える乗数が維持されうる。</li>
+</ol>
+</section>
+<section id="forward-guidance-still-a-puzzleフォワードガイダンス依然としてパズル" class="level2">
+<h2 class="anchored" data-anchor-id="forward-guidance-still-a-puzzleフォワードガイダンス依然としてパズル">Forward Guidance: Still a Puzzle（<strong>フォワード・ガイダンス：依然としてパズル</strong>）</h2>
+<ol start="26" type="1">
+<li><strong>TANKはFGパズルを解決しない——集計オイラー方程式の期待将来消費への係数が依然として1であるため</strong>: TANKがRANKに比べ高い財政乗数とより強い一般均衡メカニズムを生み出すにもかかわらず、将来の利下げ約束の効果が将来になるほど大きくなるという反事実的結果は残存する。</li>
+</ol>
+</section>
+<section id="notes-on-the-literature-some-tank-archeology文献ノートtank考古学" class="level2">
+<h2 class="anchored" data-anchor-id="notes-on-the-literature-some-tank-archeology文献ノートtank考古学">Notes on the Literature: Some TANK Archeology（<strong>文献ノート：TANK考古学</strong>）</h2>
+<ol start="27" type="1">
+<li><p><strong>TANK文献の出発点はRBCとRANKが十分大きな財政乗数を生み出せなかったことへの不満であり、Blanchard–Perotti（2002年）の実証発見が直接的な契機となった</strong>: Mankiw（<strong>2000年</strong>）がCampbell–Mankiwの枠組みを発展させ「貯蓄者/消費者」二エージェント・ラムゼーモデルを構築した。これは「TA」モデルであったがまだNKではなかった。</p></li>
+<li><p><strong>Galí et al.（2007年）とBilbiie（2008年）が異なるアプローチでTANKモデルを確立した</strong>: Galí et al.は物的資本を含む数値的アプローチを取り、Bilbiieは資本なし・分断市場の解析的アプローチを取った。後者のアプローチは閉じた解析解を提供し、より鋭い直感を与えるため、その後のTANK文献の標準的ベンチマークとして広く採用された。</p></li>
+<li><p><strong>NK Cross論文（Bilbiie, 2020年）はTANKの増幅メカニズムがHANK文献の主要な知見を再現できることを透明かつ分析的に示した</strong>: 直接的MPC効果と間接的一般均衡フィードバックの分解を提供し、異質性がRANKに比べ増幅をもたらす条件を解析的に明確化した。これはKaplan et al.（<strong>2018年</strong>）、Auclert（<strong>2019年</strong>）等の当時勃興中のHANK文献との概念的接続を精密にした。</p></li>
+<li><p><strong>Broer et al.（2020年）やDebortoli–Galí（2018年）など複数の貢献がTANKとHANKの概念的つながりを明確化し、トラクタブルなメカニズムと完全HANKの動学の関係を解明した</strong>: これらの貢献は異なるが関連する問い（<strong>TANKを独自の定量モデルと比較するか、分野で確立された定量ベンチマークと比較するか</strong>）に取り組み、本書の残りの章で探究される追加的つながりの基礎を築いた。</p></li>
+</ol>
+</section>
+<section id="summary要約" class="level2">
+<h2 class="anchored" data-anchor-id="summary要約">Summary（<strong>要約</strong>）</h2>
+<ol start="31" type="1">
+<li><p><strong>TANKモデルはRANKの二つの中核的欠点——ケインズ的性質の欠如と一般均衡増幅の欠如——を解消する</strong>: H家計の導入により、1を超える財政乗数と強い間接効果が実現する。所得不平等が反循環的（<span class="math inline">\(\chi&gt;1\)</span>）のとき金融政策ショックの増幅が生じるが、<span class="math inline">\(\chi\)</span> の値に関係なくTANKは常にRANKより高い間接効果シェアを持つ。</p></li>
+<li><p><strong>しかしTANKにはHANK文献の鍵となるメカニズム——リスクと予備的貯蓄——が欠如しており、次章以降でこれを組み込む</strong>: トラクタブルなフレームワーク内でTANKを自然に包含しつつリスクと予備的貯蓄を導入することが次の課題であり、これはフォワード・ガイダンス・パズルの解決にも貢献する。</p></li>
+</ol>
+<hr>
+</section>
+<section id="パラメータ一覧" class="level2">
+<h2 class="anchored" data-anchor-id="パラメータ一覧">パラメータ一覧</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\beta\)</span></td>
+<td style="text-align: left;"><strong>割引因子（</strong>discount factor<strong>）</strong></td>
+<td style="text-align: left;">家計の時間選好。<span class="math inline">\(0 &lt; \beta &lt; 1\)</span> で1に近い値をとる</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span></td>
+<td style="text-align: left;"><strong>異時点間代替弾力性（</strong>EIS<strong>）</strong></td>
+<td style="text-align: left;">実質利子率の変化に対する消費の感応度。<span class="math inline">\(\sigma^{-1} \equiv -\frac{U_{CC}^j}{U_C^j}C^j\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\varphi\)</span></td>
+<td style="text-align: left;"><strong>フリッシュ労働供給弾力性の逆数</strong></td>
+<td style="text-align: left;">労働供給曲線の傾き。<span class="math inline">\(\varphi \equiv \frac{U_{NN}^j}{U_N^j}N^j\)</span>。<span class="math inline">\(\varphi=0\)</span> で無限弾力的</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span></td>
+<td style="text-align: left;"><strong>H家計（</strong>hand-to-mouth<strong>）の割合</strong></td>
+<td style="text-align: left;">資産市場から排除された家計のシェア。<span class="math inline">\(0 &lt; \lambda &lt; 1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\tau^D\)</span></td>
+<td style="text-align: left;"><strong>利潤税率</strong></td>
+<td style="text-align: left;">企業利潤に課される税率。徴収分はH家計に一括移転される</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\chi\)</span></td>
+<td style="text-align: left;"><strong>H消費の集計所得弾力性</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\chi \equiv 1 + \varphi(1 - \tau^D/\lambda)\)</span>。TANKモデルの核心パラメータ。<span class="math inline">\(\chi \gtrless 1\)</span> が所得不平等の循環性を決定</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\zeta\)</span></td>
+<td style="text-align: left;"><strong>移転に対するH消費の弾力性</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\zeta = (1 + (\varphi\sigma)^{-1})^{-1}\)</span>。政府移転がH家計消費に与える影響の強さ</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(p\)</span></td>
+<td style="text-align: left;"><strong>持続性パラメータ（</strong>persistence<strong>）</strong></td>
+<td style="text-align: left;">ショックの持続度を表す外生パラメータ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\kappa\)</span></td>
+<td style="text-align: left;"><strong>フィリップス曲線の傾き</strong></td>
+<td style="text-align: left;">インフレの消費変化に対する弾力性。静学フィリップス曲線 <span class="math inline">\(\pi_t = \kappa c_t + \kappa\zeta g_t\)</span> の係数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\phi\)</span></td>
+<td style="text-align: left;"><strong>テイラー・ルールの反応係数</strong></td>
+<td style="text-align: left;">中央銀行の期待インフレへの反応度。<span class="math inline">\(\phi &gt; 1\)</span> で積極的金融政策</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\alpha\)</span></td>
+<td style="text-align: left;"><strong>H家計の税負担シェア</strong></td>
+<td style="text-align: left;">H家計が総税負担に占める割合。<span class="math inline">\(\alpha &lt; \lambda\)</span> で累進的、<span class="math inline">\(\alpha &gt; \lambda\)</span> で逆進的</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="変数一覧" class="level2">
+<h2 class="anchored" data-anchor-id="変数一覧">変数一覧</h2>
+<section id="水準変数大文字" class="level3">
+<h3 class="anchored" data-anchor-id="水準変数大文字">水準変数（<strong>大文字</strong>）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(C_t^H\)</span></td>
+<td style="text-align: left;"><strong>H家計の消費</strong></td>
+<td style="text-align: left;">手元消費家計の消費。<span class="math inline">\(C_t^H = W_t N_t^H + \mathcal{T}_t^H\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(C_t^S\)</span></td>
+<td style="text-align: left;"><strong>S家計の消費</strong></td>
+<td style="text-align: left;">貯蓄家計の消費。<span class="math inline">\(C_t^S = W_t N_t^S + \frac{1}{1-\lambda}D_t + \mathcal{T}_t^S\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(N_t^H, N_t^S\)</span></td>
+<td style="text-align: left;"><strong>各家計の労働供給</strong></td>
+<td style="text-align: left;">H家計とS家計のそれぞれの労働量</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Y_t^H, Y_t^S\)</span></td>
+<td style="text-align: left;"><strong>各家計の所得</strong></td>
+<td style="text-align: left;">H家計：労働所得＋移転。S家計：労働所得＋利潤÷<span class="math inline">\((1-\lambda)\)</span>＋移転</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(D_t\)</span></td>
+<td style="text-align: left;"><strong>企業利潤（</strong>dividends<strong>）</strong></td>
+<td style="text-align: left;">独占的競争企業の実質利潤。定常状態で <span class="math inline">\(D=0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(W_t / P_t\)</span></td>
+<td style="text-align: left;"><strong>実質賃金</strong></td>
+<td style="text-align: left;">名目賃金を物価で割った実質値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathcal{T}_t^H\)</span></td>
+<td style="text-align: left;"><strong>H家計への移転</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\mathcal{T}_t^H = \frac{\tau^D}{\lambda}D_t\)</span>。利潤税収のH家計への一括移転</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathcal{T}_t^S\)</span></td>
+<td style="text-align: left;"><strong>S家計への移転</strong></td>
+<td style="text-align: left;">S家計が受け取る移転</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(G_t\)</span></td>
+<td style="text-align: left;"><strong>政府支出</strong></td>
+<td style="text-align: left;">廃棄される（<strong>非生産的な</strong>）政府支出</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(T_t, T_t^H, T_t^S\)</span></td>
+<td style="text-align: left;"><strong>一括税</strong></td>
+<td style="text-align: left;">総税額とその家計別配分。<span class="math inline">\(\lambda T_t^H = \alpha T_t\)</span>、<span class="math inline">\((1-\lambda)T_t^S = (1-\alpha)T_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(R_t\)</span></td>
+<td style="text-align: left;"><strong>粗実質利子率</strong></td>
+<td style="text-align: left;">1期物無リスク実質債券のリターン</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\tau^S\)</span></td>
+<td style="text-align: left;"><strong>最適NK販売補助金</strong></td>
+<td style="text-align: left;">企業に対する販売補助金率。定常状態で限界費用価格設定を実現</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(T_t^F\)</span></td>
+<td style="text-align: left;"><strong>企業への一括税</strong></td>
+<td style="text-align: left;">販売補助金の財源として企業に課される一括税</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="対数偏差変数小文字" class="level3">
+<h3 class="anchored" data-anchor-id="対数偏差変数小文字">対数偏差変数（<strong>小文字</strong>）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(c_t^H\)</span></td>
+<td style="text-align: left;"><strong>H消費（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(c_t^H = \chi y_t\)</span>（政府支出なし）、<span class="math inline">\(c_t^H = \chi\hat{y}_t + \zeta(\chi - \alpha/\lambda)g_t\)</span>（政府支出あり）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(c_t^S\)</span></td>
+<td style="text-align: left;"><strong>S消費（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(c_t^S = \frac{1-\lambda\chi}{1-\lambda}y_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(c_t\)</span></td>
+<td style="text-align: left;"><strong>集計消費（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(c_t = \lambda c_t^H + (1-\lambda)c_t^S\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(y_t\)</span></td>
+<td style="text-align: left;"><strong>集計産出（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(y_t = c_t = n_t\)</span>（政府支出なし）、<span class="math inline">\(y_t = c_t + g_t\)</span>（政府支出あり）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat{y}_t\)</span></td>
+<td style="text-align: left;"><strong>可処分所得（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\((Y_t-T_t-Y)/Y=y_t-t_t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(n_t^H, n_t^S, n_t\)</span></td>
+<td style="text-align: left;"><strong>労働供給（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;">各家計と集計の労働供給</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(w_t\)</span></td>
+<td style="text-align: left;"><strong>実質賃金（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(w_t = (\varphi + \sigma^{-1})c_t\)</span>（政府支出なし）、<span class="math inline">\(w_t = (\varphi + \sigma^{-1})c_t + \varphi g_t\)</span>（政府支出あり）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(d_t\)</span></td>
+<td style="text-align: left;"><strong>利潤</strong></td>
+<td style="text-align: left;">定常状態からの利潤の偏差（産出比）。<span class="math inline">\(d_t=-w_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(r_t\)</span></td>
+<td style="text-align: left;"><strong>実質利子率（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;">定常状態からの実質利子率の偏差。中央銀行が制御</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(i_t\)</span></td>
+<td style="text-align: left;"><strong>名目利子率（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;">テイラー・ルール <span class="math inline">\(i_t = \phi E_t\pi_{t+1} + \varepsilon_t\)</span> における名目金利</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\pi_t\)</span></td>
+<td style="text-align: left;"><strong>インフレ率（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;">静学フィリップス曲線 <span class="math inline">\(\pi_t = \kappa c_t + \kappa\zeta g_t\)</span> で決定</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(g_t\)</span></td>
+<td style="text-align: left;"><strong>政府支出</strong></td>
+<td style="text-align: left;">定常状態（<span class="math inline">\(G=0\)</span>）からの政府支出の偏差（産出比）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(t_t\)</span></td>
+<td style="text-align: left;"><strong>税負担</strong></td>
+<td style="text-align: left;">定常状態（<span class="math inline">\(T=0\)</span>）からの税負担の偏差（産出比）<span class="math inline">\(t_t=g_t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(t_t^H\)</span></td>
+<td style="text-align: left;"><strong>H家計の税負担</strong></td>
+<td style="text-align: left;">定常状態からのH家計の税負担の偏差（産出比）<span class="math inline">\(t_t^H = \frac{\alpha}{\lambda}g_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\varepsilon_t\)</span></td>
+<td style="text-align: left;"><strong>金融政策ショック</strong></td>
+<td style="text-align: left;">テイラー・ルールにおける外生的ショック</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\gamma_t^y\)</span></td>
+<td style="text-align: left;"><strong>所得不平等（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\gamma_t^y = y_t^S - y_t^H = \frac{1-\chi}{1-\lambda}y_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\gamma_t\)</span></td>
+<td style="text-align: left;"><strong>消費不平等（</strong>対数偏差<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\gamma_t = c_t^S - c_t^H\)</span>。この単純モデルでは <span class="math inline">\(\gamma_t = \gamma_t^y\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="均衡効果の指標" class="level3">
+<h3 class="anchored" data-anchor-id="均衡効果の指標">均衡効果の指標</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\omega\)</span></td>
+<td style="text-align: left;"><strong>PE曲線の傾き（</strong>集計MPC<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\omega = \frac{1-\beta(1-\lambda\chi)}{1-\beta p(1-\lambda\chi)}\)</span>。i.i.d.（<span class="math inline">\(p=0\)</span>）では <span class="math inline">\(\lambda\chi\)</span> に一致</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: left;"><strong>総乗数（</strong>均衡効果<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Omega = \frac{\sigma}{1-p}\frac{1-\lambda}{1-\lambda\chi}\)</span>。<span class="math inline">\(\chi &gt; 1\)</span> のとき <span class="math inline">\(\lambda\)</span> とともに増加（<strong>増幅</strong>）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega_D\)</span></td>
+<td style="text-align: left;"><strong>直接効果（</strong>PE曲線のシフト<strong>）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Omega_D = \frac{\sigma\beta(1-\lambda)}{1-\beta p(1-\lambda\chi)}\)</span>。利子率変化の異時点間代替効果</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Omega_I\)</span></td>
+<td style="text-align: left;"><strong>間接効果</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Omega_I = \Omega - \Omega_D\)</span>。所得フィードバックによる一般均衡効果</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathcal{M}\)</span></td>
+<td style="text-align: left;"><strong>財政乗数</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\mathcal{M} = 1 + \frac{\lambda\zeta}{1-\lambda\chi}(\chi - \alpha/\lambda)\)</span>。RANKでは1、TANKでは<span class="math inline">\(\chi &gt; \alpha/\lambda\)</span>のとき1超</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Omega_{Uniform}\)</span></td>
+<td style="text-align: left;"><strong>均一課税下の財政乗数</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Omega_{Uniform} = 1 + \frac{\lambda\zeta}{1-\lambda\chi}(\chi-1)\)</span>。NKクロス・チャネルのみ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega_{Transfer}\)</span></td>
+<td style="text-align: left;"><strong>純再分配効果</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Omega_{Transfer} = \frac{\lambda\zeta}{1-\lambda\chi}(1-\alpha/\lambda)\)</span>。累進課税チャネルのみ</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

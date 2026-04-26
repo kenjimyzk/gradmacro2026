@@ -1,0 +1,131 @@
+---
+title: "補足メモ：対数所得の条件付き分散の導出"
+subtitle: "Bilbiie第4章 THANKモデルにおける所得リスクの補足"
+author: "宮﨑憲治"
+date: "2026-04-24"
+format:
+  html: default
+  pdf:
+    documentclass: ltjsarticle
+    classoption:
+      - a4paper
+      - 12pt
+      - ja=standard
+      - lualatex
+    toc: false
+    lang: ja
+    number-sections: false
+    pdf-engine: lualatex
+---
+
+本稿は、Bilbiieの教科書『Heterogeneous Agent Macroeconomics』第4章（THANKモデル）に登場する、貯蓄者（S家計）の対数所得の条件付き分散の導出についての補足である。
+
+## 導出の目的
+
+THANKモデルにおいて、期 $t$ に貯蓄者（S家計）である者が直面する、期 $t+1$ の対数所得の条件付き分散は以下のように与えられる。
+$$
+\text{var}(\ln Y_{t+1}^S \mid \ln Y_t^S) = s(Y_{t+1})(1 - s(Y_{t+1}))(\ln \Gamma_{t+1})^2
+$$
+ここで、$s(Y_{t+1})$ は期 $t+1$ においても引き続き貯蓄者である確率、$1 - s(Y_{t+1})$ は手元消費家計（H家計）へと移行する確率である。また、$\Gamma_{t+1} \equiv Y_{t+1}^S / Y_{t+1}^H$ は2つのタイプの間の所得比率（不平等度）を表す。
+
+## 分散の計算
+
+分散の定義より、条件付き分散 $V[\ln Y_{t+1}^S \mid \ln Y_t^S]$ は、条件付き期待値を用いて次のように表される。
+$$
+V[\ln Y_{t+1}^S \mid \ln Y_t^S] = E[(\ln Y_{t+1}^S)^2 \mid \ln Y_t^S] - \{E[\ln Y_{t+1}^S \mid \ln Y_t^S]\}^2
+$$
+
+$t$ 期に貯蓄者である家計の $t+1$ 期における対数所得の期待値は、状態遷移の確率を用いて以下のようになる。
+$$
+E[\ln Y_{t+1}^S \mid \ln Y_t^S] = s(Y_{t+1}) \ln Y_{t+1}^S + (1 - s(Y_{t+1})) \ln Y_{t+1}^H
+$$
+
+また、対数所得の二乗の期待値は以下のようになる。
+$$
+E[(\ln Y_{t+1}^S)^2 \mid \ln Y_t^S] = s(Y_{t+1}) [\ln Y_{t+1}^S]^2 + (1 - s(Y_{t+1})) [\ln Y_{t+1}^H]^2
+$$
+
+さらに、期待値の二乗を展開すると次式を得る。
+$$
+\begin{aligned}
+\{E[\ln Y_{t+1}^S \mid \ln Y_t^S]\}^2 &= \{ s(Y_{t+1}) \ln Y_{t+1}^S + (1 - s(Y_{t+1})) \ln Y_{t+1}^H \}^2 \\
+&= s(Y_{t+1})^2 [\ln Y_{t+1}^S]^2 + (1 - s(Y_{t+1}))^2 [\ln Y_{t+1}^H]^2 \\
+&\quad + 2s(Y_{t+1})(1 - s(Y_{t+1})) \ln Y_{t+1}^S \ln Y_{t+1}^H
+\end{aligned}
+$$
+
+これらを分散の定義式に代入して整理する。
+$$
+\begin{aligned}
+V[\ln Y_{t+1}^S \mid \ln Y_t^S] &= s(Y_{t+1}) [\ln Y_{t+1}^S]^2 + (1 - s(Y_{t+1})) [\ln Y_{t+1}^H]^2 \\
+&\quad - \Big\{ s(Y_{t+1})^2 [\ln Y_{t+1}^S]^2 + (1 - s(Y_{t+1}))^2 [\ln Y_{t+1}^H]^2 \\
+&\quad\qquad + 2s(Y_{t+1})(1 - s(Y_{t+1})) \ln Y_{t+1}^S \ln Y_{t+1}^H \Big\}
+\end{aligned}
+$$
+
+$[\ln Y_{t+1}^S]^2$ と $[\ln Y_{t+1}^H]^2$ の項でそれぞれまとめると、
+$$
+\begin{aligned}
+V[\ln Y_{t+1}^S \mid \ln Y_t^S] &= \{ s(Y_{t+1}) - s(Y_{t+1})^2 \} [\ln Y_{t+1}^S]^2 + \{ (1 - s(Y_{t+1})) - (1 - s(Y_{t+1}))^2 \} [\ln Y_{t+1}^H]^2 \\
+&\quad - 2s(Y_{t+1})(1 - s(Y_{t+1})) \ln Y_{t+1}^S \ln Y_{t+1}^H \\
+&= s(Y_{t+1})(1 - s(Y_{t+1})) [\ln Y_{t+1}^S]^2 + s(Y_{t+1})(1 - s(Y_{t+1})) [\ln Y_{t+1}^H]^2 \\
+&\quad - 2s(Y_{t+1})(1 - s(Y_{t+1})) \ln Y_{t+1}^S \ln Y_{t+1}^H
+\end{aligned}
+$$
+ここで、$(1 - s(Y_{t+1})) - (1 - s(Y_{t+1}))^2 = (1 - s(Y_{t+1})) \{ 1 - (1 - s(Y_{t+1})) \} = (1 - s(Y_{t+1})) s(Y_{t+1})$ であることを用いた。
+
+共通因数 $s(Y_{t+1})(1 - s(Y_{t+1}))$ でくくると、完全平方式が現れる。
+$$
+\begin{aligned}
+V[\ln Y_{t+1}^S \mid \ln Y_t^S] &= s(Y_{t+1})(1 - s(Y_{t+1})) \left\{ [\ln Y_{t+1}^S]^2 + [\ln Y_{t+1}^H]^2 - 2 \ln Y_{t+1}^S \ln Y_{t+1}^H \right\} \\
+&= s(Y_{t+1})(1 - s(Y_{t+1})) \left( \ln Y_{t+1}^S - \ln Y_{t+1}^H \right)^2 \\
+&= s(Y_{t+1})(1 - s(Y_{t+1})) \left( \ln \frac{Y_{t+1}^S}{Y_{t+1}^H} \right)^2
+\end{aligned}
+$$
+
+最後に、$\Gamma_{t+1} \equiv Y_{t+1}^S / Y_{t+1}^H$ の定義を用いることで、求める分散の式が得られる。
+$$
+V[\ln Y_{t+1}^S \mid \ln Y_t^S] = s(Y_{t+1})(1 - s(Y_{t+1})) (\ln \Gamma_{t+1})^2
+$$
+
+以上により、THANKモデルにおける対数所得の条件付き分散が、現在の状態を維持する確率 $s$ と状態が変化する確率 $1-s$ の積（二項分布の分散の形）と、状態が変化した場合の対数所得の差の二乗（不平等の尺度）の積として解析的に表現できることが示される。
+
+## 分散の所得 $Y$ に対する微分（循環性の確認）
+
+続いて、この分散 $V \equiv \text{var}(\ln Y_{t+1}^S \mid \ln Y_t^S) = s(Y)(1-s(Y))(\ln \Gamma(Y))^2$ が集計所得 $Y$ の変化に対してどのように動くか（リスクの循環性）を確認するため、$Y$ について微分を行う。積の微分法則を用いると、
+$$
+\begin{aligned}
+\frac{dV}{dY} &= \frac{d}{dY}[s(Y)(1-s(Y))] \cdot (\ln \Gamma(Y))^2 + s(Y)(1-s(Y)) \cdot \frac{d}{dY}[(\ln \Gamma(Y))^2] \\
+&= [s'(Y)(1-s(Y)) - s(Y)s'(Y)] (\ln \Gamma(Y))^2 + s(Y)(1-s(Y)) \left[ 2 \ln \Gamma(Y) \frac{\Gamma'(Y)}{\Gamma(Y)} \right] \\
+&= s'(Y)(1-2s(Y)) (\ln \Gamma(Y))^2 + 2s(Y)(1-s(Y)) \ln \Gamma(Y) \frac{\Gamma'(Y)}{\Gamma(Y)}
+\end{aligned}
+$$
+となる。ここで、教科書の表記に合わせるために、全体から $\frac{1-s(Y)}{Y}$ をくくり出す（括弧内には $Y$ を掛け、$(1-s(Y))$ で割る）。
+$$
+\begin{aligned}
+\frac{dV}{dY} &= \frac{1-s(Y)}{Y} \left\{ \frac{Y s'(Y)}{1-s(Y)}(1-2s(Y)) (\ln \Gamma(Y))^2 + \frac{Y \cdot 2s(Y)(1-s(Y))}{1-s(Y)} \ln \Gamma(Y) \frac{\Gamma'(Y)}{\Gamma(Y)} \right\} \\
+&= \frac{1-s(Y)}{Y} \left\{ \frac{-Y s'(Y)}{1-s(Y)}(2s(Y)-1) (\ln \Gamma(Y))^2 + s(Y) \frac{Y \Gamma'(Y)}{\Gamma(Y)} (2 \ln \Gamma(Y)) \right\}
+\end{aligned}
+$$
+$s'(Y)$ を $s_Y$、$\Gamma'(Y)$ を $\Gamma_Y$ と略記し、引数 $(Y)$ を省略すると、
+$$
+\frac{d(\text{var})}{dY} = \frac{1-s}{Y} \left\{ \underbrace{\frac{-s_Y Y}{1-s} (2s-1)(\ln \Gamma)^2}_{\text{純粋なリスク、歪度}} + \underbrace{\frac{\Gamma_Y Y}{\Gamma} s (2\ln\Gamma)}_{\text{不平等}} \right\}
+$$
+となる。
+
+> **注記**: 原著（Bilbiie）の数式（第4章）では、第2項の最後が $\ln(\Gamma)^2$ と表記されている。これは $(2\ln\Gamma)$ すなわち $\ln(\Gamma^2)$ を意図したものであると考えられるが、第1項の $(\ln \Gamma)^2$ と混同しやすい表記となっているため注意が必要である。
+
+## 補足：「純粋なリスク、歪度（skewness）」と呼ばれる理由
+
+上記の微分結果における第1項は「純粋なリスク、歪度（pure risk, skewness）」と名付けられている。これは、確率分布の非対称性（歪度）を表す数学的な項がそのまま現れていることに起因する。
+
+貯蓄者の来期の状態は、「確率 $s$ で貯蓄者を維持（所得 $Y^S$）」、「確率 $1-s$ で手元消費家計へ転落（所得 $Y^H$）」という2値をとる**ベルヌーイ分布**に従う。ベルヌーイ分布の分散は $s(1-s)$ であり、これを確率 $s$ で微分すると $(1-2s)$、すなわち $-(2s-1)$ となる。
+
+一方で、ベルヌーイ分布の「歪度（Skewness：分布の左右非対称性を測る3次の中心モーメント）」の分子は $s(1-s)(1-2s)$ となる。つまり、微分の結果生じた $(2s-1)$ という項は、**分布の歪み具合（非対称性）を決定する中核的な指標**そのものである。
+
+直感的には、分散（不確実性）は状態が五分五分となる $s=0.5$ のときに最大となる。
+
+* もし現状が $s > 0.5$（貯蓄者でいられる可能性が高い＝分布が安全側に歪んでいる）であれば、景気が良くなり $s$ がさらに上昇して1に近づくほど確実性が高まり、リスク（分散）は**減少**する。
+* 第1項に含まれる $(2s-1)$ は、現在の確率 $s$ が0.5からどれだけずれているか（＝分布がどれだけ歪んでいるか）によって、確率 $s$ の変化がリスクを増やすのか減らすのかを決定している。
+
+このように、第2項が所得格差 $\Gamma$ の変化による影響（inequality）を捉えているのに対し、第1項は所得格差を一定とした場合の「身分が移行する確率 $s$ そのもの（確率分布の偏り）の変化による純粋な不確実性の変化」を捉えているため、「純粋なリスク、歪度」と呼ばれている。

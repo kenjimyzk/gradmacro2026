@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>textbook-ch4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch4_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch4_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch4_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch4_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch4_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch4_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="heterogeneous-agent-macroeconomics" class="level2">
+<h2 class="anchored" data-anchor-id="heterogeneous-agent-macroeconomics">Heterogeneous Agent Macroeconomics</h2>
+</section>
+<section id="a-tractable-new-keynesian-framework" class="level2">
+<h2 class="anchored" data-anchor-id="a-tractable-new-keynesian-framework">A Tractable New Keynesian Framework</h2>
+<p>Florin O. Bilbiie</p>
+<p>University of Cambridge &amp; CEPR</p>
+<p>Forthcoming, MIT Press</p>
+<p>First version 2019, this version November 2025</p>
+<section id="chapter-41" class="level4">
+<h4 class="anchored" data-anchor-id="chapter-41">Chapter 4<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h4>
+<p>Preliminary and Incomplete. Comments Requested</p>
+<p>© Florin O. Bilbiie 2019</p>
+</section>
+</section>
+<section id="chapter-4-risk-and-precautionary-saving-thank-a-tractable-heterogeneous-agent-new-keynesian-model" class="level1">
+<h1>Chapter 4: Risk and Precautionary Saving: THANK, A Tractable Heterogeneous-Agent New Keynesian Model</h1>
+<p>The TANK model introduced in the previous chapter allows us to replicate a number of the key features of richer HANK models. However, by construction, the model does not feature idiosyncratic risk or self-insurance. In this chapter, we will introduce a Tractable Heterogeneous Agent New Keynesian (THANK) model—a simple two-state, two-asset model—which extends TANK and can capture this channel and quantify its importance. We will then use the model to conduct a full New Keynesian analysis, covering determinacy, the forward guidance puzzle, and the amplification or dampening of shocks.</p>
+</section>
+<section id="ingredients-of-the-two-state-two-asset-thank-model" class="level1">
+<h1>Ingredients of the Two-State, Two-Asset THANK Model</h1>
+<p>As in TANK, the THANK model features two states. Households are either hand-to-mouth (H) or savers (S). The model introduces idiosyncratic uncertainty in a tractable form by allowing households to switch between states following an exogenous Markov transition matrix given by: <span class="math display">\[
+\begin{pmatrix} h &amp; 1-h \\ 1-s &amp; s \end{pmatrix}.
+\]</span></p>
+<p>A hand-to-mouth household remains hand-to-mouth in the next period with probability h, and becomes a saver with probability 1 − h. A saver becomes hand-to-mouth next period with probability 1 − s, and remains a saver with probability s. We will assume that the economy has arrived at a stationary distribution such that the unconditional probability of being hand-to-mouth is equal to: <span class="math display">\[
+\lambda = \frac{1-s}{2-s-h}.
+\]</span></p>
+<p>To keep the model tractable, we adopt the exact same combination of assumptions used in Bilbiie, which follows within the seminal monetary-theory tradition of Lucas (1990) and Shi (1997).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The households have full insurance within type. However, they have access to only limited insurance across types. Households of different types can be thought of as populating different ‘islands’. At the beginning of each period, the family head—maximizing a utilitarian equally-weighted intertemporal welfare of all households facing limits to risk sharing—pools the resources on the island and makes the optimal consumption-savings choice for the households. After the portfolios have been chosen, the idiosyncratic uncertainty is realised, and the households move between islands.</p>
+<p>There are two assets in the economy. Firstly, households can save in one-period bonds. These bonds are liquid in the sense that households can take bonds with them when they move across islands. Hence, bonds can be used to self-insure against idiosyncratic risk. Conversely, the shares in monopolistic firms are held only by S households. They are illiquid and cannot be used to self-insure.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> We will initially consider a zero-liquidity model in which bonds are priced but not traded. Nevertheless, the presence of bonds will still be essential in the model to capture the precautionary saving motive of the households.</p>
+<p>The bond flows across islands can be summarised by the following equations, where <span class="math inline">\(B^j_{t+1}\)</span> denotes the bonds held on island <span class="math inline">\(j\)</span> at the beginning of period <span class="math inline">\(t + 1\)</span> after the uncertainty is realised, and <span class="math inline">\(Z^j_{t+1}\)</span> denotes the bonds chosen by households on island <span class="math inline">\(j\)</span> at the end of period <span class="math inline">\(t\)</span> before the uncertainty is realised: <span class="math display">\[\begin{aligned}\underbrace{(1-\lambda)B^S_{t+1}}_{\text{Bonds on island S}} &amp;= \underbrace{s(1-\lambda)Z^S_{t+1}}_{\text{Bonds chosen by S who remain S}} + \underbrace{(1-h)\lambda Z^H_{t+1}}_{\text{Bonds chosen by H who become S}}\\
+\underbrace{\lambda B^H_{t+1}}_{\text{Bonds on island H}} &amp;= \underbrace{h\lambda Z^H_{t+1}}_{\text{Bonds chosen by H who remain H}} + \underbrace{(1-s)(1-\lambda)Z^S_{t+1}}_{\text{Bonds chosen by S who become H}}
+\end{aligned}\]</span> Rescaling and using the definition of <span class="math inline">\(\lambda\)</span> yields: <span class="math display">\[\begin{aligned}
+B_{t+1}^{S} &amp;= sZ_{t+1}^{S} + (1-s)\lambda Z_{t+1}^{H}\\
+B_{t+1}^{H} &amp;= hZ_{t+1}^{H} + (1-h)Z_{t+1}^{S}.
+\end{aligned}\]</span></p>
+<section id="family-head-optimisation" class="level3">
+<h3 class="anchored" data-anchor-id="family-head-optimisation">Family (Head) Optimisation</h3>
+<p>When resources are pooled within types, the problem of the family head is to choose consumption and savings to maximise utility subject to the budget constraints, the laws of motion for bonds derived above, and the no-borrowing condition.</p>
+<p><span class="math display">\[\begin{aligned}
+W(B_t^S, B_t^H, \Theta_t) &amp;= \max_{C_t^S, Z_{t+1}^S, \Theta_{t+1}, C_t^H, Z_{t+1}^H} (1 - \lambda) U(C_t^S) + \lambda U(C_t^H) + \beta E_t W(B_{t+1}^S, B_{t+1}^H, \Theta_{t+1}) \\
+\text{subject to:}\\
+C_t^S + Z_{t+1}^S + v_t \Theta_{t+1} &amp;= Y_t^S + R_t B_t^S + \Theta_t (v_t + D_t) \\
+C_t^H + Z_{t+1}^H &amp;= Y_t^H + R_t B_t^H \\
+B_{t+1}^S &amp;= s Z_{t+1}^S + (1 - s) \lambda Z_{t+1}^H \\
+B_{t+1}^H &amp;= h Z_{t+1}^H + (1 - h) Z_{t+1}^S \\
+Z_{t+1}^S, Z_{t+1}^H &amp;\geq 0.
+\end{aligned}\]</span></p>
+<p>The first-order conditions of the maximisation resemble those of the standard Bewley-Aiyagari-Huggett class of heterogeneous agent models. The Kuhn-Tucker conditions for the choice of illiquid shares are: <span class="math display">\[U'(C_t^S) \ge \beta E_t \left\{ \frac{v_{t+1} + D_{t+1}}{v_t} U'(C_{t+1}^S) \right\}\]</span> and <span class="math inline">\(\Theta_{t+1} = \Theta_t = (1 - \lambda)^{-1}\)</span>.</p>
+<p>The Kuhn-Tucker conditions for the S and H saving decisions are: <span class="math display">\[\begin{aligned}
+U'(C_{t}^{S}) &amp;\geq \beta E_{t} \left\{ R_{t+1}[sU'(C_{t+1}^{S}) + (1-s)U'(C_{t+1}^{H})] \right\}\\
+\mathrm{and}\quad 0 &amp;= Z_{t+1}^{S}\left[U'(C_{t}^{S}) - \beta E_{t} \left\{ R_{t+1}[sU'(C_{t+1}^{S}) + (1-s)U'(C_{t+1}^{H})] \right\}\right]\\
+U'(C_{t}^{H}) &amp;\geq \beta E_{t} \left\{ R_{t+1}[(1-h)U'(C_{t+1}^{S}) + hU'(C_{t+1}^{H})] \right\}\\
+\mathrm{and}\quad 0 &amp;= Z_{t+1}^{H}\left[U'(C_{t}^{S}) - \beta E_{t} \left\{ R_{t+1}[(1-h)U'(C_{t+1}^{S}) + hU'(C_{t+1}^{H})] \right\}\right].
+\end{aligned}\]</span></p>
+<p>We will focus on equilibria in which H households choose not to save in bonds (<span class="math inline">\(Z^H_{t+1} = 0\)</span>) such that the first-order condition for H holds with strict inequality. This could be due, for example, due to a negative shock to <span class="math inline">\(\beta\)</span> for the H households such that they value the future sufficiently little to justify zero savings. As a result, H households have a unit MPC out of their income, and the bonds are priced by S households according to the self-insurance Euler equation: <span class="math display">\[(C_t^S)^{-\frac{1}{\sigma}} = \beta E_t \left\{ (1+r_t) \left[ s(C_{t+1}^S)^{-\frac{1}{\sigma}} + (1-s)(C_{t+1}^H)^{-\frac{1}{\sigma}} \right] \right\}.\]</span> The probability (<span class="math inline">\(1 − s\)</span>) represents the idiosyncratic income risk facing the savers. Hence, they wish to save not only for intertemporal substitution but to smooth consumption over different states. This additional motive is the precautionary saving motive. This is not present in the TANK model, where households do not face idiosyncratic risk (<span class="math inline">\(s = 1\)</span>).</p>
+</section>
+</section>
+<section id="income-inequality-and-risk-cyclicality4" class="level1">
+<h1>Income Inequality and Risk: Cyclicality<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></h1>
+<p>An important part of the THANK model is the distinction between income inequality and income risk. Income inequality can be defined as the ratio of the incomes of the two types of households: <span class="math display">\[\Gamma_t(Y_t) \equiv \frac{Y_t^S}{Y_t^H},\]</span> a concept closely related to inequality measures such as the Gini coefficient or generalised entropy.</p>
+<p>Income risk in the model stems from the risk of becoming hand-to-mouth, given by the probability <span class="math inline">\(1−s\)</span>. To introduce cyclical income risk, we can allow this probability to vary with future aggregate income: <span class="math display">\[1 - s(Y_{t+1}).\]</span> Defining the derivative of <span class="math inline">\(s(Y_{t+1})\)</span> as <span class="math inline">\(s^Y\)</span>, the derivative of <span class="math inline">\(1 − s(Y_{t+1})\)</span> with respect to output is given by <span class="math inline">\(−s^Y\)</span>. Therefore, when <span class="math inline">\(s^Y &gt; 0\)</span>, risk is countercyclical as the probability of becoming hand-to-mouth falls when aggregate income rises. When <span class="math inline">\(s^Y &lt; 0\)</span>, risk is procyclical.</p>
+<p>The THANK model gives a simple analytical expression for the conditional variance of income, which is often used as a measure of income risk in the literature. Conditional on being a saver today, the variance of log income is given by: <span class="math display">\[\text{var}(\ln Y_{t+1}^S | \ln Y_t^S) = s(Y_{t+1})(1 - s(Y_{t+1}))(\ln \Gamma_{t+1})^2.\]</span></p>
+<p>The cyclicality of this object can be found by taking the derivative with respect to output: <span class="math display">\[\frac{d(\text{var})}{dY} = \frac{1-s}{Y} \left\{ \underbrace{\frac{-s_Y}{1-s} (2s-1)(\ln \Gamma)^2}_{\text{pure risk, skewness}} + \underbrace{\frac{\Gamma_Y Y}{\Gamma} s \ln(\Gamma)^2}_{\text{inequality}} \right\}.\]</span></p>
+<p>As shown above, the cyclicality of income risk can be separated into two components. The first term is the component which stems from pure risk, or the skewness of the distribution. When <span class="math inline">\(s &gt; \frac{1}{2}\)</span>, the risk of becoming hand-to-mouth is in the left tail - there is negative skewness. If <span class="math inline">\(s^Y &gt; 0\)</span>, then the probability of becoming hand-to-mouth falls during an expansion and rises during a recession. This would lead to a negative first component, indicating that pure risk is countercyclical. The second term relates to the cyclicality of income inequality (which is captured by <span class="math inline">\(\chi − 1\)</span>). When <span class="math inline">\(\Gamma^Y &lt; 0\)</span>, income inequality is countercyclical. This leads to income risk becoming more countercyclical and the income of hand-to-mouth consumers moves more than one-for-one with aggregate income in recessions and expansions.</p>
+<p>It is important to note a few key properties of the cyclicality of income risk. Firstly, when <span class="math inline">\(s = 1\)</span>, there is no income risk. This is the case in the TANK model, where households cannot move between states. There is also no income risk when <span class="math inline">\(s = 0\)</span>. Here, households simply oscillate between states, leading to a stationary mass <span class="math inline">\(\lambda = \frac{1}{2}\)</span>. When <span class="math inline">\(\Gamma = 1\)</span>, there is no inequality in the level of income, and income risk is acyclical up to a first-order approximation. When inequality is acyclical <span class="math inline">\(\Gamma^Y = 1\)</span>, the second channel will not operate and income risk cyclicality will be driven entirely by the pure risk component. Conversely, when <span class="math inline">\(s^Y = 0\)</span>, the pure risk component will not operate and income risk cyclicality will be determined by the inequality channel.</p>
+<section id="aggregate-demand-in-thank" class="level3">
+<h3 class="anchored" data-anchor-id="aggregate-demand-in-thank">Aggregate Demand in THANK</h3>
+<p>The remainder of the THANK model is the same as in the TANK model studied in the previous chapter. Taking the model with zero liquidity and constant transition probabilities (<span class="math inline">\(s^Y = 0\)</span>) and loglinearising around the steady state with zero profits yields the same equations for the consumption of each household type: <span class="math display">\[\begin{aligned} c_t^H &amp;= \chi y_t\\
+c_t^S &amp;= \frac{1 - \lambda \chi}{1 - \lambda} y_t. \end{aligned}\]</span> Loglinearising the self-insurance Euler equation yields: <span class="math display">\[c_t^S = sE_t c_{t+1}^S + (1-s)E_t c_{t+1}^H - \sigma r_t.\]</span> Substituting <span class="math inline">\(c^S_t\)</span> and <span class="math inline">\(c^H_t\)</span> into the self-insurance Euler gives the aggregate Euler equation for the THANK model: <span class="math display">\[c_{t} = \underbrace{\left[1 + (\chi - 1)\frac{1 - s}{1 - \lambda \chi}\right]}_{\equiv \delta} E_{t} c_{t+1} - \sigma \underbrace{\frac{1 - \lambda}{1 - \lambda \chi}}_{\text{TANK}} r_{t}.\]</span></p>
+<p>Firstly, notice that the coefficient on the real interest rate is identical to that in the aggregate Euler equation of the TANK model. As in TANK, the THANK model amplifies the contemporaneous consumption response to changes in the real interest rate relative to RANK if and only if income inequality is countercyclical (<span class="math inline">\(\chi &gt; 1\)</span>). The unique contribution of the THANK model is the coefficient on expected future consumption, <span class="math inline">\(\delta\)</span>. Both TANK and RANK have a unit coefficient on expected future consumption, which shows that aggregate consumption rises one-for-one with expected future increases in consumption. In the THANK model, <span class="math inline">\(\delta\)</span> may be greater than or less than one. Therefore, THANK can generate either compounding or discounting relative to TANK.</p>
+<p>When <span class="math inline">\(\chi &gt; 1\)</span>, we also have that <span class="math inline">\(\delta &gt; 1\)</span>. When households expect future aggregate consumption to rise, households recognise that they face the risk of being constrained in the future. However, as income inequality is countercyclical, the income of the hand-to-mouth households will rise even more than aggregate income. This reduces the precautionary saving motive for households today, and causes them to respond to the news by increasing consumption by more than the expected future increase. Hence, the THANK model generates compounding relative to TANK if and only if <span class="math inline">\(\chi &gt; 1\)</span>.</p>
+<p>When <span class="math inline">\(\chi &lt; 1\)</span>, we have <span class="math inline">\(\delta &lt; 1\)</span>. In this case, households know that hand-to-mouth households will see their income rise by less than the increase in aggregate income in the future. This incentivises precautionary saving, and households increase their current consumption by less than the expected future increase to insure themselves against the possibility of becoming hand-to-mouth. Therefore, the THANK model generates discounting if and only if <span class="math inline">\(\chi &lt; 1\)</span>.</p>
+<p>The compounding or discounting of the effect of news shocks is not necessarily a product of cyclical risk. In the model discussed above, zero liquidity and zero steady state profits ensure that there is no steady state income inequality <span class="math inline">\(\Gamma = 1\)</span>. This means that income risk is acyclical up to a first-order approximation.</p>
+<p>A particularly useful benchmark that I refer to as oscillating THANK abstracts from risk and focuses on inequality only. There is deterministic switching every period, so there is no risk; but agents oscillate between the two states, across which income inequality is still cyclical. This is nested in my model when <span class="math inline">\(s = h = 0\)</span> with agents alternating states and <span class="math inline">\(\lambda = \frac{1}{2}\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Even in this no-risk model with <span class="math inline">\(s = 0\)</span> and oscillating household states <span class="math inline">\(\delta\)</span> can still differ from one. When <span class="math inline">\(s = 0\)</span> and <span class="math inline">\(\lambda = \frac{1}{2}\)</span>, the aggregate Euler equation is given by: <span class="math display">\[c_t = \frac{\chi}{2 - \chi} E_t c_{t+1} - \sigma \frac{1}{2 - \chi} r_t.\]</span> This means that: <span class="math display">\[\delta|_{s=0} = \frac{\chi}{2-\chi}.\]</span> Even in this case without income risk, the THANK model still generates compounding of news shocks when <span class="math inline">\(\chi &gt; 1\)</span> and discounting when <span class="math inline">\(\chi &lt; 1\)</span>. Risk is not necessary for Euler discounting/compounding: cyclical inequality is sufficient, combined with a self-insurance, liquidity motive.</p>
+<p>We can also derive the New Keynesian cross representation of the THANK model. The Planned Expenditure curve can be expressed as: <span class="math display">\[c_t = [1 - \beta(1 - \lambda \chi)]y_t - (1 - \lambda)\beta\sigma r_t + \beta\delta(1 - \lambda \chi)E_t c_{t+1}.\]</span> The PE curve is identical to the TANK case with the exception of the inclusion of the <span class="math inline">\(\delta\)</span>. The static portion of the PE curve is the same, showing that the THANK model works like TANK for contemporaneous shocks. The THANK model generates amplification or dampening of news shocks due to the precautionary savings motive. Therefore, it is the coefficient on future consumption which changes.</p>
+<p>For an interest rate shock with persistence <span class="math inline">\(p\)</span>, we can compare the total effect and the indirect share across the two models.</p>
+<div id="tbl-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Multiplier in TANK and THANK.
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Total Effect <span class="math inline">\(\Omega\)</span></th>
+<th>Indirect-Effect Share <span class="math inline">\(\omega\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TANK</td>
+<td><span class="math inline">\(\sigma \frac{1-\lambda}{1-\lambda\chi} \frac{1}{1-p}\)</span></td>
+<td><span class="math inline">\(\frac{1-\beta(1-\lambda\chi)}{1-\beta p(1-\lambda\chi)}\)</span></td>
+</tr>
+<tr class="even">
+<td>THANK</td>
+<td><span class="math inline">\(\sigma \frac{1-\lambda}{1-\lambda\chi} \frac{1}{1-\delta p}\)</span></td>
+<td><span class="math inline">\(\frac{1-\beta(1-\lambda\chi)}{1-\beta\delta p(1-\lambda\chi)}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>In <a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a>, we can see that the multipliers and indirect-effect shares are the same across TANK and THANK if the shock is not persistent. This is because THANK generates compounding/discounting in the intertemporal dimension due to the inclusion of idiosyncratic uncertainty and a self-insurance motive. The parameter <span class="math inline">\(\delta\)</span> operates in the same way as the persistence parameter <span class="math inline">\(p\)</span>. When <span class="math inline">\(\delta &gt; 1\)</span>, households act as if the shock is more persistent. They face a weaker precautionary savings motive and increase consumption further as they realise that hand-to-mouth households will see their incomes rise by more than aggregate income in the future.</p>
+<p>Compared to RANK, THANK with <span class="math inline">\(\chi, \delta &gt; 1\)</span> provides amplification in two ways. Firstly, as in TANK, countercyclical income inequality leads to amplification of contemporaneous shocks. Secondly, the inclusion of idiosyncratic risk and precautionary savings leads to a compounding of the effects of persistent or future shocks.</p>
+</section>
+<section id="approximating-hank" class="level3">
+<h3 class="anchored" data-anchor-id="approximating-hank">Approximating HANK</h3>
+<div id="tbl-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Approximating HANK models.
+</figcaption>
+<div aria-describedby="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 6%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 12%">
+<col style="width: 3%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>HANK: Equilibrium objects</th>
+<th></th>
+<th></th>
+<th></th>
+<th>Implied Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td><span class="math inline">\(\frac{\Omega}{\Omega^*}\)</span></td>
+<td><span class="math inline">\(\omega\)</span></td>
+<td><span class="math inline">\(\frac{\Omega_1^F}{\Omega^*}\)</span></td>
+<td><span class="math inline">\(\frac{\Omega_{20}^F}{\Omega^*}\)</span></td>
+<td><span class="math inline">\(\chi\)</span></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(1-s\)</span></td>
+</tr>
+<tr class="even">
+<td>Kaplan et al.&nbsp;(2018)</td>
+<td>1.5</td>
+<td>0.8</td>
+<td></td>
+<td>-</td>
+<td>1.48</td>
+<td>0.41</td>
+<td>0 (TANK)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.48</td>
+<td>0.37</td>
+<td>0.04</td>
+</tr>
+<tr class="even">
+<td>McKay et al.&nbsp;(2016)</td>
+<td>-</td>
+<td>-</td>
+<td>0.8</td>
+<td>0.4</td>
+<td>-</td>
+<td>-</td>
+<td>0 (TANK)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.3</td>
+<td>0.21</td>
+<td>0.04</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>As shown in <a href="#tbl-2" class="quarto-xref">Table&nbsp;2</a>, the simple TANK and THANK models discussed here can be parameterised to match some of the key equilibrium objects in the quantitative HANK models such as those developed by Kaplan et al.&nbsp;(2018) and McKay et al.&nbsp;(2016). Above, <span class="math inline">\(\Omega_1^F\)</span> denotes the multiplier for an announced interest rate cut one period in the future, and <span class="math inline">\(\Omega_{20}^F\)</span> denotes the multiplier for an announced interest rate cut twenty periods in the future. The term <span class="math inline">\(\Omega^*\)</span> is the multiplier in the RANK model.</p>
+<section id="a-different-cyclical-risk-channel" class="level4">
+<h4 class="anchored" data-anchor-id="a-different-cyclical-risk-channel">A Different Cyclical-Risk Channel</h4>
+<p>To capture cyclical risk, we can amend the baseline THANK model in two ways. Firstly, allow the probability of becoming hand-to-mouth to vary with aggregate output, <span class="math inline">\(1 - s(Y_{t+1})\)</span>. Secondly, loglinearise the model around a steady state with income inequality, <span class="math inline">\(\Gamma &gt; 1\)</span>. This yields a modified aggregate Euler equation: <span class="math display">\[c_t = (\tilde{\delta} + \eta) E_t c_{t+1} - \sigma \frac{1 - \lambda}{1 - \lambda \chi} r_t\]</span> where <span class="math inline">\(\eta \equiv \frac{s_Y Y}{1 - s} (1 - \Gamma^{-\frac{1}{\sigma}}) (1 - \tilde{s}) \sigma \frac{1 - \lambda}{1 - \lambda \chi}\)</span>, <span class="math display">\[\tilde{\delta} \equiv 1 + \frac{(\chi - 1)(1 - \tilde{s})}{1 - \lambda \chi} = \delta + (\Gamma^{\frac{1}{\sigma}} - 1)(\delta - 1)\tilde{s}\]</span> and <span class="math inline">\(1 - \tilde{s} = \frac{(1 - s)\Gamma^{\frac{1}{\sigma}}}{s + (1 - s)\Gamma^{\frac{1}{\sigma}}}\)</span>. This equation is the same as the standard THANK aggregate Euler equation but with a different coefficient on expected future aggregate consumption. The above demonstrates that adding cyclical income risk generates two additional effects.</p>
+<p>Firstly, when <span class="math inline">\(\delta &gt; 1\)</span>, the steady state inequality in levels generates an additional source of compounding (<span class="math inline">\(\tilde{\delta} &gt; \delta\)</span>). Secondly, <span class="math inline">\(\eta\)</span> captures the effect of pure cyclical income risk. The crucial component of this term is the elasticity <span class="math display">\[\frac{s_Y Y}{1-s}\]</span> which captures the cyclicality of the skewness. When <span class="math inline">\(s_Y &gt; 0\)</span>, risk is countercyclical and <span class="math inline">\(\eta &gt; 0\)</span>. This leads to greater Euler equation compounding. As risk is countercyclical, an expected rise in output reduces the probability of becoming hand-to-mouth in future. This weakens the precautionary savings motive and leads to a greater increase in present consumption. Conversely, when <span class="math inline">\(s^Y &lt; 0\)</span>, risk is procyclical and <span class="math inline">\(\eta &lt; 0\)</span>. The precautionary saving motive is increased as a future expansion will lead to a rise in the probability of becoming hand-to-mouth. This leads to greater Euler equation discounting.</p>
+<p>Importantly, the pure risk channel operates only when there is steady state inequality in levels. For cyclical risk to matter for compounding/discounting, it must represent the risk of moving to a state with a lower long-run level of income. In addition, while the cyclical inequality channel requires <span class="math inline">\(\chi\)</span> to differ from one, the cyclical risk channel is operational even in the Campbell-Mankiw benchmark.</p>
+<p>Both <span class="math inline">\(\delta\)</span> and <span class="math inline">\(\eta\)</span> represent the effects of a precautionary savings motive, but they do so in different ways. <span class="math inline">\(\eta\)</span> is proportional to the third-derivative of the utility function, <span class="math inline">\(\sigma\)</span>. Therefore, it generates precautionary saving due to the consumer’s prudence in the face of uncertainty, which leads a concave consumption function. The term <span class="math inline">\(\delta\)</span> generates precautionary savings due to the kink in the consumption function which is caused by the constraints faced by the hand-to-mouth consumer. Even without prudence, this kink causes the consumption function to be concave and creates a precautionary saving motive.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>The <span class="math inline">\(\eta\)</span> in the THANK model has similar implications to the Pseudo-RANK developed by Acharya and Dogra (2020). An important difference is that Acharya and Dogra (2020) abstract from skewness and consider shocks drawn from a symmetric normal distribution. Therefore, their model features cyclical variance. However, the <span class="math inline">\(\eta\)</span> in the TANK model here is a product of cyclical skewness.</p>
+</section>
+</section>
+</section>
+<section id="the-aggregate-euler-equation-of-thank-inequality-and-risk" class="level1">
+<h1>The Aggregate Euler Equation of THANK: Inequality and Risk</h1>
+<p>The aggregate Euler equation for the THANK model can be decomposed in order to clearly show the contributions of the TANK and THANK models relative to RANK.</p>
+<p>There are two such ways of writing a decomposition that are useful in different ways. First, expressing each extra “wedge” as a function of an aggregate endogenous variable in a way that maps into the respective special case of the general model. <span id="eq-1"><span class="math display">\[
+c_{t} = \underbrace{E_{t}c_{t+1} - \sigma r_{t}}_{\text{RANK}} - \underbrace{\sigma \frac{\lambda(\chi - 1)}{1 - \lambda \chi} r_{t}}_{\text{cycl ineq TANK}} + \underbrace{(\delta - 1)E_{t}c_{t+1}}_{\text{cycl ineq + risk THANK}} + \underbrace{\eta E_{t}c_{t+1}}_{\text{cycl risk THANK}}.
+\tag{1}\]</span></span></p>
+<p>The TANK model with cyclical inequality generates amplification of contemporaneous shocks through the static NK cross emphasized at length before. By construction, it cannot capture precautionary saving as households do not face idiosyncratic risk.</p>
+<p>In the THANK model, shocks to future consumption are amplified or dampened through precautionary savings due to cyclical inequality and pure cyclical risk. This is the intertemporal heterogeneity between current savers who become hand-to-mouth, and the savers who remain savers.</p>
+<p>An important point to note (and a common misconception about the model), is that the wedges in the aggregate Euler equation are not constant. The elasticities of present consumption with respect to endogenous variables are constant, but the wedges themselves are not. This is because the wedges are linear functions of endogenous variables.</p>
+<p>Another way of rewriting the aggregate Euler illustrates the same decomposition, but illustrates most clearly the difference between inequality and risk—and serves as the THANK model’s “master equation” conceptual equivalent, an analogy we elaborate on below. Denoting again consumption inequality between the savers and the hand-to-mouth by <span class="math inline">\(\gamma_t = c^S_t - c^H_t\)</span> and by <span class="math inline">\(\tilde{\lambda} = \lambda C^H / C\)</span> the consumption share of the H group, we can rewrite the same aggregate Euler equation as: <span id="eq-2"><span class="math display">\[
+c_{t} = E_{t}c_{t+1} - \sigma r_{t} - \underbrace{\tilde{\lambda}\left(\gamma_{t} - E_{t}\gamma_{t+1}\right)}_{\text{cycl ineq TANK}} - \underbrace{\left(1 - s\right)E_{t}\gamma_{t+1}}_{\text{risk+cycl. ineq.}} + \underbrace{\left(\Gamma - 1\right)s'(Y)E_{t}y_{t+1}}_{\text{ineq.+cycl. risk}}
+\tag{2}\]</span></span></p>
+<p>The first wedge <span class="math inline">\(\tilde{\lambda} (\gamma_t - E_t\gamma_{t+1})\)</span> is, again, the cyclical-inequality channel—the only one operating in TANK.</p>
+<p>The second wedge captures self-insurance, precautionary saving that is due to the combination of cyclicality of (expected) cyclical inequality and the level of risk <span class="math inline">\(1 − s\)</span>, through the mechanism we explained above. This is the only intertemporal wedge operating when approximating the model around a symmetric steady state <span class="math inline">\(\Gamma = 1\)</span>, or when transition probabilities are constant, <span class="math inline">\(s'(Y) = 0\)</span> (this is the benchmark case considered in Bilbiie (2020)).</p>
+<p>The third wedge is essentially the opposite: it isolates precautionary saving that is due to the combination of cyclicality of pure risk (via transition probabilities, generating cyclical skewness) and the level of inequality. The larger the average drop in consumption faced when moving to the bad state, and the larger the sensitivity of the probability to get to the bad state, the stronger this channel. This channel, the formalization of which was introduced in Bilbiie (2024), captures a variety of channels in the literature through which cyclical risk (e.g.&nbsp;but not only unemployment) can shape aggregate outcomes—see the literature discussion. By opposition with the previous channel, this is the only channel operating even in the limit when inequality is acyclical, i.e.&nbsp;when agents are consumption-insured, implicitly or explicitly, over the cycle (<span class="math inline">\(d\gamma_t/dc_t = 0\)</span>) but not on average <span class="math inline">\(\Gamma \neq 1\)</span>. This is the case, for instance, in the limit where the “TANK heterogeneity” becomes irrelevant <span class="math inline">\(\chi = 1\)</span>, as discussed in Bilbiie (2008) either because labor is perfectly elastic (linear labor disutility <span class="math inline">\(\varphi = 0\)</span>) or profits are uniformly redistributed <span class="math inline">\(\tau^D = \lambda\)</span> or there is perfect cyclical fiscal redistribution by some other means. In any of those cases, the first two wedges collapse to zero and only the third generates deviations relative to RANK; this simple special case may be of independent interest to some researchers.</p>
+<p>Empirical evidence purported to gauge whether these wedges are operative in the data is still in progress. Two different measurement exercises using US data seem to suggest that at least the first two wedges are of limited importance for shaping aggregates: Berger et al.&nbsp;(2023) conclude this based on wedge accounting that measures risk sharing, while Bilbiie et al.&nbsp;(2022) draw a similar conclusion regarding the first two wedges only, based on the estimation of a quantitative DSGE version of the THANK model. They do, however, conclude that the third wedge leads to significant amplification of business cycles (the standard deviation of GDP would be 30% lower in an economy where this wedge was insured away) and relate this to the procyclicality of skewness documented by Guvenen et al.&nbsp;(2014). Evidence using granular data on consumption, gross and net income, and wealth from Norway for the universe of households also suggests that amplification through the “cyclical-inequality” channel—be it through the static NK cross (first wedge) or the precautionary-saving channel attached to the second wedge—is at best modest: this is the core finding in Bilbiie et al.&nbsp;(2025); the verdict, from that same data, for the third wedge and for the separate amplification channels described in the next two chapters is still out.</p>
+<section id="detour-the-master-equation-analogy-in-thank" class="level4">
+<h4 class="anchored" data-anchor-id="detour-the-master-equation-analogy-in-thank">Detour: The “Master Equation” Analogy in THANK</h4>
+<p>Although the THANK model is far simpler than full mean-field-game (MFG) HANK formulations, the aggregate Euler equation derived in this chapter plays a role closely analogous to the master equation in MFGs. The comparison is conceptual rather than technical, but it is helpful for understanding the structure of THANK.</p>
+<p>Recall what a master equation is in mean-field games (Lasry–Lions; Huang–Malhamé–Caines): a high-dimensional partial differential equation that links individual value functions to the evolution of the cross-sectional distribution of states. It encodes how the distribution influences optimal individual behavior and how individual behavior feeds back into the distribution. Solving it yields a consistent mapping from today’s distribution to tomorrow’s equilibrium distribution.</p>
+<p>The THANK aggregate Euler equation as a conceptual analog:</p>
+<ul>
+<li>collapses the effects of heterogeneity, inequality, and risk into a single, finite-dimensional equilibrium condition;</li>
+<li>embeds distributional dynamics via wedges that depend on expectations of inequality and risk;</li>
+<li>yields a closed-form relationship between today’s aggregate state and tomorrow’s expectations;</li>
+<li>and governs the full macroeconomic response to shocks in the presence of heterogeneity.</li>
+</ul>
+<p>In that sense, it performs the same conceptual task as the master equation in MFGs: it is the aggregator that carries micro heterogeneity into macro dynamics.</p>
+<p>But the analogy is conceptual, not literal. Unlike the PDE-based master equation:</p>
+<ul>
+<li>the THANK aggregate Euler equation is finite-dimensional,</li>
+<li>analytically solvable,</li>
+<li>and does not involve functional derivatives with respect to distributions.</li>
+</ul>
+<p>Thus, while THANK does not involve a literal master equation, the analogy captures its essential role: a simple, transparent equilibrium object that aggregates the consequences of heterogeneity for the macroeconomy.</p>
+</section>
+</section>
+<section id="why-and-how-thank-avoids-the-infinite-dimensional-fixed-point-problem-of-full-hank" class="level1">
+<h1>Why and How THANK Avoids the Infinite-Dimensional Fixed-Point Problem of Full HANK</h1>
+<p>One of the main challenges in heterogeneous-agent macroeconomics is that full HANK models typically require solving an infinite-dimensional fixed point: the law of motion for the cross-sectional distribution of agents must be consistent with agents’ optimal decisions, which themselves depend on the distribution. Computationally, this requires solving a high-dimensional dynamic programming problem; iterating on the distribution until convergence; approximating the stationary distribution numerically (e.g., with histograms or polynomial chaos).</p>
+<p>This “curse of dimensionality” is the main reason full HANK models are slow, heavy, and most often opaque. THANK avoids this entirely and achieves analytical tractability by:</p>
+<ul>
+<li>Collapsing the distribution into a small number of sufficient statistics – mainly consumption inequality in the ergodic distribution <span class="math inline">\(\Gamma\)</span> and to first order around it <span class="math inline">\(\gamma_t\)</span>, the hand-to-mouth share (probability in the ergodic distribution) <span class="math inline">\(\lambda\)</span> and the transition structure governing risk, both the conditional probability level <span class="math inline">\(s\)</span> and its cyclicality to first order <span class="math inline">\(s'(Y)\)</span>.</li>
+<li>Linearizing the distribution around a well-defined two-type structure, rather than tracking a full continuum of wealth states.</li>
+<li>Embedding all distributional dynamics directly into the aggregate Euler equation, via wedges associated with cyclical inequality and cyclical risk.</li>
+<li>Ensuring a closed-form law of motion for the sufficient statistics—no numerical distribution iteration is required.</li>
+</ul>
+<p>As a result, THANK inherits the key mechanisms of HANK: MPC heterogeneity, precautionary behavior, cyclical-inequality and risk-sensitive amplification without the computational burden or opacity of a full-blown HANK model.</p>
+<p>The outcome is the THANK “master equation”; Because all macro-relevant heterogeneity is already encoded in the aggregate Euler equation, THANK reduces the equilibrium to a small system of linear expectational equations. This is what makes the THANK aggregate Euler equation the analytical backbone of the model and the reason why it can be interpreted as the model’s conceptual (if not stricto sensu) master equation.</p>
+</section>
+<section id="the-three-equation-thank-model" class="level1">
+<h1>The Three-Equation THANK Model</h1>
+<p>We can combine the aggregate Euler equation with a simple static Phillips curve and a Taylor rule to arrive at a three-equation representation of the THANK model. As in the standard RANK model, this representation will allow us to consider determinacy and the forward guidance puzzle. The three-equation THANK model consists of:<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> <span class="math display">\[\begin{aligned}
+c_t &amp;= \delta E_t c_{t+1} - \sigma \frac{1 - \lambda}{1 - \lambda \chi} (i_t - E_t \pi_{t+1})\\
+\pi_t &amp;= \kappa c_t\\
+i_t &amp;= \phi \pi_t.
+\end{aligned}\]</span></p>
+<p>Substituting the NKPC and the Taylor rule into the aggregate Euler equation yields a ‘one-equation THANK model’. This is first-order difference equation in consumption: <span class="math display">\[c_t = \frac{\delta + \kappa \theta \frac{1 - \lambda}{1 - \lambda \chi}}{1 + \phi \kappa \theta \frac{1 - \lambda}{1 - \lambda \chi}} E_t c_{t+1}.\]</span></p>
+<p>Determinacy in the THANK model requires that the coefficient on expected future consumption is less than one. That is, aggregate consumption rises less than one-for-one with good news shocks. To ensure determinacy of equilibrium, the central bank must therefore adhere to the ‘HANK Taylor Principle’: <span class="math display">\[\phi &gt; 1 + \frac{\delta - 1}{\kappa \theta \frac{1 - \lambda}{1 - \lambda \chi}}.\]</span></p>
+<p>This principle highlights the role of Euler equation compounding or discounting on determinacy. In the TANK model, where <span class="math inline">\(\delta = 1\)</span>, determinacy requires only that the Taylor principle is satisfied (<span class="math inline">\(\phi &gt; 1\)</span>). This is the same requirement as in the RANK model. However, the Taylor principle is only sufficient in the THANK model when <span class="math inline">\(\delta \leq 1\)</span>. This is a result of the compounding/discounting effects generated by cyclical inequality. In contrast to the TANK model, the THANK model generates both static and intertemporal amplification/dampening. This is why the determinacy condition generally differs from RANK.</p>
+<p>When income inequality is countercyclical (<span class="math inline">\(\chi &gt; 1\)</span>), the THANK model generates aggregate Euler equation compounding (<span class="math inline">\(\delta &gt; 1\)</span>). When future aggregate income rises, countercyclical inequality means that the income of hand-to-mouth households rises even further. This reduces the precautionary saving motive and causes households to increase consumption more than one-for-one in response to a good news shock. This makes the requirement for determinacy more stringent than the Taylor principle, as the central bank must increase the real interest rate by more in order to disincentivise consumption and eliminate self-fulfilling sunspots.</p>
+<p>Conversely, with procyclical inequality and Euler equation discounting, <span class="math inline">\(\chi, \delta &lt; 1\)</span>, the determinacy requirement becomes less stringent than the Taylor principle. In response to a good news shock, households recognise that the income of hand-to-mouth households will be lower in future. This strengthens the precautionary motive and causes households to increase consumption by less. As a result, the central bank can eliminate sunspots by increasing interest rates by less. In fact, with sufficient discounting, the THANK model still achieves determinacy under an interest rate peg (<span class="math inline">\(\phi = 0\)</span>). Determinacy under a peg contradicts the Sargent and Wallace (1975) result, and is achieved when: <span class="math display">\[\delta + \kappa \theta \frac{1 - \lambda}{1 - \lambda \chi} &lt; 1.\]</span></p>
+<p>In this case, the endogenous precautionary saving motive alone rules out sunspots, and the central bank is not required to increase interest rates.</p>
+<p>In <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>, we plot the determinacy threshold for a standard calibration, for respectively procyclical and countercyclical inequality (or risk). This serves as an illustration of the properties noted above: if inequality (risk) is procyclical enough, one can get away with an interest rate peg. If it is countercyclical enough, though, the threshold response required for determinacy can go up very abruptly. The practical lesson even for a quantitative HANK modeler is: if the computer does not find a unique equilibrium or your code breaks, check the parameters shaping the cyclicality of inequality and risk in your model.</p>
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="_page_21_Figure_0.jpeg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Taylor threshold <span class="math inline">\(\phi^*\)</span> with <span class="math inline">\(1 − s = 0\)</span> (dash, TANK); 0.04 (solid); <span class="math inline">\(\lambda\)</span> (dots). Note: determinacy above the curve.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="catch-22-no-puzzle-no-amplification" class="level1">
+<h1>Catch 22: No Puzzle, No Amplification?</h1>
+<p>The three-equation representation can also be used to show a Catch 22 for HANK models. Countercyclical inequality is required for the amplification of fiscal and monetary policy relative to the RANK model. However, procyclical inequality is required to solve the forward guidance puzzle.</p>
+<p>Consider the three-equation THANK model in which the central bank sets interest rates exogenously: <span class="math display">\[\begin{aligned}
+c_t &amp;= \delta E_t c_{t+1} - \sigma \frac{1 - \lambda}{1 - \lambda \chi} (i_t - E_t \pi_{t+1})\\
+\pi_t &amp;= \kappa c_t\\
+i_t &amp;= i_t^*.
+\end{aligned}\]</span></p>
+<p>Combining these equations yields the following difference equation in terms of consumption and the interest rate shock: <span class="math display">\[c_t = v_0 E_t c_{t+1} - \sigma \frac{1 - \lambda}{1 - \lambda \chi} i_t^*\]</span> <span class="math display">\[\text{where } v_0 \equiv \delta + \kappa \sigma \frac{1 - \lambda}{1 - \lambda \chi}.\]</span></p>
+<p>Iterating the equation forwards by <span class="math inline">\(T\)</span> periods gives: <span class="math display">\[c_t = v_0^T E_t c_{t+T} - \sigma \frac{1 - \lambda}{1 - \lambda \chi} \sum_{j=0}^{T-1} v_0^j i_{t+j}^*.\]</span></p>
+<p>The consumption response to an announced one-time nominal interest rate cut in period <span class="math inline">\(t + T\)</span> is given by: <span class="math display">\[\frac{\partial c_t}{\partial (-i_{t+T}^*)} = \sigma \frac{1-\lambda}{1-\lambda \chi} v_0^T.\]</span></p>
+<p>For the THANK model to solve the forward guidance puzzle, the response of current consumption to a future interest rate cut must be decreasing in its distance into the future. This is satisfied when <span class="math inline">\(v_0 &lt; 1\)</span>. That is: <span class="math display">\[\delta + \kappa \theta \frac{1 - \lambda}{1 - \lambda \chi} &lt; 1.\]</span></p>
+<p>This is the same as the requirement for determinacy under an interest rate peg in the previous section. When there is sufficient Euler equation discounting, the endogenous precautionary saving motive within the THANK model ensures that households increase consumption less in response to a future interest rate cut. However, when <span class="math inline">\(\delta &gt; 1\)</span>, the forward guidance puzzle is aggravated.</p>
+<p>Substituting the definition of <span class="math inline">\(\delta\)</span> into the above condition shows us the sufficient conditions for the THANK model to solve the forward guidance puzzle: <span class="math display">\[1-s &gt; 0\]</span> and <span class="math inline">\(\chi &lt; 1 - \sigma \kappa \frac{1-\lambda}{1-s} &lt; 1\)</span>.</p>
+<p>This illustrates the Catch-22. While amplification of shocks requires countercyclical inequality (<span class="math inline">\(\chi &gt; 1\)</span>), procyclical inequality (<span class="math inline">\(\chi &lt; 1\)</span>) is required to solve the forward guidance puzzle. However, procyclical inequality alone is not sufficient to solve the puzzle. We require both idiosyncratic risk, and sufficient countercyclical inequality to overcome the source of the forward guidance puzzle in the RANK model.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>The above result also allows us to explain the fact that the HANK model developed by McKay et al.&nbsp;(2016) does not exhibit the forward guidance puzzle. The HANK model does not solve the puzzle due to market incompleteness, but due to assumptions which generate procyclical inequality. In McKay et al.&nbsp;(2016)’s analytical framework, households face unemployment risk and receive unemployment benefits upon losing their job.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> This effectively fixes the income of households in the low income state, generating procyclical inequality (<span class="math inline">\(\chi = 0\)</span>). Similarly, the quantitative model features the redistribution of profits from high-productivity to low-productivity households. In the context of the THANK model, this is equivalent to <span class="math inline">\(\tau^D &gt; \lambda\)</span> and leads to <span class="math inline">\(\chi &lt; 1\)</span>. Therefore, the McKay et al.&nbsp;(2016) model illustrates that idiosyncratic risk and sufficient procyclical inequality can solve the forward guidance puzzle. This is not due to market incompleteness per se, but due to the precautionary savings motive which dampens the consumption response to future shocks when inequality is procyclical.</p>
+<p>The cyclical risk channel can offer a solution to the Catch-22. Consider again the aggregate Euler equation for the model with cyclical risk: <span class="math display">\[c_{t} = (\tilde{\delta} + \eta)E_{t}c_{t+1} - \sigma \frac{1 - \lambda}{1 - \lambda \chi}r_{t}\]</span> <span class="math display">\[\text{where } \eta \equiv \frac{s_{Y}Y}{1 - s}(1 - \Gamma^{-\frac{1}{\sigma}})(1 - \tilde{s})\sigma \frac{1 - \lambda}{1 - \lambda \chi}.\]</span></p>
+<p>In order to solve the forward guidance puzzle, we require that the coefficient on expected consumption is less than one. This is satisfied for any value of <span class="math inline">\(\chi\)</span> provided that income risk is sufficiently procyclical: <span class="math display">\[\eta &lt; 1 - \tilde{\delta} &lt; 0.\]</span></p>
+<p>With procyclical income risk, the THANK model can therefore solve the Catch-22. The model can achieve intratemporal amplification of shocks with countercyclical inequality, and intertemporal dampening with procyclical income risk. However, the forward guidance puzzle is exacerbated in the case where income risk is countercyclical. Indeed, <span class="math inline">\(\eta &gt; 0\)</span> is more consistent with empirical evidence on income risk.</p>
+<p>If instead we use as a benchmark the setup where the probability of becoming constrained is a function of today’s (not tomorrow’s) aggregate output or consumption, the aggregate Euler equation takes the slightly different form (the “master equation” representation (<a href="#eq-2" class="quarto-xref">Equation&nbsp;2</a>) still holds, but with <span class="math inline">\(c_{t+1}\)</span> or <span class="math inline">\(y_{t+1}\)</span> replaced by <span class="math inline">\(c_t\)</span>): <span class="math display">\[c_{t} = \tilde{\delta}E_{t}c_{t+1} + \eta c_{t} - \sigma \frac{1-\lambda}{1-\lambda \chi}r_{t}\]</span> <span id="eq-3"><span class="math display">\[= \frac{\tilde{\delta}}{1-\eta}E_{t}c_{t+1} - \frac{\sigma}{1-\eta}\frac{1-\lambda}{1-\lambda \chi}r_{t} \tag{3}\]</span></span></p>
+<p>With this representation, the Catch-22 is resolved iff one of either inequality or risk is procyclical “enough”, while the other is countercyclical, i.e. <span class="math display">\[\tilde{\delta} &lt; 1 - \eta\]</span> and <span class="math inline">\(\frac{1 - \lambda}{1 - \lambda \chi} &gt; 1 - \eta\)</span> <span class="math display">\[\implies \eta \in \left(\frac{(1-\chi)\lambda}{1-\lambda\chi}, \frac{(1-\chi)(1-\tilde{s})}{1-\lambda\chi}\right).\]</span></p>
+<p>The counterpart is that the “trouble” is bigger if both wedges are countercyclical. As we already saw, measuring these wedges using various techniques from various data sources and countries is an active area of research. For now, we shall conclude on an optimistic note, with this graph taken straight out of Bilbiie (2020) (Figure 1), using publicly available data from realtimeinequality.org by Blanchet, Saez, and Zucman.</p>
+<p><img src="_page_25_Figure_0.jpeg" class="img-fluid"></p>
+<p>Figure 2: Income inequality (top/bottom 50%) in the last two recessions; realtimeinequality.org data (Blanchet et al., 2023)</p>
+<p>This zooms in on the data for the last two US recessions and shows that inequality in disposable income (post taxes and transfers) has been procyclical although inequality in factor income (labour earnings plus capital income) was strongly countercyclical, as was ex-ante income risk. Both are defined as top 50% to bottom 50%. Prima facie, the wedges thus do seem to be moving in opposite directions. This is in line with a large literature measuring income risk and finding that it is unambiguously countercyclical; classic examples include Storesletten et al.&nbsp;(2004) and Guvenen et al.&nbsp;(2014). The same is true for inequality in labour earnings: see Heathcote et al.&nbsp;(2010) for early evidence, and Patterson (2023) for evidence controlling for MPCs, a counterpart to the model’s <span class="math inline">\(\chi\)</span>, but pertaining to earnings only.</p>
+<p>Matters are different when it comes to ex-post inequality in disposable income, including taxes and transfers—the true data counterpart of the model’s key object. This is much less countercyclical and may even become procyclical, as Figure 2 suggests for the two last recessions. One caveat to interpreting this evidence through the model’s lens is necessary. None of the available evidence isolates and disentangles the two channels in a model-equivalent way, i.e.&nbsp;provide identified estimates for <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(\chi\)</span>, <span class="math inline">\(s\)</span>, and <span class="math inline">\(\eta\)</span>. The THANK framework provides simple theory that can organize and inform that measurement—see the discussion above of papers that measure each channel by either estimating a DSGE version of THANK on US data (Bilbiie et al.&nbsp;(2022)) or accounting Euler wedges directly (Berger et al.&nbsp;(2023)), or doing the measurement using extremely rich, “big” data on consumption, income, and wealth from Norway (Bilbiie et al.&nbsp;(2025)). The common finding seems to be that “inequality” in disposable income and in the right cross-sectional dimension is plausibly acyclical or mildly procyclical, while risk is likely countercyclical—echoing Figure 2.</p>
+</section>
+<section id="virtuous-policies-in-hank-wicksellian-price-level-targeting-rule" class="level1">
+<h1>Virtuous Policies in HANK: Wicksellian Price-Level Targeting Rule</h1>
+<p>In the THANK model with countercyclical inequality and countercyclical income risk, determinacy under a Taylor rule requires the central bank to respond to inflation with large increases in the nominal interest rate. As a result, indeterminacy (and the Catch-22) is pervasive under standard parameterisations.</p>
+<p>In his foundational NK treatise, Woodford (2003) shows that Wicksellian price-level targeting can achieve determinacy in the RANK model. In the THANK model studied here, the price-level targeting rule of the form: <span class="math display">\[i_t = \phi_p p_t \text{ with } \phi_p &gt; 0\]</span> can achieve determinacy even in the case with <span class="math inline">\(\delta &gt; 1\)</span>. This policy rule therefore allows the THANK model to achieve determinacy, amplification and a solution to the forward guidance puzzle. Under price-level targeting, the three-equation THANK model is given by: <span class="math display">\[\begin{aligned}
+c_t &amp;= \delta E_t c_{t+1} - \sigma \frac{1-\lambda}{1-\lambda \chi} [i_t - (p_{t+1} - p_t)]\\
+p_t - p_{t-1} &amp;= \kappa c_t\\
+i_t &amp;= \phi_p p_t.
+\end{aligned}\]</span></p>
+<p>Combining the equations yields a second-order difference equation in prices: <span class="math display">\[E_t p_{t+1} - \left[ 1 + v_0^{-1} \left( 1 + \sigma \frac{1 - \lambda}{1 - \lambda \chi} \phi_p \kappa \right) \right] p_t + v_0^{-1} p_{t-1} = 0.\]</span></p>
+<p>With <span class="math inline">\(v_0 \geq 1\)</span> (such that an interest rate peg leads to indeterminacy), <span class="math inline">\(\phi_p &gt; 0\)</span> is sufficient to achieve determinacy and to solve the forward guidance puzzle.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<p>Under price-level targeting, bygones are not bygones. That is, households understand that a rise in inflation today must be met with deflation in future. This serves to anchor long-run inflation expectations and prevent sunspots from becoming self-fulfilling, even in the case with countercyclical inequality and income risk.</p>
+<section id="notes-on-the-literature" class="level3">
+<h3 class="anchored" data-anchor-id="notes-on-the-literature">Notes on the Literature</h3>
+<p>As well as the THANK model introduced in this chapter, a number of other papers develop analytical models which focus on the different transmission mechanisms operating within HANK models. The model here has is closely related to Bilbiie and Ragot (2021), where we used a similar structure drawing on Lucas and Shi but with bonds being illiquid, and money being liquid; we will return to a discussion of this and related approaches when covering optimal policy, the focus of that paper. In a different, general HANK model Werning (2015) derives an aggregate Euler equation focusing on the role of idiosyncratic risk; the paper discusses how monetary policy can be amplified or dampened relative to the RANK model by cyclicality of “risk” (which is nevertheless convoluted with the role of cyclical inequality in that general setup), or liquidity. Ravn and Sterk (2020) incorporate search and matching labour market frictions into a tractable HANK model. The model shows that countercyclical unemployment risk strengthens the precautionary savings motive during recessions, leading to the amplification of shocks as well as indeterminacy under a Taylor rule. Acharya and Dogra (2020) study a tractable HANK model with CARA preferences and normality and focus on the role of cyclical risk in and of itself in monetary policy transmission. As in this chapter, the authors show that sufficiently procyclical risk can eliminate the forward guidance puzzle, while countercyclical risk exacerbates the puzzle. Debortoli and Galí (2024) outline an economic environment in which cyclical risk does not amplify aggregate fluctuations if it happens to be concentrated at the bottom of the distribution. Holm (2021); Bernstein (2021); Caramp and Silva (2021) provide alternative analytical frameworks focusing on the role of risk.</p>
+<p>As well as procyclical income inequality and risk, a recent literature has shown that a relaxation of the full-information rational-expectations (FIRE) assumption can alleviate the forward guidance puzzle. Elias-Gallegos (2023) extends the THANK model developed here to incorporate information frictions. When households receive only imperfect signals about the values of aggregate variables, the general equilibrium amplification of shocks is shown to be muted. This reduces the effect of monetary policy on consumption, curing the forward guidance puzzle and widening the determinacy region. Gabaix (2020) incorporates bounded rationality into a RANK model. When households exhibit cognitive discounting of expected deviations from the steady state, the forward guidance puzzle is alleviated. Pfauti and Seyrich (2023) introduces cognitive discounting into a tractable HANK model and show that bounded rationality also dampens the effect of monetary policy shocks (and solves the forward guidance puzzle) in models with heterogeneous agents. Meichtry (2023) combines a TANK model with sticky information à la Mankiw-Reis and studies monetary policy transmission.</p>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>In this chapter, we developed a tractable two-state model which allows us to capture many of the key mechanisms operating within HANK models. Importantly, introducing idiosyncratic risk and a precautionary savings motive to the TANK model allows the model to generate both intratemporal and intertemporal amplification or dampening of shocks. A key Catch-22 for HANK models emerges from this analysis. Countercyclical inequality is required to generate amplification of fiscal and monetary policy shocks. Procyclical inequality is required to strengthen the precautionary saving motive to eliminate the forward guidance puzzle, and can even achieve determinacy under an interest rate peg. Introducing procyclical income risk offers a solution to this problem, allowing the THANK model to solve the forward guidance puzzle even with countercyclical inequality and intratemporal amplification of shocks. However, with countercyclical risk, which is more consistent with empirical evidence, the problem is exacerbated. Moving away from the Taylor rule, price-level targeting does offer a way to achieve amplification and determinacy while avoiding the forward guidance puzzle.</p>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Sushant Acharya and Keshav Dogra. Understanding hank: Insights from a prank. Econometrica, 88(3):1113–1158, 2020. doi: 10.3982/ECTA16409.</li>
+<li>David Berger, Luigi Bocola, and Alessandro Dovis. Imperfect risk sharing and the business cycle. The Quarterly Journal of Economics, 138(3):1765–1815, 2023.</li>
+<li>Joshua Bernstein. A model of state-dependent monetary policy. Journal of Monetary Economics, 117:904–917, 2021.</li>
+<li>Florin Bilbiie, Giorgio E. Primiceri, and Andrea Tambalotti. Inequality and business cycles. Working paper, University of Cambridge, 2022.</li>
+<li>Florin O. Bilbiie. Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic. Journal of Economic Theory, 140(1):162–196, 2008. doi: 10.1016/j.jet.2007.06.010.</li>
+<li>Florin O. Bilbiie. The new keynesian cross. Journal of Monetary Economics, 114:90–108, 2020. doi: 10.1016/j.jmoneco.2020.04.009.</li>
+<li>Florin O. Bilbiie. Monetary policy and heterogeneity: An analytical framework. Review of Economic Studies, 2024.</li>
+<li>Florin O Bilbiie and Xavier Ragot. Optimal monetary policy and liquidity with heterogeneous households. Review of Economic Dynamics, 41:71–95, 2021.</li>
+<li>Florin O. Bilbiie, Sigurd M. Galaasen, Refet S. Gürkaynak, Mathis Mæhlum, and Krisztina Molnár. Hanksson. Discussion Paper DP20090, Centre for Economic Policy Research (CEPR), March 2025. URL https://cepr.org/publications/dp20090.</li>
+<li>Florin Ovidiu Bilbiie. Monetary policy and heterogeneity: An analytical framework. Available at SSRN 3106805, 2018.</li>
+<li>Martin Caramp and Diogo Silva. Monetary policy and wealth effects: The role of risk and heterogeneity. 2021. Mimeo.</li>
+<li>Christopher D Carroll and Miles S Kimball. On the concavity of the consumption function. Econometrica: Journal of the Econometric Society, 64(4):981–992, 1996. doi: 10.2307/2171853.</li>
+<li>Edouard Challe, Julien Matheron, Xavier Ragot, and Juan F. Rubio-Ramírez. Precautionary Saving and Aggregate Demand. Quantitative Economics, 8(2):435–478, 2017. doi: 10.3982/QE529.</li>
+<li>Vasco Cúrdia and Michael Woodford. Credit Frictions and Optimal Monetary Policy. Journal of Monetary Economics, 84:30–65, 2016. doi: 10.1016/j.jmoneco.2015.12.002.</li>
+<li>Davide Debortoli and Jordi Galí. Idiosyncratic income risk and aggregate fluctuations. American Economic Journal: Macroeconomics, 16(4):279–310, October 2024.</li>
+<li>Jose Elias-Gallegos. Hank beyond fire: Amplification, forward guidance, and belief shocks. 2023. Mimeo.</li>
+<li>Xavier Gabaix. A Behavioral New Keynesian Model. American Economic Review, 110(8):2271–2327, 2020. doi: 10.1257/aer.20191282.</li>
+<li>Fatih Guvenen, Serdar Ozkan, and Jae Song. The Nature of Countercyclical Income Risk. Journal of Political Economy, 122(3):621–660, 2014. doi: 10.1086/675535.</li>
+<li>Jonathan Heathcote, Fabrizio Perri, and Giovanni L. Violante. Unequal We Stand: An Empirical Analysis of Economic Inequality in the United States, 1967–2006. Review of Economic Dynamics, 13(1):15–51, January 2010. doi: 10.1016/j.red.2009.10.010.</li>
+<li>Martin B. Holm. Monetary policy transmission with income risk. 2021. Mimeo.</li>
+<li>Greg Kaplan, Benjamin Moll, and Giovanni L Violante. Monetary policy according to hank. American Economic Review, 108(3):697–743, 2018. doi: 10.1257/aer.20160042.</li>
+<li>Alisdair McKay, Emi Nakamura, and Jón Steinsson. The power of forward guidance revisited. American Economic Review, 106(10):3133–58, 2016.</li>
+<li>Pascal Meichtry. Sticky information, heterogeneity, and aggregate demand. 2023. Mimeo.</li>
+<li>Salvatore Nistico. Optimal monetary policy and financial stability in a non-ricardian economy. Journal of the European Economic Association, 13(6):1332–1366, 2015.</li>
+<li>Christina Patterson. The Matching Multiplier and the Amplification of Recessions. American Economic Review, 113(4):982–1012, April 2023. doi: 10.1257/aer.20210254.</li>
+<li>Oliver Pfauti and Fabian Seyrich. A behavioral heterogeneous agent new keynesian model. 2023. Mimeo.</li>
+<li>Morten O. Ravn and Vincent Sterk. Macroeconomic fluctuations with hank &amp; sam: an analytical approach. Journal of the European Economic Association, 06 2020. ISSN 1542-4766.</li>
+<li>Thomas J Sargent and Neil Wallace. “Rational” expectations, the optimal monetary instrument, and the optimal money supply rule. Journal of political economy, 83(2):241–254, 1975.</li>
+<li>Kjetil Storesletten, Chris I. Telmer, and Amir Yaron. Cyclical Dynamics in Idiosyncratic Labor Market Risk. Journal of Political Economy, 112(3):695–717, 2004. doi: 10.1086/383105.</li>
+<li>Iván Werning. Incomplete Markets and Aggregate Demand. 2015. NBER Working Paper No.&nbsp;21448.</li>
+<li>Michael Woodford. Public debt as private liquidity. American Economic Review, 80:382–388, 1990.</li>
+<li>Michael Woodford. Interest and prices: Foundations of a theory of monetary policy, 2003.</li>
+</ul>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Based on notes used to teach advanced mini-courses over the last years at the International Monetary Fund, European Central Bank Research Department, Norges Bank, Paris School of Economics (Summer School and APE program), Brown University, HEC Lausanne, Bonn Graduate School of Economics, Goethe University, and Cambridge. I thank Sean Lavender, who provided excellent RA work and help with transcribing the lectures and drafting. TBC<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The closest antecedent is Bilbiie and Ragot (2021), where bonds are illiquid and money is used for self-insurance, studying optimal policy. Other ways of reducing heterogeneity and eliminating the wealth distribution as a state variable also extends Challe et al.&nbsp;(2017), Heathcote and Perri (2018). NK models with two switching types were studied by Cúrdia and Woodford (2016) and Nistico (2015) but with different insurance structures.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The shares can effectively be viewed as an extreme case of the illiquid asset featured in Kaplan et al.&nbsp;(2018).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>A full derivation of the variances is found in the appendix of Bilbiie (2018).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>The detailed outline is in Bilbiie (2024) for completion. This limit case is akin to Woodford (1990), abstracting from the endogenous income distribution, essential here. It is also related to the model class in Chapter 22 of Ljungqvist and Sargent (2018), ignoring the limited commitment part; I am grateful to Kurt Mitman for suggesting the latter connection.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>See Carroll and Kimball (1996) for a discussion of the importance of a concave consumption function.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>See the appendix to Bilbiie (2018) for the key properties of the THANK model with a dynamic NKPC.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>To incorporate cyclical risk, the parameter <span class="math inline">\(\delta\)</span> could simply be replaced by <span class="math inline">\(\tilde{\delta} \equiv \delta + \eta\)</span>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>When prices are not fixed (<span class="math inline">\(\kappa \neq 0\)</span>), a rise in future consumption will lead to an increase in expected inflation. This amplifies the effects of a future nominal interest rate cut due to a fall in the long-term real interest rate.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>The unemployment shock is i.i.d. in the model. In THANK terminology, this effectively means that <span class="math inline">\(s = 1 − \lambda\)</span>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>This is also true for the RANK model under price-level targeting.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

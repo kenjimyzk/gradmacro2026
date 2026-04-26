@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="宮﨑憲治">
+
+<title>第3回：RANKモデル</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="第03回_RANKモデル_files/libs/clipboard/clipboard.min.js"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/popper.min.js"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="第03回_RANKモデル_files/libs/quarto-html/anchor.min.js"></script>
+<link href="第03回_RANKモデル_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="第03回_RANKモデル_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="第03回_RANKモデル_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="第03回_RANKモデル_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="第03回_RANKモデル_files/libs/bootstrap/bootstrap-a74871fe4945b66d259aafc266475145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#講義の目的と位置づけ" id="toc-講義の目的と位置づけ" class="nav-link active" data-scroll-target="#講義の目的と位置づけ"><span class="header-section-number">1</span> 講義の目的と位置づけ</a>
+  <ul class="collapse">
+  <li><a href="#講義の目的" id="toc-講義の目的" class="nav-link" data-scroll-target="#講義の目的"><span class="header-section-number">1.1</span> 講義の目的</a></li>
+  <li><a href="#dsgeモデルとしての位置づけ" id="toc-dsgeモデルとしての位置づけ" class="nav-link" data-scroll-target="#dsgeモデルとしての位置づけ"><span class="header-section-number">1.2</span> DSGEモデルとしての位置づけ</a></li>
+  </ul></li>
+  <li><a href="#モデルの設定と各主体の最適化" id="toc-モデルの設定と各主体の最適化" class="nav-link" data-scroll-target="#モデルの設定と各主体の最適化"><span class="header-section-number">2</span> モデルの設定と各主体の最適化</a>
+  <ul class="collapse">
+  <li><a href="#経済環境" id="toc-経済環境" class="nav-link" data-scroll-target="#経済環境"><span class="header-section-number">2.1</span> 経済環境</a>
+  <ul class="collapse">
+  <li><a href="#主な変数" id="toc-主な変数" class="nav-link" data-scroll-target="#主な変数"><span class="header-section-number">2.1.1</span> 主な変数</a></li>
+  <li><a href="#補助的な記号と添字" id="toc-補助的な記号と添字" class="nav-link" data-scroll-target="#補助的な記号と添字"><span class="header-section-number">2.1.2</span> 補助的な記号と添字</a></li>
+  <li><a href="#対数線形化の記法" id="toc-対数線形化の記法" class="nav-link" data-scroll-target="#対数線形化の記法"><span class="header-section-number">2.1.3</span> 対数線形化の記法</a></li>
+  <li><a href="#主なパラメータ" id="toc-主なパラメータ" class="nav-link" data-scroll-target="#主なパラメータ"><span class="header-section-number">2.1.4</span> 主なパラメータ</a></li>
+  </ul></li>
+  <li><a href="#家計" id="toc-家計" class="nav-link" data-scroll-target="#家計"><span class="header-section-number">2.2</span> 家計</a>
+  <ul class="collapse">
+  <li><a href="#家計の一階条件" id="toc-家計の一階条件" class="nav-link" data-scroll-target="#家計の一階条件"><span class="header-section-number">2.2.1</span> 家計の一階条件</a></li>
+  </ul></li>
+  <li><a href="#企業" id="toc-企業" class="nav-link" data-scroll-target="#企業"><span class="header-section-number">2.3</span> 企業</a>
+  <ul class="collapse">
+  <li><a href="#最終財企業" id="toc-最終財企業" class="nav-link" data-scroll-target="#最終財企業"><span class="header-section-number">2.3.1</span> 最終財企業</a></li>
+  <li><a href="#中間財企業" id="toc-中間財企業" class="nav-link" data-scroll-target="#中間財企業"><span class="header-section-number">2.3.2</span> 中間財企業</a></li>
+  </ul></li>
+  <li><a href="#政府" id="toc-政府" class="nav-link" data-scroll-target="#政府"><span class="header-section-number">2.4</span> 政府</a>
+  <ul class="collapse">
+  <li><a href="#金融政策" id="toc-金融政策" class="nav-link" data-scroll-target="#金融政策"><span class="header-section-number">2.4.1</span> 金融政策</a></li>
+  <li><a href="#財政政策" id="toc-財政政策" class="nav-link" data-scroll-target="#財政政策"><span class="header-section-number">2.4.2</span> 財政政策</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#均衡条件と定常状態" id="toc-均衡条件と定常状態" class="nav-link" data-scroll-target="#均衡条件と定常状態"><span class="header-section-number">3</span> 均衡条件と定常状態</a>
+  <ul class="collapse">
+  <li><a href="#均衡条件" id="toc-均衡条件" class="nav-link" data-scroll-target="#均衡条件"><span class="header-section-number">3.1</span> 均衡条件</a></li>
+  <li><a href="#関数形の特定化" id="toc-関数形の特定化" class="nav-link" data-scroll-target="#関数形の特定化"><span class="header-section-number">3.2</span> 関数形の特定化</a>
+  <ul class="collapse">
+  <li><a href="#効用関数" id="toc-効用関数" class="nav-link" data-scroll-target="#効用関数"><span class="header-section-number">3.2.1</span> 効用関数</a></li>
+  <li><a href="#生産関数" id="toc-生産関数" class="nav-link" data-scroll-target="#生産関数"><span class="header-section-number">3.2.2</span> 生産関数</a></li>
+  <li><a href="#価格調整費用関数" id="toc-価格調整費用関数" class="nav-link" data-scroll-target="#価格調整費用関数"><span class="header-section-number">3.2.3</span> 価格調整費用関数</a></li>
+  </ul></li>
+  <li><a href="#非線形均衡条件" id="toc-非線形均衡条件" class="nav-link" data-scroll-target="#非線形均衡条件"><span class="header-section-number">3.3</span> 非線形均衡条件</a>
+  <ul class="collapse">
+  <li><a href="#家計-1" id="toc-家計-1" class="nav-link" data-scroll-target="#家計-1"><span class="header-section-number">3.3.1</span> 家計</a></li>
+  <li><a href="#企業-1" id="toc-企業-1" class="nav-link" data-scroll-target="#企業-1"><span class="header-section-number">3.3.2</span> 企業</a></li>
+  <li><a href="#金融政策-1" id="toc-金融政策-1" class="nav-link" data-scroll-target="#金融政策-1"><span class="header-section-number">3.3.3</span> 金融政策</a></li>
+  <li><a href="#資源制約" id="toc-資源制約" class="nav-link" data-scroll-target="#資源制約"><span class="header-section-number">3.3.4</span> 資源制約</a></li>
+  </ul></li>
+  <li><a href="#定常状態" id="toc-定常状態" class="nav-link" data-scroll-target="#定常状態"><span class="header-section-number">3.4</span> 定常状態</a></li>
+  </ul></li>
+  <li><a href="#対数線形化とニューケインジアン方程式" id="toc-対数線形化とニューケインジアン方程式" class="nav-link" data-scroll-target="#対数線形化とニューケインジアン方程式"><span class="header-section-number">4</span> 対数線形化とニューケインジアン方程式</a>
+  <ul class="collapse">
+  <li><a href="#対数線形化" id="toc-対数線形化" class="nav-link" data-scroll-target="#対数線形化"><span class="header-section-number">4.1</span> 対数線形化</a>
+  <ul class="collapse">
+  <li><a href="#家計-2" id="toc-家計-2" class="nav-link" data-scroll-target="#家計-2"><span class="header-section-number">4.1.1</span> 家計</a></li>
+  <li><a href="#企業-2" id="toc-企業-2" class="nav-link" data-scroll-target="#企業-2"><span class="header-section-number">4.1.2</span> 企業</a></li>
+  <li><a href="#政策集計" id="toc-政策集計" class="nav-link" data-scroll-target="#政策集計"><span class="header-section-number">4.1.3</span> 政策・集計</a></li>
+  </ul></li>
+  <li><a href="#限界費用と自然産出量" id="toc-限界費用と自然産出量" class="nav-link" data-scroll-target="#限界費用と自然産出量"><span class="header-section-number">4.2</span> 限界費用と自然産出量</a></li>
+  <li><a href="#本のニューケインジアン方程式" id="toc-本のニューケインジアン方程式" class="nav-link" data-scroll-target="#本のニューケインジアン方程式"><span class="header-section-number">4.3</span> 3本のニューケインジアン方程式</a>
+  <ul class="collapse">
+  <li><a href="#動学的is曲線" id="toc-動学的is曲線" class="nav-link" data-scroll-target="#動学的is曲線"><span class="header-section-number">4.3.1</span> 動学的IS曲線</a></li>
+  <li><a href="#ニューケインジアンフィリップス曲線" id="toc-ニューケインジアンフィリップス曲線" class="nav-link" data-scroll-target="#ニューケインジアンフィリップス曲線"><span class="header-section-number">4.3.2</span> ニューケインジアン・フィリップス曲線</a></li>
+  <li><a href="#金融政策ルール" id="toc-金融政策ルール" class="nav-link" data-scroll-target="#金融政策ルール"><span class="header-section-number">4.3.3</span> 金融政策ルール</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ショック別の比較静学" id="toc-ショック別の比較静学" class="nav-link" data-scroll-target="#ショック別の比較静学"><span class="header-section-number">5</span> ショック別の比較静学</a>
+  <ul class="collapse">
+  <li><a href="#ショック別の数値解" id="toc-ショック別の数値解" class="nav-link" data-scroll-target="#ショック別の数値解"><span class="header-section-number">5.1</span> ショック別の数値解</a>
+  <ul class="collapse">
+  <li><a href="#金融政策ショックのみ" id="toc-金融政策ショックのみ" class="nav-link" data-scroll-target="#金融政策ショックのみ"><span class="header-section-number">5.1.1</span> 金融政策ショックのみ</a></li>
+  <li><a href="#技術ショックのみ" id="toc-技術ショックのみ" class="nav-link" data-scroll-target="#技術ショックのみ"><span class="header-section-number">5.1.2</span> 技術ショックのみ</a></li>
+  <li><a href="#政府支出ショックのみ" id="toc-政府支出ショックのみ" class="nav-link" data-scroll-target="#政府支出ショックのみ"><span class="header-section-number">5.1.3</span> 政府支出ショックのみ</a></li>
+  <li><a href="#まとめ" id="toc-まとめ" class="nav-link" data-scroll-target="#まとめ"><span class="header-section-number">5.1.4</span> まとめ</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#直観的な含意とまとめ" id="toc-直観的な含意とまとめ" class="nav-link" data-scroll-target="#直観的な含意とまとめ"><span class="header-section-number">6</span> 直観的な含意とまとめ</a>
+  <ul class="collapse">
+  <li><a href="#直観的な含意" id="toc-直観的な含意" class="nav-link" data-scroll-target="#直観的な含意"><span class="header-section-number">6.1</span> 直観的な含意</a></li>
+  <li><a href="#まとめ-1" id="toc-まとめ-1" class="nav-link" data-scroll-target="#まとめ-1"><span class="header-section-number">6.2</span> まとめ</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>その他のフォーマット</h2><ul><li><a href="第03回_RANKモデル.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">第3回：RANKモデル</h1>
+<p class="subtitle lead">マクロ経済学B</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>宮﨑憲治 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">公開</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026年4月4日</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="講義の目的と位置づけ" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 講義の目的と位置づけ</h1>
+<section id="講義の目的" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="講義の目的"><span class="header-section-number">1.1</span> 講義の目的</h2>
+<p>本講義では、代表的家計をもつニューケインジアン・モデルである <strong>RANK (Representative Agent New Keynesian)</strong> モデルを扱います。</p>
+<ol type="1">
+<li>モデルの経済環境と主体ごとの問題設定</li>
+<li>非線形均衡条件の導出</li>
+<li>定常状態の計算</li>
+<li>対数線形化による3本のニューケインジアン方程式</li>
+<li>金融政策ショック・技術ショック・政府支出ショックの比較静学</li>
+</ol>
+<p>RANK は、RBC モデルに価格硬直性と金融政策を導入した最も基本的な DSGE モデルであり、その後の HANK や TANK を理解する基礎になります。</p>
+</section>
+<section id="dsgeモデルとしての位置づけ" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="dsgeモデルとしての位置づけ"><span class="header-section-number">1.2</span> DSGEモデルとしての位置づけ</h2>
+<p>DSGE モデルの分析は、基本的に次の3段階で進みます。</p>
+<ol type="1">
+<li>家計・企業・政府の最適化問題を定式化し、一階条件を導出する。</li>
+<li>集計条件と市場均衡条件を加えて、モデル全体の均衡条件を得る。</li>
+<li>非線形モデルを定常状態の周りで対数線形化し、状態空間表現やインパルス応答で分析する。</li>
+</ol>
+<p>RBC モデルでは景気変動の主因は技術ショックでしたが、RANK では独占的競争と価格硬直性を導入することで、金融政策や需要ショックが実体経済に影響します。ここでは Rotemberg 型の価格調整費用を用います。</p>
+</section>
+</section>
+<section id="モデルの設定と各主体の最適化" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> モデルの設定と各主体の最適化</h1>
+<section id="経済環境" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="経済環境"><span class="header-section-number">2.1</span> 経済環境</h2>
+<section id="主な変数" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="主な変数"><span class="header-section-number">2.1.1</span> 主な変数</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>記号</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">Y_t</span></td>
+<td>産出</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">C_t</span></td>
+<td>消費</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">N_t</span></td>
+<td>労働投入</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">W_t</span></td>
+<td>賃金率</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">MC_t</span></td>
+<td>実質限界費用</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">D_t</span></td>
+<td>配当</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">R_t^N</span></td>
+<td>名目利子率</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">R_t</span></td>
+<td>実質利子率</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\Pi_t</span></td>
+<td>粗インフレ率</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">a_t</span></td>
+<td>技術ショック</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">m_t</span></td>
+<td>金融緩和ショック</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">g_t</span></td>
+<td>政府支出ショック</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_t</span></td>
+<td>需給ギャップ（output gap）</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">y_t^f</span></td>
+<td>自然産出量</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">r_t^f</span></td>
+<td>自然利子率</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="補助的な記号と添字" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="補助的な記号と添字"><span class="header-section-number">2.1.2</span> 補助的な記号と添字</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>記号</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">h</span></td>
+<td>家計の添字</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">j</span></td>
+<td>中間財企業の添字</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">B_t</span></td>
+<td>家計の債券保有</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\Theta_t</span></td>
+<td>家計の企業持分保有</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">V_t</span></td>
+<td>株式価値、企業価値</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">TX_t^H</span></td>
+<td>家計に課される一括税</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">TX_t^I</span></td>
+<td>中間財企業に課される一括税</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">P_t</span></td>
+<td>最終財の物価水準</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">P_t^I(j)</span></td>
+<td>中間財企業 <span class="math inline">j</span> の価格</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">Y_t^I(j)</span></td>
+<td>中間財企業 <span class="math inline">j</span> の産出</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">N_t(j)</span></td>
+<td>中間財企業 <span class="math inline">j</span> の労働投入</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">G_t</span></td>
+<td>政府支出</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">G_Y</span></td>
+<td>定常状態の政府支出比率 <span class="math inline">G/Y</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">U_{Ct}</span></td>
+<td>家計の限界効用</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">U(\cdot)</span></td>
+<td>家計の効用関数</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">F(\cdot)</span></td>
+<td>生産関数</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">f_P(\cdot)</span></td>
+<td>価格調整費用関数</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="対数線形化の記法" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="対数線形化の記法"><span class="header-section-number">2.1.3</span> 対数線形化の記法</h3>
+<p>本資料では、大文字は水準、小文字は定常状態からの対数乖離を表します。したがって <span class="math display">
+y_t \equiv \ln Y_t - \ln Y,
+\quad
+c_t \equiv \ln C_t - \ln C,
+\quad
+n_t \equiv \ln N_t - \ln N
+</span> のように書きます。同様に、<span class="math inline">w_t, mc_t, d_t, r_t, r_t^N, \pi_t</span> はそれぞれ <span class="math inline">W_t, MC_t, D_t, R_t, R_t^N, \Pi_t</span> の対数線形化後の変数です。また、<span class="math inline">\Delta z_{t+1}\equiv z_{t+1}-z_t</span> は一階差分を表します。</p>
+<p>ここで、政府支出と配当については <span class="math display">
+g_t=\frac{G_t-G}{Y},
+\qquad
+d_t=\frac{D_t-D}{Y}
+</span> と定義します。</p>
+</section>
+<section id="主なパラメータ" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="主なパラメータ"><span class="header-section-number">2.1.4</span> 主なパラメータ</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>記号</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">0\leq\alpha&lt;1</span></td>
+<td>資本分配率に対応するパラメータ（労働分配率は <span class="math inline">1-\alpha</span>）</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">0&lt;\beta&lt;1</span></td>
+<td>割引因子</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\gamma&gt;0</span></td>
+<td>異時点間代替弾力性の逆数</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\varphi&gt;0</span></td>
+<td>フリッシュ弾力性の逆数</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\psi&gt;1</span></td>
+<td>中間財の代替弾力性</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\eta\geq 0</span></td>
+<td>価格調整費用パラメータ</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\phi&gt;1</span></td>
+<td>テーラールールのインフレ反応係数</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">0&lt;\rho_a,\rho_m,\rho_g&lt;1</span></td>
+<td>各ショックの持続性</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">0\leq\sigma&lt;1/(\psi-1)</span></td>
+<td>中間財企業への補助金率</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="家計" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="家計"><span class="header-section-number">2.2</span> 家計</h2>
+<p>家計 <span class="math inline">h \in [0,1]</span> は無限期間にわたって期待生涯効用 <span class="math display">
+\mathbb{E}_0 \sum_{t=0}^{\infty} \beta^t U(C_t(h), N_t(h))
+</span> を最大化します。予算制約は</p>
+<p><span class="math display">
+C_t(h)+B_t(h)+\Theta_t(h)V_t+TX_t^H
+\le
+R_{t-1}^N \frac{P_{t-1}}{P_t} B_{t-1}(h)
++\Theta_{t-1}(h)\bigl(V_t+D_t\bigr)+W_t N_t(h)
+</span> です。</p>
+<p>対称均衡では <span class="math inline">C_t(h)=C_t</span>, <span class="math inline">N_t(h)=N_t</span>, <span class="math inline">\Theta_t(h)=1</span> となり、以下の条件を得ます。 <span class="math display">\begin{aligned}
+W_t &amp;= -\frac{U_{N,t}}{U_{C,t}}\\
+1 &amp;= \mathbb{E}_t \left[\beta \frac{U_{C,t+1}}{U_{C,t}} \frac{R_t^N}{\Pi_{t+1}} \right]\\
+V_t&amp;=
+\mathbb{E}_t \left[
+\beta \frac{U_{C,t+1}}{U_{C,t}}(V_{t+1}+D_{t+1})
+\right]
+\end{aligned}</span> ただし、<span class="math inline">\Pi_t=P_t/P_{t-1}</span>、<span class="math inline">U_{C,t}=U_C(C_t, N_t)</span>、<span class="math inline">U_{N,t}=U_N(C_t, N_t)</span>です。</p>
+<section id="家計の一階条件" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="家計の一階条件"><span class="header-section-number">2.2.1</span> 家計の一階条件</h3>
+<p>最初の式は、<strong>実質賃金が消費と余暇の限界代替率に等しい</strong>ことを意味します。すなわち、家計は 1 単位労働を増やしたときの限界不効用と、その対価として得られる賃金を通じた限界効用とが一致するように労働供給を選びます。</p>
+<p>2番目の式は家計の <strong>Euler 方程式</strong> <span class="math display">
+1 = \mathbb{E}_t \left[ \beta \frac{U_{C,t+1}}{U_{C,t}} \frac{R_t^N}{\Pi_{t+1}} \right]
+</span> と呼ばれています。この式は異時点間の最適消費配分を表しています。今期の消費を 1 単位減らすと限界効用 <span class="math inline">U_{C,t}</span> だけ効用が低下します（限界費用）。一方、その 1 単位を名目利子率 <span class="math inline">R_t^N</span> で貯蓄し、来期にインフレ率 <span class="math inline">\Pi_{t+1}</span> で実質化した <span class="math inline">R_t^N/\Pi_{t+1}</span> 単位を消費に充てれば、割引後の期待限界効用 <span class="math inline">\beta U_{C,t+1} \cdot R_t^N/\Pi_{t+1}</span> だけ効用が増加します（限界便益）。最適化のもとでは、この限界費用と限界便益が期待値の意味で等しくなります。</p>
+<p>ここで、名目利子率 <span class="math inline">R_t^N</span>、実質利子率 <span class="math inline">R_t</span>、インフレ率 <span class="math inline">\Pi_{t+1}</span> の関係は <strong>フィッシャー方程式</strong> <span class="math display">
+R_t = \mathbb{E}_t \left(\frac{R_t^N}{\Pi_{t+1}}\right)
+</span> で与えられます。すなわち、実質利子率は名目利子率を期待インフレ率で割り引いたものです。対数線形近似の下では <span class="math display">
+r_t = r_t^N - \mathbb{E}_t \pi_{t+1}
+</span> となります。</p>
+<p>3番目の式を前向きに繰り返し代入すると、 <span class="math display">
+V_t
+=
+\mathbb{E}_t\left[\sum^{\infty}_{i=1}\beta^{i}\frac{U_{C,t+i}}{U_{C,t}}D_{t+i}\right]=\left[\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i}R_{s}}\right]
+</span> となります。つまり、株式価値は <strong>将来の配当の割引現在価値</strong> に等しくなります。</p>
+<p>2番目の式（Euler方程式）と3番目の式（株式価値）はそれぞれ <span class="math display">
+\mathbb{E}_t\left[Q_{t,t+1}\right] R_t = 1,
+\qquad
+\mathbb{E}_t\left[
+Q_{t,t+1}
+\frac{V_{t+1}+D_{t+1}}{V_t}
+\right] = 1
+</span> と書けます。ここで、 <span class="math display">
+Q_{t,t+1}=\beta\frac{U_{C,t+1}}{U_{C,t}}
+</span> を <strong>確率的割引因子</strong>（<em>stochastic discount factor</em>）と呼びます。将来の 1 単位の支払いを、家計の限界効用の変化を通じて現在の価値に変換する役割を持ちます。 左の等式は無リスク名目債券の実質収益率、右の等式は株式の総収益率（キャピタルゲイン＋インカムゲイン）を、それぞれ確率的割引因子で評価した期待値が 1 になることを意味します。すなわち、株式と債券はいずれも同じ確率的割引因子で価格づけされており、これが <strong>資産価格の裁定条件</strong> です。</p>
+</section>
+</section>
+<section id="企業" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="企業"><span class="header-section-number">2.3</span> 企業</h2>
+<section id="最終財企業" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="最終財企業"><span class="header-section-number">2.3.1</span> 最終財企業</h3>
+<p>最終財市場は完全競争で、代表的最終財企業が中間財を束ねて最終財を生産します。</p>
+<p>生産関数は CES 型で、 <span class="math display">
+Y_t
+=
+\left(
+\int_0^1 Y_t^I(j)^{\frac{\psi-1}{\psi}} dj
+\right)^{\frac{\psi}{\psi-1}},
+\qquad \psi &gt; 1
+</span> です。利潤最大化から中間財需要関数と物価指数が得られます。</p>
+<p><span class="math display">\begin{aligned}
+Y_t^I(j) &amp;= Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi}\\
+P_t&amp;=
+\left[
+\int_0^1 P_t^I(j)^{1-\psi} dj
+\right]^{\frac{1}{1-\psi}}
+\end{aligned}</span></p>
+</section>
+<section id="中間財企業" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="中間財企業"><span class="header-section-number">2.3.2</span> 中間財企業</h3>
+<p>中間財企業 <span class="math inline">j \in [0,1]</span> は独占的競争市場で価格設定を行います。独占的競争では企業はマークアップを課すため、産出が社会的に最適な水準を下回ります。そこで政府が補助金率 <span class="math inline">\sigma</span> を与えてこの歪みを緩和します。特に <span class="math inline">\sigma = 1/(\psi-1)</span> とすると定常状態での実質限界費用が 1 となり、独占の歪みが完全に除去されます。</p>
+<p>Rotemberg 型価格調整費用を導入すると、企業の配当は <span class="math display">
+D_t(j)
+=
+(1+\sigma)\frac{P_t^I(j)}{P_t}Y_t^I(j)
+- f_P\!\left(\frac{P_t^I(j)}{P_{t-1}^I(j)}\right) Y_t
+- W_t N_t(j)
+- TX_t^I
+</span> です。第 1 項は補助金込みの売上収入、第 2 項は価格変更に伴う調整費用、第 3 項は人件費、第 4 項は一括税です。生産技術は <span class="math display">
+Y_t^I(j) = \exp(a_t) F(N_t(j))
+</span> であり、技術ショック <span class="math inline">a_t</span> は以下の AR(1) プロセスに従います。 <span class="math display">
+a_t = \rho_a a_{t-1} + e_t^a
+</span></p>
+<p>対称均衡では <span class="math inline">P_t^I(j)=P_t</span>, <span class="math inline">Y_t^I(j)=Y_t</span> となり、 <span class="math display">\begin{aligned}
+W_t &amp;= MC_t \exp(a_t) F_N(N_t)\\
+Y_t &amp;= \exp(a_t) F(N_t)
+\end{aligned}</span> となります。</p>
+<p>企業は株式価値（将来の配当の割引現在価値）を最大化するように価格 <span class="math inline">P_t^I(j)</span> を設定します。その一階条件を導出し、対称均衡を適用すると、価格設定条件は <span class="math display">
+\Pi_t f_P'(\Pi_t)
+=
+\psi \left[ MC_t - (1+\sigma)\left(1-\frac{1}{\psi}\right) \right]
++ \beta \mathbb{E}_t \left[
+\frac{U_{C,t+1}}{U_{C,t}}
+\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1} f_P'(\Pi_{t+1})
+\right]
+</span> となります。この式は動学的な「限界収入＝限界費用」条件の一般化です。左辺は価格変更の限界費用、右辺第 1 項は現在の限界収入と限界費用の乖離、第 2 項は将来の価格調整費用の現在価値を表します。すなわち、企業は今期のマークアップだけでなく、将来の価格調整費用も考慮して価格を決めます。</p>
+</section>
+</section>
+<section id="政府" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="政府"><span class="header-section-number">2.4</span> 政府</h2>
+<section id="金融政策" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="金融政策"><span class="header-section-number">2.4.1</span> 金融政策</h3>
+<p>政府はテーラールールにより名目利子率を設定します。 <span class="math display">\begin{aligned}
+R_t^N &amp;= \frac{1}{\beta} \exp(-m_t) \Pi_t^\phi\\
+m_t &amp;= \rho_m m_{t-1} + e_t^m
+\end{aligned}</span> <span class="math inline">m_t&gt;0</span> は予想外の利下げ、すなわち金融緩和ショックを表します。均衡の安定性のためには <span class="math inline">\phi&gt;1</span>（<strong>テーラー原則</strong>）が必要であり、これはインフレが上昇したときに名目利子率をそれ以上に引き上げることで実質利子率を上昇させ、需要を抑制する条件です。</p>
+</section>
+<section id="財政政策" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="財政政策"><span class="header-section-number">2.4.2</span> 財政政策</h3>
+<p>政府は中間財企業に補助金 <span class="math inline">\sigma</span> を与え、その財源として中間財企業から一括税 <span class="math inline">TX_t^I = \sigma Y_t</span> を徴収します。また、家計から一括税 <span class="math inline">TX_t^H = G_t</span> を徴収して政府支出 <span class="math inline">G_t</span> を賄います。政府支出ショックは以下の AR(1) プロセスに従います。 <span class="math display">\begin{aligned}
+g_t &amp;= \rho_g g_{t-1} + e_t^g\\
+g_t &amp;= (G_t-G)/Y
+\end{aligned}</span></p>
+</section>
+</section>
+</section>
+<section id="均衡条件と定常状態" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 均衡条件と定常状態</h1>
+<section id="均衡条件" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="均衡条件"><span class="header-section-number">3.1</span> 均衡条件</h2>
+<p>債券市場の均衡では <span class="math display">
+B_t = 0
+</span> が成り立ちます。財市場の均衡条件は、家計・企業・政府の予算制約をまとめることで <span class="math display">
+C_t + G_t + f_P(\Pi_t)Y_t = Y_t
+</span> となります。なお、補助金収入 <span class="math inline">\sigma Y_t</span> と一括税 <span class="math inline">TX_t^I = \sigma Y_t</span> は相殺されるため、資源制約には現れません。Rotemberg 型価格調整費用 <span class="math inline">f_P(\Pi_t)Y_t</span> は、企業が価格を変更する際に実物資源を消費することを表しており、インフレがゼロでないときに経済全体の利用可能資源が減少します。</p>
+</section>
+<section id="関数形の特定化" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="関数形の特定化"><span class="header-section-number">3.2</span> 関数形の特定化</h2>
+<p>以下の標準的な関数形を用います。</p>
+<section id="効用関数" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="効用関数"><span class="header-section-number">3.2.1</span> 効用関数</h3>
+<p>効用関数は <span class="math display">
+U(C_t,N_t)
+=
+\frac{C_t^{1-\gamma}}{1-\gamma}
+- \frac{N_t^{1+\varphi}}{1+\varphi}
+</span> と仮定します。この関数は <strong>CRRA（<em>Constant Relative Risk Aversion</em>）関数</strong> と呼ばれます。消費の限界効用と労働の限界不効用はそれぞれ <span class="math display">
+U_C(C_t,N_t)=C_t^{-\gamma},
+\qquad
+-U_N(C_t,N_t)=N_t^\varphi
+</span> です。</p>
+<p>消費の効用のパラメータ <span class="math inline">\gamma</span> は <strong>相対的リスク回避度</strong> であり、 <span class="math display">
+\gamma = -\frac{C\,U_{CC}}{U_C}
+</span> で定義されます。<span class="math inline">\gamma</span> が大きいほど家計はリスクを嫌い、消費の変動を避けようとします。また <span class="math inline">1/\gamma</span> は <strong>異時点間の代替弾力性（<em>EIS</em>）</strong> に等しく、実質利子率の変化に対して消費成長率がどれだけ反応するかを表します。</p>
+<p>労働の不効用 <span class="math inline">N^{1+\varphi}/(1+\varphi)</span> におけるパラメータ <span class="math inline">\varphi</span> は <span class="math display">
+\varphi = -\frac{N\,U_{NN}}{U_N}
+</span> で定義されます。<span class="math inline">1/\varphi</span> は <strong>フリッシュ弾力性</strong>（<em>Frisch elasticity</em>）、すなわち限界効用一定のもとでの労働供給の賃金弾力性です。<span class="math inline">\varphi</span> が大きいほど労働供給は賃金変化に対して非弾力的になります。</p>
+</section>
+<section id="生産関数" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="生産関数"><span class="header-section-number">3.2.2</span> 生産関数</h3>
+<p>生産関数は <span class="math display">
+F(N_t) =  N_t^{1-\alpha}
+</span> と仮定します。パラメータ <span class="math inline">1-\alpha</span> は <strong>労働の産出弾力性</strong> であり、 <span class="math display">
+1-\alpha = \frac{N\,F_N}{F}
+</span> で定義されます。これは労働投入を 1% 増やしたときに産出が何%増えるかを表し、完全競争のもとでは労働分配率（<span class="math inline">WN/Y</span>）に一致します。<span class="math inline">\alpha</span> は資本分配率に対応するパラメータですが、本モデルでは資本を捨象しているため、収穫逓減の度合いを制御します。</p>
+</section>
+<section id="価格調整費用関数" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="価格調整費用関数"><span class="header-section-number">3.2.3</span> 価格調整費用関数</h3>
+<p>Rotemberg 型価格調整費用関数を <span class="math display">
+f_P(\Pi_t)=\frac{\eta}{2}(\Pi_t-1)^2
+</span> とすると、 <span class="math display">
+f_P'(\Pi_t)=\eta(\Pi_t-1)
+</span> です。</p>
+</section>
+</section>
+<section id="非線形均衡条件" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="非線形均衡条件"><span class="header-section-number">3.3</span> 非線形均衡条件</h2>
+<p>上の特定化の下で、<span class="math inline">\Pi_t=P_t/P_{t-1}</span> とすると、モデルは以下の非線形方程式系にまとめられます。</p>
+<section id="家計-1" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="家計-1"><span class="header-section-number">3.3.1</span> 家計</h3>
+<p><span class="math display">\begin{aligned}
+1 &amp;= \beta \mathbb{E}_t \left( \frac{C_{t+1}^{-\gamma}}{C_t^{-\gamma}} \frac{R_t^N}{\Pi_{t+1}} \right)\\
+W_t &amp;= C_t^\gamma N_t^\varphi\\
+R_t &amp;= \mathbb{E}_t \left( \frac{R_t^N}{\Pi_{t+1}} \right)
+\end{aligned}</span></p>
+</section>
+<section id="企業-1" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="企業-1"><span class="header-section-number">3.3.2</span> 企業</h3>
+<p><span class="math display">\begin{aligned}
+\eta \Pi_t(\Pi_t-1)
+=&amp;
+\psi \left[MC_t-(1+\sigma)\left(
+   1-\frac{1}{\psi}\right)\right]\\
+&amp;+ \beta \eta \mathbb{E}_t \left[
+\frac{C_{t+1}^{-\gamma}}{C_t^{-\gamma}}
+\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}(\Pi_{t+1}-1)
+\right]\\
+W_t =&amp; (1-\alpha)MC_t \frac{Y_t}{N_t}\\
+D_t =&amp; Y_t - \frac{\eta}{2}(\Pi_t-1)^2 Y_t - W_t N_t\\
+Y_t =&amp; e^{a_t} N_t^{1-\alpha}
+\end{aligned}</span></p>
+</section>
+<section id="金融政策-1" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="金融政策-1"><span class="header-section-number">3.3.3</span> 金融政策</h3>
+<p><span class="math display">
+R_t^N = \frac{1}{\beta} e^{-m_t} \Pi_t^\phi
+</span></p>
+</section>
+<section id="資源制約" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="資源制約"><span class="header-section-number">3.3.4</span> 資源制約</h3>
+<p><span class="math display">\begin{aligned}
+Y_t &amp;= C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2\\
+G_t &amp;= G + g_t Y
+\end{aligned}</span></p>
+</section>
+</section>
+<section id="定常状態" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="定常状態"><span class="header-section-number">3.4</span> 定常状態</h2>
+<p>定常状態ではすべてのショックがゼロで、各変数が一定です。<span class="math inline">\Pi = 1</span>（ゼロインフレ）とすると、価格調整費用がゼロとなり、Euler 方程式とテーラールールからそれぞれ <span class="math inline">R = 1/\beta</span>、<span class="math inline">R^N = 1/\beta</span> が得られます。また、価格設定条件で <span class="math inline">\Pi=1</span> とすると、左辺がゼロになるため <span class="math display">
+MC=(1+\sigma)\left(1-\frac{1}{\psi}\right)
+</span> となります。政府支出比率 <span class="math inline">G_Y \equiv G/Y</span> を所与とすると、資源制約から <span class="math inline">C = (1-G_Y)Y</span>、生産関数から <span class="math inline">Y = N^{1-\alpha}</span> です。賃金の一階条件 <span class="math inline">W = C^\gamma N^\varphi</span> と労働需要条件 <span class="math inline">W = (1-\alpha)MC \cdot Y/N</span> を等置し、<span class="math inline">C</span> と <span class="math inline">Y</span> を <span class="math inline">N</span> で表すと <span class="math display">
+[(1-G_Y)N^{1-\alpha}]^\gamma N^\varphi
+=
+(1-\alpha)MC \cdot N^{-\alpha}
+</span> となります。<span class="math inline">N</span> についてまとめると <span class="math display">\begin{aligned}
+N
+&amp;=
+\left[
+\frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
+\right]^{\frac{1}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+Y
+&amp;=
+N^{1-\alpha}
+=
+\left[
+\frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
+\right]^{\frac{1-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+C &amp;= (1-G_Y)Y\\
+D &amp;= \alpha Y
+\end{aligned}
+</span> を得ます。特に <span class="math inline">\alpha=G_Y=0</span> かつ <span class="math inline">MC=1</span> なら、<span class="math inline">N=Y=W=C=1</span> です。</p>
+</section>
+</section>
+<section id="対数線形化とニューケインジアン方程式" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 対数線形化とニューケインジアン方程式</h1>
+<section id="対数線形化" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="対数線形化"><span class="header-section-number">4.1</span> 対数線形化</h2>
+<p>（<span class="math inline">d_t</span> と <span class="math inline">g_t</span> を除いて）定常状態の周りで各変数を対数線形化します。たとえば <span class="math inline">x_t \equiv \ln X_t - \ln X</span> と書きます。</p>
+<section id="家計-2" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="家計-2"><span class="header-section-number">4.1.1</span> 家計</h3>
+<p><span class="math display">\begin{aligned}
+r_t &amp;= \gamma \mathbb{E}_t \Delta c_{t+1}\\
+w_t &amp;= \gamma c_t + \varphi n_t\\
+r_t &amp;= r_t^N - \mathbb{E}_t \pi_{t+1}
+\end{aligned}</span></p>
+</section>
+<section id="企業-2" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="企業-2"><span class="header-section-number">4.1.2</span> 企業</h3>
+<p><span class="math display">\begin{aligned}
+\pi_t &amp;= \frac{\psi}{\eta} mc_t + \beta \mathbb{E}_t \pi_{t+1}\\
+w_t &amp;= mc_t + y_t - n_t\\
+d_t &amp;= y_t - (1-\alpha)MC(w_t+n_t)\\
+y_t &amp;= a_t + (1-\alpha)n_t
+\end{aligned}</span></p>
+<p>配当の式は以下のように導出します。定常状態では <span class="math inline">\Pi=1</span>（価格調整費用ゼロ）かつ補助金と税が相殺するため、<span class="math inline">D_t = Y_t - W_t N_t</span> です。定常状態の賃金条件 <span class="math inline">W = (1-\alpha)MC \cdot Y/N</span> より <span class="math inline">WN = (1-\alpha)MC \cdot Y</span> なので、<span class="math inline">d_t = (D_t - D)/Y</span> と定義すると <span class="math display">
+d_t = y_t - \frac{WN}{Y}(w_t + n_t) = y_t - (1-\alpha)MC(w_t + n_t)
+</span> となります。</p>
+</section>
+<section id="政策集計" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="政策集計"><span class="header-section-number">4.1.3</span> 政策・集計</h3>
+<p><span class="math display">\begin{aligned}
+r_t^N &amp;= \phi \pi_t - m_t\\
+y_t &amp;= (1-G_Y)c_t + g_t
+\end{aligned}</span></p>
+</section>
+</section>
+<section id="限界費用と自然産出量" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="限界費用と自然産出量"><span class="header-section-number">4.2</span> 限界費用と自然産出量</h2>
+<p>上の対数線形化された式を用いて、限界費用 <span class="math inline">mc_t</span> を産出 <span class="math inline">y_t</span> と外生ショックのみで表します。まず、賃金の 2 つの式を等置すると <span class="math display">
+mc_t = w_t - (y_t - n_t) = \gamma c_t + \varphi n_t - (y_t - n_t)
+</span> となります。資源制約 <span class="math inline">y_t = (1-G_Y)c_t + g_t</span> から <span class="math inline">c_t = (y_t - g_t)/(1-G_Y)</span>、生産関数 <span class="math inline">y_t = a_t + (1-\alpha)n_t</span> から <span class="math inline">n_t = (y_t - a_t)/(1-\alpha)</span> を代入すると <span class="math display">\begin{aligned}
+mc_t
+&amp;=
+\tilde{\gamma}(y_t-g_t)
++ (\tilde{\varphi}+1)(y_t-a_t)
+- y_t\\
+&amp;=
+(\tilde{\gamma}+\tilde{\varphi})
+\left(
+y_t-\zeta_a a_t-\zeta_g g_t
+\right)
+\end{aligned}</span> と整理できます。ここで <span class="math display">
+\tilde{\varphi}=\frac{\varphi+\alpha}{1-\alpha},
+\qquad
+\tilde{\gamma}=\frac{\gamma}{1-G_Y}
+</span> <span class="math display">
+\zeta_a=\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}},
+\qquad
+\zeta_g=\frac{\tilde{\gamma}}{\tilde{\varphi}+\tilde{\gamma}}
+</span> です。</p>
+<p>ここで重要なのは、以後の解が <span class="math inline">\alpha</span> と <span class="math inline">G_Y</span> そのものではなく、<span class="math inline">\tilde{\varphi}</span> と <span class="math inline">\tilde{\gamma}</span> を通じて書けることです。したがって、表記を簡単にするために <span class="math inline">\alpha=0</span>, <span class="math inline">G_Y=0</span> と置いても、本質的には一般性を失いません。これらのパラメータの効果は、再定義された <span class="math inline">\tilde{\varphi}</span> と <span class="math inline">\tilde{\gamma}</span> の中に織り込まれているからです。</p>
+<p><span class="math inline">mc_t=0</span>、つまり価格が柔軟に調整されるときの産出量と利子率を自然産出量および自然利子率と呼びます。自然産出量は <span class="math display">
+y_t^f = \zeta_a a_t + \zeta_g g_t
+</span> となり、自然利子率は <span class="math display">\begin{aligned}
+r_t^f
+&amp;=
+\tilde{\gamma} \mathbb{E}_t [\Delta y_{t+1}^f-\Delta g_{t+1}]\\
+&amp;=
+-\tilde{\gamma}(1-\rho_a)\zeta_a a_t + \tilde{\gamma} (1-\rho_g)(1-\zeta_g) g_t
+\end{aligned}</span> となります。ここで、<span class="math inline">\zeta_a</span> は技術ショックの自然産出量への寄与度、<span class="math inline">\zeta_g</span> は政府支出ショックの自然産出量への寄与度を表します。<span class="math inline">\zeta_a&gt;0</span> および <span class="math inline">0&lt;\zeta_g&lt;1</span> は常に成り立ちます。</p>
+<p><span class="math inline">\zeta_a</span> と 1 の大小関係は <span class="math inline">\tilde{\gamma}</span> と 1 の大小で決まります。生産関数 <span class="math inline">y_t = a_t + (1-\alpha)n_t</span> から自然産出量のもとでの労働反応は <span class="math display">
+n_t^f = \frac{\zeta_a  - 1}{1-\alpha}a_t = \frac{1-\tilde{\gamma}}{(1-\alpha)(\tilde{\gamma}+\tilde{\varphi})}a_t
+</span> となります。</p>
+<ul>
+<li><span class="math inline">\tilde{\gamma} &lt; 1</span>（EIS が高い）のとき <span class="math inline">\zeta_a &gt; 1</span>：技術ショックにより実質賃金が上昇すると、異時点間の代替弾力性が高いため、家計は高い賃金を活かして労働を増やします（代替効果が所得効果を上回る）。労働の増加が生産性の直接的な改善に加わるため、自然産出量は技術ショック以上に増加します。</li>
+<li><span class="math inline">\tilde{\gamma} &gt; 1</span>（EIS が低い）のとき <span class="math inline">0 &lt; \zeta_a &lt; 1</span>：家計は消費の変動を強く嫌うため、技術ショックで豊かになると余暇を増やそうとします（所得効果が代替効果を上回る）。労働が減少するため、生産性改善の一部が相殺され、自然産出量の増加は技術ショックを下回ります。</li>
+<li><span class="math inline">\tilde{\gamma} = 1</span>（EIS=1）のとき <span class="math inline">\zeta_a = 1</span>：所得効果と代替効果がちょうど相殺し、労働は変化しません。自然産出量の増加は技術ショックと等しくなります。</li>
+</ul>
+</section>
+<section id="本のニューケインジアン方程式" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="本のニューケインジアン方程式"><span class="header-section-number">4.3</span> 3本のニューケインジアン方程式</h2>
+<p>需給ギャップを <span class="math display">
+x_t = y_t - y_t^f
+</span> と定義すると、RANK モデルは次の 3 本の式に集約されます。</p>
+<section id="動学的is曲線" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="動学的is曲線"><span class="header-section-number">4.3.1</span> 動学的IS曲線</h3>
+<p>Euler 方程式 <span class="math inline">r_t = \gamma \mathbb{E}_t \Delta c_{t+1}</span> に資源制約 <span class="math inline">c_t = (y_t - g_t)/(1-G_Y)</span> を代入すると <span class="math inline">r_t = \tilde{\gamma} \mathbb{E}_t [ \Delta y_{t+1} - \Delta g_{t+1} ]</span> となります。<span class="math inline">y_t = x_t + y_t^f</span> を用いて自然利子率 <span class="math inline">r_t^f</span> の定義を適用すると <span class="math display">
+r_t = r_t^f + \tilde{\gamma} \mathbb{E}_t \Delta x_{t+1}
+</span> を得ます。この式は、実質利子率が高いほど消費（需要）の成長率が高まることを表しており、IS 曲線の動学版です</p>
+</section>
+<section id="ニューケインジアンフィリップス曲線" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="ニューケインジアンフィリップス曲線"><span class="header-section-number">4.3.2</span> ニューケインジアン・フィリップス曲線</h3>
+<p><span class="math inline">mc_t=(\tilde{\varphi}+\tilde{\gamma})(x_t-\zeta_a a_t-\zeta_g g_t)</span>を <span class="math inline">\pi_t=(\psi/\eta)mc_t+\beta \mathbb{E}_t\pi_{t+1}</span>に代入すると、 <span class="math display">
+\pi_t = \kappa x_t + \beta \mathbb{E}_t \pi_{t+1}
+</span> になります。ただし <span class="math display">
+\kappa = MC(\tilde{\varphi}+\tilde{\gamma})\frac{\psi}{\eta}
+</span> です。この式は、インフレ率が現在の需給ギャップ <span class="math inline">x_t</span> と将来の期待インフレ <span class="math inline">\mathbb{E}_t \pi_{t+1}</span> によって決まることを表しています。需給ギャップが正（超過需要）のとき、企業の限界費用が上昇し、企業は価格を引き上げるためインフレが生じます。</p>
+<p><span class="math inline">\kappa</span> はフィリップス曲線の傾きであり、需給ギャップがインフレにどれだけ波及するかを決めます。<span class="math inline">\kappa</span> は以下の要因で大きくなります。</p>
+<ul>
+<li><span class="math inline">\eta</span> が小さい（価格調整費用が低い）：企業は限界費用の変化をより迅速に価格に転嫁します。</li>
+<li><span class="math inline">\psi</span> が大きい（中間財の代替弾力性が高い）：企業間の競争が激しく、限界費用の変化に対する価格調整のインセンティブが強まります。</li>
+<li><span class="math inline">\tilde{\varphi}+\tilde{\gamma}</span> が大きい（限界費用の産出弾力性が高い）：産出の増加が限界費用を大きく押し上げます。<span class="math inline">\tilde{\varphi}</span> が大きいほど労働の限界不効用が急速に上昇し、<span class="math inline">\tilde{\gamma}</span> が大きいほど消費の限界効用が急速に低下するため、賃金上昇圧力が強まります。</li>
+</ul>
+</section>
+<section id="金融政策ルール" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="金融政策ルール"><span class="header-section-number">4.3.3</span> 金融政策ルール</h3>
+<p><span class="math display">
+r_t = \phi \pi_t - \mathbb{E}_t \pi_{t+1} - m_t
+</span></p>
+<p>この 3 本が、大学院マクロで扱う標準的な NK モデルの中心です。</p>
+</section>
+</section>
+</section>
+<section id="ショック別の比較静学" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> ショック別の比較静学</h1>
+<section id="ショック別の数値解" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="ショック別の数値解"><span class="header-section-number">5.1</span> ショック別の数値解</h2>
+<section id="金融政策ショックのみ" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="金融政策ショックのみ"><span class="header-section-number">5.1.1</span> 金融政策ショックのみ</h3>
+<p><span class="math inline">a_t=g_t=0</span> のとき、<span class="math inline">x_t=y_t</span> かつ <span class="math inline">r_t^f=0</span> です。また <span class="math inline">\mathbb{E}_t\pi_{t+1}=\rho_m\pi_t</span>、<span class="math inline">\mathbb{E}_tx_{t+1}=\rho_m x_t</span> なので、 <span class="math display">\begin{aligned}
+r_t &amp;= \tilde{\gamma}(\rho_m-1)x_t\\
+\pi_t &amp;= \kappa_m x_t\\
+r_t &amp;= (\phi-\rho_m)\pi_t - m_t
+\end{aligned}</span> です。ここで <span class="math display">
+\kappa_m = \frac{\kappa}{1-\beta\rho_m}
+</span> となります。この体系を <span class="math inline">(\pi_t, x_t)</span> 平面上の 2 本の直線として描くことができます。IS 曲線＋政策ルールを組み合わせた式が<strong>総需要（AD）曲線</strong>、フィリップス曲線が<strong>総供給（AS）曲線</strong>に対応します。 <span class="math display">\begin{aligned}
+\pi_t &amp;= \frac{\tilde{\gamma}(\rho_m-1)x_t+m_t}{\phi-\rho_m} &amp; \text{(AD)}\\
+\pi_t &amp;= \kappa_m x_t &amp; \text{(AS)}
+\end{aligned}</span> となり、 <span class="math display">
+x_t = \Omega m_t,
+\qquad
+\pi_t = \kappa_m \Omega m_t,
+\qquad
+r_t = -\Omega_m m_t
+</span> となります。ここで <span class="math display">\begin{aligned}
+   \Omega
+=&amp;
+\frac{1}{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)},\\
+\Omega_m
+=&amp;\tilde{\gamma}(1-\rho_m)\Omega,
+\quad0\leq\Omega,\Omega_m\leq1
+\end{aligned}</span> です。金融緩和ショックは需給ギャップとインフレを押し上げ、実質利子率を低下させます。</p>
+<p>名目利子率は <span class="math display">\begin{aligned}
+r_t^N &amp;= r_t + \mathbb{E}_t \pi_{t+1}=r_t+\rho_m \pi_t\\
+&amp;=\frac{\rho_{m}\kappa_{m}-\tilde{\gamma}(1-\rho_{m})}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}m_{t}
+\end{aligned}</span> となります。金融緩和ショック（<span class="math inline">m_t &gt; 0</span>）は直接的には名目利子率を引き下げますが、インフレ期待の上昇を通じて名目利子率を押し上げる効果もあり、パラメータ次第では名目利子率が上昇しうることがわかります。</p>
+</section>
+<section id="技術ショックのみ" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="技術ショックのみ"><span class="header-section-number">5.1.2</span> 技術ショックのみ</h3>
+<p><span class="math inline">m_t=g_t=0</span> のとき、 <span class="math display">\begin{aligned}
+r_t &amp;= r_t^f+\tilde{\gamma}(\rho_a-1)x_t\\
+\pi_t &amp;= \kappa_a x_t\\
+r_t &amp;= (\phi-\rho_a)\pi_t
+\end{aligned}</span> です。ここで <span class="math display">r_t^f=\tilde{\gamma}\zeta_a(\rho_a-1)a_t,\qquad
+x_t=y_t-\zeta_a a_t</span> です。したがって、AD-AS 表現は <span class="math display">\begin{aligned}
+\pi_t
+&amp;=
+\frac{\tilde{\gamma}(\rho_a-1)x_t+\tilde{\gamma}\zeta_a(\rho_a-1)a_t}{\phi-\rho_a}\\
+\pi_t &amp;= \kappa_a x_t
+\end{aligned}</span> です。ここで <span class="math display">
+\kappa_a = \frac{\kappa}{1-\beta\rho_a}
+</span> となります。したがって <span class="math display">
+x_t = -\zeta_a \Omega_a a_t,
+\qquad
+\pi_t = -\kappa_a \zeta_a \Omega_a a_t,
+\qquad
+r_t = -(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
+</span> です。ここで <span class="math display">
+\Omega_a
+=
+\frac{\tilde{\gamma}(1-\rho_a)}{\kappa_a(\phi-\rho_a)+\tilde{\gamma}(1-\rho_a)},
+\qquad 0\leq\Omega_a\leq1
+</span> です。技術ショックが正であれば自然産出量が上がるため、価格硬直性のもとでは需給ギャップとインフレが低下しうることがわかります。</p>
+</section>
+<section id="政府支出ショックのみ" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="政府支出ショックのみ"><span class="header-section-number">5.1.3</span> 政府支出ショックのみ</h3>
+<p><span class="math inline">m_t=a_t=0</span> のとき、 <span class="math display">\begin{aligned}
+r_t &amp;= r_t^f+\tilde{\gamma}(\rho_g-1)x_t\\
+\pi_t &amp;= \kappa_g x_t\\
+r_t &amp;= (\phi-\rho_g)\pi_t
+\end{aligned}</span> となります。ここで <span class="math display">
+r_t^f=\tilde{\gamma}(1-\zeta_g)(1-\rho_g)g_t,
+\qquad
+x_t=y_t-\zeta_g g_t
+</span> です。AD-AS 表現は <span class="math display">\begin{aligned}
+\pi_t
+&amp;=
+\frac{\tilde{\gamma}(\rho_g-1)x_t+\tilde{\gamma}(1-\zeta_g)(1-\rho_g)g_t}{\phi-\rho_g}\\
+\pi_t &amp;= \kappa_g x_t
+\end{aligned}</span> です。ここで <span class="math display">
+\kappa_g = \frac{\kappa}{1-\beta\rho_g}
+</span> です。したがって <span class="math display">
+x_t = (1-\zeta_g)\Omega_g g_t,
+\qquad
+\pi_t = \kappa_g (1-\zeta_g)\Omega_g g_t,
+\qquad
+r_t = (\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
+</span> です。ここで <span class="math display">
+\Omega_g
+=
+\frac{\tilde{\gamma}(1-\rho_g)}{\kappa_g(\phi-\rho_g)+\tilde{\gamma}(1-\rho_g)},
+\qquad 0\leq\Omega_g\leq1
+</span> です。政府支出拡大は総需要を押し上げるため、需給ギャップとインフレを上昇させます。</p>
+</section>
+<section id="まとめ" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="まとめ"><span class="header-section-number">5.1.4</span> まとめ</h3>
+<p>以上をまとめると、</p>
+<p><span class="math display">\begin{aligned}
+x_t
+&amp;=
+\Omega m_t
+- \zeta_a \Omega_a a_t
++ (1-\zeta_g)\Omega_g g_t\\
+\pi_t
+&amp;=
+\kappa_m \Omega m_t
+- \kappa_a \zeta_a \Omega_a a_t
++ \kappa_g (1-\zeta_g)\Omega_g g_t\\
+r_t
+&amp;=
+-\Omega_m m_t
+-(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
++(\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
+\end{aligned}</span> です。なお、価格が柔軟な時（<span class="math inline">\kappa\to\infty</span>）、<span class="math inline">\Omega,\;\Omega_{m},\;\Omega_{a},\;\Omega_{g}\to 0</span>なので、<span class="math inline">x_t=0</span>。 価格が一定の時（<span class="math inline">\kappa\to0</span>）、<span class="math inline">\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1</span>なので、<span class="math inline">x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}</span>となります。</p>
+<p>また、 <span class="math display">
+y_t = x_t + y_t^f
+</span> より、 <span class="math display">\begin{aligned}
+y_t
+&amp;=
+\Omega_m m_t
++\zeta_a(1-\Omega_a)a_t
++\{1-(1-\zeta_g)(1-\Omega_g)\}g_t\\
+(1-G_Y)c_t
+=
+y_t-g_t
+&amp;=
+\Omega_m m_t
++\zeta_a(1-\Omega_a)a_t
+-(1-\zeta_g)(1-\Omega_g)g_t\\
+(1-\alpha)n_t
+=
+y_t-a_t
+&amp;=
+\Omega_m m_t
+-\{1-\zeta_a(1-\Omega_a)\}a_t
++\{1-(1-\zeta_g)(1-\Omega_g)\}g_t
+\end{aligned}</span> と、産出・消費・労働の反応も復元できます。特に価格が一定の時、<span class="math inline">y_t=m_t/\{\tilde{\gamma}(1-\rho_m)\} + g_t</span> となります。</p>
+<p>この式から、各ショックの直観的な効果も読み取れます。</p>
+<ul>
+<li>金融政策ショック <span class="math inline">m_t</span> は、<span class="math inline">y_t</span>, <span class="math inline">c_t</span>, <span class="math inline">n_t</span> のすべてを押し上げます。金融緩和によって実質利子率が低下し、総需要が拡大するためです。</li>
+<li>技術ショック <span class="math inline">a_t</span> は、<span class="math inline">y_t</span> を押し上げます。生産性の改善によって自然産出量が増加するためです。</li>
+<li>技術ショック <span class="math inline">a_t</span> は、<span class="math inline">c_t</span> にもプラスです。より少ない労働でより多くの財を生産できるため、消費可能資源が増えます。</li>
+<li>技術ショック <span class="math inline">a_t</span> は、<span class="math inline">n_t</span> には <span class="math inline">\tilde\gamma&gt;1</span> の時、明確にマイナスです。生産性上昇により同じ産出をより少ない労働で達成できるためです。</li>
+<li>政府支出ショック <span class="math inline">g_t</span> は、<span class="math inline">y_t</span> にはプラスです。総需要の増加が産出を押し上げるためです。</li>
+<li>政府支出ショック <span class="math inline">g_t</span> は、<span class="math inline">c_t</span> にはマイナスです。資源制約のもとで政府支出の増加が民間消費を押しのけるためです。</li>
+<li>政府支出ショック <span class="math inline">g_t</span> は、<span class="math inline">n_t</span> にはプラスです。政府需要の増加に対応して生産を増やすため、労働投入が増加します。</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="直観的な含意とまとめ" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 直観的な含意とまとめ</h1>
+<section id="直観的な含意" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="直観的な含意"><span class="header-section-number">6.1</span> 直観的な含意</h2>
+<ol type="1">
+<li><p><strong>金融政策の実体効果</strong><br>
+価格硬直性があるため、名目金利の変更は実質金利を通じて需要に影響し、産出とインフレを動かします。</p></li>
+<li><p><strong>自然産出量と需給ギャップの分離</strong><br>
+技術ショックや政府支出ショックは自然産出量を動かすため、単に産出の動きだけでは景気の過熱・不足を判断できません。</p></li>
+<li><p><strong>テーラー原則の重要性</strong><br>
+<span class="math inline">\phi&gt;1</span> はインフレ上昇時に実質金利を十分引き上げるため、均衡の安定性に重要です。</p></li>
+<li><p><strong>RANK の限界</strong><br>
+代表的家計を仮定しているため、異質性や流動性制約、分配面の効果は捨象されています。これが次の TANK や HANK への出発点です。</p></li>
+</ol>
+</section>
+<section id="まとめ-1" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="まとめ-1"><span class="header-section-number">6.2</span> まとめ</h2>
+<p>本講義では、RANK モデルを</p>
+<ol type="1">
+<li>家計・企業・政府の最適化問題</li>
+<li>非線形均衡条件</li>
+<li>定常状態</li>
+<li>対数線形化された 3 本の NK 方程式</li>
+<li>ショック別の均衡反応</li>
+</ol>
+<p>という順に整理しました。</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

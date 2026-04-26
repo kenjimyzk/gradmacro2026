@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="宮﨑憲治">
+<meta name="dcterms.date" content="2026-04-14">
+
+<title>Bilbiie, Heterogeneous Agent Macroeconomics Chapter 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch1-summary_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch1-summary_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch1-summary_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch1-summary_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch1-summary_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch1-summary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch1-summary_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../textbook-Ch1-summary.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bilbiie, <em>Heterogeneous Agent Macroeconomics</em> Chapter 1</h1>
+<p class="subtitle lead">トピックセンテンス一覧（日本語版）</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>宮﨑憲治 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 14, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="preface序文" class="level2">
+<h2 class="anchored" data-anchor-id="preface序文">Preface（<strong>序文</strong>）</h2>
+<ol type="1">
+<li><p><strong>異質性は「些末な複雑化」ではないという確信が本書の出発点である</strong>: 本書は、異質性がマクロ経済学にとって本質的であるという確信のもと、逆風の中で20年以上にわたり考え抜いてきた研究から生まれた。当時の主流見解は「異質性は概念的に重要ではない」というものだったが、著者はその見解を支持しなかった。</p></li>
+<li><p><strong>実証研究が消費の異質性の重要性を裏付けていた</strong>: 著者だけでなく多くの研究者が、消費の異質性・所得リスク・資産格差の実証的重要性を認識していた。Zeldes、Campbell–Mankiw、Carroll、Bewley–Aiyagari等の先行研究は、集計量の裏にある豊かな経済活動を既に示していた。</p></li>
+<li><p><strong>核心的課題は「NKの透明性を保ったまま異質性を組み込めるか」だった</strong>: 経済的に意味のある異質性を取り入れつつ、ニュー・ケインジアン・フレームワークの透明性と規律を失わないこと——これが常に変わらぬ課題であった。著者の初期のTANKモデルはこの課題への回答であった。</p></li>
+<li><p><strong>2010年代半ばにHANKモデルが登場し、異質性が周辺から中核へ移動した</strong>: 長年静かに発展していたアイデアが、2010年代半ばのHANKモデルの登場により一気に主流化した。かつて周辺的とされた異質性のメカニズムが中心的な位置を占めるようになった。</p></li>
+<li><p><strong>本書の目的は「優先権の主張」ではなく「一貫した統合的フレームワークの提供」である</strong>: 本書を書く目的は、誰が何を最初にやったかを主張することではなく、これまでに学んだことを透明にする統一的でトラクタブルなフレームワークを提供し、分析的洞察・実証的基礎・最新の定量的成果をつなぐことである。</p></li>
+<li><p><strong>異質的エージェント版NKモデルはRANKの3方程式構造を保ちつつ分配的な力を内包する</strong>: ベースラインNKモデルがオイラー方程式・フィリップス曲線・テイラールールで構成されるように、異質的エージェント版もこのアーキテクチャを概ね維持する。違いは、「集計オイラー方程式」に分配的な力（<strong>循環的不平等、予備的貯蓄、循環的リスク</strong>）が内包される点であり、これらが代表的エージェント・ベンチマークにはない増幅メカニズムを生む。</p></li>
+<li><p><strong>教育的であっても過度な単純化はしない——トラクタビリティは美学ではなく方法論的選択である</strong>: RANK→TANK→HANKと段階的に理解を深められる構成を目指している。トラクタビリティは美学的嗜好ではなく、モデルを正直に保ち、メカニズムを明示し、比較静学を鋭くする方法論的な選択である。</p></li>
+<li><p><strong>「キリン投影」のメタファーがトラクタビリティの本質を説明する</strong>: 高次元の対象（<strong>キリン</strong>）を二次元に投影する際、角度が悪ければ本質は見えない。しかし正しい角度から見れば、特徴的なシルエットが現れる——トラクタビリティとはまさにこの「正しい投影角度を選ぶ技術」である。</p></li>
+<li><p><strong>トラクタブルなモデリングとは家計分布を本質的な次元に投影する作業である</strong>: 家計の完全な分布という高次元オブジェクトを、本質を明らかにする次元に沿って投影する。投影が適切に選ばれれば、問いにとって重要な次元が正確に浮かび上がる。</p></li>
+<li><p><strong>トラクタビリティは「目的としての単純化」ではなく「経済学の可読性を保つ投影法の選択」である</strong>: それ自体が目的である単純化ではなく、経済学が引き続き読解可能であるための適切な投影法を選択する技術である。</p></li>
+<li><p><strong>トラクタブルモデルはHANKモデルの「代替」ではなく「補完」であり、明確化のためのツールである</strong>: トラクタブルモデルは高次元HANKモデルを「置き換える」ものでも現実を過度に単純化するものでもない。両者は強い補完関係にあり、トラクタブルモデルの役割は経済学を明確にすること——異質性がどこで・なぜ・どのように重要かを示すことである。</p></li>
+<li><p><strong>本書は特定の研究路線の「祝杯」ではなく、急速に発展した分野の統合と体系化の試みである</strong>: 本書は分析的アプローチと定量的アプローチをつなぎ、異質性のマクロ経済的帰結を理解したい学生・研究者・政策立案者にロードマップを提供する分野統合の試みである。</p></li>
+<li><p><strong>本書が教育・政策双方で異質的エージェントマクロの構造理解に貢献することを願う</strong>: 学生・研究者に構造の理解を、政策機関に分配チャネルの体系的思考を促すことができれば、本書はその目的を果たす。成功するとすれば、それは本書が新たに何かを創り出したからではなく、常にそこにあった組織原理が明確化されたからである。</p></li>
+<li><p><strong>共著者・共同研究者への知的負債の承認</strong>: 20年以上にわたる共同研究の中で多くの共著者から学んだことへの感謝が述べられている。各貢献は該当する章で具体的に触れられる。</p></li>
+</ol>
+</section>
+<section id="introduction導入" class="level2">
+<h2 class="anchored" data-anchor-id="introduction導入">Introduction（<strong>導入</strong>）</h2>
+<ol start="15" type="1">
+<li><p><strong>マクロ経済学は「単純さの問題」を抱えている——代表的エージェントNKモデルは教えやすいが現実を犠牲にしていた</strong>: RANKモデルは分析的に鋭く、トラクタブルで、教育的に優れていた。その論理は黒板上で完結し、IS曲線とフィリップス曲線を導出できた。しかしまさにその単純さが問題であった。</p></li>
+<li><p><strong>代表的家計は実際の家計と乖離しており、異質的エージェント革命が必要となった</strong>: 代表的家計のオイラー方程式、異時点間の消費平滑化、摩擦のないバランスシートは、限界消費性向・資産格差・流動性制約に関するミクロ実証データとかけ離れている。不平等や政策の分配効果について信頼性をもって語るには、代表的エージェントでは限界がある。</p></li>
+<li><p><strong>現代マクロ経済学は「Aggregate（集計量）」から「Aggregated（集計された）」需給への旅である</strong>: 異質性を消し去るモデルから、集計そのものが自明でない経済的問題となるモデルへの移行が、現代マクロ経済学の本質である。</p></li>
+<li><p><strong>Bewley–AiyagariからHANKへのリアリズム追求は、あまりにも頻繁に透明性を犠牲にしてきた</strong>: 高次元の状態空間、数値的な価値関数、無数のグリッド、計算のブラックボックスが、学生と経済メカニズムの間に立ちはだかっている。存在と一意性は証明できるが、直感は証明できない。シミュレーションはできるが、導出はできない。</p></li>
+<li><p><strong>本書はNKのエレガンスとHAの現実主義を「計算の藪に迷い込まずに」橋渡しする</strong>: 中心的なアイデアは、NKの伝統のマクロ経済的洞察と政策の明快さを保持しつつ、分析的にトラクタブルで、実証的に根拠があり、直感的に透明な形で異質性を埋め込めるということである。</p></li>
+<li><p><strong>アプローチの礎石は「トラクタブルな異質性」——代表的エージェントを打破するに十分だが低次元で解ける構造化された異質性</strong>: THANKフレームワークは、TANKモデルの論理、一般化された限界消費性向、少数の十分統計量で捉えられる分配効果の上に構築される。目標は定量的HANKのすべての詳細を近似することではなく、重要なメカニズムを理解することである。</p></li>
+<li><p><strong>「二つ（のタイプ）では少なすぎない」——表現の単純さは内容の単純さを意味しない</strong>: デジタル画像もゲノム配列も0と1だけで符号化される。複雑さはアルファベットのサイズではなく組み合わせから生まれる。同様に、TANKやTHANKモデルは少数の家計タイプで定量HANKの本質的メカニズムを符号化できる。</p></li>
+<li><p><strong>アプローチの核心は「集計（された）需要」であり、集計オイラー方程式が分配が集計動学を形作る「マスター方程式」的な役割を果たす</strong>: RANKレベルではオイラー方程式は単なる異時点間条件だが、TANKレベルでは原始的な「マスター方程式」として機能し、THANKレベルではその類推がより厳密になる。トラクタブルなアプローチは、高次元の分配的固定点を解くことなく、これらの力を分析的本質に蒸留する。</p></li>
+<li><p><strong>代表的エージェントから離れると、従来のNKの論理は物語の「全部」ではなくなる——多くの新しい政策チャネルが生まれる</strong>: 金融政策には直接的な分配効果が生じ、財政乗数は誰が移転を受け取るかに依存し、フィリップス曲線・IS曲線・自然利子率は新しい解釈を獲得する。重要なことに、このフレームワークは政策機関に、分配チャネルを「後付け」ではなく既知のNKアーキテクチャ内で推論するツールを与える。</p></li>
+<li><p><strong>教育上幸運なことに、コアフレームワークはWoodford-Galíの3方程式モデル構造に驚くほど近い</strong>: 分配チャネルを組み込んでいるにもかかわらず、集計されたシステムは依然として3方程式モデル（<strong>集計需要ブロック、集計供給ブロック、政策ルール</strong>）である。異質性はこれらの方程式を変形するが、ミクロの詳細で溺れさせることはない。</p></li>
+<li><p><strong>本書は第一原理からTANKとTHANKモデルを導出し、メカニズムに焦点を当て、最小限の代数で最大限の明快さを目指す</strong>: 展開は意図的に分析的である。重要な方程式は導出され、重要でないものは避けられる。焦点はシミュレーション・アルゴリズムではなくメカニズムにある。経済学を理解することが目的であり、グリッドを理解することではない。</p></li>
+<li><p><strong>本書が大学院教育の後継・政策への橋渡し・研究者の概念的基盤として機能することを願う</strong>: 本書は、単純なNKモデルの現代的後継、理論から政策への架け橋、そしてトラクタビリティを犠牲にすることなく異質性を理解しようとする研究者のバックボーンとなることを目指す。</p></li>
+<li><p><strong>異質性はマクロ経済学への「複雑な追加物」ではなく、より深い理解の方法である</strong>: 適切な構造があれば、異質性は簡潔に、分析的に、透明に扱える。一言で言えば「異質性を、ニュー・ケインジアンの方法で」ということである。</p></li>
+</ol>
+</section>
+<section id="scope-and-disclaimers範囲と免責事項" class="level2">
+<h2 class="anchored" data-anchor-id="scope-and-disclaimers範囲と免責事項">Scope and Disclaimers（<strong>範囲と免責事項</strong>）</h2>
+<ol start="28" type="1">
+<li><p><strong>本書はあえて「家計の異質性」×「トラクタブルNK的枠組み」に焦点を絞る——トラクタビリティは限界ではなく設計原理である</strong>: 異質性には企業・金融仲介・信念・労働市場など多くの領域があるが、本書は意図的に狭い焦点を取る。トラクタビリティにこだわることで、フレームワークは十分に透明であり続け、より豊かな異質性への拡張が可能になる。</p></li>
+<li><p><strong>本書は網羅的HANKレビューではなく、分析的精神を共有するトラクタブルな系譜の統合である</strong>: トラクタブルな系譜に焦点を絞ることで、読者が現代の定量HANKモデルを読み解くための明確なツールキットを提供し、他の方向へ適応・拡張可能な柔軟性を確保することを目指す。</p></li>
+</ol>
+</section>
+<section id="some-history-of-thought学説史" class="level2">
+<h2 class="anchored" data-anchor-id="some-history-of-thought学説史">Some History of Thought（<strong>学説史</strong>）</h2>
+<ol start="30" type="1">
+<li><p><strong>異質的エージェントマクロの歴史は、数十年にわたり並行発展した二つの伝統がようやく収斂した物語である</strong>: 地理・イデオロギー・計算文化によって隔てられた二つの学派がなぜ分かれ、どう収斂してきたかを理解することで、なぜいまトラクタビリティが重要なのかが明らかになる。</p></li>
+<li><p><strong>第一の伝統（Bewley–Huggett–Aiyagari系）は不完全市場の一般均衡モデルを発展させたが、NKとの統合は困難だった</strong>: これらのモデルは定常的資産分布と予備的貯蓄動機を生み出し、Krusell–Smith（<strong>1998年</strong>）により景気循環への拡張がなされた。しかし計算集約的であり、動学的NKフレームワークとの統合は技術的に難しかった。</p></li>
+<li><p><strong>第二の伝統（消費理論系）は限界消費性向・流動性制約のミクロ的基礎を提供したが、一般均衡ではなかった</strong>: Zeldes、Campbell–Mankiw、Carrollらは過剰感応性、手元にある消費、バッファーストック貯蓄について深い行動的洞察を提供した。部分均衡だったが、後に定量HANKの中核となる直感の源泉であった。</p></li>
+<li><p><strong>二つの伝統は長い間ほぼ交流がなかった——一方は計算的、他方は分析的; 一方は淡水、他方は塩水であった</strong>: マクロ経済学の主流は両者の間に位置し、代表的エージェントを使い続けた。それ以上のリアリズムを追求するには200のグリッド点か、神聖不可侵な異時点間オイラー方程式の放棄が必要だったからである。</p></li>
+<li><p><strong>収斂は二つの方向から、ゆっくりと不均一に始まった</strong>: 一方はNKモデルに少しの異質性を加える「トップダウン」、他方はHAモデルにNKの特徴を加える「ボトムアップ」であった。</p></li>
+<li><p><strong>方向（1）トップダウン：2000年代にNKモデルに控えめな異質性が加えられ、TANKモデルが生まれた</strong>: ルール・オブ・サム家計、手元消費エージェント、流動性制約がNKに導入された。Bilbiie（<strong>2008年</strong>）は分析面から、Galí–López-Salido–Vallés（<strong>2007年</strong>）は数値面から、控えめな異質性でも財政金融政策の効果が劇的に変わることを示した。これが代表的エージェントの土台に最初の亀裂を入れた。</p></li>
+<li><p><strong>方向（2）ボトムアップ：2010年代にHA文献がNKの特徴を取り込み、現代HANKが誕生した</strong>: 完全なBewley–Aiyagariの世界に粘着価格・金融政策ルール・景気循環ショックが加えられた。</p></li>
+<li><p><strong>実証研究の爆発（家計レベルデータの蓄積）が収斂を強力に後押しした</strong>: PSID、CEX、SCFなどの家計レベルデータセットが所得動態・格差・消費反応の異質性を記録した。特にKaplan–Violanteの「裕福な手元消費家計」は、限界消費性向の大きさと流動性の異質性の重要性を決定的に示した。</p></li>
+<li><p><strong>「完全HANK」文献は二つのサブセットから構成される第一波として出現した</strong>: Oh–ReisとGuerrieri–Lorenzoniは応用的な問い（<strong>移転の効果・デレバレッジ</strong>）に答え、McKay–ReisとGornemann–Kuester–Nakajimaはより方法論的な基礎を築いた。その後の「成熟期」にMcKay–Nakamura–Steinssonらがフレームワークを確立した。</p></li>
+<li><p><strong>KMV論文は二つの重要な洞察を結晶させた——手元消費行動の普遍性と連続時間手法による解法の可能性</strong>: 第一に、手元消費行動は富裕層にも広がっており、TANKの限界とされた「手元消費者は少数で無視できる」という通念を覆した。第二に、連続時間手法を用いることでHANKがミクロとマクロの両方のモーメントに適合する数値的にトラクタブルなモデルとなることが示された。</p></li>
+<li><p><strong>計算フロンティアは急速に進展する一方で、「よりシンプルで透明な構造」でメカニズムを捉えられるという認識が高まっている</strong>: この分野は急速に収斂している。定量HANKのツールを深く学ぶ必要がある一方で、重要なメカニズムの多くはより単純で透明な構造を通じて捉え・理解できるという気づきが広がっている。</p></li>
+<li><p><strong>ここでトラクタビリティが再び舞台に登場する</strong>: 定量HANKの洞察を把握しつつ、分析的明快さを回復するという要求に応えるため、トラクタブルなアプローチが改めて必要とされている。</p></li>
+<li><p><strong>過去10年で解析的THANK等のフレームワークが出現し、少数の実証的に測定可能な弾力性と割合で異質性の本質を凝縮した</strong>: 著者のTHANKモデルや、Ravn–Sterk、Werning、Acharya–Dograらによる貢献は、所得リスク・予備的貯蓄・流動性の役割に焦点を当て、数値的手法に頼らずに完全HANKモデルの最も重要な概念的洞察を得られることを示した。</p></li>
+<li><p><strong>本書の目標は「中間車線」——HANKの本質的洞察を保ちつつNKの分析的規律と教育的明快さを失わないトラクタブルNKフレームワークの構築</strong>: 完全HANKフロンティアのすべての計算的詳細を複製するのではなく（<strong>不可能かつ不要</strong>）、実証・定量研究が本質的と示したメカニズム（<strong>MPC異質性、流動性制約、自己保険、予備的貯蓄、所得・資産ミックス、分配的政策チャネル</strong>）を蒸留することである。</p></li>
+<li><p><strong>集計オイラー方程式は平均場ゲームの「マスター方程式」と概念的に類似する</strong>: TANKとTHANKモデルの集計オイラー方程式は、Lasry–LionsやHuang–Malhamé–Cainesの平均場ゲーム文献における「マスター方程式」と概念的に類似した役割を果たす。ただしこの類推は概念的なものであり、技術的なものではない。</p></li>
+<li><p><strong>この概念的並行関係はマクロ経済学の中で明示的に現れ始めている（Ahn, Kaplan, Moll, Winberry, Wolf）</strong>: 彼らの研究はまさにTHANKフレームワークが依拠する点を浮き彫りにしている——多くのマクロ政策の問いにおいて、異質性の集計量への影響は完全な分布PDEではなく少数の弾力性で要約できるということである。</p></li>
+<li><p><strong>トラクタブルなアプローチは完全なマスター方程式を解かず、集計動学を形作る最小限の分配統計量を抽出する</strong>: 数学的機構なしに経済学を保持する、異質的動学の低次元表現を目指す。</p></li>
+<li><p><strong>トラクタビリティは美学的嗜好ではなく「経済学を明確に見る方法」である</strong>: トラクタビリティとは、複雑さを回避する怠惰ではなく、本質に焦点を合わせるための戦略的選択である。</p></li>
+<li><p><strong>本書が成功すれば、読者は「森と木の両方」を見る——メカニズムは照らされ、単純さは「仮定」ではなく「獲得」されたものとなる</strong>: 経済的直感が隠されるのではなく照らされ、単純さが仮定されるのではなく獲得され、そして直感がそれが属する場所——中心——に据えられることが目指されている。</p></li>
+</ol>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

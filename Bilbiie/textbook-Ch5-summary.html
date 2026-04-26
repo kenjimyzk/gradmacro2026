@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>textbook-ch5-summary</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="textbook-Ch5-summary_files/libs/clipboard/clipboard.min.js"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/popper.min.js"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="textbook-Ch5-summary_files/libs/quarto-html/anchor.min.js"></script>
+<link href="textbook-Ch5-summary_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="textbook-Ch5-summary_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="textbook-Ch5-summary_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="textbook-Ch5-summary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="textbook-Ch5-summary_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="bilbiie-heterogeneous-agent-macroeconomics-chapter-5-トピックセンテンス一覧日本語版" class="level1">
+<h1>Bilbiie, <em>Heterogeneous Agent Macroeconomics</em> Chapter 5: トピックセンテンス一覧（日本語版）</h1>
+<section id="導入部" class="level2">
+<h2 class="anchored" data-anchor-id="導入部">導入部</h2>
+<ol type="1">
+<li><strong>本章はTHANKモデルに流動性（政府債券）を導入し、予備的貯蓄の分析解とiMPC（異時点間限界消費性向）の解析的表現を導出する</strong>: 前章のゼロ流動性THANKでは予備的貯蓄の「動機」のみが存在したが、本章では家計が国債を用いて固有所得リスクに対する自己保険を実際に行えるようにする。これによりHANK文献の重要な十分統計量であるiMPCのマッチングと、代替的政策ルールによる決定性の達成が可能となる。</li>
+</ol>
+</section>
+<section id="thank-with-bonds-liquidity債券流動性付きthank" class="level2">
+<h2 class="anchored" data-anchor-id="thank-with-bonds-liquidity債券流動性付きthank">THANK with Bonds-Liquidity（<strong>債券流動性付きTHANK</strong>）</h2>
+<ol start="2" type="1">
+<li><p><strong>政府債券 <span class="math inline">\(B_{t+1}\)</span> を導入し、政府予算制約 <span class="math inline">\(B_{t+1} = R_t B_t - T_t\)</span> の下で家計の予算制約を拡張する</strong>: H家計は <span class="math inline">\(C_t^H = \hat{Y}_t^H + \frac{1-s}{\lambda}R_t B_t\)</span> で債券からの利子移転を受け、S家計は <span class="math inline">\(C_t^S + \frac{1}{1-\lambda}B_{t+1} = \hat{Y}_t^S + \frac{s}{1-\lambda}R_t B_t\)</span> で貯蓄を行う。H家計は貯蓄を選択しない（<span class="math inline">\(Z_{t+1}^H = 0\)</span>）均衡に焦点を当てる。</p></li>
+<li><p><strong>債券の島間フローを第4章の遷移行列と結合すると、各島の債券保有は集計債券の単純な線形関数となる</strong>: <span class="math inline">\(B_{t+1}^S = \frac{s}{1-\lambda}B_{t+1}\)</span>、<span class="math inline">\(B_{t+1}^H = \frac{1-s}{\lambda}B_{t+1}\)</span>。流動性需要はS家計の自己保険オイラー方程式で決定される。</p></li>
+</ol>
+</section>
+<section id="demand-for-bonds-liquidity-in-thankthankにおける債券流動性の需要" class="level2">
+<h2 class="anchored" data-anchor-id="demand-for-bonds-liquidity-in-thankthankにおける債券流動性の需要">Demand for Bonds-Liquidity in THANK（<strong>THANKにおける債券流動性の需要</strong>）</h2>
+<ol start="4" type="1">
+<li><p><strong>均衡予算 <span class="math inline">\(T = (R-1)B\)</span> の定常状態で、対数効用（<span class="math inline">\(\sigma=1\)</span>）の下での定常債券需要の解析解が導出される</strong>: 定常債券需要は実質利子率の増加凸関数であり、Aiyagari（1994）モデルやKaplan et al.（2018）のHANKモデルにおける流動資産需要の解析的対応物である。</p></li>
+<li><p><strong>完全市場利子率 <span class="math inline">\(R \to \beta^{-1}\)</span> への極限で、定常債券需要は <span class="math inline">\(\bar{B}\)</span> に収束し、<span class="math inline">\(\bar{B} &gt; 0\)</span> には定常不平等 <span class="math inline">\(\Gamma &gt; 1\)</span> が必要</strong>: 二状態間で所得が異ならなければ予備的貯蓄動機が消失し、正の流動性需要は生じない。</p></li>
+<li><p><strong>正の定常流動性需要の条件は <span class="math inline">\(\frac{1-s}{\lambda} &gt; 1 - \beta\)</span> であり、これはiMPCの存在と均衡決定性の条件と一致する</strong>: この条件は固有リスクの割引現在価値合計 <span class="math inline">\(\frac{1-s}{1-\beta}\)</span> がH状態の無条件確率 <span class="math inline">\(\lambda\)</span> を超えることを要求する。同一条件が（i）iMPCの内生的持続性と（ii）均衡決定性の両方に必要となる点は「魔法のような」一致である。</p></li>
+</ol>
+</section>
+<section id="impcs-and-intertemporal-propagationimpcと異時点間伝播" class="level2">
+<h2 class="anchored" data-anchor-id="impcs-and-intertemporal-propagationimpcと異時点間伝播">iMPCs and Intertemporal Propagation（<strong>iMPCと異時点間伝播</strong>）</h2>
+<ol start="7" type="1">
+<li><p><strong>iMPCは時点 <span class="math inline">\(t\)</span> の集計消費の時点 <span class="math inline">\(t+k\)</span> の集計可処分所得に対する偏微分 <span class="math inline">\(M_{t,t+k} = \frac{\partial c_t}{\partial \hat{y}_{t+k}}\)</span> として定義される</strong>: Auclert et al.（2018）のHANKモデルにおいて、iMPCは財政政策の効果と一般均衡効果の大きさを決定する鍵となる十分統計量である。</p></li>
+<li><p><strong>TANKモデルはインパクトiMPCの高さを再現できるがその後の指数的減衰を再現できないのに対し、THANKモデルはデータのiMPCパターンをマッチングできる</strong>: TANKではH家計の割合を増やすことでインパクトiMPCを高められるが、緩やかな減衰パターンは生成できない。THANKは固有リスクと自己保険の存在により、この異時点間増幅を内生的に生む。</p></li>
+</ol>
+</section>
+<section id="impcs-in-the-oscillating-thankオシレーティングthankのimpc" class="level2">
+<h2 class="anchored" data-anchor-id="impcs-in-the-oscillating-thankオシレーティングthankのimpc">iMPCs in the Oscillating THANK（<strong>オシレーティングTHANKのiMPC</strong>）</h2>
+<ol start="9" type="1">
+<li><p><strong><span class="math inline">\(s=0\)</span>（オシレーティングTHANK、<span class="math inline">\(\lambda=1/2\)</span>）の特殊ケースでは、消費関数が過去・現在・将来の可処分所得の線形関数として閉じた形で得られる</strong>: 流動性需要は <span class="math inline">\(b_{t+1} = \frac{\hat{y}_t^S - E_t\hat{y}_{t+1}^H}{2(1+\beta^{-1})} + \frac{\sigma(i_t - E_t\pi_{t+1})}{2(1+\beta^{-1})}\)</span> で与えられ、将来のH状態所得の低下期待や高い実質利子率が貯蓄を増やす。</p></li>
+<li><p><strong>オシレーティングケースのiMPCは <span class="math inline">\(\chi\)</span> の役割を明確にする：<span class="math inline">\(\chi\)</span> が増加すると家計はニュースショックにより敏感になり、過去・現在の所得変化への反応は低下する</strong>: <span class="math inline">\(\beta=0.95\)</span>、<span class="math inline">\(\chi=1.47\)</span> の設定でAuclert et al.（2018）のインパクトiMPC 0.55 と <span class="math inline">\(\frac{\partial c_{T+1}}{\partial \hat{y}_T} = 0.15\)</span> をマッチングできる。</p></li>
+</ol>
+</section>
+<section id="impcs-in-the-general-thank一般thankのimpc" class="level2">
+<h2 class="anchored" data-anchor-id="impcs-in-the-general-thank一般thankのimpc">iMPCs in the General THANK（<strong>一般THANKのiMPC</strong>）</h2>
+<ol start="11" type="1">
+<li><p><strong>一般ケースでは動的流動性需要が二階差分方程式 <span class="math inline">\(E_t b_{t+2} - \Theta b_{t+1} + \beta^{-1}b_t = \ldots\)</span> として表され、安定根 <span class="math inline">\(x_b\)</span> による後方-前方解法で解かれる</strong>: <span class="math inline">\(0 &lt; x_b &lt; 1\)</span> は <span class="math inline">\(\beta &gt; 1 - \frac{1-s}{\lambda}\)</span>（正の流動性需要条件と同一）のとき保証される。集計消費関数はこの資産動学解を集計予算制約に代入して得られる。</p></li>
+<li><p><strong>THANKのiMPCは <span class="math inline">\(t \leq T-1\)</span>、<span class="math inline">\(t = T\)</span>、<span class="math inline">\(t \geq T+1\)</span> の三ケースの閉じた解析式で与えられ、<span class="math inline">\(\chi\)</span> の増加は <span class="math inline">\(t &lt; T\)</span> でiMPCを増加させ <span class="math inline">\(t \geq T\)</span> で減少させる</strong>: これはショック前の「前方増幅」とショック後の「後方減衰」の二重構造を生み、データのiMPCパターンと整合的である。</p></li>
+<li><p><strong><span class="math inline">\(\lambda=0.33\)</span>、<span class="math inline">\(s=0.82\)</span>（四半期0.96）、<span class="math inline">\(\chi=1.4\)</span> のキャリブレーションでFagereng et al.（2021）のデータとAuclert et al.のHANKモデルのiMPCを再現する</strong>: THANKのiMPCは数年後に効果が消滅する指数的減衰を示すのに対し、TANKの <span class="math inline">\(\frac{dc_T}{d\hat{y}_T} = \lambda\chi + (1-\lambda\chi)(1-\beta)\beta^T\)</span> はこの異時点間増幅を完全に欠く。</p></li>
+<li><p><strong>オシレーティングTHANKのiMPC合計 <span class="math inline">\(\sum_{j=-1}^{1}\frac{\partial c_{T+j}}{\partial \hat{y}_T} = 1 + (1-\chi)\frac{1-\beta}{1+\beta}\)</span> は、<span class="math inline">\(\chi &lt; 1\)</span> のとき1を超え、Auclert et al.の決定性条件と一致する</strong>: iMPC合計が1超であることはモデルが「爆発的」であり決定性が成立することを意味する。HANKテイラー原理がTHANKの決定性条件と密接に関連する。</p></li>
+</ol>
+</section>
+<section id="virtuous-policies-in-hank-debt-quantity-rulehankにおける美徳的政策債務量ルール" class="level2">
+<h2 class="anchored" data-anchor-id="virtuous-policies-in-hank-debt-quantity-rulehankにおける美徳的政策債務量ルール">Virtuous Policies in HANK: Debt Quantity Rule（<strong>HANKにおける美徳的政策：債務量ルール</strong>）</h2>
+<ol start="15" type="1">
+<li><p><strong>Hagedorn（2021）の名目公的債務量固定ルール <span class="math inline">\(b_{T+1}^N \equiv b_{T+1} = 0\)</span> はTHANKモデルでも決定性を達成する</strong>: 物価水準の上昇は実質債務を低下させ、FTPLとは異なり政府は毎期の予算制約を税で充足する（リカーディアン財政政策）。</p></li>
+<li><p><strong>債務量ルール下の決定性条件は正の流動性需要条件 <span class="math inline">\(\frac{1-s}{\lambda} &gt; 1 - \beta\)</span> と一致する</strong>: 十分に定義された債券需要が存在すれば、反循環的不平等の場合でも債務量ルールは常に決定性を達成する。これはキャッチ22からの別の脱出経路を提供する。</p></li>
+</ol>
+</section>
+<section id="notes-on-the-literature文献ノート" class="level2">
+<h2 class="anchored" data-anchor-id="notes-on-the-literature文献ノート">Notes on the Literature（<strong>文献ノート</strong>）</h2>
+<ol start="17" type="1">
+<li><p><strong>Auclert et al.（2018）のiMPCによる「異時点間ケインジアン・クロス」とHagedorn et al.（2019）の財政乗数メカニズムがTHANKの解析的iMPCの定量的対応物である</strong>: Bilbiie（2024、2019年WP版）はHA モデルにおけるiMPCの最初の閉じた解析的導出を提供した。Cantore and Freund（2021）はポートフォリオ調整費用付きTANKで代替的な解析iMPCを導出し、Wolf（2021）はOLGモデルで別の計算を提供した。</p></li>
+<li><p><strong>Hagedorn（2021）の不完備市場での物価水準・インフレ率の決定結果はSargent and Wallace（1975）の完備市場での結果と対照をなし、THANKはこの性質を共有する</strong>: 完備市場では金利ペッグは決定性に不十分だが、不完備市場で財政当局が名目債務ルールに従えば決定性が達成される。</p></li>
+</ol>
+</section>
+<section id="summary要約" class="level2">
+<h2 class="anchored" data-anchor-id="summary要約">Summary（<strong>要約</strong>）</h2>
+<ol start="19" type="1">
+<li><strong>流動性付きTHANKモデルは三つの成果を達成する：（i）iMPCの解析的導出とデータ・定量HANKとのマッチング、（ii）iMPC合計とHANKテイラー原理の関連性の明示、（iii）Hagedorn型債務量ルールによるキャッチ22の解決</strong>: THANKの三つの深層パラメータ（<span class="math inline">\(\lambda\)</span>、<span class="math inline">\(s\)</span>、<span class="math inline">\(\chi\)</span>）がiMPCの三つの特徴（高いインパクト、大きな初期低下、指数的減衰）をマッチングする自由度を提供する。</li>
+</ol>
+<hr>
+</section>
+<section id="パラメータ一覧" class="level2">
+<h2 class="anchored" data-anchor-id="パラメータ一覧">パラメータ一覧</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(B_{t+1}\)</span></td>
+<td style="text-align: left;"><strong>政府債券（実質）</strong></td>
+<td style="text-align: left;">期末時点の実質政府債券残高</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(T_t\)</span></td>
+<td style="text-align: left;"><strong>税収</strong></td>
+<td style="text-align: left;">政府の税収。均衡予算では <span class="math inline">\(T = (R-1)B\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Theta\)</span></td>
+<td style="text-align: left;"><strong>動的流動性需要の係数</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\Theta \equiv \frac{1}{s} + \beta^{-1}\left[1 + \frac{1-s}{s}\left(\frac{1-s}{\lambda}-1\right)\right]\)</span>。二階差分方程式の係数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(x_b\)</span></td>
+<td style="text-align: left;"><strong>資産蓄積方程式の安定根</strong></td>
+<td style="text-align: left;"><span class="math inline">\(x_b = \frac{1}{2}\left(\Theta - \sqrt{\Theta^2 - 4\beta^{-1}}\right)\)</span>。<span class="math inline">\(0 &lt; x_b &lt; 1\)</span> で安定。iMPCの指数的減衰率を決定</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\phi_p\)</span></td>
+<td style="text-align: left;"><strong>物価水準ターゲティング係数</strong></td>
+<td style="text-align: left;">Ch4から継承。<span class="math inline">\(i_t = \phi_p p_t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\bar{B}\)</span></td>
+<td style="text-align: left;"><strong>完全市場利子率での定常債券需要</strong></td>
+<td style="text-align: left;"><span class="math inline">\(R \to \beta^{-1}\)</span> での極限値。<span class="math inline">\(\Gamma &gt; 1\)</span> のときのみ正</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="変数一覧" class="level2">
+<h2 class="anchored" data-anchor-id="変数一覧">変数一覧</h2>
+<section id="水準変数大文字" class="level3">
+<h3 class="anchored" data-anchor-id="水準変数大文字">水準変数（<strong>大文字</strong>）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(B_t^S\)</span></td>
+<td style="text-align: left;"><strong>S島の債券保有</strong></td>
+<td style="text-align: left;"><span class="math inline">\(B_t^S = \frac{s}{1-\lambda}B_t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(B_t^H\)</span></td>
+<td style="text-align: left;"><strong>H島の債券保有</strong></td>
+<td style="text-align: left;"><span class="math inline">\(B_t^H = \frac{1-s}{\lambda}B_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(Z_{t+1}^S\)</span></td>
+<td style="text-align: left;"><strong>S家計の債券選択</strong></td>
+<td style="text-align: left;">不確実性実現前のS家計の債券量。<span class="math inline">\(B_{t+1} = (1-\lambda)Z_{t+1}^S\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Z_{t+1}^H\)</span></td>
+<td style="text-align: left;"><strong>H家計の債券選択</strong></td>
+<td style="text-align: left;">焦点とする均衡で <span class="math inline">\(Z_{t+1}^H = 0\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="対数偏差変数小文字" class="level3">
+<h3 class="anchored" data-anchor-id="対数偏差変数小文字">対数偏差変数（<strong>小文字</strong>）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(b_t\)</span></td>
+<td style="text-align: left;"><strong>政府債務（対数偏差）</strong></td>
+<td style="text-align: left;"><span class="math inline">\(b_t \equiv \frac{B_t - B}{Y}\)</span>。定常状態からの偏差（産出比）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(b_{t+1}^N\)</span></td>
+<td style="text-align: left;"><strong>名目政府債務</strong></td>
+<td style="text-align: left;">債務量ルール下で <span class="math inline">\(b_{t+1}^N = 0\)</span> に固定</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat{y}_t\)</span></td>
+<td style="text-align: left;"><strong>集計可処分所得</strong></td>
+<td style="text-align: left;">税引後の集計所得（対数偏差）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\hat{y}_t^H\)</span></td>
+<td style="text-align: left;"><strong>H家計可処分所得</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\hat{y}_t^H = \chi\hat{y}_t\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat{y}_t^S\)</span></td>
+<td style="text-align: left;"><strong>S家計可処分所得</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\hat{y}_t^S = \frac{1-\lambda\chi}{1-\lambda}\hat{y}_t\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="均衡効果の指標" class="level3">
+<h3 class="anchored" data-anchor-id="均衡効果の指標">均衡効果の指標</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">記号</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(M_{t,t+k}\)</span></td>
+<td style="text-align: left;"><strong>iMPC</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{\partial c_t}{\partial \hat{y}_{t+k}}\)</span>。時点 <span class="math inline">\(t+k\)</span> の所得ショックに対する時点 <span class="math inline">\(t\)</span> の消費反応</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\frac{\partial c_T}{\partial \hat{y}_T}\)</span></td>
+<td style="text-align: left;"><strong>インパクトiMPC</strong></td>
+<td style="text-align: left;">同時点の所得ショックに対するMPC。データでは0.4超</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\sum_j \frac{\partial c_{T+j}}{\partial \hat{y}_T}\)</span></td>
+<td style="text-align: left;"><strong>iMPC合計</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\chi &lt; 1\)</span> のとき1超。Auclert et al.の決定性条件と一致</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

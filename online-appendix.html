@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Online Appendix for ‘Macroeconomic Stabilization and Endogenous Inequality in a TANK Model with Dual Nominal Rigidities’</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="online-appendix_files/libs/clipboard/clipboard.min.js"></script>
+<script src="online-appendix_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="online-appendix_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="online-appendix_files/libs/quarto-html/popper.min.js"></script>
+<script src="online-appendix_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="online-appendix_files/libs/quarto-html/anchor.min.js"></script>
+<link href="online-appendix_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="online-appendix_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="online-appendix_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="online-appendix_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="online-appendix_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Online Appendix for ‘Macroeconomic Stabilization and Endogenous Inequality in a TANK Model with Dual Nominal Rigidities’</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This online appendix reports the nonlinear primitives of the model and the intermediate log-linearization steps underlying Section 3 of the main text. Appendix A in the main text derives the analytical reduction from the nonredundant 20-equation system to the five-equation canonical representation.</p>
+<section id="model-description" class="level1">
+<h1>Model Description</h1>
+<p>The appendix first states the nonlinear problems of the labor packer, households, firms, and government. It then collects a reduced nonlinear equilibrium system sufficient for the first-order approximation, and finally reports the nonredundant log-linear system used in Section 3 of the main text.</p>
+<p>Throughout, upper-case letters denote level variables. The index <span class="math inline">\(h\in[0,1]\)</span> refers to households, and the index <span class="math inline">\(j\in[0,1]\)</span> refers to intermediate-goods firms. A superscript <span class="math inline">\(i\in\{H,S\}\)</span> indicates the household type, where (<span class="math inline">\(H\)</span>) denotes hand-to-mouth households and <span class="math inline">\(S\)</span> denotes saver households. <span class="math inline">\(P_{t}\)</span> denotes the final-good price index, <span class="math inline">\(W^{N}_{t}\)</span> the aggregate nominal wage, and <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> the aggregate real wage. For each household type <span class="math inline">\(i\)</span>, <span class="math inline">\(C^{i}_{t}\)</span>, <span class="math inline">\(N^{i}_{t}\)</span>, and <span class="math inline">\(W^{N,i}_{t}\)</span> denote consumption, labor supply, and the nominal wage, while <span class="math inline">\(W^{i}_{t}\equiv W^{N,i}_{t}/P_{t}\)</span> denotes the corresponding real wage. Aggregate price inflation is defined as <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span>, and type-specific wage inflation is defined as <span class="math inline">\(\Pi^{i}_{t}\equiv W^{N,i}_{t}/W^{N,i}_{t-1}\)</span>. Preferences are represented by a general period utility function <span class="math inline">\(U(C,N)\)</span>, with marginal utilities <span class="math inline">\(U_{C}(C,N)&gt;0\)</span> and <span class="math inline">\(U_{N}(C,N)&lt;0\)</span>. The marginal rate of substitution is <span class="math inline">\(MRS(C,N)\equiv-U_{N}(C,N)/U_{C}(C,N)\)</span>. Intermediate firms use the general technology <span class="math inline">\(Y=A_{t}F(N)\)</span>, with <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The type-<span class="math inline">\(i\)</span> wage markup is <span class="math inline">\(MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})\)</span>, and the price markup is <span class="math inline">\(MU^{p}_{t}\equiv A_{t}F_{N}(N_{t})/W_{t}\)</span>. Finally, <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate and <span class="math inline">\(D_{t}\)</span> firm dividends. Here <span class="math inline">\(T^{i}_{t}\)</span> denotes the net fiscal liability of type-<span class="math inline">\(i\)</span> households. A negative value therefore corresponds to a transfer received by that household type. The variable <span class="math inline">\(Z_{t}\)</span> denotes the transfer directed to Type H households, and <span class="math inline">\(z_{t}\)</span> is the redistribution shock that drives <span class="math inline">\(Z_{t}\)</span> through <span class="math inline">\(Z_{t}=z_{t}Y\)</span>.</p>
+<section id="labor-packer" class="level2">
+<h2 class="anchored" data-anchor-id="labor-packer">Labor Packer</h2>
+<p>The labor packer is a competitive aggregator that combines differentiated household labor into a homogeneous labor input sold to intermediate-goods firms. Household <span class="math inline">\(h\)</span> supplies labor <span class="math inline">\(N_{t}(h)\)</span> and is paid the nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, while the packer sells the aggregate labor input <span class="math inline">\(N_{t}\)</span> at the aggregate nominal wage <span class="math inline">\(W^{N}_{t}\)</span>. The parameter <span class="math inline">\(\psi_{w}&gt;1\)</span> is the elasticity of substitution across labor varieties, and <span class="math inline">\(\Lambda^{L}_{t}\)</span> is the multiplier on the constant-elasticity-of-substitution aggregation constraint. Taking the household-specific wages <span class="math inline">\(\{W^{N}_{t}(h)\}_{h\in[0,1]}\)</span> as given, the labor packer chooses <span class="math inline">\(\{N_{t}(h)\}_{h\in[0,1]}\)</span> and <span class="math inline">\(N_{t}\)</span>, which yields the labor demand schedule for each household and the aggregate nominal wage index.</p>
+<ul>
+<li><p>Objects taken as given: <span class="math inline">\(P_{t},W^{N}_{t},\{W^{N}_{t}(h)\}_{h\in[0,1]}\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(N_{t},\{N_{t}(h)\}_{h\in[0,1]}\)</span></p></li>
+<li><p>Objective Function: <span class="math display">\[W^{N}_{t}N_{t}-\int^{1}_{0}W^{N}_{t}(h)N_{t}(h)dh\]</span></p></li>
+<li><p>Constraints: <span class="math display">\[N_{t}=\left(\int^{1}_{0}N_{t}(h)^{\frac{\psi_{w}-1}{\psi_{w}}}dh\right)^{\frac{\psi_{w}}{\psi_{w}-1}},\;\psi_{w}&gt;1.\]</span></p></li>
+<li><p>Lagrangian: <span class="math display">\[\begin{aligned}
+\mathcal{L}_{t}= &amp; W^{N}_{t}N_{t}-\int^{1}_{0}W^{N}_{t}(h)N_{t}(h)dh\\
+&amp; +\Lambda^{L}_{t}\left(\left(\int^{1}_{0}N_{t}(h)^{\frac{\psi_{w}-1}{\psi_{w}}}dh\right)^{\frac{\psi_{w}}{\psi_{w}-1}}-N_{t}\right)
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(N_{t}\)</span>: <span class="math display">\[W^{N}_{t}=\Lambda^{L}_{t}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(N_{t}(h)\)</span>: <span class="math display">\[N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\]</span></p></li>
+<li><p>Nominal wage: <span class="math display">\[W^{N}_{t}=\left[\int^{1}_{0}W^{N}_{t}(h)^{1-\psi_{w}}dh\right]^{\frac{1}{1-\psi_{w}}}\]</span></p></li>
+</ul>
+</section>
+<section id="households" class="level2">
+<h2 class="anchored" data-anchor-id="households">Households</h2>
+<p>There is a continuum of households indexed by <span class="math inline">\(h\in[0,1]\)</span>. Each household consumes <span class="math inline">\(C_{t}(h)\)</span>, supplies differentiated labor <span class="math inline">\(N_{t}(h)\)</span>, and sets its own nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>. Preferences are common across households and are represented by period utility <span class="math inline">\(U(C_{t}(h),N_{t}(h))\)</span>. Wage setting is subject to Rotemberg-type adjustment costs governed by <span class="math inline">\(\eta_{w}\)</span>, and labor income is subsidized at rate <span class="math inline">\(\tau_{w}\)</span>. A fraction <span class="math inline">\(\lambda\)</span> of households are hand-to-mouth households (Type H), who do not trade assets, while the remaining fraction <span class="math inline">\(1-\lambda\)</span> are saver households (Type S), who hold one-period nominal bonds and receive firm dividends. Within each type, full risk sharing implies identical consumption, labor, and wage choices in equilibrium.</p>
+<p>With two household types and within-type symmetry, the labor-packer aggregation functions defined and derived in the previous subsection can be rewritten as follows: <span class="math display">\[\begin{aligned}
+N_{t} &amp; =\left[\lambda(N^{H}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}+(1-\lambda)(N^{S}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}\right]^{\frac{\psi_{w}}{\psi_{w}-1}}\\
+W^{N}_{t} &amp; =\left[\lambda(W^{N,H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{N,S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}\\
+&amp; =P_{t}\left[\lambda(W^{H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}
+\end{aligned}\]</span></p>
+<section id="type-h" class="level3">
+<h3 class="anchored" data-anchor-id="type-h">Type H</h3>
+<p>A Type H household chooses current consumption <span class="math inline">\(C_{t}(h)\)</span>, labor supply <span class="math inline">\(N_{t}(h)\)</span>, and its own nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, taking aggregate variables as given. Since it does not trade financial assets, its current uses of funds consist of consumption and the net fiscal liability <span class="math inline">\(T^{H}_{t}\)</span>, where <span class="math inline">\(T^{H}_{t}&lt;0\)</span> corresponds to a transfer received from the government. In the budget constraint, <span class="math inline">\(P_{t}\)</span> is the aggregate price level, <span class="math inline">\(Y_{t}\)</span> is aggregate output, and <span class="math inline">\(\eta_{w}\)</span> measures the cost of changing the nominal wage relative to the previous period’s wage <span class="math inline">\(W^{N}_{t-1}(h)\)</span>. The optimality conditions imply the marginal utility of consumption, the household-specific labor demand schedule, and the Type H wage-setting equation. In symmetric equilibrium, these conditions can be written in terms of the Type H real wage <span class="math inline">\(W^{H}_{t}\)</span>, wage inflation <span class="math inline">\(\Pi^{H}_{t}\)</span>, marginal rate of substitution <span class="math inline">\(MRS^{H}_{t}\equiv MRS(C^{H}_{t},N^{H}_{t})\)</span>, and wage markup <span class="math inline">\(MU^{H}_{t}\equiv W^{H}_{t}/MRS^{H}_{t}\)</span>.</p>
+<ul>
+<li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},N_{t},Y_{t},T^{H}_{t},W^{N}_{t-1}(h)\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(C_{t}(h),N_{t}(h),W^{N}_{t}(h)\)</span></p></li>
+<li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U(C_{t}(h),N_{t}(h))\]</span></p></li>
+<li><p>Constraints: <span class="math display">\[\begin{aligned}
+&amp; C_{t}(h)+T^{H}_{t}\\
+&amp; =(1+\tau_{w})\frac{W^{N}_{t}(h)}{P_{t}}N_{t}(h)-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+&amp; N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}
+\end{aligned}\]</span></p></li>
+<li><p>Lagrangian: <span class="math display">\[\begin{aligned}
+\mathbb{L}= &amp; \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\mathcal{L}_{t}\\
+\mathcal{L}_{t}= &amp; U\left(C_{t}(h),N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\right)\\
+&amp; +\Lambda^{H}_{t}(h)\left(\begin{array}{c}
+(1+\tau_{w})\frac{N_{t}}{P_{t}}W^{N}_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{1-\psi_{w}}-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+-C_{t}(h)-T^{H}_{t}
+\end{array}\right)
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(C_{t}(h)\)</span>: <span class="math display">\[\Lambda^{H}_{t}(h)=U_{C}(C_{t}(h),N_{t}(h))\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(W^{N}_{t}(h)\)</span>: <span class="math display">\[\begin{aligned}
+-\psi_{w}\frac{N_{t}}{W^{N}_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}-1}U_{N}(C_{t}(h),N_{t}(h))\\
++(1-\psi_{w})\Lambda^{H}_{t}(h)(1+\tau_{w})\frac{N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+-\Lambda^{H}_{t}(h)\eta_{w}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)\frac{Y_{t}}{W^{N}_{t-1}(h)}\\
++\beta \mathbb{E}_{t}\Lambda^{H}_{t+1}(h)\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}} &amp; =0
+\end{aligned}\]</span></p></li>
+<li><p>Symmetric Equilibrium (<span class="math inline">\(\Lambda^{H}_{t}(h)=\Lambda^{H}_{t}\)</span>, <span class="math inline">\(C_{t}(h)=C^{H}_{t}\)</span>, <span class="math inline">\(N_{t}(h)=N^{H}_{t}\)</span>, <span class="math inline">\(W^{N}_{t}(h)=W^{N,H}_{t}\)</span>): <span class="math display">\[\begin{aligned}
+N^{H}_{t} &amp; =N_{t}\left(\frac{W^{N,H}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+\Lambda^{H}_{t} &amp; =U_{C}(C^{H}_{t},N^{H}_{t})
+\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+\eta_{w}\frac{Y_{t}}{N^{H}_{t}}\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)= &amp; \psi_{w}\left[MRS^{H}_{t}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\frac{W^{N,H}_{t}}{P_{t}}\right]\\
+&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{N^{H}_{t}}\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}\left(\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}-1\right)\right]\\
+\Leftrightarrow\eta_{w}\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)= &amp; \psi_{w}\frac{W^{N,H}_{t}N^{H}_{t}}{P_{t}Y_{t}}\left[\frac{1}{MU^{H}_{t}}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\right]\\
+&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}\left(\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}-1\right)\right]
+\end{aligned}\]</span></p></li>
+</ul>
+</section>
+<section id="type-s" class="level3">
+<h3 class="anchored" data-anchor-id="type-s">Type S</h3>
+<p>A Type S household chooses consumption <span class="math inline">\(C_{t}(h)\)</span>, labor supply <span class="math inline">\(N_{t}(h)\)</span>, its own nominal wage <span class="math inline">\(W^{N}_{t}(h)\)</span>, and one-period nominal bond holdings <span class="math inline">\(B^{N}_{t}(h)\)</span>. In addition to current after-subsidy labor income, it receives gross nominal bond returns <span class="math inline">\(R^{N}_{t-1}B^{N}_{t-1}(h)\)</span>, firm dividends <span class="math inline">\(D_{t}\)</span>, and faces the net fiscal liability <span class="math inline">\(T^{S}_{t}\)</span>. A positive value of <span class="math inline">\(T^{S}_{t}\)</span> is therefore a levy, while a negative value corresponds to a transfer. Here <span class="math inline">\(R^{N}_{t}\)</span> denotes the gross nominal interest rate on the bond purchased in period <span class="math inline">\(t\)</span>, and <span class="math inline">\(B^{N}_{t}(h)/P_{t}\)</span> is the household’s real bond position. The optimality conditions deliver both an Euler equation governing intertemporal consumption smoothing and a wage-setting equation analogous to that of Type H households. In symmetric equilibrium, these conditions are summarized by the Type S real wage <span class="math inline">\(W^{S}_{t}\)</span>, wage inflation <span class="math inline">\(\Pi^{S}_{t}\)</span>, marginal rate of substitution <span class="math inline">\(MRS^{S}_{t}\equiv MRS(C^{S}_{t},N^{S}_{t})\)</span>, and wage markup <span class="math inline">\(MU^{S}_{t}\equiv W^{S}_{t}/MRS^{S}_{t}\)</span>.</p>
+<ul>
+<li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},R^{N}_{t},D_{t},N_{t},Y_{t},T^{S}_{t},W^{N}_{t-1}(h),B^{N}_{t-1}(h)\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(C_{t}(h),N_{t}(h),W^{N}_{t}(h),B^{N}_{t}(h)\)</span></p></li>
+<li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U(C_{t}(h),N_{t}(h))\]</span></p></li>
+<li><p>Constraints: <span class="math display">\[\begin{aligned}
+&amp; C_{t}(h)+\frac{B^{N}_{t}(h)}{P_{t}}+T^{S}_{t}\\
+&amp; =(1+\tau_{w})\frac{W^{N}_{t}(h)}{P_{t}}N_{t}(h)-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+&amp; +R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}\\
+&amp; N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}
+\end{aligned}\]</span></p></li>
+<li><p>Lagrangian: <span class="math display">\[\begin{aligned}
+\mathbb{L}= &amp; \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\mathcal{L}_{t}\\
+\mathcal{L}_{t}= &amp; U\left(C_{t}(h),N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\right)\\
+&amp; +\Lambda^{S}_{t}(h)\left(\begin{array}{c}
+(1+\tau_{w})\frac{W^{N}_{t}N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{1-\psi_{w}}-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
++R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}-C_{t}(h)-\frac{B^{N}_{t}(h)}{P_{t}}-T^{S}_{t}
+\end{array}\right)
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(C_{t}(h)\)</span>: <span class="math display">\[\Lambda^{S}_{t}(h)=U_{C}(C_{t}(h),N_{t}(h))\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(W^{N}_{t}(h)\)</span>: <span class="math display">\[\begin{aligned}
+-\psi_{w}\frac{N_{t}}{W^{N}_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}-1}U_{N}(C_{t}(h),N_{t}(h))\\
++(1-\psi_{w})\Lambda^{S}_{t}(h)(1+\tau_{w})\frac{N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+-\Lambda^{S}_{t}(h)\eta_{w}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)\frac{Y_{t}}{W^{N}_{t-1}(h)}\\
++\beta \mathbb{E}_{t}\Lambda^{S}_{t+1}(h)\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}} &amp; =0
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(B^{N}_{t}(h)\)</span>: <span class="math display">\[\frac{\Lambda^{S}_{t}(h)}{P_{t}}=\beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{\Lambda^{S}_{t+1}(h)}{P_{t+1}}\right]\]</span></p></li>
+<li><p>Symmetric Equilibrium (<span class="math inline">\(\Lambda^{S}_{t}(h)=\Lambda^{S}_{t}\)</span>, <span class="math inline">\(C_{t}(h)=C^{S}_{t}\)</span>, <span class="math inline">\(N_{t}(h)=N^{S}_{t}\)</span>, <span class="math inline">\(W^{N}_{t}(h)=W^{N,S}_{t}\)</span>, where <span class="math inline">\(W^{S}_{t}\)</span> is the real wage of type <span class="math inline">\(S\)</span>): <span class="math display">\[\begin{aligned}
+N^{S}_{t} &amp; =N_{t}\left(\frac{W^{N,S}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+\Lambda^{S}_{t} &amp; =U_{C}(C^{S}_{t},N^{S}_{t})\\
+1= &amp; \beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{P_{t}}{P_{t+1}}\right]
+\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+\eta_{w}\frac{Y_{t}}{N^{S}_{t}}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= &amp; \psi_{w}\left[MRS^{S}_{t}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\frac{W^{N,S}_{t}}{P_{t}}\right]\\
+&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{N^{S}_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]\\
+\Leftrightarrow\eta_{w}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= &amp; \psi_{w}\frac{W^{N,S}_{t}N^{S}_{t}}{P_{t}Y_{t}}\left[\frac{1}{MU^{S}_{t}}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\right]\\
+&amp; +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]
+\end{aligned}\]</span> where <span class="math inline">\(MRS^{S}_{t}=MRS(C^{S}_{t},N^{S}_{t})\)</span> is Type S marginal rate of substitution, and <span class="math inline">\(MU^{S}_{t}=W^{S}_{t}/MRS^{S}_{t}\)</span> is Type S wage markup.</p></li>
+</ul>
+</section>
+</section>
+<section id="final-goods-firm" class="level2">
+<h2 class="anchored" data-anchor-id="final-goods-firm">Final Goods Firm</h2>
+<p>The final-goods firm is perfectly competitive and combines differentiated intermediate goods into a homogeneous final good using a constant-elasticity-of-substitution aggregator. The quantity of variety <span class="math inline">\(j\)</span> is denoted by <span class="math inline">\(Y_{t}(j)\)</span>, its price by <span class="math inline">\(P_{t}(j)\)</span>, aggregate final output by <span class="math inline">\(Y_{t}\)</span>, and the final-good price index by <span class="math inline">\(P_{t}\)</span>. The elasticity of substitution across intermediate varieties is <span class="math inline">\(\psi_{p}\ge1\)</span>, and <span class="math inline">\(\Lambda^{F}_{t}\)</span> is the multiplier on the aggregation constraint. Taking the prices <span class="math inline">\(\{P_{t}(j)\}_{j\in[0,1]}\)</span> as given, the final-goods firm chooses (<span class="math inline">\(\{Y_{t}(j)\}_{j\in[0,1]}\)</span>) and <span class="math inline">\(Y_{t}\)</span>, which yields the demand schedule for each intermediate-good producer and the aggregate final-good price index.</p>
+<ul>
+<li><p>Objects taken as given: <span class="math inline">\(P_{t},\{P_{t}(j)\}_{j\in[0,1]}\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(Y_{t},\{Y_{t}(j)\}_{j\in[0,1]}\)</span></p></li>
+<li><p>Objective Function: <span class="math display">\[P_{t}Y_{t}-\int^{1}_{0}P_{t}(j)Y_{t}(j)dj\]</span></p></li>
+<li><p>Constraints: <span class="math display">\[Y_{t}=\left(\int^{1}_{0}Y_{t}(j)^{\frac{\psi_{p}-1}{\psi_{p}}}dj\right)^{\frac{\psi_{p}}{\psi_{p}-1}},\;\psi_{p}\geq1\]</span></p></li>
+<li><p>Lagrangian: <span class="math display">\[\begin{aligned}
+\mathcal{L}_{t}= &amp; P_{t}Y_{t}-\int^{1}_{0}P_{t}(j)Y_{t}(j)dj\\
+&amp; +\Lambda^{F}_{t}\left(\left(\int^{1}_{0}Y_{t}(j)^{\frac{\psi_{p}-1}{\psi_{p}}}dj\right)^{\frac{\psi_{p}}{\psi_{p}-1}}-Y_{t}\right)
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(Y_{t}\)</span>: <span class="math display">\[\Lambda^{F}_{t}=P_{t}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(Y_{t}(j)\)</span>: <span class="math display">\[Y_{t}(j)=Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\]</span></p></li>
+<li><p>Price of Final Goods: <span class="math display">\[P_{t}=\left[\int^{1}_{0}P_{t}(j)^{1-\psi_{p}}dj\right]^{\frac{1}{1-\psi_{p}}}\]</span></p></li>
+</ul>
+</section>
+<section id="intermediate-goods-firms" class="level2">
+<h2 class="anchored" data-anchor-id="intermediate-goods-firms">Intermediate Goods Firms</h2>
+<p>Intermediate-good firm <span class="math inline">\(j\)</span> produces output <span class="math inline">\(Y_{t}(j)\)</span> using labor <span class="math inline">\(N_{t}(j)\)</span> according to the general technology <span class="math inline">\(Y_{t}(j)=A_{t}F(N_{t}(j))\)</span>, where <span class="math inline">\(A_{t}\equiv\exp(a_{t})\)</span> denotes aggregate labor productivity and <span class="math inline">\(F_{N}(N)&gt;0\)</span>. The firm hires homogeneous labor from the labor packer at the nominal wage <span class="math inline">\(W^{N}_{t}\)</span>, sets its own price <span class="math inline">\(P_{t}(j)\)</span>, and faces Rotemberg price adjustment costs governed by <span class="math inline">\(\eta_{p}\)</span>. Its real profits are denoted by <span class="math inline">\(D_{t}(j)\)</span>, the government levies the lump-sum tax <span class="math inline">\(T^{M}_{t}\)</span>, and the sales subsidy rate is <span class="math inline">\(\tau_{p}\)</span>. The firm’s objective is the date-0 present discounted value of profits, discounted by the saver household’s stochastic discount factor. The optimality conditions determine labor demand, real marginal cost, and the price-setting equation. In symmetric equilibrium, the price markup is <span class="math inline">\(MU^{p}_{t}\equiv P_{t}MPN_{t}/W^{N}_{t}=MPN_{t}/W_{t}\)</span> and <span class="math inline">\(MPN_{t}\equiv A_{t}F_{N}(N_{t})\)</span> is the marginal product of labor.</p>
+<ul>
+<li><p>Objects taken as given: <span class="math inline">\(W^{N}_{t},P_{t},Y_{t},A_{t},T^{M}_{t},C^{S}_{t},P_{t-1}(j)\)</span></p></li>
+<li><p>Choice variables: <span class="math inline">\(N_{t}(j),P_{t}(j),Y_{t}(j)\)</span></p></li>
+<li><p>Objective Function: <span class="math display">\[\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}D_{t}(j)\]</span></p></li>
+<li><p>Constraints: <span class="math display">\[\begin{aligned}
+D_{t}(j) &amp; =(1+\tau_{p})\frac{P_{t}(j)}{P_{t}}Y_{t}(j)-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)-T^{M}_{t}\\
+Y_{t}(j) &amp; =Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\\
+Y_{t}(j) &amp; =A_{t}F(N_{t}(j))
+\end{aligned}\]</span></p></li>
+<li><p>Lagrangian: <span class="math display">\[\begin{aligned}
+\mathbb{L}= &amp; \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}\mathcal{L}_{t}\\
+\mathcal{L}_{t}= &amp; (1+\tau_{p})Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{1-\psi_{p}}-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)\\
+&amp; -T^{M}_{t}+\Lambda^{M}_{t}(j)\left(A_{t}F(N_{t}(j))-Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\right)
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(N_{t}(j)\)</span>: <span class="math display">\[\begin{aligned}
+\Lambda^{M}_{t}(j)A_{t}F_{N}(N_{t}(j)) &amp; =W^{N}_{t}/P_{t}
+\end{aligned}\]</span></p></li>
+<li><p>FOC wrt <span class="math inline">\(P_{t}(j)\)</span>: <span class="math display">\[\begin{aligned}
+&amp; U_{C}(C^{S}_{t},N^{S}_{t})(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-U_{C}(C^{S}_{t},N^{S}_{t})\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
+&amp; +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}+\beta\eta_{p}\mathbb{E}_{t}\left[U_{C}(C^{S}_{t+1},N^{S}_{t+1})Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
+\end{aligned}\]</span></p></li>
+<li><p>Symmetric Equilibrium (<span class="math inline">\(N_{t}(j)=N_{t}\)</span>, <span class="math inline">\(\Lambda^{M}_{t}(j)=\Lambda^{M}_{t}\)</span>, <span class="math inline">\(P_{t}(j)=P_{t}\)</span>, <span class="math inline">\(Y_{t}(j)=Y_{t}\)</span>): <span class="math display">\[\begin{aligned}
+\eta_{p}\frac{P_{t}}{P_{t-1}}\left(\frac{P_{t}}{P_{t-1}}-1\right)= &amp; \psi_{p}\left[\frac{W^{N}_{t}/P_{t}}{MPN_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
+&amp; +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]\\
+= &amp; \psi_{p}\left[\frac{1}{MU^{p}_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
+&amp; +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]
+\end{aligned}\]</span></p></li>
+<li><p>Profits: <span class="math display">\[\begin{aligned}
+D_{t} &amp; =(1+\tau_{p})Y_{t}-\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}-T^{M}_{t}
+\end{aligned}\]</span> When <span class="math inline">\((1+\tau_{p})(1-1/\psi_{p})=1\)</span>, steady state price markup is one.</p></li>
+</ul>
+</section>
+<section id="government" class="level2">
+<h2 class="anchored" data-anchor-id="government">Government</h2>
+<p>The government performs three functions in the model. First, it provides the wage subsidy <span class="math inline">\(\tau_{w}\)</span> and the sales subsidy <span class="math inline">\(\tau_{p}\)</span>, eliminating steady-state markups under the baseline specialization introduced below. Second, it redistributes resources across household types through the lump-sum components <span class="math inline">\(T^{H}_{t}\)</span> and <span class="math inline">\(T^{S}_{t}\)</span>. Here <span class="math inline">\(Z_{t}\)</span> denotes the transfer received by Type H households, while Type S households finance that transfer through a balanced-budget levy. Because <span class="math inline">\(T^{i}_{t}\)</span> denotes net fiscal liability, the transfer implies <span class="math inline">\(T^{H}_{t}&lt;0\)</span> for the recipient household type and a positive levy on Type S through <span class="math inline">\(T^{S}_{t}\)</span>. Third, the monetary authority sets the gross nominal interest rate <span class="math inline">\(R^{N}_{t}\)</span> according to a Taylor rule that responds to gross price inflation <span class="math inline">\(\Pi^{p}_{t}\)</span> and to the monetary policy shock <span class="math inline">\(m_{t}\)</span>. The redistribution shock <span class="math inline">\(z_{t}\)</span> follows an autoregressive process and determines <span class="math inline">\(Z_{t}\)</span> through <span class="math inline">\(Z_{t}=z_{t}Y\)</span>, where <span class="math inline">\(Y\)</span> is steady-state output.</p>
+<p>Fiscal policy: <span class="math display">\[\begin{aligned}
+T^{H}_{t} &amp; =-Z_{t}+\tau_{w}W^{H}_{t}N^{H}_{t}\\
+T^{S}_{t} &amp; =\frac{\lambda}{1-\lambda}Z_{t}+\tau_{w}W^{S}_{t}N^{S}_{t}\\
+T^{M}_{t} &amp; =\tau_{p}Y_{t}\\
+\tau_{w} &amp; =1/(\psi_{w}-1)\\
+\tau_{p} &amp; =1/(\psi_{p}-1)\\
+Z_{t} &amp; =z_{t}Y\\
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+\end{aligned}\]</span></p>
+<p>Monetary Policy:</p>
+<p><span class="math display">\[\begin{aligned}
+R^{N}_{t} &amp; =(1/\beta)\exp(-m_{t})(\Pi^{p}_{t})^{\phi}\\
+m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}
+\end{aligned}\]</span></p>
+</section>
+<section id="equilibrium-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-conditions">Equilibrium conditions</h2>
+<p>Equilibrium requires market clearing in goods and bond markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy <span class="math inline">\(B^{N}_{t}=0\)</span>. Aggregate consumption <span class="math inline">\(C_{t}\)</span> is the population-weighted average of <span class="math inline">\(C^{H}_{t}\)</span> and <span class="math inline">\(C^{S}_{t}\)</span>, and final output <span class="math inline">\(Y_{t}\)</span> is allocated to private consumption and to price and wage adjustment costs.</p>
+<p>Final goods market: <span class="math display">\[\begin{aligned}
+Y_{t} &amp; =C_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
+&amp; +\lambda\frac{\eta_{w}}{2}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)^{2}Y_{t}
+\end{aligned}\]</span></p>
+<p>Bond market: <span class="math inline">\(B^{N}_{t}=0\)</span>.</p>
+<p>Aggregation condition: <span class="math display">\[C_{t}=\lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\]</span></p>
+</section>
+<section id="reduced-nonlinear-equilibrium-system" class="level2">
+<h2 class="anchored" data-anchor-id="reduced-nonlinear-equilibrium-system">Reduced nonlinear equilibrium system</h2>
+<p>Before summarizing the model, I collect the key real variables and inflation rates used below. In particular, <span class="math inline">\(W_{t}\equiv W^{N}_{t}/P_{t}\)</span> denotes the aggregate real wage, <span class="math inline">\(W^{H}_{t}\equiv W^{N,H}_{t}/P_{t}\)</span> and <span class="math inline">\(W^{S}_{t}\equiv W^{N,S}_{t}/P_{t}\)</span> denote type-specific real wages, <span class="math inline">\(\Pi^{p}_{t}\equiv P_{t}/P_{t-1}\)</span> denotes gross price inflation, and <span class="math inline">\(\Pi^{H}_{t}\)</span>, <span class="math inline">\(\Pi^{S}_{t}\)</span>, and <span class="math inline">\(\Pi^{w}_{t}\)</span> denote the corresponding gross wage inflation rates for Type H, Type S, and the aggregate wage index. The aggregate wage markup is defined as <span class="math inline">\(MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})\)</span>.</p>
+<p>The following block collects a reduced set of nonlinear equilibrium conditions that is sufficient for the log-linearization below.</p>
+<p>I report only the nonlinear conditions needed to obtain the first-order system below. Conditions omitted here are either redundant or recoverable by symmetry and aggregation.</p>
+<p>The nonlinear equilibrium conditions can be summarized as follows:</p>
+<ul>
+<li><p>Labor Packer: <span class="math display">\[\begin{aligned}
+W_{t} &amp; =\left[\lambda(W^{H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}\\
+N_{t} &amp; =\left[\lambda(N^{H}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}+(1-\lambda)(N^{S}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}\right]^{\frac{\psi_{w}}{\psi_{w}-1}}
+\end{aligned}\]</span></p></li>
+<li><p>Type H: <span class="math display">\[\begin{aligned}
+N^{H}_{t}= &amp; N_{t}\left(\frac{W^{H}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
+C^{H}_{t}= &amp; W^{H}_{t}N^{H}_{t}+Z_{t}-\frac{\eta_{w}}{2}\left(\Pi^{H}_{t}-1\right)^{2}Y_{t}\\
+\eta_{w}\Pi^{H}_{t}\left(\Pi^{H}_{t}-1\right)= &amp; \psi_{w}\left\{ \frac{1}{MU^{H}_{t}}-1\right\} \frac{W^{H}_{t}N^{H}_{t}}{Y_{t}}\\
+&amp; +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{H}_{t+1}\left(\Pi^{H}_{t+1}-1\right)\right]\\
+\Pi^{H}_{t}= &amp; \frac{W^{H}_{t}}{W^{H}_{t-1}}\Pi^{p}_{t}\\
+MU^{H}_{t}= &amp; \frac{W^{H}_{t}}{MRS(C^{H}_{t},N^{H}_{t})}
+\end{aligned}\]</span></p></li>
+<li><p>Type S: <span class="math display">\[\begin{aligned}
+N^{S}_{t}= &amp; N_{t}\left(\frac{W^{S}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
+1= &amp; \beta\mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\right]\\
+\eta_{w}\Pi^{S}_{t}\left(\Pi^{S}_{t}-1\right)= &amp; \psi_{w}\left\{ \frac{1}{MU^{S}_{t}}-1\right\} \frac{W^{S}_{t}N^{S}_{t}}{Y_{t}}\\
+&amp; +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{S}_{t+1}\left(\Pi^{S}_{t+1}-1\right)\right]\\
+\Pi^{S}_{t}= &amp; \frac{W^{S}_{t}}{W^{S}_{t-1}}\Pi^{p}_{t}\\
+MU^{S}_{t}= &amp; \frac{W^{S}_{t}}{MRS(C^{S}_{t},N^{S}_{t})}
+\end{aligned}\]</span></p></li>
+<li><p>Firms: <span class="math display">\[\begin{aligned}
+A_{t} &amp; =\exp(a_{t})\\
+Y_{t} &amp; =A_{t}F(N_{t})\\
+a_{t} &amp; =\rho_{a}a_{t-1}+e^{a}_{t}\\
+\eta_{p}\Pi^{p}_{t}\left(\Pi^{p}_{t}-1\right) &amp; =\psi_{p}\left\{ \frac{1}{MU^{p}_{t}}-1\right\} \\
+&amp; +\eta_{p}\beta \mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{p}_{t+1}\left(\Pi^{p}_{t+1}-1\right)\right]\\
+MU^{p}_{t} &amp; =\frac{A_{t}F_{N}(N_{t})}{W_{t}}\\
+D_{t} &amp; =Y_{t}-\frac{\eta_{p}}{2}\left(\Pi^{p}_{t}-1\right)^{2}Y_{t}-W_{t}N_{t}
+\end{aligned}\]</span></p></li>
+<li><p>Government: <span class="math display">\[\begin{aligned}
+R^{N}_{t} &amp; =\frac{\exp(-m_{t})}{\beta}(\Pi^{p}_{t})^{\phi}\\
+m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}\\
+Z_{t} &amp; =z_{t}Y\\
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+\end{aligned}\]</span></p></li>
+<li><p>Market clearing and others:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+Y_{t}= &amp; C_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
+&amp; +\lambda\frac{\eta_{w}}{2}(\Pi^{H}_{t}-1)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}(\Pi^{S}_{t}-1)^{2}Y_{t}\\
+C_{t}= &amp; \lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\\
+R_{t}= &amp; \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
+\Pi^{w}_{t}= &amp; \frac{W_{t}}{W_{t-1}}\Pi^{p}_{t}\\
+MU^{w}_{t}= &amp; \frac{W_{t}}{MRS(C_{t},N_{t})}
+\end{aligned}\]</span></p>
+</section>
+<section id="functional-specialization-and-log-linear-approximation" class="level2">
+<h2 class="anchored" data-anchor-id="functional-specialization-and-log-linear-approximation">Functional specialization and log-linear approximation</h2>
+<p>From this section onward, I specialize the primitives to the separable CRRA-Frisch utility function and the linear production function: <span class="math display">\[\begin{aligned}
+U(C,N) &amp; =\frac{C^{1-\gamma}}{1-\gamma}-\frac{N^{1+\varphi}}{1+\varphi},\\
+MRS(C,N) &amp; =C^{\gamma}N^{\varphi},\\
+F(N) &amp; =N.
+\end{aligned}\]</span></p>
+<p>In the log-linearized system, lower-case letters denote log deviations from the symmetric zero-inflation steady state; for example, <span class="math inline">\(c_{t}\equiv\log(C_{t}/C)\)</span>, <span class="math inline">\(n_{t}\equiv\log(N_{t}/N)\)</span>, and <span class="math inline">\(w_{t}\equiv\log(W_{t}/W)\)</span>. Inflation variables are log deviations of gross inflation rates, and profits are scaled by steady-state output, <span class="math inline">\(d_{t}\equiv D_{t}/Y\)</span>. The ex ante real interest rate is <span class="math inline">\(r_{t}\equiv r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\)</span>, where <span class="math inline">\(r^{N}_{t}\)</span> is the log deviation of the gross nominal rate <span class="math inline">\(R^{N}_{t}\)</span>. The variables <span class="math inline">\(a_{t}\)</span>, <span class="math inline">\(m_{t}\)</span>, and <span class="math inline">\(z_{t}\)</span> are exogenous deviation processes. In what follows, upper-case <span class="math inline">\(MU\)</span> denotes level markups, whereas lower-case <span class="math inline">\(\mu\)</span> denotes their log-linear deviations. Around the symmetric zero-inflation steady state, the quadratic price- and wage-adjustment costs are second-order terms and therefore drop out from the first-order resource constraint, which implies <span class="math inline">\(y_{t}=c_{t}\)</span> at first order.</p>
+<p>The steady-state values are as follows: <span class="math display">\[\begin{aligned}
+N= &amp; N^{S}=N^{H}=1\\
+Y=C= &amp; C^{S}=C^{H}=1\\
+MU^{w}= &amp; MU^{S}=MU^{H}=1\\
+\Pi^{w}= &amp; \Pi^{S}=\Pi^{H}=\Pi^{p}=1\\
+W= &amp; W^{S}=W^{H}=1\\
+D= &amp; 0
+\end{aligned}\]</span></p>
+<p>The log-linear approximation, with <span class="math inline">\(d_{t}:=D_{t}/Y\)</span>, is then given by:</p>
+<ul>
+<li><p>Labor Packer: <span class="math display">\[\begin{aligned}
+w_{t} &amp; =\lambda w^{H}_{t}+(1-\lambda)w^{S}_{t}\\
+n_{t} &amp; =\lambda n^{H}_{t}+(1-\lambda)n^{S}_{t}
+\end{aligned}\]</span></p></li>
+<li><p>Type H: <span class="math display">\[\begin{aligned}
+n^{H}_{t} &amp; =n_{t}-\psi_{w}(w^{H}_{t}-w_{t})\\
+c^{H}_{t} &amp; =w^{H}_{t}+n^{H}_{t}+z_{t}\\
+\pi^{H}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta\mathbb{E}_{t}\pi^{H}_{t+1}\\
+\pi^{H}_{t} &amp; =w^{H}_{t}-w^{H}_{t-1}+\pi^{p}_{t}\\
+\mu^{H}_{t} &amp; =w^{H}_{t}-(\gamma c^{H}_{t}+\varphi n^{H}_{t})\\
+\end{aligned}\]</span></p></li>
+<li><p>Type S: <span class="math display">\[\begin{aligned}
+n^{S}_{t} &amp; =n_{t}-\psi_{w}(w^{S}_{t}-w_{t})\\
+r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1} &amp; =\gamma\mathbb{E}_{t}\Delta c^{S}_{t+1}\\
+\pi^{S}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{S}_{t}+\beta\mathbb{E}_{t}\pi^{S}_{t+1}\\
+\pi^{S}_{t} &amp; =w^{S}_{t}-w^{S}_{t-1}+\pi^{p}_{t}\\
+\mu^{S}_{t} &amp; =w^{S}_{t}-(\gamma c^{S}_{t}+\varphi n^{S}_{t})
+\end{aligned}\]</span></p></li>
+<li><p>Firms: <span class="math display">\[\begin{aligned}
+y_{t} &amp; =a_{t}+n_{t}\\
+a_{t} &amp; =\rho_{a}a_{t-1}+e^{a}_{t}\\
+\pi^{p}_{t} &amp; =-(\psi_{p}/\eta_{p})\mu^{p}_{t}+\beta\mathbb{E}_{t}\pi^{p}_{t+1}\\
+\mu^{p}_{t} &amp; =a_{t}-w_{t}\\
+d_{t} &amp; =a_{t}-w_{t}
+\end{aligned}\]</span></p></li>
+<li><p>Government: <span class="math display">\[\begin{aligned}
+r^{N}_{t} &amp; =\phi\pi^{p}_{t}-m_{t}\\
+m_{t} &amp; =\rho_{m}m_{t-1}+e^{m}_{t}\\
+z_{t} &amp; =\rho_{z}z_{t-1}+e^{z}_{t}
+\end{aligned}\]</span></p></li>
+<li><p>Market clearing and others:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+y_{t} &amp; =c_{t}\\
+r_{t} &amp; =r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\\
+c_{t} &amp; =\lambda c^{H}_{t}+(1-\lambda)c^{S}_{t}\\
+\pi^{w}_{t} &amp; =\lambda\pi^{H}_{t}+(1-\lambda)\pi^{S}_{t}\\
+\pi^{w}_{t} &amp; =w_{t}-w_{t-1}+\pi^{p}_{t}\\
+\pi^{w}_{t} &amp; =-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta\mathbb{E}_{t}\pi^{w}_{t+1}\\
+\mu^{w}_{t} &amp; =w_{t}-(\gamma c_{t}+\varphi n_{t})
+\end{aligned}\]</span></p>
+<p>After eliminating redundant equations and the nominal rate <span class="math inline">\(r^{N}_{t}\)</span>, <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;1</a> reports the nonredundant 20-equation representation used in the main text. The system is written in nonredundant form. Some type-specific relations are not reported separately because they are recoverable from symmetry, aggregation, and the displayed household block.</p>
+<div id="tbl-nonredundant-20eq" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[5,57,38]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nonredundant-20eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Nonredundant 20-equation representation
+</figcaption>
+<div aria-describedby="tbl-nonredundant-20eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 56%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Name</th>
+<th>Equation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Type S Euler equation</td>
+<td><span class="math inline">\(r_{t}=\gamma \mathbb{E}_{t}\Delta c^{S}_{t+1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Type H budget constraint</td>
+<td><span class="math inline">\(c^{H}_{t}=w^{H}_{t}+n^{H}_{t}+z_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Aggregate consumption aggregation identity</td>
+<td><span class="math inline">\(c_{t}=\lambda c^{H}_{t}+(1-\lambda)c^{S}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Aggregate labor aggregation identity</td>
+<td><span class="math inline">\(n_{t}=\lambda n^{H}_{t}+(1-\lambda)n^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Aggregate wage Phillips curve</td>
+<td><span class="math inline">\(\pi^{w}_{t}=-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta \mathbb{E}_{t}\pi^{w}_{t+1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Aggregate wage-markup definition</td>
+<td><span class="math inline">\(\mu^{w}_{t}=w_{t}-\gamma c_{t}-\varphi n_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Aggregate wage-inflation identity</td>
+<td><span class="math inline">\(\pi^{w}_{t}=w_{t}-w_{t-1}+\pi^{p}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Type H wage Phillips curve</td>
+<td><span class="math inline">\(\pi^{H}_{t}=-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta \mathbb{E}_{t}\pi^{H}_{t+1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>Type H wage-markup definition</td>
+<td><span class="math inline">\(\mu^{H}_{t}=w^{H}_{t}-\gamma c^{H}_{t}-\varphi n^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>Type H wage-inflation identity</td>
+<td><span class="math inline">\(\pi^{H}_{t}=w^{H}_{t}-w^{H}_{t-1}+\pi^{p}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>Type H labor demand</td>
+<td><span class="math inline">\(n^{H}_{t}=n_{t}-\psi_{w}(w^{H}_{t}-w_{t})\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td>Aggregate wage aggregation identity</td>
+<td><span class="math inline">\(w_{t}=\lambda w^{H}_{t}+(1-\lambda)w^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td>Aggregate wage-markup aggregation identity</td>
+<td><span class="math inline">\(\mu^{w}_{t}=\lambda \mu^{H}_{t}+(1-\lambda)\mu^{S}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td>Aggregate wage-inflation aggregation identity</td>
+<td><span class="math inline">\(\pi^{w}_{t}=\lambda\pi^{H}_{t}+(1-\lambda)\pi^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td>Price Phillips curve</td>
+<td><span class="math inline">\(\pi^{p}_{t}=-(\psi_{p}/\eta_{p})\mu^{p}_{t}+\beta \mathbb{E}_{t}\pi^{p}_{t+1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td>Price-markup definition</td>
+<td><span class="math inline">\(\mu^{p}_{t}=a_{t}-w_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td>Dividend share</td>
+<td><span class="math inline">\(d_{t}=a_{t}-w_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td>Resource constraint</td>
+<td><span class="math inline">\(y_{t}=c_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td>Production function</td>
+<td><span class="math inline">\(y_{t}=a_{t}+n_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td>Taylor rule</td>
+<td><span class="math inline">\(r_{t}=\phi\pi^{p}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}-m_{t}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>For convenience, <a href="#tbl-variables" class="quarto-xref">Table&nbsp;2</a> lists the endogenous variables appearing in <a href="#tbl-nonredundant-20eq" class="quarto-xref">Table&nbsp;1</a>, and <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;3</a> reports the core structural parameters used below.</p>
+<div id="tbl-variables" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[6,72,22]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Endogenous variables in the nonredundant system
+</figcaption>
+<div aria-describedby="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 72%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Meaning</th>
+<th>Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Output</td>
+<td><span class="math inline">\(y_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Aggregate consumption</td>
+<td><span class="math inline">\(c_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Aggregate labor</td>
+<td><span class="math inline">\(n_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Aggregate real wage</td>
+<td><span class="math inline">\(w_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Dividend share</td>
+<td><span class="math inline">\(d_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Ex ante real interest rate</td>
+<td><span class="math inline">\(r_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Price markup</td>
+<td><span class="math inline">\(\mu^{p}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Price inflation</td>
+<td><span class="math inline">\(\pi^{p}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>Aggregate wage markup</td>
+<td><span class="math inline">\(\mu^{w}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>Aggregate wage inflation</td>
+<td><span class="math inline">\(\pi^{w}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>Type H consumption</td>
+<td><span class="math inline">\(c^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td>Type S consumption</td>
+<td><span class="math inline">\(c^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td>Type H labor</td>
+<td><span class="math inline">\(n^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td>Type S labor</td>
+<td><span class="math inline">\(n^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td>Type H real wage</td>
+<td><span class="math inline">\(w^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td>Type S real wage</td>
+<td><span class="math inline">\(w^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td>Type H wage markup</td>
+<td><span class="math inline">\(\mu^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td>Type S wage markup</td>
+<td><span class="math inline">\(\mu^{S}_{t}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td>Type H wage inflation</td>
+<td><span class="math inline">\(\pi^{H}_{t}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td>Type S wage inflation</td>
+<td><span class="math inline">\(\pi^{S}_{t}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-parameters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[6,72,22]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Core structural parameters
+</figcaption>
+<div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 72%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Meaning</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Inverse of elasticity of intertemporal substitution</td>
+<td><span class="math inline">\(\gamma&gt;0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Inverse of Frisch elasticity</td>
+<td><span class="math inline">\(\varphi&gt;0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Discount factor</td>
+<td><span class="math inline">\(0&lt;\beta&lt;1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Elasticity of substitution across intermediate-goods varieties</td>
+<td><span class="math inline">\(\psi_{p}\geq1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Price adjustment cost</td>
+<td><span class="math inline">\(\eta_{p}\geq0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Elasticity of substitution across labor varieties</td>
+<td><span class="math inline">\(\psi_{w}\geq1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Wage adjustment cost</td>
+<td><span class="math inline">\(\eta_{w}\geq0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Taylor-rule coefficient on price inflation</td>
+<td><span class="math inline">\(\phi&gt;1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>Share of Type H households</td>
+<td><span class="math inline">\(0\leq\lambda&lt;1\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

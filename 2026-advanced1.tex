@@ -1,0 +1,429 @@
+%% LyX 2.5.0 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{scrartcl}
+\usepackage[T1]{fontenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+\geometry{verbose}
+\usepackage[authoryear]{natbib}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\usepackage{beamerarticle,pgf}
+% this default might be overridden by plain title style
+\newcommand\makebeamertitle{\frame{\maketitle}}%
+\AtBeginDocument{
+	\let\origtableofcontents=\tableofcontents
+	\def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+	\def\gobbletableofcontents#1{\origtableofcontents}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{xltxtra}
+\usepackage{zxjatype}
+\usepackage[ipaex]{zxjafont}
+\usefonttheme{professionalfonts} 
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Macroeconomics B: \#12 RANK}
+\author{Kenji MIYAZAKI}
+\institute{Hosei University}
+\makebeamertitle
+\begin{frame}{Outline}
+
+\tableofcontents{}
+\end{frame}
+
+\section{はじめに}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}{講義の予定}
+\begin{enumerate}
+\item Introduction (11/8)
+\item RANK (11/15)
+\item TANK (11/30)
+\item CEE (12/7)
+\item THANK (12/14)
+\item GHH-CRRA (12/21)
+\item GK (1/11)
+\end{enumerate}
+\end{frame}
+%
+\begin{frame}{DSGEモデルの方法}
+\begin{itemize}
+\item 最適化問題
+\item それぞれ経済主体（家計・企業・政府など）について, 制約条件のもと目的関数を最適化するように変数を選ぶための条件式 (一階条件) を導出
+\item 集計条件・市場均衡条件
+\begin{itemize}
+\item 個々の経済主体を集計し，それぞれの一階条件と市場均衡条件よりモデルの条件式の導出
+\item 条件式の数と変数の数は同じである必要がある
+\end{itemize}
+\item モデルを解く
+\begin{itemize}
+\item モデルに登場する変数をジャンプ変数と状態変数と確率ショックに分け, すべての変数を現時点および前の時点の状態変数と確率ショックにより記述する.
+このような記述のモデルを\structure{状態空間モデル}という.
+\item 解析的に解けない場合, 定常状態からの\structure{対数線形近似}をした上で数値計算により解く.
+\end{itemize}
+\item モデルと観測データの統計的性質を比較・検証する.
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{NKモデル}
+\begin{itemize}
+\item RBCモデルでは生産性が景気変動の主因
+\item 政府の役割が不要なモデルであり、金融ショックが実物経済に全く影響を与えていないモデルであり、現実データと整合的でない。
+\item 独占的競争市場に価格硬直性を組み入れたNK（ニューケインジアン）モデルによりこれらが劇的に変わった。
+\item ここでは独占的競争市場と価格硬直性を組み入れたNKモデルを紹介する。
+\item 価格硬直性ではRotemberg (1982) とCalvo (1983) の2種類ある。
+\item Yun (1996) は（おそらく最初に）Calvoによりモデル化し、インフレと景気変動が正の関係を持つことを示した。
+\item 以前はよりミクロ的基礎づけが厳密なCalvoが中心であったが、最近はRotembergが見直されている。
+\item どちらの価格硬直性であっても対数線形近似が同値になるようにパラメータを選ぶことができる（Ascari and Rossi, 2012）
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{RANK}
+\begin{itemize}
+\item 7 Variables: $L_{t}$, $C_{t}$, $Y_{t}$, $1+i$, $1+\pi_{t}$, $A_{t}$,
+$m_{t}$,
+\item 10 parameters: $\alpha$, $\beta$, $\sigma$, $\varphi$, $\psi_{P}$,
+$\eta_{P}$,$\rho_{A}$, $\rho_{m}$, $\phi_{y}$, $\phi_{\pi}$
+\item 
+\begin{align*}
+\mathbb{E}_{t}\left[\hat{Y}_{t+1}\right]-\hat{Y}_{t}= & \frac{1}{\sigma}\left\{ \widehat{1+i_{t}}-\mathbb{E}_{t}\left[\widehat{1+\pi_{t+1}}\right]\right\} \\
+ & -\frac{\kappa_{a}}{\kappa_{y}}\left\{ \mathbb{E}_{t}\left[\hat{A}_{t+1}\right]-\hat{A}_{t}\right\} \\
+\widehat{1+\pi_{t}}= & \kappa_{y}\hat{Y}_{t}+\beta\mathbb{E}_{t}\left[\widehat{1+\pi_{t+1}}\right]-\kappa_{a}\hat{A}_{t}\\
+\widehat{1+i_{t}}= & \phi_{y}\hat{Y}_{t}+\phi_{\pi}\widehat{1+\pi_{t}}-\hat{m}_{t}\\
+\hat{A}_{t}= & \rho_{A}\hat{A}_{t-1}+e^{A}_{t}\\
+\hat{m}_{t}= & \rho_{m}\hat{m}_{t-1}+e^{m}_{t}
+\end{align*}
+\begin{align*}
+\kappa_{y} & \equiv\frac{\sigma(1-\alpha)+\alpha+\varphi}{1-\alpha}\frac{\psi_{P}}{\eta_{P}}\\
+\kappa_{a} & \equiv\frac{1+\varphi}{1-\alpha}\frac{\psi_{P}}{\eta_{P}}
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}[allowframebreaks]{経済変数・関数・添字}
+\begin{itemize}
+\item $A_{t}$: 技術水準
+\item $B_{t}$: 債券
+\item $C_{t}$: 消費量
+\item $D_{t}=D^{I}_{t}$, $D^{F}_{t}$: 配当 (最終財財企業に添字)
+\item $e^{A}_{t}$, $e^{m}_{t}$: 誤差項
+\item $f_{P}$: 価格の調整費用関数
+\item $F$: 生産関数
+\item $h$: 家計の添字
+\item $i_{t}$: 名目利子率（名目債券利子率）
+\item $j$: 企業の添字
+\item $L_{t}$: 労働投入量
+\item $m_{t}$: 金融緩和ショック
+\item $MC_{t}=MC^{I}_{t}$, $MC^{F}_{t}$:(実質) 限界費用, 乗数 (最終財財企業に添字をつけて名目限界費用)
+\item $\Lambda_{t}$: 限界効用, 乗数
+\item $P_{t}=P^{F}_{t}$, $P^{I}_{t}$: 物価水準
+\item $\pi_{t}$: インフレ率
+\item $s_{t}=s^{I}_{t}$, $s^{F}_{t}$ : 株式保有率 (最終財財企業に添字)
+\item $t$: 時間の添字
+\item $\tau^{S}$: 比例補助金
+\item $TX^{I}_{t}$: 一括税
+\item $U$: 効用関数
+\item $V_{t}=V^{I}_{t}$, $V^{F}_{t}$: 企業価値 (最終財財企業に添字)
+\item $W_{t}$ ($w_{t}$): 賃金率
+\item $Y_{t}=V^{F}_{t}$, $Y^{I}_{t}$: 産出量 (中間財企業に添字)
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{パラメータ}
+\begin{itemize}
+\item $1-\alpha$: 労働分配率 ($0\leq\alpha<1$)
+\item $1/\beta-1$: 時間選好率 $(0<\beta<1$)
+\item $-1/\varphi$: フリッシュ弾力性 ($\varphi>0$)
+\item $\kappa,\kappa_{y},\kappa_{a}$: 補助パラメータ
+\item $\psi_{P}$: 中間財の価格弾力性 ($\psi_{P}>1$)
+\item 1/$\sigma$: 異時点間の代替弾力性 ($\sigma>0$) 
+\item $\rho_{A}$: 技術水準の持続性 ($0\leq\rho_{A}<1$)
+\item $\rho_{m}$: 金融ショックの持続性 ($0\leq\rho_{m}<1$)
+\item \structure{$\rho_{u}$: コストプッシュインフレの持続性 ($0\leq\rho_{u}<1$)}
+\item $\phi_{y},\phi_{\pi}$: テーラールールパラメータ ($\phi_{y}\geq0$, $\phi_{\pi}>1$)
+\item $\eta_{P}$: 価格調整費用パラメータ ($\eta_{P}\ge0$)
+\item $\chi_{L}$: 労働不効用パラメータ ($\chi\geq0$)
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{価格の調整費用関数}
+\begin{itemize}
+\item Utility function $U(C,L)$: $U_{C}>0$, $U_{CC}\leq0$. $U_{L}<0$,
+$U_{LL}\leq0$, 凹関数（$U_{CC}U_{LL}-U^{2}_{CL}\geq0$）
+\item Production function $F(L)$: $F_{L}>0$, $F_{LL}\leq0$
+\item Price Adjustment cost function: $f_{P}(P_{t}/P_{t-1})Y_{t}$:
+\begin{align*}
+f_{P}(\cdot) & \geq0,\\
+f_{P}''(\cdot) & \geq0,\\
+f_{P}(1+\pi_{SS}) & =f_{P}'(1+\pi_{SS})=0
+\end{align*}
+\item 物価上昇率について凸関数
+\end{itemize}
+\end{frame}
+%
+
+\section{家計}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}[allowframebreaks]{家計}
+\begin{itemize}
+\item 家計$h\in[0,1]$は (非可算) 無限に存在する
+\item 共通の選好パラメータを持つ
+\item 期待生涯効用を最大化する
+\item 家計は企業を保有し、企業から配当を受け取る
+\item 所与変数：$\{W_{t},P_{t},R_{t},D_{t},V_{t}\}^{\infty}_{t=0}$
+\item 選択変数：$\{C_{t}(h),N_{t}(h),B_{t}(h),\Theta_{t}(h)\}^{\infty}_{t=0}$
+\item 目的関数:
+\[
+\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U\left(C_{t}(h),\;N_{t}(h)\right)
+\]
+\item 制約条件:$B_{0}(h)=B_{0}$, $s^{F}_{0}(h)=s_{0}(h)=1$, 
+\begin{align*}
+ & C_{t}(h)+B_{t}(h)+\Theta_{t}(h)V_{t}+TX^{H}_{t}\\
+ & \leq R^{N}_{t-1}\frac{P_{t-1}}{P_{t}}B_{t-1}(h)+\Theta_{t-1}(h)(V_{t}+D_{t})+W_{t}N_{t}(h)
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}[allowframebreaks]{対称均衡（symmetric equilibrium）}
+\begin{itemize}
+\item $C_{t}(h)=C_{t},\;N_{t}(h)=N_{t}$ $B_{t}(h)=B_{t}$, $\Theta_{t}(h)=\Theta_{t}(h)=1$,
+$\Lambda_{t}(h)=\Lambda_{t}$ 
+\begin{align*}
+\Lambda_{t} & =U_{C}\left(C_{t},\;N_{t}\right)\\
+W_{t} & =-\frac{U_{L}\left(C_{t},\;N_{t}\right)}{\Lambda_{t}}\\
+1 & =\mathbb{E}_{t}\left[\beta\frac{\Lambda_{t+1}}{\Lambda_{t}}\frac{P_{t}}{P_{t+1}}R^{N}_{t}\right]\\
+V_{t} & =\mathbb{E}_{t}\left[\beta\frac{\Lambda_{t+1}}{\Lambda_{t}}\left(V_{t+1}+D_{t+1}\right)\right]\\
+ & =\mathbb{E}_{t}\left[\sum^{\infty}_{i=1}\beta^{i}\frac{\Lambda_{t+i}}{\Lambda_{t}}D_{t+i}\right]
+\end{align*}
+and 
+\begin{align*}
+C_{t}+B_{t} & =W_{t}N_{t}+R^{N}_{t-1}\frac{P_{t-1}}{P_{t}}B_{t-1}+D_{t}
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\section{企業}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}{企業行動}
+\begin{itemize}
+\item 財市場は最終財市場と中間財市場にわかれている.
+\item 最終財市場は\alert{完全競争市場}を考える.
+\begin{itemize}
+\item 一つの代表的な最終財企業を考えてる.
+\item 価格は所与として最終財企業は企業価値を最大化するように各期の生産水準を決める. (price taker) 
+\item 企業は\structure{生産水準}を毎期毎期調整できるので, 各期の利潤を最大化をおこなえば企業価値を最大化することができる.
+\item 最大化条件から中間財への需要関数が導出される.
+\end{itemize}
+\item 中間財市場は\alert{独占的競争市場}を考える. 
+\begin{itemize}
+\item それぞれの企業は自身の需要関数をもとに価格水準を変化させることができる. 企業価値を最大化するように各期の価格水準を決める. (price
+maker) 
+\item 企業は\structure{価格水準}を毎期毎期調整できるので, 毎期の利潤最大化をおこなえば企業価値を最大できる.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{最終財企業}
+
+\begin{frame}{最終財企業}
+\begin{itemize}
+\item 最終財市場は完全競争市場
+\item 1つ代表的企業を考える
+\item 中間財企業$j\in[0,1]$は (非可算) 無限に存在し、それら産出量を投入財とする。
+\item 所与変数：$\{P_{t},\{P^{I}_{t}(j)\}_{j\in[0,1]}\}^{\infty}_{t=0}$
+\item 選択変数：$\{Y_{t},\{Y^{I}_{t}(j)\}_{j\in[0,1]}\}^{\infty}_{t=0}$
+\item 目的関数: 
+\[
+P_{t}Y_{t}-\int^{1}_{0}P^{I}_{t}(j)Y^{I}_{t}(j)dj
+\]
+\item 制約条件:
+\begin{align*}
+Y_{t} & =\left(\int^{1}_{0}Y^{I}_{t}(j)^{\frac{\psi-1}{\psi}}dj\right)^{\frac{\psi}{\psi-1}},\;\psi>1
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{一階条件}
+\begin{itemize}
+\item FOC implies:
+\begin{align*}
+Y^{I}_{t}(j) & =Y_{t}\left(\frac{P^{I}_{t}(j)}{P_{t}}\right)^{-\psi}\\
+P_{t} & =\left[\int^{1}_{0}P^{I}_{t}(j)^{1-\psi}dj\right]^{\frac{1}{1-\psi}}
+\end{align*}
+\item 最終財企業利潤はゼロ
+\end{itemize}
+\end{frame}
+%
+
+\subsection{中間財企業}
+\begin{frame}{中間財企業}
+\begin{itemize}
+\item 中間財市場は独占的競争市場と仮定する. 
+\item 企業$j\in[0,1]$は (非可算) 無限に存在する
+\item 共通の技術パラメータを持ち、共通の技術ショックに直面
+\item 一括税$TX_{t}$を徴収され売り上げに対する比例補助金$\sigma Y_{t}$を受け取る
+\item 所与変数：$\{W_{t},P_{t},Y_{t},a_{t},\Lambda_{t},TX^{I}_{t}\}^{\infty}_{t=0}$
+\item 選択変数：$\{L_{t}(j),P^{I}_{t}(j),Y^{I}_{t}(j),D^{I}_{t}(j)\}^{\infty}_{t=0}$
+\item 目的関数:
+\[
+\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{\Lambda_{t}}{\Lambda_{0}}D_{t}(j)
+\]
+\item 制約条件:
+\begin{align*}
+D_{t}(j) & =(1+\sigma)\frac{P^{I}_{t}(j)}{P_{t}}Y^{I}_{t}(j)-f_{P}\left(\frac{P^{I}_{t}(j)}{P^{I}_{t-1}(j)}\right)Y_{t}-W_{t}N_{t}(j)-TX^{I}_{t}\\
+Y^{I}_{t}(j) & =Y_{t}\left(\frac{P^{I}_{t}(j)}{P_{t}}\right)^{-\psi_{P}}\\
+Y^{I}_{t}(j) & =\exp(a_{t})F(N_{t}(j))\\
+a_{t} & =\rho_{a}a_{t-1}+e^{a}_{t}
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{対称均衡（symmetric equilibrium）}
+\begin{itemize}
+\item $L_{t}(j)=L_{t}$, $MC_{t}(j)=MC_{t}$, $P^{I}_{t}(j)=P^{I}_{t}=P_{t}$,
+$Y^{I}_{t}(j)=Y^{I}_{t}=Y_{t}$,
+\begin{align*}
+W_{t}= & MC_{t}\exp(a_{t})F_{N}(N_{t})\\
+Y_{t}= & \exp(a_{t})F(N_{t})\\
+\frac{P_{t}}{P_{t-1}}f_{P}'\left(\frac{P_{t}}{P_{t-1}}\right)= & \psi_{P}\left(MC_{t}-(1+\tau^{S})(1-1/\psi_{P})\right)\\
+ & +\beta\mathbb{E}_{t}\left[\frac{\Lambda_{t+1}}{\Lambda_{t}}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}f_{P}'\left(\frac{P_{t+1}}{P_{t}}\right)\right]
+\end{align*}
+\item 中間財企業の利潤
+\begin{align*}
+D_{t} & =(1+\sigma)\exp(a_{t})F(N_{t})-f_{P}\left(P_{t}/P_{t-1}\right)Y_{t}-W_{t}N_{t}-TX^{I}_{t}\\
+ & =(1+\sigma-f_{P}\left(P_{t}/P_{t-1}\right))Y_{t}-W_{t}N_{t}-TX^{I}_{t}
+\end{align*}
+\end{itemize}
+
+\end{frame}
+
+\section{政府}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}{テーラールール}
+\begin{itemize}
+\item 政府が以下のルールにより名目利子率を決めていると仮定する:
+\begin{align*}
+R^{N}_{t} & =\frac{\exp(-m_{t})}{\beta}\left(\Pi_{t}\right)^{\phi}\\
+m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}
+\end{align*}
+\item $0\leq\rho_{m}<1$, $\phi>1$
+\item $m_{t}>0$なら経済主体が予想外の利下げショックと解釈する（金融緩和）
+\item テーラールールが安定的なための十分条件は$\phi_{\pi}>1$である。この理由については後述
+\item 厚生を改善させるための金融政策についても後述
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{財政政策}
+\begin{itemize}
+\item 中間財企業から一括税$TX^{I}$を徴収し、中間財企業に売り上げに対する$\tau^{S}$の比例補助金を導入
+\[
+\sigma Y_{t}=TX^{I}_{t}
+\]
+\item 家計から一括税$TX^{H}$を徴収し、政府支出を実施
+\begin{align*}
+G_{t} & =TX^{H}_{t}
+\end{align*}
+\item 政府支出は以下：
+\begin{align*}
+g_{t} & =\rho_{g}g_{t-1}+e^{g}_{t}\\
+g_{t} & =(G_{t}-G)/Y
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\section{均衡条件}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}{均衡条件}
+\begin{itemize}
+\item 債券市場の均衡条件：$B_{t}=0$
+\item 財市場の均衡条件は家計と政府の予算制約式から導出できる：
+\begin{align*}
+ & C_{t}+B_{t}+TX^{H}_{t}=W_{t}N_{t}+R_{t-1}\frac{P_{t-1}}{P_{t}}B_{t-1}+D_{t}\\
+\Leftrightarrow & C_{t}+G_{t}=W_{t}N_{t}+D_{t}\\
+\Leftrightarrow & C_{t}+G_{t}=W_{t}N_{t}+(1+\tau^{S}-f_{P}\left(P_{t}/P_{t-1}\right))Y_{t}-W_{t}N_{t}-TX^{I}_{t}\\
+\Leftrightarrow & C_{t}+G_{t}=Y_{t}\left(1-f_{P}\left(\frac{P_{t}}{P_{t-1}}\right)\right)\\
+\Leftrightarrow & C_{t}+G_{t}+f_{P}\left(\frac{P_{t}}{P_{t-1}}\right)Y_{t}=Y_{t}
+\end{align*}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}[allowframebreaks]{モデルのまとめ}
+\begin{itemize}
+\item $\Pi_{t}=P_{t}/P_{t-1}$とおくと、モデルは次の10本の式にまとめられる
+\item 家計
+\begin{align*}
+\Lambda_{t}= & U_{C}\left(C_{t},\;N_{t}\right)\\
+W_{t}= & -U_{L}\left(C_{t},\;N_{t}\right)/\Lambda_{t}\\
+1= & \mathbb{E}_{t}\left[\beta\frac{\Lambda_{t+1}}{\Lambda_{t}}\frac{R^{N}_{t}}{\Pi_{t+1}}\right]\\
+R^{N}_{t}= & \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi_{t+1}}\right]\\
+Y_{t} & =\exp(a_{t})F(N_{t})
+\end{align*}
+\item 企業:
+\begin{align*}
+\frac{P_{t}}{P_{t-1}}f_{P}'\left(\frac{P_{t}}{P_{t-1}}\right)= & \psi_{P}\left(MC_{t}-(1+\sigma)(1-1/\psi)\right)\\
+ & +\beta\mathbb{E}_{t}\left[\frac{\Lambda_{t+1}}{\Lambda_{t}}\frac{Y_{t+1}}{Y_{t}}\Pi_{t+1}f_{P}'\left(\Pi_{t+1}\right)\right]\\
+W_{t}= & MC_{t}\exp(a_{t})F_{N}(N_{t})\\
+D_{t}= & (1-f_{P}\left(\Pi_{t}\right))Y_{t}-W_{t}N_{t}
+\end{align*}
+\item 政府
+\[
+R^{N}_{t}=\Pi^{\phi}_{t}\exp(-m_{t})
+\]
+\item 均衡および制約条件:
+\begin{align*}
+Y_{t} & =C_{t}+G_{t}+f_{P}(\Pi_{t})Y_{t}
+\end{align*}
+\item ショック
+\begin{align*}
+m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}\\
+a_{t} & =\rho_{a}a_{t-1}+e^{a}_{t}\\
+g_{t} & =\rho_{g}g_{t-1}+e^{g}_{t}
+\end{align*}
+\end{itemize}
+
+\end{frame}
+
+\section{対数線形近似解}
+
+ \frame{\tableofcontents[currentsection]}
+\begin{frame}[allowframebreaks]{関数形の特定}
+\begin{itemize}
+\item パラメータを特定化する
+\item 効用関数 (CRRA): $U(C,N)=\frac{C^{1-\sigma}}{1-\sigma}-\frac{N^{1+\varphi}}{1+\varphi}$
+\item 生産関数: $F(L)=N^{1-\alpha}$
+\item 価格の調整費用関数:
+\end{itemize}
+\begin{align*}
+f_{P}(x) & =\frac{\eta_{P}}{2}\left(x-1\right)^{2}\\
+f_{P}'(x) & =\eta_{P}\left(x-1\right)\\
+f_{P}''(x) & =\eta_{P}
+\end{align*}
+
+\end{frame}
+%
+\begin{frame}{まとめ}
+\begin{itemize}
+\item NKモデルと呼称
+\item MCモデルに価格硬直性を導入
+\item 価格硬直性としてRotemberg流の取引費用を導入
+\item テーラールールの導入
+\item 金融緩和により一時的に経済状態が向上
+\item 政府による再配分により社会計画者の定常状態が達成可能
+\item さらに金融政策により厚生改善可能
+\end{itemize}
+\end{frame}
+
+\end{document}

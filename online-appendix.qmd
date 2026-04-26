@@ -1,0 +1,434 @@
+---
+title: "Online Appendix for 'Macroeconomic Stabilization and Endogenous Inequality in a TANK Model with Dual Nominal Rigidities'"
+---
+
+This online appendix reports the nonlinear primitives of the model and the intermediate log-linearization steps underlying Section 3 of the main text. Appendix A in the main text derives the analytical reduction from the nonredundant 20-equation system to the five-equation canonical representation.
+
+# Model Description
+
+The appendix first states the nonlinear problems of the labor packer, households, firms, and government. It then collects a reduced nonlinear equilibrium system sufficient for the first-order approximation, and finally reports the nonredundant log-linear system used in Section 3 of the main text.
+
+Throughout, upper-case letters denote level variables. The index $h\in[0,1]$ refers to households, and the index $j\in[0,1]$ refers to intermediate-goods firms. A superscript $i\in\{H,S\}$ indicates the household type, where ($H$) denotes hand-to-mouth households and $S$ denotes saver households. $P_{t}$ denotes the final-good price index, $W^{N}_{t}$ the aggregate nominal wage, and $W_{t}\equiv W^{N}_{t}/P_{t}$ the aggregate real wage. For each household type $i$, $C^{i}_{t}$, $N^{i}_{t}$, and $W^{N,i}_{t}$ denote consumption, labor supply, and the nominal wage, while $W^{i}_{t}\equiv W^{N,i}_{t}/P_{t}$ denotes the corresponding real wage. Aggregate price inflation is defined as $\Pi^{p}_{t}\equiv P_{t}/P_{t-1}$, and type-specific wage inflation is defined as $\Pi^{i}_{t}\equiv W^{N,i}_{t}/W^{N,i}_{t-1}$. Preferences are represented by a general period utility function $U(C,N)$, with marginal utilities $U_{C}(C,N)>0$ and $U_{N}(C,N)<0$. The marginal rate of substitution is $MRS(C,N)\equiv-U_{N}(C,N)/U_{C}(C,N)$. Intermediate firms use the general technology $Y=A_{t}F(N)$, with $F_{N}(N)>0$. The type-$i$ wage markup is $MU^{i}_{t}\equiv W^{i}_{t}/MRS(C^{i}_{t},N^{i}_{t})$, and the price markup is $MU^{p}_{t}\equiv A_{t}F_{N}(N_{t})/W_{t}$. Finally, $R^{N}_{t}$ denotes the gross nominal interest rate and $D_{t}$ firm dividends. Here $T^{i}_{t}$ denotes the net fiscal liability of type-$i$ households. A negative value therefore corresponds to a transfer received by that household type. The variable $Z_{t}$ denotes the transfer directed to Type H households, and $z_{t}$ is the redistribution shock that drives $Z_{t}$ through $Z_{t}=z_{t}Y$.
+
+## Labor Packer
+
+The labor packer is a competitive aggregator that combines differentiated household labor into a homogeneous labor input sold to intermediate-goods firms. Household $h$ supplies labor $N_{t}(h)$ and is paid the nominal wage $W^{N}_{t}(h)$, while the packer sells the aggregate labor input $N_{t}$ at the aggregate nominal wage $W^{N}_{t}$. The parameter $\psi_{w}>1$ is the elasticity of substitution across labor varieties, and $\Lambda^{L}_{t}$ is the multiplier on the constant-elasticity-of-substitution aggregation constraint. Taking the household-specific wages $\{W^{N}_{t}(h)\}_{h\in[0,1]}$ as given, the labor packer chooses $\{N_{t}(h)\}_{h\in[0,1]}$ and $N_{t}$, which yields the labor demand schedule for each household and the aggregate nominal wage index.
+
+- Objects taken as given: $P_{t},W^{N}_{t},\{W^{N}_{t}(h)\}_{h\in[0,1]}$
+
+- Choice variables: $N_{t},\{N_{t}(h)\}_{h\in[0,1]}$
+
+- Objective Function: $$W^{N}_{t}N_{t}-\int^{1}_{0}W^{N}_{t}(h)N_{t}(h)dh$$
+
+- Constraints: $$N_{t}=\left(\int^{1}_{0}N_{t}(h)^{\frac{\psi_{w}-1}{\psi_{w}}}dh\right)^{\frac{\psi_{w}}{\psi_{w}-1}},\;\psi_{w}>1.$$
+
+- Lagrangian: $$\begin{aligned}
+  \mathcal{L}_{t}= & W^{N}_{t}N_{t}-\int^{1}_{0}W^{N}_{t}(h)N_{t}(h)dh\\
+   & +\Lambda^{L}_{t}\left(\left(\int^{1}_{0}N_{t}(h)^{\frac{\psi_{w}-1}{\psi_{w}}}dh\right)^{\frac{\psi_{w}}{\psi_{w}-1}}-N_{t}\right)
+  \end{aligned}$$
+
+- FOC wrt $N_{t}$: $$W^{N}_{t}=\Lambda^{L}_{t}$$
+
+- FOC wrt $N_{t}(h)$: $$N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}$$
+
+- Nominal wage: $$W^{N}_{t}=\left[\int^{1}_{0}W^{N}_{t}(h)^{1-\psi_{w}}dh\right]^{\frac{1}{1-\psi_{w}}}$$
+
+## Households
+
+There is a continuum of households indexed by $h\in[0,1]$. Each household consumes $C_{t}(h)$, supplies differentiated labor $N_{t}(h)$, and sets its own nominal wage $W^{N}_{t}(h)$. Preferences are common across households and are represented by period utility $U(C_{t}(h),N_{t}(h))$. Wage setting is subject to Rotemberg-type adjustment costs governed by $\eta_{w}$, and labor income is subsidized at rate $\tau_{w}$. A fraction $\lambda$ of households are hand-to-mouth households (Type H), who do not trade assets, while the remaining fraction $1-\lambda$ are saver households (Type S), who hold one-period nominal bonds and receive firm dividends. Within each type, full risk sharing implies identical consumption, labor, and wage choices in equilibrium.
+
+With two household types and within-type symmetry, the labor-packer aggregation functions defined and derived in the previous subsection can be rewritten as follows:
+$$\begin{aligned}
+N_{t} & =\left[\lambda(N^{H}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}+(1-\lambda)(N^{S}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}\right]^{\frac{\psi_{w}}{\psi_{w}-1}}\\
+W^{N}_{t} & =\left[\lambda(W^{N,H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{N,S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}\\
+ & =P_{t}\left[\lambda(W^{H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}
+\end{aligned}$$
+
+### Type H
+
+A Type H household chooses current consumption $C_{t}(h)$, labor supply $N_{t}(h)$, and its own nominal wage $W^{N}_{t}(h)$, taking aggregate variables as given. Since it does not trade financial assets, its current uses of funds consist of consumption and the net fiscal liability $T^{H}_{t}$, where $T^{H}_{t}<0$ corresponds to a transfer received from the government. In the budget constraint, $P_{t}$ is the aggregate price level, $Y_{t}$ is aggregate output, and $\eta_{w}$ measures the cost of changing the nominal wage relative to the previous period's wage $W^{N}_{t-1}(h)$. The optimality conditions imply the marginal utility of consumption, the household-specific labor demand schedule, and the Type H wage-setting equation. In symmetric equilibrium, these conditions can be written in terms of the Type H real wage $W^{H}_{t}$, wage inflation $\Pi^{H}_{t}$, marginal rate of substitution $MRS^{H}_{t}\equiv MRS(C^{H}_{t},N^{H}_{t})$, and wage markup $MU^{H}_{t}\equiv W^{H}_{t}/MRS^{H}_{t}$.
+
+- Objects taken as given: $W^{N}_{t},P_{t},N_{t},Y_{t},T^{H}_{t},W^{N}_{t-1}(h)$
+
+- Choice variables: $C_{t}(h),N_{t}(h),W^{N}_{t}(h)$
+
+- Objective Function: $$\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U(C_{t}(h),N_{t}(h))$$
+
+- Constraints: $$\begin{aligned}
+   & C_{t}(h)+T^{H}_{t}\\
+   & =(1+\tau_{w})\frac{W^{N}_{t}(h)}{P_{t}}N_{t}(h)-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+   & N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}
+  \end{aligned}$$
+
+- Lagrangian: $$\begin{aligned}
+  \mathbb{L}= & \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\mathcal{L}_{t}\\
+  \mathcal{L}_{t}= & U\left(C_{t}(h),N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\right)\\
+   & +\Lambda^{H}_{t}(h)\left(\begin{array}{c}
+  (1+\tau_{w})\frac{N_{t}}{P_{t}}W^{N}_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{1-\psi_{w}}-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+  -C_{t}(h)-T^{H}_{t}
+  \end{array}\right)
+  \end{aligned}$$
+
+- FOC wrt $C_{t}(h)$: $$\Lambda^{H}_{t}(h)=U_{C}(C_{t}(h),N_{t}(h))$$
+
+- FOC wrt $W^{N}_{t}(h)$: $$\begin{aligned}
+  -\psi_{w}\frac{N_{t}}{W^{N}_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}-1}U_{N}(C_{t}(h),N_{t}(h))\\
+  +(1-\psi_{w})\Lambda^{H}_{t}(h)(1+\tau_{w})\frac{N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+  -\Lambda^{H}_{t}(h)\eta_{w}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)\frac{Y_{t}}{W^{N}_{t-1}(h)}\\
+  +\beta \mathbb{E}_{t}\Lambda^{H}_{t+1}(h)\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}} & =0
+  \end{aligned}$$
+
+- Symmetric Equilibrium ($\Lambda^{H}_{t}(h)=\Lambda^{H}_{t}$, $C_{t}(h)=C^{H}_{t}$, $N_{t}(h)=N^{H}_{t}$, $W^{N}_{t}(h)=W^{N,H}_{t}$): $$\begin{aligned}
+  N^{H}_{t} & =N_{t}\left(\frac{W^{N,H}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+  \Lambda^{H}_{t} & =U_{C}(C^{H}_{t},N^{H}_{t})
+  \end{aligned}$$ $$\begin{aligned}
+  \eta_{w}\frac{Y_{t}}{N^{H}_{t}}\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)= & \psi_{w}\left[MRS^{H}_{t}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\frac{W^{N,H}_{t}}{P_{t}}\right]\\
+   & +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{N^{H}_{t}}\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}\left(\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}-1\right)\right]\\
+  \Leftrightarrow\eta_{w}\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)= & \psi_{w}\frac{W^{N,H}_{t}N^{H}_{t}}{P_{t}Y_{t}}\left[\frac{1}{MU^{H}_{t}}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\right]\\
+   & +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}\left(\frac{W^{N,H}_{t+1}}{W^{N,H}_{t}}-1\right)\right]
+  \end{aligned}$$
+
+### Type S
+
+A Type S household chooses consumption $C_{t}(h)$, labor supply $N_{t}(h)$, its own nominal wage $W^{N}_{t}(h)$, and one-period nominal bond holdings $B^{N}_{t}(h)$. In addition to current after-subsidy labor income, it receives gross nominal bond returns $R^{N}_{t-1}B^{N}_{t-1}(h)$, firm dividends $D_{t}$, and faces the net fiscal liability $T^{S}_{t}$. A positive value of $T^{S}_{t}$ is therefore a levy, while a negative value corresponds to a transfer. Here $R^{N}_{t}$ denotes the gross nominal interest rate on the bond purchased in period $t$, and $B^{N}_{t}(h)/P_{t}$ is the household's real bond position. The optimality conditions deliver both an Euler equation governing intertemporal consumption smoothing and a wage-setting equation analogous to that of Type H households. In symmetric equilibrium, these conditions are summarized by the Type S real wage $W^{S}_{t}$, wage inflation $\Pi^{S}_{t}$, marginal rate of substitution $MRS^{S}_{t}\equiv MRS(C^{S}_{t},N^{S}_{t})$, and wage markup $MU^{S}_{t}\equiv W^{S}_{t}/MRS^{S}_{t}$.
+
+- Objects taken as given: $W^{N}_{t},P_{t},R^{N}_{t},D_{t},N_{t},Y_{t},T^{S}_{t},W^{N}_{t-1}(h),B^{N}_{t-1}(h)$
+
+- Choice variables: $C_{t}(h),N_{t}(h),W^{N}_{t}(h),B^{N}_{t}(h)$
+
+- Objective Function: $$\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}U(C_{t}(h),N_{t}(h))$$
+
+- Constraints: $$\begin{aligned}
+   & C_{t}(h)+\frac{B^{N}_{t}(h)}{P_{t}}+T^{S}_{t}\\
+   & =(1+\tau_{w})\frac{W^{N}_{t}(h)}{P_{t}}N_{t}(h)-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+   & +R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}\\
+   & N_{t}(h)=N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}
+  \end{aligned}$$
+
+- Lagrangian: $$\begin{aligned}
+  \mathbb{L}= & \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\mathcal{L}_{t}\\
+  \mathcal{L}_{t}= & U\left(C_{t}(h),N_{t}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\right)\\
+   & +\Lambda^{S}_{t}(h)\left(\begin{array}{c}
+  (1+\tau_{w})\frac{W^{N}_{t}N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{1-\psi_{w}}-\frac{\eta_{w}}{2}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)^{2}Y_{t}\\
+  +R^{N}_{t-1}\frac{B^{N}_{t-1}(h)}{P_{t}}+D_{t}-C_{t}(h)-\frac{B^{N}_{t}(h)}{P_{t}}-T^{S}_{t}
+  \end{array}\right)
+  \end{aligned}$$
+
+- FOC wrt $C_{t}(h)$: $$\Lambda^{S}_{t}(h)=U_{C}(C_{t}(h),N_{t}(h))$$
+
+- FOC wrt $W^{N}_{t}(h)$: $$\begin{aligned}
+  -\psi_{w}\frac{N_{t}}{W^{N}_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}-1}U_{N}(C_{t}(h),N_{t}(h))\\
+  +(1-\psi_{w})\Lambda^{S}_{t}(h)(1+\tau_{w})\frac{N_{t}}{P_{t}}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+  -\Lambda^{S}_{t}(h)\eta_{w}\left(\frac{W^{N}_{t}(h)}{W^{N}_{t-1}(h)}-1\right)\frac{Y_{t}}{W^{N}_{t-1}(h)}\\
+  +\beta \mathbb{E}_{t}\Lambda^{S}_{t+1}(h)\eta_{w}\left(\frac{W^{N}_{t+1}(h)}{W^{N}_{t}(h)}-1\right)\frac{W^{N}_{t+1}(h)Y_{t+1}}{W^{N}_{t}(h)^{2}} & =0
+  \end{aligned}$$
+
+- FOC wrt $B^{N}_{t}(h)$: $$\frac{\Lambda^{S}_{t}(h)}{P_{t}}=\beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{\Lambda^{S}_{t+1}(h)}{P_{t+1}}\right]$$
+
+- Symmetric Equilibrium ($\Lambda^{S}_{t}(h)=\Lambda^{S}_{t}$, $C_{t}(h)=C^{S}_{t}$, $N_{t}(h)=N^{S}_{t}$, $W^{N}_{t}(h)=W^{N,S}_{t}$, where $W^{S}_{t}$ is the real wage of type $S$): $$\begin{aligned}
+  N^{S}_{t} & =N_{t}\left(\frac{W^{N,S}_{t}}{W^{N}_{t}}\right)^{-\psi_{w}}\\
+  \Lambda^{S}_{t} & =U_{C}(C^{S}_{t},N^{S}_{t})\\
+  1= & \beta\mathbb{E}_{t}\left[R^{N}_{t}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{P_{t}}{P_{t+1}}\right]
+  \end{aligned}$$ $$\begin{aligned}
+  \eta_{w}\frac{Y_{t}}{N^{S}_{t}}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= & \psi_{w}\left[MRS^{S}_{t}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\frac{W^{N,S}_{t}}{P_{t}}\right]\\
+   & +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{N^{S}_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]\\
+  \Leftrightarrow\eta_{w}\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)= & \psi_{w}\frac{W^{N,S}_{t}N^{S}_{t}}{P_{t}Y_{t}}\left[\frac{1}{MU^{S}_{t}}-(1+\tau_{w})\left(1-\frac{1}{\psi_{w}}\right)\right]\\
+   & +\beta\eta_{w}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}\left(\frac{W^{N,S}_{t+1}}{W^{N,S}_{t}}-1\right)\right]
+  \end{aligned}$$ where $MRS^{S}_{t}=MRS(C^{S}_{t},N^{S}_{t})$ is Type S marginal rate of substitution, and $MU^{S}_{t}=W^{S}_{t}/MRS^{S}_{t}$ is Type S wage markup.
+
+## Final Goods Firm
+
+The final-goods firm is perfectly competitive and combines differentiated intermediate goods into a homogeneous final good using a constant-elasticity-of-substitution aggregator. The quantity of variety $j$ is denoted by $Y_{t}(j)$, its price by $P_{t}(j)$, aggregate final output by $Y_{t}$, and the final-good price index by $P_{t}$. The elasticity of substitution across intermediate varieties is $\psi_{p}\ge1$, and $\Lambda^{F}_{t}$ is the multiplier on the aggregation constraint. Taking the prices $\{P_{t}(j)\}_{j\in[0,1]}$ as given, the final-goods firm chooses ($\{Y_{t}(j)\}_{j\in[0,1]}$) and $Y_{t}$, which yields the demand schedule for each intermediate-good producer and the aggregate final-good price index.
+
+- Objects taken as given: $P_{t},\{P_{t}(j)\}_{j\in[0,1]}$
+
+- Choice variables: $Y_{t},\{Y_{t}(j)\}_{j\in[0,1]}$
+
+- Objective Function: $$P_{t}Y_{t}-\int^{1}_{0}P_{t}(j)Y_{t}(j)dj$$
+
+- Constraints: $$Y_{t}=\left(\int^{1}_{0}Y_{t}(j)^{\frac{\psi_{p}-1}{\psi_{p}}}dj\right)^{\frac{\psi_{p}}{\psi_{p}-1}},\;\psi_{p}\geq1$$
+
+- Lagrangian: $$\begin{aligned}
+  \mathcal{L}_{t}= & P_{t}Y_{t}-\int^{1}_{0}P_{t}(j)Y_{t}(j)dj\\
+   & +\Lambda^{F}_{t}\left(\left(\int^{1}_{0}Y_{t}(j)^{\frac{\psi_{p}-1}{\psi_{p}}}dj\right)^{\frac{\psi_{p}}{\psi_{p}-1}}-Y_{t}\right)
+  \end{aligned}$$
+
+- FOC wrt $Y_{t}$: $$\Lambda^{F}_{t}=P_{t}$$
+
+- FOC wrt $Y_{t}(j)$: $$Y_{t}(j)=Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}$$
+
+- Price of Final Goods: $$P_{t}=\left[\int^{1}_{0}P_{t}(j)^{1-\psi_{p}}dj\right]^{\frac{1}{1-\psi_{p}}}$$
+
+## Intermediate Goods Firms
+
+Intermediate-good firm $j$ produces output $Y_{t}(j)$ using labor $N_{t}(j)$ according to the general technology $Y_{t}(j)=A_{t}F(N_{t}(j))$, where $A_{t}\equiv\exp(a_{t})$ denotes aggregate labor productivity and $F_{N}(N)>0$. The firm hires homogeneous labor from the labor packer at the nominal wage $W^{N}_{t}$, sets its own price $P_{t}(j)$, and faces Rotemberg price adjustment costs governed by $\eta_{p}$. Its real profits are denoted by $D_{t}(j)$, the government levies the lump-sum tax $T^{M}_{t}$, and the sales subsidy rate is $\tau_{p}$. The firm's objective is the date-0 present discounted value of profits, discounted by the saver household's stochastic discount factor. The optimality conditions determine labor demand, real marginal cost, and the price-setting equation. In symmetric equilibrium, the price markup is $MU^{p}_{t}\equiv P_{t}MPN_{t}/W^{N}_{t}=MPN_{t}/W_{t}$ and $MPN_{t}\equiv A_{t}F_{N}(N_{t})$ is the marginal product of labor.
+
+- Objects taken as given: $W^{N}_{t},P_{t},Y_{t},A_{t},T^{M}_{t},C^{S}_{t},P_{t-1}(j)$
+
+- Choice variables: $N_{t}(j),P_{t}(j),Y_{t}(j)$
+
+- Objective Function: $$\mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}D_{t}(j)$$
+
+- Constraints: $$\begin{aligned}
+  D_{t}(j) & =(1+\tau_{p})\frac{P_{t}(j)}{P_{t}}Y_{t}(j)-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)-T^{M}_{t}\\
+  Y_{t}(j) & =Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\\
+  Y_{t}(j) & =A_{t}F(N_{t}(j))
+  \end{aligned}$$
+
+- Lagrangian: $$\begin{aligned}
+  \mathbb{L}= & \mathbb{E}_{0}\sum^{\infty}_{t=0}\beta^{t}\frac{U_{C}(C^{S}_{t},N^{S}_{t})}{U_{C}(C^{S}_{0},N^{S}_{0})}\mathcal{L}_{t}\\
+  \mathcal{L}_{t}= & (1+\tau_{p})Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{1-\psi_{p}}-\frac{\eta_{p}}{2}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}(j)\\
+   & -T^{M}_{t}+\Lambda^{M}_{t}(j)\left(A_{t}F(N_{t}(j))-Y_{t}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}\right)
+  \end{aligned}$$
+
+- FOC wrt $N_{t}(j)$: $$\begin{aligned}
+  \Lambda^{M}_{t}(j)A_{t}F_{N}(N_{t}(j)) & =W^{N}_{t}/P_{t}
+  \end{aligned}$$
+
+- FOC wrt $P_{t}(j)$: $$\begin{aligned}
+   & U_{C}(C^{S}_{t},N^{S}_{t})(1+\tau_{p})(1-\psi_{p})\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}}-U_{C}(C^{S}_{t},N^{S}_{t})\eta_{p}\frac{Y_{t}}{P_{t-1}(j)}\left(\frac{P_{t}(j)}{P_{t-1}(j)}-1\right)\\
+   & +U_{C}(C^{S}_{t},N^{S}_{t})\psi_{p}\Lambda^{M}_{t}(j)\frac{Y_{t}}{P_{t}}\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\psi_{p}-1}+\beta\eta_{p}\mathbb{E}_{t}\left[U_{C}(C^{S}_{t+1},N^{S}_{t+1})Y_{t+1}\frac{P_{t+1}(j)}{P_{t}(j)^{2}}\left(\frac{P_{t+1}(j)}{P_{t}(j)}-1\right)\right]=0
+  \end{aligned}$$
+
+- Symmetric Equilibrium ($N_{t}(j)=N_{t}$, $\Lambda^{M}_{t}(j)=\Lambda^{M}_{t}$, $P_{t}(j)=P_{t}$, $Y_{t}(j)=Y_{t}$): $$\begin{aligned}
+  \eta_{p}\frac{P_{t}}{P_{t-1}}\left(\frac{P_{t}}{P_{t-1}}-1\right)= & \psi_{p}\left[\frac{W^{N}_{t}/P_{t}}{MPN_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
+   & +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]\\
+  = & \psi_{p}\left[\frac{1}{MU^{p}_{t}}-(1+\tau_{p})\left(1-\frac{1}{\psi_{p}}\right)\right]\\
+   & +\beta\eta_{p}\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\frac{P_{t+1}}{P_{t}}\left(\frac{P_{t+1}}{P_{t}}-1\right)\right]
+  \end{aligned}$$
+
+- Profits: $$\begin{aligned}
+  D_{t} & =(1+\tau_{p})Y_{t}-\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}-\frac{W^{N}_{t}}{P_{t}}N_{t}-T^{M}_{t}
+  \end{aligned}$$ When $(1+\tau_{p})(1-1/\psi_{p})=1$, steady state price markup is one.
+
+## Government
+
+The government performs three functions in the model. First, it provides the wage subsidy $\tau_{w}$ and the sales subsidy $\tau_{p}$, eliminating steady-state markups under the baseline specialization introduced below. Second, it redistributes resources across household types through the lump-sum components $T^{H}_{t}$ and $T^{S}_{t}$. Here $Z_{t}$ denotes the transfer received by Type H households, while Type S households finance that transfer through a balanced-budget levy. Because $T^{i}_{t}$ denotes net fiscal liability, the transfer implies $T^{H}_{t}<0$ for the recipient household type and a positive levy on Type S through $T^{S}_{t}$. Third, the monetary authority sets the gross nominal interest rate $R^{N}_{t}$ according to a Taylor rule that responds to gross price inflation $\Pi^{p}_{t}$ and to the monetary policy shock $m_{t}$. The redistribution shock $z_{t}$ follows an autoregressive process and determines $Z_{t}$ through $Z_{t}=z_{t}Y$, where $Y$ is steady-state output.
+
+Fiscal policy: $$\begin{aligned}
+T^{H}_{t} & =-Z_{t}+\tau_{w}W^{H}_{t}N^{H}_{t}\\
+T^{S}_{t} & =\frac{\lambda}{1-\lambda}Z_{t}+\tau_{w}W^{S}_{t}N^{S}_{t}\\
+T^{M}_{t} & =\tau_{p}Y_{t}\\
+\tau_{w} & =1/(\psi_{w}-1)\\
+\tau_{p} & =1/(\psi_{p}-1)\\
+Z_{t} & =z_{t}Y\\
+z_{t} & =\rho_{z}z_{t-1}+e^{z}_{t}
+\end{aligned}$$
+
+Monetary Policy:
+
+$$\begin{aligned}
+R^{N}_{t} & =(1/\beta)\exp(-m_{t})(\Pi^{p}_{t})^{\phi}\\
+m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}
+\end{aligned}$$
+
+## Equilibrium conditions
+
+Equilibrium requires market clearing in goods and bond markets, together with consistency between aggregate variables and type-specific allocations. Bond-market clearing requires zero net bond supply, so aggregate bond holdings satisfy $B^{N}_{t}=0$. Aggregate consumption $C_{t}$ is the population-weighted average of $C^{H}_{t}$ and $C^{S}_{t}$, and final output $Y_{t}$ is allocated to private consumption and to price and wage adjustment costs.
+
+Final goods market: $$\begin{aligned}
+Y_{t} & =C_{t}+\frac{\eta_{p}}{2}\left(\frac{P_{t}}{P_{t-1}}-1\right)^{2}Y_{t}\\
+ & +\lambda\frac{\eta_{w}}{2}\left(\frac{W^{N,H}_{t}}{W^{N,H}_{t-1}}-1\right)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}\left(\frac{W^{N,S}_{t}}{W^{N,S}_{t-1}}-1\right)^{2}Y_{t}
+\end{aligned}$$
+
+Bond market: $B^{N}_{t}=0$.
+
+Aggregation condition: $$C_{t}=\lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}$$
+
+## Reduced nonlinear equilibrium system
+
+Before summarizing the model, I collect the key real variables and inflation rates used below. In particular, $W_{t}\equiv W^{N}_{t}/P_{t}$ denotes the aggregate real wage, $W^{H}_{t}\equiv W^{N,H}_{t}/P_{t}$ and $W^{S}_{t}\equiv W^{N,S}_{t}/P_{t}$ denote type-specific real wages, $\Pi^{p}_{t}\equiv P_{t}/P_{t-1}$ denotes gross price inflation, and $\Pi^{H}_{t}$, $\Pi^{S}_{t}$, and $\Pi^{w}_{t}$ denote the corresponding gross wage inflation rates for Type H, Type S, and the aggregate wage index. The aggregate wage markup is defined as $MU^{w}_{t}\equiv W_{t}/MRS(C_{t},N_{t})$.
+
+The following block collects a reduced set of nonlinear equilibrium conditions that is sufficient for the log-linearization below.
+
+I report only the nonlinear conditions needed to obtain the first-order system below. Conditions omitted here are either redundant or recoverable by symmetry and aggregation.
+
+The nonlinear equilibrium conditions can be summarized as follows:
+
+- Labor Packer: $$\begin{aligned}
+  W_{t} & =\left[\lambda(W^{H}_{t})^{1-\psi_{w}}+(1-\lambda)(W^{S}_{t})^{1-\psi_{w}}\right]^{\frac{1}{1-\psi_{w}}}\\
+  N_{t} & =\left[\lambda(N^{H}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}+(1-\lambda)(N^{S}_{t})^{\frac{\psi_{w}-1}{\psi_{w}}}\right]^{\frac{\psi_{w}}{\psi_{w}-1}}
+  \end{aligned}$$
+
+- Type H: $$\begin{aligned}
+  N^{H}_{t}= & N_{t}\left(\frac{W^{H}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
+  C^{H}_{t}= & W^{H}_{t}N^{H}_{t}+Z_{t}-\frac{\eta_{w}}{2}\left(\Pi^{H}_{t}-1\right)^{2}Y_{t}\\
+  \eta_{w}\Pi^{H}_{t}\left(\Pi^{H}_{t}-1\right)= & \psi_{w}\left\{ \frac{1}{MU^{H}_{t}}-1\right\} \frac{W^{H}_{t}N^{H}_{t}}{Y_{t}}\\
+   & +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{H}_{t+1},N^{H}_{t+1})}{U_{C}(C^{H}_{t},N^{H}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{H}_{t+1}\left(\Pi^{H}_{t+1}-1\right)\right]\\
+  \Pi^{H}_{t}= & \frac{W^{H}_{t}}{W^{H}_{t-1}}\Pi^{p}_{t}\\
+  MU^{H}_{t}= & \frac{W^{H}_{t}}{MRS(C^{H}_{t},N^{H}_{t})}
+  \end{aligned}$$
+
+- Type S: $$\begin{aligned}
+  N^{S}_{t}= & N_{t}\left(\frac{W^{S}_{t}}{W_{t}}\right)^{-\psi_{w}}\\
+  1= & \beta\mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\right]\\
+  \eta_{w}\Pi^{S}_{t}\left(\Pi^{S}_{t}-1\right)= & \psi_{w}\left\{ \frac{1}{MU^{S}_{t}}-1\right\} \frac{W^{S}_{t}N^{S}_{t}}{Y_{t}}\\
+   & +\eta_{w}\beta\mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{S}_{t+1}\left(\Pi^{S}_{t+1}-1\right)\right]\\
+  \Pi^{S}_{t}= & \frac{W^{S}_{t}}{W^{S}_{t-1}}\Pi^{p}_{t}\\
+  MU^{S}_{t}= & \frac{W^{S}_{t}}{MRS(C^{S}_{t},N^{S}_{t})}
+  \end{aligned}$$
+
+- Firms: $$\begin{aligned}
+  A_{t} & =\exp(a_{t})\\
+  Y_{t} & =A_{t}F(N_{t})\\
+  a_{t} & =\rho_{a}a_{t-1}+e^{a}_{t}\\
+  \eta_{p}\Pi^{p}_{t}\left(\Pi^{p}_{t}-1\right) & =\psi_{p}\left\{ \frac{1}{MU^{p}_{t}}-1\right\} \\
+   & +\eta_{p}\beta \mathbb{E}_{t}\left[\frac{U_{C}(C^{S}_{t+1},N^{S}_{t+1})}{U_{C}(C^{S}_{t},N^{S}_{t})}\frac{Y_{t+1}}{Y_{t}}\Pi^{p}_{t+1}\left(\Pi^{p}_{t+1}-1\right)\right]\\
+  MU^{p}_{t} & =\frac{A_{t}F_{N}(N_{t})}{W_{t}}\\
+  D_{t} & =Y_{t}-\frac{\eta_{p}}{2}\left(\Pi^{p}_{t}-1\right)^{2}Y_{t}-W_{t}N_{t}
+  \end{aligned}$$
+
+- Government: $$\begin{aligned}
+  R^{N}_{t} & =\frac{\exp(-m_{t})}{\beta}(\Pi^{p}_{t})^{\phi}\\
+  m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}\\
+  Z_{t} & =z_{t}Y\\
+  z_{t} & =\rho_{z}z_{t-1}+e^{z}_{t}
+  \end{aligned}$$
+
+- Market clearing and others:
+
+$$\begin{aligned}
+Y_{t}= & C_{t}+\frac{\eta_{p}}{2}(\Pi^{p}_{t}-1)^{2}Y_{t}\\
+ & +\lambda\frac{\eta_{w}}{2}(\Pi^{H}_{t}-1)^{2}Y_{t}+(1-\lambda)\frac{\eta_{w}}{2}(\Pi^{S}_{t}-1)^{2}Y_{t}\\
+C_{t}= & \lambda C^{H}_{t}+(1-\lambda)C^{S}_{t}\\
+R_{t}= & \mathbb{E}_{t}\left[\frac{R^{N}_{t}}{\Pi^{p}_{t+1}}\right]\\
+\Pi^{w}_{t}= & \frac{W_{t}}{W_{t-1}}\Pi^{p}_{t}\\
+MU^{w}_{t}= & \frac{W_{t}}{MRS(C_{t},N_{t})}
+\end{aligned}$$
+
+## Functional specialization and log-linear approximation
+
+From this section onward, I specialize the primitives to the separable CRRA-Frisch utility function and the linear production function:
+$$\begin{aligned}
+U(C,N) & =\frac{C^{1-\gamma}}{1-\gamma}-\frac{N^{1+\varphi}}{1+\varphi},\\
+MRS(C,N) & =C^{\gamma}N^{\varphi},\\
+F(N) & =N.
+\end{aligned}$$
+
+In the log-linearized system, lower-case letters denote log deviations from the symmetric zero-inflation steady state; for example, $c_{t}\equiv\log(C_{t}/C)$, $n_{t}\equiv\log(N_{t}/N)$, and $w_{t}\equiv\log(W_{t}/W)$. Inflation variables are log deviations of gross inflation rates, and profits are scaled by steady-state output, $d_{t}\equiv D_{t}/Y$. The ex ante real interest rate is $r_{t}\equiv r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}$, where $r^{N}_{t}$ is the log deviation of the gross nominal rate $R^{N}_{t}$. The variables $a_{t}$, $m_{t}$, and $z_{t}$ are exogenous deviation processes. In what follows, upper-case $MU$ denotes level markups, whereas lower-case $\mu$ denotes their log-linear deviations. Around the symmetric zero-inflation steady state, the quadratic price- and wage-adjustment costs are second-order terms and therefore drop out from the first-order resource constraint, which implies $y_{t}=c_{t}$ at first order.
+
+The steady-state values are as follows: $$\begin{aligned}
+N= & N^{S}=N^{H}=1\\
+Y=C= & C^{S}=C^{H}=1\\
+MU^{w}= & MU^{S}=MU^{H}=1\\
+\Pi^{w}= & \Pi^{S}=\Pi^{H}=\Pi^{p}=1\\
+W= & W^{S}=W^{H}=1\\
+D= & 0
+\end{aligned}$$
+
+The log-linear approximation, with $d_{t}:=D_{t}/Y$, is then given by:
+
+- Labor Packer: $$\begin{aligned}
+  w_{t} & =\lambda w^{H}_{t}+(1-\lambda)w^{S}_{t}\\
+  n_{t} & =\lambda n^{H}_{t}+(1-\lambda)n^{S}_{t}
+  \end{aligned}$$
+
+- Type H: $$\begin{aligned}
+  n^{H}_{t} & =n_{t}-\psi_{w}(w^{H}_{t}-w_{t})\\
+  c^{H}_{t} & =w^{H}_{t}+n^{H}_{t}+z_{t}\\
+  \pi^{H}_{t} & =-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta\mathbb{E}_{t}\pi^{H}_{t+1}\\
+  \pi^{H}_{t} & =w^{H}_{t}-w^{H}_{t-1}+\pi^{p}_{t}\\
+  \mu^{H}_{t} & =w^{H}_{t}-(\gamma c^{H}_{t}+\varphi n^{H}_{t})\\
+  \end{aligned}$$
+
+- Type S: $$\begin{aligned}
+  n^{S}_{t} & =n_{t}-\psi_{w}(w^{S}_{t}-w_{t})\\
+  r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1} & =\gamma\mathbb{E}_{t}\Delta c^{S}_{t+1}\\
+  \pi^{S}_{t} & =-(\psi_{w}/\eta_{w})\mu^{S}_{t}+\beta\mathbb{E}_{t}\pi^{S}_{t+1}\\
+  \pi^{S}_{t} & =w^{S}_{t}-w^{S}_{t-1}+\pi^{p}_{t}\\
+  \mu^{S}_{t} & =w^{S}_{t}-(\gamma c^{S}_{t}+\varphi n^{S}_{t})
+  \end{aligned}$$
+
+- Firms: $$\begin{aligned}
+  y_{t} & =a_{t}+n_{t}\\
+  a_{t} & =\rho_{a}a_{t-1}+e^{a}_{t}\\
+  \pi^{p}_{t} & =-(\psi_{p}/\eta_{p})\mu^{p}_{t}+\beta\mathbb{E}_{t}\pi^{p}_{t+1}\\
+  \mu^{p}_{t} & =a_{t}-w_{t}\\
+  d_{t} & =a_{t}-w_{t}
+  \end{aligned}$$
+
+- Government: $$\begin{aligned}
+  r^{N}_{t} & =\phi\pi^{p}_{t}-m_{t}\\
+  m_{t} & =\rho_{m}m_{t-1}+e^{m}_{t}\\
+  z_{t} & =\rho_{z}z_{t-1}+e^{z}_{t}
+  \end{aligned}$$
+
+- Market clearing and others:
+
+$$\begin{aligned}
+y_{t} & =c_{t}\\
+r_{t} & =r^{N}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}\\
+c_{t} & =\lambda c^{H}_{t}+(1-\lambda)c^{S}_{t}\\
+\pi^{w}_{t} & =\lambda\pi^{H}_{t}+(1-\lambda)\pi^{S}_{t}\\
+\pi^{w}_{t} & =w_{t}-w_{t-1}+\pi^{p}_{t}\\
+\pi^{w}_{t} & =-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta\mathbb{E}_{t}\pi^{w}_{t+1}\\
+\mu^{w}_{t} & =w_{t}-(\gamma c_{t}+\varphi n_{t})
+\end{aligned}$$
+
+After eliminating redundant equations and the nominal rate $r^{N}_{t}$, @tbl-nonredundant-20eq reports the nonredundant 20-equation representation used in the main text. The system is written in nonredundant form. Some type-specific relations are not reported separately because they are recoverable from symmetry, aggregation, and the displayed household block.
+
+| No. | Name | Equation |
+| ---: | --- | --- |
+| 1 | Type S Euler equation | $r_{t}=\gamma \mathbb{E}_{t}\Delta c^{S}_{t+1}$ |
+| 2 | Type H budget constraint | $c^{H}_{t}=w^{H}_{t}+n^{H}_{t}+z_{t}$ |
+| 3 | Aggregate consumption aggregation identity | $c_{t}=\lambda c^{H}_{t}+(1-\lambda)c^{S}_{t}$ |
+| 4 | Aggregate labor aggregation identity | $n_{t}=\lambda n^{H}_{t}+(1-\lambda)n^{S}_{t}$ |
+| 5 | Aggregate wage Phillips curve | $\pi^{w}_{t}=-(\psi_{w}/\eta_{w})\mu^{w}_{t}+\beta \mathbb{E}_{t}\pi^{w}_{t+1}$ |
+| 6 | Aggregate wage-markup definition | $\mu^{w}_{t}=w_{t}-\gamma c_{t}-\varphi n_{t}$ |
+| 7 | Aggregate wage-inflation identity | $\pi^{w}_{t}=w_{t}-w_{t-1}+\pi^{p}_{t}$ |
+| 8 | Type H wage Phillips curve | $\pi^{H}_{t}=-(\psi_{w}/\eta_{w})\mu^{H}_{t}+\beta \mathbb{E}_{t}\pi^{H}_{t+1}$ |
+| 9 | Type H wage-markup definition | $\mu^{H}_{t}=w^{H}_{t}-\gamma c^{H}_{t}-\varphi n^{H}_{t}$ |
+| 10 | Type H wage-inflation identity | $\pi^{H}_{t}=w^{H}_{t}-w^{H}_{t-1}+\pi^{p}_{t}$ |
+| 11 | Type H labor demand | $n^{H}_{t}=n_{t}-\psi_{w}(w^{H}_{t}-w_{t})$ |
+| 12 | Aggregate wage aggregation identity | $w_{t}=\lambda w^{H}_{t}+(1-\lambda)w^{S}_{t}$ |
+| 13 | Aggregate wage-markup aggregation identity | $\mu^{w}_{t}=\lambda \mu^{H}_{t}+(1-\lambda)\mu^{S}_{t}$ |
+| 14 | Aggregate wage-inflation aggregation identity | $\pi^{w}_{t}=\lambda\pi^{H}_{t}+(1-\lambda)\pi^{S}_{t}$ |
+| 15 | Price Phillips curve | $\pi^{p}_{t}=-(\psi_{p}/\eta_{p})\mu^{p}_{t}+\beta \mathbb{E}_{t}\pi^{p}_{t+1}$ |
+| 16 | Price-markup definition | $\mu^{p}_{t}=a_{t}-w_{t}$ |
+| 17 | Dividend share | $d_{t}=a_{t}-w_{t}$ |
+| 18 | Resource constraint | $y_{t}=c_{t}$ |
+| 19 | Production function | $y_{t}=a_{t}+n_{t}$ |
+| 20 | Taylor rule | $r_{t}=\phi\pi^{p}_{t}-\mathbb{E}_{t}\pi^{p}_{t+1}-m_{t}$ |
+
+: Nonredundant 20-equation representation {#tbl-nonredundant-20eq tbl-colwidths="[5,57,38]"}
+
+For convenience, @tbl-variables lists the endogenous variables appearing in @tbl-nonredundant-20eq, and @tbl-parameters reports the core structural parameters used below.
+
+| No. | Meaning | Notation |
+| ---: | --- | --- |
+| 1 | Output | $y_{t}$ |
+| 2 | Aggregate consumption | $c_{t}$ |
+| 3 | Aggregate labor | $n_{t}$ |
+| 4 | Aggregate real wage | $w_{t}$ |
+| 5 | Dividend share | $d_{t}$ |
+| 6 | Ex ante real interest rate | $r_{t}$ |
+| 7 | Price markup | $\mu^{p}_{t}$ |
+| 8 | Price inflation | $\pi^{p}_{t}$ |
+| 9 | Aggregate wage markup | $\mu^{w}_{t}$ |
+| 10 | Aggregate wage inflation | $\pi^{w}_{t}$ |
+| 11 | Type H consumption | $c^{H}_{t}$ |
+| 12 | Type S consumption | $c^{S}_{t}$ |
+| 13 | Type H labor | $n^{H}_{t}$ |
+| 14 | Type S labor | $n^{S}_{t}$ |
+| 15 | Type H real wage | $w^{H}_{t}$ |
+| 16 | Type S real wage | $w^{S}_{t}$ |
+| 17 | Type H wage markup | $\mu^{H}_{t}$ |
+| 18 | Type S wage markup | $\mu^{S}_{t}$ |
+| 19 | Type H wage inflation | $\pi^{H}_{t}$ |
+| 20 | Type S wage inflation | $\pi^{S}_{t}$ |
+
+: Endogenous variables in the nonredundant system {#tbl-variables tbl-colwidths="[6,72,22]"}
+
+| No. | Meaning | Parameter |
+| ---: | --- | --- |
+| 1 | Inverse of elasticity of intertemporal substitution | $\gamma>0$ |
+| 2 | Inverse of Frisch elasticity | $\varphi>0$ |
+| 3 | Discount factor | $0<\beta<1$ |
+| 4 | Elasticity of substitution across intermediate-goods varieties | $\psi_{p}\geq1$ |
+| 5 | Price adjustment cost | $\eta_{p}\geq0$ |
+| 6 | Elasticity of substitution across labor varieties | $\psi_{w}\geq1$ |
+| 7 | Wage adjustment cost | $\eta_{w}\geq0$ |
+| 8 | Taylor-rule coefficient on price inflation | $\phi>1$ |
+| 9 | Share of Type H households | $0\leq\lambda<1$ |
+
+: Core structural parameters {#tbl-parameters tbl-colwidths="[6,72,22]"}
