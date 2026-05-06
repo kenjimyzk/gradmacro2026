@@ -1,0 +1,291 @@
+---
+title: "第7回：価格硬直性と資本なしニューケインジアン・モデル"
+subtitle: "マクロ経済学B"
+author: "宮﨑憲治"
+date: "2026-05-06"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    code-fold: false
+    html-math-method: katex
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption: [lualatex, ja=standard, 12pt, a4paper]
+    toc: true
+    number-sections: true
+lang: ja
+---
+
+# 講義の目的
+
+この回では、第6回の独占的競争モデルに価格硬直性と金融政策を導入します。資本は導入しません。したがって、価格硬直性が実体経済に影響する仕組みを、投資や資本蓄積ではなく、消費、労働、産出、実質限界費用を通じて理解します。
+
+第8回の RANK モデルは、この回の内容をより一般的な非線形条件と自然産出量・需給ギャップの形に整理したものです。この第7回では、その直前段階として、資本なしニューケインジアン・モデルの核になる式を導きます。
+
+この回のポイントは次の4点です。
+
+1. Rotemberg 型価格調整費用を導入する。
+2. 企業の価格設定条件から動学的フィリップス曲線を導く。
+3. 家計の Euler 方程式とテーラールールから動学的 IS 曲線を理解する。
+4. 技術ショックと金融政策ショックの効果を資本なしモデルで確認する。
+
+# 価格調整費用
+
+中間財企業 $j$ は自社価格 $P_t^I(j)$ を選びます。価格を変更すると、最終財で測った費用
+$$
+f_P\left(\frac{P_t^I(j)}{P_{t-1}^I(j)}\right)Y_t
+$$
+を支払うとします。Rotemberg 型の標準的な特定化は
+$$
+f_P(\Pi_t)=\frac{\eta}{2}(\Pi_t-1)^2,
+\qquad
+\eta\geq0
+$$
+です。定常状態で $\Pi=1$ なら、価格調整費用はゼロで、限界調整費用もゼロです。
+$$
+f_P(1)=0,
+\qquad
+f_P'(1)=0
+$$
+価格調整費用があると、企業は今期のマークアップだけでなく、将来の価格変更費用も考慮して価格を選びます。
+
+# 家計
+
+代表的家計の一階条件は
+$$
+\begin{aligned}
+W_t&=-\frac{U_{N,t}}{U_{C,t}},\\
+1&=\mathbb{E}_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right],\\
+V_t&=\mathbb{E}_t\left[Q_{t,t+1}(V_{t+1}+D_{t+1})\right],
+\end{aligned}
+$$
+です。ただし
+$$
+Q_{t,t+1}\equiv \beta\frac{U_{C,t+1}}{U_{C,t}}
+$$
+です。Euler 方程式は、名目利子率が高いほど今日の消費を抑え、将来の消費を増やす力が働くことを表します。ただし実質的に重要なのは、名目利子率ではなく期待インフレを差し引いた実質利子率です。
+
+# 中間財企業
+
+中間財企業の実質配当は
+$$
+D_t(j)=
+\frac{P_t^I(j)}{P_t}Y_t^I(j)
+-f_P\left(\frac{P_t^I(j)}{P_{t-1}^I(j)}\right)Y_t
+-W_tN_t(j)
+$$
+です。資本はないため、費用は労働費用と価格調整費用だけです。需要関数と生産関数は
+$$
+Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{P_t}\right)^{-\psi},
+\qquad
+Y_t^I(j)=A_tF(N_t(j))
+$$
+です。
+
+実質限界費用 $MC_t(j)$ を用いると、労働投入に関する一階条件は
+$$
+W_t=MC_t(j)A_tF_N(N_t(j))
+$$
+です。価格に関する一階条件を対称均衡で評価すると
+$$
+\Pi_t f_P'(\Pi_t)
+=\psi\left[MC_t-\left(1-\frac{1}{\psi}\right)\right]
++\mathbb{E}_t\left[
+Q_{t,t+1}\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}f_P'(\Pi_{t+1})
+\right]
+$$
+を得ます。第6回と異なり、$MC_t$ は一定ではありません。価格を変える費用があるため、企業は望ましいマークアップから一時的に離れることを受け入れます。
+
+定常状態のマークアップ歪みを取り除くため、売上補助金 $\sigma$ を入れる場合は
+$$
+\Pi_t f_P'(\Pi_t)
+=\psi\left[MC_t-(1+\sigma)\left(1-\frac{1}{\psi}\right)\right]
++\mathbb{E}_t\left[
+Q_{t,t+1}\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}f_P'(\Pi_{t+1})
+\right]
+$$
+です。$\sigma=1/(\psi-1)$ なら、定常状態で $MC=1$ になります。
+
+# 金融政策
+
+政府または中央銀行は、名目利子率をテーラールールで設定するとします。
+$$
+R_t^N=\frac{1}{\beta}\exp(-m_t)\Pi_t^\phi,
+\qquad
+\phi>1
+$$
+ここで $m_t>0$ は金融緩和ショックです。$m_t$ が上昇すると、同じインフレ率のもとで名目利子率が低く設定されます。ショックは
+$$
+m_t=\rho_m m_{t-1}+e_t^m,
+\qquad
+0\leq\rho_m<1
+$$
+に従うとします。
+
+係数 $\phi>1$ はテーラー原則です。インフレが上がったとき、名目利子率をそれ以上に引き上げることで実質利子率を上昇させ、需要を抑えるための条件です。
+
+# 資源制約
+
+政府支出を入れない基本形では、価格調整費用が実物資源を消費するため
+$$
+C_t+f_P(\Pi_t)Y_t=Y_t
+$$
+です。定常状態や一次近似では $f_P(1)=f_P'(1)=0$ なので、一次の資源制約は
+$$
+c_t=y_t
+$$
+となります。政府支出を含める場合は
+$$
+C_t+G_t+f_P(\Pi_t)Y_t=Y_t
+$$
+であり、第8回ではこの形を用いて政府支出ショックを扱います。
+
+# 関数形と非線形体系
+
+効用関数と生産関数を
+$$
+U(C_t,N_t)=\frac{C_t^{1-\gamma}}{1-\gamma}
+-\chi\frac{N_t^{1+\varphi}}{1+\varphi},
+\qquad
+Y_t=A_tN_t^{1-\alpha}
+$$
+とします。補助金により定常状態のマークアップ歪みを取り除くと、非線形体系は次のようにまとめられます。
+$$
+\begin{aligned}
+1&=\mathbb{E}_t\left[
+\beta\left(\frac{C_{t+1}}{C_t}\right)^{-\gamma}
+\frac{R_t^N}{\Pi_{t+1}}
+\right],\\
+W_t&=\chi N_t^\varphi C_t^\gamma,\\
+W_t&=MC_t(1-\alpha)\frac{Y_t}{N_t},\\
+Y_t&=A_tN_t^{1-\alpha},\\
+C_t+f_P(\Pi_t)Y_t&=Y_t,\\
+R_t^N&=\frac{1}{\beta}\exp(-m_t)\Pi_t^\phi.
+\end{aligned}
+$$
+これに価格設定条件と、外生ショック過程
+$$
+a_t=\rho_a a_{t-1}+e_t^a,
+\qquad
+m_t=\rho_m m_{t-1}+e_t^m
+$$
+を加えればモデルが閉じます。
+
+# 対数線形化
+
+ゼロインフレ定常状態 $\Pi=1$ の周りで対数線形化します。補助金で定常状態の $MC=1$ としている場合、主要な線形条件は
+$$
+\begin{aligned}
+\gamma\left(\mathbb{E}_t y_{t+1}-y_t\right)
+&=r_t^N-\mathbb{E}_t\pi_{t+1},\\
+\pi_t&=\beta\mathbb{E}_t\pi_{t+1}+\kappa_P mc_t,\\
+w_t&=mc_t+a_t-\alpha n_t,\\
+w_t&=\gamma y_t+\varphi n_t,\\
+y_t&=a_t+(1-\alpha)n_t,\\
+r_t^N&=\phi\pi_t-m_t.
+\end{aligned}
+$$
+ここで $r_t^N$ は名目利子率の定常状態からの対数乖離、$\pi_t$ はインフレ率の乖離、$mc_t$ は実質限界費用の乖離です。また
+$$
+\kappa_P\equiv \frac{\psi}{\eta}
+$$
+です。記法を元スライドにより近づけるなら、$\psi-1$ を用いて $\kappa_P=(\psi-1)/\eta$ と置く書き方もあります。どちらを使うかは、価格設定条件で限界費用をどの定常値の周りで展開するかに依存します。このノートでは、第8回の非線形式に合わせて $MC=1$ の周りでの表記を採ります。
+
+# 実質限界費用と産出
+
+労働市場と生産関数を使うと、実質限界費用を産出と技術で表せます。生産関数から
+$$
+n_t=\frac{y_t-a_t}{1-\alpha}
+$$
+です。これを
+$$
+mc_t=w_t-a_t+\alpha n_t
+$$
+と
+$$
+w_t=\gamma y_t+\varphi n_t
+$$
+に代入すると
+$$
+mc_t=
+\left(\gamma+\frac{\varphi+\alpha}{1-\alpha}\right)y_t
+-\frac{1+\varphi}{1-\alpha}a_t
+$$
+を得ます。したがって、物価版フィリップス曲線は
+$$
+\pi_t=
+\beta\mathbb{E}_t\pi_{t+1}
+\kappa_y y_t-\kappa_a a_t
+$$
+と書けます。ただし
+$$
+\kappa_y\equiv
+\kappa_P\left(\gamma+\frac{\varphi+\alpha}{1-\alpha}\right),
+\qquad
+\kappa_a\equiv
+\kappa_P\frac{1+\varphi}{1-\alpha}
+$$
+です。
+
+# 需給ギャップ表示
+
+価格が完全に柔軟なら、企業は $mc_t=0$ を保ちます。このときの産出を自然産出量 $y_t^f$ と呼びます。
+$$
+0=
+\left(\gamma+\frac{\varphi+\alpha}{1-\alpha}\right)y_t^f
+-\frac{1+\varphi}{1-\alpha}a_t
+$$
+したがって
+$$
+y_t^f=
+\frac{1+\varphi}
+\{\gamma(1-\alpha)+\varphi+\alpha\}
+a_t
+$$
+です。需給ギャップを
+$$
+x_t\equiv y_t-y_t^f
+$$
+と定義すると、実質限界費用は
+$$
+mc_t=
+\left(\gamma+\frac{\varphi+\alpha}{1-\alpha}\right)x_t
+$$
+です。したがってフィリップス曲線は
+$$
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa x_t
+$$
+となります。ここで
+$$
+\kappa\equiv
+\kappa_P\left(\gamma+\frac{\varphi+\alpha}{1-\alpha}\right)>0
+$$
+です。
+
+Euler 方程式とテーラールールから、需給ギャップの IS 曲線は
+$$
+x_t=\mathbb{E}_t x_{t+1}
+-\frac{1}{\gamma}\left(r_t^N-\mathbb{E}_t\pi_{t+1}-r_t^f\right)
+$$
+と書けます。$r_t^f$ は自然利子率であり、価格が柔軟な経済で自然産出量を実現する実質利子率です。
+
+# ショックの効果
+
+金融緩和ショック $m_t>0$ は、テーラールールを通じて名目利子率を引き下げます。
+$$
+r_t^N=\phi\pi_t-m_t
+$$
+期待インフレがすぐには同じだけ下がらないなら、実質利子率が低下し、Euler 方程式を通じて現在の需要が増えます。その結果、需給ギャップとインフレ率が上昇します。
+
+技術ショック $a_t>0$ は自然産出量を上げます。価格が硬直的なもとで実際の需要がすぐに同じだけ増えない場合、需給ギャップは低下し、インフレ率は下がります。これは RBC モデルと異なる重要な含意です。RBC モデルでは技術ショックは主に産出を増やすショックでしたが、ニューケインジアン・モデルでは自然産出量と需要の差がインフレを決めます。
+
+# 第8回への接続
+
+この回の資本なしニューケインジアン・モデルは、第8回 RANK モデルの直接の前段階です。第8回では、同じ表記で非線形均衡条件、定常状態、自然産出量、自然利子率、需給ギャップをより体系的に整理します。また、政府支出ショックを含めた動学的 IS 曲線とニューケインジアン・フィリップス曲線を導出します。
+
