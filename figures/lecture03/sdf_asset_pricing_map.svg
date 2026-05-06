@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc">
+  <title id="title">確率的割引因子による資産価格付け</title>
+  <desc id="desc">今日と明日の限界効用の比から確率的割引因子Qが決まり、債券と株式が同じQで価格付けされることを示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1040" height="560" fill="#ffffff"/>
+  <rect x="55" y="45" width="930" height="430" rx="14" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <line x1="262" y1="195" x2="344" y2="195"/>
+    <line x1="626" y1="195" x2="708" y2="195"/>
+    <path d="M 520 282 L 404 360"/>
+    <path d="M 520 282 L 636 360"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="82" y="120" width="180" height="150" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="344" y="120" width="282" height="150" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="708" y="120" width="210" height="150" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="210" y="350" width="260" height="86" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="570" y="350" width="260" height="86" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="108" y="158" font-size="22" font-weight="700">家計の限界効用</text>
+    <text x="108" y="190" font-size="18">今日：U_C(Cₜ)</text>
+    <text x="108" y="220" font-size="18">明日：U_C(Cₜ₊₁)</text>
+    <text x="108" y="247" font-size="16" fill="#566273">状態で変わる</text>
+    <text x="382" y="158" font-size="22" font-weight="700">確率的割引因子</text>
+    <text x="389" y="197" font-size="24" fill="#20242a">Qₜ,ₜ₊₁ = β U_C(Cₜ₊₁)/U_C(Cₜ)</text>
+    <text x="389" y="232" font-size="17" fill="#566273">不況時の1単位を高く評価</text>
+    <text x="734" y="158" font-size="22" font-weight="700">共通の価格付け核</text>
+    <text x="734" y="190" font-size="19">1 = Eₜ[Q Rʲ]</text>
+    <text x="734" y="220" font-size="17">全資産に同じQを使う</text>
+    <text x="238" y="386" font-size="21" font-weight="700">無リスク債券</text>
+    <text x="238" y="416" font-size="18">1 = Eₜ[Q Rᶠ]</text>
+    <text x="598" y="386" font-size="21" font-weight="700">株式</text>
+    <text x="598" y="416" font-size="18">Vᶠₜ = Eₜ[Q(Vᶠₜ₊₁ + Dₜ₊₁)]</text>
+    <text x="86" y="515" font-size="22" font-weight="700">無裁定条件の読み方</text>
+    <text x="318" y="515" font-size="18" fill="#555f6f">期待収益率が同じという意味ではなく、Qで割り引いた期待値が同じという意味</text>
+  </g>
+</svg>

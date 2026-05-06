@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" role="img" aria-labelledby="title desc">
+  <title id="title">第2回講義の全体像</title>
+  <desc id="desc">時系列分析、ショックの波及、安定性、対数線形近似がDSGEモデルの分析につながる流れを示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#536171"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="640" fill="#ffffff"/>
+  <rect x="50" y="40" width="1000" height="550" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第2回の地図：DSGEの動学を読む準備</text>
+    <text x="80" y="119" font-size="19" fill="#566273">ショックがどれだけ残るか、モデルをどう線形化して読むかを学ぶ</text>
+  </g>
+  <g stroke="#536171" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 258 236 L 326 236"/>
+    <path d="M 516 236 L 584 236"/>
+    <path d="M 774 236 L 842 236"/>
+    <path d="M 926 305 C 870 380 782 422 668 445"/>
+    <path d="M 488 445 C 390 431 303 390 214 305"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="80" y="160" width="178" height="150" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="338" y="160" width="178" height="150" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="596" y="160" width="178" height="150" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="854" y="160" width="178" height="150" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="226" y="410" width="224" height="126" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="650" y="410" width="224" height="126" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="106" y="198" font-size="23" font-weight="700">時系列データ</text>
+    <text x="106" y="228" font-size="17">水準・乖離・成長率</text>
+    <text x="106" y="253" font-size="17">平均と分散</text>
+    <text x="106" y="278" font-size="17">ラグの相関</text>
+    <text x="364" y="198" font-size="23" font-weight="700">定常性</text>
+    <text x="364" y="228" font-size="17">平均回帰</text>
+    <text x="364" y="253" font-size="17">長期平均</text>
+    <text x="364" y="278" font-size="17">安定な変動</text>
+    <text x="622" y="198" font-size="23" font-weight="700">AR(1)</text>
+    <text x="622" y="228" font-size="17">持続性 ρ</text>
+    <text x="622" y="253" font-size="17">半減期</text>
+    <text x="622" y="278" font-size="17">ショック過程</text>
+    <text x="880" y="198" font-size="23" font-weight="700">IRF</text>
+    <text x="880" y="228" font-size="17">ショックの波及</text>
+    <text x="880" y="253" font-size="17">ρᵗで減衰</text>
+    <text x="880" y="278" font-size="17">政策効果の形</text>
+    <text x="252" y="448" font-size="23" font-weight="700">状態空間</text>
+    <text x="252" y="478" font-size="17">sₜ₊₁ = A sₜ + Bεₜ₊₁</text>
+    <text x="252" y="503" font-size="17">固有値で安定性を読む</text>
+    <text x="676" y="448" font-size="23" font-weight="700">対数線形近似</text>
+    <text x="676" y="478" font-size="17">非線形条件を線形化</text>
+    <text x="676" y="503" font-size="17">第4回のRANK分析へ</text>
+  </g>
+  <g stroke-linecap="round" fill="none">
+    <path d="M 108 292 L 142 270 L 176 284 L 214 240" stroke="#2f6fbe" stroke-width="4"/>
+    <path d="M 370 286 C 405 250 450 250 488 286" stroke="#379b55" stroke-width="4"/>
+    <path d="M 626 292 C 662 247 710 247 746 292" stroke="#d9792f" stroke-width="4"/>
+    <path d="M 882 292 C 912 256 966 262 1004 284" stroke="#8d5ab8" stroke-width="4"/>
+  </g>
+</svg>

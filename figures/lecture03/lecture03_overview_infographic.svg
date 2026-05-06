@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第3回講義の全体像</title>
+  <desc id="desc">有限期間ラグランジュ法、無限期間、動学計画法、不確実性、確率的割引因子、株式価値の順に進む流れを示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第3回の地図：最適化から資産価格へ</text>
+    <text x="80" y="119" font-size="19" fill="#566273">同じ一階条件が、ラグランジュ法・動学計画法・資産価格条件として現れる</text>
+  </g>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 250 235 L 322 235"/>
+    <path d="M 512 235 L 584 235"/>
+    <path d="M 774 235 L 846 235"/>
+    <path d="M 932 305 C 874 378 784 420 672 444"/>
+    <path d="M 492 444 C 391 430 302 388 212 305"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="80" y="160" width="170" height="150" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="342" y="160" width="170" height="150" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="604" y="160" width="170" height="150" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="866" y="160" width="170" height="150" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="240" y="410" width="230" height="126" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="650" y="410" width="230" height="126" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="106" y="198" font-size="22" font-weight="700">2期間・有限期間</text>
+    <text x="106" y="228" font-size="17">予算制約</text>
+    <text x="106" y="253" font-size="17">ラグランジュ法</text>
+    <text x="106" y="278" font-size="17">Euler方程式</text>
+    <text x="368" y="198" font-size="22" font-weight="700">無限期間</text>
+    <text x="368" y="228" font-size="17">局所条件</text>
+    <text x="368" y="253" font-size="17">横断性条件</text>
+    <text x="368" y="278" font-size="17">Ponziを排除</text>
+    <text x="630" y="198" font-size="22" font-weight="700">Bellman方程式</text>
+    <text x="630" y="228" font-size="17">状態と操作</text>
+    <text x="630" y="253" font-size="17">包絡線条件</text>
+    <text x="630" y="278" font-size="17">同じEuler条件</text>
+    <text x="892" y="198" font-size="22" font-weight="700">不確実性</text>
+    <text x="892" y="228" font-size="17">状態 zₜ</text>
+    <text x="892" y="253" font-size="17">条件付き期待</text>
+    <text x="892" y="278" font-size="17">来期のリスク</text>
+    <text x="266" y="448" font-size="22" font-weight="700">確率的割引因子 Q</text>
+    <text x="266" y="478" font-size="17">限界効用で将来を割引</text>
+    <text x="266" y="503" font-size="17">1 = Eₜ[Q R]</text>
+    <text x="676" y="448" font-size="22" font-weight="700">株式・企業価値</text>
+    <text x="676" y="478" font-size="17">総収益率</text>
+    <text x="676" y="503" font-size="17">将来配当の割引現在価値</text>
+  </g>
+</svg>

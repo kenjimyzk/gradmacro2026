@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">AD-AS equilibrium diagram</title>
+  <desc id="desc">Aggregate demand slopes downward. Short-run aggregate supply slopes upward. Long-run aggregate supply is vertical at natural output.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2f36"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="900" height="560" fill="#ffffff"/>
+  <rect x="84" y="52" width="740" height="408" rx="8" fill="#fbfcff" stroke="#d9dee8"/>
+  <g stroke="#e8ecf3" stroke-width="1">
+    <line x1="160" y1="92" x2="160" y2="430"/>
+    <line x1="260" y1="92" x2="260" y2="430"/>
+    <line x1="360" y1="92" x2="360" y2="430"/>
+    <line x1="460" y1="92" x2="460" y2="430"/>
+    <line x1="560" y1="92" x2="560" y2="430"/>
+    <line x1="660" y1="92" x2="660" y2="430"/>
+    <line x1="760" y1="92" x2="760" y2="430"/>
+    <line x1="110" y1="135" x2="790" y2="135"/>
+    <line x1="110" y1="205" x2="790" y2="205"/>
+    <line x1="110" y1="275" x2="790" y2="275"/>
+    <line x1="110" y1="345" x2="790" y2="345"/>
+    <line x1="110" y1="415" x2="790" y2="415"/>
+  </g>
+  <g stroke="#2b2f36" stroke-width="2.2" fill="none" marker-end="url(#arrow)">
+    <line x1="110" y1="430" x2="805" y2="430"/>
+    <line x1="110" y1="430" x2="110" y2="70"/>
+  </g>
+  <text x="815" y="438" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" fill="#20242a">Y</text>
+  <text x="95" y="62" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" fill="#20242a">P</text>
+  <line x1="458" y1="82" x2="458" y2="430" stroke="#45505f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 178 390 C 310 340 470 260 686 130" fill="none" stroke="#d45d48" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 180 120 C 318 175 500 270 708 405" fill="none" stroke="#2f6fbe" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="458" cy="263" r="9" fill="#20242a" filter="url(#shadow)"/>
+  <line x1="458" y1="263" x2="458" y2="430" stroke="#6f7785" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="110" y1="263" x2="458" y2="263" stroke="#6f7785" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="470" y="253" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" fill="#20242a">短期均衡</text>
+  <text x="429" y="464" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" fill="#20242a">Y*</text>
+  <text x="72" y="269" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" fill="#20242a">P*</text>
+  <text x="470" y="96" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="700" fill="#45505f">LRAS</text>
+  <text x="690" y="128" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="24" font-weight="700" fill="#d45d48">SRAS</text>
+  <text x="712" y="410" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="24" font-weight="700" fill="#2f6fbe">AD</text>
+  <text x="92" y="515" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="700" fill="#20242a">AD-AS均衡</text>
+  <text x="226" y="515" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="18" fill="#555f6f">総需要、短期総供給、長期総供給の位置関係</text>
+</svg>
