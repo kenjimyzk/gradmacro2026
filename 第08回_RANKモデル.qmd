@@ -184,7 +184,27 @@ $$
 $$
 第7回の $\gamma,\varphi$ は、第8回ではそれぞれ $\tilde{\gamma},\tilde{\varphi}$ に置き換わると考えればよいです。
 
-限界費用は
+この置き換えは、資源制約と生産関数を線形化すると出てきます。第5回と同じく
+$$
+c_t=\frac{y_t-g_t}{1-G_Y}
+$$
+であり、生産関数から
+$$
+n_t=\frac{y_t-a_t}{1-\alpha}
+$$
+です。労働供給式 $w_t=\gamma c_t+\varphi n_t$ と企業の労働需要式
+$$
+w_t=mc_t+a_t-\alpha n_t
+$$
+を合わせると、限界費用は
+$$
+mc_t
+=
+\tilde{\gamma}(y_t-g_t)
++\tilde{\varphi}y_t
+-(\tilde{\varphi}+1)a_t
+$$
+となります。したがって
 $$
 mc_t
 =
@@ -210,13 +230,26 @@ r_t^f
 =
 \tilde{\gamma}\mathbb{E}_t(\Delta y_{t+1}^f-\Delta g_{t+1})
 $$
-となります。ショック過程を
+となります。ここで $y_t^f=\zeta_a a_t+\zeta_g g_t$ なので、
+$$
+\Delta y_{t+1}^f-\Delta g_{t+1}
+=
+\zeta_a\Delta a_{t+1}
++(\zeta_g-1)\Delta g_{t+1}
+$$
+です。ショック過程を
 $$
 a_t=\rho_a a_{t-1}+e_t^a,
 \qquad
 g_t=\rho_g g_{t-1}+e_t^g
 $$
-と置けば、
+と置けば、条件付き期待では
+$$
+\mathbb{E}_t\Delta a_{t+1}=-(1-\rho_a)a_t,
+\qquad
+\mathbb{E}_t\Delta g_{t+1}=-(1-\rho_g)g_t
+$$
+なので、
 $$
 r_t^f
 =
@@ -337,7 +370,13 @@ $$\begin{aligned}
 $$ 
 \kappa_g = \frac{\kappa}{1-\beta\rho_g}
 $$
-です。したがって
+です。上の2本を等置すると
+$$
+\left\{\kappa_g(\phi-\rho_g)+\tilde{\gamma}(1-\rho_g)\right\}x_t
+=
+\tilde{\gamma}(1-\zeta_g)(1-\rho_g)g_t
+$$
+となります。したがって
 $$
 x_t = (1-\zeta_g)\Omega_g g_t,
 \qquad
