@@ -2,14 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="宮﨑憲治">
 
-<title>第3回：RANKモデル</title>
+<title>第4回：RANKモデル</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,18 +27,17 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="第03回_RANKモデル_files/libs/clipboard/clipboard.min.js"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/popper.min.js"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="第03回_RANKモデル_files/libs/quarto-html/anchor.min.js"></script>
-<link href="第03回_RANKモデル_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="第03回_RANKモデル_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="第03回_RANKモデル_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="第03回_RANKモデル_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="第03回_RANKモデル_files/libs/bootstrap/bootstrap-a74871fe4945b66d259aafc266475145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="第04回_RANKモデル_files/libs/clipboard/clipboard.min.js"></script>
+<script src="第04回_RANKモデル_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="第04回_RANKモデル_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="第04回_RANKモデル_files/libs/quarto-html/popper.min.js"></script>
+<script src="第04回_RANKモデル_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="第04回_RANKモデル_files/libs/quarto-html/anchor.min.js"></script>
+<link href="第04回_RANKモデル_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="第04回_RANKモデル_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="第04回_RANKモデル_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="第04回_RANKモデル_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="第04回_RANKモデル_files/libs/bootstrap/bootstrap-8ffd5f67044e5306d9846f29df41dda5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -170,13 +172,13 @@ window.Quarto = {
   <li><a href="#まとめ-1" id="toc-まとめ-1" class="nav-link" data-scroll-target="#まとめ-1"><span class="header-section-number">6.2</span> まとめ</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>その他のフォーマット</h2><ul><li><a href="第03回_RANKモデル.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>その他のフォーマット</h2><ul><li><a href="第04回_RANKモデル.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">第3回：RANKモデル</h1>
+<h1 class="title">第4回：RANKモデル</h1>
 <p class="subtitle lead">マクロ経済学B</p>
 </div>
 
@@ -194,7 +196,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">公開</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026年4月4日</p>
+      <p class="date">2026年5月6日</p>
     </div>
   </div>
   
@@ -397,7 +399,7 @@ y_t \equiv \ln Y_t - \ln Y,
 c_t \equiv \ln C_t - \ln C,
 \quad
 n_t \equiv \ln N_t - \ln N
-</span> のように書きます。同様に、<span class="math inline">w_t, mc_t, d_t, r_t, r_t^N, \pi_t</span> はそれぞれ <span class="math inline">W_t, MC_t, D_t, R_t, R_t^N, \Pi_t</span> の対数線形化後の変数です。また、<span class="math inline">\Delta z_{t+1}\equiv z_{t+1}-z_t</span> は一階差分を表します。</p>
+</span> のように書きます。同様に、<span class="math inline">w_t, mc_t, r_t, r_t^N, \pi_t</span> はそれぞれ <span class="math inline">W_t, MC_t, R_t, R_t^N, \Pi_t</span> の対数線形化後の変数です。また、<span class="math inline">\Delta z_{t+1}\equiv z_{t+1}-z_t</span> は一階差分を表します。</p>
 <p>ここで、政府支出と配当については <span class="math display">
 g_t=\frac{G_t-G}{Y},
 \qquad
@@ -451,7 +453,7 @@ d_t=\frac{D_t-D}{Y}
 <td>各ショックの持続性</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">0\leq\sigma&lt;1/(\psi-1)</span></td>
+<td><span class="math inline">0\leq\sigma\leq1/(\psi-1)</span></td>
 <td>中間財企業への補助金率</td>
 </tr>
 </tbody>
@@ -491,10 +493,12 @@ r_t = r_t^N - \mathbb{E}_t \pi_{t+1}
 <p>3番目の式を前向きに繰り返し代入すると、 <span class="math display">
 V_t
 =
-\mathbb{E}_t\left[\sum^{\infty}_{i=1}\beta^{i}\frac{U_{C,t+i}}{U_{C,t}}D_{t+i}\right]=\left[\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i}R_{s}}\right]
-</span> となります。つまり、株式価値は <strong>将来の配当の割引現在価値</strong> に等しくなります。</p>
+\mathbb{E}_t\left[\sum^{\infty}_{i=1}\beta^{i}\frac{U_{C,t+i}}{U_{C,t}}D_{t+i}\right]
+</span> となります。つまり、株式価値は <strong>将来の配当の割引現在価値</strong> に等しくなります。 不確実性がない場合には、これは <span class="math display">
+V_t=\sum^{\infty}_{i=1}\frac{D_{t+i}}{\prod_{s=t}^{t+i-1}R_{s}}
+</span> と書けます。</p>
 <p>2番目の式（Euler方程式）と3番目の式（株式価値）はそれぞれ <span class="math display">
-\mathbb{E}_t\left[Q_{t,t+1}\right] R_t = 1,
+\mathbb{E}_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right] = 1,
 \qquad
 \mathbb{E}_t\left[
 Q_{t,t+1}
@@ -604,7 +608,7 @@ U_C(C_t,N_t)=C_t^{-\gamma},
 \gamma = -\frac{C\,U_{CC}}{U_C}
 </span> で定義されます。<span class="math inline">\gamma</span> が大きいほど家計はリスクを嫌い、消費の変動を避けようとします。また <span class="math inline">1/\gamma</span> は <strong>異時点間の代替弾力性（<em>EIS</em>）</strong> に等しく、実質利子率の変化に対して消費成長率がどれだけ反応するかを表します。</p>
 <p>労働の不効用 <span class="math inline">N^{1+\varphi}/(1+\varphi)</span> におけるパラメータ <span class="math inline">\varphi</span> は <span class="math display">
-\varphi = -\frac{N\,U_{NN}}{U_N}
+\varphi = \frac{N\,U_{NN}}{U_N}
 </span> で定義されます。<span class="math inline">1/\varphi</span> は <strong>フリッシュ弾力性</strong>（<em>Frisch elasticity</em>）、すなわち限界効用一定のもとでの労働供給の賃金弾力性です。<span class="math inline">\varphi</span> が大きいほど労働供給は賃金変化に対して非弾力的になります。</p>
 </section>
 <section id="生産関数" class="level3" data-number="3.2.2">
@@ -661,7 +665,7 @@ R_t^N = \frac{1}{\beta} e^{-m_t} \Pi_t^\phi
 <section id="資源制約" class="level3" data-number="3.3.4">
 <h3 data-number="3.3.4" class="anchored" data-anchor-id="資源制約"><span class="header-section-number">3.3.4</span> 資源制約</h3>
 <p><span class="math display">\begin{aligned}
-Y_t &amp;= C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2\\
+Y_t &amp;= C_t + G_t + \frac{\eta}{2}(\Pi_t-1)^2Y_t\\
 G_t &amp;= G + g_t Y
 \end{aligned}</span></p>
 </section>
@@ -688,7 +692,7 @@ N^{1-\alpha}
 \frac{(1-\alpha)MC}{(1-G_Y)^\gamma}
 \right]^{\frac{1-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
 C &amp;= (1-G_Y)Y\\
-D &amp;= \alpha Y
+D &amp;= \{1-(1-\alpha)MC\}Y
 \end{aligned}
 </span> を得ます。特に <span class="math inline">\alpha=G_Y=0</span> かつ <span class="math inline">MC=1</span> なら、<span class="math inline">N=Y=W=C=1</span> です。</p>
 </section>
@@ -709,7 +713,7 @@ r_t &amp;= r_t^N - \mathbb{E}_t \pi_{t+1}
 <section id="企業-2" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="企業-2"><span class="header-section-number">4.1.2</span> 企業</h3>
 <p><span class="math display">\begin{aligned}
-\pi_t &amp;= \frac{\psi}{\eta} mc_t + \beta \mathbb{E}_t \pi_{t+1}\\
+\pi_t &amp;= \frac{\psi MC}{\eta} mc_t + \beta \mathbb{E}_t \pi_{t+1}\\
 w_t &amp;= mc_t + y_t - n_t\\
 d_t &amp;= y_t - (1-\alpha)MC(w_t+n_t)\\
 y_t &amp;= a_t + (1-\alpha)n_t
@@ -782,7 +786,7 @@ r_t = r_t^f + \tilde{\gamma} \mathbb{E}_t \Delta x_{t+1}
 </section>
 <section id="ニューケインジアンフィリップス曲線" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="ニューケインジアンフィリップス曲線"><span class="header-section-number">4.3.2</span> ニューケインジアン・フィリップス曲線</h3>
-<p><span class="math inline">mc_t=(\tilde{\varphi}+\tilde{\gamma})(x_t-\zeta_a a_t-\zeta_g g_t)</span>を <span class="math inline">\pi_t=(\psi/\eta)mc_t+\beta \mathbb{E}_t\pi_{t+1}</span>に代入すると、 <span class="math display">
+<p><span class="math inline">mc_t=(\tilde{\varphi}+\tilde{\gamma})x_t</span>を <span class="math inline">\pi_t=(\psi MC/\eta)mc_t+\beta \mathbb{E}_t\pi_{t+1}</span>に代入すると、 <span class="math display">
 \pi_t = \kappa x_t + \beta \mathbb{E}_t \pi_{t+1}
 </span> になります。ただし <span class="math display">
 \kappa = MC(\tilde{\varphi}+\tilde{\gamma})\frac{\psi}{\eta}
@@ -830,7 +834,7 @@ r_t = -\Omega_m m_t
 \frac{1}{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)},\\
 \Omega_m
 =&amp;\tilde{\gamma}(1-\rho_m)\Omega,
-\quad0\leq\Omega,\Omega_m\leq1
+\quad0\leq\Omega_m\leq1
 \end{aligned}</span> です。金融緩和ショックは需給ギャップとインフレを押し上げ、実質利子率を低下させます。</p>
 <p>名目利子率は <span class="math display">\begin{aligned}
 r_t^N &amp;= r_t + \mathbb{E}_t \pi_{t+1}=r_t+\rho_m \pi_t\\
@@ -919,21 +923,21 @@ y_t = x_t + y_t^f
 </span> より、 <span class="math display">\begin{aligned}
 y_t
 &amp;=
-\Omega_m m_t
+\Omega m_t
 +\zeta_a(1-\Omega_a)a_t
 +\{1-(1-\zeta_g)(1-\Omega_g)\}g_t\\
 (1-G_Y)c_t
 =
 y_t-g_t
 &amp;=
-\Omega_m m_t
+\Omega m_t
 +\zeta_a(1-\Omega_a)a_t
 -(1-\zeta_g)(1-\Omega_g)g_t\\
 (1-\alpha)n_t
 =
 y_t-a_t
 &amp;=
-\Omega_m m_t
+\Omega m_t
 -\{1-\zeta_a(1-\Omega_a)\}a_t
 +\{1-(1-\zeta_g)(1-\Omega_g)\}g_t
 \end{aligned}</span> と、産出・消費・労働の反応も復元できます。特に価格が一定の時、<span class="math inline">y_t=m_t/\{\tilde{\gamma}(1-\rho_m)\} + g_t</span> となります。</p>
