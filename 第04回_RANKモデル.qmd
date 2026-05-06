@@ -1,8 +1,8 @@
 ---
-title: "第3回：RANKモデル"
+title: "第4回：RANKモデル"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-04-04"
+date: "2026-05-06"
 format:
   html:
     toc: true
