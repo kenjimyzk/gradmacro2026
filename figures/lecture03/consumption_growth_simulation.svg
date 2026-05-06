@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">CRRA効用の消費成長率シミュレーション</title>
+  <desc id="desc">ベータ0.96のもとで、粗利子率Rと異時点間代替弾力性の逆数ガンマが消費成長率に与える影響を示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2f36"/>
+    </marker>
+  </defs>
+  <rect width="980" height="560" fill="#ffffff"/>
+  <rect x="62" y="52" width="850" height="404" rx="10" fill="#fbfcff" stroke="#d9e0ea"/>
+  <g stroke="#e8ecf3" stroke-width="1">
+    <line x1="110" y1="420" x2="850" y2="420"/>
+    <line x1="110" y1="340" x2="850" y2="340"/>
+    <line x1="110" y1="260" x2="850" y2="260"/>
+    <line x1="110" y1="180" x2="850" y2="180"/>
+    <line x1="110" y1="100" x2="850" y2="100"/>
+    <line x1="110" y1="100" x2="110" y2="420"/>
+    <line x1="350" y1="100" x2="350" y2="420"/>
+    <line x1="590" y1="100" x2="590" y2="420"/>
+    <line x1="830" y1="100" x2="830" y2="420"/>
+  </g>
+  <g stroke="#2b2f36" stroke-width="2.2" fill="none" marker-end="url(#arrow)">
+    <line x1="110" y1="420" x2="866" y2="420"/>
+    <line x1="110" y1="420" x2="110" y2="78"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="872" y="428" font-size="20">R</text>
+    <text x="72" y="74" font-size="19">Cₜ₊₁/Cₜ</text>
+    <text x="95" y="452" font-size="15">1.00</text>
+    <text x="335" y="452" font-size="15">1.02</text>
+    <text x="575" y="452" font-size="15">1.04</text>
+    <text x="815" y="452" font-size="15">1.06</text>
+    <text x="66" y="425" font-size="15">0.95</text>
+    <text x="66" y="345" font-size="15">0.97</text>
+    <text x="66" y="265" font-size="15">0.99</text>
+    <text x="66" y="185" font-size="15">1.01</text>
+    <text x="66" y="105" font-size="15">1.03</text>
+  </g>
+  <line x1="110" y1="220" x2="850" y2="220" stroke="#9aa3af" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="742" y="213" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="15" fill="#6b7280">成長率 1</text>
+  <polyline points="110,380 350,303.2 590,226.4 830,149.6" fill="none" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="110,300.4 350,262 590,223.2 830,184.8" fill="none" stroke="#379b55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="110,252.4 350,236.8 590,221.2 830,206" fill="none" stroke="#d9792f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <rect x="612" y="82" width="258" height="98" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+    <text x="632" y="107" font-size="16" font-weight="700" fill="#20242a">β = 0.96, Cₜ₊₁/Cₜ = (βR)¹ᐟγ</text>
+    <line x1="634" y1="130" x2="686" y2="130" stroke="#2f6fbe" stroke-width="4"/>
+    <text x="700" y="136" font-size="16" fill="#20242a">γ = 1</text>
+    <line x1="634" y1="153" x2="686" y2="153" stroke="#379b55" stroke-width="4"/>
+    <text x="700" y="159" font-size="16" fill="#20242a">γ = 2</text>
+    <line x1="760" y1="153" x2="812" y2="153" stroke="#d9792f" stroke-width="4"/>
+    <text x="826" y="159" font-size="16" fill="#20242a">γ = 5</text>
+    <text x="92" y="515" font-size="22" font-weight="700" fill="#20242a">数値例：利子率と異時点間代替</text>
+    <text x="372" y="515" font-size="18" fill="#555f6f">γが大きいほど、利子率変化に対する消費成長率の反応は小さい</text>
+  </g>
+</svg>
