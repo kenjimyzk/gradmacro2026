@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Rendered HTML output
+*.html
+*_files/
+_site/
+site_libs/
+.quarto/
