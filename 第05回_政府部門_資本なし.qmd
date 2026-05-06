@@ -22,26 +22,27 @@ lang: ja
 
 # 講義の目的
 
-この回では、第4回の資本なし RBC モデルに政府部門を導入します。元のスライドでは資本を含む GOV1・GOV2 が扱われていましたが、この講義ノートでは第8回の表記に合わせ、資本を導入しないモデルとして整理します。
+この回では、第4回の資本なし RBC モデルに政府部門を導入します。資本は引き続き導入せず、政府支出、一括税、移転、政府債務を加えたモデルとして整理します。
 
-目的は次の3点です。
+目的は次の4点です。
 
 1. 政府予算制約とプライマリーバランスを理解する。
 2. 一括税と政府支出が資源配分へ与える効果を区別する。
 3. 政府支出ショックを含む資本なし RBC モデルを対数線形化する。
+4. 労働所得税だけを用いてラッファーカーブを導出する。
 
 # 政府予算制約
 
-政府は政府購入 $G_t$、移転 $TR_t$、租税収入 $TX_t$、国債 $B_t^G$ を用います。名目国債を実質化して書くと、政府予算制約は
+政府は政府購入 $G_t$、移転 $TR_t$、家計への一括税 $TX_t^H$、国債 $B_t^G$ を用います。名目国債を実質化して書くと、政府予算制約は
 $$
 G_t+TR_t+\frac{R_{t-1}^N}{\Pi_t}B_{t-1}^G
-=TX_t+B_t^G
+=TX_t^H+B_t^G
 $$
 です。左辺は政府支出と既存国債の実質償還額、右辺は税収と新規国債発行です。
 
 プライマリーバランスを
 $$
-PB_t\equiv TX_t-TR_t-G_t
+PB_t\equiv TX_t^H-TR_t-G_t
 $$
 と定義すると、政府予算制約は
 $$
@@ -58,7 +59,7 @@ $$
 B_t^G=
 \mathbb{E}_t\sum_{i=1}^{\infty}Q_{t,t+i}PB_{t+i}
 $$
-となります。ただし横断性条件
+となります。ただし $Q_{t,t+i}$ は $t$ 期から $t+i$ 期までの確率的割引ファクターであり、横断性条件
 $$
 \lim_{i\to\infty}\mathbb{E}_t\left[Q_{t,t+i}B_{t+i}^G\right]=0
 $$
@@ -68,17 +69,18 @@ $$
 
 # 家計
 
-代表的家計は
+代表的家計 $h$ は
 $$
-\max_{\{C_t,N_t,B_t,\Theta_t\}_{t=0}^{\infty}}
-\mathbb{E}_0\sum_{t=0}^{\infty}\beta^tU(C_t,N_t)
+\max_{\{C_t(h),N_t(h),B_t(h),\Theta_t(h)\}_{t=0}^{\infty}}
+\mathbb{E}_0\sum_{t=0}^{\infty}\beta^tU(C_t(h),N_t(h))
 $$
 を最大化します。予算制約は
 $$
-C_t+B_t+\Theta_tV_t+TX_t
-=R_{t-1}B_{t-1}+\Theta_{t-1}(V_t+D_t)+W_tN_t+TR_t
+C_t(h)+B_t(h)+\Theta_t(h)V_t+TX_t^H
+=R_{t-1}^N\frac{P_{t-1}}{P_t}B_{t-1}(h)
++\Theta_{t-1}(h)(V_t+D_t)+W_tN_t(h)+TR_t
 $$
-です。ここでは $TX_t$ と $TR_t$ は家計に一律に課される一括税・一括移転です。
+です。ここでは $TX_t^H$ と $TR_t$ は家計に一律に課される一括税・一括移転です。対称均衡では $C_t(h)=C_t$、$N_t(h)=N_t$、$\Theta_t(h)=1$ となります。
 
 一階条件は第4回と同じです。
 $$
@@ -98,15 +100,15 @@ D_t=Y_t-W_tN_t
 $$
 を最大化します。生産関数は
 $$
-Y_t=A_tF(N_t)
+Y_t=\exp(a_t)F(N_t)
 $$
 です。労働の一階条件は
 $$
-W_t=A_tF_N(N_t)
+W_t=\exp(a_t)F_N(N_t)
 $$
 です。第4回と同様に、家計の労働供給条件と合わせると
 $$
--\frac{U_{N,t}}{U_{C,t}}=A_tF_N(N_t)
+-\frac{U_{N,t}}{U_{C,t}}=\exp(a_t)F_N(N_t)
 $$
 を得ます。
 
@@ -116,34 +118,27 @@ $$
 $$
 Y_t=C_t+G_t
 $$
-です。政府支出を産出比で表すため
+です。定常状態の政府支出比率を
 $$
-G_t=g_tY_t
+G_Y\equiv \frac{G}{Y}
 $$
-と書くこともあります。この場合、資源制約は
+とし、政府支出ショックを
 $$
-C_t=(1-g_t)Y_t
+g_t\equiv \frac{G_t-G}{Y}
 $$
-です。
-
-政府支出比率は次の確率過程に従うとします。
+と定義します。ここで分母の $Y$ は定常状態の産出です。政府支出ショックは次の AR(1) 過程に従うとします。
 $$
-g_t=(1-\rho_g)g+\rho_g g_{t-1}+e_t^g
+g_t=\rho_g g_{t-1}+e_t^g
 $$
-ここで $g_t$ は水準の比率としての政府支出比率です。第8回の対数線形化では、政府支出ショックを
-$$
-\tilde g_t\equiv \frac{G_t-G}{Y}
-$$
-のように、産出定常値で割った乖離として扱うことがあります。このノートでは混同を避けるため、比率としての政府支出を $g_t^Y\equiv G_t/Y_t$、対数線形化での財市場ショックを $\tilde g_t$ と書き分けます。
 
 均衡条件は次の5本にまとめられます。
 $$
 \begin{aligned}
 W_t&=-\frac{U_{N,t}}{U_{C,t}},\\
-W_t&=A_tF_N(N_t),\\
-Y_t&=A_tF(N_t),\\
+W_t&=\exp(a_t)F_N(N_t),\\
+Y_t&=\exp(a_t)F(N_t),\\
 Y_t&=C_t+G_t,\\
-G_t&=g_t^YY_t.
+g_t&=\frac{G_t-G}{Y}.
 \end{aligned}
 $$
 一括税で政府支出をファイナンスする場合でも、国債で一時的にファイナンスする場合でも、政府支出 $G_t$ の経路が同じなら、実物配分は同じです。
@@ -155,27 +150,82 @@ $$
 U(C_t,N_t)=\frac{C_t^{1-\gamma}}{1-\gamma}
 -\chi\frac{N_t^{1+\varphi}}{1+\varphi},
 \qquad
-Y_t=A_tN_t^{1-\alpha}
+Y_t=\exp(a_t)N_t^{1-\alpha}
 $$
 とします。このとき、均衡労働は
 $$
-\chi N_t^\varphi C_t^\gamma=(1-\alpha)A_tN_t^{-\alpha}
+\chi N_t^\varphi C_t^\gamma=(1-\alpha)\exp(a_t)N_t^{-\alpha}
 $$
 を満たします。政府支出が増えると、同じ $Y_t$ の下で民間消費 $C_t$ が低下します。消費の限界効用が上昇するため、家計はより多く働く方向に動きます。この効果は資本なしモデルでは投資のクラウドアウトではなく、消費と労働の静学的調整として現れます。
 
-# 対数線形近似
+# 定常状態と第4回との比較
 
-定常状態の政府支出比率を
+定常状態で $a_t=a$、$G_t=G$ とします。政府支出を水準 $G$ として外生的に置くと、定常状態の労働は
+$$
+\chi N^\varphi\left(\exp(a)N^{1-\alpha}-G\right)^\gamma
+=(1-\alpha)\exp(a)N^{-\alpha}
+$$
+を満たします。この式は一般の $\gamma$ と $\alpha$ では閉形式で解きにくく、数値的に解くのが自然です。
+
+一方、講義ノートのように定常状態の政府支出比率
 $$
 G_Y\equiv \frac{G}{Y}
 $$
-とします。政府支出ショックを
+を所与にすれば、$C=(1-G_Y)Y$ なので解析的に解けます。これは定常値を決めるための比率であり、各期に $G_t/Y_t$ を固定するという意味ではありません。
+
+第4回と同じく
 $$
-\tilde g_t\equiv \frac{G_t-G}{Y}
+\Omega\equiv \varphi+\alpha+\gamma(1-\alpha)
 $$
-と定義すると、財市場の対数線形近似は
+とおくと、政府支出を含む定常状態は
 $$
-y_t=(1-G_Y)c_t+\tilde g_t
+\begin{aligned}
+N^G
+&=
+\left[
+\frac{1-\alpha}{\chi}
+(1-G_Y)^{-\gamma}
+\exp\{(1-\gamma)a\}
+\right]^{1/\Omega},\\
+Y^G
+&=\exp(a)(N^G)^{1-\alpha},\\
+C^G
+&=(1-G_Y)Y^G,\\
+W^G
+&=(1-\alpha)\exp(a)(N^G)^{-\alpha}.
+\end{aligned}
+$$
+
+第4回の政府なし定常状態を上付き $0$ で表すと、
+$$
+N^0=
+\left[
+\frac{1-\alpha}{\chi}
+\exp\{(1-\gamma)a\}
+\right]^{1/\Omega},
+\qquad
+Y^0=C^0=\exp(a)(N^0)^{1-\alpha}
+$$
+です。したがって、政府支出を導入した定常状態は第4回と比べて
+$$
+\begin{aligned}
+\frac{N^G}{N^0}
+&=(1-G_Y)^{-\gamma/\Omega}>1,\\
+\frac{Y^G}{Y^0}
+&=(1-G_Y)^{-\gamma(1-\alpha)/\Omega}>1,\\
+\frac{C^G}{C^0}
+&=(1-G_Y)^{(\varphi+\alpha)/\Omega}<1,\\
+\frac{W^G}{W^0}
+&=(1-G_Y)^{\alpha\gamma/\Omega}<1.
+\end{aligned}
+$$
+政府支出は財を吸収するため、民間消費を押し下げます。消費の限界効用が上がるので労働供給は増え、産出も増えます。ただし労働投入が増えるため、限界生産物としての実質賃金は低下します。
+
+# 対数線形近似
+
+政府支出ショック $g_t=(G_t-G)/Y$ を用いると、財市場の対数線形近似は
+$$
+y_t=(1-G_Y)c_t+g_t
 $$
 です。その他の条件は
 $$
@@ -184,40 +234,79 @@ y_t&=a_t+(1-\alpha)n_t,\\
 w_t&=a_t-\alpha n_t,\\
 w_t&=\gamma c_t+\varphi n_t,\\
 a_t&=\rho_a a_{t-1}+e_t^a,\\
-\tilde g_t&=\rho_g \tilde g_{t-1}+e_t^g.
+g_t&=\rho_g g_{t-1}+e_t^g.
 \end{aligned}
 $$
 この5本が、政府支出を含む資本なし RBC モデルの対数線形体系です。
 
 政府支出ショックの効果を明示するため、上の式を解きます。まず財市場から
 $$
-c_t=\frac{y_t-\tilde g_t}{1-G_Y}
+c_t=\frac{y_t-g_t}{1-G_Y}
 $$
 です。これを労働供給条件に代入し、企業側の条件と合わせると
 $$
 a_t-\alpha n_t
-=\gamma\frac{a_t+(1-\alpha)n_t-\tilde g_t}{1-G_Y}
+=\gamma\frac{a_t+(1-\alpha)n_t-g_t}{1-G_Y}
 +\varphi n_t
 $$
 です。したがって
 $$
 n_t=
-\frac{(1-G_Y-\gamma)a_t+\gamma \tilde g_t}
+\frac{(1-G_Y-\gamma)a_t+\gamma g_t}
 {(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)}
 $$
 を得ます。
 
-政府支出ショック $e_t^g>0$ は、分子の $\gamma\tilde g_t$ を通じて労働を増やします。直感的には、政府が財を吸収すると民間消費が減り、消費の限界効用が上昇します。その結果、実質賃金を限界代替率に等しくするために労働供給が増えます。
+分母を
+$$
+\Delta_G\equiv (1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)
+$$
+と書くと、他の変数も
+$$
+\begin{aligned}
+n_t&=\frac{1-G_Y-\gamma}{\Delta_G}a_t
++\frac{\gamma}{\Delta_G}g_t,\\
+y_t&=\frac{(1-G_Y)(1+\varphi)}{\Delta_G}a_t
++\frac{\gamma(1-\alpha)}{\Delta_G}g_t,\\
+c_t&=\frac{1+\varphi}{\Delta_G}a_t
+-\frac{\alpha+\varphi}{\Delta_G}g_t,\\
+w_t&=\frac{(1-G_Y)\varphi+\gamma}{\Delta_G}a_t
+-\frac{\alpha\gamma}{\Delta_G}g_t.
+\end{aligned}
+$$
+
+第4回の政府なしモデルでは
+$$
+\begin{aligned}
+n_t&=\frac{1-\gamma}{\Omega}a_t,\\
+y_t&=\frac{1+\varphi}{\Omega}a_t,\\
+c_t&=y_t,\\
+w_t&=\frac{\varphi+\gamma}{\Omega}a_t.
+\end{aligned}
+$$
+上の政府支出モデルで $G_Y=0$ かつ $g_t=0$ とおけば、$\Delta_G=\Omega$ となり、第4回の式に戻ります。
+
+違いは財市場の近似式にあります。第4回では $c_t=y_t$ でしたが、政府支出を入れると
+$$
+y_t=(1-G_Y)c_t+g_t
+$$
+となります。したがって、政府支出ショック $e_t^g>0$ は、労働と産出を増やす一方で、民間消費と実質賃金を下げます。直感的には、政府が財を吸収すると民間消費が減り、消費の限界効用が上昇します。その結果、家計はより多く働きます。
+
+技術ショックに対する反応も、第4回と完全には同じではありません。$g_t=0$ の技術ショックでは政府支出の水準は同時点で動かないため、追加的な産出は民間消費に強く反映されます。たとえば $\gamma=1$ なら第4回では $n_t=0$ ですが、政府支出モデルでは
+$$
+n_t=-\frac{G_Y}{(1-G_Y)(\alpha+\varphi)+(1-\alpha)}a_t
+$$
+となり、正の技術ショックに対して労働は低下します。これは、政府支出の定常比率を用いて定常状態を置いていても、短期の $G_t$ は独立した外生過程として扱っているためです。
 
 # 一括税と比例税
 
-元の第5回スライドでは、一括税に加えて比例税も扱われていました。資本なしモデルで比例税を入れるなら、資本所得税ではなく労働所得税や消費税を考えるのが自然です。
+資本なしモデルで比例税を入れるなら、資本所得税ではなく労働所得税や消費税を考えるのが自然です。
 
 労働所得税 $\tau_t^N$ を導入すると、家計が受け取る税引後実質賃金は $(1-\tau_t^N)W_t$ です。労働供給条件は
 $$
 (1-\tau_t^N)W_t=-\frac{U_{N,t}}{U_{C,t}}
 $$
-に変わります。企業の労働需要条件 $W_t=A_tF_N(N_t)$ は変わらないため、労働所得税は労働供給と労働需要の間にくさびを作ります。
+に変わります。企業の労働需要条件 $W_t=\exp(a_t)F_N(N_t)$ は変わらないため、労働所得税は労働供給と労働需要の間にくさびを作ります。
 
 消費税 $\tau_t^C$ を導入すると、予算制約上の消費価格が $1+\tau_t^C$ 倍になります。労働供給条件は
 $$
@@ -225,6 +314,159 @@ $$
 $$
 となります。資本なしモデルでは、消費税と労働所得税は静学的な労働供給のくさびとして似た役割を持ちます。
 
+# 労働所得税だけのラッファーカーブ
+
+ここでは消費税を置かず、労働所得税 $\tau^N$ だけを考えます。税収は一括移転として家計に戻すとします。この仮定のもとでは、税は労働供給条件にくさびを作りますが、政府購入として実物資源を吸収しないため、資源制約は
+$$
+C=Y
+$$
+です。定常状態で時間添字を省略し、生産関数を
+$$
+Y=\exp(a)N^{1-\alpha}
+$$
+とします。企業の労働需要条件は
+$$
+W=(1-\alpha)\exp(a)N^{-\alpha}
+$$
+です。労働所得税があると、家計の労働供給条件は
+$$
+(1-\tau^N)W=\chi N^\varphi C^\gamma
+$$
+となります。資源制約 $C=Y=\exp(a)N^{1-\alpha}$ と企業の労働需要条件を代入すると
+$$
+(1-\tau^N)(1-\alpha)\exp(a)N^{-\alpha}
+=\chi N^\varphi\left(\exp(a)N^{1-\alpha}\right)^\gamma
+$$
+です。したがって
+$$
+N(\tau^N)
+=
+\left[
+\frac{(1-\tau^N)(1-\alpha)}{\chi}
+\exp\{(1-\gamma)a\}
+\right]^{\frac{1}{\Omega}},
+\qquad
+\Omega\equiv \varphi+\alpha+\gamma(1-\alpha)>0
+$$
+を得ます。労働所得税率が上がると、税引後実質賃金が下がるため、均衡労働は低下します。
+
+労働所得税収は
+$$
+TX^N(\tau^N)=\tau^N W(\tau^N)N(\tau^N)
+$$
+です。企業の一階条件から $WN=(1-\alpha)Y$ なので、
+$$
+TX^N(\tau^N)
+=
+\tau^N(1-\alpha)\exp(a)N(\tau^N)^{1-\alpha}
+$$
+となります。上で求めた $N(\tau^N)$ を代入すると
+$$
+TX^N(\tau^N)
+=
+\mathcal{A}\,
+\tau^N(1-\tau^N)^\theta,
+\qquad
+\theta\equiv \frac{1-\alpha}{\Omega}>0
+$$
+です。ただし
+$$
+\mathcal{A}
+\equiv
+(1-\alpha)\exp(a)
+\left[
+\frac{1-\alpha}{\chi}\exp\{(1-\gamma)a\}
+\right]^\theta
+$$
+は税率に依存しない正の定数です。
+
+この式が労働所得税だけのラッファーカーブです。税率がゼロなら税収はゼロです。一方、$\tau^N\to 1$ では税引後賃金がゼロに近づき、労働供給が消えるため、税収もゼロに近づきます。内点の最大税収率は一階条件
+$$
+\frac{d\ln TX^N(\tau^N)}{d\tau^N}
+=
+\frac{1}{\tau^N}-\frac{\theta}{1-\tau^N}=0
+$$
+から
+$$
+\tau^{N,*}
+=
+\frac{1}{1+\theta}
+=
+\frac{\Omega}{\Omega+1-\alpha}
+$$
+です。したがって
+$$
+\frac{d TX^N}{d\tau^N}>0
+\quad\text{if}\quad
+\tau^N<\tau^{N,*},
+\qquad
+\frac{d TX^N}{d\tau^N}<0
+\quad\text{if}\quad
+\tau^N>\tau^{N,*}.
+$$
+労働所得税率が低い範囲では、税率引き上げの直接効果が税収を増やします。税率が高い範囲では、労働供給と課税ベースの縮小効果が直接効果を上回り、税収は減少します。
+
+例として、$\alpha=0.4$、$\gamma=1$、$\varphi=1$ とすると
+$$
+\Omega=1+0.4+1(1-0.4)=2,
+\qquad
+\theta=\frac{0.6}{2}=0.3
+$$
+なので
+$$ 
+\tau^{N,*}=\frac{1}{1.3}\simeq0.769
+$$
+です。この値は、ここでの単純な資本なしモデルにおける理論上の最大税収率です。実際の経済では、人的資本、就業参加、税回避、異質な家計、政府支出の便益などがあるため、経験的な最大税収率はこの単純な式だけでは決まりません。
+
+下の R コードでは、$\mathcal{A}=1$ と正規化して
+$TX^N(\tau^N)/\mathcal{A}=\tau^N(1-\tau^N)^\theta$
+を描きます。
+
+```{r}
+#| label: fig-laffer-curve
+#| fig-cap: "労働所得税だけのラッファーカーブ"
+#| fig-width: 6.5
+#| fig-height: 4
+#| echo: true
+
+alpha <- 0.4
+gamma <- 1
+varphi <- 1
+
+Omega <- varphi + alpha + gamma * (1 - alpha)
+theta <- (1 - alpha) / Omega
+tau_star <- 1 / (1 + theta)
+
+tau <- seq(0, 1, length.out = 501)
+tax_revenue <- tau * (1 - tau)^theta
+tax_revenue_star <- tau_star * (1 - tau_star)^theta
+
+op <- par(mar = c(4.5, 4.5, 2.5, 1), las = 1)
+plot(
+  tau, tax_revenue,
+  type = "n",
+  xlim = c(0, 1),
+  ylim = c(0, max(tax_revenue) * 1.08),
+  xlab = expression("tax rate " * tau^N),
+  ylab = "normalized tax revenue",
+  main = "Labor income tax Laffer curve"
+)
+grid()
+lines(tau, tax_revenue, lwd = 2, col = "#1F77B4")
+abline(v = tau_star, lty = 2, lwd = 1.5, col = "#D62728")
+points(tau_star, tax_revenue_star, pch = 19, col = "#D62728")
+text(
+  tau_star - 0.03,
+  tax_revenue_star,
+  labels = sprintf("tau* = %.3f", tau_star),
+  pos = 2,
+  col = "#D62728"
+)
+par(op)
+```
+
 # 第6回への接続
 
 第5回までの企業は完全競争企業でした。第6回では、最終財と中間財を分け、中間財企業が独占的競争に直面する環境を導入します。資本は引き続き導入しないため、変わるのは生産側の価格設定とマークアップであり、資本蓄積ではありません。
+
+第6回で使う政府政策は、この回の整理と直接つながります。独占的競争の歪みを取り除くため、中間財企業に売上比例補助金を与え、その財源を一括税で調達します。一括税は限界条件に入らないため、財源調達そのものは配分を歪めません。一方、売上比例補助金は企業の価格設定条件に入るので、マークアップによるくさびを相殺できます。これは、政府購入 $G_t$ が実物資源を吸収するケースとは異なり、政府による再配分だけを使って生産側の歪みを補正する例です。
