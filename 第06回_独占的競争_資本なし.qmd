@@ -179,7 +179,7 @@ $$
 \left(\frac{Y_t}{Y_t^I(j)}\right)^{1/\psi}
 =\frac{P_t^I(j)}{P_t}
 $$
-となります。これを整理すると、中間財需要は
+となります。両辺を $\psi$ 乗して $Y_t^I(j)$ について解くと、中間財需要は
 $$
 Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{P_t}\right)^{-\psi}
 $$
