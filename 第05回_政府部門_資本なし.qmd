@@ -68,7 +68,7 @@ $$
 | $\beta$ | 主観的割引因子 |
 | $\gamma$ | 異時点間代替弾力性の逆数 |
 | $\varphi$ | フリッシュ弾力性の逆数 |
-| $0\leq\theta<1$ | 生産関数の収穫逓減を表すパラメータ |
+| $0\leq\alpha<1$ | 生産関数の収穫逓減を表すパラメータ |
 | $\chi$ | 労働不効用の水準を調整するパラメータ |
 | $G_Y=G/Y$ | 定常状態の政府支出比率 |
 | $\rho_a,\rho_g$ | 技術ショック、政府支出ショックの持続性 |
@@ -79,9 +79,9 @@ $$
 | 記号 | 定義 | 意味 |
 |---|---|---|
 | $Q_{t,t+i}$ | $t$ 期から $t+i$ 期までの確率的割引ファクター | 将来のプライマリーバランスを現在価値に直す割引係数 |
-| $\Theta$ | $\varphi+\theta+\gamma(1-\theta)$ | 第4回と同じ実物側の分母 |
-| $\Delta_G$ | $(1-G_Y)(\theta+\varphi)+\gamma(1-\theta)$ | 政府支出を含む対数線形解の分母 |
-| $\vartheta$ | $(1-\theta)/\Theta$ | 労働所得税ラッファーカーブの弾性 |
+| $\zeta_a$ | $(1-G_Y)(1+\varphi)/\{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)\}$ | 柔軟価格産出の技術ショックへの反応係数 |
+| $\zeta_g$ | $\gamma(1-\alpha)/\{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)\}$ | 柔軟価格産出の政府支出ショックへの反応係数 |
+| $\vartheta$ | $(1-\alpha)/\{\varphi+\alpha+\gamma(1-\alpha)\}$ | 労働所得税ラッファーカーブの弾性 |
 | $\mathcal{A}$ | 本文の定義式 | ラッファーカーブの水準係数 |
 
 # 政府予算制約
@@ -207,11 +207,11 @@ $$
 U(C_t,N_t)=\frac{C_t^{1-\gamma}}{1-\gamma}
 -\chi\frac{N_t^{1+\varphi}}{1+\varphi},
 \qquad
-Y_t=\exp(a_t)N_t^{1-\theta}
+Y_t=\exp(a_t)N_t^{1-\alpha}
 $$
 とします。このとき、均衡労働は
 $$
-\chi N_t^\varphi C_t^\gamma=(1-\theta)\exp(a_t)N_t^{-\theta}
+\chi N_t^\varphi C_t^\gamma=(1-\alpha)\exp(a_t)N_t^{-\alpha}
 $$
 を満たします。政府支出が増えると、同じ $Y_t$ の下で民間消費 $C_t$ が低下します。消費の限界効用が上昇するため、家計はより多く働く方向に動きます。この効果は資本なしモデルでは投資のクラウドアウトではなく、消費と労働の静学的調整として現れます。
 
@@ -219,10 +219,10 @@ $$
 
 定常状態で $a_t=a$、$G_t=G$ とします。政府支出を水準 $G$ として外生的に置くと、定常状態の労働は
 $$
-\chi N^\varphi\left(\exp(a)N^{1-\theta}-G\right)^\gamma
-=(1-\theta)\exp(a)N^{-\theta}
+\chi N^\varphi\left(\exp(a)N^{1-\alpha}-G\right)^\gamma
+=(1-\alpha)\exp(a)N^{-\alpha}
 $$
-を満たします。この式は一般の $\gamma$ と $\theta$ では閉形式で解きにくく、数値的に解くのが自然です。
+を満たします。この式は一般の $\gamma$ と $\alpha$ では閉形式で解きにくく、数値的に解くのが自然です。
 
 一方、講義ノートのように定常状態の政府支出比率
 $$
@@ -230,26 +230,22 @@ G_Y\equiv \frac{G}{Y}
 $$
 を所与にすれば、$C=(1-G_Y)Y$ なので解析的に解けます。これは定常値を決めるための比率であり、各期に $G_t/Y_t$ を固定するという意味ではありません。
 
-第4回と同じく
-$$
-\Theta\equiv \varphi+\theta+\gamma(1-\theta)
-$$
-とおくと、政府支出を含む定常状態は
+第4回と同じ分母 $\varphi+\alpha+\gamma(1-\alpha)$ を用いると、政府支出を含む定常状態は
 $$
 \begin{aligned}
 N^G
 &=
 \left[
-\frac{1-\theta}{\chi}
+\frac{1-\alpha}{\chi}
 (1-G_Y)^{-\gamma}
 \exp\{(1-\gamma)a\}
-\right]^{1/\Theta},\\
+\right]^{1/\{\varphi+\alpha+\gamma(1-\alpha)\}},\\
 Y^G
-&=\exp(a)(N^G)^{1-\theta},\\
+&=\exp(a)(N^G)^{1-\alpha},\\
 C^G
 &=(1-G_Y)Y^G,\\
 W^G
-&=(1-\theta)\exp(a)(N^G)^{-\theta}.
+&=(1-\alpha)\exp(a)(N^G)^{-\alpha}.
 \end{aligned}
 $$
 
@@ -257,23 +253,23 @@ $$
 $$
 N^0=
 \left[
-\frac{1-\theta}{\chi}
+\frac{1-\alpha}{\chi}
 \exp\{(1-\gamma)a\}
-\right]^{1/\Theta},
+\right]^{1/\{\varphi+\alpha+\gamma(1-\alpha)\}},
 \qquad
-Y^0=C^0=\exp(a)(N^0)^{1-\theta}
+Y^0=C^0=\exp(a)(N^0)^{1-\alpha}
 $$
 です。したがって、政府支出を導入した定常状態は第4回と比べて
 $$
 \begin{aligned}
 \frac{N^G}{N^0}
-&=(1-G_Y)^{-\gamma/\Theta}>1,\\
+&=(1-G_Y)^{-\gamma/\{\varphi+\alpha+\gamma(1-\alpha)\}}>1,\\
 \frac{Y^G}{Y^0}
-&=(1-G_Y)^{-\gamma(1-\theta)/\Theta}>1,\\
+&=(1-G_Y)^{-\gamma(1-\alpha)/\{\varphi+\alpha+\gamma(1-\alpha)\}}>1,\\
 \frac{C^G}{C^0}
-&=(1-G_Y)^{(\varphi+\theta)/\Theta}<1,\\
+&=(1-G_Y)^{(\varphi+\alpha)/\{\varphi+\alpha+\gamma(1-\alpha)\}}<1,\\
 \frac{W^G}{W^0}
-&=(1-G_Y)^{\theta\gamma/\Theta}<1.
+&=(1-G_Y)^{\alpha\gamma/\{\varphi+\alpha+\gamma(1-\alpha)\}}<1.
 \end{aligned}
 $$
 政府支出は財を吸収するため、民間消費を押し下げます。消費の限界効用が上がるので労働供給は増え、産出も増えます。ただし労働投入が増えるため、限界生産物としての実質賃金は低下します。
@@ -287,8 +283,8 @@ $$
 です。その他の条件は
 $$
 \begin{aligned}
-y_t&=a_t+(1-\theta)n_t,\\
-w_t&=a_t-\theta n_t,\\
+y_t&=a_t+(1-\alpha)n_t,\\
+w_t&=a_t-\alpha n_t,\\
 w_t&=\gamma c_t+\varphi n_t,\\
 a_t&=\rho_a a_{t-1}+e_t^a,\\
 g_t&=\rho_g g_{t-1}+e_t^g.
@@ -302,46 +298,64 @@ c_t=\frac{y_t-g_t}{1-G_Y}
 $$
 です。これを労働供給条件に代入し、企業側の条件と合わせると
 $$
-a_t-\theta n_t
-=\gamma\frac{a_t+(1-\theta)n_t-g_t}{1-G_Y}
+a_t-\alpha n_t
+=\gamma\frac{a_t+(1-\alpha)n_t-g_t}{1-G_Y}
 +\varphi n_t
 $$
 です。したがって
 $$
 n_t=
 \frac{(1-G_Y-\gamma)a_t+\gamma g_t}
-{(1-G_Y)(\theta+\varphi)+\gamma(1-\theta)}
+{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)}
 $$
 を得ます。
 
-分母を
+第8回の表記に合わせて
 $$
-\Delta_G\equiv (1-G_Y)(\theta+\varphi)+\gamma(1-\theta)
+\zeta_a\equiv
+\frac{(1-G_Y)(1+\varphi)}
+{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)},
+\qquad
+\zeta_g\equiv
+\frac{\gamma(1-\alpha)}
+{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)}
 $$
-と書くと、他の変数も
+と定義すると、産出は
+$$
+y_t=\zeta_a a_t+\zeta_g g_t
+$$
+と書けます。この式は第8回の自然産出量
+$y_t^f=\zeta_a a_t+\zeta_g g_t$ と同じ形です。政府支出を含む柔軟価格 RBC モデルでは、ここで求めた産出がそのまま自然産出量になります。
+
+他の変数も
 $$
 \begin{aligned}
-n_t&=\frac{1-G_Y-\gamma}{\Delta_G}a_t
-+\frac{\gamma}{\Delta_G}g_t,\\
-y_t&=\frac{(1-G_Y)(1+\varphi)}{\Delta_G}a_t
-+\frac{\gamma(1-\theta)}{\Delta_G}g_t,\\
-c_t&=\frac{1+\varphi}{\Delta_G}a_t
--\frac{\theta+\varphi}{\Delta_G}g_t,\\
-w_t&=\frac{(1-G_Y)\varphi+\gamma}{\Delta_G}a_t
--\frac{\theta\gamma}{\Delta_G}g_t.
+y_t&=\zeta_a a_t+\zeta_g g_t,\\
+n_t&=\frac{\zeta_a-1}{1-\alpha}a_t
++\frac{\zeta_g}{1-\alpha}g_t,\\
+c_t&=\frac{\zeta_a}{1-G_Y}a_t
++\frac{\zeta_g-1}{1-G_Y}g_t,\\
+w_t&=\frac{1-\alpha\zeta_a}{1-\alpha}a_t
+-\frac{\alpha\zeta_g}{1-\alpha}g_t.
 \end{aligned}
 $$
 
 第4回の政府なしモデルでは
 $$
+\zeta_a'
+\equiv
+\frac{1+\varphi}{\varphi+\alpha+\gamma(1-\alpha)}
+$$
+とおけば
+$$
 \begin{aligned}
-n_t&=\frac{1-\gamma}{\Theta}a_t,\\
-y_t&=\frac{1+\varphi}{\Theta}a_t,\\
+y_t&=\zeta_a' a_t,\\
+n_t&=\frac{\zeta_a'-1}{1-\alpha}a_t,\\
 c_t&=y_t,\\
-w_t&=\frac{\varphi+\gamma}{\Theta}a_t.
+w_t&=\frac{1-\alpha\zeta_a'}{1-\alpha}a_t.
 \end{aligned}
 $$
-上の政府支出モデルで $G_Y=0$ かつ $g_t=0$ とおけば、$\Delta_G=\Theta$ となり、第4回の式に戻ります。
+ここでの $\zeta_a'$ は第4回の政府なし係数であり、この第5回で定義した政府支出込みの $\zeta_a$ とは区別します。上の政府支出モデルで $G_Y=0$ かつ $g_t=0$ とおけば、第5回の $\zeta_a$ は $\zeta_a'$ に一致し、第4回の式に戻ります。
 
 違いは財市場の近似式にあります。第4回では $c_t=y_t$ でしたが、政府支出を入れると
 $$
@@ -351,7 +365,7 @@ $$
 
 技術ショックに対する反応も、第4回と完全には同じではありません。$g_t=0$ の技術ショックでは政府支出の水準は同時点で動かないため、追加的な産出は民間消費に強く反映されます。たとえば $\gamma=1$ なら第4回では $n_t=0$ ですが、政府支出モデルでは
 $$
-n_t=-\frac{G_Y}{(1-G_Y)(\theta+\varphi)+(1-\theta)}a_t
+n_t=-\frac{G_Y}{(1-G_Y)(\alpha+\varphi)+(1-\alpha)}a_t
 $$
 となり、正の技術ショックに対して労働は低下します。これは、政府支出の定常比率を用いて定常状態を置いていても、短期の $G_t$ は独立した外生過程として扱っているためです。
 
@@ -381,43 +395,41 @@ C=Y
 $$
 です。定常状態で時間添字を省略し、生産関数を
 $$
-Y=\exp(a)N^{1-\theta}
+Y=\exp(a)N^{1-\alpha}
 $$
 とします。企業の労働需要条件は
 $$
-W=(1-\theta)\exp(a)N^{-\theta}
+W=(1-\alpha)\exp(a)N^{-\alpha}
 $$
 です。労働所得税があると、家計の労働供給条件は
 $$
 (1-\tau^N)W=\chi N^\varphi C^\gamma
 $$
-となります。資源制約 $C=Y=\exp(a)N^{1-\theta}$ と企業の労働需要条件を代入すると
+となります。資源制約 $C=Y=\exp(a)N^{1-\alpha}$ と企業の労働需要条件を代入すると
 $$
-(1-\tau^N)(1-\theta)\exp(a)N^{-\theta}
-=\chi N^\varphi\left(\exp(a)N^{1-\theta}\right)^\gamma
+(1-\tau^N)(1-\alpha)\exp(a)N^{-\alpha}
+=\chi N^\varphi\left(\exp(a)N^{1-\alpha}\right)^\gamma
 $$
 です。したがって
 $$
 N(\tau^N)
 =
 \left[
-\frac{(1-\tau^N)(1-\theta)}{\chi}
+\frac{(1-\tau^N)(1-\alpha)}{\chi}
 \exp\{(1-\gamma)a\}
-\right]^{\frac{1}{\Theta}},
-\qquad
-\Theta\equiv \varphi+\theta+\gamma(1-\theta)>0
+\right]^{\frac{1}{\varphi+\alpha+\gamma(1-\alpha)}}
 $$
-を得ます。労働所得税率が上がると、税引後実質賃金が下がるため、均衡労働は低下します。
+を得ます。ここで分母 $\varphi+\alpha+\gamma(1-\alpha)$ は正です。労働所得税率が上がると、税引後実質賃金が下がるため、均衡労働は低下します。
 
 労働所得税収は
 $$
 TX^N(\tau^N)=\tau^N W(\tau^N)N(\tau^N)
 $$
-です。企業の一階条件から $WN=(1-\theta)Y$ なので、
+です。企業の一階条件から $WN=(1-\alpha)Y$ なので、
 $$
 TX^N(\tau^N)
 =
-\tau^N(1-\theta)\exp(a)N(\tau^N)^{1-\theta}
+\tau^N(1-\alpha)\exp(a)N(\tau^N)^{1-\alpha}
 $$
 となります。上で求めた $N(\tau^N)$ を代入すると
 $$
@@ -426,15 +438,16 @@ TX^N(\tau^N)
 \mathcal{A}\,
 \tau^N(1-\tau^N)^\vartheta,
 \qquad
-\vartheta\equiv \frac{1-\theta}{\Theta}>0
+\vartheta\equiv
+\frac{1-\alpha}{\varphi+\alpha+\gamma(1-\alpha)}>0
 $$
 です。ただし
 $$
 \mathcal{A}
 \equiv
-(1-\theta)\exp(a)
+(1-\alpha)\exp(a)
 \left[
-\frac{1-\theta}{\chi}\exp\{(1-\gamma)a\}
+\frac{1-\alpha}{\chi}\exp\{(1-\gamma)a\}
 \right]^\vartheta
 $$
 は税率に依存しない正の定数です。
@@ -451,7 +464,8 @@ $$
 =
 \frac{1}{1+\vartheta}
 =
-\frac{\Theta}{\Theta+1-\theta}
+\frac{\varphi+\alpha+\gamma(1-\alpha)}
+{\varphi+\alpha+\gamma(1-\alpha)+1-\alpha}
 $$
 です。したがって
 $$
@@ -465,9 +479,9 @@ $$
 $$
 労働所得税率が低い範囲では、税率引き上げの直接効果が税収を増やします。税率が高い範囲では、労働供給と課税ベースの縮小効果が直接効果を上回り、税収は減少します。
 
-例として、$\theta=0.4$、$\gamma=1$、$\varphi=1$ とすると
+例として、$\alpha=0.4$、$\gamma=1$、$\varphi=1$ とすると
 $$
-\Theta=1+0.4+1(1-0.4)=2,
+\varphi+\alpha+\gamma(1-\alpha)=1+0.4+1(1-0.4)=2,
 \qquad
 \vartheta=\frac{0.6}{2}=0.3
 $$
@@ -492,13 +506,13 @@ alpha <- 0.4
 gamma <- 1
 varphi <- 1
 
-Omega <- varphi + alpha + gamma * (1 - alpha)
-theta <- (1 - alpha) / Omega
-tau_star <- 1 / (1 + theta)
+denom <- varphi + alpha + gamma * (1 - alpha)
+vartheta <- (1 - alpha) / denom
+tau_star <- 1 / (1 + vartheta)
 
 tau <- seq(0, 1, length.out = 501)
-tax_revenue <- tau * (1 - tau)^theta
-tax_revenue_star <- tau_star * (1 - tau_star)^theta
+tax_revenue <- tau * (1 - tau)^vartheta
+tax_revenue_star <- tau_star * (1 - tau_star)^vartheta
 
 op <- par(mar = c(4.5, 4.5, 2.5, 1), las = 1)
 plot(
