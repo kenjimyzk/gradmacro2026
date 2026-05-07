@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第6回講義の全体像</title>
+  <desc id="desc">独占的競争で、CES集計、中間財需要、価格設定、マークアップ、補助金の関係を示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第6回の地図：独占的競争とマークアップ</text>
+    <text x="80" y="119" font-size="19" fill="#566273">Dixit-Stiglitz型の中間財市場が、価格設定と実質限界費用を生む</text>
+  </g>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 300 238 L 410 238"/>
+    <path d="M 710 238 L 820 238"/>
+    <path d="M 560 318 L 560 398"/>
+    <path d="M 830 322 C 780 388 714 424 650 448"/>
+    <path d="M 290 322 C 340 388 406 424 470 448"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="82" y="168" width="218" height="154" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="410" y="156" width="300" height="174" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="820" y="168" width="218" height="154" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="380" y="416" width="360" height="124" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="110" y="206" font-size="22" font-weight="700">CES集計</text>
+    <text x="110" y="237" font-size="17">最終財企業</text>
+    <text x="110" y="263" font-size="17">代替弾力性 ψ</text>
+    <text x="110" y="289" font-size="17">中間財需要</text>
+
+    <text x="438" y="194" font-size="22" font-weight="700">中間財企業 j</text>
+    <text x="438" y="225" font-size="17">価格 Pₜᴵ(j) を選ぶ</text>
+    <text x="438" y="251" font-size="17">需要曲線に直面</text>
+    <text x="438" y="277" font-size="17">MCₜ は賃金とMPNで決まる</text>
+    <text x="438" y="303" font-size="17">柔軟価格ならマークアップ一定</text>
+
+    <text x="848" y="206" font-size="22" font-weight="700">均衡</text>
+    <text x="848" y="237" font-size="17">μᵖ = 1/MC</text>
+    <text x="848" y="263" font-size="17">配当と企業価値</text>
+    <text x="848" y="289" font-size="17">定常状態の歪み</text>
+
+    <text x="408" y="456" font-size="22" font-weight="700">補助金による正規化</text>
+    <text x="408" y="488" font-size="17">σ = 1/(ψ − 1) で MC = 1</text>
+    <text x="408" y="514" font-size="17">第7回・第8回の基準定常状態へ</text>
+  </g>
+</svg>

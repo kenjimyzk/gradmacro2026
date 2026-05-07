@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第8回講義の全体像</title>
+  <desc id="desc">第3回から第7回までの部品をRANKモデルに統合し、自然産出量、自然利子率、需給ギャップ、3本のニューケインジアン方程式へまとめる図。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第8回の地図：RANKモデルの一般形</text>
+    <text x="80" y="119" font-size="19" fill="#566273">第3〜7回の部品を統合し、自然水準と3本のNK方程式へ整理する</text>
+  </g>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 256 244 L 356 244"/>
+    <path d="M 506 244 L 606 244"/>
+    <path d="M 756 244 L 856 244"/>
+    <path d="M 560 326 L 560 396"/>
+    <path d="M 324 452 L 438 452"/>
+    <path d="M 682 452 L 796 452"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="82" y="170" width="174" height="150" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="356" y="170" width="150" height="150" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="606" y="170" width="150" height="150" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="856" y="170" width="174" height="150" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="380" y="398" width="360" height="118" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+    <rect x="116" y="398" width="208" height="118" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="796" y="398" width="208" height="118" rx="12" fill="#fff6dc" stroke="#c48a22" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="110" y="206" font-size="21" font-weight="700">家計</text>
+    <text x="110" y="237" font-size="16">Euler方程式</text>
+    <text x="110" y="262" font-size="16">SDF</text>
+    <text x="110" y="287" font-size="16">需要の前向き性</text>
+
+    <text x="384" y="206" font-size="21" font-weight="700">政府</text>
+    <text x="384" y="237" font-size="16">Gₜ</text>
+    <text x="384" y="262" font-size="16">資源制約</text>
+    <text x="384" y="287" font-size="16">gₜ</text>
+
+    <text x="634" y="206" font-size="21" font-weight="700">企業</text>
+    <text x="634" y="237" font-size="16">MCₜ</text>
+    <text x="634" y="262" font-size="16">価格設定</text>
+    <text x="634" y="287" font-size="16">NKPC</text>
+
+    <text x="884" y="206" font-size="21" font-weight="700">金融政策</text>
+    <text x="884" y="237" font-size="16">Taylor rule</text>
+    <text x="884" y="262" font-size="16">rₜᴺ</text>
+    <text x="884" y="287" font-size="16">政策ショック</text>
+
+    <text x="408" y="438" font-size="22" font-weight="700">RANKモデル</text>
+    <text x="408" y="470" font-size="17">α と Gᵧ を含む一般形</text>
+    <text x="408" y="496" font-size="17">yₜᶠ, rₜᶠ, xₜ を定義</text>
+
+    <text x="144" y="438" font-size="21" font-weight="700">自然水準</text>
+    <text x="144" y="470" font-size="16">柔軟価格配分</text>
+    <text x="144" y="496" font-size="16">aₜ と gₜ</text>
+
+    <text x="824" y="438" font-size="21" font-weight="700">3本のNK方程式</text>
+    <text x="824" y="470" font-size="16">IS</text>
+    <text x="824" y="496" font-size="16">NKPC と Taylor rule</text>
+  </g>
+</svg>
