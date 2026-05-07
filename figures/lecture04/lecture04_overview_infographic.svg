@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第4回講義の全体像</title>
+  <desc id="desc">資本なしRBCモデルで、家計、企業、市場均衡、技術ショック、柔軟価格配分の関係を示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第4回の地図：資本なしRBCモデル</text>
+    <text x="80" y="119" font-size="19" fill="#566273">家計と企業の静学的条件が、柔軟価格の実物配分を決める</text>
+  </g>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 310 248 L 418 248"/>
+    <path d="M 810 248 L 702 248"/>
+    <path d="M 560 318 L 560 392"/>
+    <path d="M 562 188 C 640 138 741 135 812 188"/>
+    <path d="M 456 506 C 360 486 276 430 218 338"/>
+    <path d="M 664 506 C 760 486 844 430 902 338"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="90" y="170" width="220" height="156" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="450" y="160" width="220" height="168" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="810" y="170" width="220" height="156" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="400" y="408" width="320" height="132" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="118" y="207" font-size="22" font-weight="700">家計</text>
+    <text x="118" y="238" font-size="17">消費 Cₜ と労働 Nₜ</text>
+    <text x="118" y="264" font-size="17">MRSₜ = Wₜ</text>
+    <text x="118" y="290" font-size="17">MRIS = Q は資産価格へ</text>
+
+    <text x="478" y="198" font-size="22" font-weight="700">市場均衡</text>
+    <text x="478" y="229" font-size="17">Yₜ = Cₜ</text>
+    <text x="478" y="255" font-size="17">Bₜ = 0, Θₜ = 1</text>
+    <text x="478" y="281" font-size="17" font-weight="700">MRSₜ = Wₜ = MPNₜ</text>
+
+    <text x="838" y="207" font-size="22" font-weight="700">企業</text>
+    <text x="838" y="238" font-size="17">Yₜ = AₜF(Nₜ)</text>
+    <text x="838" y="264" font-size="17">労働需要</text>
+    <text x="838" y="290" font-size="17">Wₜ = MPNₜ</text>
+
+    <text x="428" y="448" font-size="22" font-weight="700">技術ショックと解</text>
+    <text x="428" y="480" font-size="17">aₜ が N,Y,C,W を同時に動かす</text>
+    <text x="428" y="506" font-size="17">yₜ = ζₐ aₜ</text>
+    <text x="428" y="532" font-size="17">自然利子率への接続</text>
+  </g>
+</svg>

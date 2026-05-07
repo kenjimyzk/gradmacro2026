@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">ショック別のNK版AD-AS表現</title>
+  <desc id="desc">金融緩和ショック、技術進歩ショック、政府支出ショックがNK-ADをどちらにシフトさせ、需給ギャップとインフレ率をどう動かすかを比較する。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6fbe"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="31" font-weight="700" fill="#1f2937">ショック別の NK版 AD-AS 表現</text>
+    <text x="80" y="119" font-size="18" fill="#566273">横軸は需給ギャップ x_t、縦軸はインフレ率 pi_t。正のショックに対するシフト方向を示す</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <rect x="78" y="156" width="300" height="396" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+    <rect x="410" y="156" width="300" height="396" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+    <rect x="742" y="156" width="300" height="396" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+
+    <text x="104" y="192" font-size="22" font-weight="700" fill="#1f2937">金融緩和ショック</text>
+    <text x="104" y="219" font-size="16" fill="#566273">m_t &gt; 0</text>
+    <text x="436" y="192" font-size="22" font-weight="700" fill="#1f2937">技術進歩ショック</text>
+    <text x="436" y="219" font-size="16" fill="#566273">a_t &gt; 0</text>
+    <text x="768" y="192" font-size="22" font-weight="700" fill="#1f2937">政府支出ショック</text>
+    <text x="768" y="219" font-size="16" fill="#566273">g_t &gt; 0</text>
+  </g>
+
+  <g stroke="#2b2f36" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="112" y1="452" x2="350" y2="452"/>
+    <line x1="112" y1="452" x2="112" y2="246"/>
+    <line x1="444" y1="452" x2="682" y2="452"/>
+    <line x1="444" y1="452" x2="444" y2="246"/>
+    <line x1="776" y1="452" x2="1014" y2="452"/>
+    <line x1="776" y1="452" x2="776" y2="246"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a" font-size="15">
+    <text x="354" y="459">x_t</text>
+    <text x="92" y="242">pi_t</text>
+    <text x="686" y="459">x_t</text>
+    <text x="424" y="242">pi_t</text>
+    <text x="1018" y="459">x_t</text>
+    <text x="756" y="242">pi_t</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M 134 424 C 184 374 246 314 328 252" stroke="#d45d48" stroke-width="4.2"/>
+    <path d="M 138 264 C 198 306 258 348 326 408" stroke="#9aa4b2" stroke-width="3.2" stroke-dasharray="8 7"/>
+    <path d="M 170 250 C 230 292 290 334 358 394" stroke="#2f6fbe" stroke-width="4.2"/>
+    <path d="M 224 338 L 256 314" stroke="#2f6fbe" stroke-width="2.4" marker-end="url(#arrow-blue)"/>
+
+    <path d="M 466 424 C 516 374 578 314 660 252" stroke="#d45d48" stroke-width="4.2"/>
+    <path d="M 470 264 C 530 306 590 348 658 408" stroke="#9aa4b2" stroke-width="3.2" stroke-dasharray="8 7"/>
+    <path d="M 438 300 C 498 342 558 384 626 444" stroke="#2f6fbe" stroke-width="4.2"/>
+    <path d="M 556 342 L 524 366" stroke="#2f6fbe" stroke-width="2.4" marker-end="url(#arrow-blue)"/>
+
+    <path d="M 798 424 C 848 374 910 314 992 252" stroke="#d45d48" stroke-width="4.2"/>
+    <path d="M 802 264 C 862 306 922 348 990 408" stroke="#9aa4b2" stroke-width="3.2" stroke-dasharray="8 7"/>
+    <path d="M 834 250 C 894 292 954 334 1022 394" stroke="#2f6fbe" stroke-width="4.2"/>
+    <path d="M 888 338 L 920 314" stroke="#2f6fbe" stroke-width="2.4" marker-end="url(#arrow-blue)"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="234" cy="330" r="7" fill="#9aa4b2"/>
+    <circle cx="260" cy="306" r="8" fill="#2f6fbe"/>
+    <circle cx="566" cy="330" r="7" fill="#9aa4b2"/>
+    <circle cx="532" cy="362" r="8" fill="#2f6fbe"/>
+    <circle cx="898" cy="330" r="7" fill="#9aa4b2"/>
+    <circle cx="924" cy="306" r="8" fill="#2f6fbe"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="276" y="272" font-size="15" font-weight="700" fill="#d45d48">NK-AS</text>
+    <text x="276" y="420" font-size="15" font-weight="700" fill="#2f6fbe">NK-AD</text>
+    <text x="608" y="272" font-size="15" font-weight="700" fill="#d45d48">NK-AS</text>
+    <text x="574" y="436" font-size="15" font-weight="700" fill="#2f6fbe">NK-AD</text>
+    <text x="940" y="272" font-size="15" font-weight="700" fill="#d45d48">NK-AS</text>
+    <text x="940" y="420" font-size="15" font-weight="700" fill="#2f6fbe">NK-AD</text>
+
+    <text x="112" y="500" font-size="18" font-weight="700" fill="#2f6fbe">x_t 上昇、pi_t 上昇</text>
+    <text x="112" y="526" font-size="15" fill="#566273">実質利子率が低下し、需要が拡大</text>
+    <text x="444" y="500" font-size="18" font-weight="700" fill="#2f6fbe">x_t 低下、pi_t 低下</text>
+    <text x="444" y="526" font-size="15" fill="#566273">自然産出量は上昇する点に注意</text>
+    <text x="776" y="500" font-size="18" font-weight="700" fill="#2f6fbe">x_t 上昇、pi_t 上昇</text>
+    <text x="776" y="526" font-size="15" fill="#566273">政府需要が総需要を押し上げる</text>
+  </g>
+</svg>

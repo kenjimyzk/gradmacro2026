@@ -31,6 +31,8 @@ lang: ja
 3. 政府支出ショックを含む資本なし RBC モデルを対数線形化する。
 4. 労働所得税だけを用いてラッファーカーブを導出する。
 
+![第5回講義の全体像：政府予算制約、資源制約、政府支出ショック、税制の役割を整理する。](figures/lecture05/lecture05_overview_infographic.svg){#fig-lecture05-overview width=95%}
+
 # 表記
 
 大文字は水準、小文字は定常状態からの対数乖離を表します。ただし政府支出ショックは
@@ -74,10 +76,11 @@ $$
 | $\rho_a,\rho_g$ | 技術ショック、政府支出ショックの持続性 |
 | $\tau_N,\tau^C$ | 労働所得税率、消費税率 |
 
-本文中で定義して使う派生パラメータは次の通りです。
+本文中で使用する派生パラメータおよび変数は次の通りです。
 
 | 記号 | 定義 | 意味 |
 |---|---|---|
+| $g_t$ | $(G_t-G)/Y$ | 定常状態の産出で測った政府支出ショック |
 | $Q_{t,t+i}$ | $t$ 期から $t+i$ 期までの確率的割引ファクター | 将来のプライマリーバランスを現在価値に直す割引係数 |
 | $\zeta_a$ | $(1-G_Y)(1+\varphi)/\{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)\}$ | 柔軟価格産出の技術ショックへの反応係数 |
 | $\zeta_g$ | $\gamma(1-\alpha)/\{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)\}$ | 柔軟価格産出の政府支出ショックへの反応係数 |
@@ -517,7 +520,9 @@ $TX(\tau_N)/\mathcal{A}=\tau_N(1-\tau_N)^\vartheta$
 #| fig-cap: "労働所得税だけのラッファーカーブ"
 #| fig-width: 6.5
 #| fig-height: 4
-#| echo: true
+#| echo: !expr knitr::is_html_output()
+#| code-fold: true
+#| code-summary: "Rコードを表示"
 
 alpha <- 0.4
 gamma <- 1

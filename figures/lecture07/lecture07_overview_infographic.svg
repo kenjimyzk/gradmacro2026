@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第7回講義の全体像</title>
+  <desc id="desc">価格硬直性を導入し、Rotemberg価格設定、実質限界費用、NKフィリップス曲線、IS曲線、テーラールールの関係を示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第7回の地図：価格硬直性とNK方程式</text>
+    <text x="80" y="119" font-size="19" fill="#566273">価格調整費用により、実質利子率のずれが需給ギャップとインフレを動かす</text>
+  </g>
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 308 232 L 414 232"/>
+    <path d="M 706 232 L 812 232"/>
+    <path d="M 560 316 L 560 388"/>
+    <path d="M 386 450 L 474 450"/>
+    <path d="M 646 450 L 734 450"/>
+    <path d="M 828 388 C 784 342 728 316 664 292"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="86" y="166" width="222" height="152" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="414" y="154" width="292" height="176" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="812" y="166" width="222" height="152" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="126" y="398" width="260" height="112" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="474" y="398" width="172" height="112" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="734" y="398" width="260" height="112" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="114" y="204" font-size="22" font-weight="700">第6回の土台</text>
+    <text x="114" y="235" font-size="17">独占的競争</text>
+    <text x="114" y="261" font-size="17">MC = 1 の定常状態</text>
+    <text x="114" y="287" font-size="17">価格設定企業</text>
+
+    <text x="442" y="192" font-size="22" font-weight="700">Rotemberg価格調整</text>
+    <text x="442" y="223" font-size="17">価格変更に費用</text>
+    <text x="442" y="249" font-size="17">現在と将来のMCを考慮</text>
+    <text x="442" y="275" font-size="17">πₜ = βEₜπₜ₊₁ + κxₜ</text>
+    <text x="442" y="301" font-size="17">NKフィリップス曲線</text>
+
+    <text x="840" y="204" font-size="22" font-weight="700">自然水準</text>
+    <text x="840" y="235" font-size="17">yₜᶠ, rₜᶠ</text>
+    <text x="840" y="261" font-size="17">xₜ = yₜ − yₜᶠ</text>
+    <text x="840" y="287" font-size="17">柔軟価格の基準</text>
+
+    <text x="154" y="438" font-size="22" font-weight="700">Euler方程式</text>
+    <text x="154" y="470" font-size="17">実質利子率が需要を動かす</text>
+
+    <text x="502" y="438" font-size="22" font-weight="700">IS</text>
+    <text x="502" y="470" font-size="17">xₜ と rₜ−rₜᶠ</text>
+
+    <text x="762" y="438" font-size="22" font-weight="700">Taylor rule</text>
+    <text x="762" y="470" font-size="17">名目利子率を設定</text>
+  </g>
+</svg>
