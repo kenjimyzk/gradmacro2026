@@ -87,7 +87,7 @@ $$
 | $MC_t$ | 実質限界費用 |
 | $R_t^N$ | 粗名目利子率 |
 | $\Pi_t$ | 粗インフレ率 |
-| $A_t=e^{a_t}$ | 技術水準 |
+| $A_t=\exp(a_t)$ | 技術水準 |
 | $C,N,Y,G,W,MC,R^N,\Pi$ | 対応する定常状態の水準 |
 
 第8回で使う主な基礎パラメータは次の通りです。
@@ -113,13 +113,9 @@ $$
 | $\zeta_a$ | $(\tilde{\varphi}+1)/(\tilde{\varphi}+\tilde{\gamma})$ | 自然産出量の技術ショックへの反応係数 |
 | $\zeta_g$ | $\tilde{\gamma}/(\tilde{\varphi}+\tilde{\gamma})$ | 自然産出量の政府支出ショックへの反応係数 |
 | $\kappa$ | $MC(\tilde{\gamma}+\tilde{\varphi})\psi/\eta$ | 需給ギャップに対するインフレの反応係数 |
-| $\kappa_m$ | $\kappa/(1-\beta\rho_m)$ | 金融政策ショック用のフィリップス曲線係数 |
-| $\kappa_a$ | $\kappa/(1-\beta\rho_a)$ | 技術ショック用のフィリップス曲線係数 |
-| $\kappa_g$ | $\kappa/(1-\beta\rho_g)$ | 政府支出ショック用のフィリップス曲線係数 |
+| $\kappa_i,\; i\in\{a,m,g\}$ | $\kappa/(1-\beta\rho_i)$ | ショック $i$ 用のフィリップス曲線係数 |
 | $\Omega$ | $1/\{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)\}$ | 金融政策ショックが需給ギャップを動かす係数 |
-| $\Omega_m$ | $\tilde{\gamma}(1-\rho_m)\Omega$ | 金融政策ショックが実質利子率を下げる係数 |
-| $\Omega_a$ | $\tilde{\gamma}(1-\rho_a)/\{\kappa_a(\phi-\rho_a)+\tilde{\gamma}(1-\rho_a)\}$ | 技術ショックが需給ギャップを動かす係数 |
-| $\Omega_g$ | $\tilde{\gamma}(1-\rho_g)/\{\kappa_g(\phi-\rho_g)+\tilde{\gamma}(1-\rho_g)\}$ | 政府支出ショックが需給ギャップを動かす係数 |
+| $\Omega_i,\; i\in\{a,m,g\}$ | $\tilde{\gamma}(1-\rho_i)/\{\kappa_i(\phi-\rho_i)+\tilde{\gamma}(1-\rho_i)\}$ | ショック $i$ 用の係数。金融政策ショックでは $\Omega_m=\tilde{\gamma}(1-\rho_m)\Omega$ |
 
 ## 非線形条件
 
@@ -130,7 +126,7 @@ U(C_t,N_t)
 \frac{C_t^{1-\gamma}}{1-\gamma}
 -\frac{N_t^{1+\varphi}}{1+\varphi},
 \qquad
-Y_t=e^{a_t}N_t^{1-\alpha}
+Y_t=\exp(a_t)N_t^{1-\alpha}
 $$
 です。補助金で定常状態のマークアップ歪みを取り除くと、主要な均衡条件は
 $$
@@ -141,21 +137,56 @@ $$
 \right],\\
 W_t&=C_t^\gamma N_t^\varphi,\\
 W_t&=(1-\alpha)MC_t\frac{Y_t}{N_t},\\
-Y_t&=e^{a_t}N_t^{1-\alpha},\\
-C_t+G_t+\frac{\eta}{2}(\Pi_t-1)^2Y_t&=Y_t,\\
-R_t^N&=\frac{1}{\beta}e^{-m_t}\Pi_t^\phi
+Y_t&=\exp(a_t)N_t^{1-\alpha},\\
+Y_t&=C_t+G_t+\frac{\eta}{2}(\Pi_t-1)^2Y_t,\\
+R_t^N&=\frac{1}{\beta}\exp(-m_t)\Pi_t^\phi
 \end{aligned}
 $$
-です。価格設定条件は、一次近似後に
+です。価格調整費用を最初から
+$$
+f_P(\Pi_t)=\frac{\eta}{2}(\Pi_t-1)^2,
+\qquad
+f_P'(\Pi_t)=\eta(\Pi_t-1)
+$$
+と置くと、価格設定条件は非線形のまま
+$$
+\eta\Pi_t(\Pi_t-1)
+=
+\psi(MC_t-MC)
++\mathbb{E}_t\left[
+\beta\left(\frac{C_{t+1}}{C_t}\right)^{-\gamma}
+\frac{Y_{t+1}}{Y_t}
+\eta\Pi_{t+1}(\Pi_{t+1}-1)
+\right]
+$$
+です。ここで $MC$ は定常状態の実質限界費用です。補助金を明示すれば $MC=(1+\sigma)(1-1/\psi)$ であり、定常状態のマークアップ歪みを取り除く設定では $MC=1$ と読めます。この式を一次近似すると
 $$
 \pi_t=\beta\mathbb{E}_t\pi_{t+1}
-+\frac{\psi MC}{\eta}mc_t
++\frac{MC\psi}{\eta}mc_t
 $$
-として使います。第7回と同じく、$MC=1$ と正規化して読めます。
+として使います。
 
 ## 定常状態
 
-ゼロインフレ定常状態では $\Pi=1$、価格調整費用はゼロです。Euler 方程式とテーラールールから
+第5回の政府支出入り資源制約と第6回の独占的競争モデルを組み合わせると、柔軟価格の定常状態は解析的に求められます。価格が柔軟なら価格調整費用は発生せず、実質限界費用は定常値 $MC$ に固定されます。水準で書くと、柔軟価格配分は静学体系
+$$
+\begin{aligned}
+W_t&=C_t^\gamma N_t^\varphi,\\
+W_t&=(1-\alpha)MC\frac{Y_t}{N_t},\\
+Y_t&=\exp(a_t)N_t^{1-\alpha},\\
+Y_t&=C_t+G_t
+\end{aligned}
+$$
+で決まります。これらをまとめると、
+$$
+\left\{\exp(a_t)N_t^{1-\alpha}-G_t\right\}^{\gamma}
+N_t^{\varphi+\alpha}
+=
+(1-\alpha)MC\exp(a_t)
+$$
+です。
+
+定常状態では、ゼロインフレ $\Pi=1$ を置きます。価格調整費用はゼロで、Euler 方程式とテーラールールから
 $$
 R=R^N=\frac{1}{\beta}
 $$
@@ -163,55 +194,103 @@ $$
 $$
 C=(1-G_Y)Y
 $$
-です。第7回では $\alpha=0$、$G_Y=0$ と置いたため、$N=Y=C=W=1$ と正規化できました。第8回では $\alpha>0$ と $G_Y>0$ を許すため、定常状態の水準は一般には1になりません。
+です。生産関数は $Y=N^{1-\alpha}$ であり、労働供給と労働需要は
+$$
+W=C^\gamma N^\varphi,
+\qquad
+W=(1-\alpha)MC\frac{Y}{N}
+$$
+です。したがって
+$$
+(1-G_Y)^\gamma N^{\gamma(1-\alpha)+\varphi}
+=
+(1-\alpha)MC N^{-\alpha}
+$$
+となり、定常状態の労働投入は
+$$
+N
+=
+\left[
+(1-\alpha)MC(1-G_Y)^{-\gamma}
+\right]^{
+\frac{1}{\varphi+\alpha+\gamma(1-\alpha)}
+}
+$$
+です。したがって
+$$
+Y=N^{1-\alpha},
+\qquad
+C=(1-G_Y)Y,
+\qquad
+G=G_YY,
+\qquad
+W=(1-\alpha)MCN^{-\alpha}
+$$
+を得ます。補助金で $MC=1$ と正規化すれば、この式に $MC=1$ を代入します。第7回では $\alpha=0$、$G_Y=0$ と置いたため、$N=Y=C=W=1$ と正規化できました。第8回では $\alpha>0$ と $G_Y>0$ を許すため、定常状態の水準は一般には1になりません。
 
 ## 対数線形化
 
-対数線形化された主要条件は次の通りです。
+以下では、このゼロインフレ定常状態の周りで対数線形化します。すなわち $\Pi=1$、$R=R^N=1/\beta$、$MC=1$ を基準にし、$C,Y,G,N,W$ は上で述べた定常状態の水準の周りで測ります。小文字の $c_t,y_t,n_t,w_t,mc_t$ は定常状態からの対数乖離ですが、政府支出だけは
 $$
-\begin{aligned}
-r_t&=r_t^N-\mathbb{E}_t\pi_{t+1},\\
-r_t&=\tilde{\gamma}\mathbb{E}_t(\Delta y_{t+1}-\Delta g_{t+1}),\\
-\pi_t&=\beta\mathbb{E}_t\pi_{t+1}+\frac{\psi MC}{\eta}mc_t,\\
-r_t^N&=\phi\pi_t-m_t.
-\end{aligned}
+g_t=\frac{G_t-G}{Y}
 $$
-ここで
+と定義している点に注意してください。
+
+対数線形化された条件を網羅的に書くと、次の体系になります。
+
+| 名称 | 式 |
+|---|---|
+| Fisher 方程式 | $r_t=r_t^N-\mathbb{E}_t\pi_{t+1}$ |
+| Euler 方程式 | $r_t=\gamma\mathbb{E}_t\Delta c_{t+1}$ |
+| 労働供給 | $w_t=\gamma c_t+\varphi n_t$ |
+| 労働需要 | $w_t=mc_t+y_t-n_t$ |
+| 生産関数 | $y_t=a_t+(1-\alpha)n_t$ |
+| 資源制約 | $y_t=(1-G_Y)c_t+g_t$ |
+| NKフィリップス曲線 | $\pi_t=\beta\mathbb{E}_t\pi_{t+1}+(MC\psi/\eta)mc_t$ |
+| テーラールール | $r_t^N=\phi\pi_t-m_t$ |
+| 技術ショック | $a_t=\rho_a a_{t-1}+e_t^a$ |
+| 政府支出ショック | $g_t=\rho_g g_{t-1}+e_t^g$ |
+| 金融政策ショック | $m_t=\rho_m m_{t-1}+e_t^m$ |
+
+この表では、未知の時系列は
+$$
+\{r_t,r_t^N,\pi_t,c_t,w_t,n_t,y_t,mc_t,a_t,g_t,m_t\}
+$$
+の11個です。式も11本あるため、ショックのイノベーション $\{e_t^a,e_t^g,e_t^m\}$ を外生的に与えれば、変数の数と式の数が一致し、対数線形化された体系は閉じています。
+
+この体系を後で使いやすい形に直しておきます。資源制約を Euler 方程式に代入すると、
+$$
+r_t
+=
+\tilde{\gamma}\mathbb{E}_t(\Delta y_{t+1}-\Delta g_{t+1})
+$$
+です。ただし
 $$
 \tilde{\gamma}\equiv\frac{\gamma}{1-G_Y},
 \qquad
 \tilde{\varphi}\equiv\frac{\varphi+\alpha}{1-\alpha}.
 $$
-第7回の $\gamma,\varphi$ は、第8回ではそれぞれ $\tilde{\gamma},\tilde{\varphi}$ に置き換わると考えればよいです。
-
-この置き換えは、資源制約と生産関数を線形化すると出てきます。第5回と同じく
+また、
 $$
-c_t=\frac{y_t-g_t}{1-G_Y}
+\begin{aligned}
+c_t&=\frac{y_t-g_t}{1-G_Y},\\
+n_t&=\frac{y_t-a_t}{1-\alpha}
+\end{aligned}
 $$
-であり、生産関数から
+を労働供給と労働需要に代入すると、
 $$
-n_t=\frac{y_t-a_t}{1-\alpha}
-$$
-です。労働供給式 $w_t=\gamma c_t+\varphi n_t$ と企業の労働需要式
-$$
-w_t=mc_t+a_t-\alpha n_t
-$$
-を合わせると、限界費用は
-$$
+\begin{aligned}
 mc_t
-=
+&=
 \tilde{\gamma}(y_t-g_t)
 +\tilde{\varphi}y_t
--(\tilde{\varphi}+1)a_t
-$$
-となります。したがって
-$$
-mc_t
-=
+-(\tilde{\varphi}+1)a_t\\
+&=
 (\tilde{\gamma}+\tilde{\varphi})
 \left(y_t-\zeta_a a_t-\zeta_g g_t\right)
+\end{aligned}
 $$
-と書けます。ただし
+です。ここで
 $$
 \zeta_a=\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}},
 \qquad
@@ -220,11 +299,29 @@ $$
 
 # 自然産出量・自然利子率・3本のNK方程式
 
-価格が柔軟なら $mc_t=0$ です。したがって自然産出量は
+前節の柔軟価格配分を対数線形化すると、自然産出量は閉形式で求まります。柔軟価格では実質限界費用の乖離がゼロなので、
+$$
+0
+=
+\tilde{\gamma}(y_t^f-g_t)
++\tilde{\varphi}y_t^f
+-(\tilde{\varphi}+1)a_t
+$$
+です。したがって
+$$
+y_t^f
+=
+\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}}a_t
++
+\frac{\tilde{\gamma}}{\tilde{\varphi}+\tilde{\gamma}}g_t
+$$
+を得ます。
+
+上で定義した係数を使えば、自然産出量は
 $$
 y_t^f=\zeta_a a_t+\zeta_g g_t
 $$
-です。自然利子率は、価格が柔軟なときにこの自然産出量を実現する実質利子率です。資源制約と Euler 方程式から
+です。自然利子率は、この自然産出量を実現する柔軟価格下の実質利子率です。資源制約と Euler 方程式から
 $$
 r_t^f
 =
@@ -237,7 +334,7 @@ $$
 \zeta_a\Delta a_{t+1}
 +(\zeta_g-1)\Delta g_{t+1}
 $$
-です。ショック過程を
+です。ショックを
 $$
 a_t=\rho_a a_{t-1}+e_t^a,
 \qquad
@@ -280,7 +377,7 @@ $$
 =
 MC(\tilde{\gamma}+\tilde{\varphi})\frac{\psi}{\eta}.
 $$
-第1式は動学的 IS 曲線、第2式はニューケインジアン・フィリップス曲線、第3式はテーラールールを実質利子率で書いたものです。第8回の分析は、この3本を使って各ショックが $x_t,\pi_t,r_t$ をどう動かすかを見ることに集中します。
+第1式は動学的 IS 曲線、第2式は NKフィリップス曲線、第3式はテーラールールを実質利子率で書いたものです。第8回の分析は、この3本を使って各ショックが $x_t,\pi_t,r_t$ をどう動かすかを見ることに集中します。
 
 
 
@@ -290,7 +387,67 @@ $$
 
 ### 金融政策ショックのみ
 
-金融政策ショックは、第7回で詳しく解いた $\alpha=0$、政府支出なしの結果と同じ構造です。第8回では、第7回の $\gamma,\varphi$ をそれぞれ $\tilde{\gamma},\tilde{\varphi}$ に置き換えて読めばよいので、ここでは比較に必要な結果だけを置きます。$a_t=g_t=0$ のとき、$x_t=y_t$ かつ $r_t^f=0$ です。ショック過程を $m_{t+1}=\rho_m m_t+e_{t+1}^m$ とすると、
+まず、金融政策ショックだけがある場合を解きます。$a_t=g_t=0$ のとき、自然産出量と自然利子率は
+$$
+y_t^f=0,
+\qquad
+r_t^f=0
+$$
+なので、需給ギャップはそのまま産出です。
+$$
+x_t=y_t.
+$$
+ショックを
+$$
+m_{t+1}=\rho_m m_t+e_{t+1}^m
+$$
+とし、解が $m_t$ に比例すると予想します。NKフィリップス曲線から
+$$
+\pi_t
+=
+\beta\rho_m\pi_t+\kappa x_t
+$$
+なので、
+$$
+\pi_t=\kappa_m x_t,
+\qquad
+\kappa_m\equiv\frac{\kappa}{1-\beta\rho_m}
+$$
+です。
+
+IS 曲線は
+$$
+x_t
+=
+\mathbb{E}_t x_{t+1}
+-\frac{1}{\tilde{\gamma}}r_t
+$$
+です。$x_{t+1}$ も $m_{t+1}$ に比例するので、$\mathbb{E}_t x_{t+1}=\rho_m x_t$ と書けます。したがって
+$$
+r_t
+=
+-\tilde{\gamma}(1-\rho_m)x_t
+$$
+です。一方、テーラールールと Fisher 方程式から
+$$
+r_t
+=
+r_t^N-\mathbb{E}_t\pi_{t+1}
+=
+\phi\pi_t-m_t-\rho_m\pi_t
+=
+(\phi-\rho_m)\pi_t-m_t
+$$
+です。$\pi_t=\kappa_m x_t$ を代入し、IS 曲線から得た実質利子率と等置すると
+$$
+\left\{
+\kappa_m(\phi-\rho_m)
++\tilde{\gamma}(1-\rho_m)
+\right\}x_t
+=
+m_t
+$$
+を得ます。したがって
 $$
 x_t = \Omega m_t,
 \qquad
@@ -311,7 +468,7 @@ $$\begin{aligned}
 \end{aligned}$$
 です。金融緩和ショックは需給ギャップとインフレを押し上げ、実質利子率を低下させます。
 
-名目利子率は、第7回と同じ理由で符号が一意には決まりません。
+名目利子率の符号は一意には決まりません。
 $$\begin{aligned}
 r_t^N &= r_t + \mathbb{E}_t \pi_{t+1}=r_t+\rho_m \pi_t\\
 &=\frac{\rho_{m}\kappa_{m}-\tilde{\gamma}(1-\rho_{m})}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}m_{t}
@@ -320,13 +477,59 @@ r_t^N &= r_t + \mathbb{E}_t \pi_{t+1}=r_t+\rho_m \pi_t\\
 
 ### 技術進歩ショックのみ
 
-技術進歩ショックも、第7回で扱った構造を一般化したものです。第7回では正の技術ショックが自然産出量を押し上げ、自然利子率を下げることを見ました。第8回では、その係数が $\zeta_a$ と $\tilde{\gamma}$ に置き換わります。$m_t=g_t=0$ のとき、
+次に、技術進歩ショックだけがある場合を解きます。$m_t=g_t=0$ のとき、
 $$
 y_t^f=\zeta_a a_t,
 \qquad
 r_t^f=-\tilde{\gamma}(1-\rho_a)\zeta_a a_t
 $$
-です。比較に必要な均衡反応は
+です。正の技術進歩ショックは自然産出量を押し上げます。一方、一時的なショックで $0\leq\rho_a<1$ なら、自然利子率は低下します。
+
+解が $a_t$ に比例すると予想します。NKフィリップス曲線から
+$$
+\pi_t
+=
+\beta\rho_a\pi_t+\kappa x_t
+$$
+なので、
+$$
+\pi_t=\kappa_a x_t,
+\qquad
+\kappa_a\equiv\frac{\kappa}{1-\beta\rho_a}
+$$
+です。IS 曲線は
+$$
+x_t
+=
+\mathbb{E}_t x_{t+1}
+-\frac{1}{\tilde{\gamma}}(r_t-r_t^f)
+$$
+です。$x_{t+1}$ も $a_{t+1}$ に比例するので、$\mathbb{E}_t x_{t+1}=\rho_a x_t$ と書けます。したがって
+$$
+r_t
+=
+r_t^f-\tilde{\gamma}(1-\rho_a)x_t
+$$
+です。
+
+金融政策ショックがないので、テーラールールと Fisher 方程式から
+$$
+r_t
+=
+\phi\pi_t-\mathbb{E}_t\pi_{t+1}
+=
+(\phi-\rho_a)\pi_t
+$$
+です。$\pi_t=\kappa_a x_t$ を代入し、IS 曲線と等置すると
+$$
+\left\{
+\kappa_a(\phi-\rho_a)
++\tilde{\gamma}(1-\rho_a)
+\right\}x_t
+=
+-\tilde{\gamma}(1-\rho_a)\zeta_a a_t
+$$
+を得ます。したがって
 $$
 x_t = -\zeta_a \Omega_a a_t,
 \qquad
