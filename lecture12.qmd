@@ -1,5 +1,5 @@
 ---
-title: "第12回：New Keynesian Cross と TANK"
+title: "第12回：New Keynesian CrossとTANK"
 subtitle: "配当移転ルール、所得フィードバック、総需要の増幅"
 author: "宮﨑憲治"
 date: "2026-05-10"

@@ -1,5 +1,5 @@
 ---
-title: "第11回：価格硬直性をもつTANKモデル"
+title: "第11回：TANKモデルと価格硬直性"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
 date: "2026-05-10"
