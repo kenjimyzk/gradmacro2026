@@ -483,6 +483,20 @@ $$
 
 次回は、制約つき最適化を正面から扱います。有限期間のラグランジュ問題から出発し、無限期間、ダイナミック・プログラミング、不確実性、資産価格条件へ進みます。
 
+# 参考文献
+
+**必読**
+
+- Hamilton, James D. (1994) *Time Series Analysis*. Princeton University Press. AR過程、定常性、インパルス応答の標準的な参照先。
+- Ljungqvist, Lars, and Thomas J. Sargent (2018) *Recursive Macroeconomic Theory* (4th ed.). MIT Press. 動学モデルの状態変数、再帰表現、線形化の背景を確認するため。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 対数線形化をニューケインジアン・モデルで使う入口。
+
+**発展**
+
+- Blanchard, Olivier J., and Charles M. Kahn (1980) "The Solution of Linear Difference Models under Rational Expectations." *Econometrica*, 48(5), 1305-1311.
+- Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775.
+- Judd, Kenneth L. (1998) *Numerical Methods in Economics*. MIT Press. 近似解法と数値計算を深く学ぶため。
+
 # 演習問題
 
 **問1：AR(1)のインパルス応答**

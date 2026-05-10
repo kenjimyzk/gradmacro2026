@@ -944,6 +944,20 @@ $$
 
 重要なのは、これらの式が別々の公式ではないという点です。すべては「今日1単位の資源を別の用途に回す限界費用」と「それが将来生む限界便益」を等しくする条件です。
 
+# 参考文献
+
+**必読**
+
+- Stokey, Nancy L., Robert E. Lucas, Jr., and Edward C. Prescott (1989) *Recursive Methods in Economic Dynamics*. Harvard University Press. 動的計画法とオイラー方程式の標準的教科書。
+- Ljungqvist, Lars, and Thomas J. Sargent (2018) *Recursive Macroeconomic Theory* (4th ed.). MIT Press. 逐次問題、再帰問題、不確実性の扱いを確認するため。
+- Cochrane, John H. (2005) *Asset Pricing* (rev. ed.). Princeton University Press. 確率的割引ファクターと資産価格条件の体系的な参照先。
+
+**発展**
+
+- Lucas, Robert E., Jr. (1978) "Asset Prices in an Exchange Economy." *Econometrica*, 46(6), 1429-1445.
+- Hansen, Lars Peter, and Kenneth J. Singleton (1982) "Generalized Instrumental Variables Estimation of Nonlinear Rational Expectations Models." *Econometrica*, 50(5), 1269-1286.
+- Judd, Kenneth L. (1998) *Numerical Methods in Economics*. MIT Press. 動的最適化を数値的に解く方法を学ぶため。
+
 # 演習問題
 
 ## 問1：2期間問題

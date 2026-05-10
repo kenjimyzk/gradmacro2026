@@ -1005,6 +1005,21 @@ $$
 
 第12回の NKクロスは、この問いをもっとも単純な TANKモデルで表したものです。HANK、資本、財政政策、非線形制約、実証分析は、すべてこの問いをより現実的な環境で考えるための発展です。
 
+# 参考文献
+
+**必読**
+
+- Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. https://doi.org/10.1016/j.jmoneco.2019.03.003
+- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. https://doi.org/10.1016/j.jet.2007.07.008
+- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. https://doi.org/10.1162/JEEA.2007.5.1.227
+
+**発展**
+
+- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. https://doi.org/10.1257/aer.20160042
+- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. https://doi.org/10.1257/aer.20150063
+- Auclert, Adrien (2019) "Monetary Policy and Redistribution." *American Economic Review*, 109(6), 2333-2367.
+- Werning, Iván (2015) "Incomplete Markets and Aggregate Demand." NBER Working Paper No. 21448.
+
 # 演習問題
 
 ## 基本問題
