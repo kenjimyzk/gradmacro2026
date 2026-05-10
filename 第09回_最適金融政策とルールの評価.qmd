@@ -854,6 +854,21 @@ if (font_family == "jp_sans") {
 
 次回は、賃金硬直性を導入したときに、目的関数とターゲット条件がどのように変わるかを扱います。賃金硬直性が入ると、ロス関数には価格インフレ率だけでなく賃金インフレ率も入り、最適政策のターゲット条件も変わります。ただし、政策ルールを評価するときの軸、すなわち安定化トレードオフ、期待管理、時間的非整合性、履歴依存性は第9回と同じです。
 
+# 参考文献
+
+**必読**
+
+- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 最適金融政策、ターゲット条件、タイムレス・パースペクティブの基礎文献。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKモデルで政策ルールと裁量・コミットメントを学ぶため。
+- Walsh, Carl E. (2017) *Monetary Theory and Policy* (4th ed.). MIT Press. 金融政策ルールと時間的非整合性の標準的教科書。
+
+**発展**
+
+- Kydland, Finn E., and Edward C. Prescott (1977) "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy*, 85(3), 473-491. https://doi.org/10.1086/260580
+- Barro, Robert J., and David B. Gordon (1983) "Rules, Discretion and Reputation in a Model of Monetary Policy." *Journal of Monetary Economics*, 12(1), 101-121. https://doi.org/10.1016/0304-3932(83)90051-X
+- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. https://doi.org/10.1257/jel.37.4.1661
+- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. https://doi.org/10.1016/0167-2231(93)90009-L
+
 # 演習問題
 
 1. **概念確認**：神々の配剤とは何か。コストプッシュショックがない場合に、なぜ $\pi_t=x_t=0$ を同時に実現できるのかを説明しなさい。

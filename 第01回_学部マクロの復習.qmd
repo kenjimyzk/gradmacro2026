@@ -519,17 +519,17 @@ $$
 
 # 参考文献
 
-## 教科書
+**必読**
 
-- Blanchard, O. and D. R. Johnson (2017) *Macroeconomics* (7th ed.), Pearson
-- Mankiw, N. G. (2019) *Macroeconomics* (10th ed.), Worth Publishers
-- 齋藤誠・岩本康志他 (2016) 『マクロ経済学（新版）』有斐閣
+- Blanchard, Olivier, and David R. Johnson (2017) *Macroeconomics* (7th ed.). Pearson. 学部マクロの全体像を復習するための標準的教科書。
+- Mankiw, N. Gregory (2019) *Macroeconomics* (10th ed.). Worth. ケインジアン・クロス、IS-LM、AD-ASを確認するための入口。
+- 齊藤誠・岩本康志・太田聰一・柴田章久 (2016) 『マクロ経済学（新版）』有斐閣。日本語で標準的な学部マクロを確認するため。
 
-## 重要論文
+**発展**
 
-- Phillips, A. W. (1958) "The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957," *Economica*
-- Friedman, M. (1968) "The Role of Monetary Policy," *American Economic Review*
-- Lucas, R. E., Jr. (1976) "Econometric Policy Evaluation: A Critique," *Carnegie-Rochester Conference Series on Public Policy*
+- Phillips, A. W. (1958) "The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957." *Economica*, 25(100), 283-299. https://doi.org/10.1111/j.1468-0335.1958.tb00003.x
+- Friedman, Milton (1968) "The Role of Monetary Policy." *American Economic Review*, 58(1), 1-17.
+- Lucas, Robert E., Jr. (1976) "Econometric Policy Evaluation: A Critique." *Carnegie-Rochester Conference Series on Public Policy*, 1, 19-46. https://doi.org/10.1016/S0167-2231(76)80003-6
 
 ---
 

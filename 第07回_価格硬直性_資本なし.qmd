@@ -608,6 +608,20 @@ $$
 
 ショックが実際に $x_t,\pi_t,r_t,y_t,c_t,n_t,w_t$ をどう動かすかは、第8回で扱います。第8回では、同じ3本の構造を保ったまま、$\alpha>0$ と政府支出を導入し、金融政策ショック、技術ショック、政府支出ショックの影響を比較します。
 
+# 参考文献
+
+**必読**
+
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKフィリップス曲線の導出を確認するため。
+- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格硬直性と金融政策の標準的な体系。
+- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. https://doi.org/10.1257/jel.37.4.1661
+
+**発展**
+
+- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. https://doi.org/10.1016/0304-3932(83)90060-0
+- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. https://doi.org/10.1086/261117
+- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. https://doi.org/10.1016/0167-2231(93)90009-L
+
 # 演習問題
 
 **問1：概念確認**

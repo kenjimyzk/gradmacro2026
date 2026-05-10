@@ -566,6 +566,21 @@ par(op)
 
 第6回で使う政府政策は、この回の整理と直接つながります。独占的競争の歪みを取り除くため、中間財企業に売上比例補助金を与え、その財源を一括税で調達します。一括税は限界条件に入らないため、財源調達そのものは配分を歪めません。一方、売上比例補助金は企業の価格設定条件に入るので、マークアップによるくさびを相殺できます。これは、政府購入 $G_t$ が実物資源を吸収するケースとは異なり、政府による再配分だけを使って生産側の歪みを補正する例です。
 
+# 参考文献
+
+**必読**
+
+- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 政府支出、税、リカード等価の基礎を復習するため。
+- Barro, Robert J. (1974) "Are Government Bonds Net Wealth?" *Journal of Political Economy*, 82(6), 1095-1117. https://doi.org/10.1086/260266
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 政府支出ショックをニューケインジアン・モデルへ接続するため。
+
+**発展**
+
+- Baxter, Marianne, and Robert G. King (1993) "Fiscal Policy in General Equilibrium." *American Economic Review*, 83(3), 315-334.
+- Aiyagari, S. Rao, Lawrence J. Christiano, and Martin Eichenbaum (1992) "The Output, Employment, and Interest Rate Effects of Government Consumption." *Journal of Monetary Economics*, 30(1), 73-86.
+- Leeper, Eric M. (1991) "Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies." *Journal of Monetary Economics*, 27(1), 129-147.
+- Trabandt, Mathias, and Harald Uhlig (2011) "The Laffer Curve Revisited." *Journal of Monetary Economics*, 58(4), 305-327.
+
 # 演習問題
 
 **問1：概念確認**

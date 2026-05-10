@@ -866,6 +866,21 @@ $$
 
 したがって、第11回から第12回への橋渡しは次の通りです。第11回では「TANK は IS 曲線をどう変えるか」を3本の NK方程式の中で見ました。第12回では、その IS 曲線の背後にある消費関数を取り出し、RANK が「ほとんど直接効果だけ」のモデルであるのに対し、TANK では現在所得への反応と一般均衡フィードバックが金融政策の効果を増幅しうることを確認します。
 
+# 参考文献
+
+**必読**
+
+- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. https://doi.org/10.1016/j.jet.2007.07.008
+- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. https://doi.org/10.1162/JEEA.2007.5.1.227
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. RANKモデルとの対比を整理するため。
+
+**発展**
+
+- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In *NBER Macroeconomics Annual 1989*, Vol. 4.
+- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. https://doi.org/10.1257/aer.20160042
+- Auclert, Adrien (2019) "Monetary Policy and Redistribution." *American Economic Review*, 109(6), 2333-2367.
+- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. https://doi.org/10.1257/aer.20150063
+
 # 演習問題
 
 ## 基本問題

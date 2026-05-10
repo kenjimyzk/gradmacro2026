@@ -581,6 +581,20 @@ Y_t=C_t+G_t
 $$
 に変更します。資本は引き続き導入しないため、政府支出は投資をクラウドアウトするのではなく、同じ期の消費と労働を通じて実物配分に影響します。
 
+# 参考文献
+
+**必読**
+
+- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. RBCモデルの位置づけと実物ショックの基本を確認するため。
+- Kydland, Finn E., and Edward C. Prescott (1982) "Time to Build and Aggregate Fluctuations." *Econometrica*, 50(6), 1345-1370. https://doi.org/10.2307/1913386
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 資本なしモデルからニューケインジアン・モデルへ進むための参照先。
+
+**発展**
+
+- Hansen, Gary D. (1985) "Indivisible Labor and the Business Cycle." *Journal of Monetary Economics*, 16(3), 309-327. https://doi.org/10.1016/0304-3932(85)90039-X
+- King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) "Production, Growth and Business Cycles: I. The Basic Neoclassical Model." *Journal of Monetary Economics*, 21(2-3), 195-232.
+- King, Robert G., and Sergio T. Rebelo (1999) "Resuscitating Real Business Cycles." In *Handbook of Macroeconomics*, Vol. 1B. Elsevier.
+
 # 演習問題
 
 **問1：概念確認**

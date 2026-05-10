@@ -1160,6 +1160,20 @@ $$
 
 第11回では、家計の異質性を導入し、TANKモデルを扱います。第10回は名目硬直性を増やす回でした。第11回は、家計を貯蓄家計（saver）と手元流動性制約家計（hand-to-mouth）に分け、代表的家計の Euler 方程式だけでは集計需要を記述できなくなることを確認します。とくに、第10回で確認した賃金所得と配当所得の分解は、TANK では誰が賃金を受け取り、誰が配当を受け取るかという分配問題として重要になります。
 
+# 参考文献
+
+**必読**
+
+- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. https://doi.org/10.1016/S0304-3932(00)00028-3
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 賃金硬直性をRANKモデルへ組み込む標準的参照先。
+- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格・賃金硬直性の厚生評価を深く学ぶため。
+
+**発展**
+
+- Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. https://doi.org/10.1086/426038
+- Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. https://doi.org/10.1162/154247603770383415
+- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. https://doi.org/10.1016/0304-3932(83)90060-0
+
 # 演習問題
 
 **問1：労働パッカー**
