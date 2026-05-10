@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">講義全体の見取り図</title>
+  <desc id="desc">学部マクロの45度線から、動学的消費、RBC、NK、RANK、TANK、最後のNK Crossと分配増幅へ進む講義全体の流れ。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .frame { fill: #ffffff; stroke: #d9e0ea; stroke-width: 2; }
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .box { stroke-width: 2; rx: 10; filter: url(#shadow); }
+      .blue { fill: #eaf2ff; stroke: #2f6fbe; }
+      .green { fill: #eef8ef; stroke: #379b55; }
+      .amber { fill: #fff3e8; stroke: #d9792f; }
+      .purple { fill: #f6edf9; stroke: #8d5ab8; }
+      .teal { fill: #edf6f8; stroke: #27899a; }
+      .yellow { fill: #fff6dc; stroke: #c48a22; }
+      .red { fill: #fff0f0; stroke: #c43b3b; }
+      .gray { fill: #f2f4f8; stroke: #697386; }
+      .label { font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
+      .small { font: 400 14px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .note { font: 700 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #526070; }
+      .arrow { stroke: #526070; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .down { stroke: #526070; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="frame" x="0" y="0" width="1200" height="620"/>
+  <rect class="bg" x="48" y="36" width="1104" height="548" rx="18"/>
+
+  <text class="title" x="78" y="83">講義全体の見取り図</text>
+  <text class="subtitle" x="80" y="114">45度線分析を、動学的最適化・一般均衡・価格硬直性・分配チャネルで作り直す</text>
+
+  <rect class="box blue" x="78" y="160" width="150" height="110"/>
+  <text class="label" x="103" y="195">第1回</text>
+  <text class="small" x="98" y="224">学部マクロ</text>
+  <text class="small" x="98" y="247">45度線</text>
+
+  <rect class="box green" x="268" y="160" width="150" height="110"/>
+  <text class="label" x="293" y="195">第2-3回</text>
+  <text class="small" x="288" y="224">期待・対数近似</text>
+  <text class="small" x="288" y="247">Euler・SDF</text>
+
+  <rect class="box amber" x="458" y="160" width="150" height="110"/>
+  <text class="label" x="483" y="195">第4-5回</text>
+  <text class="small" x="478" y="224">RBC</text>
+  <text class="small" x="478" y="247">政府・移転</text>
+
+  <rect class="box purple" x="648" y="160" width="150" height="110"/>
+  <text class="label" x="673" y="195">第6回</text>
+  <text class="small" x="668" y="224">独占的競争</text>
+  <text class="small" x="668" y="247">配当・利潤</text>
+
+  <rect class="box teal" x="838" y="160" width="150" height="110"/>
+  <text class="label" x="863" y="195">第7-9回</text>
+  <text class="small" x="858" y="224">価格硬直性</text>
+  <text class="small" x="858" y="247">NK・政策ルール</text>
+
+  <path class="arrow" d="M228 215 H258"/>
+  <path class="arrow" d="M418 215 H448"/>
+  <path class="arrow" d="M608 215 H638"/>
+  <path class="arrow" d="M798 215 H828"/>
+
+  <path class="down" d="M913 270 C913 315, 760 318, 760 352"/>
+
+  <rect class="box yellow" x="648" y="352" width="150" height="110"/>
+  <text class="label" x="673" y="387">第10回</text>
+  <text class="small" x="668" y="416">賃金硬直性</text>
+  <text class="small" x="668" y="439">所得分解</text>
+
+  <rect class="box red" x="458" y="352" width="150" height="110"/>
+  <text class="label" x="483" y="387">第11回</text>
+  <text class="small" x="478" y="416">TANK</text>
+  <text class="small" x="478" y="439">消費格差</text>
+
+  <rect class="box gray" x="218" y="352" width="174" height="110"/>
+  <text class="label" x="243" y="387">第12回</text>
+  <text class="small" x="238" y="416">NK Cross</text>
+  <text class="small" x="238" y="439">分配増幅</text>
+
+  <path class="arrow" d="M648 407 H618"/>
+  <path class="arrow" d="M458 407 H402"/>
+
+  <rect class="box blue" x="836" y="352" width="224" height="110"/>
+  <text class="label" x="866" y="387">最終メッセージ</text>
+  <text class="small" x="862" y="416">誰の所得が動くか</text>
+  <text class="small" x="862" y="439">誰が消費するか</text>
+
+  <path class="arrow" d="M392 407 H448"/>
+  <path class="arrow" d="M798 407 H826"/>
+
+  <text class="note" x="80" y="536">PE曲線は第1回では外生的に与えられた。第12回では、Euler方程式、SDF、配当、移転、家計タイプから導かれる。</text>
+</svg>

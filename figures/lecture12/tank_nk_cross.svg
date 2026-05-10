@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">TANKのNew Keynesian Cross</title>
+  <desc id="desc">TANKでは直接効果が小さいがPE曲線が急になるため、所得フィードバックが総効果を増幅しうることを示す図。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#34495e"/>
+    </marker>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .axis { stroke: #34495e; stroke-width: 2.4; marker-end: url(#arrow); }
+      .grid { stroke: #d8dee8; stroke-width: 1; }
+      .line45 { stroke: #697386; stroke-width: 3; fill: none; }
+      .peR { stroke: #2f6fbe; stroke-width: 3.5; fill: none; stroke-dasharray: 8 7; }
+      .peT { stroke: #379b55; stroke-width: 4; fill: none; }
+      .peT2 { stroke: #379b55; stroke-width: 4; fill: none; stroke-dasharray: 10 7; }
+      .direct { stroke: #d9792f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .total { stroke: #8d5ab8; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .label { font: 700 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
+      .text { font: 400 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 18px "Times New Roman", serif; fill: #20242a; }
+      .note { font: 400 14px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .box { fill: #ffffff; stroke: #c9d3df; stroke-width: 1.6; rx: 8; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
+  <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <text class="title" x="74" y="82">TANK の New Keynesian Cross</text>
+  <text class="subtitle" x="76" y="112">Type Sだけが利子率に反応するが、Type Hの現在所得消費がPE曲線を急にする</text>
+
+  <line class="grid" x1="150" y1="430" x2="930" y2="430"/>
+  <line class="grid" x1="150" y1="350" x2="930" y2="350"/>
+  <line class="grid" x1="150" y1="270" x2="930" y2="270"/>
+  <line class="axis" x1="150" y1="510" x2="960" y2="510"/>
+  <line class="axis" x1="150" y1="510" x2="150" y2="150"/>
+
+  <path class="line45" d="M150 510 L870 150"/>
+  <path class="peR" d="M150 420 L870 348"/>
+  <path class="peT" d="M150 445 L870 229"/>
+  <path class="peT2" d="M150 400 L870 184"/>
+
+  <path class="direct" d="M395 371 L395 326"/>
+  <path class="total" d="M395 326 L590 266"/>
+
+  <circle cx="370" cy="379" r="6" fill="#379b55"/>
+  <circle cx="585" cy="265" r="6" fill="#379b55"/>
+
+  <text class="label" x="500" y="558">所得 y</text>
+  <text class="label" x="78" y="146">計画消費 c</text>
+  <text class="text" x="780" y="186">45度線</text>
+  <text class="math" x="790" y="246">PEᵀ(r)</text>
+  <text class="math" x="790" y="200">PEᵀ(r低下)</text>
+  <text class="math" x="770" y="352">PEᴿ</text>
+  <text class="note" x="410" y="353">直接効果</text>
+  <text class="note" x="458" y="309">所得フィードバック</text>
+
+  <rect class="box" x="194" y="160" width="392" height="96"/>
+  <text class="math" x="216" y="196">ωᵀ = [1-β(1-λχ)]/[1-βp(1-λχ)]</text>
+  <text class="text" x="216" y="226">χが大きいほどPE曲線は急になる</text>
+</svg>

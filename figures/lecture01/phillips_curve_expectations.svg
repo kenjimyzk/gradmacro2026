@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
   <title id="title">Expectations-augmented Phillips curve</title>
-  <desc id="desc">Short-run Phillips curves slope downward. Higher expected inflation shifts the curve upward. The long-run Phillips curve is vertical at the natural rate of unemployment.</desc>
+  <desc id="desc">Short-run Phillips curves slope downward. Higher expected inflation shifts the curve upward. The long-run Phillips curve is vertical at the natural level, which later lectures read through natural output and the output gap.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2f36"/>
@@ -41,7 +41,7 @@
   <text x="680" y="318" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="700" fill="#d45d48">期待上昇後</text>
   <text x="340" y="142" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="18" fill="#7a4db3">πᵉ上昇で上方シフト</text>
   <line x1="455" y1="430" x2="455" y2="445" stroke="#2b2f36" stroke-width="2"/>
-  <text x="435" y="472" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" fill="#20242a">uₙ</text>
+  <text x="430" y="472" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" fill="#20242a">u_n</text>
   <text x="92" y="515" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="700" fill="#20242a">期待修正型フィリップス曲線</text>
-  <text x="375" y="515" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="18" fill="#555f6f">短期のトレードオフと長期の自然失業率</text>
+  <text x="375" y="515" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="18" fill="#555f6f">短期のトレードオフと自然水準への収束</text>
 </svg>
