@@ -81,7 +81,7 @@ $$
 | $D_t$ | 配当 |
 | $V^H$ | 家計の価値関数 |
 | $V_t^F$ | 企業価値 |
-| $\lambda,\lambda_t$ | ラグランジュ乗数 |
+| $\Lambda,\Lambda_t$ | ラグランジュ乗数 |
 | $\mathcal{L}$ | ラグランジュ関数 |
 
 本文中で使用する派生パラメータおよび変数は次の通りです。
@@ -107,17 +107,17 @@ $$
 \quad
 g(x,y)=c
 $$
-制約の右辺を左辺に移し、ラグランジュ乗数 $\lambda$ をつけると、
+制約の右辺を左辺に移し、ラグランジュ乗数 $\Lambda$ をつけると、
 $$
 \mathcal{L}
 =
-U(x,y)+\lambda[c-g(x,y)]
+U(x,y)+\Lambda[c-g(x,y)]
 $$
 です。一階条件は
 $$
 \begin{aligned}
-U_x(x,y)&=\lambda g_x(x,y),\\
-U_y(x,y)&=\lambda g_y(x,y),\\
+U_x(x,y)&=\Lambda g_x(x,y),\\
+U_y(x,y)&=\Lambda g_y(x,y),\\
 g(x,y)&=c
 \end{aligned}
 $$
@@ -129,7 +129,7 @@ $$
 $$
 となります。これは、限界代替率と制約の傾きが一致するという条件です。
 
-ラグランジュ乗数 $\lambda$ は、制約を1単位緩めたときに目的関数の最大値がどれだけ増えるかを表します。動学的な消費・貯蓄問題では、各期の予算制約につく乗数 $\lambda_t$ が、その期の資源を1単位増やすことの限界価値になります。この解釈が、後でオイラー方程式や確率的割引因子につながります。
+ラグランジュ乗数 $\Lambda$ は、制約を1単位緩めたときに目的関数の最大値がどれだけ増えるかを表します。動学的な消費・貯蓄問題では、各期の予算制約につく乗数 $\Lambda_t$ が、その期の資源を1単位増やすことの限界価値になります。この解釈が、後でオイラー方程式や確率的割引因子につながります。
 
 # 必要条件と十分条件
 
@@ -176,11 +176,11 @@ $$
 
 ## ラグランジュ法
 
-生涯予算制約にラグランジュ乗数 $\lambda$ をつけると、
+生涯予算制約にラグランジュ乗数 $\Lambda$ をつけると、
 $$
 \mathcal{L}
 =U(C_t)+\beta U(C_{t+1})
-+\lambda\left[
++\Lambda\left[
 RB_{t-1}+Y_t+\frac{Y_{t+1}}{R}
 -C_t-\frac{C_{t+1}}{R}
 \right].
@@ -189,9 +189,9 @@ $$
 $$
 \begin{aligned}
 \frac{\partial \mathcal{L}}{\partial C_t}
-&=U_C(C_t)-\lambda=0,\\
+&=U_C(C_t)-\Lambda=0,\\
 \frac{\partial \mathcal{L}}{\partial C_{t+1}}
-&=\beta U_C(C_{t+1})-\frac{\lambda}{R}=0.
+&=\beta U_C(C_{t+1})-\frac{\Lambda}{R}=0.
 \end{aligned}
 $$
 したがって
@@ -278,7 +278,7 @@ $$
 \mathcal{L}
 =
 \sum_{i=0}^{N}\beta^i U(C_{t+i})
-+\lambda
++\Lambda
 \left[
 RB_{t-1}
 +\sum_{i=0}^{N}\frac{Y_{t+i}}{R^i}
@@ -288,7 +288,7 @@ $$
 $C_{t+i}$ についての一階条件は
 $$
 \beta^i U_C(C_{t+i})
--\frac{\lambda}{R^i}=0.
+-\frac{\Lambda}{R^i}=0.
 $$
 隣り合う $i$ と $i+1$ の条件を比べると、
 $$
@@ -308,24 +308,24 @@ $$
 \sum_{i=0}^{N}\beta^i
 \left\{
 U(C_{t+i})
-+\lambda_{t+i}
++\Lambda_{t+i}
 \left(RB_{t+i-1}+Y_{t+i}-C_{t+i}-B_{t+i}\right)
 \right\}.
 $$
 $C_{t+i}$ についての一階条件は
 $$
-U_C(C_{t+i})=\lambda_{t+i}.
+U_C(C_{t+i})=\Lambda_{t+i}.
 $$
 中間期の資産 $B_{t+i}$ についての一階条件は
 $$
--\beta^i\lambda_{t+i}
-+\beta^{i+1}R\lambda_{t+i+1}=0.
+-\beta^i\Lambda_{t+i}
++\beta^{i+1}R\Lambda_{t+i+1}=0.
 $$
 したがって
 $$
-\lambda_{t+i}=\beta R\lambda_{t+i+1}.
+\Lambda_{t+i}=\beta R\Lambda_{t+i+1}.
 $$
-$\lambda_{t+i}=U_C(C_{t+i})$ を代入すれば、再び
+$\Lambda_{t+i}=U_C(C_{t+i})$ を代入すれば、再び
 $$
 U_C(C_{t+i})
 =
@@ -366,7 +366,7 @@ $$
 $$
 が成り立ちます。これは、限界効用で評価した将来資産の現在価値が、無限遠でゼロになるという条件です。
 
-直感的には、次の2つを同時に排除します。
+直観的には、次の2つを同時に排除します。
 
 1. 借金を無限に先送りするポンジー・ゲーム
 2. 効用を生まない資産を無限遠に残し続ける非最適な貯蓄
@@ -428,29 +428,29 @@ $$
 \mathcal{L}
 =
 U(C_t)+\beta V^H(B_t)
-+\lambda_t
++\Lambda_t
 \left(RB_{t-1}+Y-C_t-B_t\right).
 $$
 $C_t$ と $B_t$ についての一階条件は
 $$
 \begin{aligned}
-U_C(C_t)&=\lambda_t,\\
-\beta V^H_B(B_t)&=\lambda_t.
+U_C(C_t)&=\Lambda_t,\\
+\beta V^H_B(B_t)&=\Lambda_t.
 \end{aligned}
 $$
 また、包絡線定理より
 $$
-V^H_B(B_{t-1})=R\lambda_t
+V^H_B(B_{t-1})=R\Lambda_t
 $$
 が得られます。1期先に進めると、
 $$
-V^H_B(B_t)=R\lambda_{t+1}.
+V^H_B(B_t)=R\Lambda_{t+1}.
 $$
-これを一階条件 $\beta V^H_B(B_t)=\lambda_t$ に代入すると、
+これを一階条件 $\beta V^H_B(B_t)=\Lambda_t$ に代入すると、
 $$
-\lambda_t=\beta R\lambda_{t+1}.
+\Lambda_t=\beta R\Lambda_{t+1}.
 $$
-$\lambda_t=U_C(C_t)$ なので、
+$\Lambda_t=U_C(C_t)$ なので、
 $$
 U_C(C_t)=\beta R U_C(C_{t+1})
 $$
@@ -509,13 +509,13 @@ $$
 \mathcal{L}
 =
 U(C_t)+\beta\mathbb{E}_t V^H(B_t,z_{t+1})
-+\lambda_t(R_{t-1}^fB_{t-1}+Y(z_t)-C_t-B_t).
++\Lambda_t(R_{t-1}^fB_{t-1}+Y(z_t)-C_t-B_t).
 $$
 一階条件は
 $$
 \begin{aligned}
-U_C(C_t)&=\lambda_t,\\
-\lambda_t
+U_C(C_t)&=\Lambda_t,\\
+\Lambda_t
 &=
 \beta\mathbb{E}_t
 \left[
@@ -527,19 +527,19 @@ $$
 $$
 V^H_B(B_t,z_{t+1})
 =
-R_t^f\lambda_{t+1}.
+R_t^f\Lambda_{t+1}.
 $$
-ここで $\lambda_{t+1}=U_C(C_{t+1})$ であり、来期消費は政策関数として $C_{t+1}=C(B_t,z_{t+1})$ と決まります。したがって、$z_{t+1}$ は明示的には包絡線条件の引数として現れ、経済的には来期所得と来期消費を通じて限界効用を動かします。
+ここで $\Lambda_{t+1}=U_C(C_{t+1})$ であり、来期消費は政策関数として $C_{t+1}=C(B_t,z_{t+1})$ と決まります。したがって、$z_{t+1}$ は明示的には包絡線条件の引数として現れ、経済的には来期所得と来期消費を通じて限界効用を動かします。
 したがって
 $$
-\lambda_t
+\Lambda_t
 =
 \beta\mathbb{E}_t
 \left[
-R_t^f\lambda_{t+1}
+R_t^f\Lambda_{t+1}
 \right].
 $$
-$\lambda_t=U_C(C_t)$ を代入すると、不確実性下のオイラー方程式
+$\Lambda_t=U_C(C_t)$ を代入すると、不確実性下のオイラー方程式
 $$
 U_C(C_t)
 =
@@ -655,7 +655,7 @@ $$
 U(C_t)
 +\beta\mathbb{E}_t
 V^H(B_t,\theta_t,z_{t+1}) \\
-&+\lambda_t
+&+\Lambda_t
 \left[
 R_{t-1}^fB_{t-1}+Y(z_t)
 +\theta_{t-1}(V_t^F+D_t)
@@ -665,11 +665,11 @@ R_{t-1}^fB_{t-1}+Y(z_t)
 $$
 消費についての一階条件は
 $$
-U_C(C_t)=\lambda_t.
+U_C(C_t)=\Lambda_t.
 $$
 債券についての一階条件は
 $$
-\lambda_t
+\Lambda_t
 =
 \beta\mathbb{E}_t
 \left[
@@ -678,7 +678,7 @@ V^H_B(B_t,\theta_t,z_{t+1})
 $$
 株式保有についての一階条件は
 $$
-V_t^F\lambda_t
+V_t^F\Lambda_t
 =
 \beta\mathbb{E}_t
 \left[
@@ -690,10 +690,10 @@ $$
 \begin{aligned}
 V^H_B(B_t,\theta_t,z_{t+1})
 &=
-R_t^f\lambda_{t+1},\\
+R_t^f\Lambda_{t+1},\\
 V^H_{\theta}(B_t,\theta_t,z_{t+1})
 &=
-\lambda_{t+1}(V_{t+1}^F+D_{t+1}).
+\Lambda_{t+1}(V_{t+1}^F+D_{t+1}).
 \end{aligned}
 $$
 したがって、債券については
@@ -906,7 +906,7 @@ $$
 
 # 第4回への接続
 
-第4回の資本なしRBCモデルでは、家計の一階条件と企業価値条件を均衡条件として使います。企業価値を表す記号は簡略化し、第3回の $V_t^F$ を $V_t$ と書きます。家計の価値関数 $V^H$ は、第3回で動学計画法とベルマン方程式を説明するために使った記号であり、第4回では価値関数を明示せず、家計の一階条件だけを使います。
+第4回の資本なしRBCモデルでは、家計の一階条件と企業価値条件を均衡条件として使います。企業価値を表す記号は簡略化し、第3回の $V_t^F$ を $V_t$ と書きます。家計の価値関数 $V^H$ は、第3回で動学計画法と Bellman方程式を説明するために使った記号であり、第4回では価値関数を明示せず、家計の一階条件だけを使います。
 
 債券については、第4回の本体では実質債券を使い、実質総利子率を $R_t$ と書きます。このときオイラー方程式は
 $$
