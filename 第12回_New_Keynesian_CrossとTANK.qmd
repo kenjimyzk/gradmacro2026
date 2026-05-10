@@ -82,7 +82,6 @@ $$
 |---|---|
 | EIS の $\sigma$ | $1/\gamma$ |
 | $\sigma_t^c$ | EIS ではなく、消費格差 $c_t^S-c_t^H$ |
-| $\tau^D$ | 本回では $\tau_D$。配当・独占利潤を Type H 家計へ移す制度係数 |
 | $d_t,z_t$ | 定常消費で割った一次近似。ログ乖離ではない |
 | $\Omega_R,\Omega_T$ | 本回では実質利子率低下に対する総効果。資産保有量ではない |
 
@@ -128,15 +127,15 @@ $$
 |---|---|---|
 | $\chi$ | $1+\varphi\left(1-\tau_D/\lambda\right)$ | Type H 所得・消費の集計所得に対する反応係数。過去回の労働不効用パラメータ $\chi$ とは別物 |
 | $\Theta_D$ | $(1-\lambda\chi)/(1-\lambda)$ | Type S 所得を集計所得に戻す係数 |
-| $\omega_R,\omega_T$ | PE 曲線の $y_t$ 係数 | RANK、TANK の PE 曲線の傾き |
+| $\omega_R,\omega_T$ | PE 曲線の $y_t$ 係数 | RANK、TANK の PE 曲線の傾き。集計MPCと呼ばれることがある |
 | $\Omega_R^D,\Omega_T^D$ | PE 曲線の $(-r_t)$ 係数 | 所得を固定したときの直接効果 |
 | $\Omega_R,\Omega_T$ | $\Omega^D/(1-\omega)$ | 実質利子率低下に対する総効果 |
 
 : {tbl-colwidths="[18,32,50]"}
 
-通常の総需要領域では $0<\lambda\chi<1$、すなわち $1-\lambda\chi>0$ を仮定します。$1-\lambda\chi=0$ では NK クロスの乗数が発散し、$1-\lambda\chi<0$ では通常とは異なる反転領域になります。
+Bilbiie の New Keynesian Cross では、$\omega_R$ や $\omega_T$ のような PE 曲線の傾きを MPC と呼ぶことがあります。ただし、ここでの MPC は、個別家計が手元所得1単位をどれだけ消費するかというミクロの限界消費性向そのものではありません。期待形成、持続性 $p$、家計タイプの構成、配当移転ルールを含んだ、集計 PE 曲線上の有効MPCです。特に Type H 家計の個別MPCは1ですが、$\omega_T$ はそれとは別の集計係数です。
 
-第11回ノートでは、配当移転ルールのパラメータを $\tau^D$ と書きました。本回では、Bilbiie 型の表記に寄せて $\tau_D$ と書きます。意味は同じです。
+通常の総需要領域では $0<\lambda\chi<1$、すなわち $1-\lambda\chi>0$ を仮定します。$1-\lambda\chi=0$ では NK クロスの乗数が発散し、$1-\lambda\chi<0$ では通常とは異なる反転領域になります。
 
 # なぜ NK クロスに戻るのか
 
@@ -150,6 +149,31 @@ $$
 RANK では、代表的家計が資産市場を通じて消費を平準化するため、現在所得への反応は小さくなります。TANK では、Type H 家計が現在所得をすべて消費するため、所得フィードバックが強くなります。
 
 ただし、TANK は常に RANK より大きな総需要反応を持つわけではありません。Type S 家計だけが Euler 方程式を満たすので、実質利子率に直接反応する家計の比率は $1-\lambda$ に下がります。TANK の総効果は、直接効果の縮小と所得フィードバックの増幅のどちらが勝つかで決まります。
+
+# 対数線形化と方程式リスト
+
+第12回では、NK フィリップス曲線とテイラー・ルールを前面に出さず、所与の実質利子率のもとで計画消費を現在所得の関数として書きます。対数線形化された体系は、次の方程式リストにまとめられます。
+
+| No. | 名称 | 式 |
+|---:|---|---|
+| 1 | 共通 PE 曲線 | $c_t=\omega y_t+\Omega^D(-r_t)$ |
+| 2 | 財市場均衡 | $y_t=c_t$ |
+| 3 | NK クロス乗数 | $\Omega=\Omega^D/(1-\omega)$ |
+| 4 | RANK 再帰的消費関数 | $c_t=(1-\beta)y_t-\dfrac{\beta}{\gamma}r_t+\beta\mathbb{E}_t c_{t+1}$ |
+| 5 | 持続性仮定 | $\mathbb{E}_t c_{t+1}=p c_t$ |
+| 6 | RANK の PE 係数 | $\omega_R=\dfrac{1-\beta}{1-\beta p},\quad \Omega_R^D=\dfrac{\beta}{\gamma(1-\beta p)}$ |
+| 7 | 配当移転ルール | $z_t=\dfrac{\tau_D}{\lambda}d_t$ |
+| 8 | 配当・独占利潤 | $d_t=-(\gamma+\varphi)y_t$ |
+| 9 | Type H 消費 | $c_t^H=\chi y_t,\quad \chi=1+\varphi\left(1-\dfrac{\tau_D}{\lambda}\right)$ |
+| 10 | Type S 所得 | $y_t^S=\dfrac{1-\lambda\chi}{1-\lambda}y_t$ |
+| 11 | Type S 再帰的消費関数 | $c_t^S=(1-\beta)y_t^S-\dfrac{\beta}{\gamma}r_t+\beta\mathbb{E}_t c_{t+1}^S$ |
+| 12 | TANK 集計 PE 曲線 | $c_t=\left[1-\beta(1-\lambda\chi)\right]y_t-(1-\lambda)\dfrac{\beta}{\gamma}r_t+\beta(1-\lambda\chi)\mathbb{E}_t c_{t+1}$ |
+| 13 | TANK の PE 係数 | $\omega_T=\dfrac{1-\beta(1-\lambda\chi)}{1-\beta p(1-\lambda\chi)},\quad \Omega_T^D=\dfrac{(1-\lambda)\beta}{\gamma[1-\beta p(1-\lambda\chi)]}$ |
+| 14 | RANK との総効果比 | $\dfrac{\Omega_T}{\Omega_R}=\dfrac{1-\lambda}{1-\lambda\chi}$ |
+
+: {tbl-colwidths="[6,28,66]"}
+
+RANK に戻すには、家計タイプの区別をなくし、$\lambda=0$ と置きます。このとき、7番から13番の TANK 固有の分配ブロックは不要になり、4番から6番の RANK の PE 曲線と、1番から3番の共通 NK クロスだけで閉じます。第11回との違いは、外生的な再分配ショック $z_t$ を、7番の配当移転ルールで内生化する点です。その結果、分配ブロックは $z_t$ の外生項ではなく、9番の $\chi$ と10番の Type S 所得係数として PE 曲線の傾きに入ります。
 
 # NK クロスの共通枠組み
 
