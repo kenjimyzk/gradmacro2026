@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">第11回講義の全体像</title>
+  <desc id="desc">価格硬直性RANKモデルに家計異質性を加え、Type SのEuler方程式、Type Hの現在所得制約、分配ブロックを通じてTANK版NK方程式と第12回のNKクロスへつなぐ流れ。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .frame { fill: #ffffff; stroke: #d9e0ea; stroke-width: 2; }
+      .title { font: 700 31px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .box { stroke-width: 2; rx: 10; filter: url(#shadow); }
+      .blue { fill: #eaf2ff; stroke: #2f6fbe; }
+      .green { fill: #eef8ef; stroke: #379b55; }
+      .amber { fill: #fff3e8; stroke: #d9792f; }
+      .purple { fill: #f6edf9; stroke: #8d5ab8; }
+      .gray { fill: #f2f4f8; stroke: #697386; }
+      .teal { fill: #edf6f8; stroke: #27899a; }
+      .yellow { fill: #fff6dc; stroke: #c48a22; }
+      .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
+      .text { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 17px "Times New Roman", serif; fill: #233142; }
+      .arrow { stroke: #526070; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #6c7a89; stroke-width: 2.3; fill: none; marker-end: url(#arrow); }
+      .note { font: 700 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #526070; }
+    </style>
+  </defs>
+
+  <rect class="frame" x="0" y="0" width="1200" height="640" rx="0"/>
+  <rect class="bg" x="48" y="36" width="1104" height="568" rx="18"/>
+
+  <text class="title" x="78" y="83">第11回の地図：価格硬直性をもつTANKモデル</text>
+  <text class="subtitle" x="80" y="116">第7回の価格硬直性モデルに家計異質性を加え、IS曲線と分配チャネルを読み替える</text>
+
+  <rect class="box blue" x="78" y="158" width="210" height="142"/>
+  <text class="label" x="104" y="195">第7回の土台</text>
+  <text class="text" x="104" y="228">価格硬直性 RANK</text>
+  <text class="text" x="104" y="253">共通で柔軟な賃金</text>
+  <text class="math" x="104" y="278">π = βEπ + κx</text>
+
+  <rect class="box green" x="358" y="158" width="210" height="142"/>
+  <text class="label" x="384" y="195">家計異質性</text>
+  <text class="text" x="384" y="228">Type S: Euler</text>
+  <text class="text" x="384" y="253">Type H: 現在所得</text>
+  <text class="math" x="384" y="278">σᶜ = cˢ - cᴴ</text>
+
+  <rect class="box amber" x="638" y="158" width="210" height="142"/>
+  <text class="label" x="664" y="195">分配ブロック</text>
+  <text class="text" x="664" y="228">配当 d は S へ</text>
+  <text class="text" x="664" y="253">移転 z は H へ</text>
+  <text class="math" x="664" y="278">γσᶜ + ϕσⁿ = 0</text>
+
+  <rect class="box purple" x="918" y="158" width="204" height="142"/>
+  <text class="label" x="944" y="195">TANK版NK</text>
+  <text class="text" x="944" y="228">ISだけが変わる</text>
+  <text class="text" x="944" y="253">NKPCは第7回と同じ</text>
+  <text class="math" x="944" y="278">x = Ex - (r-rᶠ)/(γΘ)</text>
+
+  <path class="arrow" d="M288 229 H348"/>
+  <path class="arrow" d="M568 229 H628"/>
+  <path class="arrow" d="M848 229 H908"/>
+
+  <rect class="box gray" x="268" y="382" width="664" height="118"/>
+  <text class="label" x="300" y="420">中心メカニズム</text>
+  <text class="math" x="300" y="454">σᶜ = - ϕx/(1-λ) - ϕz/[(γ+ϕ)(1-λ)]</text>
+  <text class="text" x="300" y="482">Type Sの消費がEuler方程式に入り、消費格差の変化が集計需要を動かす</text>
+
+  <rect class="box teal" x="82" y="382" width="142" height="118"/>
+  <text class="label" x="108" y="420">第10回</text>
+  <text class="text" x="108" y="452">賃金硬直性</text>
+  <text class="text" x="108" y="478">配当と賃金</text>
+
+  <rect class="box yellow" x="976" y="382" width="142" height="118"/>
+  <text class="label" x="1002" y="420">第12回</text>
+  <text class="text" x="1002" y="452">NKクロス</text>
+  <text class="text" x="1002" y="478">所得フィードバック</text>
+
+  <path class="thin" d="M153 300 C170 338, 205 365, 268 414"/>
+  <path class="thin" d="M463 300 V373"/>
+  <path class="thin" d="M743 300 V373"/>
+  <path class="thin" d="M1020 300 C1008 338, 960 365, 905 382"/>
+  <path class="thin" d="M932 441 H966"/>
+  <path class="thin" d="M224 441 H258"/>
+
+  <text class="note" x="80" y="556">結論：TANKの新しさは価格設定ではなく、Type SのEuler方程式とType Hの現在所得制約が作るIS曲線の増幅にある。</text>
+</svg>

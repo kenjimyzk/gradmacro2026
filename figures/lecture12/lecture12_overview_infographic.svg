@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">第12回講義の全体像</title>
+  <desc id="desc">第11回のTANK分配ブロックから、配当課税ルール、Type Hの所得弾力性、NKクロス、RANKとの乗数比較へ進む流れ。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .frame { fill: #ffffff; stroke: #d9e0ea; stroke-width: 2; }
+      .title { font: 700 31px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .box { stroke-width: 2; rx: 10; filter: url(#shadow); }
+      .blue { fill: #eaf2ff; stroke: #2f6fbe; }
+      .green { fill: #eef8ef; stroke: #379b55; }
+      .amber { fill: #fff3e8; stroke: #d9792f; }
+      .purple { fill: #f6edf9; stroke: #8d5ab8; }
+      .teal { fill: #edf6f8; stroke: #27899a; }
+      .yellow { fill: #fff6dc; stroke: #c48a22; }
+      .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
+      .text { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 17px "Times New Roman", serif; fill: #233142; }
+      .arrow { stroke: #526070; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #6c7a89; stroke-width: 2.3; fill: none; marker-end: url(#arrow); }
+      .note { font: 700 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #526070; }
+    </style>
+  </defs>
+
+  <rect class="frame" x="0" y="0" width="1200" height="640"/>
+  <rect class="bg" x="48" y="36" width="1104" height="568" rx="18"/>
+
+  <text class="title" x="78" y="83">第12回の地図：New Keynesian Cross と TANK</text>
+  <text class="subtitle" x="80" y="116">分配ルールがType Hの所得弾力性を決め、PE曲線の傾きと総需要乗数を変える</text>
+
+  <rect class="box blue" x="78" y="158" width="210" height="142"/>
+  <text class="label" x="104" y="195">第11回の出発点</text>
+  <text class="text" x="104" y="228">外生的な移転 z</text>
+  <text class="text" x="104" y="253">消費格差 σᶜ</text>
+  <text class="math" x="104" y="278">σᶜ ∝ d - z</text>
+
+  <rect class="box green" x="358" y="158" width="210" height="142"/>
+  <text class="label" x="384" y="195">配当課税ルール</text>
+  <text class="text" x="384" y="228">z は配当に連動</text>
+  <text class="text" x="384" y="253">τ_D は制度パラメータ</text>
+  <text class="math" x="384" y="278">z = (τ_D/λ)d</text>
+
+  <rect class="box amber" x="638" y="158" width="210" height="142"/>
+  <text class="label" x="664" y="195">所得弾力性</text>
+  <text class="text" x="664" y="228">Hは現在所得を消費</text>
+  <text class="text" x="664" y="253">所得が何倍動くか</text>
+  <text class="math" x="664" y="278">cᴴ = χy</text>
+
+  <rect class="box purple" x="918" y="158" width="204" height="142"/>
+  <text class="label" x="944" y="195">NKクロス</text>
+  <text class="text" x="944" y="228">PE曲線の傾き</text>
+  <text class="text" x="944" y="253">直接効果と間接効果</text>
+  <text class="math" x="944" y="278">Ωᵀ/Ωᴿ</text>
+
+  <path class="arrow" d="M288 229 H348"/>
+  <path class="arrow" d="M568 229 H628"/>
+  <path class="arrow" d="M848 229 H908"/>
+
+  <rect class="box teal" x="118" y="382" width="402" height="118"/>
+  <text class="label" x="150" y="420">RANK</text>
+  <text class="text" x="150" y="452">PE曲線の傾きは小さい</text>
+  <text class="math" x="150" y="480">ωᴿ = (1-β)/(1-βp)</text>
+
+  <rect class="box yellow" x="680" y="382" width="402" height="118"/>
+  <text class="label" x="712" y="420">TANK</text>
+  <text class="text" x="712" y="452">直接効果は小さいが所得フィードバックは大きい</text>
+  <text class="math" x="712" y="480">Ωᵀ/Ωᴿ = (1-λ)/(1-λχ)</text>
+
+  <path class="thin" d="M743 300 C710 340, 610 368, 498 407"/>
+  <path class="thin" d="M1020 300 C1012 342, 968 368, 912 382"/>
+
+  <text class="note" x="80" y="556">結論：TANKの増幅条件は、流動性制約家計の存在そのものではなく、χ&gt;1、すなわち τ_D&lt;λ である。</text>
+</svg>
