@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">第10回講義の全体像</title>
+  <desc id="desc">価格硬直性RANKモデルに労働パッカーと賃金硬直性を加え、価格フィリップス曲線と賃金フィリップス曲線を導く流れ。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .title { font: 700 30px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2d3d; }
+      .subtitle { font: 400 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #52616f; }
+      .box { fill: #ffffff; stroke: #9fb3c8; stroke-width: 2; rx: 8; }
+      .box-blue { fill: #eaf3ff; stroke: #4f8fcf; }
+      .box-green { fill: #edf8f0; stroke: #4c9f70; }
+      .box-amber { fill: #fff6df; stroke: #c9972d; }
+      .box-red { fill: #fff0ef; stroke: #ce6a63; }
+      .label { font: 700 21px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #233142; }
+      .text { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 17px "Times New Roman", serif; fill: #233142; }
+      .arrow { stroke: #34495e; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #6c7a89; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="560"/>
+  <text class="title" x="48" y="54">第10回：価格・賃金硬直性をもつRANKモデル</text>
+  <text class="subtitle" x="50" y="84">第7回の価格硬直性モデルに、労働パッカーと賃金フィリップス曲線を追加する</text>
+
+  <rect class="box box-blue" x="58" y="138" width="245" height="132"/>
+  <text class="label" x="82" y="176">第7回の土台</text>
+  <text class="text" x="82" y="208">価格硬直性</text>
+  <text class="text" x="82" y="234">RANK, α=0</text>
+  <text class="math" x="82" y="258">πᵖ = βEπᵖ + κₚmc</text>
+
+  <rect class="box box-green" x="360" y="138" width="245" height="132"/>
+  <text class="label" x="384" y="176">労働パッカー</text>
+  <text class="text" x="384" y="208">差別化労働を集計</text>
+  <text class="text" x="384" y="234">賃金が需要を動かす</text>
+  <text class="math" x="384" y="258">N(h)=N(W(h)/W)⁻ψʷ</text>
+
+  <rect class="box box-amber" x="662" y="138" width="245" height="132"/>
+  <text class="label" x="686" y="176">賃金硬直性</text>
+  <text class="text" x="686" y="208">名目賃金の調整費用</text>
+  <text class="text" x="686" y="234">賃金マークアップ</text>
+  <text class="math" x="686" y="258">πʷ = βEπʷ - κʷμʷ</text>
+
+  <rect class="box box-red" x="964" y="138" width="180" height="132"/>
+  <text class="label" x="988" y="176">政策問題</text>
+  <text class="text" x="988" y="208">価格インフレ</text>
+  <text class="text" x="988" y="234">賃金インフレ</text>
+  <text class="text" x="988" y="258">需給ギャップ</text>
+
+  <path class="arrow" d="M303 204 H352"/>
+  <path class="arrow" d="M605 204 H654"/>
+  <path class="arrow" d="M907 204 H956"/>
+
+  <rect class="box" x="148" y="350" width="904" height="126"/>
+  <text class="label" x="180" y="390">中心となる整理式</text>
+  <text class="math" x="180" y="426">μᵖ + μʷ = -(γ+ϕ)x</text>
+  <text class="text" x="500" y="426">価格マークアップと賃金マークアップの合計が需給ギャップを表す</text>
+  <text class="math" x="180" y="456">πʷ - πᵖ = Δw</text>
+  <text class="text" x="500" y="456">賃金インフレと価格インフレの差が実質賃金を動かす</text>
+
+  <path class="thin" d="M180 270 C210 310, 270 330, 360 350"/>
+  <path class="thin" d="M482 270 V342"/>
+  <path class="thin" d="M785 270 C760 312, 720 330, 675 350"/>
+  <path class="thin" d="M1054 270 C1025 315, 960 338, 890 350"/>
+</svg>

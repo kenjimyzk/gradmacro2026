@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">第9回講義の全体像</title>
+  <desc id="desc">RANKモデルの政策問題から、神々の配剤、テイラー原理、裁量とコミットメント、タイムレス・パースペクティブへ進む流れを示す。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fafc"/>
+      <stop offset="100%" stop-color="#edf4f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1f2937" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 z" fill="#52616f"/>
+    </marker>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans CJK JP", sans-serif; font-size: 33px; font-weight: 700; fill: #203040; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans CJK JP", sans-serif; font-size: 18px; fill: #52616f; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans CJK JP", sans-serif; font-size: 23px; font-weight: 700; fill: #22313f; }
+      .body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans CJK JP", sans-serif; font-size: 17px; fill: #34495e; }
+      .small { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans CJK JP", sans-serif; font-size: 15px; fill: #52616f; }
+      .math { font-family: "Times New Roman", "STIX Two Text", serif; font-size: 21px; fill: #1f2d3d; }
+      .box { fill: #ffffff; stroke: #d7e1e8; stroke-width: 2; rx: 14; filter: url(#shadow); }
+      .blue { fill: #e9f2fb; stroke: #85afd9; }
+      .red { fill: #fbefec; stroke: #d79385; }
+      .green { fill: #edf7f0; stroke: #8fbe9c; }
+      .amber { fill: #fff5de; stroke: #d6af52; }
+      .purple { fill: #f2eefb; stroke: #a795d6; }
+      .line { stroke: #52616f; stroke-width: 3.2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <text x="60" y="64" class="title">第9回：最適金融政策とルールの評価</text>
+  <text x="60" y="98" class="subtitle">同じ RANK モデルを、政策当局の目的関数と均衡決定性の観点から読み直す</text>
+
+  <rect x="58" y="142" width="250" height="138" class="box blue"/>
+  <text x="82" y="181" class="label">1. 基本体系</text>
+  <text x="82" y="216" class="math">x<tspan baseline-shift="sub" font-size="14">t</tspan>, π<tspan baseline-shift="sub" font-size="14">t</tspan>, r<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <text x="82" y="248" class="body">IS + NKPC + 政策ルール</text>
+
+  <rect x="365" y="142" width="250" height="138" class="box green"/>
+  <text x="389" y="181" class="label">2. 神々の配剤</text>
+  <text x="389" y="216" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan>=0, x<tspan baseline-shift="sub" font-size="14">t</tspan>=0</text>
+  <text x="389" y="248" class="body">インフレとギャップを同時安定化</text>
+
+  <rect x="672" y="142" width="250" height="138" class="box red"/>
+  <text x="696" y="181" class="label">3. 利子率ペッグ</text>
+  <text x="696" y="216" class="body">BK 条件を満たさず</text>
+  <text x="696" y="248" class="body">サンスポット均衡が残る</text>
+
+  <rect x="60" y="360" width="250" height="138" class="box amber"/>
+  <text x="84" y="399" class="label">4. テイラー原理</text>
+  <text x="84" y="434" class="math">φ &gt; 1</text>
+  <text x="84" y="466" class="body">均衡の一意性を回復</text>
+
+  <rect x="367" y="360" width="250" height="138" class="box purple"/>
+  <text x="391" y="399" class="label">5. ショックと裁量</text>
+  <text x="391" y="434" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan>=βEπ<tspan baseline-shift="sub" font-size="14">t+1</tspan>+κx<tspan baseline-shift="sub" font-size="14">t</tspan>+u<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <text x="391" y="466" class="body">安定化バイアス</text>
+
+  <rect x="674" y="360" width="250" height="138" class="box green"/>
+  <text x="698" y="399" class="label">6. コミットメント</text>
+  <text x="698" y="434" class="math">κπ<tspan baseline-shift="sub" font-size="14">t</tspan>+λ(x<tspan baseline-shift="sub" font-size="14">t</tspan>−x<tspan baseline-shift="sub" font-size="14">t−1</tspan>)=0</text>
+  <text x="698" y="466" class="body">履歴依存性と時間的非整合性</text>
+
+  <rect x="978" y="251" width="170" height="138" class="box blue"/>
+  <text x="1002" y="290" class="label">7. Timeless</text>
+  <text x="1002" y="325" class="body">初期時点の</text>
+  <text x="1002" y="351" class="body">特権を排除</text>
+  <text x="1002" y="377" class="small">政策評価の基準</text>
+
+  <path d="M310 211 C330 211 343 211 363 211" class="line"/>
+  <path d="M617 211 C637 211 650 211 670 211" class="line"/>
+  <path d="M795 280 C738 333 410 315 308 392" class="line"/>
+  <path d="M310 429 C330 429 345 429 365 429" class="line"/>
+  <path d="M619 429 C639 429 652 429 672 429" class="line"/>
+  <path d="M925 429 C971 407 994 385 1009 370" class="line"/>
+
+  <text x="60" y="565" class="small">読む順序：第8回の 3 本の NK 方程式を出発点に、政策ルールが均衡をどう選び、ショック下でどのルールを評価すべきかを学ぶ。</text>
+</svg>
