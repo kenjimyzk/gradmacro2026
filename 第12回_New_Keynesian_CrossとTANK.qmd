@@ -934,21 +934,9 @@ TANK は、単に流動性制約家計を足したモデルではありません
 ## 最終的な見取り図
 
 この講義で作ってきたモデルは、次の順序で積み上がっています。
-$$
-\text{学部マクロの45度線}
-\quad\longrightarrow\quad
-\text{動学的消費・資産価格付け}
-\quad\longrightarrow\quad
-\text{RBC の一般均衡}
-\quad\longrightarrow\quad
-\text{価格硬直性をもつ NK}
-\quad\longrightarrow\quad
-\text{RANK}
-\quad\longrightarrow\quad
-\text{TANK}
-\quad\longrightarrow\quad
-\text{NK Cross と分配増幅}.
-$$
+
+![講義全体の見取り図。第1回の45度線分析から、動学的消費、RBC、独占的競争、価格硬直性、RANK、TANK、最後の NK Cross と分配増幅へ進む。](figures/lecture12/course_roadmap.svg){#fig-course-roadmap width=95%}
+
 最初の45度線分析では、PE 曲線は外から与えられていました。最後の NK クロスでは、PE 曲線の傾きもシフトも、家計の最適化と分配ルールから導かれます。これが、本講義全体で得たもっとも大きな進歩です。
 
 最終的なメッセージは次の通りです。金融政策の効果は、単に「利子率が下がると消費が増える」という直接効果だけでは決まりません。誰が Euler 方程式を持ち、誰が現在所得を消費し、賃金所得・配当所得・移転が誰に入るかによって、所得フィードバックの大きさが変わります。TANK の NK クロスは、そのことをもっとも簡潔に示す枠組みです。
