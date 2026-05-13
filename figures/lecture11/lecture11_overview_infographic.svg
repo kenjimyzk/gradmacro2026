@@ -52,13 +52,15 @@
   <text class="label" x="664" y="195">分配ブロック</text>
   <text class="text" x="664" y="228">配当 d は S へ</text>
   <text class="text" x="664" y="253">移転 z は H へ</text>
-  <text class="math" x="664" y="278">gamma sigma_c + phi sigma_n = 0</text>
+  <text class="math" x="664" y="273">gamma sigma_c +</text>
+  <text class="math" x="664" y="293">phi sigma_n = 0</text>
 
   <rect class="box purple" x="918" y="158" width="204" height="142"/>
   <text class="label" x="944" y="195">TANK版NK</text>
   <text class="text" x="944" y="228">ISだけが変わる</text>
   <text class="text" x="944" y="253">NKPCは第7回と同じ</text>
-  <text class="math" x="944" y="278">x = E x - (r-r_f)/(gamma Theta)</text>
+  <text class="math" x="944" y="273">x = E x - (r-r_f)</text>
+  <text class="math" x="944" y="293">/ (gamma Theta)</text>
 
   <path class="arrow" d="M288 229 H348"/>
   <path class="arrow" d="M568 229 H628"/>
