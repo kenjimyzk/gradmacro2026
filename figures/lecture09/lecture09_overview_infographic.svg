@@ -35,12 +35,12 @@
 
   <rect x="58" y="142" width="250" height="138" class="box blue"/>
   <text x="82" y="181" class="label">1. 基本体系</text>
-  <text x="82" y="216" class="math">x<tspan baseline-shift="sub" font-size="14">t</tspan>, π<tspan baseline-shift="sub" font-size="14">t</tspan>, r<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <text x="82" y="216" class="math">x_t, pi_t, r_t</text>
   <text x="82" y="248" class="body">IS + NKPC + 政策ルール</text>
 
   <rect x="365" y="142" width="250" height="138" class="box green"/>
   <text x="389" y="181" class="label">2. 神々の配剤</text>
-  <text x="389" y="216" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan>=0, x<tspan baseline-shift="sub" font-size="14">t</tspan>=0</text>
+  <text x="389" y="216" class="math">pi_t=0, x_t=0</text>
   <text x="389" y="248" class="body">インフレとギャップを同時安定化</text>
 
   <rect x="672" y="142" width="250" height="138" class="box red"/>
@@ -50,17 +50,17 @@
 
   <rect x="60" y="360" width="250" height="138" class="box amber"/>
   <text x="84" y="399" class="label">4. テイラー原理</text>
-  <text x="84" y="434" class="math">φ &gt; 1</text>
+  <text x="84" y="434" class="math">phi &gt; 1</text>
   <text x="84" y="466" class="body">均衡の一意性を回復</text>
 
   <rect x="367" y="360" width="250" height="138" class="box purple"/>
   <text x="391" y="399" class="label">5. ショックと裁量</text>
-  <text x="391" y="434" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan>=βEπ<tspan baseline-shift="sub" font-size="14">t+1</tspan>+κx<tspan baseline-shift="sub" font-size="14">t</tspan>+u<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <text x="391" y="434" class="math">pi_t=beta E pi_{t+1}+kappa x_t+u_t</text>
   <text x="391" y="466" class="body">安定化バイアス</text>
 
   <rect x="674" y="360" width="250" height="138" class="box green"/>
   <text x="698" y="399" class="label">6. コミットメント</text>
-  <text x="698" y="434" class="math">κπ<tspan baseline-shift="sub" font-size="14">t</tspan>+λ(x<tspan baseline-shift="sub" font-size="14">t</tspan>−x<tspan baseline-shift="sub" font-size="14">t−1</tspan>)=0</text>
+  <text x="698" y="434" class="math">kappa pi_t+lambda(x_t-x_{t-1})=0</text>
   <text x="698" y="466" class="body">履歴依存性と時間的非整合性</text>
 
   <rect x="978" y="251" width="170" height="138" class="box blue"/>

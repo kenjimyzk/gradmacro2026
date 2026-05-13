@@ -38,26 +38,26 @@
   <rect class="box blue" x="78" y="158" width="210" height="142"/>
   <text class="label" x="104" y="195">第11回の出発点</text>
   <text class="text" x="104" y="228">外生的な移転 z</text>
-  <text class="text" x="104" y="253">消費格差 σᶜ</text>
-  <text class="math" x="104" y="278">σᶜ ∝ d - z</text>
+  <text class="text" x="104" y="253">消費格差 sigma_c</text>
+  <text class="math" x="104" y="278">sigma_c ∝ d - z</text>
 
   <rect class="box green" x="358" y="158" width="210" height="142"/>
   <text class="label" x="384" y="195">配当課税ルール</text>
   <text class="text" x="384" y="228">z は配当に連動</text>
-  <text class="text" x="384" y="253">τ_D は制度パラメータ</text>
-  <text class="math" x="384" y="278">z = (τ_D/λ)d</text>
+  <text class="text" x="384" y="253">tau_D は制度パラメータ</text>
+  <text class="math" x="384" y="278">z = (tau_D/lambda)d</text>
 
   <rect class="box amber" x="638" y="158" width="210" height="142"/>
   <text class="label" x="664" y="195">所得弾力性</text>
   <text class="text" x="664" y="228">Hは現在所得を消費</text>
   <text class="text" x="664" y="253">所得が何倍動くか</text>
-  <text class="math" x="664" y="278">cᴴ = χy</text>
+  <text class="math" x="664" y="278">c_H = chi y</text>
 
   <rect class="box purple" x="918" y="158" width="204" height="142"/>
   <text class="label" x="944" y="195">NKクロス</text>
   <text class="text" x="944" y="228">PE曲線の傾き</text>
   <text class="text" x="944" y="253">直接効果と間接効果</text>
-  <text class="math" x="944" y="278">Ωᵀ/Ωᴿ</text>
+  <text class="math" x="944" y="278">Omega_T/Omega_R</text>
 
   <path class="arrow" d="M288 229 H348"/>
   <path class="arrow" d="M568 229 H628"/>
@@ -66,15 +66,15 @@
   <rect class="box teal" x="118" y="382" width="402" height="118"/>
   <text class="label" x="150" y="420">RANK</text>
   <text class="text" x="150" y="452">PE曲線の傾きは小さい</text>
-  <text class="math" x="150" y="480">ωᴿ = (1-β)/(1-βp)</text>
+  <text class="math" x="150" y="480">omega_R = (1-beta)/(1-beta p)</text>
 
   <rect class="box yellow" x="680" y="382" width="402" height="118"/>
   <text class="label" x="712" y="420">TANK</text>
   <text class="text" x="712" y="452">直接効果は小さいが所得フィードバックは大きい</text>
-  <text class="math" x="712" y="480">Ωᵀ/Ωᴿ = (1-λ)/(1-λχ)</text>
+  <text class="math" x="712" y="480">Omega_T/Omega_R = (1-lambda)/(1-lambda chi)</text>
 
   <path class="thin" d="M743 300 C710 340, 610 368, 498 407"/>
   <path class="thin" d="M1020 300 C1012 342, 968 368, 912 382"/>
 
-  <text class="note" x="80" y="556">結論：TANKの増幅条件は、流動性制約家計の存在そのものではなく、χ&gt;1、すなわち τ_D&lt;λ である。</text>
+  <text class="note" x="80" y="556">結論：TANKの増幅条件は、流動性制約家計の存在そのものではなく、chi&gt;1、すなわち tau_D&lt;lambda である。</text>
 </svg>

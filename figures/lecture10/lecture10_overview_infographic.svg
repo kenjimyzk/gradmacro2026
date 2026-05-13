@@ -28,20 +28,20 @@
   <rect class="box box-blue" x="58" y="138" width="245" height="132"/>
   <text class="label" x="82" y="176">第7回の土台</text>
   <text class="text" x="82" y="208">価格硬直性</text>
-  <text class="text" x="82" y="234">RANK, α=0</text>
-  <text class="math" x="82" y="258">πᵖ = βEπᵖ + κₚmc</text>
+  <text class="text" x="82" y="234">RANK, alpha=0</text>
+  <text class="math" x="82" y="258">pi_p = beta E pi_p + kappa_p mc</text>
 
   <rect class="box box-green" x="360" y="138" width="245" height="132"/>
   <text class="label" x="384" y="176">労働パッカー</text>
   <text class="text" x="384" y="208">差別化労働を集計</text>
   <text class="text" x="384" y="234">賃金が需要を動かす</text>
-  <text class="math" x="384" y="258">N(h)=N(W(h)/W)⁻ψʷ</text>
+  <text class="math" x="384" y="258">N(h)=N(W(h)/W)^(-psi_w)</text>
 
   <rect class="box box-amber" x="662" y="138" width="245" height="132"/>
   <text class="label" x="686" y="176">賃金硬直性</text>
   <text class="text" x="686" y="208">名目賃金の調整費用</text>
   <text class="text" x="686" y="234">賃金マークアップ</text>
-  <text class="math" x="686" y="258">πʷ = βEπʷ - κʷμʷ</text>
+  <text class="math" x="686" y="258">pi_w = beta E pi_w - kappa_w mu_w</text>
 
   <rect class="box box-red" x="964" y="138" width="180" height="132"/>
   <text class="label" x="988" y="176">政策問題</text>
@@ -55,9 +55,9 @@
 
   <rect class="box" x="148" y="350" width="904" height="126"/>
   <text class="label" x="180" y="390">中心となる整理式</text>
-  <text class="math" x="180" y="426">μᵖ + μʷ = -(γ+ϕ)x</text>
+  <text class="math" x="180" y="426">mu_p + mu_w = -(gamma+phi)x</text>
   <text class="text" x="500" y="426">価格マークアップと賃金マークアップの合計が需給ギャップを表す</text>
-  <text class="math" x="180" y="456">πʷ - πᵖ = Δw</text>
+  <text class="math" x="180" y="456">pi_w - pi_p = Delta w</text>
   <text class="text" x="500" y="456">賃金インフレと価格インフレの差が実質賃金を動かす</text>
 
   <path class="thin" d="M180 270 C210 310, 270 330, 360 350"/>

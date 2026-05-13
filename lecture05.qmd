@@ -595,6 +595,24 @@ alpha <- 0.4
 gamma <- 1
 varphi <- 1
 
+jp_font_candidates <- c(
+  "/Users/kenjimyzk/Library/Fonts/NotoSansJP-Regular.ttf",
+  "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
+  "/System/Library/Fonts/Supplemental/AppleGothic.ttf"
+)
+jp_font <- jp_font_candidates[file.exists(jp_font_candidates)][1]
+font_family <- ""
+
+if (
+  requireNamespace("showtext", quietly = TRUE) &&
+    requireNamespace("sysfonts", quietly = TRUE) &&
+    !is.na(jp_font)
+) {
+  suppressWarnings(sysfonts::font_add("jp_sans", regular = jp_font))
+  showtext::showtext_auto(enable = TRUE)
+  font_family <- "jp_sans"
+}
+
 denom <- varphi + alpha + gamma * (1 - alpha)
 vartheta <- (1 - alpha) / denom
 tau_star <- 1 / (1 + vartheta)
@@ -603,7 +621,7 @@ tau <- seq(0, 1, length.out = 501)
 tax_revenue <- tau * (1 - tau)^vartheta
 tax_revenue_star <- tau_star * (1 - tau_star)^vartheta
 
-op <- par(mar = c(4.5, 4.5, 2.5, 1), las = 1)
+op <- par(mar = c(4.5, 4.5, 2.5, 1), las = 1, family = font_family)
 plot(
   tau, tax_revenue,
   type = "n",
@@ -625,6 +643,10 @@ text(
   col = "#D62728"
 )
 par(op)
+
+if (font_family == "jp_sans") {
+  showtext::showtext_auto(enable = FALSE)
+}
 ```
 
 # まとめと第6回への接続

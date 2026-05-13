@@ -26,7 +26,7 @@
   <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
   <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
   <text class="title" x="74" y="82">TANK と RANK の総需要乗数の比</text>
-  <text class="subtitle" x="76" y="112">通常領域では χ&gt;1 なら RANK より大きく、χ&lt;1 なら RANK より小さい</text>
+  <text class="subtitle" x="76" y="112">通常領域では chi&gt;1 なら RANK より大きく、chi&lt;1 なら RANK より小さい</text>
 
   <line class="grid" x1="150" y1="430" x2="930" y2="430"/>
   <line class="grid" x1="150" y1="350" x2="930" y2="350"/>
@@ -40,15 +40,15 @@
   <path class="amber" d="M150 350 C310 366, 500 385, 720 410 C815 421, 885 430, 930 436"/>
   <path class="danger" d="M820 150 C865 128, 902 118, 930 112"/>
 
-  <text class="label" x="500" y="558">Type H 比率 λ</text>
-  <text class="label" x="76" y="146">Ωᵀ/Ωᴿ</text>
+  <text class="label" x="500" y="558">Type H 比率 lambda</text>
+  <text class="label" x="76" y="146">Omega_T/Omega_R</text>
   <text class="note" x="116" y="356">1</text>
-  <text class="math" x="650" y="220">χ &gt; 1</text>
-  <text class="math" x="770" y="342">χ = 1</text>
-  <text class="math" x="670" y="430">χ &lt; 1</text>
+  <text class="math" x="650" y="220">chi &gt; 1</text>
+  <text class="math" x="770" y="342">chi = 1</text>
+  <text class="math" x="670" y="430">chi &lt; 1</text>
   <text class="note" x="834" y="132">通常領域の外</text>
 
   <rect class="box" x="206" y="168" width="354" height="94"/>
-  <text class="math" x="228" y="204">Ωᵀ/Ωᴿ = (1-λ)/(1-λχ)</text>
+  <text class="math" x="228" y="204">Omega_T/Omega_R = (1-lambda)/(1-lambda chi)</text>
   <text class="text" x="228" y="234">分母が正の通常領域で比較する</text>
 </svg>

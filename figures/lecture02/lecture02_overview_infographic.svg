@@ -40,15 +40,15 @@
     <text x="364" y="253" font-size="17">長期平均</text>
     <text x="364" y="278" font-size="17">安定な変動</text>
     <text x="622" y="198" font-size="23" font-weight="700">AR(1)</text>
-    <text x="622" y="228" font-size="17">持続性 ρ</text>
+    <text x="622" y="228" font-size="17">持続性 rho</text>
     <text x="622" y="253" font-size="17">半減期</text>
     <text x="622" y="278" font-size="17">ショック過程</text>
     <text x="880" y="198" font-size="23" font-weight="700">IRF</text>
     <text x="880" y="228" font-size="17">ショックの波及</text>
-    <text x="880" y="253" font-size="17">ρᵗで減衰</text>
+    <text x="880" y="253" font-size="17">rho^t で減衰</text>
     <text x="880" y="278" font-size="17">政策効果の形</text>
     <text x="252" y="448" font-size="23" font-weight="700">状態空間</text>
-    <text x="252" y="478" font-size="17">sₜ₊₁ = A sₜ + Bεₜ₊₁</text>
+    <text x="252" y="478" font-size="17">s_{t+1} = A s_t + B eps_{t+1}</text>
     <text x="252" y="503" font-size="17">固有値で安定性を読む</text>
     <text x="676" y="448" font-size="23" font-weight="700">対数線形近似</text>
     <text x="676" y="478" font-size="17">非線形条件を線形化</text>

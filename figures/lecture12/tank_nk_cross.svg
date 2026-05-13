@@ -49,13 +49,13 @@
   <text class="label" x="500" y="558">所得 y</text>
   <text class="label" x="78" y="146">計画消費 c</text>
   <text class="text" x="780" y="186">45度線</text>
-  <text class="math" x="790" y="246">PEᵀ(r)</text>
-  <text class="math" x="790" y="200">PEᵀ(r低下)</text>
-  <text class="math" x="770" y="352">PEᴿ</text>
+  <text class="math" x="790" y="246">PE_T(r)</text>
+  <text class="math" x="790" y="200">PE_T(r低下)</text>
+  <text class="math" x="770" y="352">PE_R</text>
   <text class="note" x="410" y="353">直接効果</text>
   <text class="note" x="458" y="309">所得フィードバック</text>
 
   <rect class="box" x="194" y="160" width="392" height="96"/>
-  <text class="math" x="216" y="196">ωᵀ = [1-β(1-λχ)]/[1-βp(1-λχ)]</text>
-  <text class="text" x="216" y="226">χが大きいほどPE曲線は急になる</text>
+  <text class="math" x="216" y="196">omega_T = [1-beta(1-lambda chi)]/[1-beta p(1-lambda chi)]</text>
+  <text class="text" x="216" y="226">chiが大きいほどPE曲線は急になる</text>
 </svg>

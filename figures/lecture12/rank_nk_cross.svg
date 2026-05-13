@@ -25,7 +25,7 @@
   <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
   <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
   <text class="title" x="74" y="82">RANK の New Keynesian Cross</text>
-  <text class="subtitle" x="76" y="112">β が 1 に近いと PE 曲線はほぼ水平で、直接的な異時点間代替が中心になる</text>
+  <text class="subtitle" x="76" y="112">beta が 1 に近いと PE 曲線はほぼ水平で、直接的な異時点間代替が中心になる</text>
 
   <line class="grid" x1="150" y1="430" x2="930" y2="430"/>
   <line class="grid" x1="150" y1="350" x2="930" y2="350"/>
@@ -49,6 +49,6 @@
   <text class="note" x="535" y="344">直接シフト</text>
 
   <rect class="box" x="204" y="162" width="330" height="86"/>
-  <text class="math" x="226" y="198">ωᴿ = (1-β)/(1-βp)</text>
-  <text class="text" x="226" y="226">一時的ショックでは ωᴿ ≃ 0</text>
+  <text class="math" x="226" y="198">omega_R = (1-beta)/(1-beta p)</text>
+  <text class="text" x="226" y="226">一時的ショックでは omega_R ≃ 0</text>
 </svg>

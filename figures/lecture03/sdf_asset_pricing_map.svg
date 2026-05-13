@@ -26,19 +26,19 @@
   </g>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
     <text x="108" y="158" font-size="22" font-weight="700">家計の限界効用</text>
-    <text x="108" y="190" font-size="18">今日：U_C(Cₜ)</text>
-    <text x="108" y="220" font-size="18">明日：U_C(Cₜ₊₁)</text>
+    <text x="108" y="190" font-size="18">今日：U_C(C_t)</text>
+    <text x="108" y="220" font-size="18">明日：U_C(C_{t+1})</text>
     <text x="108" y="247" font-size="16" fill="#566273">状態で変わる</text>
     <text x="382" y="158" font-size="22" font-weight="700">確率的割引因子</text>
-    <text x="389" y="197" font-size="24" fill="#20242a">Qₜ,ₜ₊₁ = β U_C(Cₜ₊₁)/U_C(Cₜ)</text>
+    <text x="389" y="197" font-size="24" fill="#20242a">Q_{t,t+1} = beta U_C(C_{t+1})/U_C(C_t)</text>
     <text x="389" y="232" font-size="17" fill="#566273">不況時の1単位を高く評価</text>
     <text x="734" y="158" font-size="22" font-weight="700">共通の価格付け核</text>
-    <text x="734" y="190" font-size="19">1 = Eₜ[Q Rʲ]</text>
+    <text x="734" y="190" font-size="19">1 = E_t[Q R^j]</text>
     <text x="734" y="220" font-size="17">全資産に同じQを使う</text>
     <text x="238" y="386" font-size="21" font-weight="700">無リスク債券</text>
-    <text x="238" y="416" font-size="18">1 = Eₜ[Q Rᶠ]</text>
+    <text x="238" y="416" font-size="18">1 = E_t[Q R^f]</text>
     <text x="598" y="386" font-size="21" font-weight="700">株式</text>
-    <text x="598" y="416" font-size="18">Vᶠₜ = Eₜ[Q(Vᶠₜ₊₁ + Dₜ₊₁)]</text>
+    <text x="598" y="416" font-size="18">V^f_t = E_t[Q(V^f_{t+1} + D_{t+1})]</text>
     <text x="86" y="515" font-size="22" font-weight="700">無裁定条件の読み方</text>
     <text x="318" y="515" font-size="18" fill="#555f6f">期待収益率が同じという意味ではなく、Qで割り引いた期待値が同じという意味</text>
   </g>

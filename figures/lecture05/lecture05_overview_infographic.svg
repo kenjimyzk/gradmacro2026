@@ -33,17 +33,17 @@
     <text x="116" y="205" font-size="22" font-weight="700">第4回の実物側</text>
     <text x="116" y="236" font-size="17">家計と企業のFOC</text>
     <text x="116" y="262" font-size="17">MRS = W = MPN</text>
-    <text x="116" y="288" font-size="17">技術ショック aₜ</text>
+    <text x="116" y="288" font-size="17">技術ショック a_t</text>
 
     <text x="446" y="194" font-size="22" font-weight="700">政府部門</text>
-    <text x="446" y="225" font-size="17">Gₜ, TRₜ, TXₜ, Bₜ</text>
-    <text x="446" y="251" font-size="17">PBₜ = TXₜ − TRₜ − Gₜ</text>
+    <text x="446" y="225" font-size="17">G_t, TR_t, TX_t, B_t</text>
+    <text x="446" y="251" font-size="17">PB_t = TX_t - TR_t - G_t</text>
     <text x="446" y="277" font-size="17">政府予算制約</text>
 
     <text x="838" y="205" font-size="22" font-weight="700">資源制約</text>
-    <text x="838" y="236" font-size="17">Yₜ = Cₜ + Gₜ</text>
-    <text x="838" y="262" font-size="17">gₜ は Cₜ を押し下げる</text>
-    <text x="838" y="288" font-size="17">ζ_a, ζ_g で解く</text>
+    <text x="838" y="236" font-size="17">Y_t = C_t + G_t</text>
+    <text x="838" y="262" font-size="17">g_t は C_t を押し下げる</text>
+    <text x="838" y="288" font-size="17">zeta_a, zeta_g で解く</text>
 
     <text x="158" y="458" font-size="22" font-weight="700">一括税・移転</text>
     <text x="158" y="490" font-size="17">限界条件を変えない</text>

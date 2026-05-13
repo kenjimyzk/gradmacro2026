@@ -31,24 +31,24 @@
   </g>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
     <text x="118" y="207" font-size="22" font-weight="700">家計</text>
-    <text x="118" y="238" font-size="17">消費 Cₜ と労働 Nₜ</text>
-    <text x="118" y="264" font-size="17">MRSₜ = Wₜ</text>
-    <text x="118" y="290" font-size="17">MRISₜ,ₜ₊₁ = Qₜ,ₜ₊₁</text>
+    <text x="118" y="238" font-size="17">消費 C_t と労働 N_t</text>
+    <text x="118" y="264" font-size="17">MRS_t = W_t</text>
+    <text x="118" y="290" font-size="17">MRIS_{t,t+1} = Q_{t,t+1}</text>
 
     <text x="478" y="198" font-size="22" font-weight="700">市場均衡</text>
-    <text x="478" y="229" font-size="17">Yₜ = Cₜ</text>
-    <text x="478" y="255" font-size="17">Bₜ = 0, Θₜ = 1</text>
-    <text x="478" y="281" font-size="17" font-weight="700">MRSₜ = Wₜ = MPNₜ</text>
+    <text x="478" y="229" font-size="17">Y_t = C_t</text>
+    <text x="478" y="255" font-size="17">B_t = 0, Theta_t = 1</text>
+    <text x="478" y="281" font-size="17" font-weight="700">MRS_t = W_t = MPN_t</text>
 
     <text x="838" y="207" font-size="22" font-weight="700">企業</text>
-    <text x="838" y="238" font-size="17">Yₜ = exp(aₜ)F(Nₜ)</text>
+    <text x="838" y="238" font-size="17">Y_t = exp(a_t)F(N_t)</text>
     <text x="838" y="264" font-size="17">労働需要</text>
-    <text x="838" y="290" font-size="17">Wₜ = MPNₜ</text>
+    <text x="838" y="290" font-size="17">W_t = MPN_t</text>
 
     <text x="412" y="436" font-size="22" font-weight="700">技術ショックと解</text>
-    <text x="412" y="468" font-size="17">aₜ が N,Y,C,W を同時に動かす</text>
+    <text x="412" y="468" font-size="17">a_t が N,Y,C,W を同時に動かす</text>
     <text x="412" y="493" font-size="17">代替効果 vs 所得効果</text>
-    <text x="412" y="518" font-size="17">yₜ = ζₐ aₜ, rₜ = γEₜ(cₜ₊₁−cₜ)</text>
-    <text x="412" y="543" font-size="17">第5回: Yₜ = Cₜ + Gₜ</text>
+    <text x="412" y="518" font-size="17">y_t = zeta_a a_t, r_t = gamma E_t(c_{t+1}-c_t)</text>
+    <text x="412" y="543" font-size="17">第5回: Y_t = C_t + G_t</text>
   </g>
 </svg>
