@@ -57,8 +57,8 @@ lang: ja
 | $D_t$ | 中間財企業の配当 |
 | $TX_t^M(j)$ | 中間財企業 $j$ への一括税 |
 | $TX_t^M$ | 一括税の集計額 |
-| $A_t$ | 技術水準 |
-| $C,N,Y,W,MC,A$ | 対応する定常状態の水準 |
+| $a_t$ | 対数技術水準（技術水準は $\exp(a_t)$） |
+| $C,N,Y,W,MC$ | 対応する定常状態の水準 |
 
 主な基礎パラメータは次の通りです。
 
@@ -68,7 +68,6 @@ lang: ja
 | $\gamma$ | 異時点間代替弾力性の逆数 |
 | $\varphi$ | フリッシュ弾力性の逆数 |
 | $0\leq\alpha<1$ | 生産関数の収穫逓減を表すパラメータ |
-| $\nu$ | 労働不効用の水準を調整するパラメータ |
 | $\rho$ | CES 関数の曲率パラメータ |
 | $\theta,\theta_n$ | CES 集計のウェイト |
 | $\psi$ | 投入または中間財の代替弾力性 |
@@ -240,7 +239,7 @@ $$
 
 この講義では資本を導入しないので、中間財企業は労働 $N_t(j)$ だけを使って生産します。
 $$
-Y_t^M(j)=A_tF(N_t(j)).
+Y_t^M(j)=\exp(a_t)F(N_t(j)).
 $$
 中間財需要
 $$
@@ -256,7 +255,7 @@ Y_t\left(\frac{P_t^M(j)}{P_t}\right)^{1-\psi}
 &\quad
 +MC_t(j)
 \left[
-A_tF(N_t(j))
+\exp(a_t)F(N_t(j))
 -Y_t\left(\frac{P_t^M(j)}{P_t}\right)^{-\psi}
 \right].
 \end{aligned}
@@ -265,11 +264,11 @@ $$
 
 労働に関する一階条件は
 $$
-MC_t(j)A_tF_N(N_t(j))-W_t=0.
+MC_t(j)\exp(a_t)F_N(N_t(j))-W_t=0.
 $$
 また、$MC_t(j)$ に関する一階条件は生産制約
 $$
-A_tF(N_t(j))
+\exp(a_t)F(N_t(j))
 =Y_t\left(\frac{P_t^M(j)}{P_t}\right)^{-\psi}
 $$
 です。
@@ -294,9 +293,9 @@ $$
 です。対称均衡では $P_t^M(j)=P_t$、$Y_t^M(j)=Y_t$、$N_t(j)=N_t$ なので
 $$
 \begin{aligned}
-W_t&=MC_tA_tF_N(N_t),\\
+W_t&=MC_t\exp(a_t)F_N(N_t),\\
 MC_t&=1-\frac{1}{\psi},\\
-Y_t&=A_tF(N_t).
+Y_t&=\exp(a_t)F(N_t).
 \end{aligned}
 $$
 価格と限界費用の比であるマークアップ率は
@@ -311,7 +310,7 @@ $$
 $$
 D_t=Y_t-W_tN_t
 $$
-です。生産関数が $Y_t=A_tN_t^{1-\alpha}$ の場合、労働の限界生産物は $(1-\alpha)Y_t/N_t$ です。したがって
+です。生産関数が $Y_t=\exp(a_t)N_t^{1-\alpha}$ の場合、労働の限界生産物は $(1-\alpha)Y_t/N_t$ です。したがって
 $$
 W_tN_t=(1-\alpha)MC_tY_t
 $$
@@ -319,7 +318,7 @@ $$
 $$
 D_t=\left[1-(1-\alpha)MC_t\right]Y_t
 $$
-です。$\alpha=0$ の線形生産 $Y_t=A_tN_t$ を考えると
+です。$\alpha=0$ の線形生産 $Y_t=\exp(a_t)N_t$ を考えると
 $$
 D_t=(1-MC_t)Y_t=\frac{1}{\psi}Y_t
 $$
@@ -343,9 +342,9 @@ $$
 $$
 \begin{aligned}
 W_t&=-\frac{U_{N,t}}{U_{C,t}},\\
-W_t&=MC_tA_tF_N(N_t),\\
+W_t&=MC_t\exp(a_t)F_N(N_t),\\
 MC_t&=1-\frac{1}{\psi},\\
-Y_t&=A_tF(N_t),\\
+Y_t&=\exp(a_t)F(N_t),\\
 Y_t&=C_t.
 \end{aligned}
 $$
@@ -353,17 +352,17 @@ $$
 
 完全競争モデルとの違いは、企業の労働需要が
 $$
-W_t=A_tF_N(N_t)
+W_t=\exp(a_t)F_N(N_t)
 $$
 ではなく
 $$
-W_t=\left(1-\frac{1}{\psi}\right)A_tF_N(N_t)
+W_t=\left(1-\frac{1}{\psi}\right)\exp(a_t)F_N(N_t)
 $$
 になる点です。独占的競争では、企業は限界費用より高い価格を設定するため、実質限界費用は1未満になり、労働需要と産出は完全競争の場合より低くなります。
 
 # 定常状態
 
-定常状態を明示します。技術水準を $A$、実質限界費用の定常値を $MC$ と書きます。補助金がない場合は
+定常状態を明示します。技術の定常状態を $a=0$、つまり技術水準を $\exp(a)=1$ と正規化し、実質限界費用の定常値を $MC$ と書きます。補助金がない場合は
 $$
 MC=1-\frac{1}{\psi}
 $$
@@ -376,23 +375,23 @@ $$
 効用関数と生産関数を
 $$
 U(C,N)=\frac{C^{1-\gamma}}{1-\gamma}
--\nu\frac{N^{1+\varphi}}{1+\varphi},
+-\frac{N^{1+\varphi}}{1+\varphi},
 \qquad
-Y=AN^{1-\alpha}
+Y=N^{1-\alpha}
 $$
 とします。定常状態では $C=Y$、家計の労働供給条件は
 $$
-W=\nu N^\varphi C^\gamma
+W=N^\varphi C^\gamma
 $$
 であり、企業の労働需要条件は
 $$
-W=MC(1-\alpha)AN^{-\alpha}
+W=MC(1-\alpha)N^{-\alpha}
 $$
 です。したがって
 $$
-\nu N^\varphi(AN^{1-\alpha})^\gamma
+N^\varphi(N^{1-\alpha})^\gamma
 =
-MC(1-\alpha)AN^{-\alpha}
+MC(1-\alpha)N^{-\alpha}
 $$
 を満たします。第4回と同じく
 $$
@@ -403,31 +402,24 @@ $$
 \begin{aligned}
 N^{MC}
 &=
-\left[
-MC
-\frac{1-\alpha}{\nu}
-A^{1-\gamma}
-\right]^{1/\Theta_N},\\
+\left[MC(1-\alpha)\right]^{1/\Theta_N},\\
 Y^{MC}
-&=A(N^{MC})^{1-\alpha},\\
+&=(N^{MC})^{1-\alpha},\\
 C^{MC}
 &=Y^{MC},\\
 W^{MC}
-&=MC(1-\alpha)A(N^{MC})^{-\alpha}.
+&=MC(1-\alpha)(N^{MC})^{-\alpha}.
 \end{aligned}
 $$
 
 第4回の完全競争定常状態は $MC=1$ のケースです。これを上付き $0$ で表すと、
 $$
 N^0=
-\left[
-\frac{1-\alpha}{\nu}
-A^{1-\gamma}
-\right]^{1/\Theta_N},
+(1-\alpha)^{1/\Theta_N},
 \qquad
-Y^0=C^0=A(N^0)^{1-\alpha},
+Y^0=C^0=(N^0)^{1-\alpha},
 \qquad
-W^0=(1-\alpha)A(N^0)^{-\alpha}
+W^0=(1-\alpha)(N^0)^{-\alpha}
 $$
 です。したがって、独占的競争の定常状態は第4回と比べて
 $$
@@ -512,7 +504,7 @@ MC_t=1
 $$
 です。この場合、実質賃金条件は完全競争モデルと同じ
 $$
-W_t=A_tF_N(N_t)
+W_t=\exp(a_t)F_N(N_t)
 $$
 になります。
 
@@ -527,9 +519,9 @@ $$
 定常状態の節と同じく、効用関数と生産関数を
 $$
 U(C_t,N_t)=\frac{C_t^{1-\gamma}}{1-\gamma}
--\nu\frac{N_t^{1+\varphi}}{1+\varphi},
+-\frac{N_t^{1+\varphi}}{1+\varphi},
 \qquad
-Y_t=A_tN_t^{1-\alpha}
+Y_t=\exp(a_t)N_t^{1-\alpha}
 $$
 とします。補助金がなく、定常状態の $MC=1-1/\psi$ が一定であれば、$mc_t=0$ です。対数線形化した体系は
 $$

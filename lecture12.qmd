@@ -133,7 +133,7 @@ $$
 
 | 記号 | 定義 | 役割 |
 |---|---|---|
-| $\chi$ | $1+\varphi\left(1-\tau_D/\lambda\right)$ | Type H 所得・消費の集計所得に対する反応係数。過去回の労働不効用パラメータ $\nu$ とは別物 |
+| $\chi$ | $1+\varphi\left(1-\tau_D/\lambda\right)$ | Type H 所得・消費の集計所得に対する反応係数 |
 | $\Theta_D$ | $(1-\lambda\chi)/(1-\lambda)$ | Type S 所得を集計所得に戻す係数 |
 | $\omega_R,\omega_T$ | PE 曲線の $y_t$ 係数 | RANK、TANK の PE 曲線の傾き。集計MPCと呼ばれることがある |
 | $\Omega_R^D,\Omega_T^D$ | PE 曲線の $(-r_t)$ 係数 | 所得を固定したときの直接効果 |
