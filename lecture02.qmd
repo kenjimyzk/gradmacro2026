@@ -240,7 +240,7 @@ $$
 
 コブ＝ダグラス型生産関数
 $$
-Y_t=A_tK_t^\alpha N_t^{1-\alpha}
+Y_t=\exp(a_t)K_t^\alpha N_t^{1-\alpha}
 $$
 を対数線形化すると、
 $$
@@ -389,7 +389,7 @@ U(C_t,N_t)
 =
 \frac{C_t^{1-\gamma}}{1-\gamma}
 -
-\nu\frac{N_t^{1+\varphi}}{1+\varphi}
+\frac{N_t^{1+\varphi}}{1+\varphi}
 $$
 とします。定常状態の限界効用で測った消費価値 $U_C C$ で正規化し、$c_t=\log(C_t/C)$、$n_t=\log(N_t/N)$ と書くと、一般形は
 $$
@@ -407,11 +407,11 @@ $$
 $$
 \omega_N
 \equiv
-\frac{\nu N^{1+\varphi}}{U_C C}
+\frac{N^{1+\varphi}}{U_C C}
 $$
 は、定常状態での労働不効用の大きさを消費価値で測った係数です。
 
-以下では、厚生ロスの基本形を見やすくするため、$C=N=1$、$\nu=1$、かつ効率定常状態を仮定します。この正規化では $\omega_N=1$ なので、
+以下では、厚生ロスの基本形を見やすくするため、$C=N=1$、かつ効率定常状態を仮定します。この正規化では $\omega_N=1$ なので、
 $$
 \frac{U(C_t,N_t)-U(C,N)}{U_C C}
 =

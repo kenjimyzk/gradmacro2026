@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
   <title id="title">第5回講義の全体像</title>
-  <desc id="desc">政府部門を導入し、政府予算制約、資源制約、政府支出ショック、税制のくさびを整理する図。</desc>
+  <desc id="desc">政府部門を導入し、政府予算制約、資源制約、政府支出ショック、税の帰着、税制のくさびを整理する図。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
@@ -27,7 +27,7 @@
     <rect x="418" y="156" width="284" height="168" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
     <rect x="810" y="168" width="222" height="146" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
     <rect x="130" y="420" width="290" height="116" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
-    <rect x="700" y="420" width="290" height="116" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+    <rect x="700" y="420" width="290" height="138" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
   </g>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
     <text x="116" y="205" font-size="22" font-weight="700">第4回の実物側</text>
@@ -42,8 +42,8 @@
 
     <text x="838" y="205" font-size="22" font-weight="700">資源制約</text>
     <text x="838" y="236" font-size="17">Yₜ = Cₜ + Gₜ</text>
-    <text x="838" y="262" font-size="17">gₜ は民間消費を押す</text>
-    <text x="838" y="288" font-size="17">ζₐ, ζg で解く</text>
+    <text x="838" y="262" font-size="17">gₜ は Cₜ を押し下げる</text>
+    <text x="838" y="288" font-size="17">ζ_a, ζ_g で解く</text>
 
     <text x="158" y="458" font-size="22" font-weight="700">一括税・移転</text>
     <text x="158" y="490" font-size="17">限界条件を変えない</text>
@@ -51,6 +51,7 @@
 
     <text x="728" y="458" font-size="22" font-weight="700">比例税</text>
     <text x="728" y="490" font-size="17">労働供給にくさび</text>
-    <text x="728" y="516" font-size="17">ラッファーカーブ</text>
+    <text x="728" y="516" font-size="17">税の帰着はくさびで決まる</text>
+    <text x="728" y="542" font-size="17">ラッファーカーブ</text>
   </g>
 </svg>
