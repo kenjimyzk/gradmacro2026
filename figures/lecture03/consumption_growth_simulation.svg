@@ -51,6 +51,6 @@
     <line x1="760" y1="153" x2="812" y2="153" stroke="#d9792f" stroke-width="4"/>
     <text x="826" y="159" font-size="16" fill="#20242a">gamma = 5</text>
     <text x="92" y="515" font-size="22" font-weight="700" fill="#20242a">数値例：利子率と異時点間代替</text>
-    <text x="372" y="515" font-size="18" fill="#555f6f">gammaが大きいほど、利子率変化に対する消費成長率の反応は小さい</text>
+    <text x="92" y="542" font-size="17" fill="#555f6f">gammaが大きいほど、利子率変化に対する消費成長率の反応は小さい</text>
   </g>
 </svg>

@@ -55,13 +55,15 @@
 
   <rect x="367" y="360" width="250" height="138" class="box purple"/>
   <text x="391" y="399" class="label">5. ショックと裁量</text>
-  <text x="391" y="434" class="math">pi_t=beta E pi_{t+1}+kappa x_t+u_t</text>
-  <text x="391" y="466" class="body">安定化バイアス</text>
+  <text x="391" y="430" class="math" font-size="18">pi_t = beta E_t pi_{t+1}</text>
+  <text x="391" y="454" class="math" font-size="18">+ kappa x_t + u_t</text>
+  <text x="391" y="480" class="body">安定化バイアス</text>
 
   <rect x="674" y="360" width="250" height="138" class="box green"/>
   <text x="698" y="399" class="label">6. コミットメント</text>
-  <text x="698" y="434" class="math">kappa pi_t+lambda(x_t-x_{t-1})=0</text>
-  <text x="698" y="466" class="body">履歴依存性と時間的非整合性</text>
+  <text x="698" y="430" class="math" font-size="18">kappa pi_t + lambda</text>
+  <text x="698" y="454" class="math" font-size="18">(x_t - x_{t-1}) = 0</text>
+  <text x="698" y="480" class="body">履歴依存性と時間的非整合性</text>
 
   <rect x="978" y="251" width="170" height="138" class="box blue"/>
   <text x="1002" y="290" class="label">7. Timeless</text>
