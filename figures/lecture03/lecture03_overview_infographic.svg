@@ -44,12 +44,12 @@
     <text x="630" y="253" font-size="17">包絡線条件</text>
     <text x="630" y="278" font-size="17">同じEuler条件</text>
     <text x="892" y="198" font-size="22" font-weight="700">不確実性</text>
-    <text x="892" y="228" font-size="17">状態 zₜ</text>
+    <text x="892" y="228" font-size="17">状態 z_t</text>
     <text x="892" y="253" font-size="17">条件付き期待</text>
     <text x="892" y="278" font-size="17">来期のリスク</text>
     <text x="266" y="448" font-size="22" font-weight="700">確率的割引因子 Q</text>
     <text x="266" y="478" font-size="17">限界効用で将来を割引</text>
-    <text x="266" y="503" font-size="17">1 = Eₜ[Q R]</text>
+    <text x="266" y="503" font-size="17">1 = E_t[Q R]</text>
     <text x="676" y="448" font-size="22" font-weight="700">株式・企業価値</text>
     <text x="676" y="478" font-size="17">総収益率</text>
     <text x="676" y="503" font-size="17">将来配当の割引現在価値</text>

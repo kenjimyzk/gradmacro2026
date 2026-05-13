@@ -40,19 +40,19 @@
     <text x="442" y="192" font-size="22" font-weight="700">Rotemberg価格調整</text>
     <text x="442" y="223" font-size="17">価格変更に費用</text>
     <text x="442" y="249" font-size="17">現在と将来のMCを考慮</text>
-    <text x="442" y="275" font-size="17">πₜ = βEₜπₜ₊₁ + κxₜ</text>
+    <text x="442" y="275" font-size="17">pi_t = beta E_t pi_{t+1} + kappa x_t</text>
     <text x="442" y="301" font-size="17">NKフィリップス曲線</text>
 
     <text x="840" y="204" font-size="22" font-weight="700">自然水準</text>
-    <text x="840" y="235" font-size="17">yₜᶠ, rₜᶠ</text>
-    <text x="840" y="261" font-size="17">xₜ = yₜ − yₜᶠ</text>
+    <text x="840" y="235" font-size="17">y_t^f, r_t^f</text>
+    <text x="840" y="261" font-size="17">x_t = y_t - y_t^f</text>
     <text x="840" y="287" font-size="17">柔軟価格の基準</text>
 
     <text x="154" y="438" font-size="22" font-weight="700">Euler方程式</text>
     <text x="154" y="470" font-size="17">実質利子率が需要を動かす</text>
 
     <text x="502" y="438" font-size="22" font-weight="700">IS</text>
-    <text x="502" y="470" font-size="17">xₜ と rₜ−rₜᶠ</text>
+    <text x="502" y="470" font-size="17">x_t と r_t-r_t^f</text>
 
     <text x="762" y="438" font-size="22" font-weight="700">Taylor rule</text>
     <text x="762" y="470" font-size="17">名目利子率を設定</text>

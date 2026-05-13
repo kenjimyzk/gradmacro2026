@@ -24,7 +24,7 @@
   <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
   <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
   <text class="title" x="74" y="82">期待項を落とした静学ケース：二重硬直性は傾きを小さくする</text>
-  <text class="subtitle" x="76" y="112">例：κp = κw のとき、実質賃金が動かない局面では有効な傾きは半分になる</text>
+  <text class="subtitle" x="76" y="112">例：kappa_p = kappa_w のとき、実質賃金が動かない局面では有効な傾きは半分になる</text>
 
   <line class="grid" x1="130" y1="430" x2="930" y2="430"/>
   <line class="grid" x1="130" y1="350" x2="930" y2="350"/>
@@ -43,13 +43,13 @@
 
   <rect class="box" x="650" y="142" width="335" height="138"/>
   <line class="line-blue" x1="674" y1="174" x2="724" y2="174"/>
-  <text class="text" x="736" y="180">価格硬直性だけ：κp(γ+ϕ)</text>
+  <text class="text" x="736" y="180">価格硬直性だけ：kappa_p(gamma+phi)</text>
   <line class="line-amber" x1="674" y1="211" x2="724" y2="211"/>
-  <text class="text" x="736" y="217">賃金硬直性だけ：κw(γ+ϕ)</text>
+  <text class="text" x="736" y="217">賃金硬直性だけ：kappa_w(gamma+phi)</text>
   <line class="line-red" x1="674" y1="248" x2="724" y2="248"/>
-  <text class="text" x="736" y="254">二重硬直性：κ̄(γ+ϕ)</text>
+  <text class="text" x="736" y="254">二重硬直性：kappa_bar(gamma+phi)</text>
 
-  <text class="math" x="182" y="206">π = κp(γ+ϕ)x</text>
-  <text class="math" x="182" y="375">π = κ̄(γ+ϕ)x</text>
-  <text class="note" x="182" y="404">κ̄ = (1/κp + 1/κw)^{-1}</text>
+  <text class="math" x="182" y="206">pi = kappa_p(gamma+phi)x</text>
+  <text class="math" x="182" y="375">pi = kappa_bar(gamma+phi)x</text>
+  <text class="note" x="182" y="404">kappa_bar = (1/kappa_p + 1/kappa_w)^{-1}</text>
 </svg>

@@ -39,27 +39,27 @@
     <text x="110" y="287" font-size="16">需要の前向き性</text>
 
     <text x="384" y="206" font-size="21" font-weight="700">政府</text>
-    <text x="384" y="237" font-size="16">Gₜ</text>
+    <text x="384" y="237" font-size="16">G_t</text>
     <text x="384" y="262" font-size="16">資源制約</text>
-    <text x="384" y="287" font-size="16">gₜ</text>
+    <text x="384" y="287" font-size="16">g_t</text>
 
     <text x="634" y="206" font-size="21" font-weight="700">企業</text>
-    <text x="634" y="237" font-size="16">MCₜ</text>
+    <text x="634" y="237" font-size="16">MC_t</text>
     <text x="634" y="262" font-size="16">価格設定</text>
     <text x="634" y="287" font-size="16">NKPC</text>
 
     <text x="884" y="206" font-size="21" font-weight="700">金融政策</text>
     <text x="884" y="237" font-size="16">Taylor rule</text>
-    <text x="884" y="262" font-size="16">rₜᴺ</text>
+    <text x="884" y="262" font-size="16">r_t^N</text>
     <text x="884" y="287" font-size="16">政策ショック</text>
 
     <text x="408" y="438" font-size="22" font-weight="700">RANKモデル</text>
-    <text x="408" y="470" font-size="17">α と Gᵧ を含む一般形</text>
-    <text x="408" y="496" font-size="17">yₜᶠ, rₜᶠ, xₜ を定義</text>
+    <text x="408" y="470" font-size="17">alpha と G_Y を含む一般形</text>
+    <text x="408" y="496" font-size="17">y_t^f, r_t^f, x_t を定義</text>
 
     <text x="144" y="438" font-size="21" font-weight="700">自然水準</text>
     <text x="144" y="470" font-size="16">柔軟価格配分</text>
-    <text x="144" y="496" font-size="16">aₜ と gₜ</text>
+    <text x="144" y="496" font-size="16">a_t と g_t</text>
 
     <text x="824" y="438" font-size="21" font-weight="700">3本のNK方程式</text>
     <text x="824" y="470" font-size="16">IS</text>
