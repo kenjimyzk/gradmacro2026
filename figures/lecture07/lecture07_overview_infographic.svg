@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
   <title id="title">第7回講義の全体像</title>
-  <desc id="desc">価格硬直性を導入し、Rotemberg価格設定、実質限界費用、NKフィリップス曲線、IS曲線、テーラールールの関係を示す。</desc>
+  <desc id="desc">テイラー・ルールと自然利子率が実質利子率ギャップを通じてIS曲線と需給ギャップを動かし、Rotemberg型価格設定を通じてインフレ率を決める流れを示す。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
@@ -9,52 +9,57 @@
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
     </filter>
   </defs>
+
   <rect width="1120" height="650" fill="#ffffff"/>
   <rect x="50" y="40" width="1020" height="560" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
     <text x="80" y="86" font-size="32" font-weight="700" fill="#1f2937">第7回の地図：価格硬直性とNK方程式</text>
-    <text x="80" y="119" font-size="19" fill="#566273">価格調整費用により、実質利子率のずれが需給ギャップとインフレを動かす</text>
+    <text x="80" y="119" font-size="19" fill="#566273">実質利子率と自然利子率の差が、需要から限界費用、インフレへ波及する</text>
   </g>
+
   <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
-    <path d="M 308 232 L 414 232"/>
-    <path d="M 706 232 L 812 232"/>
-    <path d="M 560 316 L 560 388"/>
-    <path d="M 386 450 L 474 450"/>
-    <path d="M 646 450 L 734 450"/>
-    <path d="M 828 388 C 784 342 728 316 664 292"/>
+    <path d="M 340 220 L 390 220"/>
+    <path d="M 780 220 L 730 220"/>
+    <path d="M 560 305 C 520 350 330 350 195 395"/>
+    <path d="M 310 452 L 400 452"/>
+    <path d="M 720 452 L 820 452"/>
   </g>
+
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
-    <rect x="86" y="166" width="222" height="152" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
-    <rect x="414" y="154" width="292" height="176" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
-    <rect x="812" y="166" width="222" height="152" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
-    <rect x="126" y="398" width="260" height="112" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
-    <rect x="474" y="398" width="172" height="112" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
-    <rect x="734" y="398" width="260" height="112" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+    <rect x="80" y="160" width="260" height="120" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="390" y="145" width="340" height="160" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    <rect x="780" y="160" width="260" height="120" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="80" y="395" width="230" height="115" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+    <rect x="400" y="380" width="320" height="145" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="820" y="395" width="220" height="115" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
   </g>
+
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
-    <text x="114" y="204" font-size="22" font-weight="700">第6回の土台</text>
-    <text x="114" y="235" font-size="17">独占的競争</text>
-    <text x="114" y="261" font-size="17">MC = 1 の定常状態</text>
-    <text x="114" y="287" font-size="17">価格設定企業</text>
+    <text x="105" y="196" font-size="22" font-weight="700">テイラー・ルール</text>
+    <text x="105" y="226" font-size="17">名目利子率を設定</text>
+    <text x="105" y="256" font-size="17">r<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">N</tspan> = φπ<tspan baseline-shift="sub" font-size="12">t</tspan> − m<tspan baseline-shift="sub" font-size="12">t</tspan></text>
 
-    <text x="442" y="192" font-size="22" font-weight="700">Rotemberg価格調整</text>
-    <text x="442" y="223" font-size="17">価格変更に費用</text>
-    <text x="442" y="249" font-size="17">現在と将来のMCを考慮</text>
-    <text x="442" y="275" font-size="17">pi_t = beta E_t pi_{t+1} + kappa x_t</text>
-    <text x="442" y="301" font-size="17">NKフィリップス曲線</text>
+    <text x="420" y="183" font-size="22" font-weight="700">実質利子率ギャップとIS曲線</text>
+    <text x="420" y="215" font-size="17">実際の利子率 r<tspan baseline-shift="sub" font-size="12">t</tspan> − 自然利子率 r<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">f</tspan></text>
+    <text x="420" y="248" font-size="16">x<tspan baseline-shift="sub" font-size="11">t</tspan> = 𝔼<tspan baseline-shift="sub" font-size="11">t</tspan>x<tspan baseline-shift="sub" font-size="11">t+1</tspan></text>
+    <text x="420" y="276" font-size="16">− (r<tspan baseline-shift="sub" font-size="11">t</tspan> − r<tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan>) / γ</text>
 
-    <text x="840" y="204" font-size="22" font-weight="700">自然水準</text>
-    <text x="840" y="235" font-size="17">y_t^f, r_t^f</text>
-    <text x="840" y="261" font-size="17">x_t = y_t - y_t^f</text>
-    <text x="840" y="287" font-size="17">柔軟価格の基準</text>
+    <text x="805" y="196" font-size="22" font-weight="700">自然水準</text>
+    <text x="805" y="228" font-size="17">柔軟価格の基準</text>
+    <text x="805" y="258" font-size="17">y<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">f</tspan>，r<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">f</tspan></text>
 
-    <text x="154" y="438" font-size="22" font-weight="700">Euler方程式</text>
-    <text x="154" y="470" font-size="17">実質利子率が需要を動かす</text>
+    <text x="105" y="430" font-size="22" font-weight="700">需給ギャップ</text>
+    <text x="105" y="462" font-size="17">x<tspan baseline-shift="sub" font-size="12">t</tspan> = y<tspan baseline-shift="sub" font-size="12">t</tspan> − y<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">f</tspan></text>
+    <text x="105" y="490" font-size="16">需要と自然産出量の差</text>
 
-    <text x="502" y="438" font-size="22" font-weight="700">IS</text>
-    <text x="502" y="470" font-size="17">x_t と r_t-r_t^f</text>
+    <text x="425" y="417" font-size="22" font-weight="700">Rotemberg型価格設定</text>
+    <text x="425" y="449" font-size="17">NKフィリップス曲線</text>
+    <text x="425" y="480" font-size="16">π<tspan baseline-shift="sub" font-size="11">t</tspan> = β𝔼<tspan baseline-shift="sub" font-size="11">t</tspan>π<tspan baseline-shift="sub" font-size="11">t+1</tspan></text>
+    <text x="425" y="507" font-size="16">+ κ<tspan baseline-shift="sub" font-size="11">x</tspan>&#160;x<tspan baseline-shift="sub" font-size="11">t</tspan></text>
 
-    <text x="762" y="438" font-size="22" font-weight="700">Taylor rule</text>
-    <text x="762" y="470" font-size="17">名目利子率を設定</text>
+    <text x="845" y="430" font-size="22" font-weight="700">インフレ率</text>
+    <text x="845" y="467" font-size="23">π<tspan baseline-shift="sub" font-size="15">t</tspan></text>
+    <text x="845" y="494" font-size="16">物価の変化率</text>
   </g>
 </svg>
