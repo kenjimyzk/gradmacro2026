@@ -35,12 +35,12 @@
 
   <rect x="58" y="142" width="250" height="138" class="box blue"/>
   <text x="82" y="181" class="label">1. 基本体系</text>
-  <text x="82" y="216" class="math">x_t, pi_t, r_t</text>
-  <text x="82" y="248" class="body">IS + NKPC + 政策ルール</text>
+  <text x="82" y="216" class="math">x<tspan baseline-shift="sub" font-size="14">t</tspan>, π<tspan baseline-shift="sub" font-size="14">t</tspan>, r<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <text x="82" y="248" class="body" font-size="15">IS + NKPC + フィッシャー関係</text>
 
   <rect x="365" y="142" width="250" height="138" class="box green"/>
   <text x="389" y="181" class="label">2. 神々の配剤</text>
-  <text x="389" y="216" class="math">pi_t=0, x_t=0</text>
+  <text x="389" y="216" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan> = 0, x<tspan baseline-shift="sub" font-size="14">t</tspan> = 0</text>
   <text x="389" y="248" class="body">インフレとギャップを同時安定化</text>
 
   <rect x="672" y="142" width="250" height="138" class="box red"/>
@@ -50,19 +50,19 @@
 
   <rect x="60" y="360" width="250" height="138" class="box amber"/>
   <text x="84" y="399" class="label">4. テイラー原理</text>
-  <text x="84" y="434" class="math">phi &gt; 1</text>
+  <text x="84" y="434" class="math">φ &gt; 1</text>
   <text x="84" y="466" class="body">均衡の一意性を回復</text>
 
   <rect x="367" y="360" width="250" height="138" class="box purple"/>
   <text x="391" y="399" class="label">5. ショックと裁量</text>
-  <text x="391" y="430" class="math" font-size="18">pi_t = beta E_t pi_{t+1}</text>
-  <text x="391" y="454" class="math" font-size="18">+ kappa x_t + u_t</text>
+  <text x="391" y="430" class="math" font-size="18">π<tspan baseline-shift="sub" font-size="12">t</tspan> = β E<tspan baseline-shift="sub" font-size="12">t</tspan> π<tspan baseline-shift="sub" font-size="12">t+1</tspan></text>
+  <text x="391" y="454" class="math" font-size="18">+ κ<tspan baseline-shift="sub" font-size="12">x</tspan> x<tspan baseline-shift="sub" font-size="12">t</tspan> + u<tspan baseline-shift="sub" font-size="12">t</tspan></text>
   <text x="391" y="480" class="body">安定化バイアス</text>
 
   <rect x="674" y="360" width="250" height="138" class="box green"/>
   <text x="698" y="399" class="label">6. コミットメント</text>
-  <text x="698" y="430" class="math" font-size="18">kappa pi_t + lambda</text>
-  <text x="698" y="454" class="math" font-size="18">(x_t - x_{t-1}) = 0</text>
+  <text x="698" y="430" class="math" font-size="18">κ<tspan baseline-shift="sub" font-size="12">x</tspan>ω<tspan baseline-shift="sub" font-size="12">p</tspan>π<tspan baseline-shift="sub" font-size="12">t</tspan> +</text>
+  <text x="698" y="454" class="math" font-size="18">x<tspan baseline-shift="sub" font-size="12">t</tspan> - x<tspan baseline-shift="sub" font-size="12">t-1</tspan> = 0</text>
   <text x="698" y="480" class="body">履歴依存性と時間的非整合性</text>
 
   <rect x="978" y="251" width="170" height="138" class="box blue"/>
@@ -78,5 +78,5 @@
   <path d="M619 429 C639 429 652 429 672 429" class="line"/>
   <path d="M925 429 C971 407 994 385 1009 370" class="line"/>
 
-  <text x="60" y="565" class="small">読む順序：第8回の 3 本の NK 方程式を出発点に、政策ルールが均衡をどう選び、ショック下でどのルールを評価すべきかを学ぶ。</text>
+  <text x="60" y="565" class="small">読む順序：第8回の構造式を出発点に、望ましい配分、ターゲット条件、手段ルールによる実装を区別して学ぶ。</text>
 </svg>
