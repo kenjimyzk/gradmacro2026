@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
   <title id="title">RANKのNew Keynesian Cross</title>
-  <desc id="desc">横軸に所得、縦軸に計画消費をとり、45度線とほぼ水平なRANKのPE曲線を示す図。</desc>
+  <desc id="desc">横軸に所得、縦軸に計画消費をとり、ベータが1に近く期待閉鎖パラメータpが0のベンチマークにおけるRANKのPE曲線、直接シフト、所得フィードバックを示す図。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0 L10 5 L0 10 Z" fill="#34495e"/>
@@ -13,7 +13,8 @@
       .line45 { stroke: #697386; stroke-width: 3; fill: none; }
       .pe { stroke: #2f6fbe; stroke-width: 4; fill: none; }
       .pe2 { stroke: #2f6fbe; stroke-width: 4; fill: none; stroke-dasharray: 10 7; }
-      .shift { stroke: #d9792f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .direct { stroke: #d9792f; stroke-width: 3.2; fill: none; marker-end: url(#arrow); }
+      .feedback { stroke: #8d5ab8; stroke-width: 3.2; fill: none; marker-end: url(#arrow); }
       .label { font: 700 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
       .text { font: 400 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
       .math { font: 600 18px "Times New Roman", serif; fill: #20242a; }
@@ -25,7 +26,7 @@
   <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
   <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
   <text class="title" x="74" y="82">RANK の New Keynesian Cross</text>
-  <text class="subtitle" x="76" y="112">beta が 1 に近いと PE 曲線はほぼ水平で、直接的な異時点間代替が中心になる</text>
+  <text class="subtitle" x="76" y="112">β ≈ 1、p = 0 のベンチマークでは PE 曲線はほぼ水平で、異時点間代替が中心になる</text>
 
   <line class="grid" x1="150" y1="430" x2="930" y2="430"/>
   <line class="grid" x1="150" y1="350" x2="930" y2="350"/>
@@ -36,19 +37,24 @@
   <path class="line45" d="M150 510 L870 150"/>
   <path class="pe" d="M150 405 L870 333"/>
   <path class="pe2" d="M150 350 L870 278"/>
-  <path class="shift" d="M520 368 L520 313"/>
+  <!-- 旧所得を固定した垂直移動、その後の新PE曲線上の所得フィードバック -->
+  <path class="direct" d="M412.5 378.75 L412.5 323.75"/>
+  <path class="feedback" d="M412.5 323.75 L550 310"/>
 
-  <circle cx="380" cy="382" r="6" fill="#2f6fbe"/>
-  <circle cx="505" cy="315" r="6" fill="#2f6fbe"/>
+  <circle cx="412.5" cy="378.75" r="7" fill="#2f6fbe" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="550" cy="310" r="7" fill="#8d5ab8" stroke="#ffffff" stroke-width="2"/>
 
   <text class="label" x="500" y="558">所得 y</text>
   <text class="label" x="78" y="146">計画消費 c</text>
   <text class="text" x="790" y="186">45度線</text>
   <text class="math" x="780" y="318">PE(r)</text>
-  <text class="math" x="780" y="260">PE(r低下)</text>
-  <text class="note" x="535" y="344">直接シフト</text>
+  <text class="math" x="780" y="260">PE(r↓)</text>
+  <text class="note" x="430" y="354" fill="#d9792f">直接効果</text>
+  <text class="note" x="455" y="286" fill="#8d5ab8">所得フィードバック</text>
+  <text class="note" x="366" y="402">旧均衡</text>
+  <text class="note" x="558" y="334">新均衡</text>
 
-  <rect class="box" x="204" y="162" width="330" height="86"/>
-  <text class="math" x="226" y="198">omega_R = (1-beta)/(1-beta p)</text>
-  <text class="text" x="226" y="226">一時的ショックでは omega_R ≃ 0</text>
+  <rect class="box" x="204" y="162" width="370" height="86"/>
+  <text class="math" x="226" y="198">ω<tspan baseline-shift="sub" font-size="13">R</tspan> = (1−β)/(1−βp)</text>
+  <text class="text" x="226" y="226">β ≈ 1、p = 0 なら ω<tspan baseline-shift="sub" font-size="11">R</tspan> ≈ 0</text>
 </svg>

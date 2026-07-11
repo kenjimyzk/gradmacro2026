@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
   <title id="title">TANKとRANKの乗数比</title>
-  <desc id="desc">TANKとRANKの乗数比をType H比率lambdaの関数として描き、chiが1より大きい場合は増幅、1より小さい場合は抑制となることを示す図。</desc>
+  <desc id="desc">固定した所得弾力性カイごとに、TANKとRANKの乗数比をType H比率ラムダの関数として描く。標準領域ではカイが1より大きい場合は増幅、1より小さい場合は抑制となる。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0 L10 5 L0 10 Z" fill="#34495e"/>
@@ -10,11 +10,11 @@
       .subtitle { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
       .axis { stroke: #34495e; stroke-width: 2.4; marker-end: url(#arrow); }
       .grid { stroke: #d8dee8; stroke-width: 1; }
+      .tick { stroke: #697386; stroke-width: 1.6; }
       .one { stroke: #697386; stroke-width: 2; stroke-dasharray: 8 6; }
       .blue { stroke: #2f6fbe; stroke-width: 4; fill: none; }
       .green { stroke: #379b55; stroke-width: 4; fill: none; }
       .amber { stroke: #d9792f; stroke-width: 4; fill: none; }
-      .danger { stroke: #c43b3b; stroke-width: 3; fill: none; stroke-dasharray: 8 7; }
       .label { font: 700 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
       .text { font: 400 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
       .math { font: 600 18px "Times New Roman", serif; fill: #20242a; }
@@ -26,29 +26,54 @@
   <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
   <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
   <text class="title" x="74" y="82">TANK と RANK の総需要乗数の比</text>
-  <text class="subtitle" x="76" y="112">通常領域では chi&gt;1 なら RANK より大きく、chi&lt;1 なら RANK より小さい</text>
+  <text class="subtitle" x="76" y="112">各曲線は χ を固定し、λだけを変化させる（図示域では 0 ≤ λ ≤ 0.6、λχ &lt; 1）</text>
 
-  <line class="grid" x1="150" y1="430" x2="930" y2="430"/>
-  <line class="grid" x1="150" y1="350" x2="930" y2="350"/>
-  <line class="grid" x1="150" y1="270" x2="930" y2="270"/>
+  <line class="grid" x1="150" y1="465" x2="930" y2="465"/>
+  <line class="grid" x1="150" y1="375" x2="930" y2="375"/>
+  <line class="grid" x1="150" y1="285" x2="930" y2="285"/>
+  <line class="grid" x1="150" y1="195" x2="930" y2="195"/>
   <line class="axis" x1="150" y1="510" x2="960" y2="510"/>
   <line class="axis" x1="150" y1="510" x2="150" y2="150"/>
-  <line class="one" x1="150" y1="350" x2="930" y2="350"/>
+  <line class="one" x1="150" y1="375" x2="930" y2="375"/>
 
-  <path class="green" d="M150 350 C300 333, 450 305, 600 250 C700 210, 770 172, 820 150"/>
-  <path class="blue" d="M150 350 H930"/>
-  <path class="amber" d="M150 350 C310 366, 500 385, 720 410 C815 421, 885 430, 930 436"/>
-  <path class="danger" d="M820 150 C865 128, 902 118, 930 112"/>
+  <!-- Ω_T/Ω_R=(1−λ)/(1−λχ) を、固定した χ について評価 -->
+  <path class="green" d="M150 375 L280 365 L410 351.32 L540 332.81 L670 305.77 L800 262.5 L930 182.14"/>
+  <path class="blue" d="M150 375 H930"/>
+  <path class="amber" d="M150 375 L280 384.78 L410 396.43 L540 410.53 L670 427.94 L800 450 L930 478.85"/>
 
-  <text class="label" x="500" y="558">Type H 比率 lambda</text>
-  <text class="label" x="76" y="146">Omega_T/Omega_R</text>
-  <text class="note" x="116" y="356">1</text>
-  <text class="math" x="650" y="220">chi &gt; 1</text>
-  <text class="math" x="770" y="342">chi = 1</text>
-  <text class="math" x="670" y="430">chi &lt; 1</text>
-  <text class="note" x="834" y="132">通常領域の外</text>
+  <!-- x ticks: λ = 0, 0.1, ..., 0.6 -->
+  <line class="tick" x1="150" y1="510" x2="150" y2="518"/>
+  <line class="tick" x1="280" y1="510" x2="280" y2="518"/>
+  <line class="tick" x1="410" y1="510" x2="410" y2="518"/>
+  <line class="tick" x1="540" y1="510" x2="540" y2="518"/>
+  <line class="tick" x1="670" y1="510" x2="670" y2="518"/>
+  <line class="tick" x1="800" y1="510" x2="800" y2="518"/>
+  <line class="tick" x1="930" y1="510" x2="930" y2="518"/>
+  <text class="note" x="145" y="536">0</text>
+  <text class="note" x="268" y="536">0.1</text>
+  <text class="note" x="398" y="536">0.2</text>
+  <text class="note" x="528" y="536">0.3</text>
+  <text class="note" x="658" y="536">0.4</text>
+  <text class="note" x="788" y="536">0.5</text>
+  <text class="note" x="918" y="536">0.6</text>
 
-  <rect class="box" x="206" y="168" width="354" height="94"/>
-  <text class="math" x="228" y="204">Omega_T/Omega_R = (1-lambda)/(1-lambda chi)</text>
-  <text class="text" x="228" y="234">分母が正の通常領域で比較する</text>
+  <!-- y ticks -->
+  <line class="tick" x1="142" y1="465" x2="150" y2="465"/>
+  <line class="tick" x1="142" y1="375" x2="150" y2="375"/>
+  <line class="tick" x1="142" y1="285" x2="150" y2="285"/>
+  <line class="tick" x1="142" y1="195" x2="150" y2="195"/>
+  <text class="note" x="112" y="470">0.8</text>
+  <text class="note" x="122" y="380">1</text>
+  <text class="note" x="112" y="290">1.2</text>
+  <text class="note" x="112" y="200">1.4</text>
+
+  <text class="label" x="490" y="568">Type H 比率 λ</text>
+  <text class="label" x="76" y="146">Ω<tspan baseline-shift="sub" font-size="13">T</tspan>/Ω<tspan baseline-shift="sub" font-size="13">R</tspan></text>
+  <text class="math" x="835" y="222" fill="#379b55">χ = 1.2</text>
+  <text class="math" x="815" y="365" fill="#2f6fbe">χ = 1</text>
+  <text class="math" x="815" y="470" fill="#d9792f">χ = 0.8</text>
+
+  <rect class="box" x="206" y="158" width="416" height="94"/>
+  <text class="math" x="228" y="195">Ω<tspan baseline-shift="sub" font-size="13">T</tspan>/Ω<tspan baseline-shift="sub" font-size="13">R</tspan> = (1−λ)/(1−λχ)</text>
+  <text class="text" x="228" y="226">標準領域 0 &lt; λχ &lt; 1：χ &gt; 1 なら増幅、χ &lt; 1 なら抑制</text>
 </svg>
