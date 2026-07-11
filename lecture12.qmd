@@ -998,7 +998,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問1：RANK の PE 曲線**
+**問1 [Core] [Derivation]：RANK の PE 曲線**
 
 RANK の消費関数
 $$
@@ -1016,7 +1016,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問2：純配当移転ルールと Type H 消費**
+**問2 [Core] [Derivation]：純配当移転ルールと Type H 消費**
 
 第11回の分配式
 $$
@@ -1045,7 +1045,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問3：Type S 消費**
+**問3 [Core] [Derivation]：Type S 消費**
 
 集計式
 $$
@@ -1065,7 +1065,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問4：TANK の集計 Euler 方程式**
+**問4 [Core] [Derivation]：TANK の集計 Euler 方程式**
 
 Type S の Euler 方程式
 $$
@@ -1086,7 +1086,7 @@ $$
 \Needspace{15\baselineskip}
 ```
 
-**問5：TANK の PE 曲線**
+**問5 [Core] [Derivation]：TANK の PE 曲線**
 
 Type S の再帰的消費関数
 $$
@@ -1098,7 +1098,15 @@ c_t^S
 +
 \beta\mathbb{E}_t c_{t+1}^S
 $$
-と $c_t^H=\chi y_t$ を用いて、集計 PE 曲線
+と $c_t^H=\chi y_t$ を用います。次の分配関係はヒントとして使ってよいものとします。
+$$
+y_t^S=\Theta_Dy_t,
+\qquad
+\mathbb E_tc_{t+1}^S=\Theta_D\mathbb E_tc_{t+1},
+\qquad
+\Theta_D=\frac{1-\lambda\chi}{1-\lambda}.
+$$
+これらを集計式 $c_t=\lambda c_t^H+(1-\lambda)c_t^S$ に代入し、集計 PE 曲線
 $$
 c_t
 =
@@ -1116,7 +1124,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問6：増幅条件**
+**問6 [Research extension] [Derivation]：増幅条件**
 
 通常符号領域 $\lambda\chi<1$ のもとで、
 $$
@@ -1130,7 +1138,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問7：数値例**
+**問7 [Research extension] [Computation]：数値例**
 
 $\lambda=0.3$、$\varphi=1$、$\gamma=1$、$p=0$ とする。$\tau_D=0$、$\tau_D=\lambda$、$\tau_D=0.45$ の3ケースについて、$\chi$、$\Theta_D$、$\Omega_T/\Omega_R$ を計算しなさい。
 
@@ -1138,7 +1146,7 @@ $\lambda=0.3$、$\varphi=1$、$\gamma=1$、$p=0$ とする。$\tau_D=0$、$\tau_
 \Needspace{12\baselineskip}
 ```
 
-**問8：反転領域**
+**問8 [Research extension]：反転領域**
 
 $\lambda\chi>1$ の場合、TANK の集計 Euler 方程式の利子率係数の符号がどう変わるかを説明しなさい。その場合、通常の総需要曲線として読みにくくなる理由を述べなさい。
 
@@ -1146,7 +1154,7 @@ $\lambda\chi>1$ の場合、TANK の集計 Euler 方程式の利子率係数の�
 \Needspace{12\baselineskip}
 ```
 
-**問9：直接効果と間接効果**
+**問9 [Research extension]：直接効果と間接効果**
 
 TANK では、実質利子率ギャップに直接反応する家計の比率が $1-\lambda$ に下がるにもかかわらず、総効果が RANK より大きくなりうる。この理由を、PE 曲線の直接シフトと傾きの2つに分けて説明しなさい。
 
@@ -1154,7 +1162,7 @@ TANK では、実質利子率ギャップに直接反応する家計の比率が
 \Needspace{13\baselineskip}
 ```
 
-**問10：第11回への接続**
+**問10 [Research extension] [Derivation]：第11回への接続**
 
 $\tau_D=0$ のとき、
 $$
@@ -1168,7 +1176,7 @@ $$
 \Needspace{11\baselineskip}
 ```
 
-**問11：乗数と厚生**
+**問11 [Research extension]：乗数と厚生**
 
 $\Omega_T/\Omega_R>1$ から、TANK の金融政策が RANK より有効であり、厚生も高いと直ちに結論できない理由を説明しなさい。完全均衡の政策反応と厚生評価に追加で必要な方程式または情報を挙げなさい。
 

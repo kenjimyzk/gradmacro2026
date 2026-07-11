@@ -799,7 +799,7 @@ $$
 \Needspace{10\baselineskip}
 ```
 
-**問1：集計と格差**
+**問1 [Core] [Derivation]：集計と格差**
 
 消費格差を $\sigma_t^c=c_t^S-c_t^H$ と定義する。集計消費
 $$
@@ -817,7 +817,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問2：分配変数を残した IS 曲線**
+**問2 [Core] [Derivation]：分配変数を残した IS 曲線**
 
 Type S の Euler 方程式
 $$
@@ -838,7 +838,7 @@ $$
 \Needspace{10\baselineskip}
 ```
 
-**問3：実質限界費用**
+**問3 [Core] [Derivation]：実質限界費用**
 
 共通賃金の柔軟賃金条件と生産関数を使い、
 $$
@@ -852,7 +852,7 @@ $$
 \Needspace{9\baselineskip}
 ```
 
-**問4：RANK への縮約**
+**問4 [Core]：RANK への縮約**
 
 Type H と移転 $z_t$ のブロックを落とし、Type S を代表的家計として $c_t^S=c_t$、$n_t^S=n_t$ と置きなさい。$\lambda=0$、$\Theta_T=1$、$r_t^{f,T}=r_t^{f,R}$ となり、第11回の閉じた体系が第7回の RANK に戻ることを確認しなさい。
 
@@ -860,7 +860,7 @@ Type H と移転 $z_t$ のブロックを落とし、Type S を代表的家計�
 \Needspace{14\baselineskip}
 ```
 
-**問5：柔軟賃金の整合性条件**
+**問5 [Core] [Derivation]：柔軟賃金の整合性条件**
 
 Type H と Type S の柔軟賃金条件を引き、
 $$
@@ -896,9 +896,9 @@ $$
 \Needspace{16\baselineskip}
 ```
 
-**問6：閉じた IS 曲線と TANK 自然利子率**
+**問6 [Core] [Derivation]：閉じた IS 曲線と TANK 自然利子率**
 
-$d_t=-(\gamma+\varphi)x_t$ を使って $\sigma_t^c$ を $x_t,z_t$ で表し、それを TANK の IS 曲線に代入しなさい。$\Theta_T=1-\lambda\varphi/(1-\lambda)$ と置いたとき、
+**(a) 閉じた IS 曲線**　$d_t=-(\gamma+\varphi)x_t$ を使って $\sigma_t^c$ を $x_t,z_t$ で表し、それを分配変数を残した IS 曲線に代入しなさい。$\mathbb E_t\Delta x_{t+1}=\mathbb E_tx_{t+1}-x_t$ を使い、$\Theta_T=1-\lambda\varphi/(1-\lambda)$ と置くと、
 $$
 x_t
 =
@@ -909,7 +909,9 @@ x_t
 \frac{\lambda\varphi}{(\gamma+\varphi)(1-\lambda)\Theta_T}
 \mathbb{E}_t\Delta z_{t+1}
 $$
-が得られることを確認しなさい。さらに、
+が得られることを確認しなさい。
+
+**(b) TANK 自然利子率**　TANK 自然利子率を
 $$
 r_t^{f,T}
 =
@@ -924,7 +926,7 @@ $$
 x_t=\mathbb{E}_t x_{t+1}
 -\frac{1}{\gamma\Theta_T}(r_t-r_t^{f,T})
 $$
-と書けることを示しなさい。$r_t^{f,T}$ が柔軟価格の TANK 配分を支える利子率である理由も説明しなさい。
+と書けることを示しなさい。最後に、$r_t^{f,T}$ が柔軟価格の TANK 配分を支える利子率である理由を説明しなさい。
 
 ```{=latex}
 \Needspace{12\baselineskip}
@@ -936,7 +938,7 @@ $$
 \Needspace{14\baselineskip}
 ```
 
-**問7：金融緩和ショック**
+**問7 [Research extension] [Derivation]：金融緩和ショック**
 
 再分配ショックと技術ショックをゼロにし、$m_{t+1}=\rho_m m_t+e_{t+1}^m$ とする。第8回と同じ手順で
 $$
@@ -952,7 +954,7 @@ $$
 \Needspace{16\baselineskip}
 ```
 
-**問8：再分配ショックと自然利子率**
+**問8 [Research extension] [Derivation]：再分配ショックと自然利子率**
 
 金融政策ショックと技術ショックをゼロにし、$z_{t+1}=\rho_z z_t+e_{t+1}^z$ とする。閉じた IS 曲線を使って
 $$
@@ -978,7 +980,7 @@ $$
 \Needspace{12\baselineskip}
 ```
 
-**問9：通常領域、特異点、反転領域**
+**問9 [Research extension]：通常領域、特異点、反転領域**
 
 $\Theta_T>0$、$\Theta_T=0$、$\Theta_T<0$ の3つを比較しなさい。通常領域の単純なインフレ反応ルールでは標準的なテイラー原理が $\phi>1$ であること、$\Theta_T=0$ では閉じた IS 曲線を $x_t$ について解けないこと、$\Theta_T<0$ では需要の利子率反応と決定性条件が反転しうることを説明しなさい。なぜ $\phi>\rho_m$ だけをテイラー原理と呼べないかも述べなさい。
 
@@ -986,7 +988,7 @@ $\Theta_T>0$、$\Theta_T=0$、$\Theta_T<0$ の3つを比較しなさい。通常
 \Needspace{14\baselineskip}
 ```
 
-**問10：第12回への橋渡し**
+**問10 [Research extension] [Derivation]：第12回への橋渡し**
 
 配当再分配ルール $z_t=(\tau_D/\lambda)d_t$ のもとで
 $$
