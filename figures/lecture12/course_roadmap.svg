@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
   <title id="title">講義全体の見取り図</title>
-  <desc id="desc">学部マクロの45度線から、動学的消費、RBC、NK、RANK、TANK、最後のNK Crossと分配増幅へ進む講義全体の流れ。</desc>
+  <desc id="desc">学部マクロの45度線から、動学的消費、RBC、NK、第10回、第11回、第12回、最終メッセージへ一方向に進む講義全体の流れ。</desc>
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
       <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
@@ -66,33 +66,32 @@
   <path class="arrow" d="M608 215 H638"/>
   <path class="arrow" d="M798 215 H828"/>
 
-  <path class="down" d="M913 270 C913 315, 760 318, 760 352"/>
+  <path class="down" d="M913 270 V312 H208 V342"/>
 
-  <rect class="box yellow" x="648" y="352" width="150" height="110"/>
-  <text class="label" x="673" y="387">第10回</text>
-  <text class="small" x="668" y="416">賃金硬直性</text>
-  <text class="small" x="668" y="439">所得分解</text>
+  <rect class="box yellow" x="128" y="352" width="160" height="110"/>
+  <text class="label" x="153" y="387">第10回</text>
+  <text class="small" x="148" y="416">賃金硬直性</text>
+  <text class="small" x="148" y="439">所得分解</text>
 
-  <rect class="box red" x="458" y="352" width="150" height="110"/>
-  <text class="label" x="483" y="387">第11回</text>
-  <text class="small" x="478" y="416">TANK</text>
-  <text class="small" x="478" y="439">消費格差</text>
+  <rect class="box red" x="358" y="352" width="160" height="110"/>
+  <text class="label" x="383" y="387">第11回</text>
+  <text class="small" x="378" y="416">TANK</text>
+  <text class="small" x="378" y="439">消費格差</text>
 
-  <rect class="box gray" x="218" y="352" width="174" height="110"/>
-  <text class="label" x="243" y="387">第12回</text>
-  <text class="small" x="238" y="416">NK Cross</text>
-  <text class="small" x="238" y="439">分配増幅</text>
+  <rect class="box gray" x="588" y="352" width="174" height="110"/>
+  <text class="label" x="613" y="387">第12回</text>
+  <text class="small" x="608" y="416">NK Cross</text>
+  <text class="small" x="608" y="439">分配増幅</text>
 
-  <path class="arrow" d="M648 407 H618"/>
-  <path class="arrow" d="M458 407 H402"/>
+  <path class="arrow" d="M288 407 H348"/>
+  <path class="arrow" d="M518 407 H578"/>
 
-  <rect class="box blue" x="836" y="352" width="224" height="110"/>
-  <text class="label" x="866" y="387">最終メッセージ</text>
-  <text class="small" x="862" y="416">誰の所得が動くか</text>
-  <text class="small" x="862" y="439">誰が消費するか</text>
+  <rect class="box blue" x="832" y="352" width="228" height="110"/>
+  <text class="label" x="862" y="387">最終メッセージ</text>
+  <text class="small" x="858" y="416">誰の所得が動くか</text>
+  <text class="small" x="858" y="439">誰が消費するか</text>
 
-  <path class="arrow" d="M392 407 H448"/>
-  <path class="arrow" d="M798 407 H826"/>
+  <path class="arrow" d="M762 407 H822"/>
 
   <text class="note" x="80" y="536">PE曲線は第1回では外生的に与えられた。第12回では、Euler方程式、SDF、配当、移転、家計タイプから導かれる。</text>
 </svg>

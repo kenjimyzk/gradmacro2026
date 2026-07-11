@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
   <title id="title">TANKのNew Keynesian Cross</title>
-  <desc id="desc">TANKでは直接効果が小さいがPE曲線が急になるため、所得フィードバックが総効果を増幅しうることを示す図。</desc>
+  <desc id="desc">TANKでは直接効果が小さいがPE曲線が急になるため、標準領域で所得フィードバックが総効果を増幅しうることを、正確な旧均衡と新均衡を用いて示す図。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0 L10 5 L0 10 Z" fill="#34495e"/>
@@ -40,22 +40,25 @@
   <path class="peT" d="M150 445 L870 229"/>
   <path class="peT2" d="M150 400 L870 184"/>
 
-  <path class="direct" d="M395 371 L395 326"/>
-  <path class="total" d="M395 326 L590 266"/>
+  <!-- 旧所得を固定した垂直移動、その後の新PE曲線上の所得フィードバック -->
+  <path class="direct" d="M475 347.5 L475 302.5"/>
+  <path class="total" d="M475 302.5 L700 235"/>
 
-  <circle cx="370" cy="379" r="6" fill="#379b55"/>
-  <circle cx="585" cy="265" r="6" fill="#379b55"/>
+  <circle cx="475" cy="347.5" r="7" fill="#379b55" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="700" cy="235" r="7" fill="#8d5ab8" stroke="#ffffff" stroke-width="2"/>
 
   <text class="label" x="500" y="558">所得 y</text>
   <text class="label" x="78" y="146">計画消費 c</text>
-  <text class="text" x="780" y="186">45度線</text>
-  <text class="math" x="790" y="246">PE_T(r)</text>
-  <text class="math" x="790" y="200">PE_T(r低下)</text>
-  <text class="math" x="770" y="352">PE_R</text>
-  <text class="note" x="410" y="353">直接効果</text>
-  <text class="note" x="458" y="309">所得フィードバック</text>
+  <text class="text" x="750" y="170">45度線</text>
+  <text class="math" x="820" y="238">PE<tspan baseline-shift="sub" font-size="13">T</tspan>(r)</text>
+  <text class="math" x="820" y="190">PE<tspan baseline-shift="sub" font-size="13">T</tspan>(r↓)</text>
+  <text class="math" x="770" y="352">PE<tspan baseline-shift="sub" font-size="13">R</tspan></text>
+  <text class="note" x="491" y="331" fill="#d9792f">直接効果</text>
+  <text class="note" x="555" y="292" fill="#8d5ab8">所得フィードバック</text>
+  <text class="note" x="425" y="371">旧均衡</text>
+  <text class="note" x="710" y="268">新均衡</text>
 
-  <rect class="box" x="194" y="160" width="392" height="96"/>
-  <text class="math" x="216" y="196">omega_T = [1-beta(1-lambda chi)]/[1-beta p(1-lambda chi)]</text>
-  <text class="text" x="216" y="226">chiが大きいほどPE曲線は急になる</text>
+  <rect class="box" x="194" y="152" width="455" height="104"/>
+  <text class="math" x="216" y="190">ω<tspan baseline-shift="sub" font-size="13">T</tspan> = [1−β(1−λχ)]/[1−βp(1−λχ)]</text>
+  <text class="text" x="216" y="222">標準領域 0 &lt; λχ &lt; 1 では、χが大きいほどPE曲線は急になる</text>
 </svg>
