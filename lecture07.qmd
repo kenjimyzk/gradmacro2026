@@ -82,9 +82,9 @@ lang: ja
 | $y_t^f$ | 柔軟価格で $mc_t=0$ を満たす産出 | 自然産出量 |
 | $x_t$ | $y_t-y_t^f$ | 需給ギャップ |
 | $r_t^f$ | 柔軟価格で $y_t^f$ を実現する実質利子率 | 自然利子率 |
-| $\kappa_P$ | $\psi/\eta$ | 実質限界費用に対するインフレの反応係数 |
+| $\kappa_p$ | $\psi/\eta$ | 実質限界費用に対するインフレの反応係数 |
 | $\zeta_a$ | $(1+\varphi)/(\gamma+\varphi)$ | 自然産出量の技術ショックへの反応係数 |
-| $\kappa$ | $\kappa_P(\gamma+\varphi)$ | 需給ギャップに対するインフレの反応係数 |
+| $\kappa_x$ | $\kappa_p(\gamma+\varphi)$ | 需給ギャップに対するインフレの反応係数 |
 
 # モデルの部品
 
@@ -110,7 +110,7 @@ $$
 
 文献では、Calvo (1983) 型価格設定もよく使われます。Calvo 型では、各期に一定割合の企業だけが価格を改定できると仮定します。価格硬直性の入れ方は異なりますが、ゼロインフレ定常状態の周りの一次近似では、Rotemberg 型も Calvo 型も同じ形の NKフィリップス曲線
 $$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_P mc_t
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_p mc_t
 $$
 を導きます。この講義では、企業の価格設定条件を価格調整費用として明示できる Rotemberg 型を使います。
 
@@ -417,7 +417,7 @@ $$
 | 労働需要 | $w_t=mc_t+a_t$ |
 | 生産関数 | $y_t=a_t+n_t$ |
 | 資源制約 | $y_t=c_t$ |
-| NKフィリップス曲線 | $\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_P mc_t$ |
+| NKフィリップス曲線 | $\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_p mc_t$ |
 | テイラー・ルール | $r_t^N=\phi\pi_t-m_t$ |
 | 技術ショック | $a_t=\rho_a a_{t-1}+e_t^a$ |
 | 金融政策ショック | $m_t=\rho_m m_{t-1}+e_t^m$ |
@@ -434,9 +434,9 @@ r_t=\gamma\left(\mathbb{E}_t y_{t+1}-y_t\right)
 $$
 と消費ではなく産出で書けます。また
 $$
-\kappa_P\equiv \frac{\psi}{\eta}
+\kappa_p\equiv \frac{\psi}{\eta}
 $$
-です。別の慣例では $\psi-1$ を用いて $\kappa_P=(\psi-1)/\eta$ と置く書き方もあります。どちらを使うかは、価格設定条件で限界費用をどの定常値の周りで展開するかに依存します。このノートでは、第8回の非線形式に合わせて $MC=1$ の周りでの表記を採ります。
+です。別の慣例では $\psi-1$ を用いて $\kappa_p=(\psi-1)/\eta$ と置く書き方もあります。どちらを使うかは、価格設定条件で限界費用をどの定常値の周りで展開するかに依存します。このノートでは、第8回の非線形式に合わせて $MC=1$ の周りでの表記を採ります。
 
 ## 対数近似の解き方
 
@@ -466,7 +466,7 @@ $$
 $$
 \pi_t=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa_P\{(\gamma+\varphi)y_t-(1+\varphi)a_t\}
++\kappa_p\{(\gamma+\varphi)y_t-(1+\varphi)a_t\}
 $$
 と書けます。
 
@@ -502,12 +502,12 @@ mc_t=
 $$
 です。したがってフィリップス曲線は
 $$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa x_t
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t
 $$
 となります。ここで
 $$
-\kappa\equiv
-\kappa_P(\gamma+\varphi)>0
+\kappa_x\equiv
+\kappa_p(\gamma+\varphi)>0
 $$
 です。
 
@@ -558,7 +558,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t,\\
++\kappa_x x_t,\\
 r_t
 &=
 \phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t.
@@ -604,7 +604,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t,\\
++\kappa_x x_t,\\
 r_t
 &=
 \phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t

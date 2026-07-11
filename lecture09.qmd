@@ -34,7 +34,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t,\\
++\kappa_x x_t,\\
 r_t
 &=
 r_t^N-\mathbb{E}_t\pi_{t+1}.
@@ -69,7 +69,7 @@ $$
 
 ## 変数とパラメータ
 
-このノートでは、**変数**とは、時点、状態、ショック、政策に応じて値が変わる数値情報を指します。たとえば $\pi_t$、$x_t$、$r_t^N$、$u_t$ は変数です。これに対して、**パラメータ**とは、モデル内では一定と仮定する数値情報を指します。たとえば $\beta$、$\kappa$、$\tilde{\gamma}$、$\omega_p$ はパラメータです。
+このノートでは、**変数**とは、時点、状態、ショック、政策に応じて値が変わる数値情報を指します。たとえば $\pi_t$、$x_t$、$r_t^N$、$u_t$ は変数です。これに対して、**パラメータ**とは、モデル内では一定と仮定する数値情報を指します。たとえば $\beta$、$\kappa_x$、$\tilde{\gamma}$、$\omega_p$ はパラメータです。
 
 主な内生変数は次の通りです。
 
@@ -100,7 +100,7 @@ $$
 | $\varphi>0$ | フリッシュ弾力性の逆数 |
 | $\tilde{\gamma}>0$ | IS曲線における実質利子率への反応係数の逆数 |
 | $\tilde{\varphi}>0$ | 収穫逓減を考慮した限界費用の労働供給側係数 |
-| $\kappa>0$ | 需給ギャップに対するインフレ率の反応係数 |
+| $\kappa_x>0$ | 需給ギャップに対するインフレ率の反応係数 |
 | $\phi\geq0$ | テイラー・ルールにおけるインフレ反応係数 |
 | $\eta_p>0$ | 厚生損失に現れる価格調整費用の重み |
 | $\omega_p>0$ | 価格インフレ安定化の相対的な厚生重み |
@@ -183,7 +183,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t
++\kappa_x x_t
 \end{aligned}
 $$
 です。第1式は動学的 IS曲線、第2式は NKフィリップス曲線です。
@@ -208,7 +208,7 @@ $$
 
 この候補が NKフィリップス曲線を満たすことを確認します。$\pi_t=0$、$x_t=0$、$\mathbb{E}_t\pi_{t+1}=0$ を代入すると、
 $$
-0=\beta\cdot 0+\kappa\cdot 0
+0=\beta\cdot 0+\kappa_x\cdot 0
 $$
 となり、制約を満たします。IS曲線についても、中央銀行が実質利子率を自然利子率に一致させるように
 $$
@@ -295,7 +295,7 @@ $$
 \pi_t
 =
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t
++\kappa_x x_t
 +u_t.
 $$
 $u_t$ は **コストプッシュショック** とも呼ばれます。たとえば、企業の望ましいマークアップが一時的に上昇する、輸入原材料価格が上昇する、賃金設定に外生的な圧力がかかる、といった要因をまとめて表す変数です。
@@ -312,7 +312,7 @@ $$
 
 $u_t\neq0$ のとき、$\pi_t=0$ と $x_t=0$ を同時に実現できるかを確認します。NKフィリップス曲線に代入すると、
 $$
-0=\beta\cdot0+\kappa\cdot0+u_t
+0=\beta\cdot0+\kappa_x\cdot0+u_t
 $$
 となります。これは $u_t=0$ のときしか成立しません。
 
@@ -361,7 +361,7 @@ $$
 \pi_t
 =
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t
++\kappa_x x_t
 +u_t
 $$
 です。ここで $\mathbb{E}_t\pi_{t+1}$ は、時点 $t$ の最適化では所与として扱います。
@@ -376,7 +376,7 @@ x_t^2+\omega_p\pi_t^2
 \right)
 +\mu_t
 \left(
-\pi_t-\beta\mathbb{E}_t\pi_{t+1}-\kappa x_t-u_t
+\pi_t-\beta\mathbb{E}_t\pi_{t+1}-\kappa_x x_t-u_t
 \right)
 $$
 とします。一階条件は
@@ -387,22 +387,22 @@ $$
 \omega_p\pi_t+\mu_t=0,\\
 \frac{\partial\mathcal{L}_t}{\partial x_t}
 &=
-x_t-\kappa\mu_t=0.
+x_t-\kappa_x\mu_t=0.
 \end{aligned}
 $$
 第1式から $\mu_t=-\omega_p\pi_t$ です。これを第2式に代入すると、
 $$
-x_t+\kappa\omega_p\pi_t=0
+x_t+\kappa_x\omega_p\pi_t=0
 $$
 を得ます。したがって裁量政策のターゲット条件は
 $$
-\pi_t=-\frac{1}{\kappa\omega_p}x_t
+\pi_t=-\frac{1}{\kappa_x\omega_p}x_t
 $$
 です。正のコストプッシュショックに対して、中央銀行は正のインフレ率と負の需給ギャップを組み合わせます。
 
 ここまでの結論は、裁量政策では毎期のターゲット条件が
 $$
-\kappa\omega_p\pi_t+x_t=0
+\kappa_x\omega_p\pi_t+x_t=0
 $$
 になるということです。これはインフレ率と需給ギャップの静学的なトレードオフを表します。
 
@@ -425,37 +425,37 @@ $$
 b_Du_t
 =
 \beta\rho_u b_Du_t
-+\kappa a_Du_t
++\kappa_x a_Du_t
 +u_t
 $$
 となります。またターゲット条件から
 $$
-a_D+\kappa\omega_p b_D=0
+a_D+\kappa_x\omega_p b_D=0
 $$
 です。これらを解くと、
 $$
 b_D
 =
 \frac{1}
-{1-\beta\rho_u+\kappa^2\omega_p},
+{1-\beta\rho_u+\kappa_x^2\omega_p},
 \qquad
 a_D
 =
--\frac{\kappa\omega_p}
-{1-\beta\rho_u+\kappa^2\omega_p}.
+-\frac{\kappa_x\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}.
 $$
 したがって
 $$
 \pi_t^D
 =
 \frac{1}
-{1-\beta\rho_u+\kappa^2\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
 u_t,
 \qquad
 x_t^D
 =
--\frac{\kappa\omega_p}
-{1-\beta\rho_u+\kappa^2\omega_p}
+-\frac{\kappa_x\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
 u_t.
 $$
 
@@ -471,11 +471,11 @@ $$
 
 結論を先に書くと、通常のコミットメント政策は第1期以降に
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0,
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0,
 \qquad
 t\geq1
 $$
-というターゲット条件を持ちます。裁量政策の $\kappa\omega_p\pi_t+x_t=0$ と異なり、過去の需給ギャップ $x_{t-1}$ が入る点が重要です。
+というターゲット条件を持ちます。裁量政策の $\kappa_x\omega_p\pi_t+x_t=0$ と異なり、過去の需給ギャップ $x_{t-1}$ が入る点が重要です。
 
 裁量政策と同じく、名目利子率の有効下限制約を捨象し、自然利子率を観測できると仮定します。任意の $x_t$ 経路は政策金利で実装できるため、ここでも制約として明示するのは NKフィリップス曲線だけです。
 
@@ -495,7 +495,7 @@ $$
 \pi_t
 =
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t
++\kappa_x x_t
 +u_t
 \qquad
 t=0,1,2,\ldots
@@ -516,7 +516,7 @@ x_t^2+\omega_p\pi_t^2
 \right)
 +\mu_t
 \left(
-\pi_t-\beta\pi_{t+1}-\kappa x_t-u_t
+\pi_t-\beta\pi_{t+1}-\kappa_x x_t-u_t
 \right)
 \right].
 $$
@@ -526,11 +526,11 @@ $$
 
 $x_t$ に関する一階条件は
 $$
-x_t-\kappa\mu_t=0
+x_t-\kappa_x\mu_t=0
 $$
 です。したがって
 $$
-\mu_t=\frac{1}{\kappa}x_t.
+\mu_t=\frac{1}{\kappa_x}x_t.
 $$
 
 $\pi_t$ に関する一階条件では、$\pi_t$ は今期の制約だけでなく、前期の制約にも現れます。前期の制約には $-\beta\pi_t$ として入るため、割引を考慮すると
@@ -547,9 +547,9 @@ $$
 $$
 \omega_p\pi_0+\mu_0=0
 $$
-です。$\mu_0=x_0/\kappa$ を代入すると、
+です。$\mu_0=x_0/\kappa_x$ を代入すると、
 $$
-\kappa\omega_p\pi_0+x_0=0
+\kappa_x\omega_p\pi_0+x_0=0
 $$
 です。
 
@@ -559,16 +559,16 @@ $$
 $$
 なので、
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0
 $$
 です。すなわち
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0,
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0,
 \qquad
 t\geq1.
 $$
 
-この式がコミットメント政策の中心です。裁量政策では $\kappa\omega_p\pi_t+x_t=0$ でした。コミットメント政策では $x_t$ の水準ではなく、$x_t-x_{t-1}$ という変化が入ります。これを **履歴依存性** と呼びます。
+この式がコミットメント政策の中心です。裁量政策では $\kappa_x\omega_p\pi_t+x_t=0$ でした。コミットメント政策では $x_t$ の水準ではなく、$x_t-x_{t-1}$ という変化が入ります。これを **履歴依存性** と呼びます。
 
 ## 履歴依存性の意味
 
@@ -586,9 +586,9 @@ $$
 +x_{t-1}
 -
 \left\{
-1+\beta+\kappa^2\omega_p
+1+\beta+\kappa_x^2\omega_p
 \right\}x_t
--\kappa\omega_p u_t=0.
+-\kappa_x\omega_p u_t=0.
 $$
 ここで $x_{t-1}$ が状態変数として現れます。これが、コミットメント政策の履歴依存性を数式で表したものです。
 
@@ -603,10 +603,10 @@ $$
 \begin{aligned}
 t=0:
 \qquad
-&\kappa\omega_p\pi_0+x_0=0,\\
+&\kappa_x\omega_p\pi_0+x_0=0,\\
 t\geq1:
 \qquad
-&\kappa\omega_p\pi_t+x_t-x_{t-1}=0.
+&\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0.
 \end{aligned}
 $$
 第1期以降には $x_{t-1}$ が入りますが、初期時点には入りません。理由は、初期時点には過去の約束から引き継がれるラグランジュ乗数がないからです。上の導出では、これを
@@ -619,13 +619,13 @@ $$
 
 問題は、時点1に到達した中央銀行が再び計画を立て直したくなることです。時点0で立てた計画では、時点1の条件は
 $$
-\kappa\omega_p\pi_1+x_1-x_0=0
+\kappa_x\omega_p\pi_1+x_1-x_0=0
 $$
 です。
 
 しかし、時点1の中央銀行が過去の約束を無視して新たに「時点1を初期時点」として最適化すると、初期条件は
 $$
-\kappa\omega_p\pi_1+x_1=0
+\kappa_x\omega_p\pi_1+x_1=0
 $$
 になります。この2つは、一般に一致しません。特に $x_0\neq0$ なら、時点0で約束された時点1の政策は、時点1に再最適化する中央銀行にとって最適ではありません。
 
@@ -647,13 +647,13 @@ $$
 
 通常のコミットメント計画では、$t=0$ だけ
 $$
-\kappa\omega_p\pi_0+x_0=0
+\kappa_x\omega_p\pi_0+x_0=0
 $$
 となり、$t\geq1$ で初めて履歴依存的な条件が出ます。タイムレス・パースペクティブでは、この初期時点の特別扱いを取り除き、同じ履歴依存的な条件をすべての時点で使います。
 
 すなわち、
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0
 \qquad
 t=0,1,2,\ldots
 $$
@@ -667,7 +667,7 @@ $$
 
 タイムレス・パースペクティブの利点は、政策ルールが時間を通じて同じ形を保つことです。時点0でも時点1でも、中央銀行は同じターゲット条件
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0
 $$
 に従います。したがって、将来に同じ問題を解き直しても、初期時点の特権を使って別のルールに変える誘因がありません。
 
@@ -684,27 +684,27 @@ $$
 \pi_t^D
 =
 \frac{1}
-{1-\beta\rho_u+\kappa^2\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
 u_t,
 \qquad
 x_t^D
 =
--\frac{\kappa\omega_p}
-{1-\beta\rho_u+\kappa^2\omega_p}
+-\frac{\kappa_x\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
 u_t.
 $$
 
 タイムレス・パースペクティブでは、次の差分方程式を解きます。通常のコミットメント計画は $t=0$ に特別な条件を持ちますが、ここではすべての時点で同じ履歴依存的なターゲット条件を使います。
 $$
 \left\{
-1+\beta+\kappa^2\omega_p
+1+\beta+\kappa_x^2\omega_p
 \right\}x_t
 -
 \beta\mathbb{E}_t x_{t+1}
 -
 x_{t-1}
 =
--\kappa\omega_p u_t.
+-\kappa_x\omega_p u_t.
 $$
 有限期間で近似するなら、十分大きな $T$ を取り、$x_{T+1}=0$ の終端条件を置いて、$x_0,\ldots,x_T$ の連立一次方程式として解けます。この終端条件は近似です。AR(1) ショックが $T$ 期以降にも残っているなら、無限期間問題の厳密な終端条件ではありません。
 
@@ -739,7 +739,7 @@ if (
 }
 
 beta <- 0.99
-kappa <- 0.08
+kappa_x <- 0.08
 omega_p <- 20
 rho_u <- 0.7
 T <- 40
@@ -747,14 +747,14 @@ T <- 40
 u <- rho_u^(0:T)
 
 # 裁量政策
-den <- (1 - beta * rho_u) + kappa^2 * omega_p
+den <- (1 - beta * rho_u) + kappa_x^2 * omega_p
 pi_D <- 1 / den * u
-x_D <- -kappa * omega_p / den * u
+x_D <- -kappa_x * omega_p / den * u
 
 # タイムレス・パースペクティブの有限期間近似
-B <- 1 + beta + kappa^2 * omega_p
+B <- 1 + beta + kappa_x^2 * omega_p
 A <- matrix(0, nrow = T + 1, ncol = T + 1)
-b <- -kappa * omega_p * u
+b <- -kappa_x * omega_p * u
 x_lag <- 0
 
 for (t in 1:(T + 1)) {
@@ -768,7 +768,7 @@ for (t in 1:(T + 1)) {
 }
 
 x_C <- as.vector(solve(A, b))
-pi_C <- -1 / (kappa * omega_p) * c(x_C[1] - x_lag, diff(x_C))
+pi_C <- -1 / (kappa_x * omega_p) * c(x_C[1] - x_lag, diff(x_C))
 
 h <- 0:T
 col_discretion <- "#2F6FBE"
@@ -881,23 +881,23 @@ $$
 $$
 制約条件は
 $$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa x_t+u_t
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t+u_t
 $$
 である。この問題の一階条件から
 $$
-\kappa\omega_p\pi_t+x_t=0
+\kappa_x\omega_p\pi_t+x_t=0
 $$
 を導出しなさい。
 
 4. **直観確認**：通常のコミットメント政策で
 $$
-\kappa\omega_p\pi_t+x_t-x_{t-1}=0
+\kappa_x\omega_p\pi_t+x_t-x_{t-1}=0
 $$
 という履歴依存的なターゲット条件が現れる理由を、民間部門の期待形成と結びつけて説明しなさい。
 
 5. **応用確認**：コストプッシュショックの持続性 $\rho_u$ が高くなると、裁量政策のインフレ率と需給ギャップの反応はどのように変わるか。閉形式解の分母
 $$
-1-\beta\rho_u+\kappa^2\omega_p
+1-\beta\rho_u+\kappa_x^2\omega_p
 $$
 に注目して説明しなさい。
 
@@ -988,7 +988,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t.
++\kappa_x x_t.
 \end{aligned}
 $$
 
@@ -996,7 +996,7 @@ $z_t=(x_t,\pi_t)'$ と置くと、
 $$
 \begin{bmatrix}
 1 & 0\\
--\kappa & 1
+-\kappa_x & 1
 \end{bmatrix}
 z_t
 =
@@ -1015,10 +1015,10 @@ $$
 A_0
 =
 \begin{bmatrix}
-1+\frac{\kappa}{\beta\tilde{\gamma}}
+1+\frac{\kappa_x}{\beta\tilde{\gamma}}
 &
 -\frac{1}{\beta\tilde{\gamma}}\\
--\frac{\kappa}{\beta}
+-\frac{\kappa_x}{\beta}
 &
 \frac{1}{\beta}
 \end{bmatrix}.
@@ -1028,7 +1028,7 @@ $$
 \operatorname{tr}(A_0)
 =
 1+\frac{1}{\beta}
-+\frac{\kappa}{\beta\tilde{\gamma}},
++\frac{\kappa_x}{\beta\tilde{\gamma}},
 \qquad
 \det(A_0)=\frac{1}{\beta}.
 $$
@@ -1042,7 +1042,7 @@ $$
 $$
 q_0(1)
 =
--\frac{\kappa}{\beta\tilde{\gamma}}<0
+-\frac{\kappa_x}{\beta\tilde{\gamma}}<0
 $$
 であり、$q_0(0)=1/\beta>0$ です。したがって、1つの固有値は $0$ と $1$ の間にあります。もう1つの固有値は単位円の外にあります。
 
@@ -1067,7 +1067,7 @@ $$
 $$
 \begin{bmatrix}
 1 & \phi/\tilde{\gamma}\\
--\kappa & 1
+-\kappa_x & 1
 \end{bmatrix}
 z_t
 =
@@ -1086,10 +1086,10 @@ $$
 A(\phi)
 =
 \begin{bmatrix}
-1+\frac{\kappa}{\beta\tilde{\gamma}}
+1+\frac{\kappa_x}{\beta\tilde{\gamma}}
 &
 \frac{\phi}{\tilde{\gamma}}-\frac{1}{\beta\tilde{\gamma}}\\
--\frac{\kappa}{\beta}
+-\frac{\kappa_x}{\beta}
 &
 \frac{1}{\beta}
 \end{bmatrix}.
@@ -1100,11 +1100,11 @@ $$
 \operatorname{tr}(A(\phi))
 =
 1+\frac{1}{\beta}
-+\frac{\kappa}{\beta\tilde{\gamma}},
++\frac{\kappa_x}{\beta\tilde{\gamma}},
 \qquad
 \det(A(\phi))
 =
-\frac{1+\kappa\phi/\tilde{\gamma}}{\beta}.
+\frac{1+\kappa_x\phi/\tilde{\gamma}}{\beta}.
 $$
 特性方程式を
 $$
@@ -1116,7 +1116,7 @@ $$
 $$
 q(1)
 =
-\frac{\kappa(\phi-1)}{\beta\tilde{\gamma}}.
+\frac{\kappa_x(\phi-1)}{\beta\tilde{\gamma}}.
 $$
 
 $\phi<1$ なら $q(1)<0$ となり、利子率ペッグと同じく1つの固有値が単位円の内側に残ります。$\phi=1$ は単位根を持つ境界ケースです。$\phi>1$ なら $q(1)>0$ で、2つの固有値は単位円の外にあります。前向き変数2つに対して単位円外の固有値が2つになるので、ブランチャード＝カーン条件が満たされます。

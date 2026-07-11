@@ -1,0 +1,255 @@
+%% LyX 2.5.0 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,autodetect-engine, dvi=dvipdfmx, ja=standard]{bxjsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{amsmath}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+Variables
+
+\begin{tabular}{|c|c|}
+\hline 
+symbol & description\tabularnewline
+\hline 
+\hline 
+$Y$ & Output\tabularnewline
+\hline 
+$C$ & Consumption\tabularnewline
+\hline 
+$MC_{t}$ & Marginal Cost\tabularnewline
+\hline 
+$N_{t}$ & Labor input\tabularnewline
+\hline 
+$D_{t}$ & dividend\tabularnewline
+\hline 
+$W_{t}$ & Wage Rate\tabularnewline
+\hline 
+$R^{N}_{t}$ & Nominal Interest Rate\tabularnewline
+\hline 
+$R_{t}$ & Real Interest Rate\tabularnewline
+\hline 
+$\Pi_{t}$ & Inflation Rate\tabularnewline
+\hline 
+$m_{t}$ & Monetary Shock\tabularnewline
+\hline 
+$a_{t}$ & Technology Shock\tabularnewline
+\hline 
+$g_{t}$ & Gov. Exp. Shock\tabularnewline
+\hline 
+$y^{f}_{t}$ & Natural level of Output\tabularnewline
+\hline 
+$r^{f}_{t}$ & Natural Rate of Interest\tabularnewline
+\hline 
+$x_{t}$ & Output Gap\tabularnewline
+\hline 
+\end{tabular}
+
+Parameters
+
+\begin{tabular}{|c|c|}
+\hline 
+Symbol & definition\tabularnewline
+\hline 
+\hline 
+$\alpha$ & factor share\tabularnewline
+\hline 
+$\beta$ & discount rate\tabularnewline
+\hline 
+$\gamma$ & inverse of EIS\tabularnewline
+\hline 
+$\varphi$ & inverse of Frisch elasticity \tabularnewline
+\hline 
+$\psi$ & elasticity between intermediate goods\tabularnewline
+\hline 
+$\eta$ & price adjustment parameter\tabularnewline
+\hline 
+$\sigma$ & rate of subsidy\tabularnewline
+\hline 
+$\phi$ & Taylor rule parameter\tabularnewline
+\hline 
+$\rho_{i}$ & persistency parameter\tabularnewline
+\hline 
+$\kappa$ & Slope of Phillips curve\tabularnewline
+\hline 
+\end{tabular}
+
+\section{Non-linear equations}
+
+Households
+\begin{align*}
+1 & =\beta E_{t}\frac{C^{-\gamma}_{t+1}}{C^{-\gamma}_{t}}\frac{R^{N}_{t}}{\Pi_{t+1}}\\
+W_{t} & =C^{\gamma}_{t}N^{\varphi}_{t}\\
+R_{t} & =E_{t}\frac{R^{N}_{t}}{\Pi_{t+1}}
+\end{align*}
+
+Firms
+\begin{align*}
+\eta\Pi_{t}(\Pi_{t}-1)= & \psi[MC_{t}-(1+\sigma)(1-1/\psi)]\\
+ & +\beta\eta E_{t}\frac{C^{-\gamma}_{t+1}}{C^{-\gamma}_{t}}\frac{Y_{t+1}}{Y_{t}}\Pi_{t+1}(\Pi_{t+1}-1)\\
+W_{t} & =(1-\alpha)MC_{t}Y_{t}/N_{t}\\
+D_{t} & =Y_{t}-\frac{\eta}{2}(\Pi_{t}-1)^{2}Y_{t}-W_{t}N_{t}\\
+Y_{t} & =\exp(a_{t})N^{1-\alpha}_{t}
+\end{align*}
+
+Taylor Rule
+\begin{align*}
+R^{N}_{t} & =(1/\beta)\exp(-m_{t})\Pi^{\phi}_{t}
+\end{align*}
+
+Aggregation
+\[
+Y_{t}=C_{t}+G_{t}+\frac{\eta}{2}(\Pi_{t}-1)^{2}Y_{t}
+\]
+
+
+\section{SteadyState}
+
+Let $\Pi=1$, $R^{N}=R=1/\beta$, $MC=(1+\sigma)(1-1/\psi)$, $G_{Y}=G/Y$
+is given. 
+\begin{align*}
+N & =\left[\frac{(1-\alpha)MC}{(1-G_{Y})^{\gamma}}\right]^{\frac{1}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+Y & =\left[\frac{(1-\alpha)MC}{(1-G_{Y})^{\gamma}}\right]^{\frac{1-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+W & =(1-\alpha)MC\left[\frac{(1-\alpha)MC}{(1-G_{Y})^{\gamma}}\right]^{\frac{-\alpha}{(\gamma-1)(1-\alpha)+\varphi+1}}\\
+C & =(1-G_{Y})Y\\
+D & =\alpha Y
+\end{align*}
+When $\alpha=G_{Y}=0$ and $MC=1$, then $N=Y=W=C=1$.
+
+\section{Log-linear equations}
+
+Households
+\begin{align*}
+r_{t} & =\gamma E_{t}\Delta c_{t+1}\\
+w_{t} & =\gamma c_{t}+\varphi w_{t}\\
+r_{t} & =r^{N}_{t}-E_{t}\pi_{t+1}
+\end{align*}
+
+Firms
+\begin{align*}
+\pi_{t} & =(\varphi/\eta)MCmc_{t}+\beta E_{t}\pi_{t+1}\\
+w_{t} & =mc_{t}+y_{t}-n_{t}\\
+d_{t} & =(1-MC)y_{t}-(1-\alpha)MC\\
+y_{t} & =a_{t}+(1-\alpha)n_{t}
+\end{align*}
+
+Taylor Rule
+\[
+r^{N}_{t}=\phi\pi_{t}-m_{t}
+\]
+
+Aggregation 
+\[
+y_{t}=(1-G_{Y})c_{t}+g_{t}
+\]
+
+
+\section{Solution}
+
+Marginal cost
+\begin{align*}
+mc_{t} & =w_{t}+n_{t}-y_{t}\\
+ & =\gamma c_{t}+(\varphi+1)n_{t}-y_{t}\\
+ & =\gamma\frac{y_{t}-g_{t}}{1-G_{Y}}+(\varphi+1)\frac{y_{t}-a_{t}}{1-\alpha}-y_{t}\\
+ & =(\tilde{\gamma}+\tilde{\varphi})(y_{t}-\zeta_{a}a_{t}-\zeta_{g}g_{t})
+\end{align*}
+where 
+\begin{align*}
+\zeta_{a}=\frac{\tilde{\varphi}+1}{\tilde{\varphi}+\tilde{\gamma}}, & \zeta_{g}=\frac{\tilde{\gamma}}{\tilde{\varphi}+\tilde{\gamma}}\\
+\tilde{\varphi}=\frac{\varphi+\alpha}{1-\alpha}, & \tilde{\gamma}=\frac{\gamma}{1-G_{Y}}
+\end{align*}
+
+Three NK equations
+\begin{align*}
+r_{t} & =r^{f}_{t}+\tilde{\gamma}E_{t}[\Delta x_{t+1}-\Delta g_{t+1}]\\
+\pi_{t} & =\kappa x_{t}+\beta E_{t}\pi_{t+1}\\
+r_{t} & =\phi\pi_{t}-E_{t}[\pi_{t+1}]-m_{t}
+\end{align*}
+where 
+
+\begin{align*}
+x_{t} & =y_{t}-y^{f}_{t}\\
+y^{f}_{t} & =\zeta_{a}a_{t}+\zeta_{g}g_{t}\\
+r^{f}_{t} & =\tilde{\gamma}E_{t}\Delta y^{f}_{t+1}=-\tilde{\gamma}[(1-\rho_{a})\zeta_{a}a_{t}+(1-\rho_{g})\zeta_{g}g_{t}]\\
+\kappa & =MC(\tilde{\varphi}+\tilde{\gamma})(\psi/\eta)
+\end{align*}
+
+Only monetary shock ($a_{t}=g_{t}=0$): Since $E_{t}\pi_{t+1}=\rho_{m}\pi_{t}$
+and $E_{t}x_{t+1}=\rho_{m}x_{t}$, we obtain
+\begin{align*}
+r_{t} & =\tilde{\gamma}(\rho_{m}-1)x_{t}\\
+\pi_{t} & =\kappa_{m}x_{t}\\
+r_{t} & =(\phi-\rho_{m})\pi_{t}-m_{t}
+\end{align*}
+where $r^{f}_{t}=0$, $x_{t}=y_{t}$, and $\kappa_{m}=\kappa/(1-\beta\rho_{m})$.
+AD-AS model
+\begin{align*}
+\pi_{t} & =\frac{\tilde{\gamma}(\rho_{m}-1)x_{t}+m_{t}}{\phi-\rho_{m}}\\
+\pi_{t} & =\kappa_{m}x_{t}.
+\end{align*}
+Thus, $x_{t}=\Omega m_{t}$, $\pi_{t}=\kappa_{m}\Omega m_{t}$, and
+$r_{t}=-\Omega_{m}m_{t}$ where 
+\begin{align*}
+\Omega & =\frac{1}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}\\
+\Omega_{m} & =\frac{\tilde{\gamma}(1-\rho_{m})}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})},\;0<\Omega,\;\Omega_{m}<1.
+\end{align*}
+
+Only technology shock ($m_{t}=g_{t}=0$):
+\begin{align*}
+r_{t} & =r^{f}_{t}+\tilde{\gamma}(\rho_{a}-1)x_{t}\\
+\pi_{t} & =\kappa_{a}x_{t}\\
+r_{t} & =(\phi-\rho_{a})\pi_{t}
+\end{align*}
+where $r^{f}_{t}=\tilde{\gamma_{a}}(\rho_{a}-1)a_{t}$, $x_{t}=y_{t}-\zeta_{a}a_{t}$,
+and $\kappa_{a}=\kappa/(1-\beta\rho_{a})$. AD-AS model:
+\begin{align*}
+\pi_{t} & =\frac{\tilde{\gamma}(\rho_{a}-1)x_{t}+\tilde{\gamma_{a}}\zeta_{a}(\rho_{a}-1)a_{t}}{\phi-\rho_{a}}\\
+\pi_{t} & =\kappa_{a}x_{t}.
+\end{align*}
+Thus, $x_{t}=-\zeta_{a}\Omega_{a}a_{t}$ $\pi_{t}=-\kappa_{a}\zeta_{a}\Omega_{a}a_{t}$,
+and $r_{t}=-(\phi-\rho_{a})\kappa_{a}\zeta_{a}\Omega_{a}a_{t}$, where
+\begin{align*}
+\Omega_{a} & =\frac{\tilde{\gamma}(1-\rho_{a})}{\kappa_{a}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{a})},0<\Omega_{a}<1.
+\end{align*}
+
+Only government expenditure shock ($m_{t}=a_{t}=0$):
+\begin{align*}
+r_{t} & =r^{f}_{t}+\tilde{\gamma}(\rho_{g}-1)(x_{t}-g_{t})\\
+\pi_{t} & =\kappa_{g}x_{t}\\
+r_{t} & =(\phi-\rho_{g})\pi_{t}
+\end{align*}
+where $r^{f}_{t}=\tilde{\gamma_{g}}(\rho_{g}-1)g_{t}$, $x_{t}=y_{t}-\zeta_{g}g_{t}$,
+and $\kappa_{g}=\kappa/(1-\beta\rho_{g})$. AD-AS model:
+\begin{align*}
+\pi_{t} & =\frac{\tilde{\gamma}(\rho_{g}-1)x_{t}+\tilde{\gamma_{g}}(1-\zeta_{g})(\rho_{g}-1)g_{t}}{\phi-\rho_{g}}\\
+\pi_{t} & =\kappa_{g}x_{t}.
+\end{align*}
+Thus, $x_{t}=(1-\zeta_{g})\Omega_{g}g_{t}$, $\pi_{t}=\kappa_{g}(1-\zeta_{g})\Omega_{g}g_{t}$,
+$r_{t}=(\phi-\rho_{g})\kappa_{g}(1-\zeta_{g})\Omega_{g}g_{t}$ where
+\begin{align*}
+\Omega_{g} & =\frac{\tilde{\gamma}(1-\rho_{g})}{\kappa_{a}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{a})},\;0<\Omega_{g}<1.
+\end{align*}
+
+In sum 
+\begin{align*}
+x_{t} & =\Omega m_{t}-\zeta_{a}\Omega_{a}a_{t}+(1-\zeta_{g})\Omega_{g}g_{t}\\
+\pi_{t} & =\kappa_{m}\Omega m_{t}-\kappa_{a}\zeta_{a}\Omega_{a}a_{t}+\kappa_{g}(1-\zeta_{g})\Omega_{g}g_{t}\\
+r_{t} & =-\Omega_{m}m_{t}-(\phi-\rho_{a})\kappa_{a}\zeta_{a}\Omega_{a}a_{t}+(\phi-\rho_{g})\kappa_{g}(1-\zeta_{g})\Omega_{g}g_{t}
+\end{align*}
+Note:
+\begin{align*}
+y_{t} & =x_{t}+y^{f}_{t}=\Omega_{m}m_{t}+\zeta_{a}(1-\Omega_{a})a_{t}+(\zeta_{g}+(1-\zeta_{g})\Omega_{g})g_{t}\\
+(1-G_{Y})c_{t} & =y_{t}-g_{t}=\Omega_{m}m_{t}+\zeta_{a}(1-\Omega_{a})a_{t}-(1-\zeta_{g})(1-\Omega_{g})g_{t}\\
+(1-\alpha)n_{t} & =y_{t}-a_{t}=\Omega_{m}m_{t}-\{1-\zeta_{a}(1-\Omega_{a})\}a_{t}-(1-\zeta_{g})(1-\Omega_{g})g_{t}.
+\end{align*}
+
+\end{document}
