@@ -728,32 +728,44 @@ if (font_family == "jp_sans") {
 
 ## 基本問題
 
-**問1：政府の通時予算制約**
+**問1 [Core] [Derivation]：政府の通時予算制約（確実性下）**
 
-@eq-government-debt-law を前向きに反復し、@eq-government-transversality のもとで @eq-government-intertemporal-budget を導出しなさい。現在の政府債務を裏づけるプライマリーバランスは、なぜ $t+1$ 期以降のものになるかも説明しなさい。
+確実性下で実質総利子率を一定の $R^f>1$ とし、政府債務が
+$$
+B_{t+1}=R^fB_t-PB_{t+1}
+$$
+に従うとします。横断性条件
+$$
+\lim_{i\to\infty}\frac{B_{t+i}}{(R^f)^i}=0
+$$
+のもとで前向きに反復し、
+$$
+B_t=\sum_{i=1}^{\infty}\frac{PB_{t+i}}{(R^f)^i}
+$$
+を導出しなさい。和が $t+1$ 期から始まる理由も説明しなさい。不確実性下では各期の割引係数 $1/(R^f)^i$ を多期間の SDF $Q_{t,t+i}$ に置き換えると @eq-government-intertemporal-budget になることを確認しなさい。SDFを用いた反復自体は発展事項とします。
 
-**問2：一括税と政府購入**
+**問2 [Core]：一括税と政府購入**
 
 一括税・一括移転と政府購入 $G_t$ は、固定資本・資本蓄積なしモデルの実物配分に対してなぜ異なる効果を持つのか説明しなさい。国債発行の時点が中立になるための仮定を三つ以上挙げ、仮定が破れる例を一つ示しなさい。
 
-**問3：対数線形化**
+**問3 [Core] [Derivation]：対数線形化**
 
 @eq-resource-constraint-government と @eq-government-spending-shock から、@eq-loglinear-resource-government を導出しなさい。
 
 ## 発展問題
 
-**問4：政府購入乗数**
+**問4 [Research extension] [Computation]：政府購入乗数**
 
 正の政府支出ショックは、民間消費、労働、産出、実質賃金をそれぞれどう動かすか説明しなさい。固定資本・資本蓄積なしモデルで「クラウドアウト」がどの変数に現れるかも述べなさい。さらに $G_Y=0.2$、$\alpha=0.4$、$\gamma=\varphi=1$ として $\zeta_g$ と消費の反応係数を計算しなさい。
 
-**問5：税の帰着**
+**問5 [Research extension] [Derivation]：税の帰着**
 
 家計側の労働所得税率 $\tau_N^H$ と企業側の労働投入税率 $\tau_N^F$ が同じ配分を生む @eq-tax-incidence-equivalence を導出しなさい。その条件のもとで、税収も同じになることを示しなさい。
 
-**問6：ラッファーカーブ**
+**問6 [Research extension] [Derivation]：ラッファーカーブ**
 
 労働所得税率 $\tau_N$ だけを用い、政府購入と政府債務を $G=B=0$ とする。各家計が一括移転を所与とみなす理由を説明したうえで、@eq-laffer-revenue と最大税収率 @eq-laffer-peak を導出しなさい。税率が高い範囲で税収が下がる理由も説明しなさい。
 
-**問7：第6回への接続**
+**問7 [Research extension]：第6回への接続**
 
 売上比例補助金を一括税で賄う場合、なぜ政府購入 $G_t$ の場合と異なり、資源制約に $G_t$ が入らないのか説明しなさい。あわせて、補助金がどの限界条件にくさびを作るかを述べなさい。
