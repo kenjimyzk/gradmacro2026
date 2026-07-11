@@ -1,8 +1,9 @@
 ---
 title: "第4回：資本蓄積のないRBCモデル"
-subtitle: "固定資本のもとでの実物配分と自然利子率"
+subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-06"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -20,7 +21,7 @@ format:
 lang: ja
 ---
 
-# 講義の目的と中心結果
+# 講義の目的
 
 この回では、固定資本 $\bar K$ を1に正規化し、投資と資本蓄積を止めた柔軟価格モデルを扱います。したがって、標準的なRBCモデルにある投資の調整はありません。技術ショックを観察した後、家計の労働供給と企業の労働需要が同じ期の実物配分を決めます。
 
@@ -51,7 +52,7 @@ $$
 
 ![第4回講義の全体像：固定資本のもとで、家計、企業、市場均衡、技術ショックが資本蓄積のないRBCモデルの実物配分を決める流れ。](figures/lecture04/lecture04_overview_infographic.svg){#fig-lecture04-overview width=95% fig-pos="H"}
 
-# 表記と経済環境
+# 表記と基本設定
 
 大文字は水準、小文字は定常状態からの対数乖離を表します。たとえば $y_t\equiv\ln Y_t-\ln Y$、$c_t\equiv\ln C_t-\ln C$ です。$w_t$ と $r_t$ も、それぞれ実質賃金と実質総利子率の対数乖離です。
 
@@ -480,13 +481,15 @@ $$
 
 **発展：資本蓄積を含む標準的なRBCモデル**
 
-- Kydland, Finn E., and Edward C. Prescott (1982) "Time to Build and Aggregate Fluctuations." *Econometrica*, 50(6), 1345-1370. [DOI](https://doi.org/10.2307/1913386)
-- Hansen, Gary D. (1985) "Indivisible Labor and the Business Cycle." *Journal of Monetary Economics*, 16(3), 309-327. [DOI](https://doi.org/10.1016/0304-3932(85)90039-X)
-- King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) "Production, Growth and Business Cycles: I. The Basic Neoclassical Model." *Journal of Monetary Economics*, 21(2-3), 195-232. [DOI](https://doi.org/10.1016/0304-3932(88)90030-X)
+- Kydland, Finn E., and Edward C. Prescott (1982) "Time to Build and Aggregate Fluctuations." *Econometrica*, 50(6), 1345-1370. [doi](https://doi.org/10.2307/1913386)
+- Hansen, Gary D. (1985) "Indivisible Labor and the Business Cycle." *Journal of Monetary Economics*, 16(3), 309-327. [doi](https://doi.org/10.1016/0304-3932(85)90039-X)
+- King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) "Production, Growth and Business Cycles: I. The Basic Neoclassical Model." *Journal of Monetary Economics*, 21(2-3), 195-232. [doi](https://doi.org/10.1016/0304-3932(88)90030-X)
 - King, Robert G., and Sergio T. Rebelo (1999) "Resuscitating Real Business Cycles." In *Handbook of Macroeconomics*, Vol. 1B. Elsevier.
-- Plosser, Charles I. (1989) "Understanding Real Business Cycles." *Journal of Economic Perspectives*, 3(3), 51-77. [DOI](https://doi.org/10.1257/jep.3.3.51)
+- Plosser, Charles I. (1989) "Understanding Real Business Cycles." *Journal of Economic Perspectives*, 3(3), 51-77. [doi](https://doi.org/10.1257/jep.3.3.51)
 
 # 演習問題
+
+## 基本問題
 
 **問1：概念確認**　資本蓄積のないRBCモデルで、$MRS_t=W_t=MPN_t$ が何を意味するかを、家計側と企業側の両方から説明しなさい。
 
@@ -495,6 +498,8 @@ $$
 **問3：直観確認**　正の技術ショックが起きたとき、産出、消費、実質賃金はどう動くか説明しなさい。労働の反応が $\gamma$ に依存する理由も述べなさい。
 
 **問4：固定資本と配当**　企業の生産関数と労働需要条件から $W_tN_t=(1-\alpha)Y_t$ と $D_t=\alpha Y_t$ を導出しなさい。無バブル条件のもとで、$\alpha=0$ の場合に配当と株式価値がどうなるかも説明しなさい。
+
+## 発展問題
 
 **問5：インパルス応答**　$\alpha=0.4$、$\varphi=1$、$\gamma=2$、$\rho_a=0.9$ とします。定常状態で1％の技術ショックが発生し、その後のショックはゼロです。$a_{t+h}$、$y_{t+h}$、$n_{t+h}$、$w_{t+h}$ の $h=0,1,2$ における反応を計算しなさい。
 

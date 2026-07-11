@@ -2,7 +2,8 @@
 title: "第7回：RANKモデルの基本構造"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-06"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -46,7 +47,7 @@ lang: ja
 3. 定常状態を明示し、対数線形化された式を自然産出量、自然利子率、需給ギャップへ整理する。
 4. 家計のオイラー方程式、NKフィリップス曲線、テイラー・ルールから3本のニューケインジアン方程式を得る。
 
-# 表記と基準ケース
+# 表記と基本設定
 
 大文字は水準、小文字は定常状態からの対数乖離を表します。第7回では $\alpha=0$、政府支出なし、技術の定常状態 $a=0$、$\nu=1$ とします。さらに、第6回の是正補助金 $\tau_p^*=1/(\psi-1)$ を維持して定常状態の実質限界費用を $MC=1$ とするため、$N=Y=C=W=MC=1$ と正規化できます。
 
@@ -622,7 +623,7 @@ $$
 
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKフィリップス曲線の導出を確認するため。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格硬直性と金融政策の標準的な体系。
-- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi:10.1257/jel.37.4.1661](https://doi.org/10.1257/jel.37.4.1661)
+- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)
 
 ```{=latex}
 \Needspace{0.30\textheight}
@@ -630,15 +631,17 @@ $$
 
 **発展**
 
-- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi:10.1016/0304-3932(83)90060-0](https://doi.org/10.1016/0304-3932(83)90060-0)
-- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi:10.1086/261117](https://doi.org/10.1086/261117)
-- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi:10.1016/0167-2231(93)90009-L](https://doi.org/10.1016/0167-2231(93)90009-L)
+- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
+- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117)
+- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)
 
 ```{=latex}
 \Needspace{0.24\textheight}
 ```
 
 # 演習問題
+
+## 基本問題
 
 **問1：価格硬直性の直観**
 
@@ -673,6 +676,8 @@ $$
 ```{=latex}
 \Needspace{0.18\textheight}
 ```
+
+## 発展問題
 
 **問4：自然利子率**
 

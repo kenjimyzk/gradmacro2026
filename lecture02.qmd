@@ -1,8 +1,9 @@
 ---
 title: "第2回：時系列分析と対数近似"
-subtitle: "DSGEモデルの動学を読むための準備"
+subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-04-04"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -511,7 +512,7 @@ x_t^2+\omega_p\pi_t^2
 $$
 と正規化できます。
 
-# まとめ
+# まとめと第3回への接続
 
 本講義のポイントは次の通りです。
 
@@ -534,11 +535,13 @@ $$
 
 **発展**
 
-- Blanchard, Olivier J., and Charles M. Kahn (1980) "The Solution of Linear Difference Models under Rational Expectations." *Econometrica*, 48(5), 1305-1311. https://doi.org/10.2307/1912186
-- Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775. https://doi.org/10.1016/S0165-1889(03)00043-5
+- Blanchard, Olivier J., and Charles M. Kahn (1980) "The Solution of Linear Difference Models under Rational Expectations." *Econometrica*, 48(5), 1305-1311. [doi](https://doi.org/10.2307/1912186)
+- Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi](https://doi.org/10.1016/S0165-1889(03)00043-5)
 - Judd, Kenneth L. (1998) *Numerical Methods in Economics*. MIT Press. 近似解法と数値計算を深く学ぶため。
 
 # 演習問題
+
+## 基本問題
 
 **問1：AR(1)のインパルス応答**
 
@@ -565,6 +568,8 @@ $y_t=5$ が観察されたとき、$\mathbb{E}_t[y_{t+1}]$ と $\mathbb{E}_t[y_{
 **問4：フィッシャー方程式**
 
 名目債券の来期実質総収益率が $R_t^N/\Pi_{t+1}$ で与えられるとします。事後実質利子率 $r_{t+1}^{\mathrm{post}}$ と事前実質利子率 $r_t$ をそれぞれ対数線形化してください。また、名目利子率が上昇しても期待インフレ率が同じだけ上昇する場合、事前実質利子率がどうなるか説明しなさい。
+
+## 発展問題
 
 **問5：対数二次近似**
 

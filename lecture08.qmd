@@ -2,7 +2,8 @@
 title: "第8回：RANKモデルの一般化とショック反応"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-06"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -25,9 +26,7 @@ format:
 lang: ja
 ---
 
-# 講義の目的と位置づけ
-
-## 講義の目的
+# 講義の目的
 
 本講義では、代表的家計をもつニューケインジアン・モデルである **RANK (Representative Agent New Keynesian)** モデルを扱います。
 
@@ -40,7 +39,7 @@ lang: ja
 
 
 
-## DSGEモデルとしての位置づけ
+## 本回の位置づけ
 
 DSGEモデルの分析は、基本的に次の3段階で進みます。第3回から第7回では、このうち各部品の導出を順に行いました。第8回では、それらを組み合わせて RANKモデルとして読むことに集中します。
 
@@ -104,9 +103,9 @@ $$
 \Needspace{0.58\textheight}
 ```
 
-# RANKモデルの一般形
+# 表記と基本設定
 
-## 表記
+## モデルの環境と記号
 
 大文字は水準、小文字は定常状態からの対数乖離を表します。ただし、技術 $a_t$ と政策ショック $m_t$ は対数で表した外生状態、政府支出は
 $$
@@ -947,7 +946,7 @@ par(op)
 \Needspace{0.42\textheight}
 ```
 
-# 第9回への接続：需給ギャップと厚生
+# まとめと第9回への接続
 
 第2回のショックなしケースでは、自然産出量が定常状態に固定されるため、産出の対数乖離 $y_t$ を需給ギャップとして読めました。第8回では
 $$
@@ -983,8 +982,6 @@ $$
 $$
 と正規化します。第9回では、この目的関数のもとで政策ルールそのものを評価します。
 
-# 直観的な含意とまとめ
-
 ## 直観的な含意
 
 1. **金融政策の実体効果**
@@ -1017,7 +1014,7 @@ $$
 
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. RANKモデル、自然利子率、需給ギャップの標準的教科書。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 3本のNK方程式を政策分析へつなぐため。
-- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi:10.1257/jel.37.4.1661](https://doi.org/10.1257/jel.37.4.1661)
+- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)
 
 ```{=latex}
 \Needspace{0.28\textheight}
@@ -1025,15 +1022,17 @@ $$
 
 **発展**
 
-- Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi:10.1162/154247603770383415](https://doi.org/10.1162/154247603770383415)
-- Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. [doi:10.1086/426038](https://doi.org/10.1086/426038)
-- Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi:10.1016/S0165-1889(03)00043-5](https://doi.org/10.1016/S0165-1889(03)00043-5)
+- Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)
+- Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. [doi](https://doi.org/10.1086/426038)
+- Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi](https://doi.org/10.1016/S0165-1889(03)00043-5)
 
 ```{=latex}
 \Needspace{0.28\textheight}
 ```
 
 # 演習問題
+
+## 基本問題
 
 **問1：自然産出量と効率的産出量**
 
@@ -1079,6 +1078,8 @@ $$
 ```{=latex}
 \Needspace{0.28\textheight}
 ```
+
+## 発展問題
 
 **問5：政府支出ショック**
 

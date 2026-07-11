@@ -1,8 +1,9 @@
 ---
 title: "第12回：New Keynesian CrossとTANK"
-subtitle: "純配当移転ルール、所得フィードバック、総需要の増幅"
+subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-10"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -37,13 +38,13 @@ $$
 
 この変更により、外生的な $\mathbb{E}_t\Delta z_{t+1}$ が自然利子率を動かす第11回の表現は、産出、純配当、移転が連動する所得分配のフィードバックへ変わります。$z_t$ は制度パラメータではなく内生変数であり、その連動の強さを決める $\tau_D$ が制度係数です。この係数は、計画支出曲線の傾きと利子率感応度を変えます。
 
-本回の中心は、TANK を3本の NK方程式としてではなく、**Planned Expenditure (PE) 曲線** と45度線の交点として読むことです。$\beta$ が1に近く、期待閉鎖係数 $p$ が1に近すぎなければ、RANK (Representative-Agent New Keynesian) モデルでは現在所得の変化が消費に与える影響は小さく、実質利子率を通じる直接効果が中心です。TANK では、Type H 家計が現在所得をすべて消費するため、標準領域では現在所得を通じる間接効果が大きくなります。ただし、実質利子率に直接反応するのは Type S 家計だけなので、直接効果は RANK より小さくなります。
+本回の中心は、TANK を3本の NK方程式としてではなく、**Planned Expenditure (PE) 曲線** と45度線の交点として読むことです。$\beta$ が1に近く、期待閉鎖係数 $p$ が1に近すぎなければ、RANK (Representative-Agent New Keynesian) モデルでは現在所得の変化が消費に与える影響は小さく、実質利子率ギャップを通じる直接効果が中心です。TANK では、Type H 家計が現在所得をすべて消費するため、標準領域では現在所得を通じる間接効果が大きくなります。ただし、実質利子率ギャップに直接反応するのは Type S 家計だけなので、直接効果は RANK より小さくなります。
 
 ```{=latex}
 \Needspace{18\baselineskip}
 ```
 
-例えば $\beta=0.99$、$\gamma=\varphi=1$、$\lambda=0.30$、$p=0$、$\tau_D=0$ なら、同じ 0.01（1パーセントポイント）の実質利子率低下に対する TANK の産出反応は RANK の $1.75$ 倍です。この2つの力をまとめる合成パラメータが
+例えば $\beta=0.99$、$\gamma=\varphi=1$、$\lambda=0.30$、$p=0$、$\tau_D=0$ なら、各モデルの自然利子率から測った実質利子率ギャップを同じ 0.01（1パーセントポイント）だけ低下させたとき、TANK の産出反応は RANK の $1.75$ 倍です。この2つの力をまとめる合成パラメータが
 $$
 \chi
 \equiv
@@ -51,9 +52,9 @@ $$
 $$
 です。$\chi$ は、Type H 家計の消費、つまり現在所得が、集計所得に対して何倍動くかを表します。本回の結論は次の一文にまとめられます。
 
-> 同じ $\gamma$ と $p$、同じ実質利子率低下を比較すると、通常符号領域 $\lambda\chi<1$ のもとで TANK の産出反応が RANK より大きいことと、Type H 所得が集計所得より強く動くこと、すなわち $\chi>1$ は同値である。
+> 同じ $\gamma$ と $p$、同じ実質利子率ギャップ低下を比較すると、通常符号領域 $\lambda\chi<1$ のもとで TANK の産出反応が RANK より大きいことと、Type H 所得が集計所得より強く動くこと、すなわち $\chi>1$ は同値である。
 
-この結論は、所与の実質利子率経路に対する条件付き需要反応です。完全均衡の金融政策効果や厚生改善を、それだけで意味するものではありません。
+この結論は、所与の実質利子率ギャップ経路に対する条件付き需要反応です。完全均衡の金融政策効果や厚生改善を、それだけで意味するものではありません。
 
 本編は、純配当移転ルールから $\chi$ を導き、TANK の PE 曲線と RANK との条件付き反応比を得るところまでを中心にします。Bilbiie の表記との対応、集計 Euler 方程式の詳細、反転領域、数値例の代入計算、再帰的消費関数の導出は発展補論にまとめ、授業時間に余裕がある場合に扱います。
 
@@ -61,7 +62,7 @@ $$
 
 ![第12回講義の全体像：第11回の分配ブロックから、純配当移転ルール、Type H の所得反応係数、NKクロス、RANK との乗数比較へ進む。](figures/lecture12/lecture12_overview_infographic.svg){#fig-lecture12-overview width=95%}
 
-# 略語と表記
+# 表記と基本設定
 
 ## 用語
 
@@ -69,7 +70,7 @@ $$
 
 **HANK** は、より豊かな家計異質性、資産分布、自己保険、予備的貯蓄を持つ NKモデルです。本回は TANK までで止め、HANK の自己保険や予備的貯蓄は扱いません。
 
-**Planned Expenditure (PE) 曲線**とは、所与の実質利子率のもとで、計画消費または計画支出を現在所得の関数として表す曲線です。政府支出を入れない本回では、計画支出は計画消費と同じです。**Marginal Propensity to Consume (MPC)** は限界消費性向、**Elasticity of Intertemporal Substitution (EIS)** は異時点間代替弾力性を指します。本講義ノートでは $\gamma$ が EIS の逆数なので、EIS は $1/\gamma$ です。
+**Planned Expenditure (PE) 曲線**とは、所与の実質利子率ギャップのもとで、計画消費または計画支出を現在所得の関数として表す曲線です。政府支出を入れない本回では、計画支出は計画消費と同じです。**Marginal Propensity to Consume (MPC)** は限界消費性向、**Elasticity of Intertemporal Substitution (EIS)** は異時点間代替弾力性を指します。本講義ノートでは $\gamma$ が EIS の逆数なので、EIS は $1/\gamma$ です。
 
 ```{=latex}
 \Needspace{16\baselineskip}
@@ -88,6 +89,15 @@ $$
 y_t=c_t
 $$
 です。自然産出量はゼロに正規化します。したがって、本回の $y_t$ は、第11回の需給ギャップ $x_t$ と同じ役割を持ちます。
+
+第7〜11回と同じく、$r_t$ は事前実質利子率、$r_t^{f,j}$ はモデル $j\in\{R,T\}$ の自然実質利子率とします。需要を動かす実質利子率ギャップを
+$$
+\widetilde r_t^j
+\equiv
+r_t-r_t^{f,j},
+\qquad j\in\{R,T\}
+$$
+と定義します。RANK または TANK だけを扱う箇所では、上付きに混乱がなければ $\widetilde r_t$ と略記します。両モデルを比較するときは、各モデルの自然利子率から同じ幅だけ乖離させ、$\widetilde r_t^R=\widetilde r_t^T\equiv\widetilde r_t$ と置きます。金融緩和方向の変化は $-\widetilde r_t$ の増加です。
 
 表記の混乱を避けるため、RANK と TANK で消費・所得の上付きの使い方を分けます。RANK では代表的家計しかいないので、原則として上付きなしの $c_t,y_t$ を使います。必要なときだけ代表的家計の消費・所得を $c_t^R,y_t^R$ と書き、均衡では次の等式が成り立ちます。
 $$
@@ -119,12 +129,14 @@ $$
 | $n_t,w_t$ | 労働、実質賃金 |
 | $d_t$ | 集計純配当を定常消費で割った一次近似 |
 | $z_t$ | Type H 家計一人当たり移転を定常消費で割った一次近似 |
-| $r_t$ | 事前実質利子率。自然利子率からの乖離として読む |
+| $r_t$ | 事前実質利子率 |
+| $r_t^{f,R},r_t^{f,T}$ | RANK、TANK の自然実質利子率 |
+| $\widetilde r_t^j=r_t-r_t^{f,j}$ | モデル $j$ の実質利子率ギャップ。モデル内では $\widetilde r_t$ と略記 |
 | $\sigma_t^c=c_t^S-c_t^H$ | 消費格差 |
 
 : 本回で使う主な変数。消費・産出・利子率は定常状態からの対数乖離、$d_t,z_t$ は定常消費で正規化した一次近似である。 {#tbl-lecture12-variables tbl-colwidths="[22,78]"}
 
-注：$r_t$ は自然利子率からの乖離として読み、低下は $-r_t$ の増加で表す。
+注：RANK と TANK の比較では $\widetilde r_t^R=\widetilde r_t^T\equiv\widetilde r_t$ と置き、同じ実質利子率ギャップを与える。
 
 | 記号 | 範囲 | 意味 |
 |---|---:|---|
@@ -146,8 +158,8 @@ $$
 | $\chi$ | $1+\varphi\left(1-\tau_D/\lambda\right)$ | Type H 所得・消費の集計所得に対する反応係数 |
 | $\Theta_D$ | $(1-\lambda\chi)/(1-\lambda)$ | Type S 所得を集計所得に戻す係数 |
 | $\omega_R,\omega_T$ | PE 曲線の $y_t$ 係数 | RANK、TANK の PE 曲線の傾き。集計MPCと呼ばれることがある |
-| $\Omega_R^D,\Omega_T^D$ | PE 曲線の $(-r_t)$ 係数 | 所得を固定したときの直接効果 |
-| $\Omega_R,\Omega_T$ | $\Omega^D/(1-\omega)$ | 実質利子率低下に対する総効果 |
+| $\Omega_R^D,\Omega_T^D$ | PE 曲線の $(-\widetilde r_t)$ 係数 | 所得を固定したときの直接効果 |
+| $\Omega_R,\Omega_T$ | $\Omega^D/(1-\omega)$ | 実質利子率ギャップ低下に対する総効果 |
 
 : 本回で使う派生係数。$\Omega^D$ は所得を固定した直接効果、$\Omega$ は所得フィードバックを含む総効果である。 {#tbl-lecture12-derived-coefficients tbl-colwidths="[18,32,50]"}
 
@@ -163,14 +175,14 @@ Bilbiie の New Keynesian Cross では、$\omega_R$ や $\omega_T$ のような 
 
 第7回では、代表的家計の Euler 方程式、価格硬直性、テイラー・ルールから RANK の3本の NK方程式を得ました。第11回では、家計を Type H と Type S に分け、Type S の Euler 方程式と Type H の現在所得制約から TANK の IS 曲線を導きました。
 
-第12回では、NKフィリップス曲線やテイラー・ルールを前面に出しません。実質利子率 $r_t$ を所与として、計画消費が現在所得 $y_t$ にどう反応するかを見ます。期待を閉じる $p$ も、構造的ショック過程ではなく簡約形の係数です。したがって、本回が求めるのは所与の実質利子率経路に対する条件付き需要反応であり、インフレと政策金利を同時に決める完全均衡の金融政策反応ではありません。これは Bilbiie の New Keynesian Cross の読み方です。PE 曲線と45度線の交点で均衡所得が決まるという図解に戻すことで、TANK の新しさを次の2つに分解できます。
+第12回では、NKフィリップス曲線やテイラー・ルールを前面に出しません。実質利子率ギャップ $\widetilde r_t$ を所与として、計画消費が現在所得 $y_t$ にどう反応するかを見ます。期待を閉じる $p$ も、構造的ショック過程ではなく簡約形の係数です。したがって、本回が求めるのは所与の実質利子率ギャップ経路に対する条件付き需要反応であり、インフレと政策金利を同時に決める完全均衡の金融政策反応ではありません。これは Bilbiie の New Keynesian Cross の読み方です。PE 曲線と45度線の交点で均衡所得が決まるという図解に戻すことで、TANK の新しさを次の2つに分解できます。
 
-1. 誰が実質利子率に直接反応するのか。
+1. 誰が実質利子率ギャップに直接反応するのか。
 2. 誰が現在所得の変化をどれだけ消費に回すのか。
 
 RANK では、代表的家計が資産市場を通じて消費を平準化するため、現在所得への反応は小さくなります。TANK では、Type H 家計が現在所得をすべて消費するため、所得フィードバックが強くなります。
 
-ただし、TANK は常に RANK より大きな総需要反応を持つわけではありません。Type S 家計だけが Euler 方程式を満たすので、実質利子率に直接反応する家計の比率は $1-\lambda$ に下がります。TANK の総効果は、直接効果の縮小と所得フィードバックの増幅のどちらが勝つかで決まります。
+ただし、TANK は常に RANK より大きな総需要反応を持つわけではありません。Type S 家計だけが Euler 方程式を満たすので、実質利子率ギャップに直接反応する家計の比率は $1-\lambda$ に下がります。TANK の総効果は、直接効果の縮小と所得フィードバックの増幅のどちらが勝つかで決まります。
 
 ```{=latex}
 \Needspace{18\baselineskip}
@@ -178,26 +190,26 @@ RANK では、代表的家計が資産市場を通じて消費を平準化する
 
 # 対数線形化と方程式リスト
 
-第12回では、NKフィリップス曲線とテイラー・ルールを前面に出さず、所与の実質利子率のもとで計画消費を現在所得の関数として書きます。対数線形化された体系は、次の方程式リストにまとめられます。
+第12回では、NKフィリップス曲線とテイラー・ルールを前面に出さず、所与の実質利子率ギャップのもとで計画消費を現在所得の関数として書きます。対数線形化された体系は、次の方程式リストにまとめられます。
 
 | No. | 名称 | 式 |
 |---:|---|---|
-| 1 | 共通 PE 曲線 | $c_t=\omega y_t+\Omega^D(-r_t)$ |
+| 1 | 共通 PE 曲線 | $c_t=\omega y_t+\Omega^D(-\widetilde r_t)$ |
 | 2 | 財市場均衡 | $y_t=c_t$ |
 | 3 | NKクロス乗数 | $\Omega=\Omega^D/(1-\omega)$ |
-| 4 | RANK 再帰的消費関数 | $c_t=(1-\beta)y_t-\dfrac{\beta}{\gamma}r_t+\beta\mathbb{E}_t c_{t+1}$ |
+| 4 | RANK 再帰的消費関数 | $c_t=(1-\beta)y_t-\dfrac{\beta}{\gamma}\widetilde r_t^R+\beta\mathbb{E}_t c_{t+1}$ |
 | 5 | 簡約形の期待閉鎖 | $\mathbb{E}_t c_{t+1}=p c_t$ |
 | 6 | RANK の PE 係数 | $\omega_R=\dfrac{1-\beta}{1-\beta p},\quad \Omega_R^D=\dfrac{\beta}{\gamma(1-\beta p)}$ |
 | 7 | 純配当移転ルール | $\lambda z_t=\tau_Dd_t$ |
 | 8 | 集計純配当 | $d_t=-(\gamma+\varphi)y_t$ |
 | 9 | Type H 消費 | $c_t^H=\chi y_t,\quad \chi=1+\varphi\left(1-\dfrac{\tau_D}{\lambda}\right)$ |
 | 10 | Type S 所得 | $y_t^S=\dfrac{1-\lambda\chi}{1-\lambda}y_t$ |
-| 11 | Type S 再帰的消費関数 | $c_t^S=(1-\beta)y_t^S-\dfrac{\beta}{\gamma}r_t+\beta\mathbb{E}_t c_{t+1}^S$ |
-| 12 | TANK 集計 PE 曲線 | $c_t=\left[1-\beta(1-\lambda\chi)\right]y_t-(1-\lambda)\dfrac{\beta}{\gamma}r_t+\beta(1-\lambda\chi)\mathbb{E}_t c_{t+1}$ |
+| 11 | Type S 再帰的消費関数 | $c_t^S=(1-\beta)y_t^S-\dfrac{\beta}{\gamma}\widetilde r_t^T+\beta\mathbb{E}_t c_{t+1}^S$ |
+| 12 | TANK 集計 PE 曲線 | $c_t=\left[1-\beta(1-\lambda\chi)\right]y_t-(1-\lambda)\dfrac{\beta}{\gamma}\widetilde r_t^T+\beta(1-\lambda\chi)\mathbb{E}_t c_{t+1}$ |
 | 13 | TANK の PE 係数 | $\omega_T=\dfrac{1-\beta(1-\lambda\chi)}{1-\beta p(1-\lambda\chi)},\quad \Omega_T^D=\dfrac{(1-\lambda)\beta}{\gamma[1-\beta p(1-\lambda\chi)]}$ |
 | 14 | RANK との総効果比 | $\dfrac{\Omega_T}{\Omega_R}=\dfrac{1-\lambda}{1-\lambda\chi}$ |
 
-: 第12回の対数線形体系。1--3番は共通の NKクロス、4--6番は RANK、7--13番は TANK の分配・消費ブロック、14番は同じ $\gamma,p$ と同じ $-r_t$ を用いる比較である。 {#tbl-lecture12-equations tbl-colwidths="[6,28,66]"}
+: 第12回の対数線形体系。1--3番は共通の NKクロス、4--6番は RANK、7--13番は TANK の分配・消費ブロック、14番は同じ $\gamma,p$ と同じ実質利子率ギャップ $-\widetilde r_t$ を用いる比較である。 {#tbl-lecture12-equations tbl-colwidths="[6,28,66]"}
 
 注：$p$ は構造的ショック過程ではない。$d_t,z_t$ は定常消費で正規化した一次近似である。
 
@@ -209,11 +221,11 @@ RANK に戻すには、家計タイプの区別をなくします。TANK 固有�
 
 # NKクロスの共通枠組み
 
-RANK と TANK に入る前に、NKクロスの読み方をそろえます。所与の実質利子率のもとで、計画消費が
+RANK と TANK に入る前に、NKクロスの読み方をそろえます。所与の実質利子率ギャップのもとで、計画消費が
 $$
-c_t=\omega y_t+\Omega^D(-r_t)
+c_t=\omega y_t+\Omega^D(-\widetilde r_t)
 $$
-と書けるとします。$\omega$ は PE 曲線の傾き、$\Omega^D$ は所得を固定したときの実質利子率低下の直接効果です。
+と書けるとします。$\omega$ は PE 曲線の傾き、$\Omega^D$ は所得を固定したときの実質利子率ギャップ低下の直接効果です。
 
 政府支出がないので、均衡では
 $$
@@ -223,13 +235,13 @@ $$
 $$
 y_t
 =
-\omega y_t+\Omega^D(-r_t)
+\omega y_t+\Omega^D(-\widetilde r_t)
 $$
-となり、実質利子率低下の総効果は
+となり、実質利子率ギャップ低下の総効果は
 $$
 \Omega
 \equiv
-\frac{\partial y_t}{\partial(-r_t)}
+\frac{\partial y_t}{\partial(-\widetilde r_t)}
 =
 \frac{\Omega^D}{1-\omega}
 $$
@@ -262,11 +274,11 @@ c_t
 =
 (1-\beta)y_t
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^R
 +
 \beta\mathbb{E}_t c_{t+1}
 $$
-です。これは Euler 方程式を家計の資産制約と組み合わせた表現です。現在所得 $y_t$ が高いほど今期消費は増え、実質利子率 $r_t$ が高いほど現在消費は下がります。
+です。これは Euler 方程式を家計の資産制約と組み合わせた表現です。現在所得 $y_t$ が高いほど今期消費は増え、実質利子率ギャップ $\widetilde r_t^R$ が高いほど現在消費は下がります。
 この式は、本回の補論で導出します。RANK では代表的家計しかいないので、補論の一般式で $j=R$、$c_t^R=c_t$、$y_t^R=y_t$ と置けばこの式になります。
 
 消費反応について、簡約形の持続性を $p$ と置きます。
@@ -281,11 +293,11 @@ c_t
 =
 \frac{1-\beta}{1-\beta p}y_t
 -
-\frac{\beta}{\gamma(1-\beta p)}r_t
+\frac{\beta}{\gamma(1-\beta p)}\widetilde r_t^R
 $$
 です。したがって、RANK の PE 曲線は
 $$
-c_t=\omega_R y_t+\Omega_R^D(-r_t)
+c_t=\omega_R y_t+\Omega_R^D(-\widetilde r_t^R)
 $$
 と書けます。ただし
 $$
@@ -297,7 +309,7 @@ $$
 =
 \frac{\beta}{\gamma(1-\beta p)}
 $$
-です。$\Omega_R^D$ は、所得を固定したときの実質利子率低下の直接効果です。
+です。$\Omega_R^D$ は、所得を固定したときの実質利子率ギャップ低下の直接効果です。
 
 ```{=latex}
 \Needspace{13\baselineskip}
@@ -307,9 +319,9 @@ $$
 $$
 y_t
 =
-\omega_R y_t+\Omega_R^D(-r_t)
+\omega_R y_t+\Omega_R^D(-\widetilde r_t^R)
 $$
-です。したがって、実質利子率低下の総効果は
+です。したがって、実質利子率ギャップ低下の総効果は
 $$
 \Omega_R
 =
@@ -333,9 +345,9 @@ RANK では $\omega_R=(1-\beta)/(1-\beta p)$、$\Omega_R=1/[\gamma(1-p)]$ です
 \Needspace{23\baselineskip}
 ```
 
-@fig-rank-nk-cross は $\beta=0.99$、$p=0$ の関係を示しています。横軸は現在所得 $y_t$、縦軸は計画消費 $c_t$ です。RANK の PE 曲線はほぼ水平に近く、実質利子率低下で上方にシフトします。傾きが小さいため、シフト後の追加的な所得フィードバックは小さいです。
+@fig-rank-nk-cross は $\beta=0.99$、$p=0$ の関係を示しています。横軸は現在所得 $y_t$、縦軸は計画消費 $c_t$ です。RANK の PE 曲線はほぼ水平に近く、実質利子率ギャップの低下で上方にシフトします。傾きが小さいため、シフト後の追加的な所得フィードバックは小さいです。
 
-![RANK の NKクロス（$\beta=0.99$、$p=0$）。この較正では PE 曲線はほぼ水平で、実質利子率低下は主に直接シフトとして現れる。一般に「ほぼ水平」には $\beta\simeq1$ に加えて $p$ が1に近すぎないことが必要である。](figures/lecture12/rank_nk_cross.svg){#fig-rank-nk-cross width=88%}
+![RANK の NKクロス（$\beta=0.99$、$p=0$）。この較正では PE 曲線はほぼ水平で、実質利子率ギャップの低下は主に直接シフトとして現れる。一般に「ほぼ水平」には $\beta\simeq1$ に加えて $p$ が1に近すぎないことが必要である。](figures/lecture12/rank_nk_cross.svg){#fig-rank-nk-cross width=88%}
 
 ```{=latex}
 \Needspace{14\baselineskip}
@@ -483,7 +495,7 @@ $$
 
 ![純配当移転ルールと $\chi$。$\tau_D/\lambda<1$ なら $\chi>1$、$\tau_D/\lambda=1$ なら $\chi=1$、$\tau_D/\lambda>1$ なら $\chi<1$ である。](figures/lecture12/chi_tax_rule.svg){#fig-chi-tax-rule width=88%}
 
-ここで重要なのは、$\tau_D$ を外生ショックではなく、分配ルールの制度係数として扱う点です。ゼロ定常配当のまわりで一次近似しているため、制度係数 $\tau_D$ そのものの小さな時変ショックを入れても、定常配当がゼロであれば一次の需要ショックとしては現れにくいです。本回では、ショックは実質利子率 $r_t$ の変化とし、$\tau_D$ はその伝播を決める制度パラメータとして扱います。
+ここで重要なのは、$\tau_D$ を外生ショックではなく、分配ルールの制度係数として扱う点です。ゼロ定常配当のまわりで一次近似しているため、制度係数 $\tau_D$ そのものの小さな時変ショックを入れても、定常配当がゼロであれば一次の需要ショックとしては現れにくいです。本回では、ショックは実質利子率ギャップ $\widetilde r_t$ の変化とし、$\tau_D$ はその伝播を決める制度パラメータとして扱います。
 
 ```{=latex}
 \Needspace{13\baselineskip}
@@ -540,7 +552,7 @@ $$
 
 Type S だけが Euler 方程式を満たすため、集計消費は
 $$
-c_t=\mathbb{E}_t c_{t+1}-\frac{1}{\gamma\Theta_D}r_t,
+c_t=\mathbb{E}_t c_{t+1}-\frac{1}{\gamma\Theta_D}\widetilde r_t^T,
 \qquad
 \Theta_D=\frac{1-\lambda\chi}{1-\lambda}
 $$
@@ -555,7 +567,7 @@ c_t^S
 =
 (1-\beta)y_t^S
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^T
 +
 \beta\mathbb{E}_t c_{t+1}^S
 $$
@@ -596,7 +608,7 @@ c_t
 \left[
 (1-\beta)\frac{1-\lambda\chi}{1-\lambda}y_t
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^T
 +
 \beta\frac{1-\lambda\chi}{1-\lambda}\mathbb{E}_t c_{t+1}
 \right]
@@ -604,7 +616,7 @@ c_t
 &=
 \left[1-\beta(1-\lambda\chi)\right]y_t
 -
-(1-\lambda)\frac{\beta}{\gamma}r_t
+(1-\lambda)\frac{\beta}{\gamma}\widetilde r_t^T
 +
 \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1}.
 \end{aligned}
@@ -612,7 +624,7 @@ $$
 
 この式が TANK の集計 PE 曲線です。RANK と TANK の違いは2つあります。
 
-第一に、実質利子率に直接反応するのは Type S 家計だけなので、利子率項には $1-\lambda$ が掛かります。これは直接効果を小さくします。
+第一に、実質利子率ギャップに直接反応するのは Type S 家計だけなので、利子率項には $1-\lambda$ が掛かります。これは直接効果を小さくします。
 
 第二に、Type H 家計の消費が現在所得に反応するため、$y_t$ の係数は
 $$
@@ -628,7 +640,7 @@ $$
 $$
 c_t
 =
-\omega_T y_t+\Omega_T^D(-r_t)
+\omega_T y_t+\Omega_T^D(-\widetilde r_t^T)
 $$
 と書けます。ただし
 $$
@@ -650,9 +662,9 @@ $$
 $$
 1-\beta p(1-\lambda\chi)\neq 0
 $$
-が必要です。本編の標準領域 $0<\lambda\chi<1$ では、この分母は自動的に正です。$\lambda\chi\leq 0$ まで扱う場合は非零条件を別に確認し、実質利子率低下の直接シフトを正と読むには、さらに $1-\beta p(1-\lambda\chi)>0$ が必要です。
+が必要です。本編の標準領域 $0<\lambda\chi<1$ では、この分母は自動的に正です。$\lambda\chi\leq 0$ まで扱う場合は非零条件を別に確認し、実質利子率ギャップ低下の直接シフトを正と読むには、さらに $1-\beta p(1-\lambda\chi)>0$ が必要です。
 
-均衡 $c_t=y_t$ を使うと、実質利子率低下の総効果は
+均衡 $c_t=y_t$ を使うと、実質利子率ギャップ低下の総効果は
 $$
 \Omega_T
 =
@@ -667,9 +679,9 @@ $$
 \Needspace{23\baselineskip}
 ```
 
-@fig-tank-nk-cross は、RANK と同じ $\beta=0.99$、$p=0$ と同じ実質利子率低下を使って、このメカニズムを描いています。TANK では、PE 曲線の直接シフトは RANK より小さいです。しかし、PE 曲線が急になるため、45度線との交点は大きく動きます。これが所得フィードバックによる増幅です。
+@fig-tank-nk-cross は、RANK と同じ $\beta=0.99$、$p=0$ と同じ実質利子率ギャップ低下を使って、このメカニズムを描いています。TANK では、PE 曲線の直接シフトは RANK より小さいです。しかし、PE 曲線が急になるため、45度線との交点は大きく動きます。これが所得フィードバックによる増幅です。
 
-![TANK の NKクロス。実質利子率に直接反応するのは Type S だけなので直接シフトは小さいが、Type H の現在所得消費により PE 曲線の傾きは大きくなる。](figures/lecture12/tank_nk_cross.svg){#fig-tank-nk-cross width=88%}
+![TANK の NKクロス。実質利子率ギャップに直接反応するのは Type S だけなので直接シフトは小さいが、Type H の現在所得消費により PE 曲線の傾きは大きくなる。](figures/lecture12/tank_nk_cross.svg){#fig-tank-nk-cross width=88%}
 
 ```{=latex}
 \Needspace{16\baselineskip}
@@ -677,7 +689,15 @@ $$
 
 # RANK との条件付き比較
 
-以下では、RANK と TANK で $\gamma$ と簡約形の $p$ を同じにし、同じ実質利子率低下 $-r_t$ を与えます。RANK の条件付き総効果は
+以下では、RANK と TANK で $\gamma$ と簡約形の $p$ を同じにし、各モデルの自然利子率から同じ幅だけ低下させます。すなわち
+$$
+\widetilde r_t^R
+=
+\widetilde r_t^T
+\equiv
+\widetilde r_t
+$$
+と置き、共通の緩和幅を $-\widetilde r_t$ で表します。RANK の条件付き総効果は
 $$
 \Omega_R
 =
@@ -707,7 +727,7 @@ RANK と TANK の違いを横に並べると、次のようになります。
 | 総効果 | $\Omega_R=\dfrac{1}{\gamma(1-p)}$ | $\Omega_T=\dfrac{1}{\gamma(1-p)}\dfrac{1-\lambda}{1-\lambda\chi}$ |
 | RANK との比 | $1$ | $\dfrac{1-\lambda}{1-\lambda\chi}$ |
 
-: RANK と TANK の PE 係数。同じ $\beta,\gamma,p$ と同じ実質利子率低下を比較する。 {#tbl-rank-tank-comparison tbl-colwidths="[18,41,41]"}
+: RANK と TANK の PE 係数。同じ $\beta,\gamma,p$ と、各モデルの自然利子率から測った同じ実質利子率ギャップ低下を比較する。 {#tbl-rank-tank-comparison tbl-colwidths="[18,41,41]"}
 
 注：$\Omega^D$ は所得固定の直接効果、$\Omega$ は均衡所得フィードバックを含む条件付き総効果である。完全均衡の政策反応ではない。
 
@@ -721,7 +741,7 @@ $$
 $$
 この分解は、総効果比を読むための正確な代数分解です。ただし、$p>0$ のとき、右辺の各項は PE 曲線の直接シフト比や PE 乗数比そのものではありません。PE 曲線の乗数は、一般には $1/(1-\omega_R)$ と $1/(1-\omega_T)$ です。
 
-それでも、第1項の $1-\lambda$ は、実質利子率に直接反応するのが Type S 家計だけであることを表します。Type H 家計は Euler 方程式を持たないので、直接効果だけを見れば、TANK の反応は RANK より小さくなります。
+それでも、第1項の $1-\lambda$ は、実質利子率ギャップに直接反応するのが Type S 家計だけであることを表します。Type H 家計は Euler 方程式を持たないので、直接効果だけを見れば、TANK の反応は RANK より小さくなります。
 
 第2項の
 $$
@@ -764,10 +784,10 @@ $$
 ::: {.callout-important}
 ## 主結果
 
-同じ $\gamma,p$ と同じ実質利子率低下を比較すると、$\lambda\chi<1$ のもとで $\Omega_T>\Omega_R$、$\chi>1$、$\tau_D<\lambda$ は同値です。流動性制約家計の存在だけでなく、所得フィードバックが直接効果の縮小を上回ることが必要です。
+同じ $\gamma,p$ と同じ実質利子率ギャップ低下を比較すると、$\lambda\chi<1$ のもとで $\Omega_T>\Omega_R$、$\chi>1$、$\tau_D<\lambda$ は同値です。流動性制約家計の存在だけでなく、所得フィードバックが直接効果の縮小を上回ることが必要です。
 :::
 
-$\Omega_T/\Omega_R$ は所与の実質利子率経路に対する産出反応の比です。NKフィリップス曲線と政策ルールを閉じた金融政策効果でも、消費格差を含む厚生の順位でもありません。完全均衡の政策評価にはインフレ反応と政策金利の内生反応を、厚生評価にはタイプ別効用を別に計算する必要があります。
+$\Omega_T/\Omega_R$ は所与の実質利子率ギャップ経路に対する産出反応の比です。NKフィリップス曲線と政策ルールを閉じた金融政策効果でも、消費格差を含む厚生の順位でもありません。完全均衡の政策評価にはインフレ反応と政策金利の内生反応を、厚生評価にはタイプ別効用を別に計算する必要があります。
 
 ```{=latex}
 \Needspace{22\baselineskip}
@@ -781,7 +801,7 @@ $$
 $$
 を、各曲線で $\chi$ を固定して $\lambda$ の関数として描いています。$\lambda\chi<1$ の領域では、$\chi>1$ なら比は1を上回り、$\chi=1$ なら1に等しく、$\chi<1$ なら1を下回ります。
 
-![TANK と RANK の条件付き総需要反応の比。同じ $\gamma,p$ と同じ実質利子率低下を比較すると、$\lambda\chi<1$ の領域では $\chi>1$ なら増幅、$\chi=1$ なら同じ総効果、$\chi<1$ なら抑制となる。](figures/lecture12/multiplier_ratio.svg){#fig-multiplier-ratio width=88%}
+![TANK と RANK の条件付き総需要反応の比。同じ $\gamma,p$ と同じ実質利子率ギャップ低下を比較すると、$\lambda\chi<1$ の領域では $\chi>1$ なら増幅、$\chi=1$ なら同じ総効果、$\chi<1$ なら抑制となる。](figures/lecture12/multiplier_ratio.svg){#fig-multiplier-ratio width=88%}
 
 ```{=latex}
 \Needspace{18\baselineskip}
@@ -789,7 +809,7 @@ $$
 
 # 数値例
 
-第11回と共通する $\beta,\gamma,\varphi,\lambda$ を引き継ぎます。ただし、実験は第11回の政策ルールを閉じた金融政策ショックとは異なります。本回では、簡約形の期待閉鎖 $p=0$ のもとで、RANK と TANK に共通する所与の 0.01（1パーセントポイント）の実質利子率低下を与えます。
+第11回と共通する $\beta,\gamma,\varphi,\lambda$ を引き継ぎます。ただし、実験は第11回の政策ルールを閉じた金融政策ショックとは異なります。本回では、簡約形の期待閉鎖 $p=0$ のもとで、RANK と TANK の自然利子率から測った実質利子率ギャップを、それぞれ 0.01（1パーセントポイント）低下させます。
 
 次の表の $\Theta_D$ は
 $$
@@ -819,11 +839,11 @@ $$
 
 第12回の結論は3つです。
 
-第一に、$\beta\simeq1$ で $p$ が1に近すぎなければ、RANK の PE 曲線の傾きは小さくなります。所与の実質利子率低下に対する反応は、主に EIS を通じる直接効果として読めます。
+第一に、$\beta\simeq1$ で $p$ が1に近すぎなければ、RANK の PE 曲線の傾きは小さくなります。所与の実質利子率ギャップ低下に対する反応は、主に EIS を通じる直接効果として読めます。
 
-第二に、標準領域の TANK では、Type H 家計が現在所得をすべて消費するため、PE 曲線の傾きが大きくなります。ただし、実質利子率に直接反応するのは Type S 家計だけなので、PE 曲線の直接シフトは小さくなります。
+第二に、標準領域の TANK では、Type H 家計が現在所得をすべて消費するため、PE 曲線の傾きが大きくなります。ただし、実質利子率ギャップに直接反応するのは Type S 家計だけなので、PE 曲線の直接シフトは小さくなります。
 
-第三に、同じ $\gamma,p$ と同じ実質利子率低下のもとで TANK が RANK より大きな総需要反応を持つかどうかは、Type H 家計の所得が集計所得に対して何倍動くか、すなわち $\chi$ によって決まります。純配当移転ルールのもとでは
+第三に、同じ $\gamma,p$ と同じ実質利子率ギャップ低下のもとで TANK が RANK より大きな総需要反応を持つかどうかは、Type H 家計の所得が集計所得に対して何倍動くか、すなわち $\chi$ によって決まります。純配当移転ルールのもとでは
 $$
 \chi
 =
@@ -876,7 +896,13 @@ TANK は、単に流動性制約家計を足したモデルではありません
 
 注：第12回の $p$ は第2回の時系列モデルそのものではなく、期待を閉じる簡約形の係数である。
 
-この表から分かるように、第12回は新しいトピックを単に足した回ではありません。これまでの部品を組み合わせ直す回です。第3回の Euler 方程式は、RANK と Type S 家計の消費関数になります。第6回の企業利潤は、補助金と企業一括税を差し引いた TANK の純配当 $d_t$ につながります。第5回の移転は、Type H 家計への $z_t$ になります。第7回以降の価格硬直性は、所与の実質利子率のもとで需要が産出を決める環境を作ります。第11回の消費格差は、第12回では $c_t^H=\chi y_t$ という PE 曲線の傾きとして読み替えられます。
+この表から分かるように、第12回は新しいトピックを単に足した回ではありません。これまでの部品を組み合わせ直す回です。第3回の Euler 方程式は、RANK と Type S 家計の消費関数になります。第6回の企業利潤は、補助金と企業一括税を差し引いた TANK の純配当 $d_t$ につながります。第5回の移転は、Type H 家計への $z_t$ になります。第7回以降の価格硬直性は、所与の実質利子率ギャップのもとで需要が産出を決める環境を作ります。第11回の消費格差は、第12回では $c_t^H=\chi y_t$ という PE 曲線の傾きとして読み替えられます。
+
+```{=latex}
+\clearpage
+```
+
+{{< include includes/assumption-matrix.qmd >}}
 
 ## 講義全体を貫く3つの見方
 
@@ -900,7 +926,7 @@ TANK では、Type H と Type S の MPC が違うため、同じ集計所得で�
 
 最初の45度線分析では、PE 曲線は外から与えられていました。最後の NKクロスでは、PE 曲線の傾きもシフトも、家計の最適化と分配ルールから導かれます。これが、本講義全体で得たもっとも大きな進歩です。
 
-最終的なメッセージは次の通りです。所与の実質利子率低下に対する需要反応は、直接効果だけでは決まりません。誰が Euler 方程式を持ち、誰が現在所得を消費し、賃金所得・純配当・移転が誰に入るかによって、所得フィードバックの大きさが変わります。TANK の NKクロスは、その条件付き反応を簡潔に示す枠組みです。
+最終的なメッセージは次の通りです。所与の実質利子率ギャップ低下に対する需要反応は、直接効果だけでは決まりません。誰が Euler 方程式を持ち、誰が現在所得を消費し、賃金所得・純配当・移転が誰に入るかによって、所得フィードバックの大きさが変わります。TANK の NKクロスは、その条件付き反応を簡潔に示す枠組みです。
 
 ## 今後の発展
 
@@ -913,6 +939,18 @@ $$
 y_t=c_t+i_t+g_t
 $$
 となり、実質利子率は消費だけでなく投資にも作用します。政府支出、税、社会保険料、給付を入れれば、誰に課税し、誰に移転するかも乗数を決めます。企業価値、純配当、資本収益の帰着を明示する必要もあります。
+
+::: {.callout-note title="資本を含むRBCモデルとDSGEの数値解法"}
+マクロ経済学Aでは成長理論の資本蓄積を扱いますが、確率的ショックのもとで資本ストックを内生化するRBCモデルは扱いません。本講義でも、各回の経済機構を閉形式で追えるように、資本ストックを所与としてきました。
+
+資本を導入すると、財市場に投資 $i_t$ が加わり、資本蓄積式
+$$
+k_{t+1}=(1-\delta)k_t+i_t
+$$
+が新たな動学を作ります。資本ストック $k_t$ は所定状態変数となり、消費や資産価格などの前向き変数と同時に解かなければなりません。そのため、単一のAR(1)ショックに比例する解を予想する方法だけでは一般に不十分です。
+
+次の段階では、静的変数・所定状態・前向き変数を分類し、線形合理的期待体系を行列で表します。Blanchard--Kahn条件で解の存在と一意性を確認し、generalized Schur（QZ）法で policy function と transition law を計算して、そこからインパルス応答を作ります。資本を含むRBCモデルは、本講義で学んだ動学的最適化と一般均衡を、この数値解法へ接続する最初の応用です。
+:::
 
 第三に、**非線形分析と実証へ進む方向**です。ゼロ金利制約、大きなショック、強い借入制約のもとでは一次近似だけでは不十分です。同時に、所得階層別の労働所得、資本所得、移転、MPC を測れば、
 $$
@@ -936,17 +974,17 @@ $$
 
 **必読**
 
-- Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. https://doi.org/10.1016/j.jmoneco.2019.03.003
-- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. https://doi.org/10.1016/j.jet.2007.07.008
-- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. https://doi.org/10.1162/JEEA.2007.5.1.227
-- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. https://doi.org/10.1086/654107
+- Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003)
+- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008)
+- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227)
+- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107)
 
 **発展**
 
-- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. https://doi.org/10.1257/aer.20160042
-- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. https://doi.org/10.1257/aer.20150063
-- Auclert, Adrien (2019) "Monetary Policy and the Redistribution Channel." *American Economic Review*, 109(6), 2333-2367. https://doi.org/10.1257/aer.20160137
-- Werning, Iván (2015) "Incomplete Markets and Aggregate Demand." NBER Working Paper No. 21448. https://doi.org/10.3386/w21448
+- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042)
+- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063)
+- Auclert, Adrien (2019) "Monetary Policy and the Redistribution Channel." *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137)
+- Werning, Iván (2015) "Incomplete Markets and Aggregate Demand." NBER Working Paper No. 21448. [doi](https://doi.org/10.3386/w21448)
 
 ```{=latex}
 \Needspace{12\baselineskip}
@@ -964,7 +1002,7 @@ $$
 
 RANK の消費関数
 $$
-c_t=(1-\beta)y_t-\frac{\beta}{\gamma}r_t+\beta\mathbb{E}_t c_{t+1}
+c_t=(1-\beta)y_t-\frac{\beta}{\gamma}\widetilde r_t^R+\beta\mathbb{E}_t c_{t+1}
 $$
 から、持続性 $p$ のもとで
 $$
@@ -1031,7 +1069,7 @@ $$
 
 Type S の Euler 方程式
 $$
-c_t^S=\mathbb{E}_t c_{t+1}^S-\frac{1}{\gamma}r_t
+c_t^S=\mathbb{E}_t c_{t+1}^S-\frac{1}{\gamma}\widetilde r_t^T
 $$
 を用いて、TANK の集計 Euler 方程式
 $$
@@ -1040,7 +1078,7 @@ c_t
 \mathbb{E}_t c_{t+1}
 -
 \frac{1}{\gamma}
-\frac{1-\lambda}{1-\lambda\chi}r_t
+\frac{1-\lambda}{1-\lambda\chi}\widetilde r_t^T
 $$
 を導出しなさい。
 
@@ -1056,7 +1094,7 @@ c_t^S
 =
 (1-\beta)y_t^S
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^T
 +
 \beta\mathbb{E}_t c_{t+1}^S
 $$
@@ -1066,7 +1104,7 @@ c_t
 =
 \left[1-\beta(1-\lambda\chi)\right]y_t
 -
-(1-\lambda)\frac{\beta}{\gamma}r_t
+(1-\lambda)\frac{\beta}{\gamma}\widetilde r_t^T
 +
 \beta(1-\lambda\chi)\mathbb{E}_t c_{t+1}
 $$
@@ -1110,7 +1148,7 @@ $\lambda\chi>1$ の場合、TANK の集計 Euler 方程式の利子率係数の�
 
 **問9：直接効果と間接効果**
 
-TANK では、実質利子率に直接反応する家計の比率が $1-\lambda$ に下がるにもかかわらず、総効果が RANK より大きくなりうる。この理由を、PE 曲線の直接シフトと傾きの2つに分けて説明しなさい。
+TANK では、実質利子率ギャップに直接反応する家計の比率が $1-\lambda$ に下がるにもかかわらず、総効果が RANK より大きくなりうる。この理由を、PE 曲線の直接シフトと傾きの2つに分けて説明しなさい。
 
 ```{=latex}
 \Needspace{13\baselineskip}
@@ -1155,11 +1193,11 @@ $$
 | EIS の $\sigma$ | $1/\gamma$ |
 | $\sigma_t^c$ | EIS ではなく、消費格差 $c_t^S-c_t^H$ |
 | $d_t,z_t$ | 定常消費で割った一次近似。ログ乖離ではない |
-| $\Omega_R,\Omega_T$ | 本回では実質利子率低下に対する総効果。資産保有量ではない |
+| $\Omega_R,\Omega_T$ | 本回では実質利子率ギャップ低下に対する総効果。資産保有量ではない |
 
 : Bilbiie の表記と本講義ノートの表記の対応。$d_t,z_t$ はゼロ定常値のため対数乖離ではない。 {#tbl-bilbiie-notation tbl-colwidths="[24,76]"}
 
-注：$\Omega_R,\Omega_T$ は同じ実質利子率低下に対する条件付き産出反応を表す。
+注：$\Omega_R,\Omega_T$ は同じ実質利子率ギャップ低下に対する条件付き産出反応を表す。
 
 # 補論（発展）：第11回との接続と集計 Euler 方程式
 
@@ -1171,7 +1209,7 @@ c_t^S
 =
 \mathbb{E}_t c_{t+1}^S
 -
-\frac{1}{\gamma}r_t
+\frac{1}{\gamma}\widetilde r_t^T
 $$
 です。ここに
 $$
@@ -1185,7 +1223,7 @@ $$
 =
 \frac{1-\lambda\chi}{1-\lambda}\mathbb{E}_t c_{t+1}
 -
-\frac{1}{\gamma}r_t
+\frac{1}{\gamma}\widetilde r_t^T
 $$
 です。したがって
 $$
@@ -1194,7 +1232,7 @@ c_t
 \mathbb{E}_t c_{t+1}
 -
 \frac{1}{\gamma}
-\frac{1-\lambda}{1-\lambda\chi}r_t
+\frac{1-\lambda}{1-\lambda\chi}\widetilde r_t^T
 $$
 を得ます。
 
@@ -1210,7 +1248,7 @@ c_t
 =
 \mathbb{E}_t c_{t+1}
 -
-\frac{1}{\gamma\Theta_D}r_t
+\frac{1}{\gamma\Theta_D}\widetilde r_t^T
 $$
 です。さらに
 $$
@@ -1236,7 +1274,7 @@ $$
 =
 \Theta_T
 $$
-となって、第11回の再分配なしの係数に戻ります。なお、本回の $\chi$ は Type H 所得の反応を表す定数です。第10回の Markov 裁量問題で継続価値の微分を表した $\chi_t$ とは別物です。
+となって、第11回の再分配なしの係数に戻ります。本回の $\chi$ は Type H 所得の反応を表す定数です。
 
 ```{=latex}
 \Needspace{15\baselineskip}
@@ -1256,7 +1294,7 @@ Type S だけが Euler 方程式を満たすため、集計消費の利子率係
 
 ## 通常符号領域と標準領域
 
-実質利子率上昇が集計消費を下げる通常の符号には
+実質利子率ギャップの上昇が集計消費を下げる通常の符号には
 $$
 1-\lambda\chi>0
 $$
@@ -1264,7 +1302,7 @@ $$
 $$
 \lambda\chi<1
 $$
-と同じです。この条件のもとでは、実質利子率 $r_t$ が上がると、集計消費 $c_t$ は下がります。
+と同じです。この条件のもとでは、実質利子率ギャップ $\widetilde r_t^T$ が上がると、集計消費 $c_t$ は下がります。
 
 この通常符号領域のうち、Type H から正の所得フィードバックが働く
 $$
@@ -1276,7 +1314,7 @@ $$
 $$
 1-\lambda\chi<0
 $$
-なら、Euler--IS の利子率係数の符号が反転します。この場合、実質利子率の上昇が集計需要を増やすという、通常とは異なる総需要論理になります。直観的には、Type H 家計から来る所得フィードバックが強すぎるため、45度線との交点の比較静学が通常の需要曲線として読みにくくなります。Bilbiie の TANK ではこの反転領域も重要な論点ですが、本回の本編では標準領域を主対象にします。反転領域は、最後の発展問題で考えます。
+なら、Euler--IS の利子率係数の符号が反転します。この場合、実質利子率ギャップの上昇が集計需要を増やすという、通常とは異なる総需要論理になります。直観的には、Type H 家計から来る所得フィードバックが強すぎるため、45度線との交点の比較静学が通常の需要曲線として読みにくくなります。Bilbiie の TANK ではこの反転領域も重要な論点ですが、本回の本編では標準領域を主対象にします。反転領域は、最後の発展問題で考えます。
 
 ```{=latex}
 \Needspace{16\baselineskip}
@@ -1320,7 +1358,7 @@ $$
 $$
 \Omega_T=\frac{1}{\Theta_D}\simeq1.75
 $$
-です。同じ 0.01（1パーセントポイント）の実質利子率低下は、一次近似上、RANK では消費・産出を約1%、TANK では約1.75%増やします。
+です。同じ 0.01（1パーセントポイント）の実質利子率ギャップ低下は、一次近似上、RANK では消費・産出を約1%、TANK では約1.75%増やします。
 
 $\tau_D=\lambda$ では、$\chi=1$ なので
 $$
@@ -1353,7 +1391,7 @@ c_t^j
 =
 (1-\beta)y_t^j
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^j
 +
 \beta\mathbb{E}_t c_{t+1}^j
 $$
@@ -1375,13 +1413,13 @@ Euler 方程式、確率的割引因子、無限期間の横断性条件は、�
 
 ## 確率的割引因子
 
-第3回で定義した多期間の確率的割引因子を、家計タイプ $j$ について $Q_{t,t+i}^j$ と書きます。定常状態では $Q_{t,t+i}^j=\beta^i$ なので、その対数乖離を
+第3回で定義した多期間の確率的割引因子を、家計タイプ $j$ について $Q_{t,t+i}^j$ と書き、モデル $j$ の自然配分に対応する割引因子を $Q_{t,t+i}^{f,j}$ と書きます。自然配分からの対数乖離を
 $$
 q_{t,t+i}^j
 \equiv
-\log Q_{t,t+i}^j-\log \beta^i
+\log Q_{t,t+i}^j-\log Q_{t,t+i}^{f,j}
 $$
-とします。CRRA 効用のもとで、第3回の SDF の定義を対数線形化すると
+とします。本回は技術・政府支出ショックを入れず、自然配分をゼロに正規化しているため、$Q_{t,t+i}^{f,j}=\beta^i$ です。CRRA 効用のもとで、第3回の SDF の定義を自然配分の周りで対数線形化すると
 $$
 q_{t,t+i}^j
 =
@@ -1399,7 +1437,7 @@ $$
 $$
 \mathbb{E}_t q_{t,t+i}^j
 =
--\mathbb{E}_t\sum_{k=0}^{i-1}r_{t+k}
+-\mathbb{E}_t\sum_{k=0}^{i-1}\widetilde r_{t+k}^j
 $$
 です。
 
@@ -1477,7 +1515,7 @@ $$
 \sum_{i=0}^{\infty}
 \beta^i q_{t,t+i}^j
 $$
-と書けます。残る仕事は、最後の $q$ の割引和を実質利子率の割引和で書き直すことです。
+と書けます。残る仕事は、最後の $q$ の割引和を実質利子率ギャップの割引和で書き直すことです。
 
 まず
 $$
@@ -1487,14 +1525,14 @@ $$
 =
 -\frac{\beta}{1-\beta}
 \sum_{i=0}^{\infty}
-\beta^i\mathbb{E}_t r_{t+i}
+\beta^i\mathbb{E}_t \widetilde r_{t+i}^j
 $$
 を確認します。水準の $i$ 期間割引ファクターは1期間割引ファクターの積であり、その対数乖離が和になるので、
 $$
 \mathbb{E}_t q_{t,t+i}^j
 =
 -
-\mathbb{E}_t\sum_{k=0}^{i-1}r_{t+k}
+\mathbb{E}_t\sum_{k=0}^{i-1}\widetilde r_{t+k}^j
 $$
 この関係を割引和に代入すると
 $$
@@ -1504,28 +1542,28 @@ $$
 &=
 -
 \sum_{i=1}^{\infty}\beta^i
-\mathbb{E}_t\sum_{k=0}^{i-1}r_{t+k}
+\mathbb{E}_t\sum_{k=0}^{i-1}\widetilde r_{t+k}^j
 \\
 &=
 -
 \sum_{k=0}^{\infty}
 \left(\sum_{i=k+1}^{\infty}\beta^i\right)
-\mathbb{E}_t r_{t+k}
+\mathbb{E}_t \widetilde r_{t+k}^j
 \\
 &=
 -
 \sum_{k=0}^{\infty}
 \frac{\beta^{k+1}}{1-\beta}
-\mathbb{E}_t r_{t+k}
+\mathbb{E}_t \widetilde r_{t+k}^j
 \\
 &=
 -
 \frac{\beta}{1-\beta}
 \sum_{k=0}^{\infty}
-\beta^k\mathbb{E}_t r_{t+k}.
+\beta^k\mathbb{E}_t \widetilde r_{t+k}^j.
 \end{aligned}
 $$
-上の式の2行目では、$r_{t+k}$ が $q_{t,t+i}^j$ に含まれるのは $i\geq k+1$ のときであることを使っています。
+上の式の2行目では、$\widetilde r_{t+k}^j$ が $q_{t,t+i}^j$ に含まれるのは $i\geq k+1$ のときであることを使っています。
 
 以上をまとめると、
 $$
@@ -1538,7 +1576,7 @@ $$
 \frac{1}{\gamma}
 \frac{\beta}{1-\beta}
 \sum_{i=0}^{\infty}
-\beta^i\mathbb{E}_t r_{t+i}
+\beta^i\mathbb{E}_t \widetilde r_{t+i}^j
 $$
 です。両辺に $1-\beta$ を掛ければ、
 $$
@@ -1550,7 +1588,7 @@ c_t^j
 -
 \frac{\beta}{\gamma}
 \sum_{i=0}^{\infty}
-\beta^i\mathbb{E}_t r_{t+i}
+\beta^i\mathbb{E}_t \widetilde r_{t+i}^j
 $$
 を得ます。
 
@@ -1566,7 +1604,7 @@ c_t^j
 =
 (1-\beta)y_t^j
 -
-\frac{\beta}{\gamma}r_t
+\frac{\beta}{\gamma}\widetilde r_t^j
 +
 \beta\mathbb{E}_t c_{t+1}^j
 $$
