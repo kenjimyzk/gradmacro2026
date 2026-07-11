@@ -2,7 +2,8 @@
 title: "第1回：学部マクロの復習"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-04-04"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -31,9 +32,19 @@ lang: ja
 5. ルーカス批判とミクロ的基礎づけの必要性
 6. 現代マクロ経済学への展開
 
+::: {.callout-note title="科目の位置づけと前提"}
+マクロ経済学Aでは成長理論、資本蓄積、定常成長を扱います。ただし、確率的ショックのもとで資本蓄積を内生化するRBCモデルは、マクロ経済学Aでも本講義でも扱いません。マクロ経済学Bでは、Aの成長理論を背景としつつ、固定資本または線形生産へ簡略化し、動学的需要、名目硬直性、金融政策、政府部門、家計異質性に焦点を移します。第4回以降も投資と資本蓄積を導入しないのは、自然利子率と金融・財政政策の伝達経路を明確にするためです。資本を含むRBCモデルと、それを解くための一般的なDSGE数値解法は、第12回で本講義の先の発展として位置づけます。
+:::
+
 ![第1回講義の全体像：ケインジアン・クロス、IS-LM、AD-AS、フィリップス曲線、総需要管理政策、ルーカス批判、現代マクロへの展開を一枚で整理する。自然失業率ではなく、後続回で使う自然産出量と需給ギャップへの橋渡しを意識する。](figures/lecture01/lecture01_overview_infographic.svg){#fig-lecture01-overview width=95%}
 
 @fig-lecture01-overview は、学部マクロの総需要モデルから出発し、期待とミクロ的基礎づけをもつ現代マクロへ進む本講義の流れを示しています。
+
+```{=latex}
+\clearpage
+```
+
+{{< include includes/assumption-matrix.qmd >}}
 
 ---
 
@@ -509,7 +520,7 @@ DSGEモデルは、現代のマクロ経済政策分析で用いられる主要�
 
 ---
 
-# まとめ
+# まとめと第2回への接続
 
 ## 本日のポイント
 
@@ -544,34 +555,40 @@ DSGEモデルは、現代のマクロ経済政策分析で用いられる主要�
 
 **発展**
 
-- Phillips, A. W. (1958) "The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957." *Economica*, 25(100), 283-299. https://doi.org/10.1111/j.1468-0335.1958.tb00003.x
-- Phelps, Edmund S. (1967) "Phillips Curves, Expectations of Inflation and Optimal Unemployment over Time." *Economica*, 34(135), 254-281. https://doi.org/10.2307/2552025
+- Phillips, A. W. (1958) "The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957." *Economica*, 25(100), 283-299. [doi](https://doi.org/10.1111/j.1468-0335.1958.tb00003.x)
+- Phelps, Edmund S. (1967) "Phillips Curves, Expectations of Inflation and Optimal Unemployment over Time." *Economica*, 34(135), 254-281. [doi](https://doi.org/10.2307/2552025)
 - Friedman, Milton (1968) "The Role of Monetary Policy." *American Economic Review*, 58(1), 1-17.
-- Lucas, Robert E., Jr. (1976) "Econometric Policy Evaluation: A Critique." *Carnegie-Rochester Conference Series on Public Policy*, 1, 19-46. https://doi.org/10.1016/S0167-2231(76)80003-6
+- Lucas, Robert E., Jr. (1976) "Econometric Policy Evaluation: A Critique." *Carnegie-Rochester Conference Series on Public Policy*, 1, 19-46. [doi](https://doi.org/10.1016/S0167-2231(76)80003-6)
 
 ---
 
 # 演習問題
 
-## 問題1：ケインジアン・クロス
+## 基本問題
+
+### 問題1：ケインジアン・クロス
 
 消費関数が $C=C_0+c(Y-T)$、投資が $\bar{I}$、政府支出が $G$ で与えられる経済を考えます。財市場均衡 $Y=C+\bar{I}+G$ から均衡産出量を求め、政府支出乗数と租税乗数を導出してください。限界消費性向 $c$ が大きいほど乗数が大きくなる理由も説明してください。
 
-## 問題2：IS-LMモデル
+### 問題2：IS-LMモデル
 
 拡張的財政政策（政府支出の増加）がIS-LMモデルにおける均衡産出量と利子率に与える影響を図示し、説明してください。また、クラウディング・アウトとは何かを説明してください。
 
-## 問題3：フィリップス曲線と需給ギャップ
+### 問題3：フィリップス曲線と需給ギャップ
 
 供給ショックがない場合の期待修正型フィリップス曲線 $\pi_t=\pi_t^e-\beta_{PC}(u_t-u_t^n)$ と、オークン法則の近似 $u_t-u_t^n\simeq-\eta x_t$ を用いて、インフレ率を需給ギャップ $x_t=y_t-y_t^f$ の関数として書き換えてください。そのうえで、大文字の産出水準 $Y$ ではなく、産出の対数定常状態乖離から定義した需給ギャップを後続回で使う理由を説明してください。
 
-## 問題4：ルーカス批判
+## 発展問題
+
+### 問題4：ルーカス批判
 
 ルーカス批判とは何かを説明し、それがマクロ経済モデルの構築にどのような影響を与えたかを論じてください。
 
 ---
 
-# 補足資料：主要な記号一覧
+# 補論：記号一覧
+
+## 第1回で使う主な記号
 
 | 記号 | 意味 |
 |------|------|
@@ -596,3 +613,9 @@ DSGEモデルは、現代のマクロ経済政策分析で用いられる主要�
 | $y_t$ | 実際の産出の対数定常状態乖離 |
 | $y_t^f$ | 自然産出量の対数定常状態乖離 |
 | $x_t=y_t-y_t^f$ | 需給ギャップ |
+
+```{=latex}
+\clearpage
+```
+
+{{< include includes/notation-concordance.qmd >}}

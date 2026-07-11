@@ -2,7 +2,8 @@
 title: "第9回：最適金融政策と政策ルール"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-07"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -27,9 +28,7 @@ lang: ja
 \clearpage
 ```
 
-# 講義の目的と基本概念
-
-## 講義の目的
+# 講義の目的
 
 第8回では、動学的 IS曲線と NKフィリップス曲線をテイラー・ルールで閉じ、所与の手段ルールのもとで金融政策ショック、技術ショック、政府支出ショックへの反応を分析しました。第9回では逆に、中央銀行の目的から望ましい配分とターゲット条件を導き、その配分を一意に実装できる政策金利の設定を考えます。
 
@@ -93,7 +92,7 @@ $$
 
 ![第9回講義の全体像：RANKモデルの政策問題から、神々の配剤、利子率ペッグの不決定性、テイラー原理、裁量、コミットメント、タイムレス・パースペクティブへ進む。](figures/lecture09/lecture09_overview_infographic.svg){#fig-lecture09-overview width=95%}
 
-## 変数とパラメータ
+# 表記と基本設定
 
 主な内生変数は次の通りです。
 
@@ -476,61 +475,6 @@ $$
 $$
 となります。正のコストプッシュショックに対して、中央銀行は正のインフレ率と負の厚生上の産出ギャップを組み合わせます。このターゲット条件は、インフレ率と産出ギャップの静学的なトレードオフを表します。
 
-## 補足：裁量均衡の閉形式
-
-ショックが AR(1) で、均衡が $u_t$ に比例すると予想します。
-$$
-\pi_t^D=b_Du_t,
-\qquad
-x_t^{e,D}=a_Du_t.
-$$
-このとき
-$$
-\mathbb{E}_t\pi_{t+1}^D
-=
-\rho_u b_Du_t
-$$
-です。NKフィリップス曲線は
-$$
-b_Du_t
-=
-\beta\rho_u b_Du_t
-+\kappa_x a_Du_t
-+u_t
-$$
-となります。またターゲット条件から
-$$
-a_D+\kappa_x\omega_p b_D=0
-$$
-です。これらを解くと、
-$$
-b_D
-=
-\frac{1}
-{1-\beta\rho_u+\kappa_x^2\omega_p},
-\qquad
-a_D
-=
--\frac{\kappa_x\omega_p}
-{1-\beta\rho_u+\kappa_x^2\omega_p}.
-$$
-したがって
-$$
-\pi_t^D
-=
-\frac{1}
-{1-\beta\rho_u+\kappa_x^2\omega_p}
-u_t,
-\qquad
-x_t^{e,D}
-=
--\frac{\kappa_x\omega_p}
-{1-\beta\rho_u+\kappa_x^2\omega_p}
-u_t.
-$$
-
-正のコストプッシュショック $u_t>0$ が起きると、裁量政策のもとでは $\pi_t^D>0$、$x_t^{e,D}<0$ です。将来の政策を約束して期待へ働きかけられないため、裁量政策はコミットメント政策より大きな厚生損失を生みます。これを **安定化バイアス** と呼びます。これは、望ましい産出水準を自然水準より高く置くため平均インフレが生じる Barro--Gordon 型の **インフレ・バイアス** とは異なります。本モデルの目標は $x_t^e=0$ なので、後者は生じません。
-
 # コミットメント政策
 
 ## コミットメントの考え方
@@ -742,7 +686,177 @@ $$
 
 このため、裁量政策、単純なテイラー・ルール、通常のコミットメント計画を比較するときのベンチマークとして使われます。実際の実装には、過去の約束を拘束する制度、評判、または明示的な政策枠組みが必要です。テイラー・ルールとの比較では、ターゲット条件が選ぶ配分と、手段ルールがその配分を実装して決定性を確保するかを分けて評価します。
 
-## 発展：数値例による裁量とタイムレス・パースペクティブの比較
+# まとめと第10回への接続
+
+本講義では、RANKモデルを政策評価の道具として使いました。主な結論は次の通りです。
+
+1. 是正補助金のもとでコストプッシュ・ウェッジがなければ、$\pi_t=0$ と $x_t^e=0$ を同時に実現できる。これが神々の配剤である。
+2. ロス関数は家計効用の二階近似から導ける。価格硬直性だけなら、効率的産出量から測る $x_t^e$ を使って $\left(x_t^e\right)^2+\omega_p\pi_t^2$ と正規化できる。
+3. 名目利子率の固定だけでは均衡を決定できない。
+4. テイラー原理 $\phi>1$ は、インフレ期待が上がったときに実質利子率を上げ、自己実現的なインフレ変動を排除する条件である。
+5. コストプッシュショックがあると、インフレ安定化と厚生上の産出ギャップ安定化の間にトレードオフが生じる。
+6. 裁量政策には平均的なインフレ・バイアスはないが、将来の約束を使えないため安定化バイアスが生じる。
+7. コミットメント政策は将来の期待形成を内生化し、履歴依存的なターゲット条件を生む。
+8. 通常のコミットメント計画は初期時点だけ特別な条件を持つため、時間的非整合性を抱える。
+9. タイムレス・パースペクティブは、過去の約束を状態として引き継ぐという前提のもとで初期時点の特権を取り除き、規範的な政策評価の基準を与える。
+
+第10回では、この価格硬直性だけの政策問題に賃金硬直性を加えます。第10回は $G_Y=0$、$\alpha=0$ の単純な環境に戻るため、一般形のチルダ付き係数が消えるのは賃金硬直性そのものが理由ではありません。また、第10回では価格と賃金の補助金により両方の定常的なマークアップ歪みを除くため、柔軟価格・柔軟賃金の自然配分は効率的です。したがって、第10回の表記では
+$$
+x_t=x_t^e=y_t-y_t^f=y_t-y_t^e
+$$
+となります。第10回では自然ギャップと厚生上のギャップが一致するため、再び $x_t$ だけを使います。単一の NKフィリップス曲線は価格・賃金の2本に分かれ、ロス関数は
+$$
+x_t^2+\omega_p(\pi_t^p)^2+\omega_w(\pi_t^w)^2
+$$
+へ拡張されます。その結果、神々の配剤は一般に崩れ、裁量のターゲット条件も価格インフレ率、賃金インフレ率、産出ギャップの三者を結ぶ式になります。$\omega_w=0$ かつ賃金調整が十分速い極限では、第9回の条件に戻ります。
+
+```{=latex}
+\Needspace{0.25\textheight}
+```
+
+# 参考文献
+
+**必読**
+
+- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 最適金融政策、ターゲット条件、タイムレス・パースペクティブの基礎文献。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKモデルで政策ルールと裁量・コミットメントを学ぶため。
+- Walsh, Carl E. (2017) *Monetary Theory and Policy* (4th ed.). MIT Press. 金融政策ルールと時間的非整合性の標準的教科書。
+
+**発展**
+
+- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
+- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3)
+- Kydland, Finn E., and Edward C. Prescott (1977) "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy*, 85(3), 473-491. [doi](https://doi.org/10.1086/260580)
+- Barro, Robert J., and David B. Gordon (1983) "Rules, Discretion and Reputation in a Model of Monetary Policy." *Journal of Monetary Economics*, 12(1), 101-121. [doi](https://doi.org/10.1016/0304-3932(83)90051-X)
+- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)
+- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)
+
+```{=latex}
+\Needspace{0.28\textheight}
+```
+
+# 演習問題
+
+## 基本問題
+
+1. **概念確認**：神々の配剤とは何か。是正補助金により $y_t^e=y_t^f$ が成立し、コストプッシュ・ウェッジがない場合に、なぜ $\pi_t=x_t^e=0$ を同時に実現できるのかを説明しなさい。
+
+2. **概念確認**：利子率ペッグがゼロインフレ定常状態と整合していても、均衡が不決定になる理由を、期待実質利子率の動きに注目して説明しなさい。
+
+3. **導出確認**：裁量政策の問題
+$$
+\min_{\pi_t,x_t^e}\frac{1}{2}(\left(x_t^e\right)^2+\omega_p\pi_t^2)
+$$
+制約条件は
+$$
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t^e+u_t
+$$
+である。この問題の一階条件から
+$$
+\kappa_x\omega_p\pi_t+x_t^e=0
+$$
+を導出しなさい。
+
+4. **直観確認**：通常のコミットメント政策で
+$$
+\kappa_x\omega_p\pi_t+x_t^e-x_{t-1}^e=0
+$$
+という履歴依存的なターゲット条件が現れる理由を、民間部門の期待形成と結びつけて説明しなさい。
+
+```{=latex}
+\Needspace{0.22\textheight}
+```
+
+## 発展問題
+
+5. **応用確認**：インパクトのショック $u_0$ を固定する。コストプッシュショックの持続性 $\rho_u$ が高くなると、裁量政策のインフレ率と厚生上の産出ギャップのインパクト反応はどのように変わるか。閉形式解の分母
+$$
+1-\beta\rho_u+\kappa_x^2\omega_p
+$$
+に注目して説明しなさい。
+
+6. **比較確認**：通常のコミットメント計画とタイムレス・パースペクティブの違いを、$t=0$ と $t\geq1$ のターゲット条件に注目して説明しなさい。また、タイムレス・パースペクティブが過去の約束を引き継ぐことを前提とする理由を述べなさい。
+
+7. **実装確認**：中央銀行が目標経路 $(x_t^e,\pi_t)$ を選んだとする。動学的 IS曲線とフィッシャー関係から
+$$
+r_t^N
+=
+r_t^e
++\tilde{\gamma}
+\left(
+\mathbb{E}_t x_{t+1}^e-x_t^e
+\right)
++\mathbb{E}_t\pi_{t+1}
+$$
+を導き、ターゲット条件と手段ルールが同じものではない理由を説明しなさい。
+
+8. **決定性確認**：補論の $A(\phi)$ について、$q(1)$、$\operatorname{tr}A(\phi)$、$\det A(\phi)$ を使い、$\phi>1$ のとき2つの固有値が単位円の外にあることを示しなさい。前向き変数の個数と結びつけて説明しなさい。
+
+9. **概念比較**：安定化バイアスと Barro--Gordon 型のインフレ・バイアスの違いを説明し、本講義の目的関数では後者が生じない理由を述べなさい。
+
+```{=latex}
+\clearpage
+```
+
+# 補論（発展）：裁量政策とタイムレス・パースペクティブの数値比較
+
+この補論は、授業時間に余裕がある場合に扱う発展項目です。
+
+## 裁量均衡の閉形式
+
+ショックが AR(1) で、均衡が $u_t$ に比例すると予想します。
+$$
+\pi_t^D=b_Du_t,
+\qquad
+x_t^{e,D}=a_Du_t.
+$$
+このとき
+$$
+\mathbb{E}_t\pi_{t+1}^D
+=
+\rho_u b_Du_t
+$$
+です。NKフィリップス曲線は
+$$
+b_Du_t
+=
+\beta\rho_u b_Du_t
++\kappa_x a_Du_t
++u_t
+$$
+となります。またターゲット条件から
+$$
+a_D+\kappa_x\omega_p b_D=0
+$$
+です。これらを解くと、
+$$
+b_D
+=
+\frac{1}
+{1-\beta\rho_u+\kappa_x^2\omega_p},
+\qquad
+a_D
+=
+-\frac{\kappa_x\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}.
+$$
+したがって
+$$
+\pi_t^D
+=
+\frac{1}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
+u_t,
+\qquad
+x_t^{e,D}
+=
+-\frac{\kappa_x\omega_p}
+{1-\beta\rho_u+\kappa_x^2\omega_p}
+u_t.
+$$
+
+正のコストプッシュショック $u_t>0$ が起きると、裁量政策のもとでは $\pi_t^D>0$、$x_t^{e,D}<0$ です。将来の政策を約束して期待へ働きかけられないため、裁量政策はコミットメント政策より大きな厚生損失を生みます。これを **安定化バイアス** と呼びます。これは、望ましい産出水準を自然水準より高く置くため平均インフレが生じる Barro--Gordon 型の **インフレ・バイアス** とは異なります。本モデルの目標は $x_t^e=0$ なので、後者は生じません。
+
 
 この節では、同じコストプッシュショックに対する裁量とタイムレス・パースペクティブの配分を比較し、履歴依存性が期待とインパルス応答をどう変えるかを確認します。
 
@@ -903,111 +1017,7 @@ if (font_family == "jp_sans") {
 2. タイムレス・パースペクティブでは、将来の政策約束が期待を動かすため、負の産出ギャップがより長く続き、インフレ率が一時的に定常値を下回ることもある。
 3. $u_t$ を所与とすると、$\rho_u$ が高いほど裁量解の $|\pi_t^D|$ と $|x_t^{e,D}|$ は大きくなる。ただし、安定化バイアスはコミットメントとの厚生差で測るため、この閉形式だけからその単調性は断定できない。
 
-# まとめと第10回への接続
-
-本講義では、RANKモデルを政策評価の道具として使いました。主な結論は次の通りです。
-
-1. 是正補助金のもとでコストプッシュ・ウェッジがなければ、$\pi_t=0$ と $x_t^e=0$ を同時に実現できる。これが神々の配剤である。
-2. ロス関数は家計効用の二階近似から導ける。価格硬直性だけなら、効率的産出量から測る $x_t^e$ を使って $\left(x_t^e\right)^2+\omega_p\pi_t^2$ と正規化できる。
-3. 名目利子率の固定だけでは均衡を決定できない。
-4. テイラー原理 $\phi>1$ は、インフレ期待が上がったときに実質利子率を上げ、自己実現的なインフレ変動を排除する条件である。
-5. コストプッシュショックがあると、インフレ安定化と厚生上の産出ギャップ安定化の間にトレードオフが生じる。
-6. 裁量政策には平均的なインフレ・バイアスはないが、将来の約束を使えないため安定化バイアスが生じる。
-7. コミットメント政策は将来の期待形成を内生化し、履歴依存的なターゲット条件を生む。
-8. 通常のコミットメント計画は初期時点だけ特別な条件を持つため、時間的非整合性を抱える。
-9. タイムレス・パースペクティブは、過去の約束を状態として引き継ぐという前提のもとで初期時点の特権を取り除き、規範的な政策評価の基準を与える。
-
-第10回では、この価格硬直性だけの政策問題に賃金硬直性を加えます。第10回は $G_Y=0$、$\alpha=0$ の単純な環境に戻るため、一般形のチルダ付き係数が消えるのは賃金硬直性そのものが理由ではありません。また、第10回では価格と賃金の補助金により両方の定常的なマークアップ歪みを除くため、柔軟価格・柔軟賃金の自然配分は効率的です。したがって、第10回の表記では
-$$
-x_t=x_t^e=y_t-y_t^f=y_t-y_t^e
-$$
-となります。第10回では自然ギャップと厚生上のギャップが一致するため、再び $x_t$ だけを使います。単一の NKフィリップス曲線は価格・賃金の2本に分かれ、ロス関数は
-$$
-x_t^2+\omega_p(\pi_t^p)^2+\omega_w(\pi_t^w)^2
-$$
-へ拡張されます。その結果、神々の配剤は一般に崩れ、裁量のターゲット条件も価格インフレ率、賃金インフレ率、産出ギャップの三者を結ぶ式になります。$\omega_w=0$ かつ賃金調整が十分速い極限では、第9回の条件に戻ります。
-
-```{=latex}
-\Needspace{0.25\textheight}
-```
-
-# 参考文献
-
-**必読**
-
-- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 最適金融政策、ターゲット条件、タイムレス・パースペクティブの基礎文献。
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKモデルで政策ルールと裁量・コミットメントを学ぶため。
-- Walsh, Carl E. (2017) *Monetary Theory and Policy* (4th ed.). MIT Press. 金融政策ルールと時間的非整合性の標準的教科書。
-
-**発展**
-
-- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. https://doi.org/10.1016/0304-3932(83)90060-0
-- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. https://doi.org/10.1016/S0304-3932(00)00028-3
-- Kydland, Finn E., and Edward C. Prescott (1977) "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy*, 85(3), 473-491. https://doi.org/10.1086/260580
-- Barro, Robert J., and David B. Gordon (1983) "Rules, Discretion and Reputation in a Model of Monetary Policy." *Journal of Monetary Economics*, 12(1), 101-121. https://doi.org/10.1016/0304-3932(83)90051-X
-- Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. https://doi.org/10.1257/jel.37.4.1661
-- Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. https://doi.org/10.1016/0167-2231(93)90009-L
-
-```{=latex}
-\Needspace{0.28\textheight}
-```
-
-# 演習問題
-
-1. **概念確認**：神々の配剤とは何か。是正補助金により $y_t^e=y_t^f$ が成立し、コストプッシュ・ウェッジがない場合に、なぜ $\pi_t=x_t^e=0$ を同時に実現できるのかを説明しなさい。
-
-2. **概念確認**：利子率ペッグがゼロインフレ定常状態と整合していても、均衡が不決定になる理由を、期待実質利子率の動きに注目して説明しなさい。
-
-3. **導出確認**：裁量政策の問題
-$$
-\min_{\pi_t,x_t^e}\frac{1}{2}(\left(x_t^e\right)^2+\omega_p\pi_t^2)
-$$
-制約条件は
-$$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t^e+u_t
-$$
-である。この問題の一階条件から
-$$
-\kappa_x\omega_p\pi_t+x_t^e=0
-$$
-を導出しなさい。
-
-4. **直観確認**：通常のコミットメント政策で
-$$
-\kappa_x\omega_p\pi_t+x_t^e-x_{t-1}^e=0
-$$
-という履歴依存的なターゲット条件が現れる理由を、民間部門の期待形成と結びつけて説明しなさい。
-
-```{=latex}
-\Needspace{0.22\textheight}
-```
-
-5. **応用確認**：インパクトのショック $u_0$ を固定する。コストプッシュショックの持続性 $\rho_u$ が高くなると、裁量政策のインフレ率と厚生上の産出ギャップのインパクト反応はどのように変わるか。閉形式解の分母
-$$
-1-\beta\rho_u+\kappa_x^2\omega_p
-$$
-に注目して説明しなさい。
-
-6. **比較確認**：通常のコミットメント計画とタイムレス・パースペクティブの違いを、$t=0$ と $t\geq1$ のターゲット条件に注目して説明しなさい。また、タイムレス・パースペクティブが過去の約束を引き継ぐことを前提とする理由を述べなさい。
-
-7. **実装確認**：中央銀行が目標経路 $(x_t^e,\pi_t)$ を選んだとする。動学的 IS曲線とフィッシャー関係から
-$$
-r_t^N
-=
-r_t^e
-+\tilde{\gamma}
-\left(
-\mathbb{E}_t x_{t+1}^e-x_t^e
-\right)
-+\mathbb{E}_t\pi_{t+1}
-$$
-を導き、ターゲット条件と手段ルールが同じものではない理由を説明しなさい。
-
-8. **決定性確認**：補論の $A(\phi)$ について、$q(1)$、$\operatorname{tr}A(\phi)$、$\det A(\phi)$ を使い、$\phi>1$ のとき2つの固有値が単位円の外にあることを示しなさい。前向き変数の個数と結びつけて説明しなさい。
-
-9. **概念比較**：安定化バイアスと Barro--Gordon 型のインフレ・バイアスの違いを説明し、本講義の目的関数では後者が生じない理由を述べなさい。
-
-# 補論
+# 補論（発展）：二次近似と決定性の詳細
 
 
 ## 対数二次近似の参照

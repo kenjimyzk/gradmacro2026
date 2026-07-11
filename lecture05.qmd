@@ -2,7 +2,8 @@
 title: "第5回：政府部門と財政政策"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-06"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -42,7 +43,7 @@ lang: ja
 
 ![第5回講義の全体像：固定資本の実物側に、政府予算制約、政府支出ショック、税の帰着を加える流れ。](figures/lecture05/lecture05_overview_infographic.svg){#fig-lecture05-overview width=100% fig-pos="H"}
 
-# 表記
+# 表記と基本設定
 
 大文字は水準、小文字は定常状態からの対数乖離を表します。ただし政府支出ショックは
 $$
@@ -713,7 +714,7 @@ if (font_family == "jp_sans") {
 **必読**
 
 - Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 政府支出、税、リカード等価の基礎を復習するため。
-- Barro, Robert J. (1974) "Are Government Bonds Net Wealth?" *Journal of Political Economy*, 82(6), 1095-1117. https://doi.org/10.1086/260266
+- Barro, Robert J. (1974) "Are Government Bonds Net Wealth?" *Journal of Political Economy*, 82(6), 1095-1117. [doi](https://doi.org/10.1086/260266)
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 政府支出ショックをニューケインジアン・モデルへ接続するため。
 
 **発展**
@@ -724,6 +725,8 @@ if (font_family == "jp_sans") {
 - Trabandt, Mathias, and Harald Uhlig (2011) "The Laffer Curve Revisited." *Journal of Monetary Economics*, 58(4), 305-327.
 
 # 演習問題
+
+## 基本問題
 
 **問1：政府の通時予算制約**
 
@@ -736,6 +739,8 @@ if (font_family == "jp_sans") {
 **問3：対数線形化**
 
 @eq-resource-constraint-government と @eq-government-spending-shock から、@eq-loglinear-resource-government を導出しなさい。
+
+## 発展問題
 
 **問4：政府購入乗数**
 

@@ -1,8 +1,9 @@
 ---
 title: "第3回：動学的最適化と資産価格"
-subtitle: "ラグランジュ法からダイナミック・プログラミングへ"
+subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-04-04"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -20,7 +21,7 @@ format:
 lang: ja
 ---
 
-# 講義の目的と全体像
+# 講義の目的
 
 ## この講義で扱う問い
 
@@ -53,7 +54,7 @@ $$
 
 ![第3回講義の全体像：有限期間のラグランジュ法から、無限期間、Bellman方程式、不確実性、確率的割引因子、株式価値へ進む流れ。](figures/lecture03/lecture03_overview_infographic.svg){#fig-lecture03-overview width=95%}
 
-## タイミングと記号
+# 表記と基本設定
 
 決定論的な基礎ケースでは、家計は期首に前期から持ち越した資産 $B_{t-1}$ を保有し、消費 $C_t$ と次期資産 $B_t$ を選びます。一定の総利子率を $R=1+r$ とすると、予算制約は
 $$
@@ -613,7 +614,7 @@ Q_{t,t+N}q_{t+N}^fA_{t+N}
 $$
 です。$q_{t+N}^fA_{t+N}$ は $t+N$ 期末に保有する債券の市場価値です。そのSDF割引現在価値が無限遠でゼロになることを要求しています。
 
-# 発展：株式保有と企業価値
+# 企業価値と配当割引
 
 ## 家計の予算制約
 
@@ -795,7 +796,7 @@ Q_{t,t+1}
 $$
 です。これはリスク調整済みの期待超過収益率条件であり、家計のポートフォリオ最適性を表します。左辺が正なら家計は株式保有を限界的に増やし、負なら減らすため、当初の保有量は均衡になりません。ただし、株式を買って債券を売る取引には状態依存の損失が残るので、この取引自体を無リスク裁定とは呼びません。
 
-## 発展：配当割引モデル
+## 配当割引モデル
 
 企業価値条件
 $$
@@ -963,23 +964,25 @@ $$
 
 **発展**
 
-- Lucas, Robert E., Jr. (1978) ["Asset Prices in an Exchange Economy."](https://doi.org/10.2307/1913837) *Econometrica*, 46(6), 1429-1445.
-- Hansen, Lars Peter, and Kenneth J. Singleton (1982) ["Generalized Instrumental Variables Estimation of Nonlinear Rational Expectations Models."](https://doi.org/10.2307/1911873) *Econometrica*, 50(5), 1269-1286. Euler条件をモーメント条件として推定する代表的応用。
-- Kamihigashi, Takashi (2001) ["Necessity of Transversality Conditions for Infinite Horizon Problems."](https://doi.org/10.1111/1468-0262.00227) *Econometrica*, 69(4), 995-1012. 横断性条件が必要となる正則条件を確認するため。
+- Lucas, Robert E., Jr. (1978) "Asset Prices in an Exchange Economy." *Econometrica*, 46(6), 1429-1445. [doi](https://doi.org/10.2307/1913837)
+- Hansen, Lars Peter, and Kenneth J. Singleton (1982) "Generalized Instrumental Variables Estimation of Nonlinear Rational Expectations Models." *Econometrica*, 50(5), 1269-1286. [doi](https://doi.org/10.2307/1911873) Euler条件をモーメント条件として推定する代表的応用。
+- Kamihigashi, Takashi (2001) "Necessity of Transversality Conditions for Infinite Horizon Problems." *Econometrica*, 69(4), 995-1012. [doi](https://doi.org/10.1111/1468-0262.00227) 横断性条件が必要となる正則条件を確認するため。
 - Duffie, Darrell (2001) [*Dynamic Asset Pricing Theory* (3rd ed.)](https://www.gsb.stanford.edu/faculty-research/books/dynamic-asset-pricing-theory). Princeton University Press. ニュメレールと測度変更の参照先。
 - Judd, Kenneth L. (1998) [*Numerical Methods in Economics*](https://mitpress.mit.edu/9780262547741/numerical-methods-in-economics/). MIT Press. 動的最適化を数値的に解く方法を学ぶため。
 
 # 演習問題
 
-## 問1：2期間問題
+## 基本問題
+
+### 問1：2期間問題
 
 効用関数を $U(C)=\log C$ とします。2期間問題において、$C_{t+1}/C_t$ を $\beta$ と $R$ の関数として求めなさい。
 
-## 問2：借入制約
+### 問2：借入制約
 
 2期間問題に借入制約 $B_t\geq \underline{B}$ を加えます。制約がバインドする場合、オイラー方程式は等式ではなくどのような不等式になるかを説明しなさい。
 
-## 問3：確率的オイラー方程式
+### 問3：確率的オイラー方程式
 
 不確実性下で、$R_t^f$ が $t$ 期時点で確定している無リスク総収益率であるとします。このとき
 $$
@@ -987,11 +990,13 @@ $$
 $$
 から、無リスク総収益率 $R_t^f$ を $Q_{t,t+1}$ の条件付き期待値で表しなさい。
 
-## 問4：企業価値
+### 問4：企業価値
 
 株式配当が毎期一定で $D_{t+i}=D$、多期間の確率的割引因子が $Q_{t,t+i}=\delta^i$、かつ $0<\delta<1$ とします。企業価値 $V_t^F$ を求めなさい。
 
-## 問5：2状態の資産価格
+## 発展問題
+
+### 問5：2状態の資産価格
 
 来期には好況と不況がそれぞれ確率 $1/2$ で生じるとします。SDFは好況で $0.8$、不況で $1.2$ です。ある株式の来期ペイオフ $X_{t+1}$ は好況で $1.5$、不況で $0.5$ とし、株式総収益率を $R_{t+1}^e=X_{t+1}/V_t^F$ と定義します。
 
@@ -1000,6 +1005,6 @@ $$
 3. $\operatorname{Cov}_t(Q_{t,t+1},R_{t+1}^e)$ の符号と、期待超過収益率の関係を説明しなさい。
 4. 株式を買い、同額の無リスク債券を売る取引が、なぜ必ずしも裁定にならないか説明しなさい。
 
-## 問6：状態変数と債券表記
+### 問6：状態変数と債券表記
 
 $t$ 期に購入額 $B_t$ を選び、その債券が $t+1$ 期に $R_t^fB_t$ を支払うとします。$R_t^f$ が $z_t$ に依存するとき、継続価値を $V^H(B_t,z_{t+1})$ とだけ書くと、なぜ状態情報が不足するか説明しなさい。そのうえで、額面 $A_t$ と価格 $q_t^f=1/R_t^f$ を使ってBellman方程式を書き直しなさい。

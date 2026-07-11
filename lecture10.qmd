@@ -2,7 +2,8 @@
 title: "第10回：価格・賃金硬直性とRANKモデル"
 subtitle: "マクロ経済学B"
 author: "宮﨑憲治"
-date: "2026-05-10"
+date: "2026-04-01"
+date-format: "YYYY年度"
 format:
   html:
     toc: true
@@ -70,7 +71,7 @@ $$
 
 ![第10回講義の全体像：第7回の価格硬直性 RANKモデルに労働パッカーと賃金調整費用を加えると、$\mu_t^p+\mu_t^w=-(\gamma+\varphi)x_t$ と $\pi_t^w-\pi_t^p=\Delta w_t$ が価格・賃金ブロックを結ぶ。](figures/lecture10/lecture10_overview_infographic.svg){#fig-lecture10-overview width=95%}
 
-# 表記
+# 表記と基本設定
 
 大文字は水準、小文字はゼロインフレ定常状態からの対数乖離を表します。この回では $\alpha=0$、政府支出なし、技術の定常状態 $a=0$、$\nu=1$ と置き、技術水準 $\exp(a)=1$ の定常状態で
 $$
@@ -884,100 +885,6 @@ $$
 w_t-w_{t-1}
 $$
 
-## 発展：期待項を落とした静学ケース
-
-ここまでのモデルは動学モデルなので、本来は将来の期待を含めて解く必要があります。ただし、二重の名目硬直性が何をしているかを見るだけなら、期待項を落とした静学ケースが有用です。ここでは、定量分析の較正としてではなく、代数構造を見せるために将来インフレの期待項をゼロとして扱います。
-$$
-\mathbb{E}_t\pi_{t+1}^p=\mathbb{E}_t\pi_{t+1}^w=0
-$$
-と置きます。割引因子 $\beta$ は通常通り $0<\beta<1$ のパラメータであり、この節では期待項そのものを捨象しています。
-
-このとき、価格フィリップス曲線と賃金フィリップス曲線は
-$$
-\pi_t^p
-=
--\kappa_p\mu_t^p,
-\qquad
-\pi_t^w
-=
--\kappa_w\mu_t^w
-$$
-ここで中心式
-$$
-\mu_t^p+\mu_t^w
-=
--(\gamma+\varphi)x_t
-$$
-を使うと、
-$$
-\frac{\pi_t^p}{\kappa_p}
-+
-\frac{\pi_t^w}{\kappa_w}
-=
-(\gamma+\varphi)x_t
-$$
-この関係は、需給ギャップが作るインフレ圧力を、価格インフレ率と賃金インフレ率が分担していることを表します。
-
-さらに、実質賃金の変化を
-$$
-\Delta w_t
-\equiv
-w_t-w_{t-1}
-=
-\pi_t^w-\pi_t^p
-$$
-と書きます。上の2本を $\pi_t^p,\pi_t^w$ について解くと、
-$$
-\pi_t^p
-=
-\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
-(\gamma+\varphi)x_t
--
-\frac{\kappa_p}{\kappa_p+\kappa_w}\Delta w_t,
-$$
-$$
-\pi_t^w
-=
-\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
-(\gamma+\varphi)x_t
-+
-\frac{\kappa_w}{\kappa_p+\kappa_w}\Delta w_t.
-$$
-
-この2本から、二重硬直性の直観がかなりはっきりします。実質賃金を上げる必要があるとき、つまり $\Delta w_t>0$ のときには、賃金インフレ率は価格インフレ率より高くならなければなりません。逆に、価格インフレ率と賃金インフレ率を同時に同じ値へ固定すると、実質賃金は動けません。
-
-特に、実質賃金が動かない局面、すなわち
-$$
-\Delta w_t=0
-$$
-を考えると、
-$$
-\pi_t^p=\pi_t^w
-=
-\bar{\kappa}(\gamma+\varphi)x_t,
-\qquad
-\bar{\kappa}
-\equiv
-\left(
-\frac{1}{\kappa_p}
-+
-\frac{1}{\kappa_w}
-\right)^{-1}
-$$
-です。$\bar{\kappa}$ は $\kappa_p$ と $\kappa_w$ の調和平均型の合成係数です。価格硬直性だけなら傾きは $\kappa_p(\gamma+\varphi)$、賃金硬直性だけなら $\kappa_w(\gamma+\varphi)$ ですが、価格と賃金が両方とも硬直的で実質賃金が動かない場合、有効な傾きは $\bar{\kappa}(\gamma+\varphi)$ になります。
-
-例えば $\kappa_p=\kappa_w$ なら、
-$$
-\bar{\kappa}
-=
-\frac{\kappa_p}{2}.
-$$
-したがって、二重硬直性の静学ケースでは、同じ需給ギャップに対する共通インフレ率の反応は、価格硬直性だけの場合の半分になります。これは、二重硬直性が「より多くの調整対象を作る」だけでなく、実質賃金の調整を通じてインフレと需給ギャップの関係を鈍くすることを示しています。
-
-@fig-lecture10-static-slopes は、この静学ケースの傾きを示しています。図は $\Delta w_t=0$ の特殊ケースを描いたものであり、動学モデル全体の解ではありません。目的は、価格と賃金の2つの硬直性が有効なフィリップス曲線の傾きを小さくすることを視覚化する点にあります。
-
-![期待項を落とした静学ケースの傾き比較：$\mathbb{E}_t\pi_{t+1}^p=\mathbb{E}_t\pi_{t+1}^w=0$、$\Delta w_t=0$ のもとで、価格硬直性だけ、賃金硬直性だけ、二重硬直性を比較する。二重硬直性の傾きは $\bar\kappa(\gamma+\varphi)$、$\bar\kappa=(1/\kappa_p+1/\kappa_w)^{-1}$ である。](figures/lecture10/lecture10_static_case_slopes.svg){#fig-lecture10-static-slopes width=90%}
-
 # 第7回との比較
 
 第7回では、価格が硬直的でも賃金は柔軟でした。そのため、実質賃金は毎期
@@ -1164,16 +1071,16 @@ $$
 
 **必読**
 
-- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. [doi:10.1016/S0304-3932(00)00028-3](https://doi.org/10.1016/S0304-3932(00)00028-3). 価格・賃金硬直性のもとで生じる3変数間の政策トレードオフの基礎文献。
-- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi:10.1086/261117](https://doi.org/10.1086/261117). 本講義で使う調整費用型の名目硬直性の原典。
+- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3). 価格・賃金硬直性のもとで生じる3変数間の政策トレードオフの基礎文献。
+- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117). 本講義で使う調整費用型の名目硬直性の原典。
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 賃金硬直性をRANKモデルへ組み込む標準的参照先。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格・賃金硬直性の厚生評価を深く学ぶため。
 
 **発展**
 
-- Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. [doi:10.1086/426038](https://doi.org/10.1086/426038)
-- Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi:10.1162/154247603770383415](https://doi.org/10.1162/154247603770383415)
-- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi:10.1016/0304-3932(83)90060-0](https://doi.org/10.1016/0304-3932(83)90060-0)
+- Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. [doi](https://doi.org/10.1086/426038)
+- Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)
+- Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
 
 ```{=latex}
 \Needspace{0.35\textheight}
@@ -1243,17 +1150,17 @@ $$
 \Needspace{0.42\textheight}
 ```
 
-## 発展問題（政策補論に対応）
+## 発展問題
 
 **問5：Markov 裁量政策**
 
 賃金インフレ恒等式により、今日の $mc_t$ は翌期の状態になります。継続価値の限界効果を
 $$
-\chi_t
+\Gamma_t^{mc}
 \equiv
 \beta\mathbb{E}_tV_s(mc_t,\xi_{t+1})
 $$
-と置きます。$mc_t$ の一階条件に $\chi_t$ が入る理由を説明し、Markov 裁量政策のターゲット条件
+と置きます。$mc_t$ の一階条件に $\Gamma_t^{mc}$ が入る理由を説明し、Markov 裁量政策のターゲット条件
 $$
 \left(1+\kappa_p+\kappa_w\right)x_t
 +
@@ -1264,10 +1171,10 @@ $$
 (1+\kappa_p)\omega_w\pi_t^w
 \right]
 +
-\kappa_w(\gamma+\varphi)\chi_t
+\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
 =0
 $$
-を導出しなさい。また、一期間問題または終端期には $\chi_t=0$ となる理由を説明しなさい。
+を導出しなさい。また、一期間問題または終端期には $\Gamma_t^{mc}=0$ となる理由を説明しなさい。
 
 **問6：ターゲット条件と政策金利**
 
@@ -1285,11 +1192,107 @@ $$
 
 **問7：柔軟賃金極限**
 
-$\eta_w\to0$ のとき、$\omega_w\to0$、$\kappa_w\to\infty$、$\chi_t\to0$ となることを使い、問5の条件が第9回の価格硬直性だけのターゲット条件へ戻ることを示しなさい。
+$\eta_w\to0$ のとき、$\omega_w\to0$、$\kappa_w\to\infty$、$\Gamma_t^{mc}\to0$ となることを使い、問5の条件が第9回の価格硬直性だけのターゲット条件へ戻ることを示しなさい。
 
 ```{=latex}
-\Needspace{0.32\textheight}
+\clearpage
 ```
+
+# 補論（発展）：期待項を落とした静学ケース
+
+この補論は、動学的な期待項を落として価格・賃金マークアップの関係を確認する発展項目です。授業時間に余裕がある場合に扱います。
+
+ここまでのモデルは動学モデルなので、本来は将来の期待を含めて解く必要があります。ただし、二重の名目硬直性が何をしているかを見るだけなら、期待項を落とした静学ケースが有用です。ここでは、定量分析の較正としてではなく、代数構造を見せるために将来インフレの期待項をゼロとして扱います。
+$$
+\mathbb{E}_t\pi_{t+1}^p=\mathbb{E}_t\pi_{t+1}^w=0
+$$
+と置きます。割引因子 $\beta$ は通常通り $0<\beta<1$ のパラメータであり、この節では期待項そのものを捨象しています。
+
+このとき、価格フィリップス曲線と賃金フィリップス曲線は
+$$
+\pi_t^p
+=
+-\kappa_p\mu_t^p,
+\qquad
+\pi_t^w
+=
+-\kappa_w\mu_t^w
+$$
+ここで中心式
+$$
+\mu_t^p+\mu_t^w
+=
+-(\gamma+\varphi)x_t
+$$
+を使うと、
+$$
+\frac{\pi_t^p}{\kappa_p}
++
+\frac{\pi_t^w}{\kappa_w}
+=
+(\gamma+\varphi)x_t
+$$
+この関係は、需給ギャップが作るインフレ圧力を、価格インフレ率と賃金インフレ率が分担していることを表します。
+
+さらに、実質賃金の変化を
+$$
+\Delta w_t
+\equiv
+w_t-w_{t-1}
+=
+\pi_t^w-\pi_t^p
+$$
+と書きます。上の2本を $\pi_t^p,\pi_t^w$ について解くと、
+$$
+\pi_t^p
+=
+\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t
+-
+\frac{\kappa_p}{\kappa_p+\kappa_w}\Delta w_t,
+$$
+$$
+\pi_t^w
+=
+\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t
++
+\frac{\kappa_w}{\kappa_p+\kappa_w}\Delta w_t.
+$$
+
+この2本から、二重硬直性の直観がかなりはっきりします。実質賃金を上げる必要があるとき、つまり $\Delta w_t>0$ のときには、賃金インフレ率は価格インフレ率より高くならなければなりません。逆に、価格インフレ率と賃金インフレ率を同時に同じ値へ固定すると、実質賃金は動けません。
+
+特に、実質賃金が動かない局面、すなわち
+$$
+\Delta w_t=0
+$$
+を考えると、
+$$
+\pi_t^p=\pi_t^w
+=
+\bar{\kappa}(\gamma+\varphi)x_t,
+\qquad
+\bar{\kappa}
+\equiv
+\left(
+\frac{1}{\kappa_p}
++
+\frac{1}{\kappa_w}
+\right)^{-1}
+$$
+です。$\bar{\kappa}$ は $\kappa_p$ と $\kappa_w$ の調和平均型の合成係数です。価格硬直性だけなら傾きは $\kappa_p(\gamma+\varphi)$、賃金硬直性だけなら $\kappa_w(\gamma+\varphi)$ ですが、価格と賃金が両方とも硬直的で実質賃金が動かない場合、有効な傾きは $\bar{\kappa}(\gamma+\varphi)$ になります。
+
+例えば $\kappa_p=\kappa_w$ なら、
+$$
+\bar{\kappa}
+=
+\frac{\kappa_p}{2}.
+$$
+したがって、二重硬直性の静学ケースでは、同じ需給ギャップに対する共通インフレ率の反応は、価格硬直性だけの場合の半分になります。これは、二重硬直性が「より多くの調整対象を作る」だけでなく、実質賃金の調整を通じてインフレと需給ギャップの関係を鈍くすることを示しています。
+
+@fig-lecture10-static-slopes は、この静学ケースの傾きを示しています。図は $\Delta w_t=0$ の特殊ケースを描いたものであり、動学モデル全体の解ではありません。目的は、価格と賃金の2つの硬直性が有効なフィリップス曲線の傾きを小さくすることを視覚化する点にあります。
+
+![期待項を落とした静学ケースの傾き比較：$\mathbb{E}_t\pi_{t+1}^p=\mathbb{E}_t\pi_{t+1}^w=0$、$\Delta w_t=0$ のもとで、価格硬直性だけ、賃金硬直性だけ、二重硬直性を比較する。二重硬直性の傾きは $\bar\kappa(\gamma+\varphi)$、$\bar\kappa=(1/\kappa_p+1/\kappa_w)^{-1}$ である。](figures/lecture10/lecture10_static_case_slopes.svg){#fig-lecture10-static-slopes width=90%}
 
 # 補論（発展）：目的関数の導出
 
@@ -1700,7 +1703,7 @@ x_t^2
 $$
 と書けます。制約は上の価格・賃金フィリップス曲線、賃金インフレ恒等式、IS曲線です。将来の民間期待を当期の一階条件で所与としても、継続価値は残ります。実質限界費用を翌期へ持ち越す限界的な価値を
 $$
-\chi_t
+\Gamma_t^{mc}
 \equiv
 \beta\mathbb{E}_t
 V_s(mc_t,\xi_{t+1})
@@ -1716,12 +1719,12 @@ $$
 (1+\kappa_p)\omega_w\pi_t^w
 \right]
 +
-\kappa_w(\gamma+\varphi)\chi_t
+\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
 =0.
 $$
-です。$\chi_t$ は、当期の実質賃金を変えることで翌期以降の調整費用と安定化余地がどう変わるかを表します。一般には価値関数を解かなければ $\chi_t$ は決まらないため、Markov 裁量解は当期変数だけの静学条件には縮約できません。
+です。$\Gamma_t^{mc}$ は、当期の実質賃金を変えることで翌期以降の調整費用と安定化余地がどう変わるかを表します。一般には価値関数を解かなければ $\Gamma_t^{mc}$ は決まらないため、Markov 裁量解は当期変数だけの静学条件には縮約できません。
 
-一期間だけを最適化する場合、または有限期間問題の終端期には $\chi_t=0$ です。この条件付き静学ベンチマークでは
+一期間だけを最適化する場合、または有限期間問題の終端期には $\Gamma_t^{mc}=0$ です。この条件付き静学ベンチマークでは
 $$
 x_t
 =
@@ -1764,7 +1767,7 @@ $$
 \qquad
 \kappa_w=\frac{\psi_w}{\eta_w}\to\infty,
 \qquad
-\chi_t\to0
+\Gamma_t^{mc}\to0
 $$
 この極限では実質賃金の持越し状態も消えます。一般化された条件は
 $$
@@ -1777,7 +1780,7 @@ $$
 
 # 補論（発展）：Markov 裁量政策のターゲット条件
 
-この補論では、前の政策補論で示した Markov 裁量政策の一般化されたターゲット条件を導きます。$mc_t$ が翌期の状態になる点を明示し、継続価値の影 $\chi_t$ を一階条件に残します。
+この補論では、前の政策補論で示した Markov 裁量政策の一般化されたターゲット条件を導きます。$mc_t$ が翌期の状態になる点を明示し、継続価値の影 $\Gamma_t^{mc}$ を一階条件に残します。
 
 ## 縮約体系
 
@@ -1881,7 +1884,7 @@ $$
 
 裁量政策の一時的な逸脱を考えるとき、民間部門が形成した将来期待は所与として扱います。ただし、$mc_t$ が翌期の状態になることによる継続価値への効果は残ります。この効果を
 $$
-\chi_t
+\Gamma_t^{mc}
 \equiv
 \beta\mathbb{E}_t
 V_s(mc_t,\xi_{t+1})
@@ -1958,7 +1961,7 @@ $$
 
 ## 一階条件
 
-将来期待は所与として微分しますが、$mc_t$ の一階条件には継続価値の限界効果 $\chi_t$ が残ります。一階条件は
+将来期待は所与として微分しますが、$mc_t$ の一階条件には継続価値の限界効果 $\Gamma_t^{mc}$ が残ります。一階条件は
 $$
 \begin{aligned}
 \frac{\partial\mathcal{L}_t}{\partial \pi_t^p}:
@@ -1975,7 +1978,7 @@ x_t+\kappa_w(\gamma+\varphi)\Lambda_{2t}-\Lambda_{4t}=0,
 \\
 \frac{\partial\mathcal{L}_t}{\partial mc_t}:
 &\qquad
-\kappa_p\Lambda_{1t}-\kappa_w\Lambda_{2t}+\Lambda_{3t}+\chi_t=0,
+\kappa_p\Lambda_{1t}-\kappa_w\Lambda_{2t}+\Lambda_{3t}+\Gamma_t^{mc}=0,
 \\
 \frac{\partial\mathcal{L}_t}{\partial r_t}:
 &\qquad
@@ -2015,7 +2018,7 @@ $$
 +
 \Lambda_{3t}
 +
-\chi_t
+\Gamma_t^{mc}
 =0
 $$
 です。整理して
@@ -2027,7 +2030,7 @@ $$
 -
 \frac{x_t}{\gamma+\varphi}
 -
-\chi_t
+\Gamma_t^{mc}
 $$
 この式を $\Lambda_{3t}$ について解くと、
 $$
@@ -2039,7 +2042,7 @@ $$
 +
 x_t/(\gamma+\varphi)
 +
-\chi_t
+\Gamma_t^{mc}
 }{1+\kappa_p}
 $$
 です。
@@ -2059,7 +2062,7 @@ $$
 +
 x_t/(\gamma+\varphi)
 +
-\chi_t
+\Gamma_t^{mc}
 }{1+\kappa_p}
 =0.
 $$
@@ -2073,7 +2076,7 @@ $$
 +
 \kappa_w x_t
 +
-\kappa_w(\gamma+\varphi)\chi_t
+\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
 =0
 $$
 以上から、一般化されたターゲット条件は次の式です。
@@ -2087,7 +2090,7 @@ $$
 (1+\kappa_p)\omega_w\pi_t^w
 \right]
 +
-\kappa_w(\gamma+\varphi)\chi_t
+\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
 =0
 $$
 
@@ -2103,7 +2106,7 @@ x_t
 +
 (1+\kappa_p)\omega_w\pi_t^w
 +
-\chi_t
+\Gamma_t^{mc}
 \right]
 $$
 です。
@@ -2114,13 +2117,13 @@ V_s(s_t,\xi_t)=-\Lambda_{3t}
 $$
 なので、
 $$
-\chi_t
+\Gamma_t^{mc}
 =
 -\beta\mathbb{E}_t\Lambda_{3,t+1}
 $$
-です。$\chi_t$ は、翌期の賃金インフレ恒等式における状態制約の影を表します。この条件と民間部門の期待形成、価値関数を同時に解くことで Markov 裁量均衡が決まります。
+です。$\Gamma_t^{mc}$ は、翌期の賃金インフレ恒等式における状態制約の影を表します。この条件と民間部門の期待形成、価値関数を同時に解くことで Markov 裁量均衡が決まります。
 
-一期間問題または有限期間問題の終端期には継続価値がないため、$\chi_t=0$ です。この場合に限り、ターゲット条件は
+一期間問題または有限期間問題の終端期には継続価値がないため、$\Gamma_t^{mc}=0$ です。この場合に限り、ターゲット条件は
 $$
 \left(1+\kappa_p+\kappa_w\right)x_t
 +
@@ -2142,7 +2145,7 @@ $$
 \qquad
 \kappa_w\to\infty,
 \qquad
-\chi_t\to0
+\Gamma_t^{mc}\to0
 $$
 を同時に取ります。一般化された条件を $\kappa_w$ で割って極限を取ると、
 $$
