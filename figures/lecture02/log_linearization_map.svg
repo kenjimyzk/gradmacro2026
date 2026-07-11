@@ -26,7 +26,7 @@
     <text x="112" y="218" font-size="17">積・商・べき乗</text>
     <text x="112" y="244" font-size="17">和も含む</text>
     <text x="390" y="145" font-size="23" font-weight="700">定常状態の周りで近似</text>
-    <text x="390" y="181" font-size="19">xₜ = ln Xₜ − ln X</text>
+    <text x="390" y="181" font-size="19">x_t = ln X_t − ln X</text>
     <text x="390" y="216" font-size="17">小さい乖離だけを残す</text>
     <text x="390" y="242" font-size="17">高次の項は無視</text>
     <text x="756" y="145" font-size="23" font-weight="700">線形方程式</text>
