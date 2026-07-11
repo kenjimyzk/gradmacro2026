@@ -19,8 +19,8 @@
     <path d="M 250 235 L 322 235"/>
     <path d="M 512 235 L 584 235"/>
     <path d="M 774 235 L 846 235"/>
-    <path d="M 932 305 C 874 378 784 420 672 444"/>
-    <path d="M 492 444 C 391 430 302 388 212 305"/>
+    <path d="M 932 305 C 850 370 650 392 470 430"/>
+    <path d="M 470 473 L 630 473"/>
   </g>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
     <rect x="80" y="160" width="170" height="150" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
@@ -34,22 +34,22 @@
     <text x="106" y="198" font-size="22" font-weight="700">2期間・有限期間</text>
     <text x="106" y="228" font-size="17">予算制約</text>
     <text x="106" y="253" font-size="17">ラグランジュ法</text>
-    <text x="106" y="278" font-size="17">Euler方程式</text>
+    <text x="106" y="278" font-size="17">オイラー方程式</text>
     <text x="368" y="198" font-size="22" font-weight="700">無限期間</text>
-    <text x="368" y="228" font-size="17">局所条件</text>
-    <text x="368" y="253" font-size="17">横断性条件</text>
-    <text x="368" y="278" font-size="17">Ponziを排除</text>
+    <text x="368" y="228" font-size="17">オイラー方程式</text>
+    <text x="368" y="253" font-size="17">No-Ponzi条件</text>
+    <text x="368" y="278" font-size="17">横断性条件</text>
     <text x="630" y="198" font-size="22" font-weight="700">Bellman方程式</text>
     <text x="630" y="228" font-size="17">状態と操作</text>
     <text x="630" y="253" font-size="17">包絡線条件</text>
-    <text x="630" y="278" font-size="17">同じEuler条件</text>
+    <text x="630" y="278" font-size="17">同じ一階条件</text>
     <text x="892" y="198" font-size="22" font-weight="700">不確実性</text>
-    <text x="892" y="228" font-size="17">状態 z_t</text>
+    <text x="892" y="228" font-size="17">状態 z<tspan baseline-shift="sub" font-size="12">t</tspan></text>
     <text x="892" y="253" font-size="17">条件付き期待</text>
     <text x="892" y="278" font-size="17">来期のリスク</text>
     <text x="266" y="448" font-size="22" font-weight="700">確率的割引因子 Q</text>
     <text x="266" y="478" font-size="17">限界効用で将来を割引</text>
-    <text x="266" y="503" font-size="17">1 = E_t[Q R]</text>
+    <text x="266" y="503" font-size="17">1 = E<tspan baseline-shift="sub" font-size="12">t</tspan>[Q · R]</text>
     <text x="676" y="448" font-size="22" font-weight="700">株式・企業価値</text>
     <text x="676" y="478" font-size="17">総収益率</text>
     <text x="676" y="503" font-size="17">将来配当の割引現在価値</text>
