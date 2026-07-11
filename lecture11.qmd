@@ -59,14 +59,14 @@ x_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa x_t,
+\kappa_x x_t,
 \\
 r_t
 &=
 \phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t.
 \end{aligned}
 $$
-ここで $\Delta\sigma_{t+1}^c=\sigma_{t+1}^c-\sigma_t^c$、$\kappa_P=\psi_p/\eta_p$、$\kappa=\kappa_P(\gamma+\varphi)$ です。
+ここで $\Delta\sigma_{t+1}^c=\sigma_{t+1}^c-\sigma_t^c$、$\kappa_p=\psi_p/\eta_p$、$\kappa_x=\kappa_p(\gamma+\varphi)$ です。
 
 第1式は TANK の IS 曲線です。実質利子率が動かすのは集計消費ではなく Type S 家計の消費なので、消費格差の期待変化が入ります。第2式は NKフィリップス曲線です。価格硬直性だけで賃金が共通なら、実質限界費用は第7回と同じく需給ギャップだけで表せます。労働格差 $\sigma_t^n$ は3本の NK方程式には直接入らず、共通賃金条件を通じて消費格差と結びつきます。第3式は、第7回と同じテイラー・ルールです。
 
@@ -127,8 +127,8 @@ $$
 | $\lambda$ | Type H 家計の人口比率 |
 | $\psi_p$ | 財の代替弾力性 |
 | $\eta_p$ | 価格調整費用パラメータ |
-| $\kappa_P=\psi_p/\eta_p$ | 実質限界費用に対する価格インフレ率の傾き |
-| $\kappa=\kappa_P(\gamma+\varphi)$ | 需給ギャップに対する NKフィリップス曲線の傾き |
+| $\kappa_p=\psi_p/\eta_p$ | 実質限界費用に対する価格インフレ率の傾き |
+| $\kappa_x=\kappa_p(\gamma+\varphi)$ | 需給ギャップに対する NKフィリップス曲線の傾き |
 | $\phi$ | テイラー・ルールのインフレ反応係数 |
 | $\rho_m,\rho_z$ | 金融政策ショックと再分配ショックの持続性 |
 | $\Theta_T=1-\lambda\varphi/(1-\lambda)$ | 閉じた IS 曲線の利子率感応度を決める係数 |
@@ -162,7 +162,7 @@ $$
 =
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa_P mc_t
+\kappa_p mc_t
 $$
 が得られます。したがって、第11回の仕事は、TANK の家計ブロックから IS 曲線がどう変わるか、そして価格硬直性だけなら $mc_t$ がなぜ第7回と同じ形に戻るかを確認することにあります。
 
@@ -183,7 +183,7 @@ $$
 | 9 | 資源制約 | $y_t=c_t$ |
 | 10 | 実質限界費用 | $mc_t=w_t-a_t$ |
 | 11 | 配当の一次近似 | $d_t=y_t-(w_t+n_t)$ |
-| 12 | NKフィリップス曲線 | $\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_P mc_t$ |
+| 12 | NKフィリップス曲線 | $\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_p mc_t$ |
 | 13 | テイラー・ルール | $r_t^N=\phi\pi_t-m_t$ |
 | 14 | 技術ショック | $a_t=\rho_a a_{t-1}+e_t^a$ |
 | 15 | 金融政策ショック | $m_t=\rho_m m_{t-1}+e_t^m$ |
@@ -197,7 +197,7 @@ w_t=\gamma c_t+\varphi n_t
 $$
 になります。また、5番、6番、11番、16番は分配を追跡するための追加ブロックなので、第7回の体系では不要です。残る価格設定ブロックは第7回と同じで、10番と12番から
 $$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_P mc_t
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_p mc_t
 $$
 を使います。
 
@@ -392,7 +392,7 @@ $$
 =
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa_P mc_t.
+\kappa_p mc_t.
 $$
 したがって、TANK の NKフィリップス曲線は
 $$
@@ -400,11 +400,11 @@ $$
 =
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa x_t
+\kappa_x x_t
 $$
 です。ただし
 $$
-\kappa=\kappa_P(\gamma+\varphi)
+\kappa_x=\kappa_p(\gamma+\varphi)
 $$
 です。
 
@@ -426,7 +426,7 @@ x_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa x_t,
+\kappa_x x_t,
 \\
 r_t
 &=
@@ -583,7 +583,7 @@ x_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
 +
-\kappa x_t,
+\kappa_x x_t,
 \\
 r_t
 &=
@@ -654,7 +654,7 @@ $$
 $$
 \pi_t=\kappa_m x_t,
 \qquad
-\kappa_m\equiv\frac{\kappa}{1-\beta\rho_m}
+\kappa_m\equiv\frac{\kappa_x}{1-\beta\rho_m}
 $$
 です。テイラー・ルールから
 $$
@@ -718,7 +718,7 @@ $$
 $$
 \pi_t=\kappa_z x_t,
 \qquad
-\kappa_z\equiv\frac{\kappa}{1-\beta\rho_z}
+\kappa_z\equiv\frac{\kappa_x}{1-\beta\rho_z}
 $$
 です。テイラー・ルールから
 $$
@@ -758,7 +758,7 @@ $$
 | $\gamma$ | 1.00 |
 | $\varphi$ | 1.00 |
 | $\lambda$ | 0.30 |
-| $\kappa$ | 0.10 |
+| $\kappa_x$ | 0.10 |
 | $\phi$ | 1.50 |
 | $\rho_m=\rho_z$ | 0.50 |
 | ショックの大きさ | $m_t=z_t=0.01$ |
@@ -801,7 +801,7 @@ $$
 
 この回では、第7回の価格硬直性モデルに、家計の異質性だけを加えました。賃金は共通で柔軟、価格は硬直的です。したがって、NKフィリップス曲線は第7回と同じ
 $$
-\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa x_t
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t
 $$
 に戻ります。TANK らしさは、価格設定ブロックではなく、Type S の Euler 方程式と Type H の現在所得制約から来る IS 曲線に現れます。
 
@@ -831,7 +831,7 @@ $0<\Theta_T<1$ なら、IS 曲線は RANK よりフラットになります。�
 | 価格 | 硬直的 | 硬直的 | 硬直的 |
 | 追加される変数 | なし | $\mu_t^w,\pi_t^w$ | $\sigma_t^c,\sigma_t^n$ |
 | IS 曲線 | 集計消費の Euler 方程式 | 集計消費の Euler 方程式 | Type S 消費の Euler 方程式 |
-| NKPC | $\kappa x_t$ | 価格・賃金マークアップ | $\kappa x_t$ |
+| NKPC | $\kappa_x x_t$ | 価格・賃金マークアップ | $\kappa_x x_t$ |
 
 第12回では、同じ TANK 構造を **NKクロス** として読み直します。政府支出は入れず、財市場は引き続き $y_t=c_t$ です。ただし、第11回のようにテイラー・ルールと NKフィリップス曲線を前面に出すのではなく、実質利子率を所与として、消費関数と所得フィードバックを見ることに集中します。
 
@@ -1004,4 +1004,4 @@ x_t=\Omega_z^T z_t,
 }
 {\kappa_z(\phi-\rho_z)+\gamma\Theta_T(1-\rho_z)}
 $$
-を導出しなさい。ただし $\kappa_z=\kappa/(1-\beta\rho_z)$ である。$\rho_z=1$ のときに効果が消える理由も説明しなさい。
+を導出しなさい。ただし $\kappa_z=\kappa_x/(1-\beta\rho_z)$ である。$\rho_z=1$ のときに効果が消える理由も説明しなさい。

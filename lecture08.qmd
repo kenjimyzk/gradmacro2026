@@ -73,7 +73,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t,\\
++\kappa_x x_t,\\
 r_t
 &=
 \phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t.
@@ -145,8 +145,8 @@ $$
 | $\tilde{\varphi}$ | $(\varphi+\alpha)/(1-\alpha)$ | 収穫逓減を考慮した限界費用の労働供給側係数 |
 | $\zeta_a$ | $(\tilde{\varphi}+1)/(\tilde{\varphi}+\tilde{\gamma})$ | 自然産出量の技術ショックへの反応係数 |
 | $\zeta_g$ | $\tilde{\gamma}/(\tilde{\varphi}+\tilde{\gamma})$ | 自然産出量の政府支出ショックへの反応係数 |
-| $\kappa$ | $MC(\tilde{\gamma}+\tilde{\varphi})\psi/\eta$ | 需給ギャップに対するインフレの反応係数 |
-| $\kappa_i,\; i\in\{a,m,g\}$ | $\kappa/(1-\beta\rho_i)$ | ショック $i$ 用のフィリップス曲線係数 |
+| $\kappa_x$ | $MC(\tilde{\gamma}+\tilde{\varphi})\psi/\eta$ | 需給ギャップに対するインフレの反応係数 |
+| $\kappa_i,\; i\in\{a,m,g\}$ | $\kappa_x/(1-\beta\rho_i)$ | ショック $i$ 用のフィリップス曲線係数 |
 | $\Omega$ | $1/\{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)\}$ | 金融政策ショックが需給ギャップを動かす係数 |
 | $\Omega_i,\; i\in\{a,m,g\}$ | $\tilde{\gamma}(1-\rho_i)/\{\kappa_i(\phi-\rho_i)+\tilde{\gamma}(1-\rho_i)\}$ | ショック $i$ 用の係数。金融政策ショックでは $\Omega_m=\tilde{\gamma}(1-\rho_m)\Omega$ |
 
@@ -402,7 +402,7 @@ x_t
 \pi_t
 &=
 \beta\mathbb{E}_t\pi_{t+1}
-+\kappa x_t,\\
++\kappa_x x_t,\\
 r_t
 &=
 \phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t.
@@ -410,7 +410,7 @@ r_t
 $$
 ここで
 $$
-\kappa
+\kappa_x
 =
 MC(\tilde{\gamma}+\tilde{\varphi})\frac{\psi}{\eta}.
 $$
@@ -474,7 +474,7 @@ NKフィリップス曲線は、ショック $i\in\{m,a,g\}$ だけを単独で�
 $$
 \pi_t=\kappa_i x_t,
 \qquad
-\kappa_i=\frac{\kappa}{1-\beta\rho_i}
+\kappa_i=\frac{\kappa_x}{1-\beta\rho_i}
 $$
 と書けます。これが **NK-AS** です。複数のショックが同時に動く場合には、それぞれの持続性に応じた項を足し合わせて考えます。一方、動学的 IS 曲線、自然利子率、テイラー・ルールを組み合わせると、右下がりの **NK-AD** が得られます。ショックは、この NK-AD の位置を動かします。
 
@@ -504,13 +504,13 @@ $$
 $$
 \pi_t
 =
-\beta\rho_m\pi_t+\kappa x_t
+\beta\rho_m\pi_t+\kappa_x x_t
 $$
 なので、
 $$
 \pi_t=\kappa_m x_t,
 \qquad
-\kappa_m\equiv\frac{\kappa}{1-\beta\rho_m}
+\kappa_m\equiv\frac{\kappa_x}{1-\beta\rho_m}
 $$
 です。
 
@@ -558,7 +558,7 @@ $$
 $$
 \begin{aligned}
 \kappa_m
-=&\frac{\kappa}{1-\beta\rho_m},\\
+=&\frac{\kappa_x}{1-\beta\rho_m},\\
    \Omega
 =&
 \frac{1}{\kappa_m(\phi-\rho_m)+\tilde{\gamma}(1-\rho_m)},\\
@@ -573,7 +573,7 @@ $$
 $$
 \begin{aligned}
 r_t^N &= r_t + \mathbb{E}_t \pi_{t+1}=r_t+\rho_m \pi_t\\
-&=\frac{\rho_{m}\kappa_{m}-\tilde{\gamma}(1-\rho_{m})}{\kappa_{m}(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}m_{t}
+&=\frac{\rho_{m}\kappa_m-\tilde{\gamma}(1-\rho_{m})}{\kappa_m(\phi-\rho_{m})+\tilde{\gamma}(1-\rho_{m})}m_{t}
 \end{aligned}
 $$
 です。金融緩和ショックは直接的には名目利子率を引き下げますが、インフレ期待の上昇を通じて名目利子率を押し上げる効果もあります。
@@ -592,13 +592,13 @@ $$
 $$
 \pi_t
 =
-\beta\rho_a\pi_t+\kappa x_t
+\beta\rho_a\pi_t+\kappa_x x_t
 $$
 なので、
 $$
 \pi_t=\kappa_a x_t,
 \qquad
-\kappa_a\equiv\frac{\kappa}{1-\beta\rho_a}
+\kappa_a\equiv\frac{\kappa_x}{1-\beta\rho_a}
 $$
 です。IS 曲線は
 $$
@@ -642,7 +642,7 @@ r_t = -(\phi-\rho_a)\kappa_a\zeta_a\Omega_a a_t
 $$
 です。ここで
 $$
-\kappa_a=\frac{\kappa}{1-\beta\rho_a},
+\kappa_a=\frac{\kappa_x}{1-\beta\rho_a},
 \qquad
 \Omega_a
 =
@@ -678,7 +678,7 @@ $$
 $$
 です。ここで
 $$
-\kappa_g = \frac{\kappa}{1-\beta\rho_g}
+\kappa_g = \frac{\kappa_x}{1-\beta\rho_g}
 $$
 です。上の2本を等置すると
 $$
@@ -726,8 +726,8 @@ r_t
 +(\phi-\rho_g)\kappa_g(1-\zeta_g)\Omega_g g_t
 \end{aligned}
 $$
-です。なお、価格が柔軟なとき（$\kappa\to\infty$）、$\Omega,\;\Omega_{m},\;\Omega_{a},\;\Omega_{g}\to 0$なので、$x_t=0$。
-価格が一定のとき（$\kappa\to0$）、$\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1$なので、$x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}$となります。
+です。なお、価格が柔軟なとき（$\kappa_x\to\infty$）、$\Omega,\;\Omega_{m},\;\Omega_{a},\;\Omega_{g}\to 0$なので、$x_t=0$。
+価格が一定のとき（$\kappa_x\to0$）、$\Omega\to1/\{\tilde{\gamma}(1-\rho_{m})\}, \Omega_{m},\Omega_{a},\Omega_{g}\to1$なので、$x_{t}=m_t/{\tilde{\gamma}(1-\rho_m)}-\zeta_{a}a_{t}+(1-\zeta_{g})g_{t}$となります。
 
 また、
 $$
@@ -802,9 +802,9 @@ tilde_gamma <- gamma / (1 - GY)
 tilde_varphi <- (varphi + alpha) / (1 - alpha)
 zeta_a <- (tilde_varphi + 1) / (tilde_varphi + tilde_gamma)
 zeta_g <- tilde_gamma / (tilde_varphi + tilde_gamma)
-kappa <- MC * (tilde_gamma + tilde_varphi) * psi / eta
+kappa_x <- MC * (tilde_gamma + tilde_varphi) * psi / eta
 
-kappa_i <- function(rho) kappa / (1 - beta * rho)
+kappa_i <- function(rho) kappa_x / (1 - beta * rho)
 omega_i <- function(rho) {
   kappa_rho <- kappa_i(rho)
   tilde_gamma * (1 - rho) /
