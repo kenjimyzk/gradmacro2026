@@ -36,9 +36,9 @@
     <text x="106" y="253" font-size="17">平均と分散</text>
     <text x="106" y="278" font-size="17">ラグの相関</text>
     <text x="364" y="198" font-size="23" font-weight="700">定常性</text>
-    <text x="364" y="228" font-size="17">平均回帰</text>
-    <text x="364" y="253" font-size="17">長期平均</text>
-    <text x="364" y="278" font-size="17">安定な変動</text>
+    <text x="364" y="228" font-size="17">平均・分散が一定</text>
+    <text x="364" y="253" font-size="17">共分散はラグ依存</text>
+    <text x="364" y="278" font-size="17">時点に依存しない</text>
     <text x="622" y="198" font-size="23" font-weight="700">AR(1)</text>
     <text x="622" y="228" font-size="17">持続性 rho</text>
     <text x="622" y="253" font-size="17">半減期</text>
@@ -52,7 +52,7 @@
     <text x="252" y="503" font-size="17">固有値で安定性を読む</text>
     <text x="676" y="448" font-size="23" font-weight="700">対数線形近似</text>
     <text x="676" y="478" font-size="17">非線形条件を線形化</text>
-    <text x="676" y="503" font-size="17">第4回のRANK分析へ</text>
+    <text x="676" y="503" font-size="17">第4回以降のDSGE分析へ</text>
   </g>
   <g stroke-linecap="round" fill="none">
     <path d="M 108 292 L 142 270 L 176 284 L 214 240" stroke="#2f6fbe" stroke-width="4"/>
