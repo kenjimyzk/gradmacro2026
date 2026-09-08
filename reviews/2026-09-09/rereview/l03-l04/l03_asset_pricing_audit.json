@@ -1,0 +1,32 @@
+{
+  "deterministic_rate_random_sdf": {
+    "R0": "11/10",
+    "R1": "6/5",
+    "Q02_possible_values": [
+      "5/44",
+      "85/132",
+      "10/11",
+      "15/11"
+    ],
+    "EQ02": "25/33",
+    "discount_product_inverse": "25/33",
+    "stock_price_from_one_step": "5/3",
+    "stock_price_from_PV": "5/3"
+  },
+  "l03_exercise5": {
+    "stock_price": "9/10",
+    "riskfree_gross_return": "1",
+    "expected_stock_return": "10/9",
+    "covariance": "-1/9"
+  },
+  "recursive_admissibility_illustration": {
+    "scope": "Clarification only: respects sequential budget, violates inherited NPG.",
+    "constant_consumption": 2.0,
+    "beta": 0.96,
+    "R": 1.0416666666666667,
+    "constant_income": 1,
+    "lifetime_log_utility": 17.328679513998615,
+    "discounted_debt_limit": -24.999999999999957,
+    "budget_residual": 2.220446049250313e-16
+  }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="26.08.0">
+<page number="18" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="0" size="18" family="YRFYVN+NotoSansJP" color="#000000"/>
+	<fontspec id="1" size="21" family="OGJHBM+NotoSansJP" color="#000000"/>
+	<fontspec id="2" size="18" family="MWSAAS+NotoSansJP" color="#000000"/>
+	<fontspec id="3" size="12" family="YRFYVN+NotoSansJP" color="#000000"/>
+	<fontspec id="4" size="18" family="MWSAAS+NotoSansJP" color="#000000"/>
+	<fontspec id="5" size="18" family="MWSAAS+NotoSansJP" color="#d62728"/>
+	<fontspec id="6" size="18" family="YRFYVN+NotoSansJP" color="#d62728"/>
+	<fontspec id="7" size="17" family="SNWBXP+HaranoAjiMincho" color="#000000"/>
+	<fontspec id="8" size="18" family="BIDROH+LMRoman10" color="#000000"/>
+	<fontspec id="9" size="18" family="JUALVI+LatinModernMath" color="#000000"/>
+	<fontspec id="10" size="13" family="OEXLVX+LatinModernMath" color="#000000"/>
+	<fontspec id="11" size="26" family="VJTXHH+LMSans12" color="#000000"/>
+	<fontspec id="12" size="24" family="XWNYJF+HaranoAjiGothic-Medium" color="#000000"/>
+<text top="513" left="208" width="25" height="24" font="0">0.0</text>
+<text top="513" left="315" width="25" height="24" font="0">0.2</text>
+<text top="513" left="422" width="25" height="24" font="0">0.4</text>
+<text top="513" left="529" width="25" height="24" font="0">0.6</text>
+<text top="513" left="636" width="25" height="24" font="0">0.8</text>
+<text top="513" left="743" width="25" height="24" font="0">1.0</text>
+<text top="471" left="153" width="25" height="24" font="0">0.0</text>
+<text top="423" left="153" width="25" height="24" font="0">0.1</text>
+<text top="375" left="153" width="25" height="24" font="0">0.2</text>
+<text top="326" left="153" width="25" height="24" font="0">0.3</text>
+<text top="278" left="153" width="25" height="24" font="0">0.4</text>
+<text top="230" left="153" width="25" height="24" font="0">0.5</text>
+<text top="173" left="343" width="292" height="29" font="1"><b>労働所得税のラッファーカーブ</b></text>
+<text top="551" left="424" width="107" height="24" font="2">労働所得税率</text>
+<text top="551" left="531" width="4" height="24" font="0"> </text>
+<text top="551" left="535" width="9" height="24" font="2">τ</text>
+<text top="561" left="544" width="9" height="17" font="3">N</text>
+<text top="398" left="131" width="0" height="24" font="4">正規化した税収</text>
+<text top="230" left="469" width="71" height="24" font="5">最大税率</text>
+<text top="230" left="540" width="65" height="24" font="6"> = 0.769</text>
+<text top="586" left="115" width="17" height="22" font="7">図</text>
+<text top="585" left="136" width="14" height="24" font="8">2:</text>
+<text top="586" left="156" width="249" height="22" font="7">労働所得税のラッファーカーブ。</text>
+<text top="589" left="405" width="64" height="18" font="9">𝛼 = 0.4</text>
+<text top="586" left="469" width="17" height="22" font="7">、</text>
+<text top="589" left="486" width="83" height="18" font="9">𝛾 = 𝜑 = 1</text>
+<text top="586" left="569" width="17" height="22" font="7">、</text>
+<text top="589" left="586" width="51" height="18" font="9">𝒜 = 1</text>
+<text top="586" left="637" width="141" height="22" font="7">。赤い破線は最大税</text>
+<text top="615" left="115" width="33" height="22" font="7">収率</text>
+<text top="618" left="152" width="9" height="18" font="9">𝜏</text>
+<text top="616" left="163" width="6" height="13" font="10">∗</text>
+<text top="627" left="162" width="14" height="13" font="10">𝑁</text>
+<text top="618" left="181" width="66" height="18" font="9">= 0.769</text>
+<text top="615" left="253" width="66" height="22" font="7">を示す。</text>
+<text top="725" left="115" width="13" height="35" font="11">8</text>
+<text top="727" left="153" width="119" height="32" font="12">まとめと第</text>
+<text top="725" left="279" width="13" height="35" font="11">6</text>
+<text top="727" left="298" width="119" height="32" font="12">回への接続</text>
+<text top="778" left="115" width="663" height="22" font="7">政府と家計の予算制約を統合すると、税、移転、国債は資源制約から消え、政府購入だけが実</text>
+<text top="807" left="115" width="663" height="22" font="7">物資源を吸収します。リカード中立性の仮定のもとでは、一括税と国債の組み合わせは実物</text>
+<text top="835" left="115" width="663" height="22" font="7">配分を変えません。一方、政府購入ショックは民間消費を押し下げ、労働と産出を増やしま</text>
+<text top="864" left="115" width="481" height="22" font="7">す。比例税は限界条件にくさびを作り、労働税収は税率に対して逆</text>
+<text top="863" left="600" width="13" height="24" font="8">U</text>
+<text top="864" left="618" width="116" height="22" font="7">字になります。</text>
+<text top="907" left="115" width="17" height="22" font="7">第</text>
+<text top="906" left="136" width="9" height="24" font="8">5</text>
+<text top="907" left="150" width="292" height="22" font="7">回までの企業は完全競争企業でした。第</text>
+<text top="906" left="447" width="9" height="24" font="8">6</text>
+<text top="907" left="461" width="317" height="22" font="7">回では、最終財と中間財を分け、中間財企業</text>
+<text top="936" left="115" width="347" height="22" font="7">が独占的競争に直面する環境を導入します。第</text>
+<text top="934" left="467" width="9" height="24" font="8">6</text>
+<text top="936" left="482" width="297" height="22" font="7">回でも投資と資本蓄積は導入せず、生産</text>
+<text top="965" left="115" width="365" height="22" font="7">側の価格設定とマークアップを新たに扱います。</text>
+<text top="1008" left="115" width="17" height="22" font="7">第</text>
+<text top="1006" left="136" width="9" height="24" font="8">6</text>
+<text top="1008" left="151" width="627" height="22" font="7">回で使う政府政策は、この回の整理と直接つながります。独占的競争の歪みを取り除</text>
+<text top="1036" left="115" width="663" height="22" font="7">くため、中間財企業に売上比例補助金を与え、その財源を一括税で調達します。一括税は限</text>
+<text top="1065" left="115" width="663" height="22" font="7">界条件に入らないため、財源調達そのものは配分を歪めません。一方、売上比例補助金は企</text>
+<text top="1094" left="115" width="663" height="22" font="7">業の価格設定条件に入るので、マークアップによるくさびを相殺できます。これは、政府購</text>
+<text top="1141" left="437" width="18" height="24" font="8">18</text>
+</page>
+<outline>
+<item page="2">講義の目的</item>
+<item page="3">表記と基本設定</item>
+<item page="5">政府予算制約</item>
+<item page="6">家計・企業・均衡</item>
+<outline>
+<item page="6">家計</item>
+<item page="7">企業</item>
+<item page="7">政府支出を含む均衡</item>
+</outline>
+<item page="9">関数形と定常状態</item>
+<outline>
+<item page="9">定常状態と第4回との比較</item>
+</outline>
+<item page="10">対数線形近似</item>
+<item page="13">税制とラッファーカーブ</item>
+<outline>
+<item page="13">一括税と比例税</item>
+<item page="14">税の帰着</item>
+<item page="15">労働所得税だけのラッファーカーブ</item>
+</outline>
+<item page="18">まとめと第6回への接続</item>
+<item page="19">参考文献</item>
+<item page="20">演習問題</item>
+<outline>
+<item page="20">基本問題</item>
+<item page="20">発展問題</item>
+</outline>
+</outline>
+</pdf2xml>

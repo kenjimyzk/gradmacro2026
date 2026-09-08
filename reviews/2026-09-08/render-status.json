@@ -1,0 +1,104 @@
+[
+  {
+    "file": "lecture01.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.7
+  },
+  {
+    "file": "lecture02.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.5
+  },
+  {
+    "file": "lecture02.qmd",
+    "format": "pdf",
+    "returncode": 0,
+    "seconds": 9.3
+  },
+  {
+    "file": "lecture03.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.6
+  },
+  {
+    "file": "lecture04.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.5
+  },
+  {
+    "file": "lecture05.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 2.3
+  },
+  {
+    "file": "lecture05.qmd",
+    "format": "pdf",
+    "returncode": 0,
+    "seconds": 10.4
+  },
+  {
+    "file": "lecture06.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.5
+  },
+  {
+    "file": "lecture07.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.4
+  },
+  {
+    "file": "lecture08.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 2.1
+  },
+  {
+    "file": "lecture09.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 2.2
+  },
+  {
+    "file": "lecture09.qmd",
+    "format": "pdf",
+    "returncode": 0,
+    "seconds": 10.5
+  },
+  {
+    "file": "lecture10.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.6
+  },
+  {
+    "file": "lecture11.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.6
+  },
+  {
+    "file": "lecture12.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.9
+  },
+  {
+    "file": "solution.qmd",
+    "format": "html",
+    "returncode": 0,
+    "seconds": 1.5
+  },
+  {
+    "file": "solution.qmd",
+    "format": "pdf",
+    "returncode": 0,
+    "seconds": 9.2
+  }
+]

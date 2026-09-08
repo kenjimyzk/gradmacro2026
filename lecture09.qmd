@@ -24,6 +24,13 @@ format:
 lang: ja
 ---
 
+```{r}
+#| label: setup-japanese-graphics
+#| include: false
+source("scripts/japanese-graphics.R")
+jp_graphics <- configure_course_graphics()
+```
+
 ```{=latex}
 \clearpage
 ```
@@ -164,15 +171,9 @@ U(C_t,N_t)
 u(C_t)-\nu\frac{N_t^{1+\varphi}}{1+\varphi}
 \end{aligned}
 $$
-とします。この節では、第2回の単純形に合わせて、効率的な定常状態の周りで
-$$
-C=N=1,
-\qquad
-\nu=1
-$$
-と正規化します。より一般には、$\nu$ や定常状態の水準は二階近似の係数に入りますが、ここでは厚生上の産出ギャップの重みを1に正規化するため、それらは後で定義する相対的な重みに吸収されます。
+とします。第2回の $C=N=1$、$\nu=1$ は、政府支出がなく生産が線形の単純形で用いた正規化です。ここでは一般の定常状態を用い、効用単位の損失を、定常状態の限界効用 $U_C=u'(C)>0$ と産出量 $Y$ の積 $U_CY$ で割って測ります。
 
-是正補助金により定常的なマークアップ歪みを除いた効率的定常状態の周りで二階近似し、政策に依存しない項を落とすと、厚生損失は
+是正補助金により定常的なマークアップ歪みを除いた効率的定常状態の周りで二階近似し、政策に依存しない項を落とすと、この尺度で測った厚生損失は
 $$
 \ell_t
 =
@@ -181,7 +182,7 @@ $$
 (\tilde{\gamma}+\tilde{\varphi})\left(x_t^e\right)^2+\eta_p\pi_t^2
 \right]
 $$
-と書けます。ここで $x_t^e=y_t-y_t^e$ です。第1項は効率的産出量からの乖離が生む資源配分上の損失、第2項は価格調整費用を通じたインフレの損失です。
+と書けます。ここで $x_t^e=y_t-y_t^e$、$\tilde{\gamma}=\gamma/(1-G_Y)$、$\tilde{\varphi}=(\varphi+\alpha)/(1-\alpha)$ です。効率性条件を使うと、$\nu$ と定常状態の水準は共通尺度 $U_CY$ にまとまり、政府支出比率と生産の曲率は上の2係数に残ります。第1項は効率的産出量からの乖離が生む資源配分上の損失、第2項は価格調整費用を通じたインフレの損失です。
 
 ここで $\eta_p\equiv\eta$ は、第8回で使った Rotemberg 型価格調整費用の構造パラメータです。以下では価格硬直性があるケースとして $\eta_p>0$ を仮定します。$\eta_p$ を変えると NKフィリップス曲線の傾き $\kappa_x$ も変わるため、$\eta_p=0$ の柔軟価格モデルは、このロス関数のインフレ項だけをゼロにして評価するケースではありません。
 
@@ -631,13 +632,13 @@ $$
 
 問題は、時点1に到達した中央銀行が再び計画を立て直したくなることです。時点0で立てた計画では、時点1の条件は
 $$
-\kappa_x\omega_p\pi_1+x_1-x_0^e=0
+\kappa_x\omega_p\pi_1+x_1^e-x_0^e=0
 $$
 です。
 
 しかし、時点1の中央銀行が過去の約束を無視して新たに「時点1を初期時点」として最適化すると、初期条件は
 $$
-\kappa_x\omega_p\pi_1+x_1=0
+\kappa_x\omega_p\pi_1+x_1^e=0
 $$
 になります。この2つは、一般に一致しません。特に $x_0^e\neq0$ なら、時点0で約束された時点1の政策は、時点1に再最適化する中央銀行にとって最適ではありません。
 
@@ -889,7 +890,7 @@ x_{t-1}^e
 $$
 有限期間で近似するなら、十分大きな $T$ を取り、$x_{T+1}^e=0$ の終端条件を置いて、$x_0^e,\ldots,x_T^e$ の連立一次方程式として解けます。この終端条件は近似です。AR(1) ショックが $T$ 期以降にも残っているなら、無限期間問題の厳密な終端条件ではありません。
 
-@fig-lecture09-discretion-timeless-irf では、この近似解を使ってインパルス応答を図示します。パラメータ値は講義用の例示であり、特定の国や時期を推定したものではありません。授業では、パラメータやショックの持続性を変え、裁量とタイムレス・パースペクティブの反応を比較します。
+@fig-lecture09-discretion-timeless-irf では、この近似解を使ってインパルス応答を図示します。パラメータ値は講義用の例示であり、特定の国や時期を推定したものではありません。授業では、パラメータやショックの持続性を変え、裁量とタイムレス・パースペクティブの反応を比較します。再実行する環境の確認と日本語フォントの設定は、[図の描画環境の説明](scripts/README-graphics.md)を参照してください。
 
 ```{r}
 #| label: fig-lecture09-discretion-timeless-irf
@@ -900,24 +901,7 @@ $$
 #| code-fold: true
 #| code-summary: "Rコードを表示"
 
-jp_font_candidates <- c(
-  "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/ee89e7987a76cc8cfdff36c96bd7bc77655b343e.asset/AssetData/YuGothic-Medium.otf",
-  "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/42529d87b12845309dd4a57dea9e58446826e94c.asset/AssetData/BIZ_UDGothic.ttc",
-  "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
-  "/System/Library/Fonts/Hiragino Sans GB.ttc"
-)
-jp_font <- jp_font_candidates[file.exists(jp_font_candidates)][1]
-font_family <- ""
-
-if (
-  requireNamespace("showtext", quietly = TRUE) &&
-    requireNamespace("sysfonts", quietly = TRUE) &&
-    !is.na(jp_font)
-) {
-  suppressWarnings(sysfonts::font_add("jp_sans", regular = jp_font))
-  showtext::showtext_auto(enable = TRUE)
-  font_family <- "jp_sans"
-}
+font_family <- jp_graphics$family
 
 beta <- 0.99
 kappa_x <- 0.08
@@ -1006,9 +990,6 @@ legend(
 
 par(op)
 
-if (font_family == "jp_sans") {
-  showtext::showtext_auto(enable = FALSE)
-}
 ```
 
 見るべきポイントは3つです。
@@ -1022,7 +1003,7 @@ if (font_family == "jp_sans") {
 
 ## 対数二次近似の参照
 
-基本的な導出は、第2回の「効用関数の二次近似」を参照してください。第2回では、技術ショックや政府支出ショックがなく、効率的産出量が定常状態に固定されるケースで、
+基本的な導出は、第2回の「効用関数の二次近似」を参照してください。第2回では、政府支出がなく生産が線形で、技術ショックもなく効率的産出量が定常状態に固定されるケースで、
 $$
 C=N=1,
 \qquad
@@ -1165,17 +1146,17 @@ $$
 $$
 固有値を $\lambda$ とすると、特性方程式は
 $$
-x_0^e(\lambda)
+q_0(\lambda)
 =
 \lambda^2-\operatorname{tr}(A_0)\lambda+\det(A_0)=0
 $$
 です。$\lambda=1$ を代入すると、
 $$
-x_0^e(1)
+q_0(1)
 =
 -\frac{\kappa_x}{\beta\tilde{\gamma}}<0
 $$
-であり、$x_0^e(0)=1/\beta>0$ です。したがって、1つの固有値は $0$ と $1$ の間にあります。もう1つの固有値は単位円の外にあります。
+であり、$q_0(0)=1/\beta>0$ です。したがって、1つの固有値は $0$ と $1$ の間にあります。もう1つの固有値は単位円の外にあります。
 
 このモデルには前向き変数 $x_t^e$ と $\pi_t$ が2つあります。ブランチャード＝カーン条件を満たすには、単位円の外にある固有値が2個必要です。しかし利子率ペッグでは1個しかないため、均衡は不決定です。
 

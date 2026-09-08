@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-09",
+  "base_HEAD": "1ee2486401757b1a46c2426bd5cc81990b81ea12",
+  "scope": "Review findings 1 and 2: synchronized lecture text, exercises and solutions",
+  "changed_audit_inputs": [
+    "lecture04.qmd",
+    "lecture10.qmd",
+    "solution.qmd"
+  ],
+  "unchanged_audit_inputs": [
+    "lecture01.qmd",
+    "lecture02.qmd",
+    "lecture03.qmd",
+    "lecture05.qmd",
+    "lecture06.qmd",
+    "lecture07.qmd",
+    "lecture08.qmd",
+    "lecture09.qmd",
+    "lecture11.qmd",
+    "lecture12.qmd",
+    "includes/assumption-matrix.qmd",
+    "includes/notation-concordance.qmd",
+    "scripts/lecture02/generate_us_real_gdp_hp.py",
+    "data/lecture02/gdpc1.csv"
+  ],
+  "outputs": {
+    "lecture04.qmd": {
+      "sha256": "1992d08426409c4375746a3aff58823b174ea51fbdf593bbfe6085aae9d7e62b",
+      "bytes": 34066
+    },
+    "lecture04.html": {
+      "sha256": "66d8b63f9808518c74586702c314e7c4637adb287a2b40203e23ab6b9e70a9ae",
+      "bytes": 78855
+    },
+    "lecture04.pdf": {
+      "sha256": "d25ca2c78e93091baf0efcb385f6da64ccf083db268aab8d9a50b8e8397ad02d",
+      "bytes": 434716
+    },
+    "lecture10.qmd": {
+      "sha256": "287e95df13529dc033500643d66d8892263c0a50a938712b9082934a32bdecef",
+      "bytes": 70218
+    },
+    "lecture10.html": {
+      "sha256": "0aab98a677494f6fbf006cfc46a03685a2d67220d3c90ae9d75d82276a4e7d7a",
+      "bytes": 128914
+    },
+    "lecture10.pdf": {
+      "sha256": "54f85019f02d5f2f06e93bac4d14737371c648a6c7a33979ea2e79b9e53314a4",
+      "bytes": 514990
+    },
+    "solution.qmd": {
+      "sha256": "44281ba4715132e4301d61a2bc738cbee8be37565c27aa91b48f79003c5b158d",
+      "bytes": 59504
+    },
+    "solution.html": {
+      "sha256": "731ef793d08b8a5303ac7fed4c79cae2b9f6d4712a397088f77acc28aca28757",
+      "bytes": 147774
+    },
+    "solution.pdf": {
+      "sha256": "dc1688ab6c6b120c6624c4d3120e3c33505c9563e264ad1ff7b0d7516125db4e",
+      "bytes": 376412
+    }
+  },
+  "numeric_checks": "passed; see numeric-verification.json",
+  "source_checks": "passed; only solution chapters 4 and 10 changed; real-model core blocks preserved",
+  "render_status": "all three HTML and PDF renders passed",
+  "pdf_text_checks": "all three passed; see pdf-text-verification.json",
+  "visual_qa_reports": [
+    "lecture04-qa-results.json",
+    "lecture10-qa-result.json",
+    "solution-qa-result.json"
+  ],
+  "remaining_scope": "Review findings 3 onward are not implemented by this change",
+  "visual_qa": "passed after two pagination fixes; 14 lecture04 pages, 21 lecture10 pages, 16 solution pages; not a full-document visual audit"
+}

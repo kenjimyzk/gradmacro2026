@@ -1,0 +1,26 @@
+{
+  "lecture01": {
+    "display_delimiters_even": true,
+    "source_sha256": "7bd62cd3e84a5f31e27752475efa9a361db8edb03465fa661dd64b05ed4a366d"
+  },
+  "lecture03": {
+    "display_delimiters_even": true,
+    "source_sha256": "7c7f3f3b086719ce61d18a0679f1ecabe79f01d6bd0b74df49ca7e4d92fbade9"
+  },
+  "lecture05": {
+    "display_delimiters_even": true,
+    "source_sha256": "1238307edb0b917599f682284692de88f71ddd1a8122b1f481a5ee1948071036"
+  },
+  "lecture07": {
+    "display_delimiters_even": true,
+    "source_sha256": "1027c668880ecb162bb2b157ac4142b3da8bccfbe980f006cb6af22f094da551"
+  },
+  "lecture09": {
+    "display_delimiters_even": true,
+    "source_sha256": "14cf0785ee9f4332cee673080425c76bb2676bd3c1c9326ff94bc17c15460bed"
+  },
+  "solution": {
+    "display_delimiters_even": true,
+    "source_sha256": "079e63b1f9b20e4da4921358abc0d728c2a0e9b58461b17dbddac13843490e53"
+  }
+}

@@ -1,0 +1,26 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+SNWBXP+HaranoAjiMincho-Regular       CID Type 0C       Identity-H       yes yes yes     26  0
+IKTGNQ+LMRoman17-Regular             CID Type 0C       Identity-H       yes yes yes     27  0
+IVDXHN+LMRoman12-Regular             CID Type 0C       Identity-H       yes yes yes     28  0
+XWNYJF+HaranoAjiGothic-Medium        CID Type 0C       Identity-H       yes yes yes     30  0
+WNCYJB+LMSans10-Regular              CID Type 0C       Identity-H       yes yes yes     31  0
+BIDROH+LMRoman10-Regular             CID Type 0C       Identity-H       yes yes yes     32  0
+VJTXHH+LMSans12-Regular              CID Type 0C       Identity-H       yes yes yes     59  0
+JUALVI+LatinModernMath-Regular       CID Type 0C       Identity-H       yes yes yes     60  0
+OEXLVX+LatinModernMath-Regular       CID Type 0C       Identity-H       yes yes yes     61  0
+DGMQUE+HiraginoSans-W6               CID Type 0C       Identity-H       yes yes yes     80  0
+QMVKAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes     81  0
+GMMVVV+HiraginoSans-W3               CID Type 0C       Identity-H       yes yes yes     82  0
+RKSVAR+HiraginoSans-W6               CID Type 0C       Identity-H       yes yes yes     83  0
+BXNMBS+ArialMT                       TrueType          WinAnsi          yes yes yes     84  0
+ULUTHU+ArialMT                       CID TrueType      Identity-H       yes yes yes     85  0
+[none]                               Type 3            Custom           yes no  yes     86  0
+[none]                               Type 3            Custom           yes no  yes     87  0
+JYJVLA+ArialMT                       TrueType          WinAnsi          yes yes yes     88  0
+WKMFWZ+FontAwesome5Free-Solid        CID Type 0C       Identity-H       yes yes yes    182  0
+YRFYVN+NotoSansJP-Regular            TrueType          WinAnsi          yes yes yes    242  0
+OGJHBM+NotoSansJP-Bold               CID TrueType      Identity-H       yes yes yes    243  0
+MWSAAS+NotoSansJP-Regular            CID TrueType      Identity-H       yes yes yes    244  0
+GFAXHY+LMRoman10-Italic              CID Type 0C       Identity-H       yes yes yes    267  0
+BDMSQR+LMRoman10-Bold                CID Type 0C       Identity-H       yes yes yes    268  0

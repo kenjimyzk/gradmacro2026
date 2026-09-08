@@ -1,0 +1,32 @@
+{
+  "lecture03": {
+    "pages": 25,
+    "replacement_glyphs": 0,
+    "unresolved_references": 0,
+    "pdf_sha256": "98e466f8afaa142c97e2c4a94e2f324228dc746eb9ca93d18264388790ef22c3"
+  },
+  "lecture05": {
+    "pages": 21,
+    "replacement_glyphs": 0,
+    "unresolved_references": 0,
+    "pdf_sha256": "955737c665f3ea98b1f5fa70233cf1abaa4e18bd13284cd4323679054f6280ab"
+  },
+  "lecture10": {
+    "pages": 44,
+    "replacement_glyphs": 0,
+    "unresolved_references": 0,
+    "pdf_sha256": "e24291eb0f28e3da29547b3fff05800ac477b840383b30cfc2235f5feaeba47d"
+  },
+  "lecture11": {
+    "pages": 32,
+    "replacement_glyphs": 0,
+    "unresolved_references": 0,
+    "pdf_sha256": "9d8b602083675530a5a8e3beed1fd16b9b8fb44438c087ae05b75fd8fce17a44"
+  },
+  "lecture12": {
+    "pages": 48,
+    "replacement_glyphs": 0,
+    "unresolved_references": 0,
+    "pdf_sha256": "f3d02e2a6153852eac8dd96a78bcc53a2ff25a6d6d3b58bd395f9132dc9138cc"
+  }
+}

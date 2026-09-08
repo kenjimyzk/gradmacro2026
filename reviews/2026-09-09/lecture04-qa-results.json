@@ -1,0 +1,194 @@
+{
+  "document": "/Users/kenjimyzk/work/gradmacro2026/lecture04.pdf",
+  "sha256": "d25ca2c78e93091baf0efcb385f6da64ccf083db268aab8d9a50b8e8397ad02d",
+  "pdf_page_count": 19,
+  "reviewed_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "unreviewed_pdf_pages": [
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "full_document_visual_review": false,
+  "render": {
+    "tool": "pdftoppm",
+    "dpi": 125,
+    "format": "png",
+    "directory": "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04",
+    "count": 14
+  },
+  "contact_sheets": [
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture04-qa-contact-1.jpg",
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture04-qa-contact-2.jpg",
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture04-qa-contact-3.jpg",
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture04-qa-contact-4.jpg"
+  ],
+  "single_page_detailed_review": [
+    5,
+    15,
+    16,
+    19
+  ],
+  "status": "verified_sampled_pages",
+  "checks": {
+    "japanese_and_math_glyphs": "No missing or unreadable glyphs observed on reviewed pages.",
+    "clipping_overlap_overflow": "No clipping, overlap, or overflow observed on reviewed pages.",
+    "main_formulation": "Credit-limit equation (1), optimal-path TVC equation (2), fundamental equity equation (4), and symmetric nonbinding discussion are readable and correspond to revised source.",
+    "exercises": "Page 15 questions 1 and 4 visibly include the authorized additions and match the revised main text.",
+    "appendix": "Moment assumptions, gamma=1 log-integrability, fixed equilibrium SDF, asset-price construction, finite budget equation (21), and concavity equation (22) are readable on reviewed pages.",
+    "pagination": "The previously orphaned last line of question 7 is resolved: the complete question is together at the top of PDF page 16. No new pagination defects observed in the rechecked pages."
+  },
+  "findings": [
+    {
+      "id": "L4-PDF-PAGINATION-01",
+      "priority": "P3",
+      "pages": [
+        15,
+        16
+      ],
+      "description_ja": "問7の最終行「合の違いも説明しなさい。」だけが16ページ冒頭に残り、その直後に発展補論が始まる。",
+      "likely_cause_ja": "問1・4への追記により演習節が1ページをわずかに超えた。",
+      "suggested_action_ja": "問7の段落を一体に保つ改ページ制御、または演習節の僅かな組版調整で孤立行を解消する。",
+      "evidence": [
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/p15.png",
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/p16.png"
+      ],
+      "blocking": false,
+      "status": "resolved",
+      "resolution_ja": "親担当が問7を標準LaTeX samepage環境で囲み再生成。最終PDFでは問7全体が16ページ冒頭にまとまり、孤立行が解消した。",
+      "resolution_evidence": [
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/p15.png",
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/p16.png"
+      ],
+      "original_evidence": [
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/before-samepage/p15.png",
+        "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/before-samepage/p16.png"
+      ]
+    }
+  ],
+  "source_or_pdf_edits_performed": false,
+  "reviewed_at": "2026-09-08T15:14:34.777425+00:00",
+  "active_findings_count": 0,
+  "recheck": {
+    "previous_pdf_sha256": "7a2b79ca1f29017e44f99f4f0cc15a674f5e508146614b57f4555b066e9aa2ed",
+    "final_pdf_sha256": "d25ca2c78e93091baf0efcb385f6da64ccf083db268aab8d9a50b8e8397ad02d",
+    "pdf_page_count_unchanged": 19,
+    "rerendered_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "visually_rechecked_pages": [
+      2,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "single_page_detailed_recheck": [
+      2,
+      16,
+      19
+    ],
+    "pixel_identical_pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      14
+    ],
+    "pixel_changed_pages": [
+      {
+        "page": 2,
+        "difference_bbox": [
+          891,
+          631,
+          900,
+          646
+        ]
+      },
+      {
+        "page": 15,
+        "difference_bbox": [
+          133,
+          1191,
+          900,
+          1276
+        ]
+      },
+      {
+        "page": 16,
+        "difference_bbox": [
+          132,
+          213,
+          901,
+          1306
+        ]
+      },
+      {
+        "page": 17,
+        "difference_bbox": [
+          132,
+          213,
+          901,
+          1299
+        ]
+      },
+      {
+        "page": 18,
+        "difference_bbox": [
+          132,
+          211,
+          901,
+          1243
+        ]
+      },
+      {
+        "page": 19,
+        "difference_bbox": [
+          132,
+          213,
+          901,
+          1295
+        ]
+      }
+    ],
+    "page_2_change": "Table of contents entry 11.4 now correctly points to page 19 instead of page 18.",
+    "all_contacts_synchronized_to_final_pdf": true,
+    "previous_png_directory": "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture04/before-samepage",
+    "issue_resolved": true,
+    "new_issues_observed": false,
+    "checked_at": "2026-09-08T15:14:34.777326+00:00"
+  }
+}

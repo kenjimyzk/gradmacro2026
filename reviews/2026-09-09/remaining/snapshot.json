@@ -1,0 +1,15 @@
+{
+  "backup": "/tmp/gradmacro-remaining-20260909-q_0_e5v8",
+  "files": [
+    "lecture03.qmd",
+    "lecture09.qmd",
+    "includes/notation-concordance.qmd",
+    "lecture01.pdf",
+    "lecture03.pdf",
+    "lecture05.pdf",
+    "lecture07.pdf",
+    "lecture09.pdf",
+    "solution.pdf"
+  ],
+  "note": "Root source files before remaining fixes; PDFs before this render. Agent-edited sources are not included."
+}

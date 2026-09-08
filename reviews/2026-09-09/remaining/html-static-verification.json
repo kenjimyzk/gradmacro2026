@@ -1,0 +1,62 @@
+{
+  "lecture01": {
+    "math_spans": 174,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "1b5aa0020c796af21ff38544afa9d9e2240ea43d59f593c4955df54b39a106fa",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture03": {
+    "math_spans": 269,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "72beb87f0db199e7790954488926302130ab443a6aa724c7b3ed02f4611113f4",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture05": {
+    "math_spans": 242,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "b0f61577d0eb4037dc65f4faef5c504ba90a37a9b7f7c183674aa748994c5c3e",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture07": {
+    "math_spans": 235,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "4f9bb638d768cc04047b92cc7fb4ee968d6a9be6e947597f82597f1d2219bbcc",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture09": {
+    "math_spans": 305,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "785e6de2525b760d504ec3791ea7cb6461c318992f8482c96372f74b4fe491e9",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "solution": {
+    "math_spans": 546,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "53330fbf7fc208d3d895c70558d4b5a4a57a728e627289a93d1e8d5f23b7f5c0",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  }
+}

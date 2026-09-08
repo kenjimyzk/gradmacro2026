@@ -1,0 +1,201 @@
+{
+  "source": "/Users/kenjimyzk/work/gradmacro2026/lecture04.qmd",
+  "source_lines": [
+    103,
+    126
+  ],
+  "status": "verified_counterexample_to_feasibility_restriction",
+  "parameters": {
+    "alpha": 0,
+    "gamma": 1,
+    "phi": 1,
+    "technology": 0,
+    "beta": 0.96,
+    "R": 1.0416666666666667,
+    "kappa": 2.0,
+    "fixed_labor": 1,
+    "wage": 1,
+    "dividend_and_stock_price": 0,
+    "initial_bond_position_B_minus_1": 0
+  },
+  "interpretation": "A unilateral household deviation at fixed equilibrium prices; not a market-clearing equilibrium and not asserted to satisfy the Euler equation.",
+  "analytical_limits": {
+    "debt_asymptote": "B_t ~ -K*kappa^(t+1)/(kappa-R)",
+    "candidate_own_sdf": "Q_0t=(beta/kappa)^t",
+    "candidate_own_sdf_discounted_debt": "Q_0t*B_t ~ -K*kappa*beta^t/(kappa-R) -> 0",
+    "market_discounted_debt": "B_t/R^t -> -infinity",
+    "lifetime_utility": "log(K)/(1-beta)+beta*log(kappa)/(1-beta)^2-1/[2*(1-beta)]",
+    "utility_supremum": "+infinity as K -> infinity; finite for every finite K"
+  },
+  "recommended_fix": "Define admissibility using an appropriate borrowing bound or given market state prices. Reserve the candidate marginal-utility SDF expression for an optimal-path transversality condition.",
+  "cases": [
+    {
+      "consumption_scale_K": 1.0,
+      "discounted_lifetime_utility": 403.38830833596637,
+      "maximum_scaled_budget_residual": 1.0972125985553312e-16,
+      "maximum_scaled_closed_form_residual": 6.661338147750939e-16,
+      "samples": [
+        {
+          "t": 0,
+          "consumption": 1.0,
+          "bond_position": 0.0,
+          "own_marginal_utility_sdf": 1.0,
+          "own_sdf_discounted_bond_position": 0.0,
+          "market_discounted_bond_position": 0.0
+        },
+        {
+          "t": 10,
+          "consumption": 1024.0,
+          "bond_position": -2121.805096885632,
+          "own_marginal_utility_sdf": 0.00064925062108545,
+          "own_sdf_discounted_bond_position": -1.3775832769752698,
+          "market_discounted_bond_position": -1410.645275622676
+        },
+        {
+          "t": 50,
+          "consumption": 1125899906842624.0,
+          "bond_position": -2349704153410517.0,
+          "own_marginal_utility_sdf": 1.1536175883190082e-16,
+          "own_sdf_discounted_bond_position": -0.27106600387205976,
+          "market_discounted_bond_position": -305193188507753.9
+        },
+        {
+          "t": 100,
+          "consumption": 1.2676506002282294e+30,
+          "bond_position": -2.645531687432826e+30,
+          "own_marginal_utility_sdf": 1.3308335400789645e-32,
+          "own_sdf_discounted_bond_position": -0.035207623009773044,
+          "market_discounted_bond_position": -4.463096444094787e+28
+        },
+        {
+          "t": 200,
+          "consumption": 1.6069380442589903e+60,
+          "bond_position": -3.3536098314970224e+60,
+          "own_marginal_utility_sdf": 1.7711179113991088e-64,
+          "own_sdf_discounted_bond_position": -0.0005939638440408524,
+          "market_discounted_bond_position": -9.544630979035528e+56
+        },
+        {
+          "t": 500,
+          "consumption": 3.273390607896142e+150,
+          "bond_position": -6.831423877348468e+150,
+          "own_marginal_utility_sdf": 4.174636709996615e-160,
+          "own_sdf_discounted_bond_position": -2.8518712899926333e-09,
+          "market_discounted_bond_position": -9.335288695590379e+141
+        }
+      ]
+    },
+    {
+      "consumption_scale_K": 10.0,
+      "discounted_lifetime_utility": 460.95293566081745,
+      "maximum_scaled_budget_residual": 1.0639637319324475e-16,
+      "maximum_scaled_closed_form_residual": 3.4046839421838225e-16,
+      "samples": [
+        {
+          "t": 0,
+          "consumption": 10.0,
+          "bond_position": -9.0,
+          "own_marginal_utility_sdf": 1.0,
+          "own_sdf_discounted_bond_position": -9.0,
+          "market_discounted_bond_position": -9.0
+        },
+        {
+          "t": 10,
+          "consumption": 10240.0,
+          "bond_position": -21340.482008217747,
+          "own_marginal_utility_sdf": 0.00064925062108545,
+          "own_sdf_discounted_bond_position": -13.855321198098242,
+          "market_discounted_bond_position": -14187.848906852598
+        },
+        {
+          "t": 50,
+          "consumption": 1.125899906842624e+16,
+          "bond_position": -2.3497041534106684e+16,
+          "own_marginal_utility_sdf": 1.1536175883190082e-16,
+          "own_sdf_discounted_bond_position": -2.7106600387207718,
+          "market_discounted_bond_position": -3051931885077735.5
+        },
+        {
+          "t": 100,
+          "consumption": 1.2676506002282294e+31,
+          "bond_position": -2.6455316874328266e+31,
+          "own_marginal_utility_sdf": 1.3308335400789645e-32,
+          "own_sdf_discounted_bond_position": -0.3520762300977305,
+          "market_discounted_bond_position": -4.463096444094788e+29
+        },
+        {
+          "t": 200,
+          "consumption": 1.6069380442589903e+61,
+          "bond_position": -3.353609831497023e+61,
+          "own_marginal_utility_sdf": 1.7711179113991088e-64,
+          "own_sdf_discounted_bond_position": -0.0059396384404085244,
+          "market_discounted_bond_position": -9.54463097903553e+57
+        },
+        {
+          "t": 500,
+          "consumption": 3.273390607896142e+151,
+          "bond_position": -6.83142387734847e+151,
+          "own_marginal_utility_sdf": 4.174636709996615e-160,
+          "own_sdf_discounted_bond_position": -2.8518712899926336e-08,
+          "market_discounted_bond_position": -9.335288695590382e+142
+        }
+      ]
+    },
+    {
+      "consumption_scale_K": 100.0,
+      "discounted_lifetime_utility": 518.5175629856685,
+      "maximum_scaled_budget_residual": 7.964458503626964e-17,
+      "maximum_scaled_closed_form_residual": 1.3910279425805802e-16,
+      "samples": [
+        {
+          "t": 0,
+          "consumption": 100.0,
+          "bond_position": -99.0,
+          "own_marginal_utility_sdf": 1.0,
+          "own_sdf_discounted_bond_position": -99.0,
+          "market_discounted_bond_position": -99.0
+        },
+        {
+          "t": 10,
+          "consumption": 102400.0,
+          "bond_position": -213527.25112153887,
+          "own_marginal_utility_sdf": 0.00064925062108545,
+          "own_sdf_discounted_bond_position": -138.63270040932795,
+          "market_discounted_bond_position": -141959.8852191518
+        },
+        {
+          "t": 50,
+          "consumption": 1.125899906842624e+17,
+          "bond_position": -2.3497041534106835e+17,
+          "own_marginal_utility_sdf": 1.1536175883190082e-16,
+          "own_sdf_discounted_bond_position": -27.106600387207894,
+          "market_discounted_bond_position": -3.051931885077755e+16
+        },
+        {
+          "t": 100,
+          "consumption": 1.2676506002282294e+32,
+          "bond_position": -2.6455316874328268e+32,
+          "own_marginal_utility_sdf": 1.3308335400789645e-32,
+          "own_sdf_discounted_bond_position": -3.520762300977306,
+          "market_discounted_bond_position": -4.463096444094788e+30
+        },
+        {
+          "t": 200,
+          "consumption": 1.6069380442589903e+62,
+          "bond_position": -3.3536098314970235e+62,
+          "own_marginal_utility_sdf": 1.7711179113991088e-64,
+          "own_sdf_discounted_bond_position": -0.05939638440408526,
+          "market_discounted_bond_position": -9.54463097903553e+58
+        },
+        {
+          "t": 500,
+          "consumption": 3.273390607896142e+152,
+          "bond_position": -6.831423877348471e+152,
+          "own_marginal_utility_sdf": 4.174636709996615e-160,
+          "own_sdf_discounted_bond_position": -2.8518712899926344e-07,
+          "market_discounted_bond_position": -9.335288695590383e+143
+        }
+      ]
+    }
+  ]
+}

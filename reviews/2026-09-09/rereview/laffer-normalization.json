@@ -1,0 +1,9 @@
+{
+  "alpha": 0.4,
+  "vartheta": 0.3,
+  "A_from_definition": 0.514750320266457,
+  "normalized_peak_revenue": 0.49546162010927836,
+  "unnormalized_peak_revenue": 0.2550390276309887,
+  "tau_star": 0.7692307692307692,
+  "finding": "A=1 in prose and caption is inconsistent with defined A; plotted TX/A and tau_star are correct."
+}

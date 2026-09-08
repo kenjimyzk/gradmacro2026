@@ -1,0 +1,33 @@
+{
+  "lecture03": {
+    "changed_pages": [
+      13
+    ],
+    "page_count": 25
+  },
+  "lecture05": {
+    "changed_pages": [
+      17,
+      18
+    ],
+    "page_count": 21
+  },
+  "lecture10": {
+    "changed_pages": [
+      32
+    ],
+    "page_count": 44
+  },
+  "lecture11": {
+    "changed_pages": [
+      13
+    ],
+    "page_count": 32
+  },
+  "lecture12": {
+    "changed_pages": [
+      34
+    ],
+    "page_count": 48
+  }
+}

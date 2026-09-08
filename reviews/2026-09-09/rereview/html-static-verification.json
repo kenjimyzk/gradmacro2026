@@ -1,0 +1,132 @@
+{
+  "lecture01": {
+    "math_spans": 174,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "1b5aa0020c796af21ff38544afa9d9e2240ea43d59f593c4955df54b39a106fa",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture02": {
+    "math_spans": 244,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "9972485186ce7c5e532a12a96395c7eec61cbbb176a676fbbde60498ac286733",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture03": {
+    "math_spans": 269,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "72beb87f0db199e7790954488926302130ab443a6aa724c7b3ed02f4611113f4",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture04": {
+    "math_spans": 277,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "66d8b63f9808518c74586702c314e7c4637adb287a2b40203e23ab6b9e70a9ae",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture05": {
+    "math_spans": 242,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "b0f61577d0eb4037dc65f4faef5c504ba90a37a9b7f7c183674aa748994c5c3e",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture06": {
+    "math_spans": 198,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "3038b0ed0f605c5b2422a25c561e15133a419bf9533c47f3effb1958c14e00b3",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture07": {
+    "math_spans": 235,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "4f9bb638d768cc04047b92cc7fb4ee968d6a9be6e947597f82597f1d2219bbcc",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture08": {
+    "math_spans": 231,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "5fc9a4aebdd193cd9e80e6ce804e3f2fa68fd0668e35329c0d5cd99fca92cf35",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture09": {
+    "math_spans": 305,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "785e6de2525b760d504ec3791ea7cb6461c318992f8482c96372f74b4fe491e9",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture10": {
+    "math_spans": 492,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "0aab98a677494f6fbf006cfc46a03685a2d67220d3c90ae9d75d82276a4e7d7a",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture11": {
+    "math_spans": 397,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "f076e384e2efa8ce3c961f82614d28bf780d417ec0c6e72c1f807f05902a99cb",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "lecture12": {
+    "math_spans": 564,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "4f5292b100f12893f685cd4622c4be62d731b30b70d2c67e3019021fe1a55ab9",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  },
+  "solution": {
+    "math_spans": 546,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "53330fbf7fc208d3d895c70558d4b5a4a57a728e627289a93d1e8d5f23b7f5c0",
+    "browser_layout": "not verified: local file navigation was blocked by browser security policy"
+  }
+}

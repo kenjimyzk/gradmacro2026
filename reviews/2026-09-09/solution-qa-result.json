@@ -1,0 +1,26 @@
+{
+  "document": "solution.pdf",
+  "page_count": 41,
+  "checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    12,
+    13,
+    14,
+    15,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "scope": "Changed table of contents, updated chapter 4 and chapter 10, and adjacent transitions",
+  "status": "passed",
+  "findings": [],
+  "method": "Rendered all selected pages; visual contact sheets and full-size page 30; no clipping, overlaps, missing glyphs or broken equations observed"
+}

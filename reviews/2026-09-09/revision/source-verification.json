@@ -1,0 +1,22 @@
+{
+  "lecture03": {
+    "display_delimiters_even": true,
+    "source_sha256": "c2ed0cde6b4fb1a1ab08d0042be7838e68b30f906c6de737571d8c70b65091bd"
+  },
+  "lecture05": {
+    "display_delimiters_even": true,
+    "source_sha256": "b20cedffda5f5faa046a69c9be15da40f1bf76f4f40391ce5a9a3f675bc5646d"
+  },
+  "lecture10": {
+    "display_delimiters_even": true,
+    "source_sha256": "30d6860bdf19ff71fb84b1dd4832b8fa465d299cf03bd5edca0954bdb68a81d5"
+  },
+  "lecture11": {
+    "display_delimiters_even": true,
+    "source_sha256": "2636e04d5c848fbcf7b74f47d72b5d16a48108ff631995b9c9b73c469b98009b"
+  },
+  "lecture12": {
+    "display_delimiters_even": true,
+    "source_sha256": "3227a16e416f56ad68b555407f5936c8217bc56855b75ead32f4c595fe161a4e"
+  }
+}

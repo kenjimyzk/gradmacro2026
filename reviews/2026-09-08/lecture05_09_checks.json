@@ -1,0 +1,185 @@
+{
+  "all_checks_passed": true,
+  "lecture07_rate_gap_counterexample": {
+    "status": "verified_counterexample",
+    "claim_tested": "r_t > r_t^f implies x_t < 0",
+    "parameters": {
+      "beta": 0.99,
+      "gamma": 1.0,
+      "varphi": 1.0,
+      "psi": 6.0,
+      "eta": 80.0,
+      "phi": 1.5,
+      "rho_m": 0.9,
+      "rho_a": 0.0
+    },
+    "shocks": {
+      "m": 0.009256880733944954,
+      "a": 0.006125000000000001
+    },
+    "solution": {
+      "x": 0.005,
+      "expected_x_next": 0.009000000000000001,
+      "pi": 0.013011467889908259,
+      "expected_pi_next": 0.012385321100917432,
+      "r": -0.0021249999999999967,
+      "r_f": -0.006125000000000001,
+      "rate_gap": 0.004000000000000004
+    },
+    "residuals": {
+      "values": {
+        "IS": 3.469446951953614e-18,
+        "NKPC": 6.505213034913027e-19,
+        "Taylor_Fisher": 0.0
+      },
+      "max_abs": 3.469446951953614e-18,
+      "tolerance": 1e-12
+    }
+  },
+  "lecture08_impact_equations": {
+    "status": "verified",
+    "parameters": {
+      "beta": 0.99,
+      "gamma": 1.0,
+      "varphi": 1.0,
+      "alpha": 0.33,
+      "G_Y": 0.2,
+      "psi": 6.0,
+      "eta": 80.0,
+      "phi": 1.5,
+      "MC": 1.0
+    },
+    "shocks": {
+      "monetary": {
+        "rho": 0.5,
+        "unit_state_impact": {
+          "x": 0.9046035591945859,
+          "pi": 0.4346227755033838,
+          "r": -0.5653772244966162,
+          "y": 0.9046035591945859,
+          "c": 1.1307544489932324,
+          "n": 1.3501545659620686,
+          "mc": 2.926460021722784,
+          "w": 2.480909014955301,
+          "yf": 0.0,
+          "rf": 0.0
+        },
+        "residuals": {
+          "values": {
+            "IS": 0.0,
+            "NKPC": 0.0,
+            "Taylor_Fisher": 0.0,
+            "household_Euler": 0.0,
+            "resource": -1.1102230246251565e-16,
+            "production": 0.0,
+            "labor_demand": -4.440892098500626e-16,
+            "labor_supply": 0.0
+          },
+          "max_abs": 4.440892098500626e-16,
+          "tolerance": 1e-12
+        }
+      },
+      "technology": {
+        "rho": 0.8,
+        "unit_state_impact": {
+          "x": -0.2162875896275115,
+          "pi": -0.25229801441462657,
+          "r": -0.1766086100902386,
+          "y": 0.7064344403609545,
+          "c": 0.883043050451193,
+          "n": -0.438157551700068,
+          "mc": -0.6997064933098974,
+          "w": 0.44488549875112504,
+          "yf": 0.922722029988466,
+          "rf": -0.23068050749711644
+        },
+        "residuals": {
+          "values": {
+            "IS": -6.938893903907228e-18,
+            "NKPC": -1.3877787807814457e-17,
+            "Taylor_Fisher": 2.7755575615628914e-17,
+            "household_Euler": -2.7755575615628914e-17,
+            "resource": 0.0,
+            "production": 0.0,
+            "labor_demand": -1.1102230246251565e-16,
+            "labor_supply": 0.0
+          },
+          "max_abs": 1.1102230246251565e-16,
+          "tolerance": 1e-12
+        }
+      },
+      "government": {
+        "rho": 0.8,
+        "unit_state_impact": {
+          "x": 0.14383124710229514,
+          "pi": 0.16777817958572666,
+          "r": 0.11744472571000865,
+          "y": 0.5302210971599652,
+          "c": -0.5872236285500434,
+          "n": 0.7913747718805452,
+          "mc": 0.46530481805108176,
+          "w": 0.20415114333050177,
+          "yf": 0.38638985005767007,
+          "rf": 0.15340253748558244
+        },
+        "residuals": {
+          "values": {
+            "IS": -1.0408340855860843e-17,
+            "NKPC": 0.0,
+            "Taylor_Fisher": 1.3877787807814457e-17,
+            "household_Euler": 0.0,
+            "resource": 0.0,
+            "production": 0.0,
+            "labor_demand": -1.1102230246251565e-16,
+            "labor_supply": 0.0
+          },
+          "max_abs": 1.1102230246251565e-16,
+          "tolerance": 1e-12
+        }
+      }
+    }
+  },
+  "lecture09_welfare_counterexample": {
+    "status": "verified_counterexample",
+    "claim_tested": "Discretion has larger output fluctuations as well as inflation fluctuations than commitment",
+    "parameters": {
+      "beta": 0.99,
+      "kappa_x": 0.08,
+      "omega_p": 20.0,
+      "rho_u": 0.7
+    },
+    "initial_condition": "u_0=1; x_-1=0; no subsequent innovations",
+    "method": "Analytic infinite-horizon stable policy; evaluate 2000 terms (not the lecture's finite-terminal matrix approximation)",
+    "policy": {
+      "stable_root": 0.7034312234445121,
+      "coefficient_u": -2.1959830044877884
+    },
+    "discounted_sum_squares_and_loss": {
+      "discretion": {
+        "x_squared": 26.27474800938634,
+        "pi_squared": 10.263573441166537,
+        "total_loss": 115.77310841635854
+      },
+      "commitment": {
+        "x_squared": 53.28313571102412,
+        "pi_squared": 2.536682703069092,
+        "total_loss": 52.00839488620298
+      }
+    },
+    "terminal_magnitudes": {
+      "x": 1.775982037691512e-303,
+      "pi": 4.679742576603331e-304
+    },
+    "residuals": {
+      "values": {
+        "characteristic_polynomial": 0.0,
+        "commitment_NKPC_max": 2.7755575615628914e-16,
+        "commitment_target_max": 0.0,
+        "discretion_NKPC_coefficient": 0.0,
+        "discretion_target_coefficient": 0.0
+      },
+      "max_abs": 2.7755575615628914e-16,
+      "tolerance": 1e-12
+    }
+  }
+}

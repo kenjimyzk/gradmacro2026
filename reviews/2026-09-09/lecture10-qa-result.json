@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "pdf": "/Users/kenjimyzk/work/gradmacro2026/lecture10.pdf",
+  "pdf_sha256": "54f85019f02d5f2f06e93bac4d14737371c648a6c7a33979ea2e79b9e53314a4",
+  "pdf_page_count": 43,
+  "scope": "Affected pages and boundary pages only; not a full 43-page visual audit.",
+  "contact_sheet_pages_visually_reviewed": [
+    1,
+    2,
+    3,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "individual_page_images_visually_reviewed": [
+    26,
+    27,
+    28,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "render_dpi": 130,
+  "png_directory": "/tmp/gradmacro-sync-20260909-6b24krzd/qa/lecture10",
+  "contact_sheets": [
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture10-qa-contact-1.jpg",
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture10-qa-contact-2.jpg",
+    "/Users/kenjimyzk/work/gradmacro2026/reviews/2026-09-09/lecture10-qa-contact-3.jpg"
+  ],
+  "checks": {
+    "visible_text_and_equation_clipping": "none observed on reviewed pages",
+    "overlap_and_missing_glyphs": "none observed on reviewed pages",
+    "question_5_6_7_numbering": "visible and sequential: Question 5 on pages 26-27, Question 6 on page 27, Question 7 complete on page 28",
+    "full_focs": "page 39: all five FOCs visible; mc FOC wraps clearly and retains expectation derivatives",
+    "general_target": "page 40: complete boxed two-line equation and equation number (3)",
+    "envelope_and_implementation": "page 41: complete envelope and IS/Fisher formulas",
+    "flexible_wage_and_limit": "pages 42-43: boxed direct model condition, regularity assumptions and divided limit visible",
+    "toc_and_section_boundaries": "reviewed pages 1-3, 22-29, 34-43; no broken numbering or overlapping headings observed"
+  },
+  "minor_observations": [
+    {
+      "pages": [
+        27,
+        28
+      ],
+      "severity": "minor layout polish",
+      "description": "Question 7 starts near the bottom of page 27. Its target equation appears at the bottom of that page, while the remainder of the prompt and the optional extension occupy only the first approximately six lines of page 28.",
+      "suggestion": "Consider reserving space before Question 7 so the complete question starts on page 28; no mathematical content is missing.",
+      "status": "RESOLVED",
+      "resolution": "Final PDF rechecked: Question 7 now starts on page 28, and its full prompt, equation and optional extension appear together. Page 27 ends after Question 6."
+    }
+  ],
+  "source_or_pdf_changes_made": false,
+  "pagination_recheck": {
+    "previous_pdf_sha256": "71725e91d1c5c9b63688567285c9a13532a9e46a2831507295aa27bb42db9c30",
+    "final_pdf_page_count_verified": 43,
+    "regenerated_and_compared_png_pages": [
+      1,
+      2,
+      3,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "changed_pages": [
+      27,
+      28
+    ],
+    "visually_rechecked_pages": [
+      27,
+      28
+    ],
+    "other_reviewed_pages_png_byte_identical": [
+      1,
+      2,
+      3,
+      22,
+      23,
+      24,
+      25,
+      26,
+      29,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "contact_sheets_synced_to_final_pdf": true,
+    "result": "Question 7 pagination concern resolved; no clipping, overlaps or missing content observed on changed pages."
+  }
+}

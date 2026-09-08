@@ -1,0 +1,96 @@
+{
+  "lecture01": {
+    "pages": 28,
+    "hits": {
+      "厚生上の効率的産出量": [
+        27
+      ],
+      "粗実質収益率": [
+        28
+      ]
+    },
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  },
+  "lecture03": {
+    "pages": 25,
+    "hits": {
+      "配当と利子率が確定": [
+        2,
+        20,
+        21
+      ],
+      "条件付き期待値": [
+        5,
+        15,
+        20,
+        24
+      ]
+    },
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  },
+  "lecture05": {
+    "pages": 21,
+    "hits": {},
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  },
+  "lecture07": {
+    "pages": 20,
+    "hits": {
+      "当期の金利差だけ": [
+        17
+      ],
+      "期待将来ギャップ": [
+        15,
+        17,
+        20
+      ]
+    },
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  },
+  "lecture09": {
+    "pages": 30,
+    "hits": {
+      "この尺度で測った": [
+        7
+      ],
+      "再最適化の誘因": [
+        2,
+        17,
+        19
+      ],
+      "特性方程式": [
+        28,
+        29
+      ],
+      "インパルス応答を図示": [
+        25
+      ]
+    },
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  },
+  "solution": {
+    "pages": 42,
+    "hits": {
+      "価格設定の導出": [
+        2,
+        19
+      ],
+      "安定化バイアスは": [
+        28,
+        29
+      ],
+      "横軸が現在所得": [],
+      "当期の金利差だけ": [],
+      "0.009": [
+        23
+      ]
+    },
+    "replacement_glyphs": 0,
+    "unresolved": 0
+  }
+}

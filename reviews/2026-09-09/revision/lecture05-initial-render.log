@@ -1,0 +1,34 @@
+
+
+processing file: lecture05.qmd
+1/5                          
+2/5 [setup-japanese-graphics]
+3/5                          
+4/5 [fig-laffer-curve]       
+5/5                          
+output file: lecture05.knit.md
+
+ERROR: unable to open database file
+
+Stack trace:
+    at async Object.openKv (ext:deno_kv/01_db.ts:9:15)
+    at async sassCache (file:///Applications/quarto/bin/quarto.js:80017:16)
+    at async compileWithCache (file:///Applications/quarto/bin/quarto.js:87657:20)
+    at async compileSass (file:///Applications/quarto/bin/quarto.js:87474:19)
+    at async resolveQuartoSyntaxHighlighting (file:///Applications/quarto/bin/quarto.js:125488:32)
+    at async resolveSassBundles (file:///Applications/quarto/bin/quarto.js:125409:12)
+    at async resolveExtras (file:///Applications/quarto/bin/quarto.js:129987:14)
+    at async runPandoc (file:///Applications/quarto/bin/quarto.js:129415:20)
+    at async renderPandoc (file:///Applications/quarto/bin/quarto.js:131107:24)
+    at async Object.onRender (file:///Applications/quarto/bin/quarto.js:137191:30)
+    at async renderFileInternal (file:///Applications/quarto/bin/quarto.js:137168:9)
+    at async renderFiles (file:///Applications/quarto/bin/quarto.js:136884:9)
+    at async render (file:///Applications/quarto/bin/quarto.js:142553:19)
+    at async _Command.actionHandler (file:///Applications/quarto/bin/quarto.js:142798:24)
+    at async _Command.execute (file:///Applications/quarto/bin/quarto.js:102189:7)
+    at async _Command.parseCommand (file:///Applications/quarto/bin/quarto.js:102066:14)
+    at async quarto4 (file:///Applications/quarto/bin/quarto.js:188195:5)
+    at async file:///Applications/quarto/bin/quarto.js:188224:5
+    at async file:///Applications/quarto/bin/quarto.js:188078:14
+    at async mainRunner (file:///Applications/quarto/bin/quarto.js:188080:5)
+    at async file:///Applications/quarto/bin/quarto.js:188217:3

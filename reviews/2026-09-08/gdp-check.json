@@ -1,0 +1,11 @@
+{
+  "observations": 318,
+  "sha256": "f7cfe97b773eef3bd354aa722fd632bcae10b30f43e5aefcc3de89b5e251c346",
+  "HP_independent_max_difference": 3.4017233474514796e-12,
+  "normal_equation_max_residual": 2.913047580932471e-11,
+  "cycle_percent_mean": 3.295281587782386e-11,
+  "cycle_percent_range": [
+    -8.928299720988164,
+    3.7209479689893854
+  ]
+}

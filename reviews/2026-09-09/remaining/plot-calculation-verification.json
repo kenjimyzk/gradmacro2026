@@ -1,0 +1,21 @@
+{
+  "lecture05": [
+    {
+      "start": "alpha <- 0.4",
+      "unchanged": true,
+      "sha256": "c5a6598180a6e75e161466f838329612cd6e36695cb6bc66cd2963dc7ca73221"
+    },
+    {
+      "start": "denom <-",
+      "unchanged": true,
+      "sha256": "38c50c500bc9ab602752b6d2f3d5ac20ecd2512cd1255d87b2bb7d1f5b6fc11b"
+    }
+  ],
+  "lecture09": [
+    {
+      "start": "beta <- 0.99",
+      "unchanged": true,
+      "sha256": "495d38dd56122d5b6bea13f77a716a021a42a34912f4b254c559e456bc3a60c8"
+    }
+  ]
+}

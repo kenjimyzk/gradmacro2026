@@ -1,0 +1,80 @@
+{
+  "l11_cases": 600,
+  "l12_cases": 400,
+  "max_l11_closed_vs_primitive_error": 1.249000902703301e-16,
+  "max_l11_primitive_residual": 2.7755575615628914e-17,
+  "max_l12_distribution_error": 2.7755575615628914e-17,
+  "max_l12_euler_vs_PE_error": 3.268496584496461e-13,
+  "max_l12_amplification_ratio_error": 7.460698725481052e-14,
+  "max_recursive_PV_equilibrium_error": 8.326672684688674e-17,
+  "l11_published_calibration": {
+    "RANK monetary": {
+      "x_percent": 1.4326241134751772,
+      "pi_pp": 0.2836879432624115,
+      "r_pp": -0.7163120567375886
+    },
+    "TANK monetary": {
+      "x_percent": 2.067251461988304,
+      "pi_pp": 0.4093567251461989,
+      "r_pp": -0.5906432748538011
+    },
+    "TANK transfer": {
+      "x_percent": 0.22149122807017543,
+      "pi_pp": 0.04385964912280702,
+      "r_pp": 0.04385964912280702
+    }
+  },
+  "l12_published_calibration": [
+    {
+      "tau": 0,
+      "chi": 2.0,
+      "theta": 0.5714285714285715,
+      "ratio": 1.7499999999999998
+    },
+    {
+      "tau": 0.3,
+      "chi": 1.0,
+      "theta": 1.0,
+      "ratio": 1.0
+    },
+    {
+      "tau": 0.45,
+      "chi": 0.5,
+      "theta": 1.2142857142857144,
+      "ratio": 0.8235294117647058
+    }
+  ],
+  "minimal_counterexamples": {
+    "l11_marginal_disutility": {
+      "gamma": 1,
+      "varphi": 1,
+      "W": 1,
+      "CH": 1,
+      "CS": 1.01,
+      "NH": 1,
+      "NS": 0.9900990099009901,
+      "marginal_disutility_H": 1,
+      "marginal_disutility_S": 0.9900990099009901,
+      "conclusion": "At a common wage, higher consumption implies LOWER marginal labor disutility."
+    },
+    "l12_capital_normalization": {
+      "delta": 0.1,
+      "Kbar": 10,
+      "Ibar": 1,
+      "log_investment_change": 0.01,
+      "correct_first_order_k_next": 0.001,
+      "printed_formula_k_next": 0.01,
+      "exact_k_next": 0.0010045120172450979,
+      "consumption_share": 0.8,
+      "investment_share": 0.2,
+      "correct_first_order_y_with_c_zero": 0.002,
+      "printed_formula_y_with_c_zero": 0.01,
+      "exact_y": 0.0020080160025928834
+    }
+  },
+  "source_sha256": {
+    "lecture11.qmd": "5df9862fba40c8bbbb95ba1914b3365ed506ff873c9cb5aa0edb160828e00ff8",
+    "lecture12.qmd": "7d8d93cb9b8e2ccfa4b247d01e8a1d420908f7ab410df1501f2192f21f3b3b1c",
+    "solution.qmd": "079e63b1f9b20e4da4921358abc0d728c2a0e9b58461b17dbddac13843490e53"
+  }
+}
