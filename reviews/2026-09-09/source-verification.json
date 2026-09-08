@@ -1,0 +1,24 @@
+{
+  "lecture04.qmd": {
+    "labels": 24,
+    "cross_references": 26,
+    "unresolved": [],
+    "display_delimiters_even": true
+  },
+  "lecture10.qmd": {
+    "labels": 8,
+    "cross_references": 10,
+    "unresolved": [],
+    "display_delimiters_even": true
+  },
+  "solution.qmd": {
+    "labels": 0,
+    "cross_references": 0,
+    "unresolved": [],
+    "display_delimiters_even": true
+  },
+  "solution_changed_chapters": [
+    4,
+    10
+  ]
+}

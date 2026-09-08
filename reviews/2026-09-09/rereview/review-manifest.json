@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-09",
+  "review_only": true,
+  "protected_input_files": 84,
+  "changed_protected_inputs": [],
+  "new_findings": {
+    "P1": 0,
+    "P2": 2,
+    "P3": 1
+  },
+  "report": "CORE_COURSE_REVIEW_2026-09-09.md",
+  "R_fresh_runs": {
+    "lecture05": {
+      "exit_code": 0,
+      "chunks": "all extracted R chunks in source order",
+      "output": "r-runtime/lecture05-fresh.pdf",
+      "scope": "direct clean R; separate audit device, not a fresh Quarto document render"
+    },
+    "lecture08": {
+      "exit_code": 0,
+      "chunks": "all extracted R chunks in source order",
+      "output": "r-runtime/lecture08-fresh.pdf",
+      "scope": "direct clean R; separate audit device, not a fresh Quarto document render"
+    },
+    "lecture09": {
+      "exit_code": 0,
+      "chunks": "all extracted R chunks in source order",
+      "output": "r-runtime/lecture09-fresh.pdf",
+      "scope": "direct clean R; separate audit device, not a fresh Quarto document render"
+    }
+  },
+  "visual_checks": {
+    "fresh_direct_R_figures": [
+      "lecture05",
+      "lecture08",
+      "lecture09"
+    ],
+    "stored_pdf_pages": {
+      "lecture05": [
+        18
+      ],
+      "lecture09": [
+        26
+      ],
+      "lecture11": [
+        13
+      ],
+      "lecture12": [
+        34
+      ]
+    },
+    "scope": "selected findings and figures, not every page"
+  },
+  "html_browser": "not run this turn; previous local-file security block remains",
+  "document_rerender": "not run; no source changes",
+  "checks": [
+    "input-sha256.json",
+    "previous-fixes-check.json",
+    "l05-l09-checks.json",
+    "l10-exercises.json",
+    "gdp-check.json",
+    "html-static-verification.json",
+    "pdf-text-verification.json"
+  ]
+}

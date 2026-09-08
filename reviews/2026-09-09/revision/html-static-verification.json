@@ -1,0 +1,52 @@
+{
+  "lecture03": {
+    "math_spans": 269,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "c3817a44cdaadc1bb021ee1cf4e0928e87ef4e806c5a804e640fc8447f100658",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  },
+  "lecture05": {
+    "math_spans": 241,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "6db42f54ef6381ff99b213916208bc4f771520192db30e018c74c4c340ab1e6b",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  },
+  "lecture10": {
+    "math_spans": 496,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "f91b73e693494293369edbbc8a43bf73c5555ad4dc792a798392a5bc4f284adc",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  },
+  "lecture11": {
+    "math_spans": 397,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "a9cd2be7eabedfb486dc9b779d05e5595a2e5b5bf453faae4f85862fefd4bace",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  },
+  "lecture12": {
+    "math_spans": 566,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "08eb80d80e4b85b26d8769d2e31c0b1ca355ae4dc7ff81dd4f1833781550a9ea",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  }
+}

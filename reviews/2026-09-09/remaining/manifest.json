@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-09",
+  "scope": "Review findings 3-6, six notation items, and Japanese graphics environment (finding 7). Findings 1-2 preserved.",
+  "base_HEAD": "1ee2486401757b1a46c2426bd5cc81990b81ea12",
+  "artifacts": {
+    "lecture01.qmd": {
+      "sha256": "7bd62cd3e84a5f31e27752475efa9a361db8edb03465fa661dd64b05ed4a366d",
+      "bytes": 29699
+    },
+    "lecture01.html": {
+      "sha256": "1b5aa0020c796af21ff38544afa9d9e2240ea43d59f593c4955df54b39a106fa",
+      "bytes": 99179
+    },
+    "lecture01.pdf": {
+      "sha256": "cb2e773f75b969b7dafd40fd69c279cf92e0e2de0d1940419b0f637a667e2e73",
+      "bytes": 621005
+    },
+    "lecture03.qmd": {
+      "sha256": "7c7f3f3b086719ce61d18a0679f1ecabe79f01d6bd0b74df49ca7e4d92fbade9",
+      "bytes": 36190
+    },
+    "lecture03.html": {
+      "sha256": "72beb87f0db199e7790954488926302130ab443a6aa724c7b3ed02f4611113f4",
+      "bytes": 90764
+    },
+    "lecture03.pdf": {
+      "sha256": "95fceb81e159525fe4f8969eede08b2a6850d9dc46c5696c53d3defa98cb4b23",
+      "bytes": 525459
+    },
+    "lecture05.qmd": {
+      "sha256": "1238307edb0b917599f682284692de88f71ddd1a8122b1f481a5ee1948071036",
+      "bytes": 34066
+    },
+    "lecture05.html": {
+      "sha256": "b0f61577d0eb4037dc65f4faef5c504ba90a37a9b7f7c183674aa748994c5c3e",
+      "bytes": 80262
+    },
+    "lecture05.pdf": {
+      "sha256": "8138549f41e89e40453b218382259fb1cbbf490692dce408bb2eea9b1923634b",
+      "bytes": 329097
+    },
+    "lecture07.qmd": {
+      "sha256": "1027c668880ecb162bb2b157ac4142b3da8bccfbe980f006cb6af22f094da551",
+      "bytes": 30832
+    },
+    "lecture07.html": {
+      "sha256": "4f9bb638d768cc04047b92cc7fb4ee968d6a9be6e947597f82597f1d2219bbcc",
+      "bytes": 69309
+    },
+    "lecture07.pdf": {
+      "sha256": "a91a94c9b74b81840ec875e7a72be31363f9aea7d3281db66dcd4bd39caa29c4",
+      "bytes": 465995
+    },
+    "lecture09.qmd": {
+      "sha256": "14cf0785ee9f4332cee673080425c76bb2676bd3c1c9326ff94bc17c15460bed",
+      "bytes": 52260
+    },
+    "lecture09.html": {
+      "sha256": "785e6de2525b760d504ec3791ea7cb6461c318992f8482c96372f74b4fe491e9",
+      "bytes": 115145
+    },
+    "lecture09.pdf": {
+      "sha256": "2e869ef269ac05b23ff943b13a5aaed72cd3ca4174fa70ff1fa647429cd360f4",
+      "bytes": 431580
+    },
+    "solution.qmd": {
+      "sha256": "079e63b1f9b20e4da4921358abc0d728c2a0e9b58461b17dbddac13843490e53",
+      "bytes": 61571
+    },
+    "solution.html": {
+      "sha256": "53330fbf7fc208d3d895c70558d4b5a4a57a728e627289a93d1e8d5f23b7f5c0",
+      "bytes": 150632
+    },
+    "solution.pdf": {
+      "sha256": "ae395a97d5c251f1896b77e3d2ed7119e872596aa50e825af483836c4a0657a8",
+      "bytes": 380928
+    },
+    "includes/notation-concordance.qmd": {
+      "sha256": "a71b0f6eb60623f5162df79454be601e11d9f8cf7c2d7b628dc34fb22a06908b",
+      "bytes": 4644
+    },
+    "scripts/render-lecture.R": {
+      "sha256": "bd909bca2ce7fb6c01c97df29fb7ccf0c030bd2a0ee346eaa38384e06a57976a",
+      "bytes": 771
+    },
+    "scripts/README-graphics.md": {
+      "sha256": "4f7c2fab51c491f583ae4b252764d1e546787abcced6fe3ac34ee56763c5b954",
+      "bytes": 5352
+    },
+    "scripts/setup-graphics.R": {
+      "sha256": "408587be7db16ed3a36f634c172bb7e292d3a5fcf983c9274d5652ee8abc7f46",
+      "bytes": 850
+    },
+    "scripts/japanese-graphics.R": {
+      "sha256": "816374b6ee9c152760f3e144c8b481771bbfadfcce8cd08d342ec37c9811c69c",
+      "bytes": 2939
+    },
+    "scripts/check-graphics.R": {
+      "sha256": "8a2e7f5daa966e2291d955ae19bc85985ee900f8c775dbae144df717e2e1b488",
+      "bytes": 1522
+    },
+    "scripts/.gitignore": {
+      "sha256": "325d73c29f081b7a700b9764fda6dbef6524ac1a164b021555aee1400ad688f5",
+      "bytes": 12
+    },
+    "lecture05_files/figure-html/fig-laffer-curve-1.png": {
+      "sha256": "545e4fd32e637e6d04319e86344e39c65a78a66e64e842f4cd6092950f9d73e3",
+      "bytes": 76620
+    },
+    "lecture09_files/figure-html/fig-lecture09-discretion-timeless-irf-1.png": {
+      "sha256": "d4898240e021f139ac568fd381725c49ecc3bc33dde16bbf70b2aed2ae391f4d",
+      "bytes": 112510
+    }
+  },
+  "previous_lecture04_lecture10_qmd_html_pdf_unchanged": {
+    "lecture04.qmd": true,
+    "lecture04.html": true,
+    "lecture04.pdf": true,
+    "lecture10.qmd": true,
+    "lecture10.html": true,
+    "lecture10.pdf": true
+  },
+  "verification": [
+    "check_theory.json",
+    "numeric-checks.json",
+    "plot-calculation-verification.json",
+    "source-verification.json",
+    "render-status.json",
+    "html-static-verification.json",
+    "pdf-text-verification.json",
+    "visual-qa.json"
+  ],
+  "limitation": "HTML browser layout blocked; static HTML and embedded figure PNGs verified. Other OS not run."
+}

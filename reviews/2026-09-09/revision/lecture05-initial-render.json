@@ -1,0 +1,16 @@
+{
+  "document": "lecture05",
+  "exit_code": 1,
+  "seconds": 2.9,
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "scripts/render-lecture.R",
+    "lecture05.qmd",
+    "--to",
+    "all",
+    "-M",
+    "latex-auto-install:false"
+  ],
+  "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+}

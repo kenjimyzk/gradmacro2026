@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-08",
+  "HEAD": "1ee2486401757b1a46c2426bd5cc81990b81ea12",
+  "source_sha256": {
+    "lecture01.qmd": "7bd62cd3e84a5f31e27752475efa9a361db8edb03465fa661dd64b05ed4a366d",
+    "lecture02.qmd": "e2365590c6d338f99fce0c33bc1cbd375797f6c27860db508dfbb42ee0ebe0bc",
+    "lecture03.qmd": "933f22d1e55cd88cf7bee5734dc69a656c68c54ab3c977d0201bf697d4f96438",
+    "lecture04.qmd": "9c4a24ad0ee651cc8a0f234b487d1f45d2aa2cbe54eed197af2e02b873bf87dd",
+    "lecture05.qmd": "13c7095f9133a3d83bf5b981926e502a755b9851d06708602d138c4923da53dc",
+    "lecture06.qmd": "ba3f3ce627cb30b62e0a8c71550a0ba96bd6e6e78c61fd40a89ef1608abd4903",
+    "lecture07.qmd": "5181f4cc9ffeefae5a956485cc5b53041c0a2a7356733519d4432b12d72276e6",
+    "lecture08.qmd": "19a2037e50805992e7b9516a6abdab6d235894302728afab3483f2c5527eb78d",
+    "lecture09.qmd": "c314006fb7f46e31b0ad5eaeee839250f2383ee9bbb4039d565b81d4094425ba",
+    "lecture10.qmd": "ec85f0edf589a68d0f47fd5caad528bc9dcb27d5664f3dbb88c5082a1b2498e2",
+    "lecture11.qmd": "5df9862fba40c8bbbb95ba1914b3365ed506ff873c9cb5aa0edb160828e00ff8",
+    "lecture12.qmd": "7d8d93cb9b8e2ccfa4b247d01e8a1d420908f7ab410df1501f2192f21f3b3b1c",
+    "solution.qmd": "f04e44b5892be0101066ad06d5648b81cc74f9b2a64f54abab26e8837b2695bb",
+    "includes/assumption-matrix.qmd": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+    "includes/notation-concordance.qmd": "3e81a09549466054765384b21e924f2107516d2ef213d8e332e27aeae9dc2544",
+    "scripts/lecture02/generate_us_real_gdp_hp.py": "0c34f5bce2e5b1b84f9660ba462f23d5d979f3a0e2f484030bcbb102458d1f91",
+    "data/lecture02/gdpc1.csv": "f7cfe97b773eef3bd354aa722fd632bcae10b30f43e5aefcc3de89b5e251c346"
+  },
+  "runtime": {
+    "Quarto": "1.10.18",
+    "R": "4.6.1",
+    "knitr": "1.51",
+    "rmarkdown": "2.31",
+    "Python": "3.14.7",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.9",
+    "LaTeX": "LuaHBTeX 1.22.0 (TeX Live 2025)",
+    "showtext": "not installed in tested R environment",
+    "sysfonts": "not installed in tested R environment"
+  },
+  "originals_modified": false,
+  "sampled_stored_pdf_pages": {
+    "lecture01": [
+      5
+    ],
+    "lecture02": [
+      4
+    ],
+    "lecture03": [
+      20
+    ],
+    "lecture04": [
+      5
+    ],
+    "lecture05": [
+      18
+    ],
+    "lecture06": [
+      7
+    ],
+    "lecture07": [
+      16
+    ],
+    "lecture08": [
+      20
+    ],
+    "lecture09": [
+      25
+    ],
+    "lecture10": [
+      37
+    ],
+    "lecture11": [
+      30
+    ],
+    "lecture12": [
+      43
+    ],
+    "solution": [
+      18
+    ]
+  },
+  "sampled_fresh_pdf_pages": {
+    "lecture02": [
+      4
+    ],
+    "lecture05": [
+      18
+    ],
+    "lecture09": [
+      26
+    ],
+    "solution": [
+      18
+    ]
+  }
+}

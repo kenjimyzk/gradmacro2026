@@ -1,0 +1,48 @@
+{
+  "status": "verified",
+  "protected_solution_sections": {
+    "# 第4回：": {
+      "before_sha256": "5a5e657897abacb0688868cdb7a7d9dbaf5027ece6d642d620e10f8c23331c1a",
+      "after_sha256": "5a5e657897abacb0688868cdb7a7d9dbaf5027ece6d642d620e10f8c23331c1a",
+      "unchanged": true
+    },
+    "# 第10回：": {
+      "before_sha256": "5d736469099d59a2bfa36050972b5f7fe10c4e8a49225bf92e1e263f26cbfc6c",
+      "after_sha256": "5d736469099d59a2bfa36050972b5f7fe10c4e8a49225bf92e1e263f26cbfc6c",
+      "unchanged": true
+    }
+  },
+  "price_setting": {
+    "cases": 48,
+    "max_normalized_finite_difference_foc": 3.063752345745725e-08,
+    "max_total_cost_identity_residual": 1.1102230246251565e-16,
+    "local_maximum_comparison": "passed at 0.99 and 1.01 times each optimum"
+  },
+  "is_positive_gap_example_residual": 8.673617379884035e-19,
+  "deterministic_rates_stochastic_sdf": {
+    "periods": 4,
+    "terminal_sdf_distinct_values": 5,
+    "max_expected_sdf_residual": 1.1102230246251565e-16,
+    "finite_dividend_pv_residual": 0.0,
+    "scope": "finite stochastic tree checks the conditional-expectation induction; infinite PV uses the stated no-bubble and convergence conditions"
+  },
+  "welfare_normalization": {
+    "cases": 216,
+    "max_relative_output_curvature_error": 4.726084452184094e-08,
+    "max_relative_inflation_curvature_error": 5.6479895575260265e-08,
+    "scope": "curvature at efficient steady states with fixed contemporaneous technology and government spending; analytic completion of the square supplies x_e under shocks"
+  },
+  "time_consistency_and_peg_polynomial": {
+    "peg_cases": 18,
+    "max_q_at_one_residual": 4.163336342344337e-16,
+    "one_root_in_0_1_and_one_above_1": true,
+    "welfare_gap_superscripts_and_polynomial_notation": "verified in source"
+  },
+  "source_sha256": {
+    "solution.qmd": "079e63b1f9b20e4da4921358abc0d728c2a0e9b58461b17dbddac13843490e53",
+    "lecture07.qmd": "1027c668880ecb162bb2b157ac4142b3da8bccfbe980f006cb6af22f094da551",
+    "lecture03.qmd": "7c7f3f3b086719ce61d18a0679f1ecabe79f01d6bd0b74df49ca7e4d92fbade9",
+    "lecture09.qmd": "14cf0785ee9f4332cee673080425c76bb2676bd3c1c9326ff94bc17c15460bed"
+  },
+  "render_check": "not run by this validator; parent agent performs rendering and visual checks"
+}

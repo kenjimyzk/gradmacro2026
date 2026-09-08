@@ -1,0 +1,550 @@
+---
+title: "指摘1・2：問題設定と導出の確定"
+subtitle: "第4回の家計問題・第10回のMarkov裁量政策"
+date: "2026-09-08"
+lang: ja
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    theme: cosmo
+    html-math-method: katex
+    embed-resources: true
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption: [lualatex, ja=standard, 11pt, a4paper]
+    geometry: margin=22mm
+    toc: false
+    number-sections: true
+    keep-tex: false
+execute:
+  enabled: false
+---
+
+本書は、2026年9月8日の再レビューで挙げた指摘1・2について、採用する問題設定、導出、特殊ケースと検証結果を確定する。講義本文と解答の差替えに先立つ理論上の確定文書であり、現段階で `lecture04.qmd`、`lecture10.qmd`、`solution.qmd` は変更していない。
+
+採用する修正は次の二つである。
+
+1. **第4回**：候補消費自身の限界効用SDFで実行可能性を定義する方法をやめ、純金融資産に所与の有限な信用限度を課す。対称均衡ではこれが非拘束になることと、家計の最適性を証明する。
+2. **第10回**：Markov裁量では将来の政策関数を固定する一方、当期に選ぶ限界費用が翌期の状態を変える効果を微分に残す。継続価値の微分だけでなく、民間期待の微分も含むターゲット条件を採用する。
+
+# 第4回：信用限度による家計問題の確定
+
+## 実行可能集合と対称均衡
+
+既存の取引資産を維持する。家計は実質無リスク債券 $B_t(h)$ と企業持分 $\Theta_t(h)$ を選び、$V_t$ は配当落ち株価、$D_t$ は配当である。各期のショック観察後に選択し、全ての選択は $\mathcal F_t$ 可測とする。予算制約は
+
+$$
+\begin{aligned}
+C_t(h)+B_t(h)+V_t\Theta_t(h)
+={}&R_{t-1}B_{t-1}(h)\\
+&+(V_t+D_t)\Theta_{t-1}(h)+W_tN_t(h).
+\end{aligned}
+$$
+
+これに、全期・全状態で次の制約を加える。
+
+$$
+\boxed{A_t^F(h)\equiv B_t(h)+V_t\Theta_t(h)\geq-\bar L,
+\qquad 0<\bar L<\infty.}
+$$ {#eq-credit-limit}
+
+$\bar L$ は実物財単位の所与の定数であり、候補消費を変えても変わらない。債券と株式を合わせた純金融資産に課すので、債券の借入を株式の空売りに付け替えてこの下限を回避することはできない。$C_t(h)>0$、$N_t(h)\geq0$、後述する可積分性も許容計画の条件とする。
+
+これは**明示的な信用制度の追加**であり、あらゆるNo-Ponzi条件と同値な言い換えではない。無限期間・不完備市場の一般モデルで唯一の自然借入限度を導いたとも主張しない。現行の労働選択には有限の上限がないので、「最大労働所得の現在価値」による有限な自然借入限度は使わない。
+
+家計の測度、企業の測度、株式供給はそれぞれ1とする。同一の選好と共通の初期保有
+
+$$
+B_{-1}(h)=0,\qquad \Theta_{-1}(h)=1
+$$
+
+から始める対称均衡を扱う。以下では、実物配分を先に構成し、非負の株価で支持できることと家計の最適性を順に確認する。
+
+## 実物配分と無限期間の正則条件
+
+効用と生産は既存の仕様を用いる。
+
+$$
+\begin{aligned}
+U(C,N)&=u(C)-\frac{N^{1+\varphi}}{1+\varphi},\\
+u(C)&=\begin{cases}
+\dfrac{C^{1-\gamma}-1}{1-\gamma},&\gamma\ne1,\\[2pt]
+\log C,&\gamma=1,
+\end{cases}\\
+Y&=e^aN^{1-\alpha}.
+\end{aligned}
+$$
+
+$0<\beta<1$、$\gamma>0$、$\varphi\geq0$、$0\leq\alpha<1$ とする。星印は均衡候補を表す。既存の静学的条件
+
+$$
+\begin{aligned}
+(C_t^*)^\gamma(N_t^*)^\varphi&=W_t,\\
+W_t&=(1-\alpha)e^{a_t}(N_t^*)^{-\alpha},\\
+Y_t^*&=e^{a_t}(N_t^*)^{1-\alpha},\qquad C_t^*=Y_t^*
+\end{aligned}
+$$
+
+から正の配分が一意に決まり、$D_t^*=\alpha C_t^*\geq0$ となる。とくに
+
+$$
+C_t^*=\bar C e^{\zeta_a a_t},\qquad
+\zeta_a=\frac{1+\varphi}{\varphi+\alpha+\gamma(1-\alpha)}.
+$$
+
+均衡候補のSDFを
+
+$$
+Q^*_{t,T}=\beta^{T-t}\frac{(C_T^*)^{-\gamma}}{(C_t^*)^{-\gamma}},
+\qquad Q^*_{t,t}=1
+$$
+
+とする。代替計画との比較では、この $Q^*$ と市場価格を固定する。$Q^*$ を各代替計画の消費から再計算しない。
+
+十分な正則条件として、各 $t$ で
+
+$$
+\sup_{N\geq0}\mathbb E_t\left[
+(C^*_{t+N})^{-\gamma}+(C^*_{t+N})^{1-\gamma}
+\right]<\infty
+$$ {#eq-moment}
+
+を置く。$\gamma=1$ では、さらに
+$\mathbb E_t\sum_{N\geq0}\beta^N|\log C^*_{t+N}|<\infty$ とする。
+労働不効用は
+$(N_t^*)^{1+\varphi}=(1-\alpha)(C_t^*)^{1-\gamma}$
+なので同じ条件で制御でき、候補均衡の期待生涯効用は有限になる。
+
+家計の代替計画は、有限期間の予算合計と以下の凹性不等式に現れる各項が絶対可積分で、期待割引効用の部分和の極限が拡張実数として定義されるものに限る。可積分性は純資産だけでなく、個別資産の購入額・受取額にも要求する。生涯効用 $-\infty$ は許容し、$+\infty-\infty$ で未定義となる計画は含めない。
+
+@eq-moment は
+
+$$
+\mathbb E_tQ^*_{t,t+N}\longrightarrow0,\qquad
+\sum_{j=1}^{\infty}\mathbb E_t[Q^*_{t,t+j}D^*_{t+j}]<\infty
+$$ {#eq-decay}
+
+を保証する。第1式は $\beta^N$ と負の消費モーメント、第2式は
+$Q^*_{t,t+j}D^*_{t+j}=\alpha\beta^j(C_t^*)^\gamma(C^*_{t+j})^{1-\gamma}$
+から従う。
+
+たとえば $|\rho_a|<1$ のAR(1)に有界イノベーション、または独立同分布の正規イノベーションを置けば、上の閉形式の消費は必要な条件付きモーメントを満たす。$\beta<1$ やイノベーションの条件付き平均ゼロだけでは @eq-decay は保証されない。
+
+## 資産価格・非拘束性・横断性
+
+価格を次式で構成する。
+
+$$
+R_t=\frac{1}{\mathbb E_tQ^*_{t,t+1}},\qquad
+V_t=\sum_{j=1}^{\infty}\mathbb E_t[Q^*_{t,t+j}D^*_{t+j}].
+$$ {#eq-prices}
+
+SDFは正、配当は非負なので、$R_t>0$、$V_t\geq0$ である。期待値の塔則とSDFの積の性質から、債券と株式の価格付け式
+
+$$
+1=\mathbb E_t[Q^*_{t,t+1}R_t],\qquad
+V_t=\mathbb E_t[Q^*_{t,t+1}(V_{t+1}+D^*_{t+1})]
+$$
+
+を満たす。この構成は市場を完備化せず、既存の二資産だけを用いる。
+
+市場清算に整合する対称保有 $B_t^*=0$、$\Theta_t^*=1$ のもとでは
+
+$$
+A_t^{F,*}=V_t\geq0>-\bar L.
+$$
+
+信用限度は厳密に非拘束であり、既存のEuler等式を維持できる。$\alpha=0$ のときも $D_t^*=V_t=0>-\bar L$ である。ここで $\bar L>0$ としたことに意味がある。
+
+さらに、収束する配当現在価値の尾項を使うと
+
+$$
+\begin{aligned}
+\mathbb E_t[Q^*_{t,t+N}V_{t+N}]
+&=\sum_{j=N+1}^{\infty}\mathbb E_t[Q^*_{t,t+j}D^*_{t+j}]\\
+&\longrightarrow0.
+\end{aligned}
+$$ {#eq-tvc}
+
+したがって対称家計の横断性条件
+$\lim_{N\to\infty}\mathbb E_t[Q^*_{t,t+N}A^{F,*}_{t+N}]=0$
+も成立する。この対称保有では両者は同じ条件であり、独立した二つの仮定として重ねる必要はない。株式Euler式だけではバブル項が残る。@eq-prices は無バブルの価格を構成しており、無裁定だけから配当現在価値式を導いたわけではない。
+
+## 全候補計画のNo-Ponzi性と最適性の証明
+
+任意の許容計画 $\widetilde A_T^F\geq-\bar L$ について、**固定された**均衡SDFで
+
+$$
+\mathbb E_t[Q^*_{t,T}\widetilde A_T^F]
+\geq-\bar L\mathbb E_tQ^*_{t,T}.
+$$
+
+右辺はゼロに収束するので
+
+$$
+\liminf_{T\to\infty}\mathbb E_t[Q^*_{t,T}\widetilde A_T^F]\geq0.
+$$
+
+これが信用限度から従う市場評価のNo-Ponzi性である。
+
+最適性は次の有限期間の議論で確認できる。期首に受け取る金融財産を
+
+$$
+\mathcal W_t^F=R_{t-1}B_{t-1}+(V_t+D_t)\Theta_{t-1}
+$$
+
+とする。各期の予算制約を $Q^*$ で割り引き、二資産の価格付け式を使って足し上げると
+
+$$
+\begin{aligned}
+&\mathbb E_t\sum_{s=t}^{T}Q^*_{t,s}[C_s-W_sN_s]\\
+&\quad+\mathbb E_t[Q^*_{t,T}A_T^F]=\mathcal W_t^F.
+\end{aligned}
+$$ {#eq-finite-budget}
+
+保有の可測性により中間の金融資産項が相殺する。状態ごとに独立した証券を取引できるという完備市場の仮定は不要である。
+
+同じ期首保有から始める代替計画と均衡候補の差を取り、効用の凹性と $U_N^*=-U_C^*W$ を使う。有限 $T$ について
+
+$$
+\begin{aligned}
+&\mathbb E_t\sum_{s=t}^{T}\beta^{s-t}
+\bigl[U(\widetilde C_s,\widetilde N_s)-U(C_s^*,N_s^*)\bigr]\\
+&\quad\leq U_{C,t}^*\mathbb E_t\sum_{s=t}^{T}Q^*_{t,s}
+\bigl[(\widetilde C_s-C_s^*)-W_s(\widetilde N_s-N_s^*)\bigr]\\
+&\quad=U_{C,t}^*\mathbb E_t[Q^*_{t,T}(V_T-\widetilde A_T^F)]\\
+&\quad\leq U_{C,t}^*\left\{
+\mathbb E_t[Q^*_{t,T}V_T]+\bar L\mathbb E_tQ^*_{t,T}\right\}
+\longrightarrow0.
+\end{aligned}
+$$ {#eq-sufficiency}
+
+従って期待効用差の部分和の上極限は非正であり、許容される代替計画は候補均衡より高い生涯効用を与えない。これでEuler式だけでなく家計の最適性まで確認できる。一般の信用制約が拘束する家計には制約乗数が必要であり、ここで得た非拘束のEuler等式や横断性の結論をそのまま外挿しない。
+
+## 反例の排除と変更される範囲
+
+旧定式化の反例は、$\alpha=0$、$\gamma=\varphi=1$、$a_t=0$、$R=1/\beta$、$N_t=1$、
+$\widetilde C_t=K_0\chi^t$、$\chi>R$ で、債務が無限に拡大する経路だった。自己の消費から計算する限界効用SDFではこれを排除できなかった。
+
+新しい設定では $V=0$ なので $A_t^F=B_t\to-\infty$ が @eq-credit-limit に有限時点で違反する。$\beta=.96$、$\chi=2$、$K_0=1$、$\bar L=10$ のとき
+
+$$
+B_0=0,\quad B_1=-1,\quad B_2=-4.041667,\quad B_3=-11.210069
+$$
+
+となり、第3期で不適格になる。
+
+追加するのは許容計画、初期対称保有、無限期間の正則条件、および資産価格の構成・最適性の説明である。**選択した対称均衡の実物配分、$\zeta_a$、既存の一次近似の自然利子率は変わらない。**
+
+# 第10回：Markov裁量政策の確定
+
+## 状態、タイミング、固定する対象
+
+この節では $V$ を中央銀行の損失の価値関数とする。第4回の株価とは別の記号である。価格・賃金インフレ率を $\pi^p,\pi^w$、需給ギャップを $x$ とする。状態と当期の選択を
+
+$$
+s_t=mc_{t-1},\qquad z=mc_t=s_{t+1}
+$$
+
+と置く。$z$ は以下の導出だけで使う選択変数の略記である。外生状態 $\xi_t$ は $a_t-a_{t-1}$、自然利子率、翌期の条件付き分布を決める情報を含む。たとえば技術のAR(1)では $(a_t,a_{t-1})$ と他の必要な外生状態を含める。移行核 $\mathcal P(d\xi'\mid\xi)$ は当期政策の影響を受けない。
+
+当期の中央銀行は、将来の政策関数 $g_p(s,\xi)$、$g_w(s,\xi)$、$g_x(s,\xi)$ と将来の価値関数を変更できない。ただし当期の $z$ を動かすと、これらの関数を評価する翌期状態が変わる。期待関数を
+
+$$
+F_j(z,\xi)=\int g_j(z,\xi')\mathcal P(d\xi'\mid\xi),
+\qquad j\in\{p,w,x\}
+$$
+
+と定義し、$F_{j,z}$ をその状態引数による偏微分とする。政策関数を固定することは、$F_j$ の値を固定することではない。
+
+継続損失の限界効果は原稿の意味を維持して
+
+$$
+\Gamma^{mc}(z,\xi)
+\equiv\beta\int V_s(z,\xi')\mathcal P(d\xi'\mid\xi)
+$$
+
+と定める。民間期待の制約微分を $\Gamma^{mc}$ に吸収しない。
+
+裁量下でも将来の状態を経由して民間期待が当期政策に反応する区別は、[Svensson, *Inflation Targeting*, §3.8](https://larseosvensson.se/files/papers/HandbookIT.pdf) の定式化とも整合する。以下の符号と係数は本講義の制約から独立に導く。
+
+## Bellman問題と均衡の固定点
+
+略記を
+
+$$
+q\equiv\gamma+\varphi>0,\qquad K\equiv\kappa_wq>0,
+\qquad d(\xi)\equiv a_t-a_{t-1}
+$$
+
+とする。$\kappa_j=\psi_j/\eta_j>0$、$\omega_j=\eta_j/q>0$、$j=p,w$ である。第10回と同じ価格・賃金の是正補助金を置き、効率的な定常状態の近傍を扱う。金利制約・金利平滑化費用は置かず、実質利子率 $r$ は自由に選べる。政策最適化は既存のTaylorルールに代わる政策設定であり、Taylorルールを追加制約として同時に課さない。
+
+滑らかな内点解を対象として
+
+$$
+\begin{aligned}
+V(s,\xi)=\min_{\pi^p,\pi^w,x,z,r}\Bigl\{
+&\tfrac12\bigl[x^2+\omega_p(\pi^p)^2+\omega_w(\pi^w)^2\bigr]\\
+&+\beta\int V(z,\xi')\mathcal P(d\xi'\mid\xi)\Bigr\}
+\end{aligned}
+$$
+
+を、次の民間均衡制約のもとで解く。
+
+$$
+\begin{aligned}
+\kappa_pz+\beta F_p(z,\xi)-\pi^p&=0,\\
+Kx-\kappa_wz+\beta F_w(z,\xi)-\pi^w&=0,\\
+z-s+d(\xi)+\pi^p-\pi^w&=0,\\
+F_x(z,\xi)-(r-r^f(\xi))/\gamma-x&=0.
+\end{aligned}
+$$ {#eq-markov-constraints}
+
+全状態で、この最適化から得る $\pi^p,\pi^w,x$ が予想した $g_p,g_w,g_x$ と一致し、継続価値が $V$ に一致することを均衡条件とする。以下の一階条件だけで均衡の存在や一意性が保証されるとはしない。
+
+## 一階条件とターゲット条件
+
+@eq-markov-constraints の各左辺に順に乗数 $\Lambda_1,\ldots,\Lambda_4$ を掛けて目的関数に加える。$\pi^p,x,\pi^w,z,r$ の一階条件は
+
+$$
+\begin{aligned}
+\omega_p\pi^p-\Lambda_1+\Lambda_3&=0,\\
+x+K\Lambda_2-\Lambda_4&=0,\\
+\omega_w\pi^w-\Lambda_2-\Lambda_3&=0,\\
+(\kappa_p+\beta F_{p,z})\Lambda_1
+ +(-\kappa_w+\beta F_{w,z})\Lambda_2&\\
+\quad+\Lambda_3+F_{x,z}\Lambda_4+\Gamma^{mc}&=0,\\
+-\Lambda_4/\gamma&=0.
+\end{aligned}
+$$ {#eq-full-focs}
+
+実質利子率の一階条件から $\Lambda_4=0$。従ってISの期待微分は、完全な一階条件に記載した後で消える。旧式から欠けていた項は
+
+$$
+\beta F_{p,z}\Lambda_1+\beta F_{w,z}\Lambda_2
+$$
+
+である。
+
+有効な限界係数を
+
+$$
+\widehat\kappa_p\equiv\kappa_p+\beta F_{p,z},\qquad
+\widehat\kappa_w\equiv\kappa_w-\beta F_{w,z}
+$$ {#eq-effective-slopes}
+
+と置く。構造パラメータではなく、一般には $(z,\xi)$ に依存する。正とは限らない。乗数は
+
+$$
+\Lambda_2=-\frac{x}{K},\qquad
+\Lambda_3=\omega_w\pi^w+\frac{x}{K},\qquad
+\Lambda_1=\omega_p\pi^p+\Lambda_3
+$$
+
+なので、限界費用の一階条件は次式になる。
+
+$$
+\boxed{\begin{aligned}
+&(1+\widehat\kappa_p+\widehat\kappa_w)x\\
+&\quad+K\left[
+\widehat\kappa_p\omega_p\pi^p
++(1+\widehat\kappa_p)\omega_w\pi^w+\Gamma^{mc}
+\right]=0.
+\end{aligned}}
+$$ {#eq-correct-target}
+
+**これを掲載用の一般ターゲット条件として採用する。** 分母のない形なので、$1+\widehat\kappa_p+\widehat\kappa_w\ne0$ という追加仮定を要しない。$x=\cdots$ と解く表示を使う場合には、当該分母が非ゼロであることを別途確認する。
+
+## 一変数還元による独立した導出
+
+民間制約を順に解くと、$(s,\xi)$ を固定した当期の配分は
+
+$$
+\begin{aligned}
+\pi^p(z)&=\kappa_pz+\beta F_p(z,\xi),\\
+\pi^w(z)&=z-s+d(\xi)+\pi^p(z),\\
+x(z)&=\frac{\pi^w(z)+\kappa_wz-\beta F_w(z,\xi)}{K}
+\end{aligned}
+$$
+
+となる。従って
+
+$$
+\begin{aligned}
+\pi^p_z&=\widehat\kappa_p,\\
+\pi^w_z&=1+\widehat\kappa_p,\\
+x_z&=\frac{1+\widehat\kappa_p+\widehat\kappa_w}{K}.
+\end{aligned}
+$$
+
+一変数の目的関数 $J(z)$ の微分は
+
+$$
+J_z=xx_z+\omega_p\pi^p\pi^p_z+\omega_w\pi^w\pi^w_z+\Gamma^{mc}.
+$$
+
+$J_z=0$ に $K$ を掛ければ @eq-correct-target を得る。ラグランジュ乗数の消去とは独立に符号・係数が一致する。非線形な将来政策関数のもとでは、一般にこれは必要条件である。将来政策がアフィンで継続価値が凸二次なら、還元した目的関数の凸性を別途確認することで十分性を検証できる。
+
+## 包絡条件と金利による実装
+
+外生状態 $\xi$ を固定すると、現在の所与状態 $s$ は賃金インフレ恒等式の $-s$ だけに現れる。包絡定理より
+
+$$
+V_s(s,\xi)=-\Lambda_3(s,\xi).
+$$
+
+従って均衡経路で
+
+$$
+\begin{aligned}
+\Gamma_t^{mc}&=-\beta\mathbb E_t\Lambda_{3,t+1}\\
+&=-\beta\mathbb E_t\left[
+\omega_w\pi^w_{t+1}+\frac{x_{t+1}}{K}\right].
+\end{aligned}
+$$ {#eq-envelope}
+
+これは所与状態 $s$ による微分であり、当期選択 $z$ を通じる期待微分を省略する理由にはならない。@eq-envelope を用いた同値な表示は
+
+$$
+\begin{aligned}
+&(1+\widehat\kappa_{p,t}+\widehat\kappa_{w,t})x_t\\
+&\quad+K\left[\widehat\kappa_{p,t}\omega_p\pi_t^p
++(1+\widehat\kappa_{p,t})\omega_w\pi_t^w\right]\\
+&\quad-\beta\mathbb E_t[x_{t+1}+K\omega_w\pi^w_{t+1}]=0.
+\end{aligned}
+$$
+
+配分を支持する金利は
+
+$$
+r_t=r_t^f+\gamma[F_x(mc_t,\xi_t)-x_t],\qquad
+r_t^N=r_t+F_p(mc_t,\xi_t)
+$$
+
+で復元する。金利は講義と同じ定常値からの乖離の規約である。この式が与えるのは配分の実装金利であり、特定の名目金利ルールの合理的期待均衡の一意性まで証明するものではない。
+
+## 静学問題・終端期・柔軟賃金
+
+### 静学問題と終端期
+
+$\Gamma^{mc}=0$ **だけ**では一般に旧条件へ縮約できない。期待値を外から固定して当期損失だけを最小化する問題では
+
+$$
+F_{p,z}=F_{w,z}=0,\qquad \Gamma^{mc}=0
+$$
+
+なので
+
+$$
+(1+\kappa_p+\kappa_w)x
++K[\kappa_p\omega_p\pi^p+(1+\kappa_p)\omega_w\pi^w]=0.
+$$
+
+翌期期待と継続損失をともにゼロにする文字通りの終端期もこの場合に含まれる。損失だけを有限期で打ち切り、民間期待には非自明な状態依存政策を残す場合には、期待微分は消えない。特定の点で欠落項が偶然相殺することと、一般条件が一致することを区別する。
+
+### 正確な柔軟賃金モデル
+
+$\eta_w=0$ のモデルを直接解く。第10回と同じ是正補助金のもとで賃金マークアップ乖離がゼロとなり、$\omega_w=0$、$mc=qx$ を得る。価格と産出の制約・損失から継承状態 $s$ が消えるため、経済的に必要な状態だけに依存する基本的なMarkov解では
+
+$$
+g_{p,s}=g_{x,s}=V_s=0.
+$$
+
+価格Phillips曲線と当期の損失の最小化
+
+$$
+\pi^p=\kappa_pqx+\beta\mathbb E_t\pi^p_{t+1},\qquad
+\min_x\ \tfrac12[x^2+\omega_p(\pi^p)^2]
+$$
+
+から
+
+$$
+\boxed{x+\kappa_p(\gamma+\varphi)\omega_p\pi^p=0}
+$$ {#eq-flex-wage}
+
+を得る。この還元で継続損失は当期選択に依存しない。
+
+ただし賃金インフレ恒等式は $\pi^w=qx-s+d(\xi)+\pi^p$ なので、**$g_{w,s}=-1$ が残る**。「柔軟賃金では全ての将来政策関数の状態微分がゼロ」とは書かない。経済的に不要な履歴への依存を許した全均衡の一意性もここでは主張しない。
+
+### 正の調整費用からの極限
+
+$\eta_w\downarrow0$、$\kappa_w=\psi_w/\eta_w\to\infty$、
+$\omega_w=\eta_w/q\to0$ の正則な解の列を考える。
+$\widehat\kappa_p\to\kappa_p$、$\widehat\kappa_w/\kappa_w\to1$、
+$\Gamma^{mc}\to0$ と、配分・必要な導関数の有界性を確認したうえで、@eq-correct-target を $\kappa_w$ で割ると
+
+$$
+\begin{aligned}
+&\frac{1+\widehat\kappa_p+\widehat\kappa_w}{\kappa_w}x\\
+&\quad+q\left[\widehat\kappa_p\omega_p\pi^p
++(1+\widehat\kappa_p)\omega_w\pi^w+\Gamma^{mc}\right]=0.
+\end{aligned}
+$$
+
+極限は @eq-flex-wage となる。$\Gamma^{mc}\to0$ という仮定だけではこの縮約を保証できない。
+
+# 実行した検証と本文への対応
+
+## 数値検証
+
+解析的な無限期間の証明と、有限精度の数値検証を区別する。数値は次のPythonスクリプトで再実行できる。
+
+- `noponzi_validation.py`：固定信用限度の反例排除、対称定常均衡、実行可能な二期間の消費移転を確認。
+- `markov_counterexample.py`：二期間の後ろ向き最適化で、旧式の欠落項を確認。
+- `markov_stationary_check.py`：無ショックの無限期間定常Markov解を固定点として求め、制約・Bellman等式・一回限りの政策変更に対する最適性を確認。
+
+| 検証 | 結果 |
+|:---|:---|
+| 旧Ponzi反例、初期消費係数3通り | 全て有限時点で信用限度に違反 |
+| 第4回の対称定常均衡12通り | 静学条件・資産価格の最大残差 $1.12\times10^{-16}$ 未満 |
+| 借入・貯蓄と翌期精算24通り | 全て実行可能、全て効用低下 |
+| 二期間Markov問題の修正FOC | 残差 $1.75\times10^{-16}$ 未満 |
+| 定常Markov問題の修正FOC | 残差 $9.55\times10^{-18}$ 未満 |
+| 定常Markov問題の修正ターゲット | 残差 $2.61\times10^{-18}$ 未満 |
+
+第4回では $\alpha\in\{0,.3\}$、$\gamma\in\{.5,1,2\}$、
+$\beta\in\{.96,.99\}$、$\varphi=1$、$\bar L=10$ を用いた。数値的な遠期の小ささを無限期間の証明の代わりにはしていない。任意の許容代替計画に対する十分性は @eq-sufficiency で示した。
+
+Markovの基準計算は $\beta=.99$、$q=2$、$\psi_p=\psi_w=6$、
+$\eta_p=\eta_w=60$、従って $\kappa_p=\kappa_w=.1$、
+$\omega_p=\omega_w=30$ とする。将来の技術変化はゼロである。定常解は
+
+$$
+\begin{aligned}
+mc&=0.6733406812s,&x&=0.1288114780s,\\
+\pi^p&=0.2019662187s,&\pi^w&=-0.1246931001s,\\
+V(s)&=\tfrac12(3.0967356143)s^2.
+\end{aligned}
+$$
+
+ゼロの終端政策から52回の後ろ向き更新で固定点残差 $1.16\times10^{-14}$ 未満に達した。$s=.01$ では
+
+$$
+\begin{aligned}
+\text{旧限界費用FOCの左辺}&=-0.00671798293431,\\
+\text{欠けていた期待微分項}&=+0.00671798293431.
+\end{aligned}
+$$
+
+両者を合わせると上表の修正FOCの残差になる。還元目的関数の二階微分は $114.4788>0$、中心差分による一階微分は $2.72\times10^{-14}$ 未満、Bellman等式の残差は $5.33\times10^{-15}$ 未満だった。この線形二次・無ショックの解で最適性と固定点の整合性を確認した結果であり、任意のパラメータや外生状態における均衡の存在・一意性の証明ではない。
+
+さらに $\eta_w=6,.6,.06,.006,.0006,.00006$ の6点で柔軟賃金への接近を確認した。最後の点では $g_{w,s}=-.9999290$、$\Gamma^{mc}=1.92\times10^{-11}$ 未満となり、賃金インフレの状態微分をゼロと置く必要がないこととも整合する。
+
+## 本文と解答の差替え範囲
+
+| 対象 | 確定した変更内容 |
+|:---|:---|
+| 第4回「家計」の許容計画 | 自己の限界効用SDFによるNo-Ponzi制約を有限信用限度に置換。対称初期保有を明記 |
+| 第4回のSDF・Euler式 | SDFを最適条件・価格付けに位置づけ、信用制約の非拘束性を説明 |
+| 第4回の株式評価・境界条件 | 正則条件、配当現在価値による構成、対称均衡のTVCとの一致を説明 |
+| 解答の第4回・問4 | $\alpha=0$ での $D=V=0$ を、採用した無バブル対称均衡に結びつける |
+| 第10回・政策補論と導出補論 | 状態依存の期待関数、完全なFOC、@eq-correct-target、@eq-envelope に統一 |
+| 第10回・接続説明と発展問5 | 継続価値に加えて民間期待の状態微分が必要であることを明記 |
+| 第10回・発展問6と対応解答 | 実装金利と均衡決定性の区別を維持 |
+| 第10回・発展問7と対応解答 | 正確な柔軟賃金モデルを直接導出し、正則な極限の追加条件を区別 |
+
+本書で問題設定と導出は確定した。講義本文・解答の変更、各講義HTML/PDFの再生成は次の反映工程に残している。今回生成・点検するのは、この確定文書のHTML/PDFと上記の検証結果である。

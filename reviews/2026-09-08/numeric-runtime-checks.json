@@ -1,0 +1,19 @@
+{
+  "all_numeric_runtime_checks_passed": true,
+  "R_checks": [
+    {
+      "check": "laffer_peak_error",
+      "value": "1.0523359961212e-10"
+    },
+    {
+      "check": "lecture09_matrix_residual",
+      "value": "5.55111512312578e-16"
+    },
+    {
+      "check": "lecture09_NKPC_residual",
+      "value": "6.10622663543836e-16"
+    }
+  ],
+  "lecture08_actual_R_vs_independent_solution_max_difference": 4.996003610813204e-16,
+  "graphics_status": "FAILED: Japanese labels become dots in fresh lecture05/09 PDFs; numeric results pass"
+}

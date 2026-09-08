@@ -1,0 +1,47 @@
+{
+  "lecture03": {
+    "status": "verified",
+    "inspected_pages": [
+      13,
+      14
+    ],
+    "method": "pdftoppm page images inspected with view_image",
+    "findings": []
+  },
+  "lecture05": {
+    "status": "verified",
+    "inspected_pages": [
+      17,
+      18
+    ],
+    "method": "pdftoppm page images inspected with view_image",
+    "findings": []
+  },
+  "lecture10": {
+    "status": "verified",
+    "inspected_pages": [
+      32,
+      33
+    ],
+    "method": "pdftoppm page images inspected with view_image",
+    "findings": []
+  },
+  "lecture11": {
+    "status": "verified",
+    "inspected_pages": [
+      12,
+      13
+    ],
+    "method": "pdftoppm page images inspected with view_image",
+    "findings": []
+  },
+  "lecture12": {
+    "status": "verified",
+    "inspected_pages": [
+      34,
+      35
+    ],
+    "method": "pdftoppm page images inspected with view_image",
+    "findings": []
+  }
+}

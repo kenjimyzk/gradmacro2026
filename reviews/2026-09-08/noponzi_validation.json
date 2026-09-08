@@ -1,0 +1,362 @@
+{
+  "status": "verified finite numerical checks; infinite limits proven analytically in accompanying note",
+  "credit_limit_L": 10.0,
+  "counterexample_exclusions": [
+    {
+      "K": 1.0,
+      "first_violation_t": 3,
+      "B": -11.210069444444445,
+      "limit": -10.0
+    },
+    {
+      "K": 10.0,
+      "first_violation_t": 1,
+      "B": -28.375,
+      "limit": -10.0
+    },
+    {
+      "K": 100.0,
+      "first_violation_t": 0,
+      "B": -99.0,
+      "limit": -10.0
+    }
+  ],
+  "steady_equilibria": [
+    {
+      "alpha": 0.0,
+      "gamma": 0.5,
+      "beta": 0.96,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0416666666666667,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.24,
+          "utility_gap": -0.029815164183932485,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        },
+        {
+          "delta": 0.24,
+          "utility_gap": -0.03012547960186901,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        }
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "gamma": 0.5,
+      "beta": 0.99,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0101010101010102,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.2475,
+          "utility_gap": -0.03135754498546098,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        },
+        {
+          "delta": 0.2475,
+          "utility_gap": -0.0314389101379437,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "gamma": 1.0,
+      "beta": 0.96,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0416666666666667,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.24,
+          "utility_gap": -0.060219036440118945,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        },
+        {
+          "delta": 0.24,
+          "utility_gap": -0.06106340993676418,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        }
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "gamma": 1.0,
+      "beta": 0.99,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0101010101010102,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.2475,
+          "utility_gap": -0.06344216655803864,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        },
+        {
+          "delta": 0.2475,
+          "utility_gap": -0.06366370308372635,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "gamma": 2.0,
+      "beta": 0.96,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0416666666666667,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.24,
+          "utility_gap": -0.12378947368421067,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        },
+        {
+          "delta": 0.24,
+          "utility_gap": -0.12645161290322576,
+          "budget_residual": 0.0,
+          "telescope_residual": 0.0
+        }
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "gamma": 2.0,
+      "beta": 0.99,
+      "N": 1.0,
+      "C": 1.0,
+      "W": 1.0,
+      "D": 0.0,
+      "R": 1.0101010101010102,
+      "V": 0.0,
+      "credit_limit_slack": 10.0,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 0.0,
+      "deviations": [
+        {
+          "delta": -0.2475,
+          "utility_gap": -0.13090365448504993,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        },
+        {
+          "delta": 0.2475,
+          "utility_gap": -0.13160320641282547,
+          "budget_residual": 0.0,
+          "telescope_residual": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 0.5,
+      "beta": 0.96,
+      "N": 0.8056010512181716,
+      "C": 0.8595754771056596,
+      "W": 0.746899266161719,
+      "D": 0.2578726431316979,
+      "R": 1.0416666666666667,
+      "V": 6.188943435160744,
+      "credit_limit_slack": 16.188943435160745,
+      "max_equilibrium_residual": 1.1102230246251565e-16,
+      "T10000_equity_terminal": 3.191147725139293e-177,
+      "deviations": [
+        {
+          "delta": -0.2062981145053583,
+          "utility_gap": -0.027642620644296456,
+          "budget_residual": 0.0,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.2062981145053583,
+          "utility_gap": -0.027930324288159447,
+          "budget_residual": 8.881784197001252e-16,
+          "telescope_residual": 8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 0.5,
+      "beta": 0.99,
+      "N": 0.8056010512181716,
+      "C": 0.8595754771056596,
+      "W": 0.746899266161719,
+      "D": 0.2578726431316979,
+      "R": 1.0101010101010102,
+      "V": 25.52939167003807,
+      "credit_limit_slack": 35.529391670038066,
+      "max_equilibrium_residual": 1.1102230246251565e-16,
+      "T10000_equity_terminal": 5.740985391869086e-43,
+      "deviations": [
+        {
+          "delta": -0.21274493058365074,
+          "utility_gap": -0.02907261268199493,
+          "budget_residual": 3.552713678800501e-15,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.21274493058365074,
+          "utility_gap": -0.029148048994532716,
+          "budget_residual": 0.0,
+          "telescope_residual": 8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 1.0,
+      "beta": 0.96,
+      "N": 0.8366600265340756,
+      "C": 0.8826414406034022,
+      "W": 0.7384708111153171,
+      "D": 0.26479243218102066,
+      "R": 1.0416666666666667,
+      "V": 6.35501837234449,
+      "credit_limit_slack": 16.35501837234449,
+      "max_equilibrium_residual": 1.1102230246251565e-16,
+      "T10000_equity_terminal": 3.2767794106683106e-177,
+      "deviations": [
+        {
+          "delta": -0.2118339457448165,
+          "utility_gap": -0.060219036440118945,
+          "budget_residual": 0.0,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.2118339457448165,
+          "utility_gap": -0.06106340993676407,
+          "budget_residual": 0.0,
+          "telescope_residual": 8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 1.0,
+      "beta": 0.99,
+      "N": 0.8366600265340756,
+      "C": 0.8826414406034022,
+      "W": 0.7384708111153171,
+      "D": 0.26479243218102066,
+      "R": 1.0101010101010102,
+      "V": 26.214450785921024,
+      "credit_limit_slack": 36.214450785921024,
+      "max_equilibrium_residual": 1.1102230246251565e-16,
+      "T10000_equity_terminal": 5.895039762912583e-43,
+      "deviations": [
+        {
+          "delta": -0.21845375654934204,
+          "utility_gap": -0.06344216655803864,
+          "budget_residual": 3.552713678800501e-15,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.21845375654934204,
+          "utility_gap": -0.06366370308372638,
+          "budget_residual": 3.552713678800501e-15,
+          "telescope_residual": 2.7755575615628914e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 2.0,
+      "beta": 0.96,
+      "N": 0.8762517608655035,
+      "C": 0.9116753922995109,
+      "W": 0.728298421881986,
+      "D": 0.27350261768985323,
+      "R": 1.0416666666666667,
+      "V": 6.564062824556471,
+      "credit_limit_slack": 16.564062824556473,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 3.384567070245123e-177,
+      "deviations": [
+        {
+          "delta": -0.2188020941518826,
+          "utility_gap": -0.1357824009837288,
+          "budget_residual": 0.0,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.2188020941518826,
+          "utility_gap": -0.13870245261778757,
+          "budget_residual": 0.0,
+          "telescope_residual": 8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "gamma": 2.0,
+      "beta": 0.99,
+      "N": 0.8762517608655035,
+      "C": 0.9116753922995109,
+      "W": 0.728298421881986,
+      "D": 0.27350261768985323,
+      "R": 1.0101010101010102,
+      "V": 27.076759151295448,
+      "credit_limit_slack": 37.07675915129545,
+      "max_equilibrium_residual": 0.0,
+      "T10000_equity_terminal": 6.088953499396602e-43,
+      "deviations": [
+        {
+          "delta": -0.22563965959412893,
+          "utility_gap": -0.14358581529207748,
+          "budget_residual": 0.0,
+          "telescope_residual": 2.7755575615628914e-17
+        },
+        {
+          "delta": 0.22563965959412893,
+          "utility_gap": -0.14435314095830099,
+          "budget_residual": 0.0,
+          "telescope_residual": 8.326672684688674e-17
+        }
+      ]
+    }
+  ]
+}

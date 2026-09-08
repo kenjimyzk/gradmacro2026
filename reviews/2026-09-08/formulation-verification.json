@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-08",
+  "scope": "Finalized formulation and derivations for findings 1 and 2; original teaching sources unchanged",
+  "original_source_sha256_match": true,
+  "original_files_checked": 17,
+  "numeric_checks_executed": [
+    "noponzi_validation.py",
+    "markov_counterexample.py",
+    "markov_stationary_check.py"
+  ],
+  "numeric_status": "passed all assertions",
+  "stationary_corrected_foc_residual": -9.540979117872439e-18,
+  "stationary_corrected_target_residual": -2.6020852139652106e-18,
+  "html_render": "passed",
+  "pdf_render": "passed",
+  "pdf_pages": 11,
+  "pdf_visual_review": "all 11 pages; final page 5 rechecked after parameter clarification; remaining pages pixel-identical",
+  "pdf_replacement_glyph_count": 0,
+  "pdf_unresolved_reference_count": 0,
+  "html_unresolved_cross_references": 0,
+  "not_run": [
+    "original lecture/solution source modifications",
+    "original lecture/solution renders for this finalization step",
+    "general stochastic Markov equilibrium existence or uniqueness proof"
+  ],
+  "output_sha256": {
+    "formulation.qmd": "8bdc9bbf57b00d9d24f6b86f776e3cb7bd14cb4ba4069ef28cbef47d9f564494",
+    "formulation.html": "01d04e25a43da53aa7d563ae5d05db8324105f0919a61599367c391b5d69d4d9",
+    "formulation.pdf": "de03ed5c1cd515566a00f6a3a8b69d059790386b22f4cd6f8d6c0d4eb1deb6cc",
+    "noponzi_validation.py": "af06eca035537393a0db8bd6dbcdc0b8466479b8ac39026ec6058e7aa55b249b",
+    "noponzi_validation.json": "281823ed8ea12cc02430e4222dce5530e73b90adeb82143ecab9d3ee01efc493",
+    "markov_stationary_check.py": "d167c1a019948c656336139e91ad2442471aee4e7dca6b7c1eea595da97814b6",
+    "markov_stationary_check.json": "29d733576e2c1f7e1562f4d3e7fc232418d8c055c84d6c334be6fa74daaafd97"
+  }
+}

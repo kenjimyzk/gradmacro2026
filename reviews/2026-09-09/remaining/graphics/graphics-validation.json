@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-09",
+  "runtime": {
+    "R": "4.6.1",
+    "systemfonts": "1.3.2",
+    "cairo": true,
+    "png": true,
+    "direct_check_font": "Hiragino Sans",
+    "final_pdf_plot_font": "NotoSansJP"
+  },
+  "direct_R_check": "verified: --vanilla clean process; no packages installed",
+  "scripts_parse": "verified",
+  "invalid_font_setting": "verified: informative error, no silent fallback",
+  "laffer_numeric": {
+    "vartheta": 0.3,
+    "tau_star": 0.7692307692307692,
+    "checked_tolerance": 1e-14
+  },
+  "final_pdf": {
+    "physical_pages": 21,
+    "visually_inspected_pages": [
+      17,
+      18,
+      19
+    ],
+    "figure_page": 18,
+    "japanese_labels_readable": true,
+    "plotmath_tau_N_readable": true,
+    "caption_intact": true,
+    "font_embedded": true,
+    "note": "Initial generated PDF before exercise-layout-only revision; figure unchanged in planned follow-up"
+  },
+  "final_html": {
+    "embedded_png_visually_inspected": true,
+    "image_path_resolves": true,
+    "setup_link_resolves": true,
+    "browser_layout_check": "not run"
+  },
+  "limitations": [
+    "Other OS not run.",
+    "No missing-package installation was needed, so an actual fresh local-library installation was not run.",
+    "Existing p19 exercise headings detached from p20 question body; identical in HEAD PDF, unrelated to graphics change."
+  ],
+  "sha256": {
+    "lecture05.qmd": "5a5cc4fd5ef951ea2e65e4276a0b68147ed1ffa90933129804793d5d616443f4",
+    "lecture05.html": "b0f61577d0eb4037dc65f4faef5c504ba90a37a9b7f7c183674aa748994c5c3e",
+    "lecture05.pdf": "7998d49c9b3102f250a3731a9c422195b6dc34cc33eea68fbe3d9e7a8191512f",
+    "lecture05_files/figure-html/fig-laffer-curve-1.png": "545e4fd32e637e6d04319e86344e39c65a78a66e64e842f4cd6092950f9d73e3",
+    "scripts/japanese-graphics.R": "816374b6ee9c152760f3e144c8b481771bbfadfcce8cd08d342ec37c9811c69c",
+    "scripts/setup-graphics.R": "408587be7db16ed3a36f634c172bb7e292d3a5fcf983c9274d5652ee8abc7f46",
+    "scripts/check-graphics.R": "8a2e7f5daa966e2291d955ae19bc85985ee900f8c775dbae144df717e2e1b488",
+    "scripts/render-lecture.R": "bd909bca2ce7fb6c01c97df29fb7ccf0c030bd2a0ee346eaa38384e06a57976a",
+    "scripts/README-graphics.md": "8b99d30dcc46e184b272c6cbb20969b215df89ec3dbb8bdd950967f5c7d4fbee"
+  },
+  "artifact_snapshot": "2026-09-09 initial render before root adds PDF-only page break ahead of exercises",
+  "sha256_note": "Hashes record the initial generated snapshot, not the later exercise-layout-only revision."
+}

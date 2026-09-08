@@ -1,0 +1,9 @@
+{
+  "observations": 318,
+  "first": "1947-01-01T00:00:00",
+  "last": "2026-04-01T00:00:00",
+  "sha256": "f7cfe97b773eef3bd354aa722fd632bcae10b30f43e5aefcc3de89b5e251c346",
+  "max_hp_foc_residual": 3.080025123836094e-11,
+  "max_reconstruction_error": 0.0,
+  "scope": "bundled snapshot and HP numeric calculation; no data refresh or output overwrite"
+}

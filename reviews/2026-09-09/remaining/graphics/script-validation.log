@@ -1,0 +1,5 @@
+scripts/japanese-graphics.R parsed
+scripts/setup-graphics.R parsed
+scripts/check-graphics.R parsed
+scripts/render-lecture.R parsed
+図の日本語を表示できるフォントが見つかりません。指定: gradmacro-font-does-not-exist。Noto Sans JP 等を OS に導入するか、導入済みの日本語フォントの family 名を GRADMACRO_JP_FONT に指定してください。詳細: scripts/README-graphics.md 

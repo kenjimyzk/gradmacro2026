@@ -21,6 +21,13 @@ format:
 lang: ja
 ---
 
+```{r}
+#| label: setup-japanese-graphics
+#| include: false
+source("scripts/japanese-graphics.R")
+jp_graphics <- configure_course_graphics()
+```
+
 # 講義の目的
 
 この回では、第4回の固定資本 $\bar K=1$、投資・資本蓄積なしの柔軟価格モデルに政府部門を導入します。政府購入 $G_t$、一括税、移転、政府債務を加え、財源調達と実物資源の吸収を分けて考えます。以下では、慣例に従って政府購入 $G_t$ を政府支出とも呼びます。
@@ -631,11 +638,11 @@ $$
 $$
 です。この値は、固定資本を蓄積せず、政府購入と政府債務をゼロに置いた本モデルにおける理論上の最大税収率です。実際の経済では、人的資本、就業参加、税回避、異質な家計、政府支出の便益などがあるため、経験的な最大税収率はこの単純な式だけでは決まりません。
 
-@fig-laffer-curve は、$\alpha=0.4$、$\gamma=\varphi=1$、$\mathcal A=1$ のもとで $TX(\tau_N)/\mathcal A=\tau_N(1-\tau_N)^\vartheta$ を描いています。HTML版では作図コードを展開できます。
+@fig-laffer-curve は、$\alpha=0.4$、$\gamma=\varphi=1$ のもとで、縦軸に正規化した税収 $TX(\tau_N)/\mathcal A=\tau_N(1-\tau_N)^\vartheta$ を描いています。HTML版では作図コードを展開できます。再生成の準備と日本語フォントの確認手順は [描画環境の説明](scripts/README-graphics.md) を参照してください。
 
 ```{r}
 #| label: fig-laffer-curve
-#| fig-cap: "労働所得税のラッファーカーブ。$\\alpha=0.4$、$\\gamma=\\varphi=1$、$\\mathcal A=1$。赤い破線は最大税収率 $\\tau_N^*=0.769$ を示す。"
+#| fig-cap: "労働所得税のラッファーカーブ。$\\alpha=0.4$、$\\gamma=\\varphi=1$。縦軸は正規化した税収 $TX/\\mathcal A$。赤い破線は最大税収率 $\\tau_N^*=0.769$ を示す。"
 #| fig-width: 6.5
 #| fig-height: 4
 #| fig-pos: H
@@ -647,23 +654,7 @@ alpha <- 0.4
 gamma <- 1
 varphi <- 1
 
-jp_font_candidates <- c(
-  "/Users/kenjimyzk/Library/Fonts/NotoSansJP-Regular.ttf",
-  "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
-  "/System/Library/Fonts/Supplemental/AppleGothic.ttf"
-)
-jp_font <- jp_font_candidates[file.exists(jp_font_candidates)][1]
-font_family <- ""
-
-if (
-  requireNamespace("showtext", quietly = TRUE) &&
-    requireNamespace("sysfonts", quietly = TRUE) &&
-    !is.na(jp_font)
-) {
-  suppressWarnings(sysfonts::font_add("jp_sans", regular = jp_font))
-  showtext::showtext_auto(enable = TRUE)
-  font_family <- "jp_sans"
-}
+font_family <- jp_graphics$family
 
 denom <- varphi + alpha + gamma * (1 - alpha)
 vartheta <- (1 - alpha) / denom
@@ -696,9 +687,6 @@ text(
 )
 par(op)
 
-if (font_family == "jp_sans") {
-  showtext::showtext_auto(enable = FALSE)
-}
 ```
 
 # まとめと第6回への接続
@@ -723,6 +711,10 @@ if (font_family == "jp_sans") {
 - Aiyagari, S. Rao, Lawrence J. Christiano, and Martin Eichenbaum (1992) "The Output, Employment, and Interest Rate Effects of Government Consumption." *Journal of Monetary Economics*, 30(1), 73-86.
 - Leeper, Eric M. (1991) "Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies." *Journal of Monetary Economics*, 27(1), 129-147.
 - Trabandt, Mathias, and Harald Uhlig (2011) "The Laffer Curve Revisited." *Journal of Monetary Economics*, 58(4), 305-327.
+
+```{=latex}
+\clearpage
+```
 
 # 演習問題
 

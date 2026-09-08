@@ -1,0 +1,128 @@
+[
+  {
+    "document": "lecture01",
+    "exit_code": 0,
+    "seconds": 12.62,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture01.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture03",
+    "exit_code": 0,
+    "seconds": 11.16,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture03.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture05",
+    "exit_code": 0,
+    "seconds": 12.75,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture05.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture07",
+    "exit_code": 0,
+    "seconds": 10.89,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture07.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture09",
+    "exit_code": 0,
+    "seconds": 13.51,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture09.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "solution",
+    "exit_code": 0,
+    "seconds": 11.77,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "solution.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture01",
+    "exit_code": 0,
+    "seconds": 11.85,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture01.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "lecture05",
+    "exit_code": 0,
+    "seconds": 12.08,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "lecture05.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  },
+  {
+    "document": "solution",
+    "exit_code": 0,
+    "seconds": 10.75,
+    "command": [
+      "/usr/local/bin/quarto",
+      "render",
+      "solution.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ]
+  }
+]

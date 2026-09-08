@@ -1,0 +1,35 @@
+{
+  "parameters": {
+    "beta": 0.99,
+    "kappa_p": 0.1,
+    "kappa_w": 0.1,
+    "gamma_plus_varphi": 2.0,
+    "omega_p": 30.0,
+    "omega_w": 30.0,
+    "initial_mc": 0.0,
+    "technology_change_0": 0.01,
+    "technology_change_1": 0.0
+  },
+  "terminal_policy_slopes": {
+    "mc": 0.8677685950413224,
+    "x": 0.20661157024793542,
+    "price": 0.08677685950413225,
+    "wage": -0.0454545454545453,
+    "value_curvature": 0.3305785123966945
+  },
+  "true_period_0_markov_optimum": {
+    "mc": -0.007838246391540297,
+    "x": -0.002159966896431803,
+    "price": -0.001457201260972719,
+    "wage": 0.0007045523474869843,
+    "Gamma_mc_beta_Vs": -0.0025652442735950086
+  },
+  "verification": {
+    "max_constraint_residual": 2.9815559743351372e-18,
+    "lecture_mc_foc_residual": 0.003353578031966497,
+    "missing_expectation_derivatives": -0.0033535780319663227,
+    "correct_mc_foc_residual": 1.7433970933566911e-16,
+    "lecture_target_condition_residual": 0.0006707156063932994,
+    "actual_loss_finite_difference_derivative": 0.0
+  }
+}

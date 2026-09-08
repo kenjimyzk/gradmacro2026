@@ -1,0 +1,900 @@
+{
+  "no_ponzi": {
+    "status": "verified finite numerical checks; infinite limits proven analytically in accompanying note",
+    "credit_limit_L": 10.0,
+    "counterexample_exclusions": [
+      {
+        "K": 1.0,
+        "first_violation_t": 3,
+        "B": -11.210069444444445,
+        "limit": -10.0
+      },
+      {
+        "K": 10.0,
+        "first_violation_t": 1,
+        "B": -28.375,
+        "limit": -10.0
+      },
+      {
+        "K": 100.0,
+        "first_violation_t": 0,
+        "B": -99.0,
+        "limit": -10.0
+      }
+    ],
+    "steady_equilibria": [
+      {
+        "alpha": 0.0,
+        "gamma": 0.5,
+        "beta": 0.96,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0416666666666667,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.24,
+            "utility_gap": -0.029815164183932485,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          },
+          {
+            "delta": 0.24,
+            "utility_gap": -0.03012547960186901,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          }
+        ]
+      },
+      {
+        "alpha": 0.0,
+        "gamma": 0.5,
+        "beta": 0.99,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0101010101010102,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.2475,
+            "utility_gap": -0.03135754498546098,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          },
+          {
+            "delta": 0.2475,
+            "utility_gap": -0.0314389101379437,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.0,
+        "gamma": 1.0,
+        "beta": 0.96,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0416666666666667,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.24,
+            "utility_gap": -0.060219036440118945,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          },
+          {
+            "delta": 0.24,
+            "utility_gap": -0.06106340993676418,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          }
+        ]
+      },
+      {
+        "alpha": 0.0,
+        "gamma": 1.0,
+        "beta": 0.99,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0101010101010102,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.2475,
+            "utility_gap": -0.06344216655803864,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          },
+          {
+            "delta": 0.2475,
+            "utility_gap": -0.06366370308372635,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.0,
+        "gamma": 2.0,
+        "beta": 0.96,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0416666666666667,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.24,
+            "utility_gap": -0.12378947368421067,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          },
+          {
+            "delta": 0.24,
+            "utility_gap": -0.12645161290322576,
+            "budget_residual": 0.0,
+            "telescope_residual": 0.0
+          }
+        ]
+      },
+      {
+        "alpha": 0.0,
+        "gamma": 2.0,
+        "beta": 0.99,
+        "N": 1.0,
+        "C": 1.0,
+        "W": 1.0,
+        "D": 0.0,
+        "R": 1.0101010101010102,
+        "V": 0.0,
+        "credit_limit_slack": 10.0,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 0.0,
+        "deviations": [
+          {
+            "delta": -0.2475,
+            "utility_gap": -0.13090365448504993,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          },
+          {
+            "delta": 0.2475,
+            "utility_gap": -0.13160320641282547,
+            "budget_residual": 0.0,
+            "telescope_residual": 5.551115123125783e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 0.5,
+        "beta": 0.96,
+        "N": 0.8056010512181716,
+        "C": 0.8595754771056596,
+        "W": 0.746899266161719,
+        "D": 0.2578726431316979,
+        "R": 1.0416666666666667,
+        "V": 6.188943435160744,
+        "credit_limit_slack": 16.188943435160745,
+        "max_equilibrium_residual": 1.1102230246251565e-16,
+        "T10000_equity_terminal": 3.191147725139293e-177,
+        "deviations": [
+          {
+            "delta": -0.2062981145053583,
+            "utility_gap": -0.027642620644296456,
+            "budget_residual": 0.0,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.2062981145053583,
+            "utility_gap": -0.027930324288159447,
+            "budget_residual": 8.881784197001252e-16,
+            "telescope_residual": 8.326672684688674e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 0.5,
+        "beta": 0.99,
+        "N": 0.8056010512181716,
+        "C": 0.8595754771056596,
+        "W": 0.746899266161719,
+        "D": 0.2578726431316979,
+        "R": 1.0101010101010102,
+        "V": 25.52939167003807,
+        "credit_limit_slack": 35.529391670038066,
+        "max_equilibrium_residual": 1.1102230246251565e-16,
+        "T10000_equity_terminal": 5.740985391869086e-43,
+        "deviations": [
+          {
+            "delta": -0.21274493058365074,
+            "utility_gap": -0.02907261268199493,
+            "budget_residual": 3.552713678800501e-15,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.21274493058365074,
+            "utility_gap": -0.029148048994532716,
+            "budget_residual": 0.0,
+            "telescope_residual": 8.326672684688674e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 1.0,
+        "beta": 0.96,
+        "N": 0.8366600265340756,
+        "C": 0.8826414406034022,
+        "W": 0.7384708111153171,
+        "D": 0.26479243218102066,
+        "R": 1.0416666666666667,
+        "V": 6.35501837234449,
+        "credit_limit_slack": 16.35501837234449,
+        "max_equilibrium_residual": 1.1102230246251565e-16,
+        "T10000_equity_terminal": 3.2767794106683106e-177,
+        "deviations": [
+          {
+            "delta": -0.2118339457448165,
+            "utility_gap": -0.060219036440118945,
+            "budget_residual": 0.0,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.2118339457448165,
+            "utility_gap": -0.06106340993676407,
+            "budget_residual": 0.0,
+            "telescope_residual": 8.326672684688674e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 1.0,
+        "beta": 0.99,
+        "N": 0.8366600265340756,
+        "C": 0.8826414406034022,
+        "W": 0.7384708111153171,
+        "D": 0.26479243218102066,
+        "R": 1.0101010101010102,
+        "V": 26.214450785921024,
+        "credit_limit_slack": 36.214450785921024,
+        "max_equilibrium_residual": 1.1102230246251565e-16,
+        "T10000_equity_terminal": 5.895039762912583e-43,
+        "deviations": [
+          {
+            "delta": -0.21845375654934204,
+            "utility_gap": -0.06344216655803864,
+            "budget_residual": 3.552713678800501e-15,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.21845375654934204,
+            "utility_gap": -0.06366370308372638,
+            "budget_residual": 3.552713678800501e-15,
+            "telescope_residual": 2.7755575615628914e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 2.0,
+        "beta": 0.96,
+        "N": 0.8762517608655035,
+        "C": 0.9116753922995109,
+        "W": 0.728298421881986,
+        "D": 0.27350261768985323,
+        "R": 1.0416666666666667,
+        "V": 6.564062824556471,
+        "credit_limit_slack": 16.564062824556473,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 3.384567070245123e-177,
+        "deviations": [
+          {
+            "delta": -0.2188020941518826,
+            "utility_gap": -0.1357824009837288,
+            "budget_residual": 0.0,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.2188020941518826,
+            "utility_gap": -0.13870245261778757,
+            "budget_residual": 0.0,
+            "telescope_residual": 8.326672684688674e-17
+          }
+        ]
+      },
+      {
+        "alpha": 0.3,
+        "gamma": 2.0,
+        "beta": 0.99,
+        "N": 0.8762517608655035,
+        "C": 0.9116753922995109,
+        "W": 0.728298421881986,
+        "D": 0.27350261768985323,
+        "R": 1.0101010101010102,
+        "V": 27.076759151295448,
+        "credit_limit_slack": 37.07675915129545,
+        "max_equilibrium_residual": 0.0,
+        "T10000_equity_terminal": 6.088953499396602e-43,
+        "deviations": [
+          {
+            "delta": -0.22563965959412893,
+            "utility_gap": -0.14358581529207748,
+            "budget_residual": 0.0,
+            "telescope_residual": 2.7755575615628914e-17
+          },
+          {
+            "delta": 0.22563965959412893,
+            "utility_gap": -0.14435314095830099,
+            "budget_residual": 0.0,
+            "telescope_residual": 8.326672684688674e-17
+          }
+        ]
+      }
+    ]
+  },
+  "markov_stationary": {
+    "base_stationary_equilibrium": {
+      "eta_w": 60.0,
+      "kappa_w": 0.1,
+      "omega_w": 30.0,
+      "steps": 52,
+      "slopes": {
+        "mc": 0.6733406811993582,
+        "x": 0.12881147799079518,
+        "price": 0.20196621865760253,
+        "wage": -0.12469310014303925,
+        "value_curvature": 3.096735614337205
+      },
+      "fixed_point_residual": 1.1546319456101628e-14,
+      "initial_state": 0.01,
+      "Gamma": 0.02064306487371605,
+      "expectation_price_derivative": 0.20196621865760253,
+      "expectation_wage_derivative": -0.12469310014303925,
+      "old_foc": -0.0067179829343111085,
+      "corrected_foc": -9.540979117872439e-18,
+      "missing_derivative_term": 0.006717982934311099,
+      "old_target": -0.001343596586862223,
+      "corrected_target": -2.6020852139652106e-18,
+      "one_shot_deviation_fd": 2.710505431213761e-14,
+      "one_shot_deviation_curvature": 114.47877276202237,
+      "constraint_residual": 3.686287386450715e-18,
+      "bellman_residual": 5.329070518200751e-15,
+      "price_only_target": 0.013406087899364103,
+      "normalized_target_x_coefficient": 15.233927256126353,
+      "current_optimal_loss": 0.0001548367807168601
+    },
+    "flexible_wage_limit": [
+      {
+        "eta_w": 6,
+        "kappa_w": 1.0,
+        "omega_w": 3.0,
+        "steps": 32,
+        "slopes": {
+          "mc": 0.5123557388269511,
+          "x": 0.16164795694873013,
+          "price": 0.10397508106816479,
+          "wage": -0.38366918010488416,
+          "value_curvature": 1.0701835618402877
+        },
+        "fixed_point_residual": 1.7763568394002505e-14,
+        "initial_state": 0.01,
+        "Gamma": 0.005428315426120673,
+        "expectation_price_derivative": 0.10397508106816479,
+        "expectation_wage_derivative": -0.38366918010488416,
+        "old_foc": -0.002416211537333894,
+        "corrected_foc": -1.1492543028346347e-16,
+        "missing_derivative_term": 0.002416211537333779,
+        "old_target": -0.004832423074667788,
+        "corrected_target": -2.3245294578089215e-16,
+        "one_shot_deviation_fd": 1.0164395367051604e-14,
+        "one_shot_deviation_curvature": 8.303796801717336,
+        "constraint_residual": 2.5587171270657905e-17,
+        "bellman_residual": 4.6629367034256575e-15,
+        "price_only_target": 0.007854984433577189,
+        "normalized_target_x_coefficient": 2.5827678185613188,
+        "current_optimal_loss": 5.350917809201399e-05
+      },
+      {
+        "eta_w": 0.6,
+        "kappa_w": 10.0,
+        "omega_w": 0.3,
+        "steps": 17,
+        "slopes": {
+          "mc": 0.25065294642042935,
+          "x": 0.09840977458346202,
+          "price": 0.033337999854399364,
+          "wage": -0.7160090537251713,
+          "value_curvature": 0.20988222738837828
+        },
+        "fixed_point_residual": 5.273559366969494e-16,
+        "initial_state": 0.01,
+        "Gamma": 0.0005208152270921775,
+        "expectation_price_derivative": 0.033337999854399364,
+        "expectation_wage_derivative": -0.7160090537251713,
+        "old_foc": -0.00029570040563069297,
+        "corrected_foc": -3.469446951953614e-18,
+        "missing_derivative_term": 0.0002957004056306895,
+        "old_target": -0.005914008112613859,
+        "corrected_target": -6.418476861114186e-17,
+        "one_shot_deviation_fd": 0.0,
+        "one_shot_deviation_curvature": 1.4741738534945426,
+        "constraint_residual": 2.8189256484623115e-18,
+        "bellman_residual": 0.0,
+        "price_only_target": 0.0029843777370985826,
+        "normalized_target_x_coefficient": 1.1841853583043775,
+        "current_optimal_loss": 1.0494111369418907e-05
+      },
+      {
+        "eta_w": 0.06,
+        "kappa_w": 100.0,
+        "omega_w": 0.03,
+        "steps": 9,
+        "slopes": {
+          "mc": 0.05414568201450352,
+          "x": 0.02262415119764328,
+          "price": 0.00572125145271525,
+          "wage": -0.9401330665327813,
+          "value_curvature": 0.02809087123999522
+        },
+        "fixed_point_residual": 4.718447854656915e-16,
+        "initial_state": 0.01,
+        "Gamma": 1.5057893878544319e-05,
+        "expectation_price_derivative": 0.00572125145271525,
+        "expectation_wage_derivative": -0.9401330665327813,
+        "old_foc": -9.183390191729211e-06,
+        "corrected_foc": 8.470329472543003e-21,
+        "missing_derivative_term": 9.18339019172922e-06,
+        "old_target": -0.0018366780383458521,
+        "corrected_target": -1.734723475976807e-17,
+        "one_shot_deviation_fd": -2.1175823681357508e-16,
+        "one_shot_deviation_curvature": 0.6597170768473756,
+        "constraint_residual": 6.396792817664476e-18,
+        "bellman_residual": 0.0,
+        "price_only_target": 0.0005695165991393478,
+        "normalized_target_x_coefficient": 1.0203639577480563,
+        "current_optimal_loss": 1.404543561999761e-06
+      },
+      {
+        "eta_w": 0.006,
+        "kappa_w": 1000.0,
+        "omega_w": 0.003,
+        "steps": 6,
+        "slopes": {
+          "mc": 0.006327556098700475,
+          "x": 0.0026703705266801193,
+          "price": 0.0006367443551414591,
+          "wage": -0.9930356995461581,
+          "value_curvature": 0.0029777719133751344
+        },
+        "fixed_point_residual": 1.1102230246251565e-16,
+        "initial_state": 0.01,
+        "Gamma": 1.8653598642705657e-07,
+        "expectation_price_derivative": 0.0006367443551414591,
+        "expectation_wage_derivative": -0.9930356995461581,
+        "old_foc": -1.1477177305504649e-07,
+        "corrected_foc": 9.502650877009182e-21,
+        "missing_derivative_term": 1.1477177305505599e-07,
+        "old_target": -0.0002295435461101107,
+        "corrected_target": -3.469446951953614e-18,
+        "one_shot_deviation_fd": 0.0,
+        "one_shot_deviation_curvature": 0.5614192919434116,
+        "constraint_residual": 4.6349642873755315e-18,
+        "bellman_residual": 0.0,
+        "price_only_target": 6.490836657528874e-05,
+        "normalized_target_x_coefficient": 1.0020837357194623,
+        "current_optimal_loss": 1.488885956687567e-07
+      },
+      {
+        "eta_w": 0.0006,
+        "kappa_w": 10000.0,
+        "omega_w": 0.0003,
+        "steps": 4,
+        "slopes": {
+          "mc": 0.000644155151208134,
+          "x": 0.00027214486927804325,
+          "price": 6.445661998396761e-05,
+          "wage": -0.9992913882288079,
+          "value_curvature": 0.00029977380922517843
+        },
+        "fixed_point_residual": 5.784218590210166e-16,
+        "initial_state": 0.01,
+        "Gamma": 1.9116983497558632e-09,
+        "expectation_price_derivative": 6.445661998396761e-05,
+        "expectation_wage_derivative": -0.9992913882288079,
+        "old_foc": -1.1772572179619123e-09,
+        "corrected_foc": 1.599353714371279e-21,
+        "missing_derivative_term": 1.1772572179635117e-09,
+        "old_target": -2.3545144359253534e-05,
+        "corrected_target": 6.938893903907228e-18,
+        "one_shot_deviation_fd": -1.6543612251060553e-18,
+        "one_shot_deviation_curvature": 0.551147291698268,
+        "constraint_residual": 6.777110610981657e-18,
+        "bellman_residual": 0.0,
+        "price_only_target": 6.58884589181849e-06,
+        "normalized_target_x_coefficient": 1.0002089362286402,
+        "current_optimal_loss": 1.498869046125892e-08
+      },
+      {
+        "eta_w": 6e-05,
+        "kappa_w": 100000.0,
+        "omega_w": 3e-05,
+        "steps": 4,
+        "slopes": {
+          "mc": 6.45324302501679e-05,
+          "x": 2.7266889468366114e-05,
+          "price": 6.453655330378632e-06,
+          "wage": -0.9999290139144195,
+          "value_curvature": 2.9997734082985246e-05
+        },
+        "fixed_point_residual": 1.3552527156068805e-19,
+        "initial_state": 0.01,
+        "Gamma": 1.9164684155495965e-11,
+        "expectation_price_derivative": 6.453655330378632e-06,
+        "expectation_wage_derivative": -0.9999290139144195,
+        "old_foc": -1.1802975492635326e-11,
+        "corrected_foc": -1.9398354716648835e-23,
+        "missing_derivative_term": 1.1802975492615928e-11,
+        "old_target": -2.360595098525875e-06,
+        "corrected_target": 3.469446951953614e-18,
+        "one_shot_deviation_fd": -1.0339757656912846e-19,
+        "one_shot_deviation_curvature": 0.5501147839054731,
+        "constraint_residual": 8.256771290716513e-18,
+        "bellman_residual": 0.0,
+        "price_only_target": 6.598882145063791e-07,
+        "normalized_target_x_coefficient": 1.0000208993611288,
+        "current_optimal_loss": 1.4998867041492623e-09
+      }
+    ]
+  },
+  "markov_exercises": {
+    "status": "PASS",
+    "scope": "Deterministic two-period discretion; d1=0; zero date-2 expectations and continuation; freely chosen real rates.",
+    "method": "Proposed scalar solution versus independent full KKT solve, direct two-period loss finite differences, all private constraints, IS/Fisher implementation, and historical counterexample.",
+    "limitations": "No infinite-horizon, stochastic, existence, or equilibrium-uniqueness claim.",
+    "new_nonzero_state_and_shock_cases": [
+      {
+        "parameters": {
+          "beta": 0.99,
+          "kp": 0.1,
+          "kw": 0.1,
+          "gamma": 1.0,
+          "phi": 1.0,
+          "wp": 30.0,
+          "ww": 30.0
+        },
+        "initial_state": 0.012,
+        "technology_change_0": 0.007,
+        "technology_change_1": 0.0,
+        "terminal_coefficients": {
+          "H": 72.6,
+          "h": 0.8677685950413224,
+          "a_p": 0.08677685950413225,
+          "a_w": -0.0454545454545453,
+          "a_x": 0.20661157024793542,
+          "P": 0.3305785123966945
+        },
+        "date0": {
+          "mc": 0.00391912319577015,
+          "price": 0.0007286006304863598,
+          "wage": -0.00035227617374348954,
+          "x": 0.001079983448215905,
+          "Gamma": 0.0012826221367975047,
+          "real_rate": 0.0047297527492572685,
+          "nominal_rate": 0.005069841952196,
+          "natural_rate": 0.005
+        },
+        "date1": {
+          "state": 0.00391912319577015,
+          "mc": 0.0034008920293873207,
+          "price": 0.0003400892029387321,
+          "wage": -0.00017814196344409738,
+          "x": 0.0008097361974731735,
+          "real_rate": -0.0028097361974731734,
+          "nominal_rate": -0.0028097361974731734,
+          "natural_rate": -0.002
+        },
+        "private_constraint_residuals": {
+          "date0_price_pc": 0.0,
+          "date0_wage_pc": 9.215718466126788e-19,
+          "date0_wage_identity": 6.505213034913027e-19,
+          "date0_is": -1.0842021724855044e-19,
+          "date0_fisher": -2.710505431213761e-19,
+          "date1_price_pc": 0.0,
+          "date1_wage_pc": 0.0,
+          "date1_wage_identity": 0.0,
+          "date1_is": 1.0842021724855044e-19,
+          "date1_fisher": 0.0
+        },
+        "verification": {
+          "terminal_coefficients_vs_kkt": 1.4988010832439613e-15,
+          "terminal_value_curvature_vs_kkt": 2.7755575615628914e-16,
+          "date0_allocation_vs_kkt": 7.589415207398531e-19,
+          "max_kkt_residual": 2.220446049250313e-16,
+          "max_private_constraint_and_implementation_residual": 9.215718466126788e-19,
+          "date0_analytic_objective_derivative": 2.7972416050126014e-17,
+          "date0_centered_finite_difference_derivative": 8.470329472543002e-17,
+          "terminal_objective_derivative": 2.2551405187698492e-17,
+          "one_shot_loss_curvature_identity": 3.2526065174565133e-19,
+          "corrected_mc_foc": 2.970713952610282e-17,
+          "corrected_target": 6.071532165918825e-18,
+          "old_foc_plus_missing_vs_corrected": 2.168404344971009e-19
+        },
+        "positive_objective_curvatures": {
+          "terminal": 72.6,
+          "date0": 87.83852479338843
+        },
+        "old_incomplete_mc_foc": -0.001676789015983141,
+        "missing_expectation_derivative_terms": 0.0016767890159831709
+      },
+      {
+        "parameters": {
+          "beta": 0.96,
+          "kp": 0.3,
+          "kw": 0.2,
+          "gamma": 2.0,
+          "phi": 0.5,
+          "wp": 8.0,
+          "ww": 12.0
+        },
+        "initial_state": -0.02,
+        "technology_change_0": 0.01,
+        "technology_change_1": 0.0,
+        "terminal_coefficients": {
+          "H": 30.0,
+          "h": 0.7200000000000001,
+          "a_p": 0.21600000000000003,
+          "a_w": -0.06399999999999983,
+          "a_x": 0.16000000000000014,
+          "P": 0.4479999999999999
+        },
+        "date0": {
+          "mc": -0.017859295892966972,
+          "price": -0.009061092364255724,
+          "wage": 0.0030796117427773044,
+          "x": -0.003179045150959958,
+          "Gamma": -0.007680925977647234,
+          "real_rate": 0.0056431156161704755,
+          "nominal_rate": 0.0017855077032896093,
+          "natural_rate": 0.005
+        },
+        "date1": {
+          "state": -0.017859295892966972,
+          "mc": -0.012858693042936221,
+          "price": -0.0038576079128808663,
+          "wage": 0.0011429949371498842,
+          "x": -0.0028574873428747205,
+          "real_rate": 0.003714974685749441,
+          "nominal_rate": 0.003714974685749441,
+          "natural_rate": -0.002
+        },
+        "private_constraint_residuals": {
+          "date0_price_pc": -1.3010426069826053e-18,
+          "date0_wage_pc": 2.168404344971009e-19,
+          "date0_wage_identity": 0.0,
+          "date0_is": 0.0,
+          "date0_fisher": 0.0,
+          "date1_price_pc": 0.0,
+          "date1_wage_pc": 0.0,
+          "date1_wage_identity": 0.0,
+          "date1_is": 0.0,
+          "date1_fisher": 0.0
+        },
+        "verification": {
+          "terminal_coefficients_vs_kkt": 1.6653345369377348e-16,
+          "terminal_value_curvature_vs_kkt": 1.1102230246251565e-16,
+          "date0_allocation_vs_kkt": 8.673617379884035e-18,
+          "max_kkt_residual": 2.220446049250313e-16,
+          "max_private_constraint_and_implementation_residual": 1.3010426069826053e-18,
+          "date0_analytic_objective_derivative": 1.1622647289044608e-16,
+          "date0_centered_finite_difference_derivative": 2.7105054312137607e-15,
+          "terminal_objective_derivative": 4.5102810375396984e-17,
+          "one_shot_loss_curvature_identity": 6.776263578034403e-19,
+          "corrected_mc_foc": 1.1275702593849246e-16,
+          "corrected_target": 5.551115123125783e-17,
+          "old_foc_plus_missing_vs_corrected": 1.734723475976807e-18
+        },
+        "positive_objective_curvatures": {
+          "terminal": 30.0,
+          "date0": 42.269617152
+        },
+        "old_incomplete_mc_foc": 0.0090772600825851,
+        "missing_expectation_derivative_terms": -0.009077260082584986
+      },
+      {
+        "parameters": {
+          "beta": 0.98,
+          "kp": 0.05,
+          "kw": 0.4,
+          "gamma": 1.5,
+          "phi": 1.5,
+          "wp": 40.0,
+          "ww": 5.0
+        },
+        "initial_state": 0.015,
+        "technology_change_0": -0.01,
+        "technology_change_1": 0.0,
+        "terminal_coefficients": {
+          "H": 7.0725694444444445,
+          "h": 0.8846776964995827,
+          "a_p": 0.04423388482497914,
+          "a_w": -0.07108841867543814,
+          "a_x": 0.23565221660366245,
+          "P": 0.15906524620747214
+        },
+        "date0": {
+          "mc": 0.020029755516684768,
+          "price": 0.0018697617964598125,
+          "wage": -0.0031004826868554214,
+          "x": 0.00525568791086042,
+          "Gamma": 0.0031223172328821974,
+          "real_rate": 0.0041965525620136735,
+          "nominal_rate": 0.005082546460611198,
+          "natural_rate": 0.005
+        },
+        "date1": {
+          "state": 0.020029755516684768,
+          "mc": 0.01771987797195049,
+          "price": 0.0008859938985975246,
+          "wage": -0.0014238836461367523,
+          "x": 0.004720056285536203,
+          "real_rate": -0.009080084428304304,
+          "nominal_rate": -0.009080084428304304,
+          "natural_rate": -0.002
+        },
+        "private_constraint_residuals": {
+          "date0_price_pc": 1.0842021724855044e-19,
+          "date0_wage_pc": -3.2526065174565133e-18,
+          "date0_wage_identity": -1.734723475976807e-18,
+          "date0_is": 0.0,
+          "date0_fisher": -2.168404344971009e-19,
+          "date1_price_pc": 0.0,
+          "date1_wage_pc": 0.0,
+          "date1_wage_identity": 0.0,
+          "date1_is": 0.0,
+          "date1_fisher": 0.0
+        },
+        "verification": {
+          "terminal_coefficients_vs_kkt": 2.7755575615628914e-17,
+          "terminal_value_curvature_vs_kkt": 2.7755575615628914e-17,
+          "date0_allocation_vs_kkt": 3.469446951953614e-18,
+          "max_kkt_residual": 3.885780586188048e-16,
+          "max_private_constraint_and_implementation_residual": 3.2526065174565133e-18,
+          "date0_analytic_objective_derivative": 1.3877787807814457e-17,
+          "date0_centered_finite_difference_derivative": 0.0,
+          "terminal_objective_derivative": 1.0408340855860843e-17,
+          "one_shot_loss_curvature_identity": 5.421010862427522e-20,
+          "corrected_mc_foc": 1.5612511283791264e-17,
+          "corrected_target": 1.5612511283791264e-17,
+          "old_foc_plus_missing_vs_corrected": 8.673617379884035e-19
+        },
+        "positive_objective_curvatures": {
+          "terminal": 7.0725694444444445,
+          "date0": 8.178050037799464
+        },
+        "old_incomplete_mc_foc": -0.0030650703878994648,
+        "missing_expectation_derivative_terms": 0.0030650703878994795
+      }
+    ],
+    "legacy_baseline_comparison": {
+      "max_difference": 6.938893903907228e-18,
+      "case": {
+        "parameters": {
+          "beta": 0.99,
+          "kp": 0.1,
+          "kw": 0.1,
+          "gamma": 1.0,
+          "phi": 1.0,
+          "wp": 30.0,
+          "ww": 30.0
+        },
+        "initial_state": 0.0,
+        "technology_change_0": 0.01,
+        "technology_change_1": 0.0,
+        "terminal_coefficients": {
+          "H": 72.6,
+          "h": 0.8677685950413224,
+          "a_p": 0.08677685950413225,
+          "a_w": -0.0454545454545453,
+          "a_x": 0.20661157024793542,
+          "P": 0.3305785123966945
+        },
+        "date0": {
+          "mc": -0.0078382463915403,
+          "price": -0.0014572012609727195,
+          "wage": 0.0007045523474869791,
+          "x": -0.00215996689643181,
+          "Gamma": -0.0025652442735950094,
+          "real_rate": 0.005540494501485463,
+          "nominal_rate": 0.004860316095607999,
+          "natural_rate": 0.005
+        },
+        "date1": {
+          "state": -0.0078382463915403,
+          "mc": -0.006801784058774641,
+          "price": -0.0006801784058774642,
+          "wage": 0.00035628392688819477,
+          "x": -0.001619472394946347,
+          "real_rate": -0.0003805276050536531,
+          "nominal_rate": -0.0003805276050536531,
+          "natural_rate": -0.002
+        },
+        "private_constraint_residuals": {
+          "date0_price_pc": 0.0,
+          "date0_wage_pc": -1.8431436932253575e-18,
+          "date0_wage_identity": -1.3010426069826053e-18,
+          "date0_is": 2.168404344971009e-19,
+          "date0_fisher": -3.2526065174565133e-19,
+          "date1_price_pc": 0.0,
+          "date1_wage_pc": 0.0,
+          "date1_wage_identity": 0.0,
+          "date1_is": 0.0,
+          "date1_fisher": 0.0
+        },
+        "verification": {
+          "terminal_coefficients_vs_kkt": 1.4988010832439613e-15,
+          "terminal_value_curvature_vs_kkt": 2.7755575615628914e-16,
+          "date0_allocation_vs_kkt": 1.5178830414797062e-18,
+          "max_kkt_residual": 2.220446049250313e-16,
+          "max_private_constraint_and_implementation_residual": 1.8431436932253575e-18,
+          "date0_analytic_objective_derivative": 5.594483210025203e-17,
+          "date0_centered_finite_difference_derivative": 0.0,
+          "terminal_objective_derivative": 4.5102810375396984e-17,
+          "one_shot_loss_curvature_identity": 1.0842021724855044e-19,
+          "corrected_mc_foc": 5.941427905220564e-17,
+          "corrected_target": 1.214306433183765e-17,
+          "old_foc_plus_missing_vs_corrected": 4.336808689942018e-19
+        },
+        "positive_objective_curvatures": {
+          "terminal": 72.6,
+          "date0": 87.83852479338843
+        },
+        "old_incomplete_mc_foc": 0.003353578031966282,
+        "missing_expectation_derivative_terms": -0.0033535780319663418
+      }
+    },
+    "maxima_across_all_cases": {
+      "terminal_coefficients_vs_kkt": 1.4988010832439613e-15,
+      "terminal_value_curvature_vs_kkt": 2.7755575615628914e-16,
+      "date0_allocation_vs_kkt": 8.673617379884035e-18,
+      "max_kkt_residual": 3.885780586188048e-16,
+      "max_private_constraint_and_implementation_residual": 3.2526065174565133e-18,
+      "date0_analytic_objective_derivative": 1.1622647289044608e-16,
+      "date0_centered_finite_difference_derivative": 2.7105054312137607e-15,
+      "terminal_objective_derivative": 4.5102810375396984e-17,
+      "one_shot_loss_curvature_identity": 6.776263578034403e-19,
+      "corrected_mc_foc": 1.1275702593849246e-16,
+      "corrected_target": 5.551115123125783e-17,
+      "old_foc_plus_missing_vs_corrected": 1.734723475976807e-18
+    },
+    "maximum_checked_residual": 2.7105054312137607e-15
+  }
+}

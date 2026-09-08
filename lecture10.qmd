@@ -1063,7 +1063,7 @@ $$
 $$
 です。価格硬直性だけのモデルでは、価格マークアップが需給ギャップを直接表しました。賃金硬直性を加えると、価格マークアップと賃金マークアップの合計が需給ギャップを表します。
 
-発展補論では、この二重硬直性を第9回の政策問題へ応用します。効率的実質賃金を動かすショックのもとで神々の配剤が崩れる理由と、無限期間の Markov 裁量政策で継続価値の影が必要になる理由を確認します。この政策分析は第10回の本編を理解するための必須項目ではありません。
+発展補論では、この二重硬直性を第9回の政策問題へ応用します。効率的実質賃金を動かすショックのもとで神々の配剤が崩れる理由と、Markov 裁量政策で将来の政策関数を固定しながら、翌期状態を通じる民間期待と継続損失の変化を考慮する理由を確認します。この政策分析は第10回の本編を理解するための必須項目ではありません。
 
 第11回では、家計異質性の効果を分離するため、賃金を再び柔軟にして第7回の価格硬直性モデルへ戻ります。そのうえで家計を貯蓄家計（saver）と手元流動性制約家計（hand-to-mouth）に分け、代表的家計の Euler 方程式だけでは集計需要を記述できなくなることを確認します。第10回で確認した賃金所得と配当所得の会計的な違いは、TANK では所得の受取先と税負担の帰着を明示する必要があることを予告しています。
 
@@ -1081,6 +1081,7 @@ $$
 - Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." *Journal of Political Economy*, 113(1), 1-45. [doi](https://doi.org/10.1086/426038)
 - Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)
 - Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
+- Svensson, Lars E. O. (2010) "Inflation Targeting." *Handbook of Monetary Economics*, Vol. 3B, Chapter 22, 1237-1302. [著者版](https://larseosvensson.se/files/papers/HandbookIT.pdf). §3.8 は、内生状態をもつモデルの裁量政策と民間期待の扱いを説明します。
 
 ```{=latex}
 \Needspace{0.35\textheight}
@@ -1152,47 +1153,87 @@ $$
 
 ## 発展問題
 
-**問5 [Research extension] [Derivation]：Markov 裁量政策**
+**問5 [Research extension] [Derivation]：二期間で学ぶ Markov 裁量政策**
 
-賃金インフレ恒等式により、今日の $mc_t$ は翌期の状態になります。継続価値の限界効果を
+$0<\beta<1$、$q\equiv\gamma+\varphi>0$、$K\equiv\kappa_wq>0$ とし、$t=0,1$ の二期間を考えます。各期の損失は
 $$
-\Gamma_t^{mc}
-\equiv
-\beta\mathbb{E}_tV_s(mc_t,\xi_{t+1})
+\ell_t=\frac12\left[x_t^2+\omega_p(\pi_t^p)^2+\omega_w(\pi_t^w)^2\right]
 $$
-と置きます。$mc_t$ の一階条件に $\Gamma_t^{mc}$ が入る理由を説明し、Markov 裁量政策のターゲット条件
+です。$z_t\equiv mc_t$、$s_t\equiv mc_{t-1}$ と置くと、$s_1=z_0$ です。初期状態 $s_0$ と当期の技術変化 $d_0\equiv a_0-a_{-1}$ は所与とし、翌期の技術変化は $d_1\equiv a_1-a_0=0$ とします。第1期には不確実性がなく、第2期の期待値と継続損失を
 $$
-\left(1+\kappa_p+\kappa_w\right)x_t
-+
-\kappa_w(\gamma+\varphi)
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-\right]
-+
-\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
-=0
+\mathbb E_1\pi_2^p=\mathbb E_1\pi_2^w=\mathbb E_1x_2=0,
+\qquad V_2=0
 $$
-を導出しなさい。また、一期間問題または終端期には $\Gamma_t^{mc}=0$ となる理由を説明しなさい。
+と設定します。Taylorルールに代えて裁量的な政策最適化を考え、金利制約は置きません。中央銀行は第1期に再最適化します。各期の配分は、後の政策補論で示す価格・賃金Phillips曲線と賃金インフレ恒等式を満たします。
 
-**問6 [Research extension]：ターゲット条件と政策金利**
+1. **終端期を先に解く。** 第1期の3つの制約を、$s_1$ を所与とする選択変数 $z_1$ だけの式に直しなさい。次に $\ell_1$ を $z_1$ で微分し、次の静学ターゲット条件を導きなさい。
 
-問5の式が望ましい配分を表すターゲット条件であり、政策金利の反応関数ではないことを説明しなさい。さらに、選ばれた配分を実現する
 $$
-r_t
-=
-r_t^f+\gamma(\mathbb{E}_t x_{t+1}-x_t),
+(1+\kappa_p+\kappa_w)x_1
++K\left[\kappa_p\omega_p\pi_1^p
++(1+\kappa_p)\omega_w\pi_1^w\right]=0.
+$$
+
+2. **将来政策の状態依存性を残す。** (1)の終端解は、$s_1$ に対する係数を $a_p,a_w,a_x$ として
+
+$$
+\pi_1^p=a_ps_1,\qquad \pi_1^w=a_ws_1,\qquad x_1=a_xs_1,
+$$
+$$
+V_1(s_1)=\frac12P s_1^2,\qquad
+P=a_x^2+\omega_pa_p^2+\omega_wa_w^2
+$$
+
+と書けます。第0期の中央銀行はこれらの**関数**を変更できません。$s_1=z_0$ を使い、$F_j(z_0)\equiv\mathbb E_0\pi_1^j$（$j=p,w$）、$F_x(z_0)\equiv\mathbb E_0x_1$、$\Gamma_0^{mc}\equiv\beta V_1'(z_0)$ を求めなさい。関数を固定しても、$z_0$ を動かすと期待値が動く理由を説明しなさい。
+
+3. **第0期を解く。** $\ell_0+\beta V_1(z_0)$ を最小化します。(2)で求めた期待を民間制約に代入し、$\pi_0^p,\pi_0^w,x_0$ を $z_0$ の関数として書きなさい。その微分、またはラグランジュ乗数を使い、
+
+$$
+\widehat\kappa_{p,0}\equiv\kappa_p+\beta a_p,
 \qquad
-r_t^N
-=
-r_t+\mathbb{E}_t\pi_{t+1}^p
+\widehat\kappa_{w,0}\equiv\kappa_w-\beta a_w
 $$
-を IS曲線とフィッシャー関係から導出しなさい。
 
-**問7 [Research extension] [Derivation]：柔軟賃金極限**
+のもとで
 
-$\eta_w\to0$ のとき、$\omega_w\to0$、$\kappa_w\to\infty$、$\Gamma_t^{mc}\to0$ となることを使い、問5の条件が第9回の価格硬直性だけのターゲット条件へ戻ることを示しなさい。
+$$
+\begin{aligned}
+&(1+\widehat\kappa_{p,0}+\widehat\kappa_{w,0})x_0\\
+&\quad+K\left[
+\widehat\kappa_{p,0}\omega_p\pi_0^p
++(1+\widehat\kappa_{p,0})\omega_w\pi_0^w+\Gamma_0^{mc}
+\right]=0
+\end{aligned}
+$$
+
+を導きなさい。継続損失の微分 $\Gamma_0^{mc}$ と、民間期待の微分が別々に必要なことを説明しなさい。無限期間の問題への接続は @sec-markov-target で扱います。
+
+**問6 [Research extension]：二期間の配分と政策金利**
+
+問5で選ばれた配分を実装する実質利子率 $r_0,r_1$ と名目利子率 $r_0^N,r_1^N$ を、IS曲線とフィッシャー関係
+$$
+r_t=r_t^f+\gamma(\mathbb E_t x_{t+1}-x_t),
+\qquad r_t^N=r_t+\mathbb E_t\pi_{t+1}^p
+$$
+から求めなさい。第0期には $F_j(mc_0)=a_jmc_0$、第1期には翌期期待がゼロであることを使います。自然利子率 $r_t^f$ は所与です。
+
+さらに、問5の条件が配分のターゲット条件であり、政策金利の反応関数ではないことを説明しなさい。配分を支持する金利を求めることと、特定の金利ルールのもとで合理的期待均衡の一意性を証明することも区別しなさい。
+
+```{=latex}
+\Needspace{0.45\textheight}
+```
+
+**問7 [Research extension] [Derivation]：柔軟賃金モデルへの縮約**
+
+賃金調整費用を最初から $\eta_w=0$ としたモデルを考えます。本講義と同じ是正補助金のもとで、賃金マークアップ乖離は $\mu_t^w=0$、したがって $mc_t=qx_t$ です。$\omega_w=0$ となり、価格と産出に関する経済的に必要な状態は外生状態だけになります。
+
+この縮約モデルの価格Phillips曲線と損失関数から
+$$
+x_t+\kappa_p(\gamma+\varphi)\omega_p\pi_t^p=0
+$$
+を直接導出しなさい。さらに、価格インフレ率・需給ギャップ・価値関数が $s_t=mc_{t-1}$ に依存しなくても、賃金インフレ恒等式から $g_{w,s}=-1$ が残ることを示しなさい。
+
+**任意の追加問：** $\eta_w>0$ の正則な解を $\eta_w\downarrow0$ としたとき、一般ターゲット条件が同じ式に収束するために必要な追加条件を、@sec-markov-flex-limit を参考に述べなさい。$\Gamma^{mc}\to0$ だけで十分かも検討しなさい。
 
 ```{=latex}
 \clearpage
@@ -1387,7 +1428,7 @@ $$
 
 ## 効用関数の二階近似
 
-期間効用は
+$\gamma\neq1$ のとき、期間効用は
 $$
 U(C_t,N_t)
 =
@@ -1412,7 +1453,7 @@ c_t
 \frac{1-\gamma}{2}c_t^2
 +O(3)
 $$
-であり、
+となります。$\gamma=1$ では消費の効用に $\log C_t=c_t$ を用います。これは $C=1$ の正規化のもとで厳密に成り立つので、消費の二次項はゼロとなり、以下の期間効用の近似式も適用できます。労働不効用は
 $$
 \frac{N_t^{1+\varphi}}{1+\varphi}
 =
@@ -1423,7 +1464,7 @@ n_t
 \frac{1+\varphi}{2}n_t^2
 +O(3)
 $$
-以上から、期間効用の二階近似は
+です。以上から、期間効用の二階近似は
 $$
 U(C_t,N_t)
 =
@@ -1666,492 +1707,293 @@ $$
 
 この結論は、第9回の政策問題との重要な違いです。技術ショックなど効率的実質賃金の経路を変えるショックのもとでは、価格インフレ安定化、賃金インフレ安定化、厚生上の産出ギャップ安定化の3つを同時に完全達成できません。反対に、効率的実質賃金を動かさない需要ショックだけなら、二重硬直性があるという理由だけでこの不可能性が生じるわけではありません。
 
-## Markov 裁量政策と一期間ベンチマーク
+## Markov 裁量政策と二期間の足場
 
-補論で導いた厚生損失を使うと、中央銀行の目的関数は
+補論で導いた厚生損失を使うと、中央銀行は
 $$
-\frac{1}{2}
-\mathbb{E}_0
-\sum_{t=0}^{\infty}
-\beta^t
-\left[
-x_t^2
-+
-\omega_p(\pi_t^p)^2
-+
-\omega_w(\pi_t^w)^2
-\right]
+\frac12\mathbb E_0\sum_{t=0}^{\infty}\beta^t
+\left[x_t^2+\omega_p(\pi_t^p)^2+\omega_w(\pi_t^w)^2\right]
 $$
-です。ここでは有効下限制約を捨象し、中央銀行は自然利子率を観察して必要な実質利子率を実装できるとします。
+を最小化します。ここでは金利制約や金利平滑化費用を置かず、自然利子率を観察して必要な実質利子率を実装できるとします。この最適化は本編のTaylorルールに代わる政策設定です。
 
-第9回との違いは、実質限界費用 $mc_t$ が翌期の状態になることです。賃金インフレ恒等式の1期先を見れば、当期の $mc_t$ は翌期の $mc_{t-1}$ として残ります。したがって、裁量政策でも中央銀行は、当期の実質賃金が将来厚生へ与える効果を無視できません。
+第9回との違いは、実質限界費用 $mc_t$ が翌期の状態になることです。賃金インフレ恒等式を1期先へ進めると、$mc_t$ は翌期に所与の変数として残ります。したがって、裁量政策で所与とするのは将来の政策**関数**です。当期の $mc_t$ を動かせば、その関数を評価する翌期状態が変わります。中央銀行は、将来の損失だけでなく、当期のPhillips曲線に入る将来インフレ期待の変化も考慮します。
 
-$s_t\equiv mc_{t-1}$ を期首状態、$\xi_t$ を技術などの外生状態とします。Markov 裁量政策の価値関数は概念的に
+この点は問5の二期間問題で確認できます。終端の第1期で翌期期待と継続損失をゼロとすると、$s_1=mc_0$ を所与として静学問題を解けます。その解を
 $$
-V(s_t,\xi_t)
-=
-\min_{\pi_t^p,\pi_t^w,x_t,mc_t,r_t}
-\left\{
-\frac{1}{2}
-\left[
-x_t^2
-+\omega_p(\pi_t^p)^2
-+\omega_w(\pi_t^w)^2
-\right]
-+\beta\mathbb{E}_tV(mc_t,\xi_{t+1})
-\right\}
+\pi_1^p=a_ps_1,\qquad\pi_1^w=a_ws_1,\qquad
+x_1=a_xs_1,\qquad V_1(s_1)=\frac12P s_1^2
 $$
-と書けます。制約は上の価格・賃金フィリップス曲線、賃金インフレ恒等式、IS曲線です。将来の民間期待を当期の一階条件で所与としても、継続価値は残ります。実質限界費用を翌期へ持ち越す限界的な価値を
+と書きます。第0期の中央銀行は係数 $a_p,a_w,a_x,P$ を変更できません。しかし $mc_0$ を選び直すと
 $$
-\Gamma_t^{mc}
-\equiv
-\beta\mathbb{E}_t
-V_s(mc_t,\xi_{t+1})
+\mathbb E_0\pi_1^p=a_pmc_0,\qquad
+\mathbb E_0\pi_1^w=a_wmc_0,\qquad
+\beta V_1'(mc_0)=\beta Pmc_0
 $$
-と置くと、Markov 裁量政策が満たす一般化されたターゲット条件は
-$$
-\left(1+\kappa_p+\kappa_w\right)x_t
-+
-\kappa_w(\gamma+\varphi)
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-\right]
-+
-\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
-=0.
-$$
-です。$\Gamma_t^{mc}$ は、当期の実質賃金を変えることで翌期以降の調整費用と安定化余地がどう変わるかを表します。一般には価値関数を解かなければ $\Gamma_t^{mc}$ は決まらないため、Markov 裁量解は当期変数だけの静学条件には縮約できません。
+が変わります。最後の式が継続損失の限界効果 $\Gamma_0^{mc}$ です。最初の2つの期待微分も、第0期の最適条件に入ります。
 
-一期間だけを最適化する場合、または有限期間問題の終端期には $\Gamma_t^{mc}=0$ です。この条件付き静学ベンチマークでは
-$$
-x_t
-=
--
-\frac{\kappa_w(\gamma+\varphi)}
-{1+\kappa_p+\kappa_w}
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-\right].
-$$
-を得ます。この式は政策金利の反応関数ではなく、条件付き静学問題で選ばれる配分のターゲット条件です。$\omega_w$ が大きいほど、同じ賃金インフレ率に対してこの条件が要求する負の産出ギャップが大きくなります。
+無限期間では、同じ区別を将来政策関数と価値関数の固定点として表します。完全な一階条件、一般ターゲット条件、包絡条件は次の発展補論で導きます。これらの導出は本編の価格・賃金Phillips曲線と実質賃金の調整を理解するための必須項目ではありません。
 
-選ばれた配分を実装する実質利子率と名目利子率は、IS曲線とフィッシャー関係から
+## ターゲット条件と金利による実装
+
+ターゲット条件は望ましい配分を記述します。配分が決まったあと、それを支持する実質利子率と名目利子率は
 $$
 \begin{aligned}
-r_t
-&=
-r_t^f
-+\gamma
-\left(
-\mathbb{E}_t x_{t+1}-x_t
-\right),\\
-r_t^N
-&=
-r_t^f
-+\gamma
-\left(
-\mathbb{E}_t x_{t+1}-x_t
-\right)
-+\mathbb{E}_t\pi_{t+1}^p
+r_t&=r_t^f+\gamma\left(\mathbb E_t x_{t+1}-x_t\right),\\
+r_t^N&=r_t+\mathbb E_t\pi_{t+1}^p
 \end{aligned}
 $$
-と求めます。ターゲット条件は望ましい配分を記述し、この2式はその配分を実装する政策手段を記述します。
+から求めます。これらはIS曲線とフィッシャー関係による実装式です。特定の金利反応ルールを定め、そのルールのもとで合理的期待均衡が一意になることを証明したわけではありません。問6では二期間の期待関数を使って、この実装金利を具体的に求めます。
 
-柔軟賃金への移行は、賃金調整費用を $\eta_w\to0$ とする1つの構造的な極限です。このとき
+柔軟賃金モデルとの比較では、$\eta_w=0$ の縮約モデルを直接解くと、第9回の条件
 $$
-\omega_w=\frac{\eta_w}{\gamma+\varphi}\to0,
-\qquad
-\kappa_w=\frac{\psi_w}{\eta_w}\to\infty,
-\qquad
-\Gamma_t^{mc}\to0
+x_t+\kappa_p(\gamma+\varphi)\omega_p\pi_t^p=0
 $$
-この極限では実質賃金の持越し状態も消えます。一般化された条件は
-$$
-x_t
-=
--
-\kappa_p(\gamma+\varphi)\omega_p\pi_t^p
-$$
-に近づきます。これは、第9回の価格硬直性だけの裁量政策条件と同じ形です。ここで $\kappa_p(\gamma+\varphi)$ は、価格硬直性だけの NKフィリップス曲線の傾きです。
+が得られます。正の調整費用からの極限には、継続損失だけでなく期待関数の状態依存性についても条件が必要です。この区別は問7と @sec-markov-flex-limit で扱います。
 
-# 補論（発展）：Markov 裁量政策のターゲット条件
+# 補論（発展）：Markov 裁量政策のターゲット条件 {#sec-markov-target}
 
-この補論では、前の政策補論で示した Markov 裁量政策の一般化されたターゲット条件を導きます。$mc_t$ が翌期の状態になる点を明示し、継続価値の影 $\Gamma_t^{mc}$ を一階条件に残します。
+この補論では、将来の政策関数を固定しながら、その引数である翌期状態の変化を微分に残します。問5の二期間問題を無限期間へ拡張し、民間期待と継続損失の2つの経路を明示します。
 
-## 縮約体系
+## 状態と期待関数
 
-実質限界費用の乖離を
+期首の内生状態と当期の選択を
 $$
-mc_t
-=
-w_t-a_t
+s_t\equiv mc_{t-1},\qquad z\equiv mc_t=s_{t+1}
 $$
-と置きます。前の政策補論で確認したように、
-$$
-mc_t=(\gamma+\varphi)x_t+\mu_t^w
-$$
-なので、賃金マークアップは次式で表せます。
-$$
-\mu_t^w=mc_t-(\gamma+\varphi)x_t
-$$
+と置きます。$z$ はこの導出の略記です。外生状態 $\xi_t$ は、$a_t-a_{t-1}$、自然利子率、翌期の条件付き分布を決める情報を含みます。たとえば技術がAR(1)に従う場合も、賃金インフレ恒等式を評価するために $(a_t,a_{t-1})$ を含めます。移行核 $\mathcal P(d\xi'\mid\xi)$ は当期政策の影響を受けないとします。
 
-価格フィリップス曲線は
+将来の価格インフレ率、賃金インフレ率、需給ギャップの政策関数を $g_p(s,\xi),g_w(s,\xi),g_x(s,\xi)$ とし、
 $$
-\pi_t^p
-=
-\kappa_p mc_t
-+
-\beta\mathbb{E}_t\pi_{t+1}^p
+F_j(z,\xi)\equiv\int g_j(z,\xi')\mathcal P(d\xi'\mid\xi),
+\qquad j\in\{p,w,x\}
 $$
-です。賃金フィリップス曲線は
-$$
-\pi_t^w
-=
-\beta\mathbb{E}_t\pi_{t+1}^w
--
-\kappa_w\mu_t^w
-$$
-なので、$mc_t$ で書けば
-$$
-\pi_t^w
-=
-\kappa_w(\gamma+\varphi)x_t
--
-\kappa_w mc_t
-+
-\beta\mathbb{E}_t\pi_{t+1}^w
-$$
-です。
+と定義します。$F_{j,z}$ は第1引数による偏微分です。中央銀行は将来の政策関数を変更できませんが、当期の $z$ を選ぶことで翌期状態を変えられます。**関数を固定することと、その期待値を固定することは異なります。**
 
-さらに、$w_t=mc_t+a_t$ なので、賃金インフレ恒等式は
+継続損失の限界効果は
 $$
-\pi_t^w
-=
-mc_t-mc_{t-1}
-+
-(a_t-a_{t-1})
-+
-\pi_t^p
+\Gamma^{mc}(z,\xi)
+\equiv\beta\int V_s(z,\xi')\mathcal P(d\xi'\mid\xi)
 $$
-です。IS曲線は
+と定めます。$V_s$ は価値関数の第1引数による微分です。$\Gamma^{mc}$ は継続損失の微分だけを表し、民間期待の制約微分を含みません。
+
+裁量でも将来の状態を通じて民間期待が当期政策に反応する扱いは、Svensson の *Inflation Targeting*、§3.8・式(3.51)にも示されています。以下の条件は本講義の制約から導きます。
+
+## Bellman問題と均衡の固定点
+
+略記を
 $$
-x_t
-=
-\mathbb{E}_t x_{t+1}
--
-\frac{1}{\gamma}(r_t-r_t^f)
+q\equiv\gamma+\varphi>0,\qquad K\equiv\kappa_wq>0,
+\qquad d(\xi)\equiv a_t-a_{t-1}
 $$
-です。
+とします。$0<\beta<1$、$\gamma>0$、$\kappa_j=\psi_j/\eta_j>0$、$\omega_j=\eta_j/q>0$、$j=p,w$ です。実質利子率 $r$ は自由に選べるとし、金利制約や金利平滑化費用、Taylorルールは追加制約として課しません。
+
+滑らかな内点解を対象として、価値関数を
+$$
+\begin{aligned}
+V(s,\xi)=\min_{\pi^p,\pi^w,x,z,r}\Bigl\{
+&\tfrac12\bigl[x^2+\omega_p(\pi^p)^2+\omega_w(\pi^w)^2\bigr]\\
+&+\beta\int V(z,\xi')\mathcal P(d\xi'\mid\xi)\Bigr\}
+\end{aligned}
+$$
+と書きます。制約は
+$$
+\begin{aligned}
+\kappa_pz+\beta F_p(z,\xi)-\pi^p&=0,\\
+Kx-\kappa_wz+\beta F_w(z,\xi)-\pi^w&=0,\\
+z-s+d(\xi)+\pi^p-\pi^w&=0,\\
+F_x(z,\xi)-(r-r^f(\xi))/\gamma-x&=0
+\end{aligned}
+$$ {#eq-l10-markov-constraints}
+です。順に価格Phillips曲線、賃金Phillips曲線、賃金インフレ恒等式、IS曲線に対応します。
+
+全状態で、この最適化から得る $\pi^p,\pi^w,x$ が予想した $g_p,g_w,g_x$ と一致し、継続価値が $V$ に一致することが均衡の固定点条件です。一階条件だけで均衡の存在や一意性が保証されるわけではありません。有限期間では将来政策関数と価値関数に時点を付け、終端から後ろ向きに解きます。
 
 ```{=latex}
 \Needspace{0.42\textheight}
 ```
 
-## Markov 裁量政策問題
+## 完全な一階条件
 
-過去の実質限界費用を
+@eq-l10-markov-constraints の各左辺を $C_1,\ldots,C_4$ と呼び、ラグランジュ関数を
 $$
-s_t\equiv mc_{t-1}
+\mathcal L=\ell+\beta\int V(z,\xi')\mathcal P(d\xi'\mid\xi)
++\sum_{k=1}^4\Lambda_k C_k
 $$
-と置きます。当期に選ぶ $mc_t$ は翌期の $s_{t+1}$ になるため、裁量政策でも内生状態です。外生状態をまとめて $\xi_t$ と書くと、価値関数は
-$$
-V(s_t,\xi_t)
-=
-\min_{\pi_t^p,\pi_t^w,x_t,mc_t,r_t}
-\left\{
-\ell_t
-+\beta\mathbb{E}_tV(mc_t,\xi_{t+1})
-\right\}
-$$
-です。正規化済みの期間損失は
-$$
-\ell_t
-=
-\frac{1}{2}
-\left[
-x_t^2
-+
-\omega_p(\pi_t^p)^2
-+
-\omega_w(\pi_t^w)^2
-\right]
-$$
-です。
-
-裁量政策の一時的な逸脱を考えるとき、民間部門が形成した将来期待は所与として扱います。ただし、$mc_t$ が翌期の状態になることによる継続価値への効果は残ります。この効果を
-$$
-\Gamma_t^{mc}
-\equiv
-\beta\mathbb{E}_t
-V_s(mc_t,\xi_{t+1})
-$$
-と置きます。$V_s$ は価値関数の第1引数に関する微分です。
-
-ラグランジュ関数は次の通りです。
+とします。$\pi^p,x,\pi^w,z,r$ の一階条件は
 $$
 \begin{aligned}
-\mathcal{L}_t
-=&
-\frac{1}{2}
-\left[
-x_t^2
-+
-\omega_p(\pi_t^p)^2
-+
-\omega_w(\pi_t^w)^2
-\right]
-\\
-&+
-\beta\mathbb{E}_tV(mc_t,\xi_{t+1})
-\\
-&+
-\Lambda_{1t}
-\left(
-\kappa_p mc_t
-+
-\beta\mathbb{E}_t\pi_{t+1}^p
--
-\pi_t^p
-\right)
-\\
-&+
-\Lambda_{2t}
-\left(
-\kappa_w(\gamma+\varphi)x_t
--
-\kappa_w mc_t
-+
-\beta\mathbb{E}_t\pi_{t+1}^w
--
-\pi_t^w
-\right)
-\\
-&+
-\Lambda_{3t}
-\left(
-mc_t-mc_{t-1}
-+
-a_t-a_{t-1}
-+
-\pi_t^p
--
-\pi_t^w
-\right)
-\\
-&+
-\Lambda_{4t}
-\left(
-\mathbb{E}_t x_{t+1}
--
-\frac{1}{\gamma}(r_t-r_t^f)
--
-x_t
-\right)
+\omega_p\pi^p-\Lambda_1+\Lambda_3&=0,\\
+x+K\Lambda_2-\Lambda_4&=0,\\
+\omega_w\pi^w-\Lambda_2-\Lambda_3&=0,\\
+(\kappa_p+\beta F_{p,z})\Lambda_1
++(-\kappa_w+\beta F_{w,z})\Lambda_2&\\
+\quad+\Lambda_3+F_{x,z}\Lambda_4+\Gamma^{mc}&=0,\\
+-\Lambda_4/\gamma&=0
 \end{aligned}
+$$ {#eq-l10-markov-focs}
+です。$z$ の条件には、継続損失の微分 $\Gamma^{mc}$ に加えて、民間期待の微分が入ります。
+
+実質利子率の条件から $\Lambda_4=0$ となるため、ISの期待微分 $F_{x,z}\Lambda_4$ は消えます。一方、価格・賃金Phillips曲線から生じる
 $$
-ここで $r_t$ は政策手段として選べる実質利子率です。名目利子率はフィッシャー方程式を通じて実装されます。
+\beta F_{p,z}\Lambda_1+\beta F_{w,z}\Lambda_2
+$$
+は一般には消えません。これらを落とすと、問5で求めた将来政策の状態依存性を無視した別の問題になります。
 
-```{=latex}
-\Needspace{0.42\textheight}
-```
+## 一般ターゲット条件
 
-## 一階条件
+有効な限界係数を
+$$
+\widehat\kappa_p\equiv\kappa_p+\beta F_{p,z},\qquad
+\widehat\kappa_w\equiv\kappa_w-\beta F_{w,z}
+$$
+と置きます。これらは構造パラメータではなく、一般には $(z,\xi)$ に依存し、正とは限りません。
 
-将来期待は所与として微分しますが、$mc_t$ の一階条件には継続価値の限界効果 $\Gamma_t^{mc}$ が残ります。一階条件は
+他の一階条件から
+$$
+\Lambda_2=-\frac{x}{K},\qquad
+\Lambda_3=\omega_w\pi^w+\frac{x}{K},\qquad
+\Lambda_1=\omega_p\pi^p+\Lambda_3
+$$
+を得ます。これを $z$ の一階条件へ代入すると
+$$
+\widehat\kappa_p\omega_p\pi^p
++(1+\widehat\kappa_p)\omega_w\pi^w
++\frac{1+\widehat\kappa_p+\widehat\kappa_w}{K}x
++\Gamma^{mc}=0
+$$
+です。従って一般ターゲット条件は
+$$
+\boxed{\begin{aligned}
+&(1+\widehat\kappa_p+\widehat\kappa_w)x\\
+&\quad+K\left[
+\widehat\kappa_p\omega_p\pi^p
++(1+\widehat\kappa_p)\omega_w\pi^w+\Gamma^{mc}
+\right]=0.
+\end{aligned}}
+$$ {#eq-l10-markov-target}
+
+この表示は $1+\widehat\kappa_p+\widehat\kappa_w\ne0$ を仮定しません。$x$ について解いた表示を使う場合には、その係数が非ゼロであることを別途確認する必要があります。
+
+## 一変数還元による確認
+
+$(s,\xi)$ を固定し、民間制約を順に解くと
 $$
 \begin{aligned}
-\frac{\partial\mathcal{L}_t}{\partial \pi_t^p}:
-&\qquad
-\omega_p\pi_t^p-\Lambda_{1t}+\Lambda_{3t}=0,
-\\
-\frac{\partial\mathcal{L}_t}{\partial x_t}:
-&\qquad
-x_t+\kappa_w(\gamma+\varphi)\Lambda_{2t}-\Lambda_{4t}=0,
-\\
-\frac{\partial\mathcal{L}_t}{\partial \pi_t^w}:
-&\qquad
-\omega_w\pi_t^w-\Lambda_{2t}-\Lambda_{3t}=0,
-\\
-\frac{\partial\mathcal{L}_t}{\partial mc_t}:
-&\qquad
-\kappa_p\Lambda_{1t}-\kappa_w\Lambda_{2t}+\Lambda_{3t}+\Gamma_t^{mc}=0,
-\\
-\frac{\partial\mathcal{L}_t}{\partial r_t}:
-&\qquad
--\frac{1}{\gamma}\Lambda_{4t}=0.
+\pi^p(z)&=\kappa_pz+\beta F_p(z,\xi),\\
+\pi^w(z)&=z-s+d(\xi)+\pi^p(z),\\
+x(z)&=\frac{\pi^w(z)+\kappa_wz-\beta F_w(z,\xi)}{K}
 \end{aligned}
 $$
-最後の式から
+となります。従って
 $$
-\Lambda_{4t}=0
-$$
-したがって、IS曲線はターゲット条件を決める制約ではなく、選んだ配分を実装する政策金利を決める条件になります。
-
-したがって、
-$$
-\Lambda_{2t}
-=
--
-\frac{x_t}{\kappa_w(\gamma+\varphi)}
-$$
-です。また、価格インフレ率の一階条件から
-$$
-\Lambda_{1t}
-=
-\omega_p\pi_t^p+\Lambda_{3t}
-$$
-です。
-
-これらを $mc_t$ の一階条件に代入すると、
-$$
-\kappa_p(\omega_p\pi_t^p+\Lambda_{3t})
--
-\kappa_w
-\left(
--
-\frac{x_t}{\kappa_w(\gamma+\varphi)}
-\right)
-+
-\Lambda_{3t}
-+
-\Gamma_t^{mc}
-=0
-$$
-です。整理して
-$$
-(1+\kappa_p)\Lambda_{3t}
-=
--
-\kappa_p\omega_p\pi_t^p
--
-\frac{x_t}{\gamma+\varphi}
--
-\Gamma_t^{mc}
-$$
-この式を $\Lambda_{3t}$ について解くと、
-$$
-\Lambda_{3t}
-=
--
-\frac{
-\kappa_p\omega_p\pi_t^p
-+
-x_t/(\gamma+\varphi)
-+
-\Gamma_t^{mc}
-}{1+\kappa_p}
-$$
-です。
-
-最後に、賃金インフレ率の一階条件
-$$
-\omega_w\pi_t^w-\Lambda_{2t}-\Lambda_{3t}=0
-$$
-へ代入します。
-$$
-\omega_w\pi_t^w
-+
-\frac{x_t}{\kappa_w(\gamma+\varphi)}
-+
-\frac{
-\kappa_p\omega_p\pi_t^p
-+
-x_t/(\gamma+\varphi)
-+
-\Gamma_t^{mc}
-}{1+\kappa_p}
-=0.
-$$
-両辺に $(1+\kappa_p)\kappa_w(\gamma+\varphi)$ を掛けると、
-$$
-(1+\kappa_p)\kappa_w(\gamma+\varphi)\omega_w\pi_t^w
-+
-(1+\kappa_p)x_t
-+
-\kappa_w(\gamma+\varphi)\kappa_p\omega_p\pi_t^p
-+
-\kappa_w x_t
-+
-\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
-=0
-$$
-以上から、一般化されたターゲット条件は次の式です。
-$$
-\left(1+\kappa_p+\kappa_w\right)x_t
-+
-\kappa_w(\gamma+\varphi)
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-\right]
-+
-\kappa_w(\gamma+\varphi)\Gamma_t^{mc}
-=0
+\pi^p_z=\widehat\kappa_p,\qquad
+\pi^w_z=1+\widehat\kappa_p,\qquad
+x_z=\frac{1+\widehat\kappa_p+\widehat\kappa_w}{K}.
 $$
 
-これを $x_t$ について解けば、本文の一般化されたターゲット条件
+還元した目的関数 $J(z)$ の微分は
 $$
-x_t
-=
--
-\frac{\kappa_w(\gamma+\varphi)}
-{1+\kappa_p+\kappa_w}
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-+
-\Gamma_t^{mc}
-\right]
+J_z=xx_z+\omega_p\pi^p\pi^p_z+\omega_w\pi^w\pi^w_z+\Gamma^{mc}
 $$
-です。
+です。$J_z=0$ に $K$ を掛けると @eq-l10-markov-target に一致します。問5の二期間問題では、終端政策の線形性を使ってこの微分を具体的に計算できます。
 
-価値関数の包絡条件は
-$$
-V_s(s_t,\xi_t)=-\Lambda_{3t}
-$$
-なので、
-$$
-\Gamma_t^{mc}
-=
--\beta\mathbb{E}_t\Lambda_{3,t+1}
-$$
-です。$\Gamma_t^{mc}$ は、翌期の賃金インフレ恒等式における状態制約の影を表します。この条件と民間部門の期待形成、価値関数を同時に解くことで Markov 裁量均衡が決まります。
+非線形な将来政策関数のもとでは、一般にこの式は必要条件です。将来政策がアフィンで継続価値が凸二次なら、還元した目的関数の凸性を確認することで十分性を検証できます。
 
-一期間問題または有限期間問題の終端期には継続価値がないため、$\Gamma_t^{mc}=0$ です。この場合に限り、ターゲット条件は
-$$
-\left(1+\kappa_p+\kappa_w\right)x_t
-+
-\kappa_w(\gamma+\varphi)
-\left[
-\kappa_p\omega_p\pi_t^p
-+
-(1+\kappa_p)\omega_w\pi_t^w
-\right]
-=0
-$$
-この式は当期変数だけで構成されます。無限期間の Markov 裁量条件ではなく、継続価値を持たない条件付き静学ベンチマークです。
+## 包絡条件と実装金利
 
-柔軟賃金極限では
+外生状態 $\xi$ を固定すると、現在の所与状態 $s$ は賃金インフレ恒等式の $-s$ だけに現れます。包絡定理より
 $$
-\eta_w\to0,
+V_s(s,\xi)=-\Lambda_3(s,\xi)
+$$
+です。従って均衡経路では
+$$
+\begin{aligned}
+\Gamma_t^{mc}&=-\beta\mathbb E_t\Lambda_{3,t+1}\\
+&=-\beta\mathbb E_t\left[
+\omega_w\pi_{t+1}^w+\frac{x_{t+1}}{K}\right].
+\end{aligned}
+$$ {#eq-l10-markov-envelope}
+
+これは所与状態 $s$ による微分です。当期選択 $z$ が将来期待を変える効果を省略する理由にはなりません。@eq-l10-markov-envelope を使うと、ターゲット条件は同値に
+$$
+\begin{aligned}
+&(1+\widehat\kappa_{p,t}+\widehat\kappa_{w,t})x_t\\
+&\quad+K\left[\widehat\kappa_{p,t}\omega_p\pi_t^p
++(1+\widehat\kappa_{p,t})\omega_w\pi_t^w\right]\\
+&\quad-\beta\mathbb E_t\left[x_{t+1}+K\omega_w\pi_{t+1}^w\right]=0
+\end{aligned}
+$$
+と表せます。
+
+配分を支持する金利は
+$$
+r_t=r_t^f+\gamma[F_x(mc_t,\xi_t)-x_t],\qquad
+r_t^N=r_t+F_p(mc_t,\xi_t)
+$$
+で復元します。講義と同じく、金利は定常値からの乖離です。金利に制約を置く場合には $\Lambda_4=0$ が一般に成立せず、このターゲット条件も見直す必要があります。
+
+## 期待を固定した静学問題と終端期
+
+期待値を外から固定して当期損失だけを最小化する問題では
+$$
+F_{p,z}=F_{w,z}=0,\qquad\Gamma^{mc}=0
+$$
+です。このとき @eq-l10-markov-target は
+$$
+(1+\kappa_p+\kappa_w)x
++K\left[\kappa_p\omega_p\pi^p+(1+\kappa_p)\omega_w\pi^w\right]=0
+$$
+に縮約されます。翌期期待と継続損失をともにゼロに設定する終端期も、この場合に含まれます。問5の第1期がその例です。
+
+$\Gamma^{mc}=0$ だけでは、この縮約は一般に保証されません。損失だけを有限期で打ち切り、民間期待には状態依存の将来政策を残す場合、期待の微分は残ります。特定の点で微分項が偶然相殺することと、一般的なターゲット条件が一致することは区別します。
+
+## 柔軟賃金モデルと正則な極限 {#sec-markov-flex-limit}
+
+### 調整費用がゼロのモデルを直接解く
+
+$\eta_w=0$ とすると、本講義と同じ是正補助金のもとで賃金マークアップ乖離は $\mu_t^w=0$ となり、$\omega_w=0$、$mc_t=qx_t$ が成立します。価格と産出の制約・損失から継承状態 $s_t$ が消えるため、経済的に必要な状態だけに依存する基本的なMarkov解では
+$$
+g_{p,s}=g_{x,s}=V_s=0
+$$
+です。価格Phillips曲線と当期損失の最小化
+$$
+\pi_t^p=\kappa_pqx_t+\beta\mathbb E_t\pi_{t+1}^p,
 \qquad
-\omega_w\to0,
-\qquad
-\kappa_w\to\infty,
-\qquad
-\Gamma_t^{mc}\to0
+\min_{x_t}\ \frac12\left[x_t^2+\omega_p(\pi_t^p)^2\right]
 $$
-を同時に取ります。一般化された条件を $\kappa_w$ で割って極限を取ると、
+から
 $$
-x_t
-+
-\kappa_p(\gamma+\varphi)\omega_p\pi_t^p
-=0
+\boxed{x_t+\kappa_p(\gamma+\varphi)\omega_p\pi_t^p=0}
 $$
-となり、第9回の価格硬直性だけの条件に戻ります。
+を得ます。この縮約では将来期待と継続損失が当期選択に依存しません。$\kappa_p(\gamma+\varphi)$ は、第9回の価格硬直性だけのPhillips曲線の傾きです。
+
+ただし、賃金インフレ恒等式は
+$$
+\pi_t^w=qx_t-s_t+d(\xi_t)+\pi_t^p
+$$
+なので、$g_{w,s}=-1$ が残ります。価格と産出に不要な状態となっても、賃金インフレ率の記述には過去の実質賃金が必要です。ここでは経済的に不要な履歴への依存を許した全均衡の一意性は主張していません。
+
+### 正の調整費用からの極限を取る場合
+
+$\eta_w>0$ のモデルから比較する場合には、
+$$
+\eta_w\downarrow0,\qquad
+\kappa_w=\psi_w/\eta_w\to\infty,\qquad
+\omega_w=\eta_w/q\to0
+$$
+のもとで正則な解の列を考えます。さらに
+$$
+\widehat\kappa_p\to\kappa_p,\qquad
+\frac{\widehat\kappa_w}{\kappa_w}\to1,\qquad
+\Gamma^{mc}\to0
+$$
+と、配分・必要な導関数の有界性を確認します。@eq-l10-markov-target を $\kappa_w$ で割ると
+$$
+\begin{aligned}
+&\frac{1+\widehat\kappa_p+\widehat\kappa_w}{\kappa_w}x\\
+&\quad+q\left[
+\widehat\kappa_p\omega_p\pi^p
++(1+\widehat\kappa_p)\omega_w\pi^w+\Gamma^{mc}\right]=0
+\end{aligned}
+$$
+となり、以上の条件のもとで価格硬直性だけのターゲット条件に収束します。$\Gamma^{mc}\to0$ という仮定だけでは、この縮約を保証できません。$g_{w,s}\to-1$ でも $\widehat\kappa_w/\kappa_w\to1$ とは両立するため、全ての将来政策関数の状態微分がゼロになる必要もありません。

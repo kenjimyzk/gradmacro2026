@@ -1,0 +1,22 @@
+{
+  "lecture04": {
+    "exit_code": 0,
+    "seconds": 10.47,
+    "html_exists": true,
+    "pdf_exists": true,
+    "pagination_adjusted": true
+  },
+  "lecture10": {
+    "exit_code": 0,
+    "seconds": 10.27,
+    "html_exists": true,
+    "pdf_exists": true,
+    "pagination_adjusted": true
+  },
+  "solution": {
+    "exit_code": 0,
+    "seconds": 10.48,
+    "html_exists": true,
+    "pdf_exists": true
+  }
+}
