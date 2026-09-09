@@ -1,0 +1,22 @@
+{
+  "lecture04": {
+    "math_spans": 207,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "6be522791058064939bbb1e6347f2753d7edfddfd6391455d570fb396aeffaa3",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  },
+  "solution": {
+    "math_spans": 538,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "6d55b7f3b200b914177713615cc6cc3d2b13232b24873c28f952c9e64da2473e",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  }
+}
