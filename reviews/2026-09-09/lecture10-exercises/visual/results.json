@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "pages": {
+    "lecture10": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "solution": [
+      4,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  "total_selected_pages": 14,
+  "pdf_sha256": {
+    "lecture10": "d0667a3649ed7ff2955c959837af79885661405fe8919a795b7a7db6cf5e7266",
+    "solution": "61581dc183e390e1b8d82956fcf13ee85fd999bc12a0248bfe545010e5a447f6"
+  },
+  "observations": [
+    "All new exercises and answers inspected, with adjoining pages and the solution table of contents.",
+    "No clipped or overlapping formulas or text.",
+    "L10 Q7 stays on p27; solution Q6 starts on p33; answer subheadings stay with their text."
+  ],
+  "full_pdf_visual_audit": false,
+  "browser_katex_tested": false
+}

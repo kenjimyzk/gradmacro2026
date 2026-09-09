@@ -1,0 +1,7 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture11.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture11.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 第11回講義の全体像：第7回の価格硬直性 RANKモデルに家計異質性を加え、Type S の Euler 方程式、Type H の現在所得制約、分配ブロックから TANK版 NK方程式を導く。
+WARNING: long figure caption; shorten the title and move detail to Notes: RANK と TANK の IS 曲線。横軸は需給ギャップ $x_t$、縦軸は各モデルの自然利子率からの実質利子率乖離である。期待需要を固定すると、$0<\Theta_T<1$ の TANK の傾き $-\gamma\Theta_T$ は RANK の傾き $-\gamma$ より絶対値が小さい。
+WARNING: long figure caption; shorten the title and move detail to Notes: 規模0.01のショックへの当期反応。棒の高さは、需給ギャップ $x_t$ について百分率、インフレ率 $\pi_t$ と実質利子率 $r_t$ についてパーセントポイントを表す。$m_t>0$ は金融緩和であり、この較正と $0<\Theta_T<1$ のもとで TANK の需要・インフレ反応が RANK より大きい。

@@ -1,0 +1,6 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture08.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture08.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 単一の正のAR(1)ショックに対する均衡反応：金融緩和と政府支出は需給ギャップとインフレ率を押し上げ、技術進歩は両者を押し下げる。矢印は構造的NKPCと政策ルールを同時に満たす誘導形の反応を表す。
+WARNING: long figure caption; shorten the title and move detail to Notes: 単一の1単位ショックに対するRANKモデルのIRF。値は例示的であり、特定経済の推定値ではない。横軸はモデル期間。パラメータは β=0.99、γ=ϕ=1、α=0.33、G/Y=0.20、ψ=6、η=80、政策反応係数=1.5。持続性は金融政策0.5、技術・政府支出0.8。

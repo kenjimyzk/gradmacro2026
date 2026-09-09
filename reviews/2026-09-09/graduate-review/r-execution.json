@@ -1,0 +1,20 @@
+{
+  "lecture05": {
+    "chunks": 2,
+    "exit_code": 0,
+    "log": "reviews/2026-09-09/graduate-review/lecture05-r.log",
+    "warnings": false
+  },
+  "lecture08": {
+    "chunks": 1,
+    "exit_code": 0,
+    "log": "reviews/2026-09-09/graduate-review/lecture08-r.log",
+    "warnings": false
+  },
+  "lecture09": {
+    "chunks": 2,
+    "exit_code": 0,
+    "log": "reviews/2026-09-09/graduate-review/lecture09-r.log",
+    "warnings": false
+  }
+}

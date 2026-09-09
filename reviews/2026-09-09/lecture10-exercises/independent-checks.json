@@ -1,0 +1,150 @@
+{
+  "source_sha256": {
+    "lecture10.qmd": "05d8d93a08bc8c62ddae65d3698dd9aaac0963472d357ac2809e9c90e444a2e5",
+    "solution.qmd": "b18e033d46bdf296d7ca0ae1aab50c6961851e3e1ea292e3edb88dcf7bc1aea2"
+  },
+  "source_and_answer_review": "Q5--7 and every numbered answer part agree; no correction required.",
+  "q5_initial_and_dynamic_conditions": [
+    {
+      "case": "zero_baseline",
+      "w_minus1": 0.0,
+      "a_minus1": 0.0,
+      "a_path": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_zero_inflation_compatible": true,
+      "required_real_wage_changes": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "unexpected_technology",
+      "w_minus1": 0.0,
+      "a_minus1": 0.0,
+      "a_path": [
+        0.01,
+        0.008,
+        0.0064
+      ],
+      "all_zero_inflation_compatible": false,
+      "required_real_wage_changes": [
+        0.01,
+        -0.002,
+        -0.0015999999999999999
+      ]
+    },
+    {
+      "case": "initial_wage_gap_only",
+      "w_minus1": 0.005,
+      "a_minus1": 0.0,
+      "a_path": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_zero_inflation_compatible": false,
+      "required_real_wage_changes": [
+        -0.005,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "later_technology_change",
+      "w_minus1": 0.01,
+      "a_minus1": 0.01,
+      "a_path": [
+        0.01,
+        0.01,
+        0.02
+      ],
+      "all_zero_inflation_compatible": false,
+      "required_real_wage_changes": [
+        0.0,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "case": "nonzero_compatible_initial_condition",
+      "w_minus1": 0.005,
+      "a_minus1": -0.002,
+      "a_path": [
+        0.005,
+        0.005,
+        0.005
+      ],
+      "all_zero_inflation_compatible": true,
+      "required_real_wage_changes": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "q6": {
+    "independent_2x2_cases": 160,
+    "max_abs_difference": 1.0408340855860843e-17,
+    "printed_example_inflation": [
+      -0.0006666666666666665,
+      0.0013333333333333333
+    ],
+    "printed_example_times_100": [
+      -0.06666666666666665,
+      0.13333333333333333
+    ]
+  },
+  "q7": {
+    "direct_numerical_minimizations": 160,
+    "max_minimizer_difference": 2.686867291157302e-10,
+    "max_minimum_value_difference": 3.469446951953614e-18,
+    "max_square_completion_difference": 2.220446049250313e-16,
+    "printed_example": {
+      "price_inflation": -0.006666666613094757,
+      "wage_inflation": 0.003333333386905243,
+      "loss": 0.001
+    },
+    "equality_cases": [
+      {
+        "psi_p": 6,
+        "psi_w": 6,
+        "delta": 0.01,
+        "answers_match": true,
+        "max_difference": 8.673617379884035e-19
+      },
+      {
+        "psi_p": 6,
+        "psi_w": 8,
+        "delta": 0.01,
+        "answers_match": false,
+        "max_difference": 0.000666666666666667
+      },
+      {
+        "psi_p": 6,
+        "psi_w": 8,
+        "delta": 0.0,
+        "answers_match": true,
+        "max_difference": 0.0
+      },
+      {
+        "psi_p": 4,
+        "psi_w": 4,
+        "delta": -0.015,
+        "answers_match": true,
+        "max_difference": 1.734723475976807e-18
+      }
+    ]
+  },
+  "interpretation_checks": [
+    "Q5 imposes zero inflation at all future dates and histories, not one date.",
+    "Q5 requires a_0=w_-1 and an unchanged technology path thereafter.",
+    "Q6 takes output gap, real wage change and future inflation expectations as given.",
+    "Q6 flexible limits apply to the conditional slope at Delta w=0.",
+    "Q7 is an identity-only lower bound for current nominal adjustment losses, not full dynamic welfare.",
+    "Q7 nonzero-delta matching condition is kappa_p omega_p=kappa_w omega_w iff psi_p=psi_w."
+  ]
+}

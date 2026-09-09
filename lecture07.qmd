@@ -624,7 +624,9 @@ $$
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKフィリップス曲線の導出を確認するため。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格硬直性と金融政策の標準的な体系。

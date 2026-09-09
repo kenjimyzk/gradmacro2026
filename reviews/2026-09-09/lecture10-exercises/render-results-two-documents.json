@@ -1,0 +1,57 @@
+{
+  "cache": "/var/folders/gg/bhhs5n316gjfc4f55jzf3rbc0000gn/T/gradmacro-revision-20260909-zcdss0nh",
+  "results": {
+    "lecture10": {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "scripts/render-lecture.R",
+        "lecture10.qmd",
+        "--to",
+        "all",
+        "-M",
+        "latex-auto-install:false"
+      ],
+      "returncode": 0,
+      "seconds": 15.96,
+      "source_before_sha256": "aeb4a7be5021600212d3ca2d5648b3f1e37d09e121d6ba9a7a321c37f80ad517",
+      "source_sha256": "aeb4a7be5021600212d3ca2d5648b3f1e37d09e121d6ba9a7a321c37f80ad517",
+      "outputs": {
+        "html": {
+          "bytes": 98938,
+          "sha256": "0f0c72b907a8f73620c1a5814328a0ca7247f3a6e7befbe4d60a1f3ee486c24a"
+        },
+        "pdf": {
+          "bytes": 460900,
+          "sha256": "d0667a3649ed7ff2955c959837af79885661405fe8919a795b7a7db6cf5e7266"
+        }
+      }
+    },
+    "solution": {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "scripts/render-lecture.R",
+        "solution.qmd",
+        "--to",
+        "all",
+        "-M",
+        "latex-auto-install:false"
+      ],
+      "returncode": 0,
+      "seconds": 12.0,
+      "source_before_sha256": "8165765e4c21082d18bd36c296f2106143eadde3fad4904265276993699898c0",
+      "source_sha256": "8165765e4c21082d18bd36c296f2106143eadde3fad4904265276993699898c0",
+      "outputs": {
+        "html": {
+          "bytes": 153067,
+          "sha256": "b78ecc91a48acec77e64c599803c79b1b4de35e8f25c946013dc5c65d74b72d3"
+        },
+        "pdf": {
+          "bytes": 381165,
+          "sha256": "12546b2af058391cc63b9b679f7b7beedda6458d680e558456ab3710a44fabd7"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "lecture01": {
+    "returncode": 0,
+    "log": "lecture01-source-audit.log"
+  },
+  "lecture02": {
+    "returncode": 0,
+    "log": "lecture02-source-audit.log"
+  },
+  "lecture03": {
+    "returncode": 0,
+    "log": "lecture03-source-audit.log"
+  },
+  "lecture04": {
+    "returncode": 0,
+    "log": "lecture04-source-audit.log"
+  },
+  "lecture05": {
+    "returncode": 0,
+    "log": "lecture05-source-audit.log"
+  },
+  "lecture06": {
+    "returncode": 0,
+    "log": "lecture06-source-audit.log"
+  },
+  "lecture07": {
+    "returncode": 0,
+    "log": "lecture07-source-audit.log"
+  },
+  "lecture08": {
+    "returncode": 0,
+    "log": "lecture08-source-audit.log"
+  },
+  "lecture09": {
+    "returncode": 0,
+    "log": "lecture09-source-audit.log"
+  },
+  "lecture10": {
+    "returncode": 0,
+    "log": "lecture10-source-audit.log"
+  },
+  "lecture11": {
+    "returncode": 0,
+    "log": "lecture11-source-audit.log"
+  },
+  "lecture12": {
+    "returncode": 0,
+    "log": "lecture12-source-audit.log"
+  },
+  "solution": {
+    "returncode": 0,
+    "log": "solution-source-audit.log"
+  }
+}

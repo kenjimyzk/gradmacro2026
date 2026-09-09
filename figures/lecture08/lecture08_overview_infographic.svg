@@ -80,7 +80,7 @@
   </g>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
     <text x="140" y="517" font-size="21" font-weight="700">自然水準</text>
-    <text x="140" y="547" font-size="16">自然産出量 <tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan> ・自然利子率 <tspan font-style="italic">r</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">N</tspan></text>
+    <text x="140" y="547" font-size="16">自然産出量 <tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan> ・自然利子率 <tspan font-style="italic">r</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan></text>
 
     <text x="704" y="517" font-size="21" font-weight="700">3本のNK方程式</text>
     <text x="704" y="547" font-size="16">動学的IS・構造的NKPC・Taylor rule</text>

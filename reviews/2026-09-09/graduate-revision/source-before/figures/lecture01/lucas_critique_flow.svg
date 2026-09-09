@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+  <title id="title">Lucas critique and structural macroeconomics</title>
+  <desc id="desc">A policy rule change affects expectations and behavior, making reduced-form parameters unstable. Structural DSGE models use microfoundations and deep parameters.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#46515f"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="980" height="540" fill="#ffffff"/>
+  <rect x="52" y="54" width="876" height="364" rx="10" fill="#fbfcff" stroke="#d9dee8"/>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <g filter="url(#shadow)">
+      <rect x="88" y="118" width="162" height="88" rx="8" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+      <rect x="300" y="118" width="162" height="88" rx="8" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+      <rect x="512" y="118" width="162" height="88" rx="8" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+      <rect x="724" y="118" width="162" height="88" rx="8" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+    </g>
+    <g fill="#20242a" font-size="21" font-weight="700" text-anchor="middle">
+      <text x="169" y="152">政策ルール</text>
+      <text x="169" y="180">変更</text>
+      <text x="381" y="152">期待形成</text>
+      <text x="381" y="180">が変化</text>
+      <text x="593" y="152">家計・企業</text>
+      <text x="593" y="180">の行動が変化</text>
+      <text x="805" y="152">推定関係</text>
+      <text x="805" y="180">が不安定化</text>
+    </g>
+    <g stroke="#46515f" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <line x1="250" y1="162" x2="291" y2="162"/>
+      <line x1="462" y1="162" x2="503" y2="162"/>
+      <line x1="674" y1="162" x2="715" y2="162"/>
+    </g>
+    <path d="M 805 206 C 805 272 650 296 566 318" fill="none" stroke="#8d5ab8" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+    <rect x="250" y="304" width="480" height="78" rx="8" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+    <text x="490" y="335" font-size="22" font-weight="700" fill="#20242a" text-anchor="middle">構造モデル・DSGE</text>
+    <text x="490" y="363" font-size="18" fill="#4d5664" text-anchor="middle">ミクロ的基礎づけとディープ・パラメータで政策評価</text>
+    <g stroke="#46515f" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <line x1="490" y1="304" x2="490" y2="236"/>
+    </g>
+    <text x="96" y="466" font-size="22" font-weight="700" fill="#20242a">ルーカス批判のメッセージ</text>
+    <text x="338" y="466" font-size="18" fill="#555f6f">政策が変わると期待と行動が変わり、過去の経験則はそのまま使えない</text>
+  </g>
+</svg>

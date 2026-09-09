@@ -287,7 +287,7 @@ $$
 \qquad
 0\leq p<1
 $$
-これは構造的なショック過程や金融政策ルールではなく、NKクロス図の中で将来消費の期待を現在消費に戻すための簡約形の閉鎖です。このとき
+これは構造的なショック過程や金融政策ルールではなく、NKクロス図の中で将来消費の期待を現在消費に戻すための簡約形の閉鎖です。ただし、全期に同じ $p$ を課す場合、実質利子率ギャップの経路にも整合性条件が生じます。RANK の Euler 方程式と組み合わせると $\widetilde r_t^R=-\gamma(1-p)c_t$ なので、$\mathbb E_t\widetilde r_{t+1}^R=p\widetilde r_t^R$ が必要です。後述の TANK でも、係数 $\Theta_D$ が一定かつ非ゼロなら同じ期待持続性の関係が成り立ちます。例えば $p=0$ は、翌期の消費と実質利子率ギャップの期待反応がともにゼロとなる一時的な比較に対応します。このとき
 $$
 c_t
 =
@@ -345,9 +345,25 @@ RANK では $\omega_R=(1-\beta)/(1-\beta p)$、$\Omega_R=1/[\gamma(1-p)]$ です
 \Needspace{23\baselineskip}
 ```
 
-@fig-rank-nk-cross は $\beta=0.99$、$p=0$ の関係を示しています。横軸は現在所得 $y_t$、縦軸は計画消費 $c_t$ です。RANK の PE 曲線はほぼ水平に近く、実質利子率ギャップの低下で上方にシフトします。傾きが小さいため、シフト後の追加的な所得フィードバックは小さいです。
+@fig-rank-nk-cross は $\beta=0.99$、$\gamma=1$、$p=0$ の式から描いた図です。横軸は現在所得 $y_t$、縦軸は計画消費 $c_t$ です。実質利子率ギャップを $-0.005$ から $-0.015$ へ、1パーセントポイント低下させます。PE の傾きは $\omega_R=0.01$ で、消費・産出の増加1%のうち、直接シフトは0.99%、追加的な所得フィードバックは0.01%です。したがって、間接効果は総効果の1%にとどまります。
 
-![RANK の NKクロス（$\beta=0.99$、$p=0$）。この較正では PE 曲線はほぼ水平で、実質利子率ギャップの低下は主に直接シフトとして現れる。一般に「ほぼ水平」には $\beta\simeq1$ に加えて $p$ が1に近すぎないことが必要である。](figures/lecture12/rank_nk_cross.svg){#fig-rank-nk-cross width=88%}
+::: {#fig-rank-nk-cross}
+
+![](figures/lecture12/rank_nk_cross.svg){width=95%}
+
+```{=latex}
+\begin{minipage}{\linewidth}\raggedright
+```
+
+*Notes:* $\beta=0.99$、$\gamma=1$、$p=0$。変更前後は同一期の二つの条件付き比較であり、翌期への金利経路を表さない。実質利子率ギャップは $-0.5$ から $-1.5$ パーセントポイントへ低下する。両軸は対数乖離を百分率で表示し、後掲の TANK 図と同じ尺度を用いる。紫の矢印に沿う消費の縦方向の増分が所得フィードバックである。
+
+```{=latex}
+\end{minipage}
+```
+
+RANK の NKクロス
+
+:::
 
 ```{=latex}
 \Needspace{14\baselineskip}
@@ -591,6 +607,8 @@ $$
 $$
 です。ここでは現在の計画消費 $c_t$ を均衡条件で先に置き換えず、集計計画消費の式に戻して PE 曲線を作ります。
 
+この PE 曲線は、均衡で導いた所得分配関係を用いて、需要ブロックを縮約的に分解したものです。$c_t^H=\chi y_t$ の導出には、すでに財市場均衡を使っています。したがって、図中の直接効果と所得フィードバックは、この分配関係と期待の閉じ方に依存します。すべての個別最適化条件と市場条件を同時に維持した、唯一の不均衡実験を定義しているわけではありません。
+
 集計消費は
 $$
 c_t
@@ -679,9 +697,25 @@ $$
 \Needspace{23\baselineskip}
 ```
 
-@fig-tank-nk-cross は、RANK と同じ $\beta=0.99$、$p=0$ と同じ実質利子率ギャップ低下を使って、このメカニズムを描いています。TANK では、PE 曲線の直接シフトは RANK より小さいです。しかし、PE 曲線が急になるため、45度線との交点は大きく動きます。これが所得フィードバックによる増幅です。
+@fig-tank-nk-cross は、RANK と同じ $\beta=0.99$、$\gamma=1$、$p=0$ に、$\lambda=0.30$、$\chi=2$ を加え、同じ実質利子率ギャップ低下を与えた図です。この場合、$\omega_T=0.604$ です。直接シフトは0.693%で RANK の0.70倍ですが、所得フィードバックが1.057%加わるため、消費・産出の総増加は1.750%、RANK の1.75倍になります。
 
-![TANK の NKクロス。実質利子率ギャップに直接反応するのは Type S だけなので直接シフトは小さいが、Type H の現在所得消費により PE 曲線の傾きは大きくなる。](figures/lecture12/tank_nk_cross.svg){#fig-tank-nk-cross width=88%}
+::: {#fig-tank-nk-cross}
+
+![](figures/lecture12/tank_nk_cross.svg){width=95%}
+
+```{=latex}
+\begin{minipage}{\linewidth}\raggedright
+```
+
+*Notes:* $\beta=0.99$、$\gamma=1$、$p=0$、$\lambda=0.30$、$\chi=2$。$\varphi=1$、$\tau_D=0$ の本編の数値例に対応する。RANK 図と同じく、実質利子率ギャップを $-0.5$ から $-1.5$ パーセントポイントへ低下させ、軸尺度もそろえる。直接効果比は $0.693/0.990=0.70$、総効果比は $1.750/1.000=1.75$ である。
+
+```{=latex}
+\end{minipage}
+```
+
+TANK の NKクロス
+
+:::
 
 ```{=latex}
 \Needspace{16\baselineskip}
@@ -972,7 +1006,9 @@ $$
 
 # 参考文献
 
-**必読**
+予習では本ノートの本編を読み、復習では以下の基本参考文献から、授業で扱った論点に対応する箇所を参照してください。
+
+**基本参考文献**
 
 - Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003)
 - Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008)

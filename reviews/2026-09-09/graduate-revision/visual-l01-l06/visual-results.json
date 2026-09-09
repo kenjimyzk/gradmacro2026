@@ -1,0 +1,76 @@
+{
+  "scope": "Selected revised sections and their page boundaries; not a full-document visual review.",
+  "render_provenance": "Each PDF was checked against returncode 0 and the PDF sha256 in render-results.json before rasterization. Hashes are retained in page-search.json.",
+  "dpi": 100,
+  "pages_visually_reviewed": {
+    "lecture01": [
+      23,
+      24
+    ],
+    "lecture02": [
+      20,
+      21
+    ],
+    "lecture03": [
+      12,
+      13,
+      14,
+      18,
+      19,
+      25,
+      26,
+      27
+    ],
+    "lecture04": [
+      13,
+      14
+    ],
+    "lecture05": [
+      5,
+      6,
+      19,
+      20,
+      21
+    ],
+    "lecture06": [
+      15,
+      16,
+      17
+    ]
+  },
+  "page_count": 22,
+  "clipping": false,
+  "overlap": false,
+  "observations": [
+    {
+      "document": "lecture03",
+      "page": 18,
+      "type": "minor cross-reference wording",
+      "text": "一般資産価格式式3",
+      "reported_to_root": true,
+      "followup": "Root reports correcting the wording and will rerender/review page 18."
+    },
+    {
+      "document": "lecture06",
+      "page": 16,
+      "type": "orphan exercise heading",
+      "text": "問4 [Core]：政府会計 appears alone at the page bottom; all body text starts on page 17.",
+      "reported_to_root": true
+    },
+    {
+      "document": "lecture01",
+      "pages": [
+        23,
+        24
+      ],
+      "type": "non-blocking paragraph split",
+      "text": "The two-line reading-guidance paragraph is split one line per page. No content loss."
+    },
+    {
+      "document": "lecture05",
+      "page": 6,
+      "type": "non-blocking margin extension",
+      "text": "The pre-existing household budget formula extends into the right margin but is fully visible and does not overlap other content."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "rendered_documents": 2,
+  "rendered_formats": 4,
+  "pdf_pages": {
+    "lecture10": 33,
+    "solution": 43
+  },
+  "artifact_issues": [],
+  "unexpected_changes_to_baseline_inputs": [],
+  "unchanged_baseline_inputs": 68,
+  "source_output_hashes_match": true
+}

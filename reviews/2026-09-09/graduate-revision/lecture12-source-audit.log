@@ -1,0 +1,6 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture12.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture12.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 純配当移転ルールと $\chi$。$\tau_D/\lambda<1$ なら $\chi>1$、$\tau_D/\lambda=1$ なら $\chi=1$、$\tau_D/\lambda>1$ なら $\chi<1$ である。
+WARNING: long figure caption; shorten the title and move detail to Notes: TANK と RANK の条件付き総需要反応の比。同じ $\gamma,p$ と同じ実質利子率ギャップ低下を比較すると、$\lambda\chi<1$ の領域では $\chi>1$ なら増幅、$\chi=1$ なら同じ総効果、$\chi<1$ なら抑制となる。

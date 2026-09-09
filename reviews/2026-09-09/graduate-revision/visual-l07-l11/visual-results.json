@@ -1,0 +1,108 @@
+{
+  "scope": "Targeted visual QA only; not a full PDF/browser layout audit.",
+  "pdf_editing": false,
+  "source_editing": false,
+  "page_count_inspected": 11,
+  "documents": {
+    "lecture07": {
+      "pdf_sha256": "3e24b0a7025acbffb6b810ae0a99ccc083c01542fae16eb48c1034b02ab3633c",
+      "source_sha256": "5021ee6f49d7dbb757361794304287ef191d974031ea65caf0bf62a05eec3639",
+      "render_returncode": 0,
+      "targets": {
+        "基本参考文献": [
+          18
+        ],
+        "予習では": [
+          18
+        ],
+        "演習問題": [
+          1,
+          18
+        ]
+      },
+      "pages": 20,
+      "pages_inspected": [
+        17,
+        18,
+        19
+      ],
+      "status": "pass",
+      "observations": "参考文献、予復習方針、基本問題への移行を確認。本文・数式・見出しに切れや重なりなし。",
+      "images": [
+        "lecture07-page-17.png",
+        "lecture07-page-18.png",
+        "lecture07-page-19.png"
+      ]
+    },
+    "lecture10": {
+      "pdf_sha256": "4a5ef51bcdc5bedebbaeaa739fe35990c3de8c095f67d43abe53c4bb794f703f",
+      "source_sha256": "8178cd374f222bead582ba7ae428a929268da3f7c3134434fd9d9b3eed674f13",
+      "render_returncode": 0,
+      "targets": {
+        "基本参考文献": [
+          23
+        ],
+        "予習は": [
+          23
+        ],
+        "演習問題": [
+          2,
+          24
+        ],
+        "過去から引き継いだ実質賃金": [
+          15
+        ]
+      },
+      "pages": 31,
+      "pages_inspected": [
+        14,
+        15,
+        23,
+        24
+      ],
+      "status": "pass",
+      "observations": "方程式表からw_-1初期状態と前向き変数の説明への移行、および参考文献から演習への移行を確認。文献の改ページは項目単位で自然。",
+      "images": [
+        "lecture10-page-14.png",
+        "lecture10-page-15.png",
+        "lecture10-page-23.png",
+        "lecture10-page-24.png"
+      ]
+    },
+    "lecture11": {
+      "pdf_sha256": "84b91aa76e6c5ac13943ac34117ef1e4e71fc4c947ff0e183e3b30664a03505a",
+      "source_sha256": "f993911094785293b7ba529fbd39ef553abd6e4682420fe393cf3b8bbbda8c04",
+      "render_returncode": 0,
+      "targets": {
+        "基本参考文献": [
+          21
+        ],
+        "予習では": [
+          21
+        ],
+        "演習問題": [
+          2,
+          22
+        ],
+        "金融政策ショックへの含意": [
+          18
+        ]
+      },
+      "pages": 32,
+      "pages_inspected": [
+        18,
+        19,
+        21,
+        22
+      ],
+      "status": "pass",
+      "observations": "金融政策ショックの条件calloutは全体が18ページに収まり、条件・厚生上の限定も表示。翌ページのまとめと参考文献・演習境界にも表示不良なし。",
+      "images": [
+        "lecture11-page-18.png",
+        "lecture11-page-19.png",
+        "lecture11-page-21.png",
+        "lecture11-page-22.png"
+      ]
+    }
+  }
+}

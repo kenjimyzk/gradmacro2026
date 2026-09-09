@@ -695,7 +695,7 @@ $$
 ::: {.callout-important}
 ## 金融政策ショックへの含意
 
-$0<\Theta_T<1$ のもとでは、同じ金融緩和ショックに対する需給ギャップとインフレ率の反応は TANK の方が RANK より大きくなります。Type H の現在所得反応が集計需要へ戻り、TANK の IS 曲線がよりフラットになるためです。AR(1) ショックに対する閉形式解、再分配ショック、数値例は発展補論で扱います。反応が大きいことは厚生が改善することを意味しません。
+$0<\Theta_T<1$ とし、同じ $\phi>1$ のテイラー・ルールと、同じ持続性 $0\leq\rho_m<1$ の金融緩和ショックを比較すると、需給ギャップとインフレ率の反応は TANK の方が RANK より大きくなります。Type H の現在所得反応が集計需要へ戻り、TANK の IS 曲線がよりフラットになるためです。AR(1) ショックに対する閉形式解、再分配ショック、数値例は発展補論で扱います。反応が大きいことは厚生が改善することを意味しません。
 :::
 # まとめと第12回への接続
 
@@ -773,7 +773,9 @@ $$
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008) 通常領域と反転領域、金融政策ルールの決定性を理解するため。
 - Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003) TANK の所得フィードバックと第12回の NKクロスをつなぐため。

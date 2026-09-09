@@ -17,6 +17,9 @@ format:
     classoption: [lualatex, ja=standard, 11pt, a4paper]
     toc: true
     number-sections: false
+    include-in-header:
+      text: |
+        \usepackage{needspace}
 lang: ja
 ---
 
@@ -207,9 +210,9 @@ $$
 
 ## 基本問題
 
-### 問1 `[Core] [Derivation]`：2期間問題
+### 問1 `[Core] [Derivation]`：消費配分と横断性条件
 
-オイラー方程式は
+2期間問題のオイラー方程式は
 $$
 \frac{1}{C_t}=\beta R\frac{1}{C_{t+1}}
 $$
@@ -218,6 +221,22 @@ $$
 \frac{C_{t+1}}{C_t}=\beta R
 $$
 を得ます。$\beta R>1$ なら消費は増加し、$\beta R<1$ なら減少します。
+
+無限期間の追問では $\beta R=1$ なので、オイラー方程式は一定消費を要求します。一定消費 $C$ のもとで予算制約を反復すると、
+$$
+\lim_{N\to\infty}\frac{B_N}{R^N}
+=\frac{R}{R-1}\left[Y+(R-1)B_{-1}-C\right]
+=26(1.2-C)
+$$
+です。各候補を代入すると次のようになります。
+
+| 一定消費 $C$ | $\lim B_N/R^N$ | No-Ponzi条件 | 横断性条件 |
+|---:|---:|---|---|
+| 1.1 | 2.6 | 満たす | 満たさない |
+| 1.2 | 0 | 満たす | 満たす |
+| 1.3 | -2.6 | 満たさない | 満たさない |
+
+対数効用では横断性条件の左辺は $(1/C)\lim B_N/R^N$ なので、両条件を満たすのは $C=1.2$ です。この経路では $B_t=5$ が続きます。資産水準は正でも、その割引現在価値はゼロへ収束します。
 
 ### 問2 `[Core] [Derivation]`：借入制約
 
@@ -245,7 +264,7 @@ $$
 
 ### 問4 `[Core] [Derivation]`：企業価値
 
-企業価値は
+無バブル条件のもとで、企業価値は
 $$
 V_t^F
 =\sum_{i=1}^{\infty}\delta^iD
@@ -409,11 +428,17 @@ $$
 $$
 B_t=\sum_{s=1}^{\infty}\frac{PB_{t+s}}{(R^f)^s}
 $$
-を得ます。$B_t$ は $t$ 期末の債務であり、その債務に対応する最初の償還とプライマリーバランスは $t+1$ 期に生じます。このため和は $t+1$ 期から始まります。不確実性下では、状態に依存する割引を反映するため $1/(R^f)^s$ を $Q_{t,t+s}$ に置き換え、
+を得ます。$B_t$ は $t$ 期末の債務であり、その債務に対応する最初の償還とプライマリーバランスは $t+1$ 期に生じます。このため和は $t+1$ 期から始まります。不確実性下では、1期先の政府予算制約に $Q_{t,t+1}$ を掛けて条件付き期待値を取ります。$B_t$ は今期に既知であり、債券のオイラー方程式が成り立つので、
+$$
+\mathbb E_t\left[Q_{t,t+1}(B_{t+1}+PB_{t+1})\right]
+=B_t\mathbb E_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right]
+=B_t
+$$
+です。この関係を反復期待値の法則で先へ繰り返し、終端の債務のSDF割引価値がゼロへ収束する条件を使うと、
 $$
 B_t=\mathbb E_t\sum_{s=1}^{\infty}Q_{t,t+s}PB_{t+s}
 $$
-と一般化します。
+を得ます。
 
 ### 問2 `[Core]`：一括税と政府購入
 
@@ -457,7 +482,7 @@ $$
 
 ### 問5 `[Research extension] [Derivation]`：税の帰着
 
-家計側課税では、家計が受け取る賃金を $W_t$ とすると、
+家計側課税では、企業が支払う税引前実質賃金を $W_t$ とすると、
 $$
 -\frac{U_{N,t}}{U_{C,t}}=(1-\tau_N^H)W_t,
 \qquad
@@ -839,6 +864,8 @@ $$
 
 ### 問3 `[Core] [Derivation]`：裁量政策
 
+ここでは内生的な所定状態がなく、外生状態のみに依存する Markov 裁量政策を考えるため、当期の選択に対して将来期待と継続価値を所与として扱います。
+
 制約を
 $$
 \pi_t-\beta\mathbb E_t\pi_{t+1}-\kappa_xx_t^e-u_t=0
@@ -892,23 +919,35 @@ $$
 
 ### 問7 `[Derivation] [Research extension]`：目標配分の実装
 
-効率的産出量から測った動学的 IS 曲線は
+目標配分を $(x_t^{e,*},\pi_t^*)$、それを支持する金利を $r_t^{N,*}$ とします。動学的 IS 曲線を目標配分に適用すると、
 $$
-x_t^e
-=\mathbb E_tx_{t+1}^e
--\frac1{\widetilde\gamma}(r_t-r_t^e).
+r_t^*=r_t^e+\widetilde\gamma
+\left(\mathbb E_tx_{t+1}^{e,*}-x_t^{e,*}\right).
 $$
-これを実質利子率について解くと、
+フィッシャー関係を使えば、
 $$
-r_t=r_t^e+\widetilde\gamma(\mathbb E_tx_{t+1}^e-x_t^e).
+r_t^{N,*}
+=r_t^e+\widetilde\gamma
+\left(\mathbb E_tx_{t+1}^{e,*}-x_t^{e,*}\right)
++\mathbb E_t\pi_{t+1}^*.
 $$
-フィッシャー関係 $r_t=r_t^N-\mathbb E_t\pi_{t+1}$ を使えば、
+ターゲット条件は望ましい配分の組合せを表し、この式はその配分を均衡の一つとして支持する金利経路を表します。目標から外れた場合の金利反応までは定めていないため、これだけでは一意実装を保証しません。
+
+外生ショックの履歴に条件づけた目標計画を固定し、実際の逸脱を理由に目標を選び直さず、
 $$
-r_t^N
-=r_t^e+\widetilde\gamma(\mathbb E_tx_{t+1}^e-x_t^e)
-+\mathbb E_t\pi_{t+1}.
+r_t^N=r_t^{N,*}+\phi(\pi_t-\pi_t^*),
+\qquad\phi>1
 $$
-ターゲット条件は望ましい $(x_t^e,\pi_t)$ の組合せを表し、この式はその配分を実現する政策金利を表します。前者は手段ルールではありません。
+とします。差を $d_t=x_t^e-x_t^{e,*}$、$p_t=\pi_t-\pi_t^*$ と置き、同じ外生ショックのもとで実際の条件と目標経路の条件を引くと、
+$$
+\begin{aligned}
+d_t&=\mathbb E_td_{t+1}
+-\frac1{\widetilde\gamma}
+\left(\phi p_t-\mathbb E_tp_{t+1}\right),\\
+p_t&=\beta\mathbb E_tp_{t+1}+\kappa_xd_t.
+\end{aligned}
+$$
+したがって $\mathbb E_t(d_{t+1},p_{t+1})'=A(\phi)(d_t,p_t)'$ であり、問8で確認するBK条件を満たします。前向き変数が2つで単位円外の固有値も2つなので、局所有界解は $d_t=p_t=0$ に一意に決まります。必要な状態の観測と金利の自由な設定が可能なら、上の手段ルールは目標配分を一意に実装します。
 
 ### 問8 `[Derivation] [Research extension]`：決定性
 
@@ -932,6 +971,10 @@ $$
 \det A(\phi)=\frac{1+\kappa_x\phi/\widetilde\gamma}{\beta}>1.
 $$
 固有値が実数なら、積と和が正で $q(1)>0$ なので2根は1の同じ側にあります。和が2を上回るため両根とも1より大きくなります。複素共役なら各根の絶対値は $\sqrt{\det A(\phi)}>1$ です。したがって単位円外の固有値は2個です。前向き変数 $(x_t^e,\pi_t)$ も2個なので、Blanchard--Kahn 条件を満たします。
+
+```{=latex}
+\Needspace{14\baselineskip}
+```
 
 ### 問9 `[Research extension]`：二つのバイアス
 
@@ -988,6 +1031,166 @@ $$
 ### 問4 `[Core]`：名目賃金・物価・実質賃金
 
 実質賃金の変化は $\Delta w_t=\pi_t^w-\pi_t^p$ です。賃金インフレ率が価格インフレ率を上回る $\pi_t^w>\pi_t^p$ とき、実質賃金は上昇します。
+
+## 発展問題
+
+### 問5 `[Research extension] [Derivation]`：初期実質賃金と完全安定化
+
+**1. 自然実質賃金と状態の推移**
+
+柔軟価格の条件 $\mu_t^p=a_t-w_t=0$ から $w_t^f=a_t$ です。したがって、賃金インフレ恒等式より
+$$
+\begin{aligned}
+\widetilde w_t-\widetilde w_{t-1}
+&=(w_t-w_{t-1})-(a_t-a_{t-1})\\
+&=\pi_t^w-\pi_t^p-(a_t-a_{t-1}).
+\end{aligned}
+$$
+過去の実質賃金と当期の技術変化が、必要な名目賃金・物価の調整を制約します。
+
+**2. 全期の完全安定化**
+
+すべての期・履歴で両インフレ率をゼロとする計画では、将来インフレの期待もゼロです。$\kappa_p,\kappa_w>0$ なので、両フィリップス曲線は
+$$
+\mu_t^p=\mu_t^w=0
+$$
+を要求します。マークアップの和から $x_t=0$、価格マークアップの定義から $w_t=a_t$ です。一方、恒等式より $\Delta w_t=0$ なので、$w_t=w_{-1}$ が続きます。両立の必要条件は
+$$
+a_t=w_{-1}\qquad\text{すべての }t\geq0
+$$
+です。初期の $a_0$ と $w_{-1}$ が一致し、その後も技術が変わらないことが必要です。この場合は自然配分が一定なので、IS曲線を満たす実質・名目利子率の乖離をともにゼロとすることで、ゼロインフレの配分を支持できます。この支持だけで均衡の一意性を主張しているわけではありません。
+
+設問のショックでは、$a_0=0.01$ に対して $w_{-1}=0$ なので必要条件を満たさず、計画は実現できません。技術ショックがなく $a_t=0$ でも、$w_{-1}\ne0$ なら同じ問題が生じます。これは特定の金利ルールの失敗ではなく、実質賃金を変えるためには両インフレ率に差が必要なことから生じます。
+
+**3. 当期だけの安定化との違い**
+
+当期だけ両インフレ率がゼロでも、将来の期待インフレが非ゼロなら
+$$
+\kappa_p\mu_t^p=\beta\mathbb E_t\pi_{t+1}^p,
+\qquad
+\kappa_w\mu_t^w=\beta\mathbb E_t\pi_{t+1}^w
+$$
+であり、当期のマークアップはゼロとは限りません。2の結論には、全期にわたる計画が必要です。
+
+```{=latex}
+\Needspace{8\baselineskip}
+```
+
+### 問6 `[Research extension] [Derivation] [Computation]`：二つのインフレ率と柔軟性の極限
+
+**1. 条件付きのインフレ率**
+
+期待項がゼロなら $\mu_t^p=-\pi_t^p/\kappa_p$、$\mu_t^w=-\pi_t^w/\kappa_w$ です。両者の和を使うと
+$$
+\frac{\pi_t^p}{\kappa_p}+\frac{\pi_t^w}{\kappa_w}
+=(\gamma+\varphi)x_t.
+$$
+$\pi_t^w=\pi_t^p+\Delta w_t$ を代入して
+$$
+\begin{aligned}
+\pi_t^p&=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t-\frac{\kappa_p}{\kappa_p+\kappa_w}\Delta w_t,\\
+\pi_t^w&=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t+\frac{\kappa_w}{\kappa_p+\kappa_w}\Delta w_t
+\end{aligned}
+$$
+を得ます。
+
+**2. 数値例**
+
+$\bar\kappa=1/30$、$(\gamma+\varphi)x_t=0.02$ なので、
+$$
+\begin{aligned}
+\pi_t^p&=\frac{0.02}{30}-\frac23(0.002)
+=-\frac1{1500}\simeq-0.0006667,\\
+\pi_t^w&=\frac{0.02}{30}+\frac13(0.002)
+=\frac1{750}\simeq0.0013333.
+\end{aligned}
+$$
+100倍した一次近似の表示では、それぞれ約 $-0.0667$、$0.1333$ パーセントポイントです。両者の差は $0.002$ です。実質賃金を上げるための相対価格調整が、正の需給ギャップによる共通の上昇圧力を上回るため、価格インフレ率は負になります。
+
+**3. 柔軟化の極限**
+
+$\Delta w_t=0$ なら
+$$
+\pi_t^p=\pi_t^w=\bar\kappa(\gamma+\varphi)x_t,
+\qquad
+\bar\kappa=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}.
+$$
+$\kappa_i=\psi_i/\eta_i$ なので、他方の調整費用を正に固定すると、
+$$
+\begin{aligned}
+\eta_w\to0&\Rightarrow\kappa_w\to\infty
+\Rightarrow\bar\kappa\to\kappa_p,\\
+\eta_p\to0&\Rightarrow\kappa_p\to\infty
+\Rightarrow\bar\kappa\to\kappa_w.
+\end{aligned}
+$$
+それぞれ価格硬直性だけ、賃金硬直性だけの傾きを回収します。$\kappa_i\to0$ は調整費用が大きくなる方向であり、柔軟化とは逆です。これは $\Delta w_t=0$ とした合成係数の極限であり、柔軟な名目変数のインフレ率が必ずゼロになるという意味ではありません。
+
+```{=latex}
+\Needspace{6\baselineskip}
+```
+
+**4. 動学解との違い**
+
+$x_t$、$\Delta w_t$ と将来期待を条件として与えた関係であり、これらの変数をショックから求めていません。インパルス応答には、初期実質賃金、マークアップの定義、合理的期待、IS曲線、政策ルール、ショック過程を同時に満たす経路が必要です。
+
+### 問7 `[Research extension] [Derivation]`：実質賃金調整の費用下限
+
+**1. 恒等式だけを使った最小化**
+
+$\pi_t^w=\pi_t^p+\delta$ を代入すると、
+$$
+J_t=\frac12\left[\omega_p(\pi_t^p)^2
++\omega_w(\pi_t^p+\delta)^2\right].
+$$
+一階条件は $\omega_p\pi_t^p+\omega_w(\pi_t^p+\delta)=0$ です。二階微分は $\omega_p+\omega_w>0$ なので、最小点は一意に
+$$
+\pi_t^p=-\frac{\omega_w}{\omega_p+\omega_w}\delta,
+\qquad
+\pi_t^w=\frac{\omega_p}{\omega_p+\omega_w}\delta
+$$
+と決まります。代入すれば下限は
+$$
+J_t^{\min}=\frac12\frac{\omega_p\omega_w}{\omega_p+\omega_w}\delta^2.
+$$
+$\delta>0$ なら物価下落と名目賃金上昇を組み合わせて実質賃金を上げます。$\omega_w$ が相対的に大きいほど賃金インフレ率を小さくし、物価下落に調整を多く負担させます。
+
+**2. 数値と解釈**
+
+設問では $\omega_p=30$、$\omega_w=60$ なので、
+$$
+\pi_t^p=-\frac1{150}\simeq-0.006667,
+\qquad
+\pi_t^w=\frac1{300}\simeq0.003333,
+\qquad
+J_t^{\min}=0.001.
+$$
+インフレ率を100倍すると約 $-0.6667$、$0.3333$ パーセントポイントです。$J_t$ は正規化された損失であり、消費の百分率そのものではありません。
+
+この計算は、$\Delta w_t=\delta$ を満たす任意の動学的配分について、当期の名目調整損失がこれより小さくならないことを示します。両フィリップス曲線、IS曲線、初期状態や将来期待を制約に含めず、$x_t^2/2$ と将来の損失も目的から落としているため、この下限を達成する配分が元のモデルで実現可能とは限りません。したがって、動学的な最適政策や総厚生損失を求めたことにはなりません。
+
+```{=latex}
+\Needspace{6\baselineskip}
+```
+
+**3. 静学条件付き解との一致**
+
+問6で $x_t=0$、$\Delta w_t=\delta$ とすると、
+$$
+\pi_t^p=-\frac{\kappa_p}{\kappa_p+\kappa_w}\delta,
+\qquad
+\pi_t^w=\frac{\kappa_w}{\kappa_p+\kappa_w}\delta.
+$$
+$\delta\ne0$ のもとで1の配分と一致する条件は
+$$
+\frac{\kappa_p}{\kappa_p+\kappa_w}
+=\frac{\omega_w}{\omega_p+\omega_w}
+\quad\Longleftrightarrow\quad
+\kappa_p\omega_p=\kappa_w\omega_w.
+$$
+$\kappa_i\omega_i=\psi_i/(\gamma+\varphi)$ なので、$\psi_p=\psi_w$ と同値です。$\delta=0$ なら両方の解がゼロとなり、代替弾力性にかかわらず一致します。この一致も当期の静学条件に関するもので、動学的な最適性を保証しません。
 
 ```{=latex}
 \clearpage
@@ -1219,6 +1422,8 @@ $$
 =\frac{1}{\gamma(1-p)}.
 $$
 
+全期に同じ期待閉鎖を課す場合は、Euler 方程式から $\widetilde r_t^R=-\gamma(1-p)c_t$ となり、$\mathbb E_t\widetilde r_{t+1}^R=p\widetilde r_t^R$ も必要です。したがって、$p$ と任意の実質利子率ギャップ経路を独立に指定するわけではありません。
+
 ### 問2 `[Core] [Derivation]`：純配当移転ルールとType H消費
 
 移転ルールと純配当式を消費格差へ代入すると、
@@ -1285,6 +1490,8 @@ c_t
 -(1-\lambda)\frac\beta\gamma\widetilde r_t^T
 +\beta(1-\lambda\chi)\mathbb E_tc_{t+1}.
 $$
+
+ここで用いた $c_t^H=\chi y_t$ は均衡の分配関係から得た縮約です。この PE 曲線の直接効果・所得フィードバックの分解は、その分配関係と期待の閉じ方に依存し、すべての個別最適化条件と市場条件を同時に保つ唯一の不均衡実験を意味しません。
 
 ## 発展問題
 

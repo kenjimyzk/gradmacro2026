@@ -547,7 +547,9 @@ DSGEモデルは、現代のマクロ経済政策分析で用いられる主要�
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Blanchard, Olivier, and David R. Johnson (2017) *Macroeconomics* (7th ed.). Pearson. 学部マクロの全体像を復習するための標準的教科書。
 - Mankiw, N. Gregory (2019) *Macroeconomics* (10th ed.). Worth. ケインジアン・クロス、IS-LM、AD-ASを確認するための入口。

@@ -1,0 +1,391 @@
+{
+  "lecture01": {
+    "pages": 28,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 171,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        24
+      ],
+      "基本問題": [
+        2,
+        23,
+        24
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        23
+      ],
+      "全講義共通": [
+        1,
+        3,
+        5,
+        27
+      ]
+    }
+  },
+  "lecture02": {
+    "pages": 22,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 244,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        1,
+        21
+      ],
+      "基本問題": [
+        20,
+        21
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        20
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture03": {
+    "pages": 27,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 300,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        26
+      ],
+      "基本問題": [
+        2,
+        4,
+        26
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        25
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture04": {
+    "pages": 15,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 209,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        14
+      ],
+      "基本問題": [
+        2,
+        13,
+        14
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        13
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture05": {
+    "pages": 21,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 247,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        20
+      ],
+      "基本問題": [
+        2,
+        20
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        19
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture06": {
+    "pages": 17,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 198,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        1,
+        16
+      ],
+      "基本問題": [
+        15,
+        16
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        15
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture07": {
+    "pages": 20,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 235,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        1,
+        18
+      ],
+      "基本問題": [
+        18
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        18
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture08": {
+    "pages": 24,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 231,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        1,
+        23
+      ],
+      "基本問題": [
+        22,
+        23
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [
+        22
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture09": {
+    "pages": 31,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 315,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        23
+      ],
+      "基本問題": [
+        2,
+        23
+      ],
+      "補論（発展）": [
+        2,
+        25,
+        27
+      ],
+      "基本参考文献": [
+        22
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture10": {
+    "pages": 31,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 347,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        24
+      ],
+      "基本問題": [
+        2,
+        24
+      ],
+      "補論（発展）": [
+        2,
+        26,
+        27
+      ],
+      "基本参考文献": [
+        23
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture11": {
+    "pages": 32,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 399,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        22
+      ],
+      "基本問題": [
+        2,
+        21,
+        22
+      ],
+      "補論（発展）": [
+        2,
+        27
+      ],
+      "基本参考文献": [
+        21
+      ],
+      "全講義共通": []
+    }
+  },
+  "lecture12": {
+    "pages": 48,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 592,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        2,
+        36
+      ],
+      "基本問題": [
+        2,
+        36
+      ],
+      "補論（発展）": [
+        2,
+        40,
+        43,
+        44
+      ],
+      "基本参考文献": [
+        35
+      ],
+      "全講義共通": [
+        2,
+        31
+      ]
+    }
+  },
+  "solution": {
+    "pages": 39,
+    "pdf_replacement_glyphs": 0,
+    "pdf_unresolved_refs": 0,
+    "missing_assets": [],
+    "missing_links": [],
+    "missing_fragments": [],
+    "duplicate_ids": [],
+    "unresolved_html_refs": false,
+    "math_spans": 485,
+    "display_math_delimiters_even": true,
+    "anchors": {
+      "演習問題": [
+        4
+      ],
+      "基本問題": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        11,
+        14,
+        16,
+        19,
+        22,
+        24,
+        27,
+        31,
+        32,
+        36
+      ],
+      "補論（発展）": [],
+      "基本参考文献": [],
+      "全講義共通": []
+    }
+  }
+}

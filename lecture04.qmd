@@ -462,7 +462,9 @@ $$
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 固定資本・柔軟価格モデルからニューケインジアン・モデルへ進むための参照先。
 - Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 実物ショックと標準的な資本蓄積モデルを比較するための参照先。

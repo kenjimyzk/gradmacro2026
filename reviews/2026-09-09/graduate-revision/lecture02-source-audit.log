@@ -1,0 +1,4 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture02.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture02.qmd
+OK: manuscript audit passed

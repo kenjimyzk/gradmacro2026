@@ -597,7 +597,9 @@ $$
 
 - U.S. Bureau of Economic Analysis (2026) "Real Gross Domestic Product" (`GDPC1`), retrieved from [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/series/GDPC1), August 15, 2026.
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Hamilton, James D. (1994) *Time Series Analysis*. Princeton University Press. AR過程、定常性、インパルス応答の標準的な参照先。
 - Ljungqvist, Lars, and Thomas J. Sargent (2018) *Recursive Macroeconomic Theory* (4th ed.). MIT Press. 動学モデルの状態変数、再帰表現、線形化の背景を確認するため。

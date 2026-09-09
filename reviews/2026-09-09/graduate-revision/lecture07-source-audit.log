@@ -1,0 +1,5 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture07.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture07.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: NK版 AD-AS 表現：期待を所与とし、NKフィリップス曲線を NK-AS、動学的 IS 曲線とテイラー・ルールを合わせた関係を NK-AD として、需給ギャップとインフレ率の平面で読む。
