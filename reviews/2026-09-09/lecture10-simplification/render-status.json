@@ -1,0 +1,82 @@
+[
+  {
+    "document": "lecture01",
+    "exit_code": 0,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture01.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ],
+    "seconds": 12.55,
+    "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+  },
+  {
+    "document": "lecture10",
+    "exit_code": 0,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture10.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ],
+    "seconds": 9.89,
+    "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+  },
+  {
+    "document": "solution",
+    "exit_code": 0,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "solution.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ],
+    "seconds": 9.9,
+    "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+  },
+  {
+    "document": "lecture09",
+    "exit_code": 0,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture09.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ],
+    "seconds": 12.43,
+    "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+  },
+  {
+    "document": "solution",
+    "exit_code": 0,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "solution.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false"
+    ],
+    "seconds": 11.43,
+    "TEXMFVAR": "/tmp/gradmacro-review-20260908-8d5laqlu/audit/texmf-var"
+  }
+]

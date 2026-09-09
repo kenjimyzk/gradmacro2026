@@ -1,0 +1,38 @@
+{
+  "method": "PDF page images inspected by the primary agent and one independent reviewer",
+  "pages": {
+    "lecture10": [
+      1,
+      2,
+      3,
+      19,
+      22,
+      24,
+      25,
+      30
+    ],
+    "lecture01": [
+      28
+    ],
+    "lecture09": [
+      20,
+      21
+    ],
+    "solution": [
+      4,
+      29,
+      30
+    ]
+  },
+  "total_pages_inspected": 14,
+  "result": "pass",
+  "checks": [
+    "Lecture 10 table of contents ends at section 12",
+    "Divine coincidence appears only as one brief conditional statement in Lecture 10",
+    "Four exercises and retained appendices display without clipping",
+    "Updated notation table and Lecture 9 next-lecture preview display correctly",
+    "Solution Question 4 is complete on page 29; Lecture 11 begins on page 30"
+  ],
+  "layout_issue_fixed": "Question 4 originally split its conclusion onto a near-empty page. The short answer was made one paragraph and the PDF was rebuilt and visually rechecked.",
+  "browser_runtime_qa": "not run"
+}

@@ -1,0 +1,18 @@
+{
+  "lecture01": {
+    "display_delimiters_even": true,
+    "source_sha256": "7bd62cd3e84a5f31e27752475efa9a361db8edb03465fa661dd64b05ed4a366d"
+  },
+  "lecture09": {
+    "display_delimiters_even": true,
+    "source_sha256": "c106532dd285863fd484c0d63991b30fc4a4a3501090e66da0af7bd01af07007"
+  },
+  "lecture10": {
+    "display_delimiters_even": true,
+    "source_sha256": "9e33056797a4840a12fa4cc743e436fc49b55de5424b7fccab4093579eb7870f"
+  },
+  "solution": {
+    "display_delimiters_even": true,
+    "source_sha256": "f1b121acbfdb571cbcecb9b9cefd38fac8e5f9b8cd22030cf3761a3c71287d34"
+  }
+}

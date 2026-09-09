@@ -1,0 +1,18 @@
+{
+  "document": "lecture04.pdf",
+  "pages_inspected": [
+    2,
+    4,
+    5,
+    6,
+    15
+  ],
+  "result": "pass",
+  "checks": [
+    "TVC equation and its explanation are complete on page 5",
+    "Table of contents and section 3.1 introduction render correctly",
+    "Transition to equity valuation and section 3.2 has no clipping or overlapping"
+  ],
+  "browser_runtime_qa": "not run",
+  "notes": "The added equation moves the final exercise (Question 7) intact to page 15."
+}
