@@ -1,4 +1,26 @@
-# マクロ経済学B シラバス案
+---
+title: "マクロ経済学B シラバス案"
+subtitle: "マクロ経済学B"
+author: "宮﨑憲治"
+date: "2026-04-01"
+date-format: "YYYY年度"
+format:
+  html:
+    toc: false
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    code-fold: false
+    html-math-method: katex
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption: [lualatex, ja=standard, 12pt, a4paper]
+    toc: false
+    number-sections: true
+lang: ja
+toc: false
+---
 
 2026年度。講義ノート第1〜12回に対応。
 
