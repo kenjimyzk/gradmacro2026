@@ -1,0 +1,6 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture01.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture01.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 第1回講義の全体像：ケインジアン・クロス、IS-LM、AD-AS、フィリップス曲線、総需要管理政策、ルーカス批判、現代マクロへの展開を一枚で整理する。自然失業率ではなく、後続回で使う自然産出量と需給ギャップへの橋渡しを意識する。
+WARNING: long figure caption; shorten the title and move detail to Notes: 期待修正型フィリップス曲線：短期フィリップス曲線は右下がりだが、期待インフレ率が上昇すると上方にシフトする。長期では自然水準で垂直になり、後続回ではこの直観を自然産出量と需給ギャップで読み替える。

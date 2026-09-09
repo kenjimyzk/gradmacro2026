@@ -1,0 +1,14 @@
+{
+  "preservation": {
+    "protected_files": 83,
+    "changed": [],
+    "all_preserved": true
+  },
+  "report_local_links": 24,
+  "missing_report_targets": [],
+  "visual_saved_pdf_pages": 22,
+  "fresh_R_figure_pages": 3,
+  "full_visual_coverage": false,
+  "browser_layout": "not run",
+  "quarto_rerender": "not run"
+}

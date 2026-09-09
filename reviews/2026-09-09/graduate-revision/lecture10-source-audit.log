@@ -1,0 +1,6 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture10.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture10.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 第10回講義の全体像：第7回の価格硬直性 RANKモデルに労働パッカーと賃金調整費用を加えると、$\mu_t^p+\mu_t^w=-(\gamma+\varphi)x_t$ と $\pi_t^w-\pi_t^p=\Delta w_t$ が価格・賃金ブロックを結ぶ。
+WARNING: long figure caption; shorten the title and move detail to Notes: 期待項を落とした静学ケースの傾き比較：$\mathbb{E}_t\pi_{t+1}^p=\mathbb{E}_t\pi_{t+1}^w=0$、$\Delta w_t=0$ のもとで、価格硬直性だけ、賃金硬直性だけ、二重硬直性を比較する。二重硬直性の傾きは $\bar\kappa(\gamma+\varphi)$、$\bar\kappa=(1/\kappa_p+1/\kappa_w)^{-1}$ である。

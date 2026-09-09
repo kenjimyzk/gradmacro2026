@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "nonlinear_equilibrium_parameter_cases": 81,
+  "maximum_log_derivative_error": 4.494679206157315e-06,
+  "direct_profit_maximization_cases": 18,
+  "maximum_price_markup_error": 5.329070518200751e-15,
+  "laffer_peak_cases": 27,
+  "maximum_revenue_derivative_at_claimed_peak": 1.4557799410397363e-09,
+  "two_state_equity_price": 0.9000000000000001,
+  "two_state_covariance": -0.11111111111111116
+}

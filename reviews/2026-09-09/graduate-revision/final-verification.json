@@ -1,0 +1,16 @@
+{
+  "documents": 13,
+  "rendered_formats": 26,
+  "pdf_pages": 355,
+  "artifact_issues": [],
+  "render_source_output_hashes_match": true,
+  "unchanged_existing_data_includes_scripts": 9,
+  "changed_protected_inputs": [],
+  "edited_html_figure_order": {
+    "lecture08-overview": true,
+    "lecture09-overview": true,
+    "rank-nk-cross": true,
+    "tank-nk-cross": true
+  },
+  "basic_reference_heading_count": 12
+}

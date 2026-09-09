@@ -1,0 +1,5 @@
+manuscript: /Users/kenjimyzk/work/gradmacro2026/lecture05.qmd
+project root: /Users/kenjimyzk/work/gradmacro2026
++ git diff --check -- lecture05.qmd
+OK: manuscript audit passed
+WARNING: long figure caption; shorten the title and move detail to Notes: 労働所得税のラッファーカーブ。$\\alpha=0.4$、$\\gamma=\\varphi=1$。縦軸は正規化した税収 $TX/\\mathcal A$。赤い破線は最大税収率 $\\tau_N^*=0.769$ を示す。

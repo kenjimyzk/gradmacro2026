@@ -1,0 +1,43 @@
+{
+  "scope": "300 joint technology/monetary/transfer draws for L11; 300 conditional-interest-rate draws for L12; source equations and SVG geometry only, not layout QA.",
+  "numpy_version": "2.4.4",
+  "max_errors": {
+    "l11_closed_vs_primitive": 1.3877787807814457e-17,
+    "l12_closed_vs_primitive": 6.661338147750939e-16,
+    "l12_PE_vs_euler": 3.4416913763379853e-15,
+    "l12_slope_difference_identity": 6.661338147750939e-16
+  },
+  "all_equation_checks_pass": true,
+  "PE_calibration_expected": {
+    "beta": 0.99,
+    "p": 0,
+    "lam": 0.3,
+    "chi": 2,
+    "omega_R": 0.01,
+    "omega_T": 0.604,
+    "direct_ratio": 0.7,
+    "total_ratio": 1.75
+  },
+  "rank_SVG_geometry": {
+    "implied_omega": 0.2,
+    "direct_shift_pixels": 55.0,
+    "feedback_vertical_pixels": 13.75,
+    "total_income_change_pixels": 137.5
+  },
+  "tank_SVG_geometry": {
+    "implied_omega": 0.6,
+    "direct_shift_pixels": 45.0,
+    "feedback_vertical_pixels": 67.5,
+    "total_income_change_pixels": 225.0
+  },
+  "SVG_implied_direct_ratio": 0.8181818181818182,
+  "SVG_implied_total_ratio": 1.6363636363636365,
+  "finding": "SVG lines have correct intersections but do not reproduce the beta=.99,p=0 calibration claimed by lecture12.qmd:348 and :682. Rank PE implies omega=.2 rather than .01.",
+  "sha256": {
+    "lecture11.qmd": "2636e04d5c848fbcf7b74f47d72b5d16a48108ff631995b9c9b73c469b98009b",
+    "lecture12.qmd": "3227a16e416f56ad68b555407f5936c8217bc56855b75ead32f4c595fe161a4e",
+    "solution.qmd": "f1b121acbfdb571cbcecb9b9cefd38fac8e5f9b8cd22030cf3761a3c71287d34",
+    "figures/lecture12/rank_nk_cross.svg": "950fae80fb5c3351d738fceea2c304c89684f6c96d15ae5dc92048f39f655edd",
+    "figures/lecture12/tank_nk_cross.svg": "b9b5f47f764fd1c661bf0dc8bbd81ed73471080e71fd15ca45c21b3f015771b1"
+  }
+}

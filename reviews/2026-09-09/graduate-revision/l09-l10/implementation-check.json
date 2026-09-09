@@ -1,0 +1,19 @@
+{
+  "nonzero_target_deviation_cases": 200,
+  "max_abs_structural_and_matrix_residual": 1.1102230246251565e-16,
+  "unstable_root_count": [
+    2
+  ],
+  "lecture08_natural_level_superscripts": [
+    "f",
+    "f"
+  ],
+  "lecture09_gap_superscripts": [
+    "e",
+    "e",
+    "e",
+    "e",
+    "e"
+  ],
+  "svg_visual_inspection": "Both updated PNGs inspected; formulas and superscripts fit inside the existing boxes."
+}

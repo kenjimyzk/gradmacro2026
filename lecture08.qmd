@@ -52,7 +52,23 @@ DSGEモデルの分析は、基本的に次の3段階で進みます。第3回�
 
 @fig-lecture08-overview は、家計・企業・政府・金融政策の条件を、自然水準と3本のニューケインジアン方程式へ集約する流れを示しています。
 
-![第8回講義の全体像：第3回から第7回までの部品を RANKモデルに統合し、自然産出量、自然利子率、需給ギャップ、3本のニューケインジアン方程式へ整理する。](figures/lecture08/lecture08_overview_infographic.svg){#fig-lecture08-overview width=88% fig-pos="H"}
+::: {#fig-lecture08-overview fig-pos="H"}
+
+![](figures/lecture08/lecture08_overview_infographic.svg){width=88%}
+
+```{=latex}
+\begin{minipage}{\linewidth}\raggedright
+```
+
+*Notes:* 第3回から第7回までの部品を RANKモデルに統合し、自然産出量、自然利子率、需給ギャップ、3本のニューケインジアン方程式へ整理する。
+
+```{=latex}
+\end{minipage}
+```
+
+第8回講義の全体像
+
+:::
 
 
 # これまでの結果と第8回の役割
@@ -1010,7 +1026,9 @@ $$
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. RANKモデル、自然利子率、需給ギャップの標準的教科書。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 3本のNK方程式を政策分析へつなぐため。

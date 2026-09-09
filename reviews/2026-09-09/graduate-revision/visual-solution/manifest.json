@@ -1,0 +1,19 @@
+{
+  "pdf": "solution.pdf",
+  "sha256": "a64f5c3410a66aab5b420ccddc6ec57645d327bdd0f688a424a5f7331dd97a0a",
+  "physical_pages": [
+    11,
+    16,
+    17,
+    27,
+    29,
+    30,
+    36,
+    37
+  ],
+  "render_dpi": 130,
+  "additional_physical_pages": [
+    18,
+    28
+  ]
+}

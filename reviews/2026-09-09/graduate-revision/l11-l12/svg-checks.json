@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "figures": {
+    "rank": {
+      "omega": 0.00999999999999995,
+      "direct_percent": 0.99,
+      "feedback_percent": 0.010000002272727087,
+      "total_percent": 0.999999998630137,
+      "max_coefficient_error": 2.272727086388704e-09,
+      "max_intersection_error_pixels": 5.342465101421112e-07,
+      "axis_endpoints": [
+        130.0,
+        630.0,
+        860.0,
+        190.0
+      ],
+      "sha256": "77fca2749f5f80b3d79a3ec23aaeb7fa22ac32837dfb95b10107b5f20993fff6"
+    },
+    "tank": {
+      "omega": 0.6039999999999999,
+      "direct_percent": 0.6930000000000004,
+      "feedback_percent": 1.0570000022727273,
+      "total_percent": 1.7499999986301369,
+      "max_coefficient_error": 2.2727273396583314e-09,
+      "max_intersection_error_pixels": 5.342465669855301e-07,
+      "axis_endpoints": [
+        130.0,
+        630.0,
+        860.0,
+        190.0
+      ],
+      "sha256": "515a74e79e90892f0c93b8fd177f8e14d5f26951300f469276b70f674a6630a3"
+    }
+  },
+  "direct_ratio": 0.7000000000000004,
+  "total_ratio": 1.750000001027397,
+  "rank_feedback_share": 0.010000002286425719
+}

@@ -582,7 +582,9 @@ $$
 
 # 参考文献
 
-**必読**
+**基本参考文献**
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
 - Dixit, Avinash K., and Joseph E. Stiglitz (1977) "Monopolistic Competition and Optimum Product Diversity." *American Economic Review*, 67(3), 297--308. CES集計と独占的競争の基本文献。
 - Blanchard, Olivier J., and Nobuhiro Kiyotaki (1987) "Monopolistic Competition and the Effects of Aggregate Demand." *American Economic Review*, 77(4), 647--666. マークアップと総需要の関係を理解するため。
@@ -617,6 +619,10 @@ $$
 **問3 [Core] [Derivation]：価格設定の導出**
 
 中間財企業のラグランジュ関数から、価格設定条件 $P_t^I(j)/P_t=[\psi/(\psi-1)]MC_t(j)$ を導出し、対称均衡で $MC_t=1-1/\psi$ となることを確認しなさい。
+
+```{=latex}
+\Needspace{6\baselineskip}
+```
 
 **問4 [Core]：政府会計**
 

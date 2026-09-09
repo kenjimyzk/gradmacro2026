@@ -1,0 +1,99 @@
+{
+  "lecture01": {
+    "sha256": "96549db224a687d4fdbaa9734d177bc58d51df91154801937703a974438d71c3",
+    "returncode": 0,
+    "matched_pages": {
+      "基本参考文献": [
+        23
+      ],
+      "演習問題": [
+        2,
+        24
+      ]
+    },
+    "total_pdf_pages": 28
+  },
+  "lecture02": {
+    "sha256": "c6d6fd2a5387b14e5b4904d57a4abf9100b55655e8a6b841d4f074e0ddbe52b8",
+    "returncode": 0,
+    "matched_pages": {
+      "基本参考文献": [
+        20
+      ],
+      "演習問題": [
+        1,
+        21
+      ]
+    },
+    "total_pdf_pages": 22
+  },
+  "lecture03": {
+    "sha256": "bc1f4e01341ff971f32349625b5f4822b3618ae74a7439f79abe3ffc0941628e",
+    "returncode": 0,
+    "matched_pages": {
+      "例：横断性条件": [
+        2,
+        13
+      ],
+      "一定配当（本編）": [
+        2
+      ],
+      "消費配分と横断性条件": [
+        2,
+        26
+      ],
+      "予算制約を 0 期": [
+        13
+      ]
+    },
+    "total_pdf_pages": 27
+  },
+  "lecture04": {
+    "sha256": "ffda8631e74e20ebdc215cdf83f92d4f0ae4f24bfa07cf689e9c11af9362b4a9",
+    "returncode": 0,
+    "matched_pages": {
+      "基本参考文献": [
+        13
+      ],
+      "演習問題": [
+        2,
+        14
+      ]
+    },
+    "total_pdf_pages": 15
+  },
+  "lecture05": {
+    "sha256": "b5cfe9dc7cbc9c35f54cf65663e2ec996e973c856f18e4c1165f6bbddeb7f31d",
+    "returncode": 0,
+    "matched_pages": {
+      "1 期先の債務式": [
+        5
+      ],
+      "有限の": [
+        6
+      ],
+      "基本参考文献": [
+        19
+      ],
+      "演習問題": [
+        2,
+        20
+      ]
+    },
+    "total_pdf_pages": 21
+  },
+  "lecture06": {
+    "sha256": "1de5071865892911e12318a7059f97599fec6b958214c17bd5674982779e6b8b",
+    "returncode": 0,
+    "matched_pages": {
+      "基本参考文献": [
+        15
+      ],
+      "演習問題": [
+        1,
+        16
+      ]
+    },
+    "total_pdf_pages": 17
+  }
+}

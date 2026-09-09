@@ -1,0 +1,38 @@
+{
+  "lecture08_structural_substitution": {
+    "parameter_sets": 120,
+    "shock_cases": 360,
+    "max_abs_residual": 2.7755575615628914e-17
+  },
+  "lecture09_BK_root_counts": {
+    "peg": [
+      1
+    ],
+    "passive": [
+      1
+    ],
+    "active": [
+      2
+    ]
+  },
+  "lecture09_infinite_horizon_KKT": {
+    "parameter_sets": 120,
+    "max_abs_residual": 8.673617379884035e-17
+  },
+  "lecture09_general_welfare_curvature": {
+    "parameter_sets": 40,
+    "max_relative_finite_difference_error": 4.542408249541552e-08
+  },
+  "lecture10_individual_wage_derivative": {
+    "parameter_sets": 120,
+    "max_scaled_error": 5.306455021153162e-10
+  },
+  "lecture09_svg_gap_counterexample": {
+    "kappa_x": 0.08,
+    "u_t": 0.01,
+    "natural_minus_efficient_gap": 0.125,
+    "NKPC_extra_RHS_using_figure_natural_gap": 0.01,
+    "commitment_extra_LHS_when_u_changes_from_previous_period": 0.03750000000000001,
+    "note": "The figure uses x (natural gap), where the text requires x^e."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "status": "pass",
+  "scope": "Selected changed pages and transitions, not all PDF pages or browser layout",
+  "physical_pages": {
+    "lecture01": [
+      23,
+      24
+    ],
+    "lecture02": [
+      20,
+      21
+    ],
+    "lecture03": [
+      12,
+      13,
+      14,
+      18,
+      19,
+      25,
+      26,
+      27
+    ],
+    "lecture04": [
+      13,
+      14
+    ],
+    "lecture05": [
+      5,
+      6,
+      19,
+      20,
+      21
+    ],
+    "lecture06": [
+      15,
+      16,
+      17
+    ],
+    "lecture07": [
+      17,
+      18,
+      19
+    ],
+    "lecture10": [
+      14,
+      15,
+      23,
+      24
+    ],
+    "lecture11": [
+      18,
+      19,
+      21,
+      22
+    ],
+    "solution": [
+      11,
+      16,
+      17,
+      18,
+      27,
+      28,
+      29,
+      30,
+      36,
+      37
+    ],
+    "lecture12": [
+      12,
+      13,
+      14,
+      15,
+      20,
+      21,
+      22,
+      23,
+      35,
+      36
+    ],
+    "lecture08": [
+      3,
+      4,
+      22,
+      23
+    ],
+    "lecture09": [
+      5,
+      6,
+      12,
+      13,
+      14,
+      15,
+      22,
+      23
+    ]
+  },
+  "unique_page_count": 65,
+  "root_physical_pages": {
+    "lecture12": [
+      12,
+      13,
+      14,
+      15,
+      20,
+      21,
+      22,
+      23,
+      35,
+      36
+    ],
+    "lecture03": [
+      18
+    ],
+    "lecture06": [
+      16,
+      17
+    ],
+    "lecture08": [
+      3,
+      4,
+      22,
+      23
+    ],
+    "lecture09": [
+      5,
+      6,
+      12,
+      13,
+      14,
+      15,
+      22,
+      23
+    ],
+    "solution": [
+      29,
+      30
+    ]
+  },
+  "current_pdf_sha256": {
+    "lecture01": "96549db224a687d4fdbaa9734d177bc58d51df91154801937703a974438d71c3",
+    "lecture02": "c6d6fd2a5387b14e5b4904d57a4abf9100b55655e8a6b841d4f074e0ddbe52b8",
+    "lecture03": "59dc9418d8f16742185b41d16b57ff53205445868336e8656e464819ff0d82dd",
+    "lecture04": "ffda8631e74e20ebdc215cdf83f92d4f0ae4f24bfa07cf689e9c11af9362b4a9",
+    "lecture05": "b5cfe9dc7cbc9c35f54cf65663e2ec996e973c856f18e4c1165f6bbddeb7f31d",
+    "lecture06": "b50b7f1cf3eb63163bb34b551bdf44f806c15fd785858d2182f8782e2ad93d65",
+    "lecture07": "3e24b0a7025acbffb6b810ae0a99ccc083c01542fae16eb48c1034b02ab3633c",
+    "lecture10": "4a5ef51bcdc5bedebbaeaa739fe35990c3de8c095f67d43abe53c4bb794f703f",
+    "lecture11": "84b91aa76e6c5ac13943ac34117ef1e4e71fc4c947ff0e183e3b30664a03505a",
+    "solution": "7e8942c3c50b3e04b5b11f229af878c8e9c71c376f2a67013eb6fd9c9ad0c69d",
+    "lecture12": "97eb5383e614c6923daad00e9f41a260d47b74b80664b513fa43c13c0b5063c7",
+    "lecture08": "54d5b53d4860d4af7536c7b9ef8608cef2301d4138cadc5d69e8303149c9395c",
+    "lecture09": "9059aa471e688574533d3ec0ccd7f60e7dcd3d796b33d9e2ed4a89b8585fb796"
+  },
+  "resolved_visual_issues": [
+    "L03 duplicate equation label word corrected on p18",
+    "L06 Q4 heading and body together on p17",
+    "solution L09 Q9 answer together on p30"
+  ],
+  "edited_figure_order": "image, full-width left-aligned Notes, short caption; checked L08 p3, L09 p5, L12 p14/p22",
+  "final_unchanged_page_pixel_check": "16 previously viewed pages equal to final PDF rasterization"
+}
