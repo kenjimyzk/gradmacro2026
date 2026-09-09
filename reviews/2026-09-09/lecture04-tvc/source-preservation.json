@@ -1,0 +1,20 @@
+{
+  "unchanged_files": {
+    "lecture08.qmd": true,
+    "lecture09.qmd": true,
+    "lecture10.qmd": true,
+    "lecture11.qmd": true,
+    "lecture05.qmd": true,
+    "lecture07.qmd": true,
+    "lecture06.qmd": true,
+    "lecture12.qmd": true,
+    "lecture02.qmd": true,
+    "lecture03.qmd": true,
+    "solution.qmd": true,
+    "lecture01.qmd": true,
+    "includes/assumption-matrix.qmd": true,
+    "includes/notation-concordance.qmd": true,
+    "solution.pdf": true
+  },
+  "lecture04_sections4_to10_unchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "lecture04": {
+    "math_spans": 209,
+    "missing_local_assets": [],
+    "missing_local_links": [],
+    "missing_fragment_targets": [],
+    "duplicate_ids": [],
+    "unresolved_crossref_markers": false,
+    "html_sha256": "cfe04f9a48725f8b9da5b547849963d0572d3e76dff5bb0bd2c50dbf6723b995",
+    "browser_layout": "not run in this revision; static checks do not establish browser layout"
+  }
+}

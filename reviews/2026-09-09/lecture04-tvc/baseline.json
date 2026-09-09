@@ -1,0 +1,23 @@
+{
+  "head": "f9afb5cd65e04bfd21263125973145623eea7ed9",
+  "status": " M includes/notation-concordance.qmd\n M lecture01.pdf\n M lecture09.pdf\n M lecture09.qmd\n M lecture10.pdf\n M lecture10.qmd\n M solution.pdf\n M solution.qmd\n?? reviews/2026-09-09/lecture10-simplification/\n",
+  "files": {
+    "lecture08.qmd": "19a2037e50805992e7b9516a6abdab6d235894302728afab3483f2c5527eb78d",
+    "lecture09.qmd": "c106532dd285863fd484c0d63991b30fc4a4a3501090e66da0af7bd01af07007",
+    "lecture04.qmd": "bf2487295d33565567c611cf18ba9453181e04ab447f28cc1c1ccf99c1e50449",
+    "lecture10.qmd": "9e33056797a4840a12fa4cc743e436fc49b55de5424b7fccab4093579eb7870f",
+    "lecture11.qmd": "2636e04d5c848fbcf7b74f47d72b5d16a48108ff631995b9c9b73c469b98009b",
+    "lecture05.qmd": "b20cedffda5f5faa046a69c9be15da40f1bf76f4f40391ce5a9a3f675bc5646d",
+    "lecture07.qmd": "1027c668880ecb162bb2b157ac4142b3da8bccfbe980f006cb6af22f094da551",
+    "lecture06.qmd": "ba3f3ce627cb30b62e0a8c71550a0ba96bd6e6e78c61fd40a89ef1608abd4903",
+    "lecture12.qmd": "3227a16e416f56ad68b555407f5936c8217bc56855b75ead32f4c595fe161a4e",
+    "lecture02.qmd": "e2365590c6d338f99fce0c33bc1cbd375797f6c27860db508dfbb42ee0ebe0bc",
+    "lecture03.qmd": "c2ed0cde6b4fb1a1ab08d0042be7838e68b30f906c6de737571d8c70b65091bd",
+    "solution.qmd": "f1b121acbfdb571cbcecb9b9cefd38fac8e5f9b8cd22030cf3761a3c71287d34",
+    "lecture01.qmd": "7bd62cd3e84a5f31e27752475efa9a361db8edb03465fa661dd64b05ed4a366d",
+    "includes/assumption-matrix.qmd": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+    "includes/notation-concordance.qmd": "54b7286b29248aaa6a2dee2edd01d59d408d221aafe889aa3d7a0a8e060184a0",
+    "lecture04.pdf": "658e9068dca97884b7b7c1bb78609fc13e9114fc110b022c1af71e42b5ba122d",
+    "solution.pdf": "dfdc4327b213f66461dcdedc250180562110924e2e948f77e61b116a56950aab"
+  }
+}
