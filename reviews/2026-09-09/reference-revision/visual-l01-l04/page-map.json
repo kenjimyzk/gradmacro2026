@@ -1,0 +1,117 @@
+{
+  "lecture01": {
+    "pages": 28,
+    "hits": [
+      {
+        "page": 2,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "5         フィリップス曲線                                                    "
+      },
+      {
+        "page": 23,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "9     まとめと第 2 回への接続\n9.1    本日のポイント\n\n      1. ケインジアン・クロスは、計画支出と 45 度線の交"
+      },
+      {
+        "page": 24,
+        "markers": [
+          "Blanchard, Olivier"
+        ],
+        "start": "た論点を授業後に復習するための参照先です。\n\n  • Blanchard, Olivier (2017) Macroeconomics (7"
+      }
+    ]
+  },
+  "lecture02": {
+    "pages": 22,
+    "hits": [
+      {
+        "page": 1,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "            第 2 回：時系列分析と対数近似\n                     マクロ経済学 B\n\n\n         "
+      },
+      {
+        "page": 3,
+        "markers": [
+          "Hodrick"
+        ],
+        "start": "      第2回の地図：DSGEの動学を読む準備\n      ショックがどれだけ残るか、モデルをどう線形化して読むかを学ぶ\n\n\n\n    "
+      },
+      {
+        "page": 5,
+        "markers": [
+          "新しい観測"
+        ],
+        "start": "カリブレーションやモデル評価では、データの循環成分から得られる変動の大きさ、持続\n性、他の変数との相関を、モデルが生成する系列の対応する統計"
+      },
+      {
+        "page": 20,
+        "markers": [
+          "参考文献",
+          "Hodrick",
+          "Blanchard, Olivier"
+        ],
+        "start": "次回は、制約つき最適化を正面から扱います。有限期間のラグランジュ問題から出発し、無\n限期間、ダイナミック・プログラミング、不確実性、資産価格"
+      },
+      {
+        "page": 21,
+        "markers": [
+          "Hodrick",
+          "Hamilton, James D. (2018)"
+        ],
+        "start": "    eral Equilibrium Models Using a Second-Order Approximation to the "
+      }
+    ]
+  },
+  "lecture03": {
+    "pages": 27,
+    "hits": [
+      {
+        "page": 2,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "    6.2   No-Ponzi 条件と横断性条件 . . . . . . . . . . . . . . . . . . . . . "
+      },
+      {
+        "page": 25,
+        "markers": [
+          "参考文献",
+          "Stokey, Nancy"
+        ],
+        "start": "11 参考文献\n予習は講義ノートの本編を中心に進めてください。以下の文献は、各項目に記した論点を復\n習・補足するための参照先です。\n\n基本参"
+      }
+    ]
+  },
+  "lecture04": {
+    "pages": 15,
+    "hits": [
+      {
+        "page": 2,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "7         自然実質利子率と古典派の二分法                                             "
+      },
+      {
+        "page": 13,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "8    まとめと第 5 回への接続\nこの回では、固定資本を 1 に正規化し、資本蓄積を止めた柔軟価格モデルを解きました。実\n物配分の中心は"
+      },
+      {
+        "page": 14,
+        "markers": [
+          "Resuscitating"
+        ],
+        "start": "  • King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) “"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+pandoc 
+  to: html
+  output-file: マクロ経済学B_シラバス案.html
+  standalone: true
+  section-divs: true
+  html-math-method: katex
+  wrap: none
+  default-image-extension: png
+  toc: false
+  toc-depth: 3
+  number-sections: true
+  
+metadata
+  document-css: false
+  link-citations: true
+  lang: ja
+  title: マクロ経済学B シラバス案
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  theme: cosmo
+  latex-auto-install: false
+  
+pandoc 
+  to: latex
+  output-file: マクロ経済学B_シラバス案.tex
+  standalone: true
+  shift-heading-level-by: -1
+  pdf-engine: lualatex
+  variables:
+    graphics: true
+    tables: true
+  default-image-extension: pdf
+  toc: false
+  number-sections: true
+  
+metadata
+  block-headings: true
+  title: マクロ経済学B シラバス案
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  lang: ja
+  geometry:
+    - top=20mm
+    - bottom=20mm
+    - left=25mm
+    - right=25mm
+  linestretch: 0.95
+  documentclass: ltjsarticle
+  classoption:
+    - a4paper
+    - 11pt
+    - ja=standard
+    - lualatex
+  latex-auto-install: false
+  
+
+Rendering PDF
+running lualatex - 1
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+  luaotfload | db : Font names database not found, generating new one.
+  luaotfload | db : This can take several minutes; please be patient.
+running lualatex - 2
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+
+Output created: マクロ経済学B_シラバス案.html
+

@@ -466,15 +466,15 @@ $$
 
 予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 固定資本・柔軟価格モデルからニューケインジアン・モデルへ進むための参照先。
-- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 実物ショックと標準的な資本蓄積モデルを比較するための参照先。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 第2章が、資本蓄積のない柔軟価格モデルと自然実質利子率の参照先。[著者の第2章スライド](https://crei.cat/wp-content/uploads/users/pages/ch2_slides_october_2015.pdf)。
+- Romer, David (2019) [*Advanced Macroeconomics* (5th ed.)](https://www.mheducation.com/highered/product/advanced-macroeconomics-romer.html?viewOption=student). McGraw-Hill. 実物ショックと標準的な資本蓄積モデルを比較するための参照先。
 
 **発展：資本蓄積を含む標準的なRBCモデル**
 
 - Kydland, Finn E., and Edward C. Prescott (1982) "Time to Build and Aggregate Fluctuations." *Econometrica*, 50(6), 1345-1370. [doi](https://doi.org/10.2307/1913386)
 - Hansen, Gary D. (1985) "Indivisible Labor and the Business Cycle." *Journal of Monetary Economics*, 16(3), 309-327. [doi](https://doi.org/10.1016/0304-3932(85)90039-X)
 - King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) "Production, Growth and Business Cycles: I. The Basic Neoclassical Model." *Journal of Monetary Economics*, 21(2-3), 195-232. [doi](https://doi.org/10.1016/0304-3932(88)90030-X)
-- King, Robert G., and Sergio T. Rebelo (1999) "Resuscitating Real Business Cycles." In *Handbook of Macroeconomics*, Vol. 1B. Elsevier.
+- King, Robert G., and Sergio T. Rebelo (1999) "Resuscitating Real Business Cycles." In John B. Taylor and Michael Woodford (eds.), *Handbook of Macroeconomics*, Vol. 1B, ch. 14, pp. 927-1007. Elsevier. [doi](https://doi.org/10.1016/S1574-0048(99)10022-3)
 - Plosser, Charles I. (1989) "Understanding Real Business Cycles." *Journal of Economic Perspectives*, 3(3), 51-77. [doi](https://doi.org/10.1257/jep.3.3.51)
 
 # 演習問題

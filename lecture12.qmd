@@ -149,6 +149,8 @@ $$
 
 : 外生・較正パラメータ。$p$ は構造的ショック過程や政策ルールではなく、NKクロスを閉じる簡約形の係数である。 {#tbl-lecture12-parameters tbl-colwidths="[16,18,66]"}
 
+Bilbiie (2020, §2) は、この期待式を所与の実質利子率経路の外生的な持続性から導きます。本ノートでは同じ式を簡約形の期待閉鎖として用い、インフレや政策金利を内生的に決める政策ルールとは区別します。
+
 注：数値例では $\beta=0.99$、$\gamma=\varphi=1$、$\lambda=0.30$、$p=0$ を使う。
 
 派生係数は次の通りです。
@@ -984,6 +986,8 @@ $$
 が新たな動学を作ります。$\delta$ は減耗率です。資本ストックの水準 $K_t$ は所定状態変数となり、消費や資産価格などの前向き変数と同時に解かなければなりません。そのため、単一のAR(1)ショックに比例する解を予想する方法だけでは一般に不十分です。
 
 次の段階では、定常状態の周りで対数線形化し、静的変数・所定状態・前向き変数を分類して、線形合理的期待体系を行列で表します。Blanchard--Kahn条件で解の存在と一意性を確認し、generalized Schur（QZ）法で policy function と transition law を計算して、そこからインパルス応答を作ります。資本を含むRBCモデルは、本講義で学んだ動学的最適化と一般均衡を、この数値解法へ接続する最初の応用です。
+
+Blanchard--Kahn条件は[第2回の参考文献](lecture02.html#参考文献)に挙げた Blanchard and Kahn (1980)、QZ法による解法は本回の発展文献 Klein (2000) を参照してください。
 :::
 
 第三に、**非線形分析と実証へ進む方向**です。ゼロ金利制約、大きなショック、強い借入制約のもとでは一次近似だけでは不十分です。同時に、所得階層別の労働所得、資本所得、移転、MPC を測れば、
@@ -1010,17 +1014,19 @@ $$
 
 **基本参考文献**
 
-- Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003)
-- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008)
-- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227)
-- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107)
+- Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003) 本回の中心文献。§§2–3、特に Propositions 1–2 を読み、RANK と TANK の PE 曲線、所得反応係数、乗数の増幅条件を復習するため。
+- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008) TANK の所得帰着、通常領域と反転領域、金融政策ルールの背景を確認するため。再分配の仮定と厚生近似については、次の2019年訂正を併読してください。
+- Bilbiie, Florin O. (2019) "Corrigendum to ‘Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic’ [J. Econ. Theory 140 (1) (2008) 162–196]." *Journal of Economic Theory*, 181, 421-422. [doi](https://doi.org/10.1016/j.jet.2019.03.008) 原論文の利益再分配節における Type H の労働供給仮定と、二次厚生近似の訂正を確認するため。本回の共通労働供給弾力性から得る所得係数は、2020年論文 §3.1 と対応させてください。
+- Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227) 現在所得を消費する家計を含む二家計モデルの背景を学び、政府支出を含む場合へ進むため。
+- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-216. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107) 現在所得消費者という実証的動機と、本回の Campbell--Mankiw 型基準の背景を確認するため。
 
 **発展**
 
-- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042)
-- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063)
-- Auclert, Adrien (2019) "Monetary Policy and the Redistribution Channel." *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137)
-- Werning, Iván (2015) "Incomplete Markets and Aggregate Demand." NBER Working Paper No. 21448. [doi](https://doi.org/10.3386/w21448)
+- Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042) 所得リスクと複数資産を持つ HANK に進み、金融政策の直接効果と労働所得を通じる間接効果を比較するため。
+- McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063) 所得リスクと借入制約のもとで、予備的貯蓄が前方指針の効果を弱める仕組みを学ぶため。市場不完備一般の結論と混同しないよう、Werning (2015) と比較してください。
+- Auclert, Adrien (2019) "Monetary Policy and the Redistribution Channel." *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137) 所得変化の異質性、予想外のインフレ、金利変化に対する資産ポジションという再分配経路へ、本回の所得分配の議論を広げるため。
+- Werning, Iván (2015) "Incomplete Markets and Aggregate Demand." NBER Working Paper No. 21448. [doi](https://doi.org/10.3386/w21448) 不完備市場でも特定の条件では代表的家計型の集計 Euler 関係が成立する理由と、その条件から外れた場合を学ぶため。前方指針が弱まるという McKay ほか (2016) の結果の条件を考える比較先。
+- Klein, Paul (2000) "Using the Generalized Schur Form to Solve a Multivariate Linear Rational Expectations Model." *Journal of Economic Dynamics and Control*, 24(10), 1405-1423. [doi](https://doi.org/10.1016/S0165-1889(99)00045-7) 資本などの所定状態変数を含むモデルへ進み、generalized Schur（QZ）法による線形合理的期待モデルの解法を学ぶため。
 
 ```{=latex}
 \Needspace{12\baselineskip}

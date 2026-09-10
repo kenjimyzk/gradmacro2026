@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "file": "lecture05.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 76,
+      "fenced_blocks": 3,
+      "reference_entries_before": 7,
+      "reference_entries_after": 7
+    },
+    {
+      "file": "lecture06.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 55,
+      "fenced_blocks": 3,
+      "reference_entries_before": 6,
+      "reference_entries_after": 6
+    },
+    {
+      "file": "lecture07.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 64,
+      "fenced_blocks": 10,
+      "reference_entries_before": 6,
+      "reference_entries_after": 7
+    },
+    {
+      "file": "lecture08.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 74,
+      "fenced_blocks": 36,
+      "reference_entries_before": 6,
+      "reference_entries_after": 6
+    },
+    {
+      "file": "lecture09.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 105,
+      "fenced_blocks": 10,
+      "reference_entries_before": 9,
+      "reference_entries_after": 11
+    },
+    {
+      "file": "lecture10.qmd",
+      "checks": {
+        "yaml": true,
+        "fenced_blocks": true,
+        "display_math": true,
+        "inline_math": true,
+        "exercises_and_appendices": true,
+        "headings": true
+      },
+      "display_equations": 146,
+      "fenced_blocks": 6,
+      "reference_entries_before": 8,
+      "reference_entries_after": 10
+    }
+  ]
+}

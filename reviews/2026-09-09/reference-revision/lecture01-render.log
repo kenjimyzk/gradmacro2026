@@ -1,0 +1,71 @@
+pandoc 
+  to: html
+  output-file: lecture01.html
+  standalone: true
+  section-divs: true
+  html-math-method: katex
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  number-sections: true
+  
+metadata
+  document-css: false
+  link-citations: true
+  lang: ja
+  title: 第1回：学部マクロの復習
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  theme: cosmo
+  latex-auto-install: false
+  
+pandoc 
+  to: latex
+  output-file: lecture01.tex
+  standalone: true
+  pdf-engine: lualatex
+  variables:
+    graphics: true
+    tables: true
+  default-image-extension: pdf
+  toc: true
+  number-sections: true
+  
+metadata
+  block-headings: true
+  title: 第1回：学部マクロの復習
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  lang: ja
+  documentclass: ltjsarticle
+  classoption:
+    - a4paper
+    - 12pt
+    - ja=standard
+    - lualatex
+  latex-auto-install: false
+  
+
+Rendering PDF
+running lualatex - 1
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+  luaotfload | db : Font names database not found, generating new one.
+  luaotfload | db : This can take several minutes; please be patient.
+running lualatex - 2
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+running lualatex - 3
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+
+Output created: lecture01.html
+

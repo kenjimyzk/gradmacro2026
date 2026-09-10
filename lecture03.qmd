@@ -998,7 +998,7 @@ $$
 
 **基本参考文献**
 
-- Stokey, Nancy L., Robert E. Lucas, Jr., and Edward C. Prescott (1989) *Recursive Methods in Economic Dynamics*. Harvard University Press. 動学計画法とオイラー方程式の標準的教科書。
+- Stokey, Nancy L., Robert E. Lucas, Jr., and Edward C. Prescott (1989) [*Recursive Methods in Economic Dynamics*](https://www.jstor.org/stable/j.ctvjnrt76). Harvard University Press. 第4章（pp. 66-102）が決定論的動学計画法、第9章（pp. 239-287）が確率的動学計画法の参照先。
 - Ljungqvist, Lars, and Thomas J. Sargent (2018) [*Recursive Macroeconomic Theory* (4th ed.)](https://mitpress.mit.edu/9780262038669/recursive-macroeconomic-theory/). MIT Press. 逐次問題、再帰問題、不確実性の扱いを確認するため。
 - Cochrane, John H. (2005) [*Asset Pricing* (rev. ed.)](https://www.johnhcochrane.com/asset-pricing). Princeton University Press. 第1章がSDFと資産価格条件の入門になっている。
 

@@ -545,15 +545,19 @@ DSGEモデルは、現代のマクロ経済政策分析で用いられる主要�
 
 ---
 
+```{=latex}
+\clearpage
+```
+
 # 参考文献
 
 **基本参考文献**
 
 予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
-- Blanchard, Olivier, and David R. Johnson (2017) *Macroeconomics* (7th ed.). Pearson. 学部マクロの全体像を復習するための標準的教科書。
+- Blanchard, Olivier (2017) [*Macroeconomics* (7th ed.)](https://www.pearson.com/en-us/subject-catalog/p/Blanchard-Macroeconomics-7th-Edition/P200000007659/9780133780581). Pearson. 学部マクロの全体像を復習するための標準的教科書。
 - Mankiw, N. Gregory (2019) *Macroeconomics* (10th ed.). Worth. ケインジアン・クロス、IS-LM、AD-ASを確認するための入口。
-- 齊藤誠・岩本康志・太田聰一・柴田章久 (2016) 『マクロ経済学（新版）』有斐閣。日本語で標準的な学部マクロを確認するため。
+- 齊藤誠・岩本康志・太田聰一・柴田章久 (2016) [『マクロ経済学（新版）』](https://www.yuhikaku.co.jp/books/detail/9784641053847)有斐閣。日本語で標準的な学部マクロを確認するため。
 
 **発展**
 

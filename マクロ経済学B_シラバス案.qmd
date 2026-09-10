@@ -14,8 +14,10 @@ format:
     html-math-method: katex
   pdf:
     pdf-engine: lualatex
+    geometry: [top=20mm, bottom=20mm, left=25mm, right=25mm]
+    linestretch: 0.95
     documentclass: ltjsarticle
-    classoption: [lualatex, ja=standard, 12pt, a4paper]
+    classoption: [lualatex, ja=standard, 11pt, a4paper]
     toc: false
     number-sections: true
 lang: ja
@@ -139,15 +141,17 @@ Dixit–Stiglitz型の最終財集計から中間財需要と価格指数を導�
 
 主教材は配布する講義ノート第1〜12回と練習問題解答です。文献は次の論点の復習に用い、詳しい一覧は各回の参考文献欄に示します。
 
-- Galí, Jordi (2015), *Monetary Policy, Inflation, and the Business Cycle*, 2nd ed., Princeton University Press：第7〜10回のNKモデル、決定性、最適金融政策。
+- Galí, Jordi (2015), *Monetary Policy, Inflation, and the Business Cycle*, 2nd ed., Princeton University Press：第2章を教材第4回、第3章を教材第7・8回、第4〜5章を教材第9回、第6章を教材第10回の復習に用います。
 - Ljungqvist, Lars, and Thomas J. Sargent (2018), *Recursive Macroeconomic Theory*, 4th ed., MIT Press：第3回の再帰的最適化と資産価格条件。
 - Hamilton, James D. (1994), *Time Series Analysis*, Princeton University Press：第2回の定常性、AR過程、予測。
 - Woodford, Michael (2003), *Interest and Prices*, Princeton University Press：第9・10回の政策実装・厚生分析を深めるための参照先。
 - 齊藤誠・岩本康志・太田聰一・柴田章久 (2016)『マクロ経済学（新版）』有斐閣：第1回の学部マクロの復習。
 - 二神孝一・堀敬一 (2025)『[マクロ経済学 第3版　基礎編](https://www.yuhikaku.co.jp/book/b10190387.html)』有斐閣：学部マクロの復習から長期・短期の標準モデル、財政・金融政策までを確認するための新しい基礎テキスト。
-- 二神孝一・堀敬一・祝迫達郎 (2026)『[マクロ経済学 第3版　応用編](https://www.yuhikaku.co.jp/book/b10190488.html)』有斐閣：動学的一般均衡、ニューケインジアン理論、家計・企業の異質性、動学的最適化を発展的に学ぶための参照書。
+- 二神孝一・堀敬一・祝迫達郎 (2026)『[マクロ経済学 第3版　応用編](https://www.yuhikaku.co.jp/book/b10190488.html)』有斐閣：第7章をNK理論、第9章を家計の異質性、第12・13章を離散時間の動学的最適化・動的計画法の参照先とします。動学的一般均衡や企業の異質性も発展的に学べます。
 
 第9回のClarida–Galí–Gertler、第10回のErceg–Henderson–Levin、第11・12回のBilbiie等の論文は、各講義で扱う方程式や比較の背景を確認する際に参照します。原論文の全モデル・全結果を本講義の範囲とはしません。
+
+第10回のBorn–Pfeifer (2020) は2025年の訂正、第11・12回のBilbiie (2008) は2019年の訂正と併読してください。第12回のNKクロスはBilbiie (2020) の第2・3節、特に命題1・2が中心です。HPフィルターや価格設定方式の比較を含む補足文献の書誌・リンク・基本／発展の区分は各回に示します。
 
 ## 計算資料
 

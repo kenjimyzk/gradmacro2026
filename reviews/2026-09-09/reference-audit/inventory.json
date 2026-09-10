@@ -1,0 +1,864 @@
+[
+  {
+    "file": "lecture01.qmd",
+    "line": 554,
+    "text": "Blanchard, Olivier, and David R. Johnson (2017) *Macroeconomics* (7th ed.). Pearson. 学部マクロの全体像を復習するための標準的教科書。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 555,
+    "text": "Mankiw, N. Gregory (2019) *Macroeconomics* (10th ed.). Worth. ケインジアン・クロス、IS-LM、AD-ASを確認するための入口。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 556,
+    "text": "齊藤誠・岩本康志・太田聰一・柴田章久 (2016) 『マクロ経済学（新版）』有斐閣。日本語で標準的な学部マクロを確認するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 560,
+    "text": "Phillips, A. W. (1958) \"The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957.\" *Economica*, 25(100), 283-299. [doi](https://doi.org/10.1111/j.1468-0335.1958.tb00003.x)",
+    "dois": [
+      "10.1111/j.1468-0335.1958.tb00003.x"
+    ],
+    "urls": [
+      "https://doi.org/10.1111/j.1468-0335.1958.tb00003.x"
+    ]
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 561,
+    "text": "Phelps, Edmund S. (1967) \"Phillips Curves, Expectations of Inflation and Optimal Unemployment over Time.\" *Economica*, 34(135), 254-281. [doi](https://doi.org/10.2307/2552025)",
+    "dois": [
+      "10.2307/2552025"
+    ],
+    "urls": [
+      "https://doi.org/10.2307/2552025"
+    ]
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 562,
+    "text": "Friedman, Milton (1968) \"The Role of Monetary Policy.\" *American Economic Review*, 58(1), 1-17.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture01.qmd",
+    "line": 563,
+    "text": "Lucas, Robert E., Jr. (1976) \"Econometric Policy Evaluation: A Critique.\" *Carnegie-Rochester Conference Series on Public Policy*, 1, 19-46. [doi](https://doi.org/10.1016/S0167-2231(76)80003-6)",
+    "dois": [
+      "10.1016/S0167-2231(76)80003-6"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/S0167-2231(76)80003-6"
+    ]
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 598,
+    "text": "U.S. Bureau of Economic Analysis (2026) \"Real Gross Domestic Product\" (`GDPC1`), retrieved from [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/series/GDPC1), August 15, 2026.",
+    "dois": [],
+    "urls": [
+      "https://fred.stlouisfed.org/series/GDPC1"
+    ]
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 604,
+    "text": "Hamilton, James D. (1994) *Time Series Analysis*. Princeton University Press. AR過程、定常性、インパルス応答の標準的な参照先。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 605,
+    "text": "Ljungqvist, Lars, and Thomas J. Sargent (2018) *Recursive Macroeconomic Theory* (4th ed.). MIT Press. 動学モデルの状態変数、再帰表現、線形化の背景を確認するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 606,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 対数線形化をニューケインジアン・モデルで使う入口。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 610,
+    "text": "Blanchard, Olivier J., and Charles M. Kahn (1980) \"The Solution of Linear Difference Models under Rational Expectations.\" *Econometrica*, 48(5), 1305-1311. [doi](https://doi.org/10.2307/1912186)",
+    "dois": [
+      "10.2307/1912186"
+    ],
+    "urls": [
+      "https://doi.org/10.2307/1912186"
+    ]
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 611,
+    "text": "Schmitt-Grohé, Stephanie, and Martín Uribe (2004) \"Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function.\" *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi](https://doi.org/10.1016/S0165-1889(03)00043-5)",
+    "dois": [
+      "10.1016/S0165-1889(03)00043-5"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/S0165-1889(03)00043-5"
+    ]
+  },
+  {
+    "file": "lecture02.qmd",
+    "line": 612,
+    "text": "Judd, Kenneth L. (1998) *Numerical Methods in Economics*. MIT Press. 近似解法と数値計算を深く学ぶため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1001,
+    "text": "Stokey, Nancy L., Robert E. Lucas, Jr., and Edward C. Prescott (1989) *Recursive Methods in Economic Dynamics*. Harvard University Press. 動学計画法とオイラー方程式の標準的教科書。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1002,
+    "text": "Ljungqvist, Lars, and Thomas J. Sargent (2018) [*Recursive Macroeconomic Theory* (4th ed.)](https://mitpress.mit.edu/9780262038669/recursive-macroeconomic-theory/). MIT Press. 逐次問題、再帰問題、不確実性の扱いを確認するため。",
+    "dois": [],
+    "urls": [
+      "https://mitpress.mit.edu/9780262038669/recursive-macroeconomic-theory/"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1003,
+    "text": "Cochrane, John H. (2005) [*Asset Pricing* (rev. ed.)](https://www.johnhcochrane.com/asset-pricing). Princeton University Press. 第1章がSDFと資産価格条件の入門になっている。",
+    "dois": [],
+    "urls": [
+      "https://www.johnhcochrane.com/asset-pricing"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1007,
+    "text": "Lucas, Robert E., Jr. (1978) \"Asset Prices in an Exchange Economy.\" *Econometrica*, 46(6), 1429-1445. [doi](https://doi.org/10.2307/1913837)",
+    "dois": [
+      "10.2307/1913837"
+    ],
+    "urls": [
+      "https://doi.org/10.2307/1913837"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1008,
+    "text": "Hansen, Lars Peter, and Kenneth J. Singleton (1982) \"Generalized Instrumental Variables Estimation of Nonlinear Rational Expectations Models.\" *Econometrica*, 50(5), 1269-1286. [doi](https://doi.org/10.2307/1911873) Euler条件をモーメント条件として推定する代表的応用。",
+    "dois": [
+      "10.2307/1911873"
+    ],
+    "urls": [
+      "https://doi.org/10.2307/1911873"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1009,
+    "text": "Kamihigashi, Takashi (2001) \"Necessity of Transversality Conditions for Infinite Horizon Problems.\" *Econometrica*, 69(4), 995-1012. [doi](https://doi.org/10.1111/1468-0262.00227) 横断性条件が必要となる正則条件を確認するため。",
+    "dois": [
+      "10.1111/1468-0262.00227"
+    ],
+    "urls": [
+      "https://doi.org/10.1111/1468-0262.00227"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1010,
+    "text": "Duffie, Darrell (2001) [*Dynamic Asset Pricing Theory* (3rd ed.)](https://www.gsb.stanford.edu/faculty-research/books/dynamic-asset-pricing-theory). Princeton University Press. ニュメレールと測度変更の参照先。",
+    "dois": [],
+    "urls": [
+      "https://www.gsb.stanford.edu/faculty-research/books/dynamic-asset-pricing-theory"
+    ]
+  },
+  {
+    "file": "lecture03.qmd",
+    "line": 1011,
+    "text": "Judd, Kenneth L. (1998) [*Numerical Methods in Economics*](https://mitpress.mit.edu/9780262547741/numerical-methods-in-economics/). MIT Press. 動的最適化を数値的に解く方法を学ぶため。",
+    "dois": [],
+    "urls": [
+      "https://mitpress.mit.edu/9780262547741/numerical-methods-in-economics/"
+    ]
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 469,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 固定資本・柔軟価格モデルからニューケインジアン・モデルへ進むための参照先。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 470,
+    "text": "Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 実物ショックと標準的な資本蓄積モデルを比較するための参照先。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 474,
+    "text": "Kydland, Finn E., and Edward C. Prescott (1982) \"Time to Build and Aggregate Fluctuations.\" *Econometrica*, 50(6), 1345-1370. [doi](https://doi.org/10.2307/1913386)",
+    "dois": [
+      "10.2307/1913386"
+    ],
+    "urls": [
+      "https://doi.org/10.2307/1913386"
+    ]
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 475,
+    "text": "Hansen, Gary D. (1985) \"Indivisible Labor and the Business Cycle.\" *Journal of Monetary Economics*, 16(3), 309-327. [doi](https://doi.org/10.1016/0304-3932(85)90039-X)",
+    "dois": [
+      "10.1016/0304-3932(85)90039-X"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(85)90039-X"
+    ]
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 476,
+    "text": "King, Robert G., Charles I. Plosser, and Sergio T. Rebelo (1988) \"Production, Growth and Business Cycles: I. The Basic Neoclassical Model.\" *Journal of Monetary Economics*, 21(2-3), 195-232. [doi](https://doi.org/10.1016/0304-3932(88)90030-X)",
+    "dois": [
+      "10.1016/0304-3932(88)90030-X"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(88)90030-X"
+    ]
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 477,
+    "text": "King, Robert G., and Sergio T. Rebelo (1999) \"Resuscitating Real Business Cycles.\" In *Handbook of Macroeconomics*, Vol. 1B. Elsevier.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture04.qmd",
+    "line": 478,
+    "text": "Plosser, Charles I. (1989) \"Understanding Real Business Cycles.\" *Journal of Economic Perspectives*, 3(3), 51-77. [doi](https://doi.org/10.1257/jep.3.3.51)",
+    "dois": [
+      "10.1257/jep.3.3.51"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/jep.3.3.51"
+    ]
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 722,
+    "text": "Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. 政府支出、税、リカード等価の基礎を復習するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 723,
+    "text": "Barro, Robert J. (1974) \"Are Government Bonds Net Wealth?\" *Journal of Political Economy*, 82(6), 1095-1117. [doi](https://doi.org/10.1086/260266)",
+    "dois": [
+      "10.1086/260266"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/260266"
+    ]
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 724,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 政府支出ショックをニューケインジアン・モデルへ接続するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 728,
+    "text": "Baxter, Marianne, and Robert G. King (1993) \"Fiscal Policy in General Equilibrium.\" *American Economic Review*, 83(3), 315-334.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 729,
+    "text": "Aiyagari, S. Rao, Lawrence J. Christiano, and Martin Eichenbaum (1992) \"The Output, Employment, and Interest Rate Effects of Government Consumption.\" *Journal of Monetary Economics*, 30(1), 73-86.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 730,
+    "text": "Leeper, Eric M. (1991) \"Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies.\" *Journal of Monetary Economics*, 27(1), 129-147.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture05.qmd",
+    "line": 731,
+    "text": "Trabandt, Mathias, and Harald Uhlig (2011) \"The Laffer Curve Revisited.\" *Journal of Monetary Economics*, 58(4), 305-327.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 589,
+    "text": "Dixit, Avinash K., and Joseph E. Stiglitz (1977) \"Monopolistic Competition and Optimum Product Diversity.\" *American Economic Review*, 67(3), 297--308. CES集計と独占的競争の基本文献。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 590,
+    "text": "Blanchard, Olivier J., and Nobuhiro Kiyotaki (1987) \"Monopolistic Competition and the Effects of Aggregate Demand.\" *American Economic Review*, 77(4), 647--666. マークアップと総需要の関係を理解するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 591,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 独占的競争を価格硬直性へつなぐ標準的教科書。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 595,
+    "text": "Spence, Michael (1976) \"Product Selection, Fixed Costs, and Monopolistic Competition.\" *Review of Economic Studies*, 43(2), 217--235.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 596,
+    "text": "Rotemberg, Julio J., and Michael Woodford (1997) \"An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy.\" *NBER Macroeconomics Annual*, 12, 297--346.",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture06.qmd",
+    "line": 597,
+    "text": "Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 独占的競争と歪みの厚生分析を深く学ぶため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 631,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKフィリップス曲線の導出を確認するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 632,
+    "text": "Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格硬直性と金融政策の標準的な体系。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 633,
+    "text": "Clarida, Richard, Jordi Galí, and Mark Gertler (1999) \"The Science of Monetary Policy: A New Keynesian Perspective.\" *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)",
+    "dois": [
+      "10.1257/jel.37.4.1661"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/jel.37.4.1661"
+    ]
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 641,
+    "text": "Calvo, Guillermo A. (1983) \"Staggered Prices in a Utility-Maximizing Framework.\" *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)",
+    "dois": [
+      "10.1016/0304-3932(83)90060-0"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(83)90060-0"
+    ]
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 642,
+    "text": "Rotemberg, Julio J. (1982) \"Sticky Prices in the United States.\" *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117)",
+    "dois": [
+      "10.1086/261117"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/261117"
+    ]
+  },
+  {
+    "file": "lecture07.qmd",
+    "line": 643,
+    "text": "Taylor, John B. (1993) \"Discretion versus Policy Rules in Practice.\" *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)",
+    "dois": [
+      "10.1016/0167-2231(93)90009-L"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0167-2231(93)90009-L"
+    ]
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1033,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. RANKモデル、自然利子率、需給ギャップの標準的教科書。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1034,
+    "text": "Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 3本のNK方程式を政策分析へつなぐため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1035,
+    "text": "Clarida, Richard, Jordi Galí, and Mark Gertler (1999) \"The Science of Monetary Policy: A New Keynesian Perspective.\" *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)",
+    "dois": [
+      "10.1257/jel.37.4.1661"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/jel.37.4.1661"
+    ]
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1043,
+    "text": "Smets, Frank, and Raf Wouters (2003) \"An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area.\" *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)",
+    "dois": [
+      "10.1162/154247603770383415"
+    ],
+    "urls": [
+      "https://doi.org/10.1162/154247603770383415"
+    ]
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1044,
+    "text": "Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) \"Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy.\" *Journal of Political Economy*, 113(1), 1-45. [doi](https://doi.org/10.1086/426038)",
+    "dois": [
+      "10.1086/426038"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/426038"
+    ]
+  },
+  {
+    "file": "lecture08.qmd",
+    "line": 1045,
+    "text": "Schmitt-Grohé, Stephanie, and Martín Uribe (2004) \"Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function.\" *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi](https://doi.org/10.1016/S0165-1889(03)00043-5)",
+    "dois": [
+      "10.1016/S0165-1889(03)00043-5"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/S0165-1889(03)00043-5"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 768,
+    "text": "Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 最適金融政策、ターゲット条件、タイムレス・パースペクティブの基礎文献。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 769,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKモデルで政策ルールと裁量・コミットメントを学ぶため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 770,
+    "text": "Walsh, Carl E. (2017) *Monetary Theory and Policy* (4th ed.). MIT Press. 金融政策ルールと時間的非整合性の標準的教科書。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 774,
+    "text": "Calvo, Guillermo A. (1983) \"Staggered Prices in a Utility-Maximizing Framework.\" *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)",
+    "dois": [
+      "10.1016/0304-3932(83)90060-0"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(83)90060-0"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 775,
+    "text": "Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) \"Optimal Monetary Policy with Staggered Wage and Price Contracts.\" *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3)",
+    "dois": [
+      "10.1016/S0304-3932(00)00028-3"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/S0304-3932(00)00028-3"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 776,
+    "text": "Kydland, Finn E., and Edward C. Prescott (1977) \"Rules Rather than Discretion: The Inconsistency of Optimal Plans.\" *Journal of Political Economy*, 85(3), 473-491. [doi](https://doi.org/10.1086/260580)",
+    "dois": [
+      "10.1086/260580"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/260580"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 777,
+    "text": "Barro, Robert J., and David B. Gordon (1983) \"Rules, Discretion and Reputation in a Model of Monetary Policy.\" *Journal of Monetary Economics*, 12(1), 101-121. [doi](https://doi.org/10.1016/0304-3932(83)90051-X)",
+    "dois": [
+      "10.1016/0304-3932(83)90051-X"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(83)90051-X"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 778,
+    "text": "Clarida, Richard, Jordi Galí, and Mark Gertler (1999) \"The Science of Monetary Policy: A New Keynesian Perspective.\" *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)",
+    "dois": [
+      "10.1257/jel.37.4.1661"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/jel.37.4.1661"
+    ]
+  },
+  {
+    "file": "lecture09.qmd",
+    "line": 779,
+    "text": "Taylor, John B. (1993) \"Discretion versus Policy Rules in Practice.\" *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)",
+    "dois": [
+      "10.1016/0167-2231(93)90009-L"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0167-2231(93)90009-L"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1077,
+    "text": "Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) \"Optimal Monetary Policy with Staggered Wage and Price Contracts.\" *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3). 価格・賃金硬直性のもとで生じる3変数間の政策トレードオフの基礎文献。",
+    "dois": [
+      "10.1016/S0304-3932(00)00028-3"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/S0304-3932(00)00028-3"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1078,
+    "text": "Rotemberg, Julio J. (1982) \"Sticky Prices in the United States.\" *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117). 本講義で使う調整費用型の名目硬直性の原典。",
+    "dois": [
+      "10.1086/261117"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/261117"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1079,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 賃金硬直性をRANKモデルへ組み込む標準的参照先。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1080,
+    "text": "Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格・賃金硬直性の厚生評価を深く学ぶため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1084,
+    "text": "Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans (2005) \"Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy.\" *Journal of Political Economy*, 113(1), 1-45. [doi](https://doi.org/10.1086/426038)",
+    "dois": [
+      "10.1086/426038"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/426038"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1085,
+    "text": "Smets, Frank, and Raf Wouters (2003) \"An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area.\" *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)",
+    "dois": [
+      "10.1162/154247603770383415"
+    ],
+    "urls": [
+      "https://doi.org/10.1162/154247603770383415"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1086,
+    "text": "Calvo, Guillermo A. (1983) \"Staggered Prices in a Utility-Maximizing Framework.\" *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)",
+    "dois": [
+      "10.1016/0304-3932(83)90060-0"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/0304-3932(83)90060-0"
+    ]
+  },
+  {
+    "file": "lecture10.qmd",
+    "line": 1087,
+    "text": "Svensson, Lars E. O. (2010) \"Inflation Targeting.\" *Handbook of Monetary Economics*, Vol. 3B, Chapter 22, 1237-1302. [著者版](https://larseosvensson.se/files/papers/HandbookIT.pdf). 最適金融政策をさらに学ぶための参考文献。",
+    "dois": [],
+    "urls": [
+      "https://larseosvensson.se/files/papers/HandbookIT.pdf"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 780,
+    "text": "Bilbiie, Florin O. (2008) \"Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic.\" *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008) 通常領域と反転領域、金融政策ルールの決定性を理解するため。",
+    "dois": [
+      "10.1016/j.jet.2007.07.008"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/j.jet.2007.07.008"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 781,
+    "text": "Bilbiie, Florin O. (2020) \"The New Keynesian Cross.\" *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003) TANK の所得フィードバックと第12回の NKクロスをつなぐため。",
+    "dois": [
+      "10.1016/j.jmoneco.2019.03.003"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/j.jmoneco.2019.03.003"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 782,
+    "text": "Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) \"Understanding the Effects of Government Spending on Consumption.\" *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227) 現在所得を消費する家計を含む二家計モデルの基礎を確認するため。",
+    "dois": [
+      "10.1162/JEEA.2007.5.1.227"
+    ],
+    "urls": [
+      "https://doi.org/10.1162/JEEA.2007.5.1.227"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 783,
+    "text": "Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 標準的な RANK の3方程式と比較するため。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 787,
+    "text": "Campbell, John Y., and N. Gregory Mankiw (1989) \"Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence.\" In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107) 現在所得消費者という実証的動機を確認するため。",
+    "dois": [
+      "10.1086/654107"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/654107"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 788,
+    "text": "Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) \"Monetary Policy According to HANK.\" *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042) TANK とより豊かな HANK の波及経路を比較するため。",
+    "dois": [
+      "10.1257/aer.20160042"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20160042"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 789,
+    "text": "Auclert, Adrien (2019) \"Monetary Policy and the Redistribution Channel.\" *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137) 金融政策が所得・資産ポジションを通じて消費を動かす経路を整理するため。",
+    "dois": [
+      "10.1257/aer.20160137"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20160137"
+    ]
+  },
+  {
+    "file": "lecture11.qmd",
+    "line": 790,
+    "text": "McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) \"The Power of Forward Guidance Revisited.\" *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063) 市場不完備が前方指針の効果をどう変えるかを見るため。",
+    "dois": [
+      "10.1257/aer.20150063"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20150063"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1013,
+    "text": "Bilbiie, Florin O. (2020) \"The New Keynesian Cross.\" *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003)",
+    "dois": [
+      "10.1016/j.jmoneco.2019.03.003"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/j.jmoneco.2019.03.003"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1014,
+    "text": "Bilbiie, Florin O. (2008) \"Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic.\" *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008)",
+    "dois": [
+      "10.1016/j.jet.2007.07.008"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/j.jet.2007.07.008"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1015,
+    "text": "Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) \"Understanding the Effects of Government Spending on Consumption.\" *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227)",
+    "dois": [
+      "10.1162/JEEA.2007.5.1.227"
+    ],
+    "urls": [
+      "https://doi.org/10.1162/JEEA.2007.5.1.227"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1016,
+    "text": "Campbell, John Y., and N. Gregory Mankiw (1989) \"Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence.\" In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107)",
+    "dois": [
+      "10.1086/654107"
+    ],
+    "urls": [
+      "https://doi.org/10.1086/654107"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1020,
+    "text": "Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) \"Monetary Policy According to HANK.\" *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042)",
+    "dois": [
+      "10.1257/aer.20160042"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20160042"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1021,
+    "text": "McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) \"The Power of Forward Guidance Revisited.\" *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063)",
+    "dois": [
+      "10.1257/aer.20150063"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20150063"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1022,
+    "text": "Auclert, Adrien (2019) \"Monetary Policy and the Redistribution Channel.\" *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137)",
+    "dois": [
+      "10.1257/aer.20160137"
+    ],
+    "urls": [
+      "https://doi.org/10.1257/aer.20160137"
+    ]
+  },
+  {
+    "file": "lecture12.qmd",
+    "line": 1023,
+    "text": "Werning, Iván (2015) \"Incomplete Markets and Aggregate Demand.\" NBER Working Paper No. 21448. [doi](https://doi.org/10.3386/w21448)",
+    "dois": [
+      "10.3386/w21448"
+    ],
+    "urls": [
+      "https://doi.org/10.3386/w21448"
+    ]
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 142,
+    "text": "Galí, Jordi (2015), *Monetary Policy, Inflation, and the Business Cycle*, 2nd ed., Princeton University Press：第7〜10回のNKモデル、決定性、最適金融政策。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 143,
+    "text": "Ljungqvist, Lars, and Thomas J. Sargent (2018), *Recursive Macroeconomic Theory*, 4th ed., MIT Press：第3回の再帰的最適化と資産価格条件。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 144,
+    "text": "Hamilton, James D. (1994), *Time Series Analysis*, Princeton University Press：第2回の定常性、AR過程、予測。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 145,
+    "text": "Woodford, Michael (2003), *Interest and Prices*, Princeton University Press：第9・10回の政策実装・厚生分析を深めるための参照先。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 146,
+    "text": "齊藤誠・岩本康志・太田聰一・柴田章久 (2016)『マクロ経済学（新版）』有斐閣：第1回の学部マクロの復習。",
+    "dois": [],
+    "urls": []
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 147,
+    "text": "二神孝一・堀敬一 (2025)『[マクロ経済学 第3版　基礎編](https://www.yuhikaku.co.jp/book/b10190387.html)』有斐閣：学部マクロの復習から長期・短期の標準モデル、財政・金融政策までを確認するための新しい基礎テキスト。",
+    "dois": [],
+    "urls": [
+      "https://www.yuhikaku.co.jp/book/b10190387.html"
+    ]
+  },
+  {
+    "file": "マクロ経済学B_シラバス案.qmd",
+    "line": 148,
+    "text": "二神孝一・堀敬一・祝迫達郎 (2026)『[マクロ経済学 第3版　応用編](https://www.yuhikaku.co.jp/book/b10190488.html)』有斐閣：動学的一般均衡、ニューケインジアン理論、家計・企業の異質性、動学的最適化を発展的に学ぶための参照書。",
+    "dois": [],
+    "urls": [
+      "https://www.yuhikaku.co.jp/book/b10190488.html"
+    ]
+  }
+]

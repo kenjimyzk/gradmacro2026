@@ -1,0 +1,698 @@
+{
+  "date": "2026-09-09",
+  "method": "Scite search_literature by 30 distinct DOIs, three batches",
+  "records": [
+    {
+      "doi": "10.1016/s0165-1889(03)00043-5",
+      "title": "Solving dynamic general equilibrium models using a second-order approximation to the policy function",
+      "authors": [
+        {
+          "authorName": "Stephanie Schmitt‐Grohé"
+        },
+        {
+          "authorName": "Martı́n Uribe"
+        }
+      ],
+      "year": 2004,
+      "journal": "journal of economic dynamics and control",
+      "volume": "28",
+      "issue": "4",
+      "page": "755-775",
+      "tally": {
+        "total": 265,
+        "supporting": 1,
+        "contrasting": 0,
+        "mentioning": 257,
+        "citingPublications": 1018
+      }
+    },
+    {
+      "doi": "10.1016/0304-3932(85)90039-x",
+      "title": "Indivisible labor and the business cycle",
+      "authors": [
+        {
+          "authorName": "Gary D. Hansen"
+        }
+      ],
+      "year": 1985,
+      "journal": "journal of monetary economics",
+      "volume": "16",
+      "issue": "3",
+      "page": "309-327",
+      "tally": {
+        "total": 427,
+        "supporting": 12,
+        "contrasting": 0,
+        "mentioning": 387,
+        "citingPublications": 1843
+      }
+    },
+    {
+      "doi": "10.1016/0304-3932(83)90051-x",
+      "title": "Rules, discretion and reputation in a model of monetary policy",
+      "authors": [
+        {
+          "authorName": "Robert J. Barro"
+        },
+        {
+          "authorName": "D. Benjamin Gordon"
+        }
+      ],
+      "year": 1983,
+      "journal": "journal of monetary economics",
+      "volume": "12",
+      "issue": "1",
+      "page": "101-121",
+      "tally": {
+        "total": 1082,
+        "supporting": 12,
+        "contrasting": 2,
+        "mentioning": 983,
+        "citingPublications": 3205
+      }
+    },
+    {
+      "doi": "10.1016/s0167-2231(76)80003-6",
+      "title": "Econometric policy evaluation: A critique",
+      "authors": [
+        {
+          "authorName": "Robert E. Lucas"
+        }
+      ],
+      "year": 1976,
+      "journal": "carnegie-rochester conference series on public policy",
+      "volume": "1",
+      "page": "19-46",
+      "tally": {
+        "total": 2443,
+        "supporting": 31,
+        "contrasting": 2,
+        "mentioning": 2226,
+        "citingPublications": 5187
+      }
+    },
+    {
+      "doi": "10.1016/j.jet.2007.07.008",
+      "title": "Limited asset markets participation, monetary policy and (inverted) aggregate demand logic",
+      "authors": [
+        {
+          "authorName": "Florin Bilbiie"
+        }
+      ],
+      "year": 2008,
+      "journal": "journal of economic theory",
+      "volume": "140",
+      "issue": "1",
+      "page": "162-196",
+      "editorialNotices": [
+        {
+          "status": "has erratum",
+          "noticeDoi": "10.1016/j.jet.2019.03.008",
+          "date": "2019-5-1"
+        }
+      ],
+      "tally": {
+        "total": 510,
+        "supporting": 15,
+        "contrasting": 1,
+        "mentioning": 494,
+        "citingPublications": 438
+      }
+    },
+    {
+      "doi": "10.1016/0167-2231(93)90009-l",
+      "title": "Discretion versus policy rules in practice",
+      "authors": [
+        {
+          "authorName": "John B. Taylor"
+        }
+      ],
+      "year": 1993,
+      "journal": "carnegie-rochester conference series on public policy",
+      "volume": "39",
+      "page": "195-214",
+      "tally": {
+        "total": 5694,
+        "supporting": 142,
+        "contrasting": 16,
+        "mentioning": 5168,
+        "citingPublications": 8024
+      }
+    },
+    {
+      "doi": "10.1016/0304-3932(88)90030-x",
+      "title": "Production, growth and business cycles",
+      "authors": [
+        {
+          "authorName": "Robert G. King"
+        },
+        {
+          "authorName": "Charles I. Plosser"
+        },
+        {
+          "authorName": "Sérgio Rebelo"
+        }
+      ],
+      "year": 1988,
+      "journal": "journal of monetary economics",
+      "volume": "21",
+      "issue": "2-3",
+      "page": "195-232",
+      "tally": {
+        "total": 388,
+        "supporting": 9,
+        "contrasting": 1,
+        "mentioning": 371,
+        "citingPublications": 1958
+      }
+    },
+    {
+      "doi": "10.1016/j.jmoneco.2019.03.003",
+      "title": "The New Keynesian cross",
+      "authors": [
+        {
+          "authorName": "Florin Bilbiie"
+        }
+      ],
+      "year": 2020,
+      "journal": "journal of monetary economics",
+      "volume": "114",
+      "page": "90-108",
+      "tally": {
+        "total": 79,
+        "supporting": 3,
+        "contrasting": 0,
+        "mentioning": 76,
+        "citingPublications": 191
+      }
+    },
+    {
+      "doi": "10.1016/0304-3932(83)90060-0",
+      "title": "Staggered prices in a utility-maximizing framework",
+      "authors": [
+        {
+          "authorName": "Guillermo A. Calvo"
+        }
+      ],
+      "year": 1983,
+      "journal": "journal of monetary economics",
+      "volume": "12",
+      "issue": "3",
+      "page": "383-398",
+      "tally": {
+        "total": 6565,
+        "supporting": 68,
+        "contrasting": 18,
+        "mentioning": 6239,
+        "citingPublications": 7202
+      }
+    },
+    {
+      "doi": "10.1016/s0304-3932(00)00028-3",
+      "title": "Optimal monetary policy with staggered wage and price contracts",
+      "authors": [
+        {
+          "authorName": "Christopher J. Erceg"
+        },
+        {
+          "authorName": "Dale W. Henderson"
+        },
+        {
+          "authorName": "Andrew Levin"
+        }
+      ],
+      "year": 2000,
+      "journal": "journal of monetary economics",
+      "volume": "46",
+      "issue": "2",
+      "page": "281-313",
+      "tally": {
+        "total": 544,
+        "supporting": 16,
+        "contrasting": 2,
+        "mentioning": 525,
+        "citingPublications": 1897
+      }
+    },
+    {
+      "doi": "10.1086/654107",
+      "title": "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence",
+      "authors": [
+        {
+          "authorName": "N. Gregory Mankiw"
+        }
+      ],
+      "year": 1989,
+      "journal": "nber macroeconomics annual",
+      "volume": "4",
+      "page": "185-216",
+      "tally": {
+        "total": 406,
+        "supporting": 19,
+        "contrasting": 5,
+        "mentioning": 374,
+        "citingPublications": 1032
+      }
+    },
+    {
+      "doi": "10.1162/154247603770383415",
+      "title": "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area",
+      "authors": [
+        {
+          "authorName": "Frank Smets"
+        },
+        {
+          "authorName": "Raf Wouters"
+        }
+      ],
+      "year": 2003,
+      "journal": "journal of the european economic association",
+      "volume": "1",
+      "issue": "5",
+      "page": "1123-1175",
+      "tally": {
+        "total": 1857,
+        "supporting": 110,
+        "contrasting": 22,
+        "mentioning": 1705,
+        "citingPublications": 3166
+      }
+    },
+    {
+      "doi": "10.1162/jeea.2007.5.1.227",
+      "title": "Understanding the Effects of Government Spending on Consumption",
+      "authors": [
+        {
+          "authorName": "Jordi Gaĺı"
+        },
+        {
+          "authorName": "J. David López‐Salido"
+        },
+        {
+          "authorName": "Javier Vallés"
+        }
+      ],
+      "year": 2007,
+      "journal": "journal of the european economic association",
+      "volume": "5",
+      "issue": "1",
+      "page": "227-270",
+      "tally": {
+        "total": 978,
+        "supporting": 55,
+        "contrasting": 5,
+        "mentioning": 895,
+        "citingPublications": 1808
+      }
+    },
+    {
+      "doi": "10.1111/1468-0262.00227",
+      "title": "Necessity of Transversality Conditions for Infinite Horizon Problems",
+      "authors": [
+        {
+          "authorName": "Takashi Kamihigashi"
+        }
+      ],
+      "year": 2001,
+      "journal": "econometrica",
+      "volume": "69",
+      "issue": "4",
+      "page": "995-1012",
+      "tally": {
+        "total": 57,
+        "supporting": 3,
+        "contrasting": 0,
+        "mentioning": 53,
+        "citingPublications": 94
+      }
+    },
+    {
+      "doi": "10.1257/aer.20150063",
+      "title": "The Power of Forward Guidance Revisited",
+      "authors": [
+        {
+          "authorName": "Alisdair McKay"
+        },
+        {
+          "authorName": "Emi Nakamura"
+        },
+        {
+          "authorName": "Jón Steinsson"
+        }
+      ],
+      "year": 2016,
+      "journal": "american economic review",
+      "volume": "106",
+      "issue": "10",
+      "page": "3133-3158",
+      "tally": {
+        "total": 142,
+        "supporting": 1,
+        "contrasting": 3,
+        "mentioning": 138,
+        "citingPublications": 584
+      }
+    },
+    {
+      "doi": "10.1086/261117",
+      "title": "Sticky Prices in the United States",
+      "authors": [
+        {
+          "authorName": "Julio J. Rotemberg"
+        }
+      ],
+      "year": 1982,
+      "journal": "journal of political economy",
+      "volume": "90",
+      "issue": "6",
+      "page": "1187-1211",
+      "tally": {
+        "total": 1025,
+        "supporting": 10,
+        "contrasting": 0,
+        "mentioning": 1002,
+        "citingPublications": 1797
+      }
+    },
+    {
+      "doi": "10.1086/260580",
+      "title": "Rules Rather than Discretion: The Inconsistency of Optimal Plans",
+      "authors": [
+        {
+          "authorName": "Finn E. Kydland"
+        },
+        {
+          "authorName": "Edward C. Prescott"
+        }
+      ],
+      "year": 1977,
+      "journal": "journal of political economy",
+      "volume": "85",
+      "issue": "3",
+      "page": "473-491",
+      "tally": {
+        "total": 3139,
+        "supporting": 32,
+        "contrasting": 2,
+        "mentioning": 2889,
+        "citingPublications": 6973
+      }
+    },
+    {
+      "doi": "10.1086/260266",
+      "title": "Are Government Bonds Net Wealth?",
+      "authors": [
+        {
+          "authorName": "Robert J. Barro"
+        }
+      ],
+      "year": 1974,
+      "journal": "journal of political economy",
+      "volume": "82",
+      "issue": "6",
+      "page": "1095-1117",
+      "tally": {
+        "total": 2607,
+        "supporting": 33,
+        "contrasting": 3,
+        "mentioning": 2296,
+        "citingPublications": 5276
+      }
+    },
+    {
+      "doi": "10.1111/j.1468-0335.1958.tb00003.x",
+      "title": "The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861–1957\n                    1",
+      "authors": [
+        {
+          "authorName": "Allyn W. Phillips"
+        }
+      ],
+      "year": 1958,
+      "journal": "economica",
+      "volume": "25",
+      "issue": "100",
+      "page": "283-299",
+      "tally": {
+        "total": 388,
+        "supporting": 7,
+        "contrasting": 2,
+        "mentioning": 323,
+        "citingPublications": 1963
+      }
+    },
+    {
+      "doi": "10.1086/426038",
+      "title": "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary                         Policy",
+      "authors": [
+        {
+          "authorName": "Lawrence J. Christiano"
+        },
+        {
+          "authorName": "Martin Eichenbaum"
+        },
+        {
+          "authorName": "Charles L. Evans"
+        }
+      ],
+      "year": 2005,
+      "journal": "journal of political economy",
+      "volume": "113",
+      "issue": "1",
+      "page": "1-45",
+      "tally": {
+        "total": 4934,
+        "supporting": 236,
+        "contrasting": 27,
+        "mentioning": 4591,
+        "citingPublications": 6021
+      }
+    },
+    {
+      "doi": "10.1257/aer.20160042",
+      "title": "Monetary Policy According to HANK",
+      "authors": [
+        {
+          "authorName": "Greg Kaplan"
+        },
+        {
+          "authorName": "Benjamin Moll"
+        },
+        {
+          "authorName": "Giovanni L. Violante"
+        }
+      ],
+      "year": 2018,
+      "journal": "american economic review",
+      "volume": "108",
+      "issue": "3",
+      "page": "697-743",
+      "tally": {
+        "total": 943,
+        "supporting": 46,
+        "contrasting": 2,
+        "mentioning": 882,
+        "citingPublications": 1620
+      }
+    },
+    {
+      "doi": "10.1257/aer.20160137",
+      "title": "Monetary Policy and the Redistribution Channel",
+      "authors": [
+        {
+          "authorName": "Adrien Auclert"
+        }
+      ],
+      "year": 2019,
+      "journal": "american economic review",
+      "volume": "109",
+      "issue": "6",
+      "page": "2333-2367",
+      "tally": {
+        "total": 492,
+        "supporting": 21,
+        "contrasting": 1,
+        "mentioning": 467,
+        "citingPublications": 889
+      }
+    },
+    {
+      "doi": "10.2307/1913837",
+      "title": "Asset Prices in an Exchange Economy",
+      "authors": [
+        {
+          "authorName": "Robert E. Lucas"
+        }
+      ],
+      "year": 1978,
+      "journal": "econometrica",
+      "volume": "46",
+      "issue": "6",
+      "page": "1429",
+      "tally": {
+        "total": 2348,
+        "supporting": 22,
+        "contrasting": 1,
+        "mentioning": 2243,
+        "citingPublications": 4750
+      }
+    },
+    {
+      "doi": "10.2307/1913386",
+      "title": "Time to Build and Aggregate Fluctuations",
+      "authors": [
+        {
+          "authorName": "Finn E. Kydland"
+        },
+        {
+          "authorName": "Edward C. Prescott"
+        }
+      ],
+      "year": 1982,
+      "journal": "econometrica",
+      "volume": "50",
+      "issue": "6",
+      "page": "1345",
+      "tally": {
+        "total": 2804,
+        "supporting": 56,
+        "contrasting": 5,
+        "mentioning": 2617,
+        "citingPublications": 5321
+      }
+    },
+    {
+      "doi": "10.1257/jep.3.3.51",
+      "title": "Understanding Real Business Cycles",
+      "authors": [
+        {
+          "authorName": "Charles I. Plosser"
+        }
+      ],
+      "year": 1989,
+      "journal": "journal of economic perspectives",
+      "volume": "3",
+      "issue": "3",
+      "page": "51-77",
+      "tally": {
+        "total": 37,
+        "supporting": 0,
+        "contrasting": 0,
+        "mentioning": 28,
+        "citingPublications": 376
+      }
+    },
+    {
+      "doi": "10.3386/w21448",
+      "title": "Incomplete Markets and Aggregate Demand",
+      "authors": [
+        {
+          "authorName": "Iván Werning"
+        }
+      ],
+      "year": 2015,
+      "tally": {
+        "total": 209,
+        "supporting": 5,
+        "contrasting": 1,
+        "mentioning": 194,
+        "citingPublications": 251
+      }
+    },
+    {
+      "doi": "10.2307/1912186",
+      "title": "The Solution of Linear Difference Models under Rational Expectations",
+      "authors": [
+        {
+          "authorName": "Olivier Blanchard"
+        },
+        {
+          "authorName": "Charles M. Kahn"
+        }
+      ],
+      "year": 1980,
+      "journal": "econometrica",
+      "volume": "48",
+      "issue": "5",
+      "page": "1305",
+      "tally": {
+        "total": 1429,
+        "supporting": 12,
+        "contrasting": 0,
+        "mentioning": 1397,
+        "citingPublications": 2153
+      }
+    },
+    {
+      "doi": "10.2307/1911873",
+      "title": "Generalized Instrumental Variables Estimation of Nonlinear Rational Expectations Models",
+      "authors": [
+        {
+          "authorName": "Lars Peter Hansen"
+        },
+        {
+          "authorName": "Kenneth J. Singleton"
+        }
+      ],
+      "year": 1982,
+      "journal": "econometrica",
+      "volume": "50",
+      "issue": "5",
+      "page": "1269",
+      "tally": {
+        "total": 523,
+        "supporting": 14,
+        "contrasting": 0,
+        "mentioning": 505,
+        "citingPublications": 2013
+      }
+    },
+    {
+      "doi": "10.1257/jel.37.4.1661",
+      "title": "The Science of Monetary Policy: A New Keynesian Perspective",
+      "authors": [
+        {
+          "authorName": "Richard H. Clarida"
+        },
+        {
+          "authorName": "Jordi Gaĺı"
+        },
+        {
+          "authorName": "Mark Gertler"
+        }
+      ],
+      "year": 1999,
+      "journal": "journal of economic literature",
+      "volume": "37",
+      "issue": "4",
+      "page": "1661-1707",
+      "tally": {
+        "total": 2617,
+        "supporting": 71,
+        "contrasting": 6,
+        "mentioning": 2455,
+        "citingPublications": 4290
+      }
+    },
+    {
+      "doi": "10.2307/2552025",
+      "title": "Phillips Curves, Expectations of Inflation and Optimal Unemployment over Time",
+      "authors": [
+        {
+          "authorName": "Edmund S. Phelps"
+        }
+      ],
+      "year": 1967,
+      "journal": "economica",
+      "volume": "34",
+      "issue": "135",
+      "page": "254",
+      "tally": {
+        "total": 700,
+        "supporting": 5,
+        "contrasting": 0,
+        "mentioning": 572,
+        "citingPublications": 1555
+      }
+    }
+  ]
+}
