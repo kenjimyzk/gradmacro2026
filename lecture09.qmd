@@ -83,7 +83,7 @@ $$
 
 第8回の第3式は所与のテイラー・ルールでした。第9回では政策ルール自体を評価するため、上の体系には政策ルールではなくフィッシャー関係を置いています。以下では、名目利子率を情報に反応させる $r_t^N=f(\mathcal{I}_t)$ を **手段ルール**、最適化の一階条件 $F(\pi_t,x_t^e,x_{t-1}^e)=0$ を **ターゲット条件** と呼びます。ターゲット条件は政策金利そのものではありません。選ばれた $(x_t^e,\pi_t)$ を IS曲線とフィッシャー関係に戻すと、その配分を均衡の一つとして **支持する金利経路** が求まります。さらに目標からの逸脱に対する金利反応を定め、他の有界均衡を排除する段階までを **一意実装** と呼びます。
 
-先に結論をまとめると、第9回の主な政策含意は次の通りです。神々の配剤（divine coincidence）とは、インフレ安定化と産出ギャップ安定化を同時に達成できる性質です。
+先に結論をまとめると、第9回の主な政策含意は次の通りです。神々の配剤（divine coincidence）とは、インフレ安定化と産出ギャップ安定化を同時に達成できる性質です。この名称と、実質賃金硬直性によってその性質が崩れる仕組みについては Blanchard and Galí (2007) を参照してください。
 
 | 論点 | 結論 |
 |---|---|
@@ -221,7 +221,7 @@ $G_Y=0$、$\alpha=0$ の単純形では、分母は $\gamma+\varphi$ になり�
 ::: {.callout-note title="Calvo 型でも同じ厚生損失を導ける"}
 第7回では Rotemberg 型と Calvo 型を、同じ一次近似の NKフィリップス曲線を生むように対応づけました。Calvo 型では、価格を再設定できない企業が残るため相対価格分散が生じます。この価格分散が産出を非効率にし、家計効用を二次近似すると、価格インフレ率の二乗項として厚生損失に現れます。
 
-このため、Calvo 型でも、厚生上の産出ギャップと価格インフレ率の二乗和という本講義と同じ形の期間損失を導けます。さらに、第7回と同じく両方式が同じ NKフィリップス曲線の傾きを持つように価格硬直性パラメータを対応づければ、インフレ項の係数と正規化後の $\omega_p$ も一致します。両方式で異なるのは原始パラメータと価格硬直性の表現であり、標準的なゼロインフレの効率的定常状態の周りで対応づけた一次・二次近似の縮約形と係数は同じです。本講義では Calvo 型の価格分散を明示的には導出せず、この対応関係だけを使います。
+このため、Calvo 型でも、厚生上の産出ギャップと価格インフレ率の二乗和という本講義と同じ形の期間損失を導けます。さらに、第7回と同じく両方式が同じ NKフィリップス曲線の傾きを持つように価格硬直性パラメータを対応づければ、インフレ項の係数と正規化後の $\omega_p$ も一致します。両方式で異なるのは原始パラメータと価格硬直性の表現であり、標準的なゼロインフレの効率的定常状態の周りで対応づけた一次・二次近似の縮約形と係数は同じです。効率的定常状態での対応と、歪みが残る場合の相違については Lombardo and Vestin (2008) を参照してください。本講義では Calvo 型の価格分散を明示的には導出せず、この対応関係だけを使います。
 :::
 
 # 神々の配剤
@@ -766,7 +766,7 @@ $$
 **基本参考文献**
 
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 最適金融政策、ターゲット条件、タイムレス・パースペクティブの基礎文献。
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKモデルで政策ルールと裁量・コミットメントを学ぶため。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 第4・5章を参照。NKモデルで政策ルールと裁量・コミットメントを学ぶため。
 - Walsh, Carl E. (2017) *Monetary Theory and Policy* (4th ed.). MIT Press. 金融政策ルールと時間的非整合性の標準的教科書。
 
 **発展**
@@ -777,6 +777,8 @@ $$
 - Barro, Robert J., and David B. Gordon (1983) "Rules, Discretion and Reputation in a Model of Monetary Policy." *Journal of Monetary Economics*, 12(1), 101-121. [doi](https://doi.org/10.1016/0304-3932(83)90051-X)
 - Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)
 - Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)
+- Blanchard, Olivier, and Jordi Galí (2007) "Real Wage Rigidities and the New Keynesian Model." *Journal of Money, Credit and Banking*, 39(S1), 35-65. [doi](https://doi.org/10.1111/j.1538-4616.2007.00015.x). 神々の配剤の命名と成立条件を調べるため。実質賃金硬直性を扱う論文であり、第10回の名目賃金調整費用とは区別する。
+- Lombardo, Giovanni, and David Vestin (2008) "Welfare Implications of Calvo vs. Rotemberg-pricing Assumptions." *Economics Letters*, 100(2), 275-279. [doi](https://doi.org/10.1016/j.econlet.2008.02.008). Calvo型とRotemberg型の二次厚生比較を、効率的定常状態の条件とともに確認するため。
 
 ```{=latex}
 \Needspace{0.28\textheight}

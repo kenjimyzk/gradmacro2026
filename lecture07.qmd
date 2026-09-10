@@ -116,7 +116,7 @@ $$
 
 本講義は、企業が毎期価格を選べる代わりに価格変更へ実物費用を負う Rotemberg 型を使います。この特定化では対称均衡を直接扱えるため、価格分布を追加の状態として導入せずに企業の価格設定条件を導けます。
 
-Calvo 型でも、ゼロインフレの効率的定常状態の周りで一次近似すると、Rotemberg 型と同じ形の前向きな NKフィリップス曲線が得られます。Calvo 型の価格非再設定確率と Rotemberg 型の調整費用パラメータを、同じ NKフィリップス曲線の傾きを生むように対応づければ、一次近似の係数も同一です。第9回で扱う二次厚生損失についても、同じ対応のもとで両方式の係数は一致します。本講義ではこの局所的な対応だけを使い、Calvo 型の価格分布の導出は扱いません。
+Calvo 型でも、ゼロインフレの効率的定常状態の周りで一次近似すると、Rotemberg 型と同じ形の前向きな NKフィリップス曲線が得られます。Calvo 型の価格非再設定確率と Rotemberg 型の調整費用パラメータを、同じ NKフィリップス曲線の傾きを生むように対応づければ、一次近似の係数も同一です。第9回で扱う二次厚生損失についても、同じ対応のもとで両方式の係数は一致します。この厚生比較と効率的定常状態の役割については Lombardo and Vestin (2008) を参照してください。本講義ではこの局所的な対応だけを使い、Calvo 型の価格分布の導出は扱いません。
 :::
 
 ## 家計
@@ -628,7 +628,7 @@ $$
 
 予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. NKフィリップス曲線の導出を確認するため。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 第3章を参照。Calvo型の価格設定からNKフィリップス曲線を導く標準的な方法を確認するため。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格硬直性と金融政策の標準的な体系。
 - Clarida, Richard, Jordi Galí, and Mark Gertler (1999) "The Science of Monetary Policy: A New Keynesian Perspective." *Journal of Economic Literature*, 37(4), 1661-1707. [doi](https://doi.org/10.1257/jel.37.4.1661)
 
@@ -639,7 +639,8 @@ $$
 **発展**
 
 - Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
-- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117)
+- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117). 本講義で使う価格調整費用の考え方の原典。
+- Lombardo, Giovanni, and David Vestin (2008) "Welfare Implications of Calvo vs. Rotemberg-pricing Assumptions." *Economics Letters*, 100(2), 275-279. [doi](https://doi.org/10.1016/j.econlet.2008.02.008). 二つの価格設定方式の局所的な対応と、厚生比較で効率的定常状態が果たす役割を確認するため。
 - Taylor, John B. (1993) "Discretion versus Policy Rules in Practice." *Carnegie-Rochester Conference Series on Public Policy*, 39, 195-214. [doi](https://doi.org/10.1016/0167-2231(93)90009-L)
 
 ```{=latex}

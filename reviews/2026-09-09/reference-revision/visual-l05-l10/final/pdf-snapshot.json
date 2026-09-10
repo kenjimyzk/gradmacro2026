@@ -1,0 +1,26 @@
+{
+  "lecture05.pdf": {
+    "sha256": "6648330c24f4186369fa4d8209ed7863556f493c98352e76b2b9d710013ea7d7",
+    "bytes": 334202
+  },
+  "lecture06.pdf": {
+    "sha256": "afceb4a2ecf5deef2266fb15a0f3c4f06e40ed1176fd851ce7b0104a5c134ef7",
+    "bytes": 327373
+  },
+  "lecture07.pdf": {
+    "sha256": "5717a06fed8f85f742a2aaf061fb77f661de0a133d32d49ccd8dca5b9b70b5c6",
+    "bytes": 468710
+  },
+  "lecture08.pdf": {
+    "sha256": "b17b7c51f8d5ec2ca96650a8bab9447e4f642fddca13e569b02c9c3552b934de",
+    "bytes": 560925
+  },
+  "lecture09.pdf": {
+    "sha256": "0cdb92d6eba80f53d26bf508ea07f144eb1fb9b0435a2d26d772210ff9d6f117",
+    "bytes": 450452
+  },
+  "lecture10.pdf": {
+    "sha256": "f3b0e63ef9c12cb1bbb12f8356663b31b567ef17c537e38f47b1fba319782a05",
+    "bytes": 464915
+  }
+}

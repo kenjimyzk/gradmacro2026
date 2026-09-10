@@ -1,0 +1,70 @@
+{
+  "lecture01": {
+    "pages": 28,
+    "sha256": "cd075712773d0d6196692ffeeb2afdc44859ac3e245083c578bd4428d7781651",
+    "hits": [
+      {
+        "page": 2,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "5         フィリップス曲線                                                                        "
+      },
+      {
+        "page": 24,
+        "markers": [
+          "参考文献",
+          "Blanchard, Olivier",
+          "基本参考文献"
+        ],
+        "start": "10 参考文献\n基本参考文献\n\n予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示し\nた論点を授業後に復習するための参照先です。\n\n • Blanch"
+      }
+    ]
+  },
+  "lecture02": {
+    "pages": 22,
+    "sha256": "3749bfd4bfef5995fa1992d7466e11f123cb47e5dbbb5ff121e17375686dae3a",
+    "hits": [
+      {
+        "page": 1,
+        "markers": [
+          "参考文献"
+        ],
+        "start": "            第 2 回：時系列分析と対数近似\n                     マクロ経済学 B\n\n\n                      宮﨑憲治\n\n\n"
+      },
+      {
+        "page": 3,
+        "markers": [
+          "Hodrick"
+        ],
+        "start": "      第2回の地図：DSGEの動学を読む準備\n      ショックがどれだけ残るか、モデルをどう線形化して読むかを学ぶ\n\n\n\n       時系列データ           "
+      },
+      {
+        "page": 18,
+        "markers": [
+          "Schmitt"
+        ],
+        "start": "この基本ケースでも、価格が硬直的な経済では、金融政策ショックなどによって 𝑦𝑡 と 𝜋𝑡\nは変動し得ます。生産は線形で、\n                             "
+      },
+      {
+        "page": 20,
+        "markers": [
+          "参考文献",
+          "Hodrick",
+          "基本参考文献"
+        ],
+        "start": "次回は、制約つき最適化を正面から扱います。有限期間のラグランジュ問題から出発し、無\n限期間、ダイナミック・プログラミング、不確実性、資産価格条件へ進みます。\n\n\n\n10 参考文献\n"
+      },
+      {
+        "page": 21,
+        "markers": [
+          "Hodrick",
+          "Hamilton, James D. (2018)",
+          "Blanchard, Olivier",
+          "Schmitt"
+        ],
+        "start": "発展\n\n  • Blanchard, Olivier J., and Charles M. Kahn (1980) “The Solution of Linear\n     Dif"
+      }
+    ]
+  }
+}

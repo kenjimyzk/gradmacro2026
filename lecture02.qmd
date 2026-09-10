@@ -42,7 +42,7 @@ lang: ja
 
 # 米国GDPのトレンドと景気循環
 
-現実のGDPには長期的な成長傾向があるため、水準のままでは短期的な変動を読み取りにくいです。対数を使うと、GDP水準が異なる時期の変動を比率として比較しやすくなります。@fig-us-real-gdp-trend-cycle は、米国の季節調整済み実質四半期GDPを対数表示し、HPフィルターによって滑らかなトレンドとその周りの循環成分に分けたものです。実質GDPには長期的な上昇傾向がある一方、循環成分はゼロを中心に変動しています。
+現実のGDPには長期的な成長傾向があるため、水準のままでは短期的な変動を読み取りにくいです。対数を使うと、GDP水準が異なる時期の変動を比率として比較しやすくなります。@fig-us-real-gdp-trend-cycle は、米国の季節調整済み実質四半期GDPを対数表示し、Hodrick and Prescott (1997) のHPフィルターによって滑らかなトレンドとその周りの循環成分に分けたものです。実質GDPには長期的な上昇傾向がある一方、循環成分はゼロを中心に変動しています。
 
 ![米国実質GDPのトレンドと循環](figures/lecture02/us_real_gdp_trend_cycle.svg){#fig-us-real-gdp-trend-cycle width=90% fig-pos="H"}
 
@@ -57,6 +57,8 @@ lang: ja
 カリブレーションやモデル評価では、データの循環成分から得られる変動の大きさ、持続性、他の変数との相関を、モデルが生成する系列の対応する統計量と比較します。比較にあたっては、集計値か一人当たりかという変数定義、観測頻度、標本長をそろえます。HP循環成分を比較対象とする場合は、モデル系列にもデータと同じ対数化とHPフィルターを適用し、必要な場合には季節調整もそろえます。HP循環成分は理論上の産出ギャップそのものではありませんが、データとモデルを定量的に結びつける観測上の尺度として用いられます。
 
 この対応を明示するため、本講義では、データのGDP循環成分とモデルの産出の対数偏差を、ともに $y_t$ と表すことがあります。同じ記号を使うのは両者を定義上同一視するためではなく、カリブレーションにおける対応関係を示すためです。自然産出量を基準とするモデル上の産出ギャップは、後に $x_t=y_t-y_t^f$ と区別します。
+
+HPフィルターでは、新しい観測を加えると標本末端のトレンド推定値が変わります。また、フィルター自体が自己相関を変え、元のデータ生成過程にはない動学的な関係を生むことがあります（Hamilton, 2018）。図に見える持続性には、この処理の影響も含まれます。
 
 図の下段では、正または負の乖離が複数四半期続く局面が見られます。この持続性を時点によらない自己相関で要約するには、系列の平均、分散、自己共分散が時間を通じて安定しているかをまず整理する必要があります。そこで次節では、弱定常性と自己相関を導入します。
 
@@ -601,15 +603,21 @@ $$
 
 予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
-- Hamilton, James D. (1994) *Time Series Analysis*. Princeton University Press. AR過程、定常性、インパルス応答の標準的な参照先。
-- Ljungqvist, Lars, and Thomas J. Sargent (2018) *Recursive Macroeconomic Theory* (4th ed.). MIT Press. 動学モデルの状態変数、再帰表現、線形化の背景を確認するため。
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 対数線形化をニューケインジアン・モデルで使う入口。
+- Hamilton, James D. (1994) [*Time Series Analysis*](https://www.jstor.org/stable/j.ctv14jx6sm). Princeton University Press. AR過程、定常性、インパルス応答の標準的な参照先。
+- Ljungqvist, Lars, and Thomas J. Sargent (2018) [*Recursive Macroeconomic Theory* (4th ed.)](https://mitpress.mit.edu/9780262038669/recursive-macroeconomic-theory/). MIT Press. 動学モデルの状態変数、再帰表現、線形化の背景を確認するため。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 第2章の家計・企業の条件が、対数線形近似の使い方を確認する入口。[著者の第2章スライド](https://crei.cat/wp-content/uploads/users/pages/ch2_slides_october_2015.pdf)。
+- Hodrick, Robert J., and Edward C. Prescott (1997) "Postwar U.S. Business Cycles: An Empirical Investigation." *Journal of Money, Credit and Banking*, 29(1), 1-16. [doi](https://doi.org/10.2307/2953682) GDPのトレンド・循環分解と、データ・モデル系列に同じ処理を適用する考え方の参照先。
+
+```{=latex}
+\newpage
+```
 
 **発展**
 
 - Blanchard, Olivier J., and Charles M. Kahn (1980) "The Solution of Linear Difference Models under Rational Expectations." *Econometrica*, 48(5), 1305-1311. [doi](https://doi.org/10.2307/1912186)
 - Schmitt-Grohé, Stephanie, and Martín Uribe (2004) "Solving Dynamic General Equilibrium Models Using a Second-Order Approximation to the Policy Function." *Journal of Economic Dynamics and Control*, 28(4), 755-775. [doi](https://doi.org/10.1016/S0165-1889(03)00043-5)
-- Judd, Kenneth L. (1998) *Numerical Methods in Economics*. MIT Press. 近似解法と数値計算を深く学ぶため。
+- Judd, Kenneth L. (1998) [*Numerical Methods in Economics*](https://mitpress.mit.edu/9780262547741/numerical-methods-in-economics/). MIT Press. 近似解法と数値計算を深く学ぶため。
+- Hamilton, James D. (2018) "Why You Should Never Use the Hodrick-Prescott Filter." *Review of Economics and Statistics*, 100(5), 831-843. [doi](https://doi.org/10.1162/rest_a_00706) HPフィルターの端点問題と、フィルタリングが生む動学的な関係を検討するため。[著者公開稿](https://econweb.ucsd.edu/~jhamilto/hp.pdf)。
 
 # 演習問題
 

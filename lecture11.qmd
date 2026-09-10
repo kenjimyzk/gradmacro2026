@@ -777,14 +777,15 @@ $$
 
 予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習するための参照先です。
 
-- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008) 通常領域と反転領域、金融政策ルールの決定性を理解するため。
+- Bilbiie, Florin O. (2008) "Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic." *Journal of Economic Theory*, 140(1), 162-196. [doi](https://doi.org/10.1016/j.jet.2007.07.008) 通常領域と反転領域、金融政策ルールの決定性を理解するため。再分配の仮定と厚生近似については、次の2019年訂正を併読してください。
+- Bilbiie, Florin O. (2019) "Corrigendum to ‘Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic’ [J. Econ. Theory 140 (1) (2008) 162–196]." *Journal of Economic Theory*, 181, 421-422. [doi](https://doi.org/10.1016/j.jet.2019.03.008) 原論文の利益再分配節で必要な労働供給の仮定と、二次厚生近似の訂正を確認するため。本回の共通労働供給条件と、原論文の再分配節の仮定を区別して読んでください。
 - Bilbiie, Florin O. (2020) "The New Keynesian Cross." *Journal of Monetary Economics*, 114, 90-108. [doi](https://doi.org/10.1016/j.jmoneco.2019.03.003) TANK の所得フィードバックと第12回の NKクロスをつなぐため。
 - Galí, Jordi, J. David López-Salido, and Javier Vallés (2007) "Understanding the Effects of Government Spending on Consumption." *Journal of the European Economic Association*, 5(1), 227-270. [doi](https://doi.org/10.1162/JEEA.2007.5.1.227) 現在所得を消費する家計を含む二家計モデルの基礎を確認するため。
 - Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 標準的な RANK の3方程式と比較するため。
 
 **発展**
 
-- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-246. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107) 現在所得消費者という実証的動機を確認するため。
+- Campbell, John Y., and N. Gregory Mankiw (1989) "Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence." In Olivier Jean Blanchard and Stanley Fischer (eds.), *NBER Macroeconomics Annual 1989*, Vol. 4, 185-216. Cambridge, MA: MIT Press. [doi](https://doi.org/10.1086/654107) 現在所得消費者という実証的動機を確認するため。
 - Kaplan, Greg, Benjamin Moll, and Giovanni L. Violante (2018) "Monetary Policy According to HANK." *American Economic Review*, 108(3), 697-743. [doi](https://doi.org/10.1257/aer.20160042) TANK とより豊かな HANK の波及経路を比較するため。
 - Auclert, Adrien (2019) "Monetary Policy and the Redistribution Channel." *American Economic Review*, 109(6), 2333-2367. [doi](https://doi.org/10.1257/aer.20160137) 金融政策が所得・資産ポジションを通じて消費を動かす経路を整理するため。
 - McKay, Alisdair, Emi Nakamura, and Jón Steinsson (2016) "The Power of Forward Guidance Revisited." *American Economic Review*, 106(10), 3133-3158. [doi](https://doi.org/10.1257/aer.20150063) 市場不完備が前方指針の効果をどう変えるかを見るため。

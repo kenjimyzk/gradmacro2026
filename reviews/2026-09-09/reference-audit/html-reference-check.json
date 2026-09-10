@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-09",
+  "method": "Compare 87 QMD bibliography entries against saved HTML li text after Markdown removal, Unicode normalization, whitespace, quotation and dash normalization; verify exact href values. No browser execution.",
+  "results": [
+    {
+      "file": "lecture01.qmd",
+      "qmd_entries": 7,
+      "html_entries": 7,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture02.qmd",
+      "qmd_entries": 7,
+      "html_entries": 7,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture03.qmd",
+      "qmd_entries": 8,
+      "html_entries": 8,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture04.qmd",
+      "qmd_entries": 7,
+      "html_entries": 7,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture05.qmd",
+      "qmd_entries": 7,
+      "html_entries": 7,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture06.qmd",
+      "qmd_entries": 6,
+      "html_entries": 6,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture07.qmd",
+      "qmd_entries": 6,
+      "html_entries": 6,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture08.qmd",
+      "qmd_entries": 6,
+      "html_entries": 6,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture09.qmd",
+      "qmd_entries": 9,
+      "html_entries": 9,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture10.qmd",
+      "qmd_entries": 8,
+      "html_entries": 8,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture11.qmd",
+      "qmd_entries": 8,
+      "html_entries": 8,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    },
+    {
+      "file": "lecture12.qmd",
+      "qmd_entries": 8,
+      "html_entries": 8,
+      "text_mismatches": [],
+      "missing_html_urls": []
+    }
+  ]
+}

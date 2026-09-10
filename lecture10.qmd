@@ -313,7 +313,7 @@ f_W(\Pi_t^w)=\frac{\eta_w}{2}(\Pi_t^w-1)^2,
 \qquad
 \eta_w>0
 $$
-です。
+です。ここでは、Rotemberg (1982) の価格調整費用の考え方を賃金設定へ拡張しています。Calvo 型賃金設定との対応を詳しく調べるには Born and Pfeifer (2020) を、同論文の数値結果を使う場合は2025年の訂正を併読してください。
 
 賃金マークアップを
 $$
@@ -1074,10 +1074,14 @@ $$
 
 **基本参考文献**
 
-- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3). 価格・賃金硬直性のもとで生じる3変数間の政策トレードオフの基礎文献。
-- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117). 本講義で使う調整費用型の名目硬直性の原典。
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 賃金硬直性をRANKモデルへ組み込む標準的参照先。
+- Erceg, Christopher J., Dale W. Henderson, and Andrew T. Levin (2000) "Optimal Monetary Policy with Staggered Wage and Price Contracts." *Journal of Monetary Economics*, 46(2), 281-313. [doi](https://doi.org/10.1016/S0304-3932(00)00028-3). Calvo型の価格・賃金硬直性のもとで生じる、産出ギャップ・価格インフレ・賃金インフレ間の政策トレードオフの基礎文献。
+- Rotemberg, Julio J. (1982) "Sticky Prices in the United States." *Journal of Political Economy*, 90(6), 1187-1211. [doi](https://doi.org/10.1086/261117). 価格調整費用の原典。本講義では同じ考え方を賃金設定へ拡張する。
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle* (2nd ed.). Princeton University Press. 第6章を参照。Calvo型の価格・賃金硬直性をRANKモデルへ組み込む標準的参照先。
 - Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. 価格・賃金硬直性の厚生評価を深く学ぶため。
+
+```{=latex}
+\newpage
+```
 
 **発展**
 
@@ -1085,6 +1089,8 @@ $$
 - Smets, Frank, and Raf Wouters (2003) "An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area." *Journal of the European Economic Association*, 1(5), 1123-1175. [doi](https://doi.org/10.1162/154247603770383415)
 - Calvo, Guillermo A. (1983) "Staggered Prices in a Utility-Maximizing Framework." *Journal of Monetary Economics*, 12(3), 383-398. [doi](https://doi.org/10.1016/0304-3932(83)90060-0)
 - Svensson, Lars E. O. (2010) "Inflation Targeting." *Handbook of Monetary Economics*, Vol. 3B, Chapter 22, 1237-1302. [著者版](https://larseosvensson.se/files/papers/HandbookIT.pdf). 最適金融政策をさらに学ぶための参考文献。
+- Born, Benjamin, and Johannes Pfeifer (2020) "The New Keynesian Wage Phillips Curve: Calvo vs. Rotemberg." *Macroeconomic Dynamics*, 24(5), 1017-1041. [doi](https://doi.org/10.1017/S1365100518000615). 賃金設定方式の対応と、家計内保険・税・調整費用の特定化の役割を学ぶため。数値結果は2025年の訂正と併読する。
+- Born, Benjamin, and Johannes Pfeifer (2025) "The New Keynesian Wage Phillips Curve: Calvo vs. Rotemberg – Corrigendum." *Macroeconomic Dynamics*, 29, e85. [doi](https://doi.org/10.1017/S1365100525000161). 合成インフレ指数の実装コードにおける重みの逆転を訂正し、表4–6を更新。定性的結果は維持される。
 
 ```{=latex}
 \Needspace{0.35\textheight}

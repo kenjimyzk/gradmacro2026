@@ -1,0 +1,26 @@
+{
+  "corrigendum": [
+    {
+      "doi": "10.1016/j.jet.2019.03.008",
+      "title": "Corrigendum to “Limited asset markets participation, monetary policy and (inverted) aggregate demand logic” [J. Econ. Theory 140 (1) (2008) 162–196]",
+      "authors": [
+        {
+          "authorName": "Florin Bilbiie"
+        }
+      ],
+      "year": 2019,
+      "journal": "journal of economic theory",
+      "volume": "181",
+      "page": "421-422"
+    }
+  ],
+  "consensus": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"id\": \"76643af16c2c560baf3975cbb638977e\", \"title\": \"The New Keynesian cross\", \"text\": \"Key takeaway: The New Keynesian cross provides insights into monetary, fiscal, and forward guidance multipliers, revealing amplified or dampened effects of policies and shocks depending on fiscal redistribution.\", \"url\": \"https://consensus.app/papers/the-new-keynesian-cross-bilbiie/76643af16c2c560baf3975cbb638977e/?utm_source=chatgpt\", \"metadata\": {\"authors\": \"Florin O. Bilbiie\", \"publish_year\": \"2020\", \"journal\": \"Journal of Monetary Economics\", \"citation_count\": \"161\", \"doi\": \"10.1016/j.jmoneco.2019.03.003\"}}"
+      }
+    ],
+    "isError": false
+  }
+}
