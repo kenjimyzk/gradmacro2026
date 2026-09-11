@@ -1,0 +1,206 @@
+{
+  "headings": 33,
+  "existing": 4,
+  "added": 29,
+  "non_pagination_content_unchanged": true,
+  "rows": [
+    {
+      "line_before_batch": 61,
+      "heading": "**計画支出の定義式：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 137,
+      "heading": "**財市場の均衡条件：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 151,
+      "heading": "**IS曲線の性質：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 160,
+      "heading": "**貨幣市場の均衡条件：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 172,
+      "heading": "**フィッシャー方程式：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 179,
+      "heading": "**LM曲線の性質：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 206,
+      "heading": "**AD曲線の導出プロセス：**",
+      "existing_needspace": true,
+      "added_needspace_baselines": null
+    },
+    {
+      "line_before_batch": 213,
+      "heading": "**AD曲線の関係式：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 218,
+      "heading": "**AD曲線の性質：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 229,
+      "heading": "**短期AS曲線（期待修正型）：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 252,
+      "heading": "**長期AS曲線：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 275,
+      "heading": "**フィリップス曲線：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 291,
+      "heading": "**期待修正型フィリップス曲線：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 304,
+      "heading": "**理論的な重要な含意：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 349,
+      "heading": "**拡張的財政政策の主な手段：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 354,
+      "heading": "**IS-LMモデルにおける波及プロセス：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 360,
+      "heading": "**財政乗数：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 373,
+      "heading": "**IS-LMモデルにおける波及プロセス：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 383,
+      "heading": "**古典派の二分法（長期的な視点）：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 388,
+      "heading": "**ケインジアンの見解（短期的な視点）：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 401,
+      "heading": "**ルーカス批判の核心：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 411,
+      "heading": "**具体例：フィリップス曲線**",
+      "existing_needspace": true,
+      "added_needspace_baselines": null
+    },
+    {
+      "line_before_batch": 417,
+      "heading": "**関係が不安定になった主な要因：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 433,
+      "heading": "**ディープ・パラメータの具体例：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 445,
+      "heading": "**構造的アプローチの手順：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 468,
+      "heading": "**主な特徴：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 478,
+      "heading": "**理論的な限界：**",
+      "existing_needspace": true,
+      "added_needspace_baselines": null
+    },
+    {
+      "line_before_batch": 485,
+      "heading": "**主な特徴：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 491,
+      "heading": "**主要なモデル構造：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 509,
+      "heading": "**DSGEモデルの4つの特徴：**",
+      "existing_needspace": true,
+      "added_needspace_baselines": null
+    },
+    {
+      "line_before_batch": 516,
+      "heading": "**DSGEモデルの基本的な構成要素：**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 568,
+      "heading": "**基本参考文献**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    },
+    {
+      "line_before_batch": 576,
+      "heading": "**発展的文献**",
+      "existing_needspace": false,
+      "added_needspace_baselines": 6
+    }
+  ]
+}

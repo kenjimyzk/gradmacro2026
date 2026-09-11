@@ -78,6 +78,10 @@ $$
 $$
 です。後続回では $x_t=y_t-y_t^f$ を使います。対数乖離で測れば、異なる定常産出水準のモデルでも百分率単位で比較でき、自然産出量を動かす技術・政府支出ショックと、実際の産出の循環的乖離を分けられます。
 
+```{=latex}
+\Needspace{13\baselineskip}
+```
+
 ## 発展問題
 
 ### 問題4 `[Research extension]`：ルーカス批判
@@ -558,7 +562,7 @@ $$
 
 ### 問2 `[Core] [Derivation]`：中間財需要
 
-最終財企業は、価格指数を所与として費用
+最終財企業は、所与の中間財価格のもとで費用
 $$
 \int_0^1P_t^I(j)Y_t^I(j)dj
 $$
@@ -567,15 +571,30 @@ $$
 \frac{Y_t^I(j)}{Y_t^I(k)}
 =\left(\frac{P_t^I(j)}{P_t^I(k)}\right)^{-\psi}.
 $$
-価格指数
+制約の乗数を $\xi_t$ とすると、一階条件は
 $$
-P_t=\left[\int_0^1P_t^I(j)^{1-\psi}dj\right]^{1/(1-\psi)}
+Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{\xi_t}\right)^{-\psi}
 $$
-を使って集計すれば、
+です。これをCES制約に代入して整理すると、
+$$
+1=\int_0^1\left(\frac{P_t^I(j)}{\xi_t}\right)^{1-\psi}dj,
+\qquad
+\xi_t=\left[\int_0^1P_t^I(j)^{1-\psi}dj\right]^{1/(1-\psi)}
+$$
+となります。規模に関して収穫一定なので、$\xi_t$ は最終財1単位の費用です。完全競争の最終財価格は $P_t=\xi_t$ となり、需要は
 $$
 Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{P_t}\right)^{-\psi}
 $$
-を得ます。
+と表せます。この需要と価格指数から、最終財企業の実質利潤は
+$$
+\begin{aligned}
+D_t^F
+&=Y_t-\int_0^1\frac{P_t^I(j)}{P_t}Y_t^I(j)dj\\
+&=Y_t\left[1-\int_0^1
+\left(\frac{P_t^I(j)}{P_t}\right)^{1-\psi}dj\right]=0
+\end{aligned}
+$$
+となり、ゼロ利潤も確認できます。
 
 ### 問3 `[Core] [Derivation]`：価格設定の導出
 
@@ -637,6 +656,10 @@ $$
 \tau_p^*=\mu^p-1=\frac15=0.2.
 $$
 補助金導入後は $MC=(1+\tau_p^*)/\mu^p=1$ であり、実際の価格・限界費用比も1です。補助金が企業の限界収入を補うため、社会的な価格と限界費用が一致します。
+
+```{=latex}
+\Needspace{13\baselineskip}
+```
 
 ### 問6 `[Research extension]`：水準と変動
 
@@ -823,13 +846,17 @@ $$
 $$
 を得ます。$\kappa_x\to\infty$ では $\Omega_g\to0$ なので $x_t\to0$、$y_t\to y_t^f=\zeta_gg_t$ です。$\kappa_x\to0$ では $\Omega_g\to1$ なので $x_t\to(1-\zeta_g)g_t$、$y_t=y_t^f+x_t\to g_t$ です。
 
+```{=latex}
+\Needspace{23\baselineskip}
+```
+
 ### 問6 `[Derivation] [Research extension]`：厚生ロスへの接続
 
 技術・政府支出ショックは、効率的な柔軟価格産出 $y_t^f=\zeta_aa_t+\zeta_gg_t$ 自体を動かします。したがって $y_t$ がゼロから離れることではなく、効率的配分から離れる
 $$
 x_t=y_t-y_t^f
 $$
-ことが資源配分上の損失です。二次近似前の損失を
+ことが資源配分上の損失です。正規化前の二次近似損失を
 $$
 \frac12\left[(\widetilde\gamma+\widetilde\varphi)x_t^2
 +\eta\pi_t^2\right]
@@ -1534,7 +1561,21 @@ $$
 
 ### 問9 `[Research extension]`：直接効果と間接効果
 
-実質利子率へ直接反応するのは Type S だけなので、PE 曲線の直接シフトには $1-\lambda$ が掛かり、RANK より小さくなります。一方、Type H 消費が現在所得へ強く反応すると PE 曲線の所得係数が大きくなり、45度線との交点で生じる間接的な所得乗数が増えます。通常領域で $\chi>1$ なら、後者が前者を上回り、総効果比 $(1-\lambda)/(1-\lambda\chi)$ が1を超えます。
+期待項を所与とする再帰式では、実質利子率へ直接反応するのが Type S だけなので、当期利子率の係数に人口比 $1-\lambda$ が掛かります。ただし、期待閉鎖を代入した後のPE切片の比は
+$$
+\frac{\Omega_T^D}{\Omega_R^D}
+=(1-\lambda)\frac{1-\beta p}
+{1-\beta p(1-\lambda\chi)}
+$$
+です。$p=0$ なら $1-\lambda$ 倍ですが、一般の $p$ では期待閉鎖による分母の差も反映されます。$0<\lambda\chi<1$ の範囲では、この直接シフトはRANKより小さくなります。
+
+一方、PE曲線の所得係数が生む乗数の比は
+$$
+\frac{1/(1-\omega_T)}{1/(1-\omega_R)}
+=\frac{1-\beta p(1-\lambda\chi)}
+{(1-\lambda\chi)(1-\beta p)}
+$$
+となります。$p=0$ では直接シフト比が $1-\lambda$、所得乗数比が $1/(1-\lambda\chi)$ に簡略化されます。一般の $p$ でも両比を掛けると、総効果比 $(1-\lambda)/(1-\lambda\chi)$ を得ます。したがって通常符号領域 $\lambda\chi<1$ で $\chi>1$ なら、所得乗数の拡大が直接シフトの縮小を上回り、総効果比が1を超えます。
 
 ```{=latex}
 \clearpage

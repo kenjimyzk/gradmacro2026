@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">期待項を落とした静学ケースの傾き比較</title>
+  <desc id="desc">価格硬直性だけの場合、賃金硬直性だけの場合、二重硬直性で実質賃金が一定の場合の有効なフィリップス曲線の傾きを比較する図。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34495e"/>
+    </marker>
+    <style>
+      .title { font: 700 30px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .axis { stroke: #34495e; stroke-width: 2.4; marker-end: url(#arrow); }
+      .grid { stroke: #d8dee8; stroke-width: 1; }
+      .line-blue { stroke: #2f6fbe; stroke-width: 8; fill: none; }
+      .line-amber { stroke: #d9792f; stroke-width: 4.5; fill: none; stroke-dasharray: 12 10; }
+      .line-red { stroke: #c43b3b; stroke-width: 5; fill: none; }
+      .label { font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #20242a; }
+      .text { font: 400 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 20px "Times New Roman", "STIX Two Text", serif; fill: #20242a; }
+      .note { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .blue-text { fill: #2f6fbe; font-weight: 700; }
+      .amber-text { fill: #b65e1f; font-weight: 700; }
+      .red-text { fill: #b52f2f; font-weight: 700; }
+      .box { fill: #ffffff; stroke: #c9d3df; stroke-width: 1.6; rx: 8; }
+      .leader { stroke: #7b8794; stroke-width: 1.8; fill: none; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="620" fill="#ffffff"/>
+  <rect x="44" y="34" width="1012" height="540" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+  <text class="title" x="74" y="82">期待項を落とした静学ケース：二重硬直性は傾きを小さくする</text>
+  <text class="subtitle" x="76" y="112">例：κ<tspan baseline-shift="sub" font-size="12">p</tspan> = κ<tspan baseline-shift="sub" font-size="12">w</tspan> のとき、実質賃金が動かない局面では有効な傾きは半分になる</text>
+
+  <line class="grid" x1="130" y1="430" x2="930" y2="430"/>
+  <line class="grid" x1="130" y1="350" x2="930" y2="350"/>
+  <line class="grid" x1="130" y1="270" x2="930" y2="270"/>
+  <line class="grid" x1="130" y1="190" x2="930" y2="190"/>
+  <line class="axis" x1="130" y1="510" x2="960" y2="510"/>
+  <line class="axis" x1="130" y1="510" x2="130" y2="150"/>
+
+  <text class="label" x="492" y="558">需給ギャップ  x</text>
+  <text class="label" x="72" y="142">インフレ率</text>
+  <text class="note" x="115" y="535">0</text>
+
+  <path class="line-blue" d="M130 510 L890 206"/>
+  <path class="line-amber" d="M130 510 L890 206"/>
+  <path class="line-red" d="M130 510 L890 358"/>
+
+  <rect class="box" x="552" y="132" width="482" height="112"/>
+  <text class="text blue-text" x="575" y="164">価格硬直性だけ（青実線）：<tspan class="math">π = κ<tspan baseline-shift="sub" font-size="13">p</tspan>(γ + ϕ)x</tspan></text>
+  <text class="text amber-text" x="575" y="197">賃金硬直性だけ（橙破線）：<tspan class="math">π = κ<tspan baseline-shift="sub" font-size="13">w</tspan>(γ + ϕ)x</tspan></text>
+  <text class="note" x="575" y="226">κ<tspan baseline-shift="sub" font-size="11">p</tspan> = κ<tspan baseline-shift="sub" font-size="11">w</tspan> のため、2ケースは同じ上側の直線になる</text>
+  <path class="leader" d="M800 244 L800 242"/>
+
+  <rect class="box" x="574" y="425" width="450" height="68"/>
+  <text class="text red-text" x="596" y="453">二重硬直性（赤実線）：<tspan class="math">π = κ̄(γ + ϕ)x</tspan></text>
+  <text class="note" x="596" y="480">κ̄ = (1/κ<tspan baseline-shift="sub" font-size="11">p</tspan> + 1/κ<tspan baseline-shift="sub" font-size="11">w</tspan>)<tspan baseline-shift="super" font-size="11">−1</tspan></text>
+  <path class="leader" d="M740 425 L740 388"/>
+
+  <text class="note" x="76" y="596">ϕ はフリッシュ弾力性の逆数（テイラー係数とは別）。上側の青実線は、橙色の破線の隙間から見える。</text>
+</svg>

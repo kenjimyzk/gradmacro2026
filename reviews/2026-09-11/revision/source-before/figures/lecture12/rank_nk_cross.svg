@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="810" viewBox="0 0 1220 810" role="img" aria-labelledby="title desc">
+<title id="title">RANK の New Keynesian Cross</title>
+<desc id="desc">同じ軸尺度で実質利子率ギャップをマイナス0.5からマイナス1.5パーセントポイントへ下げる比較。PEの傾きは0.010、直接効果は0.990パーセント、追加所得フィードバックは0.010パーセント、総効果は1.000パーセント。式から生成した図。</desc>
+<metadata>beta=0.99; gamma=1.0; p=0.0; lambda=0.3; chi=2.0; rate_before=-0.005; rate_after=-0.015</metadata>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="context-stroke"/></marker>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill:#243241; }
+.title { font-size:30px; font-weight:700; }
+.subtitle { font-size:20px; fill:#516170; }
+.label { font-size:20px; font-weight:600; }
+.text { font-size:18px; }
+.small { font-size:17px; fill:#516170; }
+.value { font-size:27px; font-weight:700; }
+.grid { stroke:#dde3e8; stroke-width:1; }
+.axis { stroke:#516170; stroke-width:2; }
+.line45 { stroke:#73808e; stroke-width:2.5; fill:none; }
+.pe { stroke:#2364a6; stroke-width:3.5; fill:none; }
+.pe2 { stroke:#2364a6; stroke-width:3.5; fill:none; stroke-dasharray:10 7; }
+.direct { stroke:#c66a23; stroke-width:3.6; fill:none; marker-end:url(#arrow); }
+.feedback { stroke:#8855a6; stroke-width:3.6; fill:none; marker-end:url(#arrow); }
+.guide { stroke:#a6b0ba; stroke-width:1.2; stroke-dasharray:4 5; }
+</style>
+</defs>
+<rect width="1220" height="810" fill="white"/>
+<rect x="34" y="24" width="1152" height="752" rx="16" fill="#f8fafc" stroke="#dce3e8"/>
+<text class="title" x="65.0000" y="76.0000" >RANK の New Keynesian Cross</text>
+<text class="subtitle" x="67.0000" y="111.0000" >β = 0.99、p = 0：所得フィードバックは総効果の 1%</text>
+<text class="small" x="67.0000" y="147.0000" >共通較正：β = 0.99、γ = 1、p = 0　｜　TANK：λ = 0.30、χ = 2</text>
+<line class="grid" x1="130.0" y1="630.000000" x2="860.0" y2="630.000000"/>
+<line class="grid" x1="130.000000" y1="190.0" x2="130.000000" y2="630.0"/>
+<text class="small" x="114.0000" y="636.0000" text-anchor="end">0</text>
+<text class="small" x="130.0000" y="658.0000" text-anchor="middle">0</text>
+<line class="grid" x1="130.0" y1="556.666667" x2="860.0" y2="556.666667"/>
+<line class="grid" x1="251.666667" y1="190.0" x2="251.666667" y2="630.0"/>
+<text class="small" x="114.0000" y="562.6667" text-anchor="end">0.5</text>
+<text class="small" x="251.6667" y="658.0000" text-anchor="middle">0.5</text>
+<line class="grid" x1="130.0" y1="483.333333" x2="860.0" y2="483.333333"/>
+<line class="grid" x1="373.333333" y1="190.0" x2="373.333333" y2="630.0"/>
+<text class="small" x="114.0000" y="489.3333" text-anchor="end">1</text>
+<text class="small" x="373.3333" y="658.0000" text-anchor="middle">1</text>
+<line class="grid" x1="130.0" y1="410.000000" x2="860.0" y2="410.000000"/>
+<line class="grid" x1="495.000000" y1="190.0" x2="495.000000" y2="630.0"/>
+<text class="small" x="114.0000" y="416.0000" text-anchor="end">1.5</text>
+<text class="small" x="495.0000" y="658.0000" text-anchor="middle">1.5</text>
+<line class="grid" x1="130.0" y1="336.666667" x2="860.0" y2="336.666667"/>
+<line class="grid" x1="616.666667" y1="190.0" x2="616.666667" y2="630.0"/>
+<text class="small" x="114.0000" y="342.6667" text-anchor="end">2</text>
+<text class="small" x="616.6667" y="658.0000" text-anchor="middle">2</text>
+<line class="grid" x1="130.0" y1="263.333333" x2="860.0" y2="263.333333"/>
+<line class="grid" x1="738.333333" y1="190.0" x2="738.333333" y2="630.0"/>
+<text class="small" x="114.0000" y="269.3333" text-anchor="end">2.5</text>
+<text class="small" x="738.3333" y="658.0000" text-anchor="middle">2.5</text>
+<line class="grid" x1="130.0" y1="190.000000" x2="860.0" y2="190.000000"/>
+<line class="grid" x1="860.000000" y1="190.0" x2="860.000000" y2="630.0"/>
+<text class="small" x="114.0000" y="196.0000" text-anchor="end">3</text>
+<text class="small" x="860.0000" y="658.0000" text-anchor="middle">3</text>
+<path class="axis" d="M130.000000 630.000000 L875.000000 630.000000" />
+<path class="axis" d="M130.000000 630.000000 L130.000000 180.000000" />
+<text class="label" x="122.0000" y="176.0000" >計画消費 c（%）</text>
+<text class="label" x="495.0000" y="686.0000" text-anchor="middle">現在所得 y（%）</text>
+<path class="line45" d="M130.000000 630.000000 L860.000000 190.000000" />
+<text class="small" x="731.0000" y="176.0000" >45度線 c = y</text>
+<path class="pe" d="M130.000000 557.400000 L860.000000 553.000000" />
+<path class="pe2" d="M130.000000 412.200000 L860.000000 407.800000" />
+<path class="direct" d="M251.666667 556.666667 L251.666667 411.466667" />
+<path class="feedback" d="M251.666667 411.466667 L495.000000 410.000000" />
+<path class="guide" d="M251.666667 556.666667 L251.666667 630.000000" />
+<circle cx="251.666667" cy="556.666667" r="6" fill="#2364a6" stroke="white" stroke-width="2"/>
+<text class="label" x="261.6667" y="582.6667" >A</text>
+<path class="guide" d="M495.000000 410.000000 L495.000000 630.000000" />
+<circle cx="495.000000" cy="410.000000" r="6" fill="#2364a6" stroke="white" stroke-width="2"/>
+<text class="label" x="505.0000" y="394.0000" >B</text>
+<text class="small" x="917.0000" y="202.0000" >PE の傾き</text>
+<text class="value" x="917.0000" y="238.0000" >ω = 0.010</text>
+<path class="pe legend" d="M918.000000 277.000000 L961.000000 277.000000" />
+<text class="text" x="974.0000" y="283.0000" >変更前</text>
+<path class="pe2 legend" d="M918.000000 311.000000 L961.000000 311.000000" />
+<text class="text" x="974.0000" y="317.0000" >変更後</text>
+<text class="label" x="917.0000" y="363.0000" >消費・産出の増加</text>
+<text class="small" x="917.0000" y="401.0000" >直接効果</text>
+<text class="value" x="917.0000" y="435.0000" style="fill:#c66a23">0.990%</text>
+<text class="small" x="917.0000" y="471.0000" >所得フィードバック</text>
+<text class="value" x="917.0000" y="505.0000" style="fill:#8855a6">0.010%</text>
+<text class="small" x="917.0000" y="541.0000" >総効果</text>
+<text class="value" x="917.0000" y="575.0000" >1.000%</text>
+<text class="small" x="917.0000" y="616.0000" >A：0.500%</text>
+<text class="small" x="917.0000" y="645.0000" >B：1.500%</text>
+<text class="small" x="67.0000" y="725.0000" >注：両図は同じ軸尺度。変更前 r̃ = −0.5%ポイント、変更後 −1.5%ポイント（1%ポイント低下）。</text>
+<text class="small" x="67.0000" y="756.0000" >橙の矢印は所得固定のシフト、紫の矢印は新PE曲線上の移動。効果の数値は消費の縦方向の増分。</text>
+</svg>

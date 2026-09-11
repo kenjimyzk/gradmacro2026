@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">第11回講義の全体像</title>
+  <desc id="desc">価格硬直性RANKモデルに家計異質性と分配ブロックを加え、TANKの閉じたIS曲線を導く流れ。増幅は0より大きく1より小さいシータTと、本文の所得帰着仮定の下で成立する。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34495e"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .frame { fill: #ffffff; stroke: #d9e0ea; stroke-width: 2; }
+      .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2d3d; }
+      .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #52616f; }
+      .box { stroke-width: 2; rx: 9; }
+      .blue { fill: #eaf3ff; stroke: #4f8fcf; }
+      .green { fill: #edf8f0; stroke: #4c9f70; }
+      .amber { fill: #fff6df; stroke: #c9972d; }
+      .purple { fill: #f6edf9; stroke: #8d5ab8; }
+      .gray { fill: #ffffff; stroke: #9fb3c8; }
+      .teal { fill: #edf6f8; stroke: #27899a; }
+      .yellow { fill: #fff6dc; stroke: #c48a22; }
+      .condition { fill: #eef4fb; stroke: #6b88a8; stroke-width: 1.7; rx: 8; }
+      .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #233142; }
+      .text { font: 400 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .text-small { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #52616f; }
+      .math { font: 600 21px "Times New Roman", "STIX Two Text", serif; fill: #233142; }
+      .math-small { font: 600 18px "Times New Roman", "STIX Two Text", serif; fill: #233142; }
+      .arrow { stroke: #34495e; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #6c7a89; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .note { font: 600 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+    </style>
+  </defs>
+
+  <rect class="frame" x="0" y="0" width="1200" height="700"/>
+  <rect class="bg" x="32" y="26" width="1136" height="648" rx="18"/>
+  <text class="title" x="58" y="66">第11回：価格硬直性をもつTANKモデル</text>
+  <text class="subtitle" x="60" y="98">RANKの価格設定ブロックを保ち、家計異質性と所得分配からIS曲線を閉じる</text>
+
+  <rect class="box blue" x="50" y="140" width="240" height="174"/>
+  <text class="label" x="74" y="178">第7回の土台</text>
+  <text class="text" x="74" y="211">価格硬直性 RANK</text>
+  <text class="text" x="74" y="239">共通で柔軟な賃金</text>
+  <text class="math-small" x="74" y="270">π<tspan baseline-shift="sub" font-size="12">t</tspan> = β E<tspan baseline-shift="sub" font-size="12">t</tspan>π<tspan baseline-shift="sub" font-size="12">t+1</tspan> + κ<tspan baseline-shift="sub" font-size="12">x</tspan>x<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+
+  <rect class="box green" x="337" y="140" width="240" height="174"/>
+  <text class="label" x="361" y="178">家計異質性</text>
+  <text class="text" x="361" y="211">Type S：Euler方程式</text>
+  <text class="text" x="361" y="239">Type H：現在所得制約</text>
+  <text class="math-small" x="361" y="270">σ<tspan baseline-shift="super" font-size="12">c</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> = c<tspan baseline-shift="super" font-size="12">S</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> − c<tspan baseline-shift="super" font-size="12">H</tspan><tspan baseline-shift="sub" font-size="12">t</tspan></text>
+
+  <rect class="box amber" x="624" y="140" width="240" height="174"/>
+  <text class="label" x="648" y="178">分配ブロック</text>
+  <text class="text" x="648" y="211">純配当 d<tspan baseline-shift="sub" font-size="12">t</tspan> は S へ</text>
+  <text class="text" x="648" y="239">移転 z<tspan baseline-shift="sub" font-size="12">t</tspan> は H へ</text>
+  <text class="math-small" x="648" y="270">γσ<tspan baseline-shift="super" font-size="12">c</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> + ϕσ<tspan baseline-shift="super" font-size="12">n</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> = 0</text>
+  <text class="text-small" x="648" y="296">ϕ：労働供給弾力性の逆数</text>
+
+  <rect class="box purple" x="911" y="140" width="239" height="174"/>
+  <text class="label" x="935" y="178">閉じたTANK体系</text>
+  <text class="math-small" x="935" y="211">x<tspan baseline-shift="sub" font-size="12">t</tspan> = E<tspan baseline-shift="sub" font-size="12">t</tspan>x<tspan baseline-shift="sub" font-size="12">t+1</tspan></text>
+  <text class="math-small" x="935" y="238">− (r<tspan baseline-shift="sub" font-size="12">t</tspan> − r<tspan baseline-shift="super" font-size="12">f,T</tspan><tspan baseline-shift="sub" font-size="12">t</tspan>)/(γΘ<tspan baseline-shift="sub" font-size="12">T</tspan>)</text>
+  <text class="math-small" x="935" y="267">r<tspan baseline-shift="sub" font-size="12">t</tspan> = φπ<tspan baseline-shift="sub" font-size="12">t</tspan> − E<tspan baseline-shift="sub" font-size="12">t</tspan>π<tspan baseline-shift="sub" font-size="12">t+1</tspan> − m<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+  <text class="text-small" x="935" y="296">φ：テイラー・ルール係数</text>
+
+  <path class="arrow" d="M290 227 H329"/>
+  <path class="arrow" d="M577 227 H616"/>
+  <path class="arrow" d="M864 227 H903"/>
+
+  <rect class="box teal" x="50" y="397" width="135" height="128"/>
+  <text class="label" x="74" y="435">第10回</text>
+  <text class="text" x="74" y="468">賃金硬直性</text>
+  <text class="text" x="74" y="496">配当と賃金</text>
+
+  <rect class="box gray" x="215" y="370" width="770" height="182"/>
+  <text class="label" x="245" y="411">中心となる分配式</text>
+  <text class="math" x="245" y="451">σ<tspan baseline-shift="super" font-size="14">c</tspan><tspan baseline-shift="sub" font-size="14">t</tspan> = −[ϕ/(1−λ)]x<tspan baseline-shift="sub" font-size="14">t</tspan> − ϕz<tspan baseline-shift="sub" font-size="14">t</tspan>/[(γ+ϕ)(1−λ)]</text>
+  <text class="math" x="245" y="493">Θ<tspan baseline-shift="sub" font-size="14">T</tspan> = 1 − λϕ/(1−λ)</text>
+  <text class="text" x="535" y="493">消費格差の変化が集計需要を動かす</text>
+  <text class="text-small" x="245" y="528">r<tspan baseline-shift="super" font-size="11">f,T</tspan><tspan baseline-shift="sub" font-size="11">t</tspan> は再分配ショックを含むTANKの自然実質利子率</text>
+
+  <rect class="box yellow" x="1015" y="397" width="135" height="128"/>
+  <text class="label" x="1039" y="435">第12回</text>
+  <text class="text" x="1039" y="468">NKクロス</text>
+  <text class="text" x="1039" y="496">所得帰着</text>
+
+  <path class="thin" d="M170 314 C190 345, 205 365, 242 383"/>
+  <path class="thin" d="M457 314 V362"/>
+  <path class="thin" d="M744 314 V362"/>
+  <path class="thin" d="M1030 314 C1020 342, 1000 359, 958 377"/>
+  <path class="thin" d="M185 461 H207"/>
+  <path class="thin" d="M985 461 H1007"/>
+
+  <rect class="condition" x="104" y="591" width="992" height="56"/>
+  <text class="note" x="128" y="625">結論：本文の所得帰着（純配当→S、移転→H）の下で 0 &lt; Θ<tspan baseline-shift="sub" font-size="12">T</tspan> &lt; 1 なら、TANKのIS曲線はRANKよりフラットになる。</text>
+</svg>

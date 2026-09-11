@@ -1,0 +1,1516 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  japanese,
+  lualatex,
+  ja=standard,
+  12pt,
+  a4paper]{ltjsarticle}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{needspace}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{目次}
+\else
+  \newcommand\contentsname{目次}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{図一覧}
+\else
+  \newcommand\listfigurename{図一覧}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{表一覧}
+\else
+  \newcommand\listtablename{表一覧}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{図}
+\else
+  \newcommand\figurename{図}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{表}
+\else
+  \newcommand\tablename{表}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{コード}
+\newcommand*\listoflistings{\listof{codelisting}{コード一覧}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  pdftitle={第1回：学部マクロの復習},
+  pdfauthor={宮﨑憲治},
+  pdflang={ja},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{第1回：学部マクロの復習}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{マクロ経済学B}
+\author{宮﨑憲治}
+\date{2026年度}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{目次}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{講義の目的}\label{ux8b1bux7fa9ux306eux76eeux7684}
+
+本講義では、学部レベルのマクロ経済学で学んだ主要な概念と代表的なモデルを復習し、大学院レベルの現代マクロ経済学へスムーズに橋渡しを行います。本回では、特に以下の6点に焦点を当てます：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ケインジアン・クロスと財市場における乗数効果のメカニズム
+\item
+  IS-LMモデルとAD-AS分析の基本構造
+\item
+  フィリップス曲線と、自然産出量・需給ギャップへの読み替え
+\item
+  総需要管理政策（財政政策・金融政策）の効果と限界
+\item
+  ルーカス批判とミクロ的基礎づけの必要性
+\item
+  現代マクロ経済学への展開
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{科目の位置づけと前提}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+「マクロ経済学A」では、長期的な経済成長理論、資本蓄積、定常成長を学びます。ただし、確率的なショックのもとで資本蓄積を内生的に決定するRBCモデルは、マクロ経済学Aでも本講義でも扱いません。
+本科目「マクロ経済学B」では、マクロ経済学Aの成長理論を念頭に置きつつも、固定資本または線形生産技術へと分析を簡略化します。その上で、動学的な総需要、名目価格の硬直性、金融政策、政府部門、そして家計の異質性へと焦点を移していきます。第4回以降でも明示的な投資や資本蓄積を導入しないのは、自然利子率の決定要因や、金融・財政政策の伝達（波及）経路をより明確に浮き彫りにするためです。なお、資本蓄積を含む本格的なRBCモデルや、それを解くための一般的なDSGE数値解法については、第12回において本講義の先の発展的な学習内容として展望します。
+
+\end{tcolorbox}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/lecture01_overview_infographic.pdf}
+
+}
+
+\caption{\label{fig-lecture01-overview}第1回講義の全体像：ケインジアン・クロス、IS-LM、AD-AS、フィリップス曲線、総需要管理政策、ルーカス批判、現代マクロへの展開を1枚で整理する。自然失業率ではなく、後続回で用いる自然産出量と需給ギャップへの橋渡しを意識する。}
+
+\end{figure}%
+
+図~\ref{fig-lecture01-overview}
+は、学部マクロの伝統的な総需要モデルから出発し、人々の期待やミクロ的基礎づけを取り入れた現代マクロ経済学へと進む本講義全体の流れを示しています。
+
+\clearpage
+
+\subsection{全講義共通の assumption
+matrix}\label{ux5168ux8b1bux7fa9ux5171ux901aux306e-assumption-matrix}
+
+各回で何を仮定し、何を新しく導入するかを次の2表にまとめます。単純な
+on/off
+では誤解を招く項目があるため、固定した値や授業での役割も記しています。記号「---」は、その回では当該ブロックを使わないことを表します。
+
+\begingroup
+\small
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0700}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1800}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1400}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2800}}@{}}
+\caption{実物ブロックと市場構造。マクロ経済学Aでは成長理論の資本蓄積を扱うが、確率的ショックのもとで資本を内生化するRBCモデルは扱わない。第4回以降も資本ストックは所与であり、マクロ経済学Bでは投資と資本蓄積を扱わない。}\label{tbl-assumption-real}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+位置づけ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+資本蓄積
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+固定資本分配率
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+政府購入
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+財市場の構造
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+位置づけ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+資本蓄積
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+固定資本分配率
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+政府購入
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+財市場の構造
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 学部マクロの復習 & A：成長理論 & --- & 概観 & 概観 \\
+2 & 分析ツール & --- & --- & --- & --- \\
+3 & 動学的最適化 & --- & --- & --- & --- \\
+4 & 柔軟価格RBC & なし & \(0\leq\alpha<1\) & なし & 完全競争 \\
+5 & 政府部門 & なし & \(0\leq\alpha<1\) & あり & 完全競争 \\
+6 & 独占的競争 & なし & \(0\leq\alpha<1\) & なし & 独占的競争 \\
+7 & 基本RANK & なし & \(\alpha=0\) & なし & 独占的競争 \\
+8 & 一般RANK & なし & \(\alpha>0\)も許容 & あり & 独占的競争 \\
+9 & 最適金融政策 & なし & 一般形 & 一般形 & 独占的競争 \\
+10 & 二重硬直RANK & なし & \(\alpha=0\) & なし & 独占的競争 \\
+11 & TANK & なし & \(\alpha=0\) & なし & 独占的競争 \\
+12 & NK Cross／TANK & なし & \(\alpha=0\) & なし & 独占的競争 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0700}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1400}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1800}}@{}}
+\caption{名目硬直性、家計構造、政策・厚生ブロック。第12回はNKフィリップス曲線と政策ルールを閉じず、所与の実質利子率に対する条件付き需要反応を扱う。}\label{tbl-assumption-nominal}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+価格
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+賃金
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+家計構造
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+政策の閉じ方
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+厚生目的
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+価格
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+賃金
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+家計構造
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+政策の閉じ方
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+厚生目的
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 概観 & 概観 & 学部モデル & IS--LM／AD--AS & なし \\
+2 & --- & --- & --- & --- & 二次近似例 \\
+3 & --- & --- & 1最適化家計 & --- & なし \\
+4 & 柔軟 & 柔軟 & 代表的家計 & 市場均衡 & なし \\
+5 & 柔軟 & 柔軟 & 代表的家計 & 政府予算 & なし \\
+6 & 柔軟 & 柔軟 & 代表的家計 & 市場均衡 & なし \\
+7 & 硬直的 & 柔軟 & 代表的家計 & Taylor rule & なし \\
+8 & 硬直的 & 柔軟 & 代表的家計 & Taylor rule & 導入 \\
+9 & 硬直的 & 柔軟 & 代表的家計 & 最適政策とrule & あり \\
+10 & 硬直的 & 硬直的 & 代表的家計 & Taylor rule & 発展補論 \\
+11 & 硬直的 & 柔軟 & Type H＋Type S & Taylor rule & なし \\
+12 & 硬直的（背景） & 柔軟 & Type H＋Type S & \(r_t\)を所与 & なし \\
+\end{longtable}
+
+第9回の「一般形」は第8回の合成係数 \(\tilde\gamma,\tilde\varphi\)
+を引き継ぐことを表します。単純形では \(G_Y=0\)、\(\alpha=0\)
+と置きます。第10回以降は家計異質性または賃金硬直性の効果を分離するため、政府購入なし、\(\alpha=0\)
+の基準へ戻ります。
+
+\endgroup
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{ケインジアン・クロス}\label{ux30b1ux30a4ux30f3ux30b8ux30a2ux30f3ux30afux30edux30b9}
+
+\subsection{財市場と計画支出}\label{ux8ca1ux5e02ux5834ux3068ux8a08ux753bux652fux51fa}
+
+ケインジアン・クロスは、短期において物価水準と利子率を一定（所与）と仮定し、財市場の需要と産出量（供給）がどのように一致するかを分析する最も基本的な総需要モデルです。その根本にある考え方は、「企業は予期しない在庫の増減に応じて生産量を調整するため、短期的な産出量は計画支出（総需要）に合わせて決まる」という点にあります。
+
+\Needspace{6\baselineskip}
+
+\textbf{計画支出の定義式：} \[
+PE = C_0 + c(Y-T) + \bar{I} + G
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(PE\)：計画支出（Planned Expenditure）
+\item
+  \(C_0\)：所得の多寡に依存しない基礎消費
+\item
+  \(c\)：限界消費性向（\(0<c<1\)）
+\item
+  \(\bar{I}\)：外生的に与えられる投資
+\item
+  \(G\)：政府支出
+\item
+  \(T\)：租税（一括税）
+\end{itemize}
+
+財市場が均衡するのは、産出量（総供給）が計画支出（総需要）と等しくなる点です。
+\[
+Y=PE
+\]
+
+したがって、均衡産出量は次のように表されます。 \[
+Y
+=
+\frac{1}{1-c}
+\left(C_0-cT+\bar{I}+G\right)
+\]
+
+\subsection{45度線と乗数効果}\label{ux5ea6ux7ddaux3068ux4e57ux6570ux52b9ux679c}
+
+ケインジアン・クロス図では、横軸に産出量 \(Y\)、縦軸に計画支出 \(PE\)
+をとります。傾き1の45度線は
+\(Y=PE\)（財市場の均衡条件）を表しており、45度線と計画支出曲線の交点で均衡産出量が決定されます。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/keynesian_cross.pdf}
+
+}
+
+\caption{\label{fig-keynesian-cross}ケインジアン・クロス：計画支出曲線と45度線の交点で均衡産出量が決まる。政府支出や自律的需要が増加すると計画支出曲線が上方にシフトし、乗数効果によって産出量が当初の支出増以上に大きく拡大する。}
+
+\end{figure}%
+
+図~\ref{fig-keynesian-cross}
+では、政府支出の増加によって計画支出曲線が上方にシフトし、最初の支出増加幅を上回る産出量の拡大がもたらされるプロセス（乗数効果）を確認できます。
+
+政府支出が \(\Delta G\)
+だけ増加すると、計画支出曲線はその分だけ上方に平行シフトします。このとき、均衡産出量の変化は
+\[
+\Delta Y
+=
+\frac{1}{1-c}\Delta G
+\] となります。ここで、係数 \[
+\frac{1}{1-c}
+\] を\textbf{政府支出乗数}と呼びます。限界消費性向 \(c\)
+が大きいほど、所得の増加が新たな消費を呼び、その消費がさらに誰かの所得を増やすという波及効果が強まるため、乗数はより大きくなります。
+
+一方、租税が外生的に \(\Delta T\) だけ増加する場合、均衡産出量の変化は
+\[
+\Delta Y
+=
+-
+\frac{c}{1-c}\Delta T
+\]
+となります。減税（\(\Delta T < 0\)）は可処分所得を引き上げることで消費を増やしますが、最初の需要押し上げ効果が限界消費性向を掛けた
+\(c|\Delta T|\)
+にとどまるため、租税乗数の大きさ（絶対値）は政府支出乗数よりも小さくなります。
+
+\subsection{IS-LMモデルへの接続}\label{is-lmux30e2ux30c7ux30ebux3078ux306eux63a5ux7d9a}
+
+ケインジアン・クロスでは、分析を単純にするために投資を一定値 \(\bar{I}\)
+として扱いました。これに対して次のIS-LMモデルでは、投資を実質利子率
+\(r\) の減少関数 \(I(r)\) として内生化します。このときの計画支出は \[
+PE(Y;r,G,T)=C(Y-T)+I(r)+G
+\] と表されます。
+
+各利子率 \(r\) に対して財市場の均衡条件 \(Y=PE(Y;r,G,T)\)
+を満たす産出量を求め、\((Y, r)\)
+平面上に描いたものが\textbf{IS曲線}です。利子率が低下すると投資が活発になって計画支出曲線が上方にシフトし、乗数効果を通じて均衡産出量が増加します。したがって、IS曲線は右下がりの形状になります。
+
+この45度線分析における需要波及の直観は、第12回で学ぶ \textbf{New
+Keynesian Cross}
+にも直接つながっていきます。第12回では、流動性制約に直面する家計の存在（家計の異質性）によって所得のフィードバックが強まり、計画支出曲線の傾きがどう変化するかを、TANK（Two-Agent
+New Keynesian）モデルの中で再解釈します。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{IS-LMモデル}\label{is-lmux30e2ux30c7ux30eb}
+
+\subsection{IS曲線（財市場の均衡）}\label{isux66f2ux7ddaux8ca1ux5e02ux5834ux306eux5747ux8861}
+
+IS曲線は、財市場が均衡（総需要＝総供給）する産出量と実質利子率の組み合わせを示す曲線です。
+
+\Needspace{6\baselineskip}
+
+\textbf{財市場の均衡条件：} \[
+Y = C(Y - T) + I(r) + G
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(Y\)：産出量（GDP）
+\item
+  \(C(Y - T)\)：消費関数（可処分所得 \(Y-T\) の増加関数）
+\item
+  \(I(r)\)：投資関数（実質利子率 \(r\) の減少関数）
+\item
+  \(G\)：政府支出
+\item
+  \(T\)：租税
+\item
+  \(r\)：実質利子率
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{IS曲線の性質：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{右下がりの形状}：利子率が上昇すると借入コストが増大して民間投資が減少し、乗数効果を通じて均衡産出量が低下するため
+\item
+  \textbf{シフト要因}：政府支出の拡大、減税、消費者コンフィデンスの向上などによる計画支出の増加（右方シフト）
+\end{itemize}
+
+\subsection{LM曲線（貨幣市場の均衡）}\label{lmux66f2ux7ddaux8ca8ux5e63ux5e02ux5834ux306eux5747ux8861}
+
+LM曲線は、貨幣市場が均衡（実質貨幣供給＝実質貨幣需要）する産出量と名目利子率の組み合わせを示す曲線です。
+
+\Needspace{6\baselineskip}
+
+\textbf{貨幣市場の均衡条件：} \[
+\frac{M}{P} = L(Y, i)
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(M\)：名目貨幣供給量
+\item
+  \(P\)：物価水準
+\item
+  \(L(Y, i)\)：実質貨幣需要関数（取引需要を反映して産出量 \(Y\)
+  の増加関数、貨幣保有の機会費用を反映して名目利子率 \(i\) の減少関数）
+\item
+  \(i\)：名目利子率
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{フィッシャー方程式：} \[
+i = r + \pi^e
+\]
+
+ここで、\(\pi^e\) は期待インフレ率です。
+
+\Needspace{6\baselineskip}
+
+\textbf{LM曲線の性質：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{右上がりの形状}：産出量が増加すると取引のための貨幣需要が増加し、貨幣市場の均衡を保つために利子率が上昇するため
+\item
+  \textbf{シフト要因}：名目貨幣供給量の増加（右方シフト）、物価水準の上昇（左方シフト）など
+\end{itemize}
+
+IS曲線では投資判断の基準として実質利子率 \(r\)
+を用い、LM曲線では貨幣保有の機会費用として名目利子率 \(i\)
+を用いています。短期のIS-LM分析では、期待インフレ率 \(\pi^e\)
+が一定であると仮定し、フィッシャー方程式 \(i=r+\pi^e\)
+を通じて実質利子率と名目利子率を相互に読み替えることで、両曲線を同一の平面上で同時に図示しています。
+
+\subsection{IS-LM均衡}\label{is-lmux5747ux8861}
+
+IS曲線とLM曲線の交点において、財市場と貨幣市場が同時に均衡します。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/is_lm_equilibrium.pdf}
+
+}
+
+\caption{\label{fig-is-lm}IS-LM均衡：財市場のIS曲線と貨幣市場のLM曲線の交点で、均衡産出量
+\(Y^\ast\) と均衡利子率 \(r^\ast\) が決まる。}
+
+\end{figure}%
+
+図~\ref{fig-is-lm}
+は、期待インフレ率を一定として名目利子率と実質利子率を対応づけた上で、両市場の同時均衡を表した図です。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{AD-AS分析}\label{ad-asux5206ux6790}
+
+\subsection{総需要曲線（AD曲線）}\label{ux7dcfux9700ux8981ux66f2ux7ddaadux66f2ux7dda}
+
+AD曲線（Aggregate Demand
+curve）は、IS-LMモデルから導出され、各物価水準のもとで財市場と貨幣市場が同時に均衡する産出量を示します。
+
+\Needspace{8\baselineskip}
+
+\textbf{AD曲線の導出プロセス：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  物価水準 \(P\) が上昇する
+\item
+  実質貨幣供給量 \(M/P\) が減少し、貨幣市場が逼迫する
+\item
+  均衡を取り戻すために利子率が上昇し、LM曲線が左（上）へシフトする
+\item
+  利子率の上昇によって民間投資が抑制され、財市場の均衡産出量が減少する
+\end{enumerate}
+
+\Needspace{6\baselineskip}
+
+\textbf{AD曲線の関係式：} \[
+Y^{AD}=D\left(\frac{M}{P}, G, T\right)
+\]
+
+\Needspace{6\baselineskip}
+
+\textbf{AD曲線の性質：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{右下がりの形状}：物価水準が上昇すると、実質貨幣残高の減少と利子率の上昇を通じて均衡産出量が減少するため
+\item
+  \textbf{シフト要因}：拡張的財政政策（政府支出増加・減税）、拡張的金融政策（貨幣供給増加）などによる右方シフト
+\end{itemize}
+
+\subsection{総供給曲線（AS曲線）}\label{ux7dcfux4f9bux7d66ux66f2ux7ddaasux66f2ux7dda}
+
+\subsubsection{短期総供給曲線（SRAS）}\label{ux77edux671fux7dcfux4f9bux7d66ux66f2ux7ddasras}
+
+短期においては、名目賃金の改定に遅れがある（賃金硬直性がある）ため、物価水準の上昇が実質賃金を引き下げ、企業の雇用と産出量を押し上げます。
+
+\Needspace{6\baselineskip}
+
+\textbf{短期AS曲線（期待修正型）：} \[
+Y = \bar{Y} + \alpha_{AS}(P - P^e)
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(\bar{Y}\)：自然産出量（潜在産出量）
+\item
+  \(P^e\)：期待物価水準
+\item
+  \(\alpha_{AS} > 0\)：物価の予想外の変動に対する産出量の感応度
+\end{itemize}
+
+ここでいう自然産出量とは、労働市場の雇用が自然な均衡水準（完全雇用）にあるときに達成される潜在的な産出量のことです。学部マクロでは、この自然な雇用水準を「自然失業率」と対応づけて説明することが一般的です。失業率が自然失業率を上回っていれば、労働力に遊休が生じているため、実際の産出量は自然産出量を下回ります。逆に、失業率が自然失業率を下回っていれば、経済が過熱して雇用と産出量は自然水準を上回ります。
+
+ただし、本講義の第7回以降では、失業率そのものを陽にはモデル化しません。代わりに、実際の産出の対数定常状態乖離（定常状態からのパーセント偏差）を
+\(y_t\)、価格が完全に伸縮的な場合に達成される自然産出量の対数定常状態乖離を
+\(y_t^f\) と表し、その差 \[
+x_t = y_t-y_t^f
+\]
+を\textbf{需給ギャップ}（または産出ギャップ）として定義して理論を展開します。したがって、第1回の段階で押さえておくべき核心は、自然失業率という用語そのものよりも、「経済活動が自然水準から乖離することが、インフレ圧力やデフレ圧力を生み出す」という基本的なメカニズムです。
+
+\subsubsection{長期総供給曲線（LRAS）}\label{ux9577ux671fux7dcfux4f9bux7d66ux66f2ux7ddalras}
+
+長期においては、物価の変動に応じて名目賃金が完全に調整されるため、実際の産出量は物価水準に左右されず、常に自然産出量に一致します。
+
+\Needspace{6\baselineskip}
+
+\textbf{長期AS曲線：} \[
+Y = \bar{Y}
+\]
+
+したがって、LRAS曲線は自然産出量 \(\bar{Y}\)
+の水準で垂直な直線となります。
+
+\subsection{AD-AS均衡}\label{ad-asux5747ux8861}
+
+AD-AS分析では、右下がりの総需要曲線（AD）、右上がりの短期総供給曲線（SRAS）、そして自然産出量で垂直な長期総供給曲線（LRAS）の相互関係から、短期均衡と長期均衡の調整プロセスを読み取ります。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/ad_as_equilibrium.pdf}
+
+}
+
+\caption{\label{fig-ad-as}AD-AS均衡：AD曲線は右下がり、SRAS曲線は右上がり、LRAS曲線は自然産出量で垂直になる。}
+
+\end{figure}%
+
+図~\ref{fig-ad-as}
+は、短期には総需要の変動が産出量と物価水準をともに変化させる一方で、長期には賃金や価格の調整を通じて産出量が自然産出量へと回帰することを示しています。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{フィリップス曲線}\label{ux30d5ux30a3ux30eaux30c3ux30d7ux30b9ux66f2ux7dda}
+
+\subsection{オリジナルのフィリップス曲線}\label{ux30aaux30eaux30b8ux30caux30ebux306eux30d5ux30a3ux30eaux30c3ux30d7ux30b9ux66f2ux7dda}
+
+A.W.
+フィリップス（1958）は、英国の歴史的な時系列データを用いて、失業率と\textbf{名目賃金上昇率}の間に負の相関関係（一方が高ければ他方が低い関係）があることを発見しました。重要な点は、フィリップスが当初分析した対象は物価上昇率（インフレ率）そのものではなく、名目賃金の上昇率であったことです。その後、企業の価格設定行動などを通じて、この関係は物価インフレ率と失業率の間のトレードオフとして広く再解釈されるようになりました。
+
+\Needspace{6\baselineskip}
+
+\textbf{フィリップス曲線：} \[
+\pi^w = f(u) \quad \text{ただし } f'(u) < 0
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(\pi^w\)：名目賃金上昇率
+\item
+  \(u\)：失業率
+\end{itemize}
+
+この負の相関関係は、短期的にはインフレ率を高めれば失業率を低減できるという政策的トレードオフとして解釈されました。しかし、見かけ上の相関関係が存在するからといって、政策当局が安定的に利用できる因果関係が成り立っているとは限りません。
+
+\subsection{期待修正型フィリップス曲線}\label{ux671fux5f85ux4feeux6b63ux578bux30d5ux30a3ux30eaux30c3ux30d7ux30b9ux66f2ux7dda}
+
+フリードマン（1968）とフェルプス（1967）は、賃金や価格の決定において人々の「インフレ期待」が決定的な役割を果たすことを強調し、以下の期待修正型フィリップス曲線を提唱しました。
+
+\Needspace{6\baselineskip}
+
+\textbf{期待修正型フィリップス曲線：} \[
+\pi_t = \pi_t^e - \beta_{PC}(u_t - u_t^n)+\nu_t
+\]
+
+ここで、各記号は以下を表します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(\pi_t\)：物価インフレ率
+\item
+  \(\pi_t^e\)：期待インフレ率
+\item
+  \(u_t^n\)：自然失業率（構造的要因で決まる長期的な失業率）
+\item
+  \(\beta_{PC} > 0\)：フィリップス曲線の傾き（失業率がインフレに与える感応度）
+\item
+  \(\nu_t\)：原油価格の高騰などの外生的な供給ショック
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{理論的な重要な含意：}
+
+\begin{itemize}
+\tightlist
+\item
+  期待インフレ率と供給ショックを一定（所与）とすれば、短期的にはインフレ率と失業率の間にトレードオフが存在する
+\item
+  供給ショックがなく、現実のインフレ率と人々の期待インフレ率が一致する長期定常状態では、失業率は自然失業率に一致する
+\item
+  したがって、長期フィリップス曲線は自然失業率の水準で垂直な直線となる
+\end{itemize}
+
+期待インフレ率 \(\pi_t^e\)
+が上昇すると、短期フィリップス曲線は上方にシフトします。同じ失業率であっても、人々のインフレ期待が高ければ、実際のインフレ率もその分だけ高くなります。また、原油価格急騰のようなインフレ押し上げ型の供給ショック（\(\nu_t>0\)）が発生した場合も、短期フィリップス曲線を上方にシフトさせます。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/phillips_curve_expectations.pdf}
+
+}
+
+\caption{\label{fig-phillips}期待修正型フィリップス曲線：短期フィリップス曲線は右下がりだが、期待インフレ率が上昇すると上方にシフトする。長期では自然水準で垂直になり、後続回ではこの直観を自然産出量と需給ギャップで読み替える。}
+
+\end{figure}%
+
+図~\ref{fig-phillips}
+は、期待インフレ率の上昇によって短期フィリップス曲線が上方へシフトする様子を描いています。インフレ押し上げ型の供給ショックが発生した場合も、同様に上方へシフトします。
+
+\subsection{後続講義での読み替え：失業率から需給ギャップへ}\label{ux5f8cux7d9aux8b1bux7fa9ux3067ux306eux8aadux307fux66ffux3048ux5931ux696dux7387ux304bux3089ux9700ux7d66ux30aeux30e3ux30c3ux30d7ux3078}
+
+本講義において、自然失業率（\(u_t^n\)）という概念は、第1回で長期のアンカー（基準値）を示すために導入するにとどめます。第2回以降の現代的な動学モデルでは、失業率そのものは明示的に扱わず、\textbf{自然産出量}と\textbf{需給ギャップ}を中心に議論を進めます。
+
+失業率と産出量の関係は、直観的には次のように理解できます：
+
+\begin{itemize}
+\tightlist
+\item
+  \(u_t>u_t^n\)
+  のとき：雇用が自然水準より低く、実際の産出量は自然産出量を下回る（需給ギャップはマイナス）
+\item
+  \(u_t<u_t^n\)
+  のとき：雇用が自然水準より高く、実際の産出量は自然産出量を上回る（需給ギャップはプラス）
+\end{itemize}
+
+この実証的な関係を、オークン法則（Okun's
+law）に基づいて次のように線形近似します： \[
+u_t-u_t^n \simeq -\eta x_t,\qquad x_t\equiv y_t-y_t^f,\qquad \eta>0
+\]
+これを代入すると、期待修正型フィリップス曲線は産出量ベースで次のように書き換えられます：
+\[
+\pi_t
+\simeq
+\pi_t^e+\kappa_u x_t+\nu_t
+\] ここで \(\kappa_u=\beta_{PC}\eta>0\) です。なお、本講義では大文字の
+\(Y\) を産出の水準値、小文字の \(y_t\) および \(y_t^f\)
+を定常状態からの対数乖離率（パーセント偏差）として厳密に区別して用います。
+
+この式が意味する決定的な直観は、「インフレ圧力を左右する本質的な要因は、失業率そのものの水準ではなく、産出量が自然な実力値からどれだけ乖離しているか（需給ギャップ）」という点です。第7回以降で登場する\textbf{ニューケインジアン・フィリップス曲線（NKPC）}
+\[
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa x_t
+\]
+は、供給ショックを省略した標準的な設定において、この静学的な直観を、将来への合理的期待と企業の最適な価格改定行動を組み込んだミクロ動学モデルから厳密に導き直したものにほかなりません。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\Needspace{6\baselineskip}
+
+\section{総需要管理政策}\label{ux7dcfux9700ux8981ux7ba1ux7406ux653fux7b56}
+
+\subsection{財政政策}\label{ux8ca1ux653fux653fux7b56}
+
+\textbf{拡張的財政政策の主な手段：}
+
+\begin{itemize}
+\tightlist
+\item
+  政府支出の拡大：\(G \uparrow\)
+\item
+  減税の実施：\(T \downarrow\)
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{IS-LMモデルにおける波及プロセス：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  政府支出の拡大や減税により、計画支出が増加してIS曲線が右方へシフトする
+\item
+  財市場の需要拡大に伴って産出量が増加し、取引のための貨幣需要が増加することで利子率が上昇する
+\item
+  利子率の上昇により、借入コストが増大した民間企業の設備投資が抑制される（\textbf{クラウディング・アウト効果}）
+\end{enumerate}
+
+\Needspace{6\baselineskip}
+
+\textbf{財政乗数：} \[
+\text{財政乗数} = \frac{\Delta Y}{\Delta G}
+\]
+
+単純なケインジアン・クロスでは、利子率を一定とみなすため財政乗数は
+\(1/(1-c)\)
+と計算されます。これに対し、IS-LMモデルでは政府支出の拡大が利子率を引き上げ、民間投資の一部を締め出してしまう（クラウディング・アウト）ため、実際の乗数の大きさは限界消費性向だけでなく、投資の利子感応度や貨幣需要の利子感応度、さらには中央銀行の金融政策の対応姿勢にも依存します。
+
+\subsection{金融政策}\label{ux91d1ux878dux653fux7b56}
+
+伝統的なIS-LMモデルの枠組みでは、中央銀行が名目貨幣供給量を直接操作すると想定します。この設定における拡張的金融政策の波及プロセスは以下の通りです：
+
+\begin{itemize}
+\tightlist
+\item
+  貨幣供給量の増加：\(M \uparrow\)
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{IS-LMモデルにおける波及プロセス：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  貨幣市場において実質貨幣供給が増加し、LM曲線が右方へシフトする
+\item
+  貨幣の超過供給を解消するために利子率が低下し、産出量が増加する
+\item
+  利子率の低下により民間企業の設備投資が刺激され、総需要が拡大する
+\end{enumerate}
+
+現代の中央銀行は、通常、貨幣供給量そのものではなく短期名目金利（政策金利）を直接の操作目標としています。中央銀行が目標金利を引き下げ、その水準を維持するように必要な貨幣を市場に供給するオペレーションも、IS-LM図上ではLM曲線の右方シフト（利子率の低下と産出量の拡大）として解釈できます。第7回以降のモデルでは、インフレ率や需給ギャップの変動に応じて政策金利を設定するルール（テイラー・ルール）として、この金利操作を明示的に定式化します。
+
+\Needspace{6\baselineskip}
+
+\subsection{政策の有効性}\label{ux653fux7b56ux306eux6709ux52b9ux6027}
+
+\textbf{古典派の二分法（長期的な視点）：}
+
+\begin{itemize}
+\tightlist
+\item
+  長期においては、名目変数（貨幣供給量など）の変動は実質変数（産出量や雇用量など）に影響を与えず、物価水準のみを比例的に変動させる（貨幣の中立性）
+\item
+  金融政策は長期的には物価水準の決定要因にすぎない
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{ケインジアンの見解（短期的な視点）：}
+
+\begin{itemize}
+\tightlist
+\item
+  短期においては、価格や名目賃金の硬直性が存在するため、総需要管理政策が実質産出量や雇用に対して明確な影響を与える
+\item
+  特に景気後退期や需要不足の局面では、積極的な財政政策や金融政策が景気回復に有効である
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{ルーカス批判とミクロ的基礎づけ}\label{ux30ebux30fcux30abux30b9ux6279ux5224ux3068ux30dfux30afux30edux7684ux57faux790eux3065ux3051}
+
+\subsection{ルーカス批判（1976）}\label{ux30ebux30fcux30abux30b9ux6279ux52241976}
+
+ロバート・ルーカスは、従来のマクロ計量経済モデル（IS-LMモデルなどを基礎とする大規模モデル）を用いた政策評価には、根本的な論理的欠陥があることを指摘しました。
+
+\Needspace{6\baselineskip}
+
+\textbf{ルーカス批判の核心：}
+
+伝統的なマクロ経済モデルで用いられていたパラメータ（例えば、消費関数の限界消費性向や投資関数の利子感応度など）は、過去の特定の政策レジームのもとで推定された「見かけ上の統計的関係（誘導形パラメータ）」にすぎません。しかし、政策ルールが根本的に変更されると、合理的な経済主体（家計や企業）はその新たなルールに適応して自身の期待形成や行動パターンを変化させます。その結果、過去のデータから得られたパラメータ自体が変化してしまうのです。
+
+したがって、\textbf{「過去の政策レジームのもとで推定された誘導形の関係式を、新しい政策ルールの評価にそのまま外挿することはできない」}というのがルーカス批判の結論です。適切な政策評価を行うためには、政策が変更されたときに人々の期待や意思決定がどう変わるのかというメカニズムを、あらかじめモデルの中に明示的に組み込んでおく必要があります。
+
+\Needspace{8\baselineskip}
+
+\textbf{具体例：フィリップス曲線}
+
+1960年代には、フィリップス曲線が示す負の相関を、政策当局がインフレ率と失業率の組み合わせを自由に選べる安定的なトレードオフとみなす考え方が主流でした。
+
+しかし、1970年代に入ると\textbf{スタグフレーション}（景気停滞・高失業率とインフレの同時進行）が発生し、従来のフィリップス曲線の関係は崩壊しました。
+
+\Needspace{6\baselineskip}
+
+\textbf{関係が不安定になった主な要因：}
+
+\begin{itemize}
+\tightlist
+\item
+  オイルショックをはじめとする負の供給ショックが発生し、生産や雇用を抑制する一方で物価を大きく押し上げた
+\item
+  高インフレが定着するにつれて人々の期待インフレ率が上昇し、短期フィリップス曲線そのものが上方へ大きくシフトした
+\item
+  各国の金融・財政政策の対応姿勢も、インフレ率と実体経済の動学的な調整経路に大きな影響を与えた
+\end{itemize}
+
+このように、スタグフレーションの発生は期待インフレ率の上昇だけで一面的に説明できるものではなく、供給ショック、政策当局の対応、そして民間主体の期待形成という各要素を峻別して分析する必要があります。
+
+\subsection{ミクロ的基礎づけの必要性}\label{ux30dfux30afux30edux7684ux57faux790eux3065ux3051ux306eux5fc5ux8981ux6027}
+
+ルーカス批判を経て、政策評価を目的とする現代マクロ経済学では、次の3つの要素がモデル構築の柱となりました：
+
+\begingroup
+\widowpenalty=10000
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ミクロ的基礎づけ}：家計の効用最大化や企業の利潤最大化といった、経済主体の最適化行動からモデルを導出すること
+\item
+  \textbf{合理的期待}：経済主体が利用可能なすべての情報を用いて、将来の変数を偏りなく予測すると想定すること
+\item
+  \textbf{ディープ・パラメータ（構造パラメータ）}：消費者の選好や生産技術など、政策ルールが変更されても影響を受けない基礎的なパラメータに基づいてモデルを構成すること
+\end{enumerate}
+
+\par
+\endgroup
+
+\Needspace{6\baselineskip}
+
+\textbf{ディープ・パラメータの具体例：}
+
+\begin{itemize}
+\tightlist
+\item
+  家計の時間選好率（主観的割引因子）
+\item
+  相対的リスク回避度（異時点間の消費代替弾力性の逆数）
+\item
+  企業の生産関数における技術パラメータ（資本分配率など）
+\end{itemize}
+
+これらは、従来の消費関数やフィリップス曲線に見られた誘導形パラメータに比べ、政策変更に対しても安定していると考えられます。ただし、実際の政策分析においては、想定した選好や技術の関数形、および推定されたパラメータ値が現実に対して十分に安定的であるかを常に慎重に検証する必要があります。
+
+\subsection{政策評価の新しいアプローチ}\label{ux653fux7b56ux8a55ux4fa1ux306eux65b0ux3057ux3044ux30a2ux30d7ux30edux30fcux30c1}
+
+ルーカス批判を受け、マクロ経済学における政策評価は次のような構造的アプローチへと進化しました：
+
+\Needspace{6\baselineskip}
+
+\textbf{構造的アプローチの手順：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ミクロ的基礎に基づき、最適化行動と合理的期待を組み込んだ動学的一般均衡（DSGE）モデルを構築する
+\item
+  データを用いてディープ・パラメータを特定（キャリブレーションまたはベイズ推定）する
+\item
+  モデルの中で異なる政策ルール（例えば異なる金利設定ルール）を設定し、経済の動学的な反応をシミュレーションする
+\item
+  家計の効用関数に基づいて、各政策がもたらす経済厚生（社会的余剰・厚生水準）の優劣を客観的に評価する
+\end{enumerate}
+
+この構造的アプローチを用いることで、政策ルールの変更に対して人々の期待や意思決定がどのように適応するかを明示的に捉えた上で、信憑性の高い政策提言を行うことが可能になります。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{lecture01_files/mediabag/figures/lecture01/lucas_critique_flow.pdf}
+
+}
+
+\caption{\label{fig-lucas}ルーカス批判から構造モデルへ：政策ルールが変わると期待形成と行動が変わり、過去に推定した経験的関係は不安定になる。}
+
+\end{figure}%
+
+図~\ref{fig-lucas}
+は、政策ルールの変更が期待形成と行動を変え、過去に推定した関係を不安定にする経路をまとめています。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{現代マクロ経済学への展開}\label{ux73feux4ee3ux30deux30afux30edux7d4cux6e08ux5b66ux3078ux306eux5c55ux958b}
+
+\subsection{新しいマクロ経済学の潮流}\label{ux65b0ux3057ux3044ux30deux30afux30edux7d4cux6e08ux5b66ux306eux6f6eux6d41}
+
+ルーカス批判を契機として、マクロ経済学はミクロ的基礎づけと動学的一般均衡を重視する方向へと大きく舵を切りました。その後の発展の中で、主に以下の2つの潮流が生まれました。
+
+\Needspace{6\baselineskip}
+
+\subsubsection{リアル・ビジネス・サイクル（RBC）理論}\label{ux30eaux30a2ux30ebux30d3ux30b8ux30cdux30b9ux30b5ux30a4ux30afux30ebrbcux7406ux8ad6}
+
+\textbf{主な特徴：}
+
+\begin{itemize}
+\tightlist
+\item
+  完全競争市場、および価格と名目賃金の完全な伸縮性を仮定
+\item
+  景気循環の主因を、外生的な技術ショック（全要素生産性の変動）に求める
+\item
+  家計と企業の最適化行動（ミクロ的基礎）に基づく動学的一般均衡モデル
+\end{itemize}
+
+\Needspace{10\baselineskip}
+
+\textbf{理論的な限界：}
+
+\begin{itemize}
+\tightlist
+\item
+  標準的なRBCモデルには名目価格や名目賃金の硬直性が存在しないため、金融政策のショックが実体経済（産出量や雇用）に与える影響（実物効果）を説明できない
+\item
+  技術ショックのみを原動力として、現実の景気循環に見られる持続性や、雇用の大きな変動幅といった観察事実をすべて整合的に説明することには限界がある
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\subsubsection{ニューケインジアン・マクロ経済学}\label{ux30cbux30e5ux30fcux30b1ux30a4ux30f3ux30b8ux30a2ux30f3ux30deux30afux30edux7d4cux6e08ux5b66}
+
+\textbf{主な特徴：}
+
+\begin{itemize}
+\tightlist
+\item
+  ミクロ的基礎づけに基づく一般均衡体系を維持しつつ、価格改定や賃金改定に伴う硬直性（摩擦）を導入
+\item
+  企業が価格支配力を持つ独占的競争市場を仮定
+\item
+  名目硬直性の存在により、金融政策が短期的には実体経済に対して有意な影響を及ぼすメカニズムを理論的に解明
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{主要なモデル構造：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{3方程式ニューケインジアン・モデル}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ニューケインジアン・フィリップス曲線（インフレ率の決定方程式）
+  \item
+    動学的IS曲線（産出量・需給ギャップの決定方程式）
+  \item
+    テイラー・ルール（中央銀行の政策金利設定ルール）
+  \end{itemize}
+\item
+  \textbf{New Keynesian Cross}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    計画支出曲線と45度線分析を、現代的な一般均衡モデルの枠組みで再構築
+  \item
+    流動性制約に直面する家計の存在を通じた所得フィードバック効果の解明
+  \end{itemize}
+\end{itemize}
+
+\subsection{動学的確率的一般均衡（DSGE）モデル}\label{ux52d5ux5b66ux7684ux78baux7387ux7684ux4e00ux822cux5747ux8861dsgeux30e2ux30c7ux30eb}
+
+DSGE（Dynamic Stochastic General
+Equilibrium）モデルは、現代のマクロ経済政策分析において主要中央銀行や国際機関で標準的に用いられている代表的な構造分析フレームワークです。なお、実務や実証研究においては、目的に応じてVAR（ベクトル自己回帰）、ローカル・プロジェクション、半構造モデルなども柔軟に併用されます。
+
+\Needspace{8\baselineskip}
+
+\textbf{DSGEモデルの4つの特徴：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ミクロ的基礎づけ（Microfoundations）}：家計の生涯効用最大化や企業の利潤最大化という最適化行動からモデルを導出する
+\item
+  \textbf{動学的（Dynamic）}：現在だけでなく将来の期待や異時点間の資源配分を明示的に考慮する
+\item
+  \textbf{確率的（Stochastic）}：経済に生じる予期せぬショック（外生的な不確実性）をモデル内に導入する
+\item
+  \textbf{一般均衡（General
+  Equilibrium）}：財市場、労働市場、金融市場など、すべての市場の相互作用と同時均衡を考慮する
+\end{enumerate}
+
+\Needspace{6\baselineskip}
+
+\textbf{DSGEモデルの基本的な構成要素：}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{家計}：生涯効用の最大化（消費と余暇の選択、および資産の異時点間配分）
+\item
+  \textbf{企業}：利潤の最大化（労働や資本などの生産要素の投入決定、および財の価格設定）
+\item
+  \textbf{中央銀行}：政策目標に基づく金融政策ルールの運用（テイラー・ルールによる政策金利の設定）
+\item
+  \textbf{政府}：予算制約を満たす財政政策の運用（政府支出の決定、および課税）
+\item
+  \textbf{外生ショック}：技術ショック、選好ショック、金融政策ショック、財政ショックなど
+\end{itemize}
+
+\subsection{本講義の展開}\label{ux672cux8b1bux7fa9ux306eux5c55ux958b}
+
+本講義では、学部レベルの直観を出発点としつつ、以下のステップに沿って現代マクロ経済学の基幹モデルを体系的に学んでいきます：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{時系列分析と対数線形近似}（第2回）：DSGEモデルの動学的な振る舞いを分析・数値計算するための必須の数学的ツールを習得する
+\item
+  \textbf{動学的最適化と資産価格付け}（第3回）：ラグランジュ法、ダイナミック・プログラミング（ベルマン方程式）、確率的割引因子（SDF）の基礎を固める
+\item
+  \textbf{資本なしRBCモデル}（第4回）：完全競争と伸縮的価格のもとで、技術ショックが自然産出量や自然利子率をどう動かすか、ベンチマークとなる基準を確認する
+\item
+  \textbf{政府部門の導入}（第5回）：政府支出、公有債務、税制が、資本のない基本モデルの資源配分や利子率に与える影響を整理する
+\item
+  \textbf{独占的競争の導入}（第6回）：Dixit--Stiglitz型の中間財市場と価格マークアップを導入し、不完全競争市場を定式化する
+\item
+  \textbf{名目価格硬直性の導入}（第7回）：Rotemberg型の価格調整費用モデルからニューケインジアン・フィリップス曲線を導き、基幹となる3本のNK方程式を確立する
+\item
+  \textbf{RANKモデル}（第8回）：第3回から第7回までに構築した要素を統合し、代表的家計（Representative
+  Agent）のもとで金融政策ショック・技術ショック・財政ショックの効果を比較する
+\item
+  \textbf{最適金融政策と政策ルールの評価}（第9回）：裁量政策とコミットメント政策の違い、およびテイラー・ルールの望ましさと厚生評価を学ぶ
+\item
+  \textbf{価格・賃金の両硬直性をもつRANKモデル}（第10回）：価格硬直性に加えて名目賃金の硬直性を導入し、金融政策の伝達メカニズムがどう深化するかを確認する
+\item
+  \textbf{価格硬直性をもつTANKモデル}（第11回）：流動性制約家計（Hand-to-Mouth家計）と資産保有家計をモデル化し、家計の異質性が総需要やIS曲線の傾きをどう変えるかを解明する
+\item
+  \textbf{New Keynesian Cross と
+  TANK}（第12回）：学部で学んだケインジアン・クロスの45度線分析を、TANKモデルにおける所得フィードバックとして再解釈し、講義全体の総括を行う
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{まとめと第2回への接続}\label{ux307eux3068ux3081ux3068ux7b2c2ux56deux3078ux306eux63a5ux7d9a}
+
+\subsection{本日のポイント}\label{ux672cux65e5ux306eux30ddux30a4ux30f3ux30c8}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ケインジアン・クロス}は、計画支出曲線と45度線の交点として短期の均衡産出量を決定し、限界消費性向が乗数効果の大きさを左右することを示す
+\item
+  \textbf{IS-LMモデル}は財市場と貨幣市場の同時均衡を視覚的に分析できる強力なツールだが、ミクロ的基礎づけや人々のフォワード・ルッキングな期待が考慮されていない
+\item
+  \textbf{フィリップス曲線}は短期的なインフレ圧力を捉える関係式である。後続回では失業率ではなく、自然産出量からの乖離である需給ギャップを用いて同じ直観を現代的に再構成する
+\item
+  \textbf{総需要管理政策}は短期的な景気安定化には有効であるものの、長期的な産出量は供給側の実力値（自然産出量）によって制約される
+\item
+  \textbf{ルーカス批判}は、政策ルールの変更が経済主体の期待や意思決定を変えることを指摘し、政策変更に対しても安定的な構造パラメータ（ディープ・パラメータ）に基づくモデル構築の必要性を示した
+\item
+  \textbf{現代マクロ経済学}では、最適化行動と合理的期待を組み込んだDSGEモデルが、構造的な政策分析を行うための標準的な枠組みとなっている
+\end{enumerate}
+
+\subsection{次回予告}\label{ux6b21ux56deux4e88ux544a}
+
+次回（第2回）は、動学的マクロ経済モデルを解析・数値シミュレーションするために不可欠となる以下の数学的ツールを学びます：
+
+\begin{itemize}
+\tightlist
+\item
+  時系列分析の基礎（差分方程式、ARモデル、インパルス応答関数）
+\item
+  定常状態のまわりでの対数線形近似（Log-linearization）の手法
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\clearpage
+
+\Needspace{6\baselineskip}
+
+\section{参考文献}\label{ux53c2ux8003ux6587ux732e}
+
+\textbf{基本参考文献}
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、本講義で扱った論点を復習・深化させるための標準的な文献です。
+
+\begin{itemize}
+\tightlist
+\item
+  Blanchard, Olivier (2017)
+  \href{https://www.pearson.com/en-us/subject-catalog/p/Blanchard-Macroeconomics-7th-Edition/P200000007659/9780133780581}{\emph{Macroeconomics}
+  (7th ed.)}. Pearson.
+  学部マクロの全体像を復習するための標準的な教科書。
+\item
+  Mankiw, N. Gregory (2019) \emph{Macroeconomics} (10th ed.). Worth.
+  ケインジアン・クロス、IS-LM、AD-ASの直観的理解を確認するための定番テキスト。
+\item
+  齊藤誠・岩本康志・太田聰一・柴田章久 (2016)
+  \href{https://www.yuhikaku.co.jp/books/detail/9784641053847}{『マクロ経済学（新版）』}有斐閣。日本語で学部レベルの標準的理論を厳密に確認するための良書。
+\end{itemize}
+
+\Needspace{6\baselineskip}
+
+\textbf{発展的文献}
+
+\begin{itemize}
+\tightlist
+\item
+  Phillips, A. W. (1958) ``The Relation Between Unemployment and the
+  Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957.''
+  \emph{Economica}, 25(100), 283-299.
+  \href{https://doi.org/10.1111/j.1468-0335.1958.tb00003.x}{doi}
+\item
+  Phelps, Edmund S. (1967) ``Phillips Curves, Expectations of Inflation
+  and Optimal Unemployment over Time.'' \emph{Economica}, 34(135),
+  254-281. \href{https://doi.org/10.2307/2552025}{doi}
+\item
+  Friedman, Milton (1968) ``The Role of Monetary Policy.''
+  \emph{American Economic Review}, 58(1), 1-17.
+\item
+  Lucas, Robert E., Jr.~(1976) ``Econometric Policy Evaluation: A
+  Critique.'' \emph{Carnegie-Rochester Conference Series on Public
+  Policy}, 1, 19-46.
+  \href{https://doi.org/10.1016/S0167-2231(76)80003-6}{doi}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{演習問題}\label{ux6f14ux7fd2ux554fux984c}
+
+\subsection{基本問題}\label{ux57faux672cux554fux984c}
+
+\subsubsection{問題1 {[}Core{]}
+{[}Derivation{]}：ケインジアン・クロス}\label{ux554fux984c1-core-derivationux30b1ux30a4ux30f3ux30b8ux30a2ux30f3ux30afux30edux30b9}
+
+消費関数が \(C=C_0+c(Y-T)\)、投資が外生的に \(\bar{I}\)、政府支出が
+\(G\) で与えられる経済を考えます。財市場の均衡条件 \(Y=C+\bar{I}+G\)
+から均衡産出量を求め、政府支出乗数と租税乗数をそれぞれ導出してください。また、限界消費性向
+\(c\) が大きいほど乗数が大きくなる経済的理由を直観的に説明してください。
+
+\subsubsection{問題2
+{[}Core{]}：IS-LMモデル}\label{ux554fux984c2-coreis-lmux30e2ux30c7ux30eb}
+
+拡張的財政政策（政府支出の拡大）が、IS-LMモデルにおける均衡産出量と利子率に与える影響を図示し、その波及プロセスを論理的に説明してください。また、「クラウディング・アウト」とはどのような現象であり、なぜ発生するのかを説明してください。
+
+\subsubsection{問題3 {[}Core{]}
+{[}Derivation{]}：フィリップス曲線と需給ギャップ}\label{ux554fux984c3-core-derivationux30d5ux30a3ux30eaux30c3ux30d7ux30b9ux66f2ux7ddaux3068ux9700ux7d66ux30aeux30e3ux30c3ux30d7}
+
+供給ショックが存在しない場合の期待修正型フィリップス曲線
+\(\pi_t=\pi_t^e-\beta_{PC}(u_t-u_t^n)\) と、オークン法則の線形近似
+\(u_t-u_t^n\simeq-\eta x_t\) を用いて、インフレ率を需給ギャップ
+\(x_t=y_t-y_t^f\)
+の関数として書き換えてください。その上で、大文字の水準値 \(Y\)
+ではなく、産出の対数定常状態乖離から定義した需給ギャップを後続回で中心的に用いる理由を説明してください。
+
+\subsection{発展問題}\label{ux767aux5c55ux554fux984c}
+
+\subsubsection{問題4 {[}Research
+extension{]}：ルーカス批判}\label{ux554fux984c4-research-extensionux30ebux30fcux30abux30b9ux6279ux5224}
+
+ルーカス批判とはどのような指摘であるかを説明し、それがその後のマクロ経済モデルの構築（ミクロ的基礎づけやDSGEモデルの発展）にどのような変革をもたらしたかを論じてください。
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{補論：記号一覧}\label{ux88dcux8ad6ux8a18ux53f7ux4e00ux89a7}
+
+\subsection{第1回で用いる主な記号}\label{ux7b2c1ux56deux3067ux7528ux3044ux308bux4e3bux306aux8a18ux53f7}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+記号 & 意味 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(Y\) & 産出量（実質GDP水準値） \\
+\(PE\) & 計画支出（総需要） \\
+\(C\) & 消費支出 \\
+\(I\) & 民間投資支出 \\
+\(G\) & 政府支出 \\
+\(T\) & 租税（一括税） \\
+\(c\) & 限界消費性向 \\
+\(r\) & 実質利子率 \\
+\(i\) & 名目利子率 \\
+\(M\) & 名目貨幣供給量 \\
+\(P\) & 物価水準 \\
+\(\pi^w\) & 名目賃金上昇率（オリジナルのフィリップス曲線） \\
+\(\pi_t\) & 物価インフレ率 \\
+\(\pi_t^e\) & 期待インフレ率 \\
+\(u_t\) & 失業率 \\
+\(u_t^n\) & 自然失業率（第1回のフィリップス曲線でのみ基準として使用） \\
+\(\nu_t\) & インフレ押し上げ型の外生供給ショック \\
+\(\bar{Y}\) & 自然産出量（潜在産出量水準値） \\
+\(y_t\) & 実際の産出量の対数定常状態乖離 \\
+\(y_t^f\) & 自然産出量の対数定常状態乖離 \\
+\(x_t=y_t-y_t^f\) & 需給ギャップ（産出ギャップ） \\
+\end{longtable}
+}
+
+\clearpage
+
+\subsection{全講義共通の notation
+concordance（参照用）}\label{ux5168ux8b1bux7fa9ux5171ux901aux306e-notation-concordanceux53c2ux7167ux7528}
+
+この対応表は、全12回で繰り返し使う記号と、講義間で混同しやすい記号を参照用にまとめたものです。すべての記号を網羅する辞書ではありません。各回でより具体的な定義が示されている場合は、その回の定義を優先してください。
+
+\subsubsection{変数・ギャップ}\label{ux5909ux6570ux30aeux30e3ux30c3ux30d7}
+
+\begingroup
+\small
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2300}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3500}}@{}}
+\caption{講義横断的に使う変数とギャップ。}\label{tbl-notation-concordance-variables}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+主な使用回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+意味
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+混同回避・関係
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+主な使用回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+意味
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+混同回避・関係
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(Y_t,C_t,N_t,G_t,\ldots\) & 2--12 &
+産出、消費、労働、政府購入などの\textbf{水準} &
+原則として大文字は水準を表す。 \\
+\(y_t,c_t,n_t,\ldots\) & 2--12 &
+対応する水準変数の定常状態からの対数乖離 & 小文字でも \(g_t,d_t,z_t\)
+は下記のとおり例外である。 \\
+\(y_t^f\) & 4--12 & 柔軟価格・所与の歪みのもとでの自然産出量 &
+自然配分は必ずしも効率的配分ではない。 \\
+\(y_t^e\) & 9 & 厚生上の効率的産出量 &
+是正補助金で歪みを除き、コストプッシュ・ウェッジがなければ
+\(y_t^e=y_t^f\)。 \\
+\(x_t\equiv y_t-y_t^f\) & 7--11 & 自然産出量から測る需給ギャップ &
+第7回以降の基本的なギャップ。 \\
+\(x_t^e\equiv y_t-y_t^e\) & 9 & 効率的産出量から測る厚生上の産出ギャップ
+& 第9回のロス関数に入る。 \\
+\(\Delta_t^{ef}\equiv y_t^e-y_t^f\) & 9 & 効率的産出量と自然産出量の差 &
+\(x_t=x_t^e+\Delta_t^{ef}\)。ウェッジなしでは \(x_t=x_t^e\)。 \\
+\(g_t\equiv(G_t-G)/Y\) & 5, 8--9 & 定常産出で規格化した政府購入偏差 &
+\(G>0\) でも対数乖離ではない。 \\
+\(d_t,z_t\) & 10--12 & 定常消費で規格化した純配当と Type H
+一人当たり移転（\(z_t\) は11--12回） &
+定常値がゼロなので、対数乖離ではない。 \\
+\(\sigma_t^c\equiv c_t^S-c_t^H\) & 11--12 & Type S と Type H の消費格差
+& EIS を表す文献上の \(\sigma\) とは異なる。 \\
+\end{longtable}
+
+\endgroup
+
+\clearpage
+
+\subsubsection{利子率・構造パラメータ}\label{ux5229ux5b50ux7387ux69cbux9020ux30d1ux30e9ux30e1ux30fcux30bf}
+
+\begingroup
+\small
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2300}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3500}}@{}}
+\caption{講義横断的に使う利子率と構造パラメータ。}\label{tbl-notation-concordance-parameters}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+主な使用回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+意味
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+混同回避・関係
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+主な使用回
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+意味
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+混同回避・関係
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(R_t,R_t^f,R_{t+1}^j\) & 3--4 &
+粗実質収益率・無リスク粗実質収益率・資産 \(j\) の粗収益率 & 第3回の
+\(R_t^f\) は無リスク収益率。後続回の \(r_t^f\) は自然実質利子率。 \\
+\(r_t^N\) & 7--12 & 名目利子率の対数定常状態乖離 & 上付き \(N\) は
+nominal を表す。 \\
+\(r_t\equiv r_t^N-\mathbb E_t\pi_{t+1}\) & 7--12 & 事前実質利子率 &
+第12回でもまず実質利子率そのものを表す。 \\
+\(r_t^{f},r_t^{f,R},r_t^{f,T}\) & 4--12 & 自然実質利子率 & \(R,T\) は
+RANK、TANK のモデル別自然利子率。 \\
+\(\widetilde r_t^j\equiv r_t-r_t^{f,j}\) & 12 & モデル \(j\in\{R,T\}\)
+の実質利子率ギャップ & 比較では
+\(\widetilde r_t^R=\widetilde r_t^T\equiv\widetilde r_t\)。 \\
+\(\eta,\eta_p,\eta_w\) & 7--10 & Rotemberg 型調整費用パラメータ & 下付き
+\(p,w\) は価格、賃金を区別する。 \\
+\(\psi,\psi_p,\psi_w\) & 6--10 & 財または労働タイプ間の代替弾力性 &
+第10回では価格側と賃金側を下付きで区別する。 \\
+\(\phi\) & 7--11 & テイラー・ルールのインフレ反応係数 & 逆 Frisch 弾力性
+\(\varphi\) とは別記号。 \\
+\(\varphi\) & 4--12 & 労働供給弾力性の逆数 & 政策係数 \(\phi\)
+とは別記号。 \\
+\(\kappa_p,\kappa_w,\kappa_x\) & 7--11 & 価格・賃金
+NKフィリップス曲線の傾き &
+原始的な調整費用や弾力性から導かれる縮約係数。 \\
+\(\omega_p,\omega_w\) & 9--10 & 価格・賃金インフレ安定化の厚生上の重み &
+第12回の \(\omega_R,\omega_T\) とは意味が異なる。 \\
+\(\omega_R,\omega_T\) & 12 & RANK・TANK の PE 曲線の所得係数 &
+文献で「集計MPC」と呼ばれることがある。 \\
+\(\chi\) & 11--12 & Type H 所得フィードバックの合成係数 & 第12回では
+\(\chi=1+\varphi(1-\tau_D/\lambda)\)。 \\
+\(\rho\) と \(p\) & 4--12 & \(\rho\) はショックの持続性、\(p\)
+は第12回の期待閉鎖係数 & 第12回の \(p\)
+は構造的ショック過程の持続性ではない。 \\
+\end{longtable}
+
+\endgroup
+
+
+
+
+\end{document}

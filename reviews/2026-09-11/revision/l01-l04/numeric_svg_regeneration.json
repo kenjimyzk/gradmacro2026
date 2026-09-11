@@ -1,0 +1,14 @@
+{
+  "ar1": {
+    "curves": 3,
+    "points_per_curve": 13,
+    "decimal_places": 6
+  },
+  "is_lm": {
+    "intersection": [
+      426.75401389236345,
+      255.2548204380602
+    ],
+    "annotations_generated_from_intersection": true
+  }
+}

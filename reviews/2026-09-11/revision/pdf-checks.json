@@ -1,0 +1,6040 @@
+{
+  "solution": {
+    "pages": 43,
+    "pdf_sha256": "e36c7281b3b453753306a2c0b59655950df9f12e9d32b3e12ba6fb7a2d2342b8",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 889,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          159.72,
+          520.66,
+          783.06
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 1724,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.33,
+          520.66,
+          783.06
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 1617,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.33,
+          520.66,
+          783.06
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 1735,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.33,
+          520.66,
+          783.06
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 275,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          144.37,
+          519.58,
+          783.06
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 565,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.84,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 233,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.73,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 626,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.84,
+          524.62,
+          783.06
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 904,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 387,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.73,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 574,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.43,
+          143.84,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 564,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 309,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 617,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.84,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 752,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 737,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.84,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 562,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.71,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 623,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 592,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.76,
+          519.58,
+          783.06
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 718,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 404,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.73,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 644,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.83,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 661,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 600,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.84,
+          519.58,
+          783.06
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 481,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 222,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 699,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.76,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 800,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 712,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.58,
+          783.06
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 360,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 566,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 32,
+        "chars": 757,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.73,
+          519.58,
+          783.06
+        ]
+      },
+      {
+        "page": 33,
+        "chars": 666,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.16,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 34,
+        "chars": 736,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.38,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 35,
+        "chars": 201,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.38,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 36,
+        "chars": 630,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.73,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 37,
+        "chars": 591,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 38,
+        "chars": 693,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          115.87,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 39,
+        "chars": 476,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          524.61,
+          783.06
+        ]
+      },
+      {
+        "page": 40,
+        "chars": 548,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          143.71,
+          523.65,
+          783.06
+        ]
+      },
+      {
+        "page": 41,
+        "chars": 664,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.64,
+          519.57,
+          783.06
+        ]
+      },
+      {
+        "page": 42,
+        "chars": 817,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.58,
+          524.6,
+          783.06
+        ]
+      },
+      {
+        "page": 43,
+        "chars": 552,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.71,
+          141.72,
+          524.61,
+          783.06
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/solution/contact-001-006.jpg",
+      "visual/solution/contact-007-012.jpg",
+      "visual/solution/contact-013-018.jpg",
+      "visual/solution/contact-019-024.jpg",
+      "visual/solution/contact-025-030.jpg",
+      "visual/solution/contact-031-036.jpg",
+      "visual/solution/contact-037-042.jpg",
+      "visual/solution/contact-043-043.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "VISUAL-solution.md"
+  },
+  "lecture06": {
+    "pages": 21,
+    "pdf_sha256": "cb05b50e0dbd424f74ffebc3e5a62f992745d1b8f49fcff1b568643920c35c5b",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 162,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 981,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 631,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 577,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 448,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.44,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 688,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 684,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 635,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 844,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          126.53,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 729,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 881,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          121.68,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 804,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 610,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 667,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 601,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.87,
+          519.93,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 724,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 589,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 961,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 1005,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          152.73,
+          521.06,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 1001,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 684,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.34,
+          524.27,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture06/contact-001-006.jpg",
+      "visual/lecture06/contact-007-012.jpg",
+      "visual/lecture06/contact-013-018.jpg",
+      "visual/lecture06/contact-019-021.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l05-l08/VISUAL.md"
+  },
+  "lecture07": {
+    "pages": 25,
+    "pdf_sha256": "fb835bbd2c36282395cb8b7f76979c86350d79a14c2de1dad2cb8eb27d9f400a",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 138,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 685,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 701,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          137.61,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 576,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 436,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 952,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 768,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          126.53,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 744,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          521.66,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 803,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 910,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          520.24,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 573,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          152.7,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 618,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 764,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 659,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 604,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 744,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 631,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 505,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 794,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 651,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          141.97,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 896,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 949,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 981,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.9,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 652,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 325,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          524.27,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture07/contact-001-006.jpg",
+      "visual/lecture07/contact-007-012.jpg",
+      "visual/lecture07/contact-013-018.jpg",
+      "visual/lecture07/contact-019-024.jpg",
+      "visual/lecture07/contact-025-025.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l05-l08/VISUAL.md"
+  },
+  "lecture05": {
+    "pages": 28,
+    "pdf_sha256": "c3c40e0d5ac038a375eb94da558b10a59de60489d9897bf8326964de21b357dd",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 468,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.34,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 829,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.51,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 679,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 494,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          140.35,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 427,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.44,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 510,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 760,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.51,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 811,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 726,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 604,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 607,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 837,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          86.57,
+          123.61,
+          505.8,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 718,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 777,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.55,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 689,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.16,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 706,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          519.17,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 619,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 911,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 790,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 816,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 721,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 837,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 542,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.26,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 858,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 1123,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          521.06,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 571,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 936,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 231,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          524.27,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture05/contact-001-006.jpg",
+      "visual/lecture05/contact-007-012.jpg",
+      "visual/lecture05/contact-013-018.jpg",
+      "visual/lecture05/contact-019-024.jpg",
+      "visual/lecture05/contact-025-028.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l05-l08/VISUAL.md"
+  },
+  "lecture08": {
+    "pages": 28,
+    "pdf_sha256": "8809d056429513f4197ffaf11ff01d9359cda8c8d356d54cb154b5109e8df70b",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 240,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          171.81,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 959,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 779,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.87,
+          124.28,
+          523.67,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 707,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 311,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.77,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 442,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 525,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          517.92,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 589,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 686,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          521.41,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 609,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 379,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 587,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          518.73,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 703,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 663,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.61,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 693,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          120.19,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 763,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 469,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          135.44,
+          519.99,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 533,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 763,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 744,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 680,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          153.2,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 753,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.08,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 896,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          117.36,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 688,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 756,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 1236,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 674,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 485,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          524.27,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture08/contact-001-006.jpg",
+      "visual/lecture08/contact-007-012.jpg",
+      "visual/lecture08/contact-013-018.jpg",
+      "visual/lecture08/contact-019-024.jpg",
+      "visual/lecture08/contact-025-028.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l05-l08/VISUAL.md"
+  },
+  "lecture10": {
+    "pages": 28,
+    "pdf_sha256": "ac806a07ab6f61e5d52ca46b116b536f7dad1898343b5b6d00df8ec51f17c4cf",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 425,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 780,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.51,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 674,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.06,
+          522.37,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 863,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 568,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          120.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 480,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          517.62,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 600,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 677,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 764,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 783,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 608,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 517,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.47,
+          522.63,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 581,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 808,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          126.72,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 806,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 725,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 612,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 1047,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 885,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 980,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.9,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 470,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 635,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.34,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 554,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 503,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 660,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 692,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 647,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 464,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          518.74,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture10/contact-001-006.jpg",
+      "visual/lecture10/contact-007-012.jpg",
+      "visual/lecture10/contact-013-018.jpg",
+      "visual/lecture10/contact-019-024.jpg",
+      "visual/lecture10/contact-025-028.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l09-l12/VISUAL.md"
+  },
+  "lecture09": {
+    "pages": 33,
+    "pdf_sha256": "8f714ab58e4e7c139c6688a6c5bac637c5e3e66fb1f59f8ba6eb9a52703d4d7e",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 485,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 736,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.51,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 777,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.34,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 1005,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 555,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 630,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.87,
+          129.75,
+          512.36,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 440,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          517.98,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 630,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          520.72,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 948,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 627,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.68,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 756,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.28,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 832,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          121.68,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 787,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 834,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 704,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 766,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.28,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 731,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 640,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 699,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 771,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 812,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 985,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 974,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          124.87,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 1253,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 688,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 691,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          94.87,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 600,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 890,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 444,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          117.99,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 596,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 651,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 32,
+        "chars": 505,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.7,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 33,
+        "chars": 420,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          520.54,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture09/contact-001-006.jpg",
+      "visual/lecture09/contact-007-012.jpg",
+      "visual/lecture09/contact-013-018.jpg",
+      "visual/lecture09/contact-019-024.jpg",
+      "visual/lecture09/contact-025-030.jpg",
+      "visual/lecture09/contact-031-033.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l09-l12/VISUAL.md"
+  },
+  "lecture11": {
+    "pages": 38,
+    "pdf_sha256": "ee2dbc85a1d0a0364d30c79346e93a3fa667375dc9f85ef3259d5abcb7bb47c3",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 357,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.34,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 872,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.51,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 815,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          519.21,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 470,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 904,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 1048,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          130.76,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 738,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 555,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 505,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 725,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          127.31,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 757,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          121.68,
+          520.99,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 558,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          80.56,
+          126.72,
+          517.22,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 704,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 633,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          152.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 760,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          121.68,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 560,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 578,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 677,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 661,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.43,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 580,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 698,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          519.21,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 463,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 781,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          131.24,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 719,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          519.34,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 738,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 1285,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          521.08,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 755,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.87,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 632,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.34,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 632,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.34,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 702,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 537,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 32,
+        "chars": 385,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 33,
+        "chars": 635,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 34,
+        "chars": 809,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 35,
+        "chars": 449,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 36,
+        "chars": 409,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 37,
+        "chars": 707,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 38,
+        "chars": 550,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.75,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture11/contact-001-006.jpg",
+      "visual/lecture11/contact-007-012.jpg",
+      "visual/lecture11/contact-013-018.jpg",
+      "visual/lecture11/contact-019-024.jpg",
+      "visual/lecture11/contact-025-030.jpg",
+      "visual/lecture11/contact-031-036.jpg",
+      "visual/lecture11/contact-037-038.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l09-l12/VISUAL.md"
+  },
+  "lecture12": {
+    "pages": 51,
+    "pdf_sha256": "d23330b9ac4992441f600424d1054890c123b0afdc3c1facbd93d77773f6533c",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 318,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 684,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.51,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 1033,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.36,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 976,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 803,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          137.02,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 1068,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 789,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          120.11,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 638,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 666,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.24,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 976,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          127.31,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 536,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 599,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 751,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          126.72,
+          519.21,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 678,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.31,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 615,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 356,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          504.15,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 673,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.87,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 592,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.34,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 384,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          504.14,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 657,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          153.56,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 507,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 498,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          524.28,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 697,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.61,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 636,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 722,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          519.21,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 500,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          518.73,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 832,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          121.68,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 467,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 375,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 641,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 752,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 32,
+        "chars": 839,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          523.95,
+          776.81
+        ]
+      },
+      {
+        "page": 33,
+        "chars": 308,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          126.72,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 34,
+        "chars": 650,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 35,
+        "chars": 901,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          125.59,
+          524.28,
+          776.81
+        ]
+      },
+      {
+        "page": 36,
+        "chars": 689,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 37,
+        "chars": 929,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 38,
+        "chars": 1053,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 39,
+        "chars": 1021,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          521.08,
+          776.81
+        ]
+      },
+      {
+        "page": 40,
+        "chars": 422,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 41,
+        "chars": 551,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.34,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 42,
+        "chars": 780,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.34,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 43,
+        "chars": 393,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 44,
+        "chars": 543,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 45,
+        "chars": 513,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.38,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 46,
+        "chars": 651,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          123.61,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 47,
+        "chars": 471,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 48,
+        "chars": 754,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 49,
+        "chars": 550,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          123.61,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 50,
+        "chars": 475,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 51,
+        "chars": 587,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          524.27,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture12/contact-001-006.jpg",
+      "visual/lecture12/contact-007-012.jpg",
+      "visual/lecture12/contact-013-018.jpg",
+      "visual/lecture12/contact-019-024.jpg",
+      "visual/lecture12/contact-025-030.jpg",
+      "visual/lecture12/contact-031-036.jpg",
+      "visual/lecture12/contact-037-042.jpg",
+      "visual/lecture12/contact-043-048.jpg",
+      "visual/lecture12/contact-049-051.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l09-l12/VISUAL.md"
+  },
+  "lecture01": {
+    "pages": 31,
+    "pdf_sha256": "e90a016f9b271403425d38bab22f0cea6c8e7811a03409a6f0ecdf507d7353f7",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 603,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 1063,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.51,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 884,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.51,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 399,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          280.03,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 648,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 620,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          125.59,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 375,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.12,
+          123.13,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 669,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 474,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 487,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 296,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.08,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 578,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.34,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 652,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 337,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.08,
+          136.15,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 568,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.9,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 575,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 624,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 789,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 661,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 726,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 682,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 413,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 696,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.9,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 838,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          521.5,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 837,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 297,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 802,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          521.5,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 689,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 287,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          500.27,
+          776.81
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 699,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 727,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          153.2,
+          519.44,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture01/contact-001-006.jpg",
+      "visual/lecture01/contact-007-012.jpg",
+      "visual/lecture01/contact-013-018.jpg",
+      "visual/lecture01/contact-019-024.jpg",
+      "visual/lecture01/contact-025-030.jpg",
+      "visual/lecture01/contact-031-031.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l01-l04/VISUAL-QA.md"
+  },
+  "lecture02": {
+    "pages": 28,
+    "pdf_sha256": "3a3c3cd033f58d8e6a96576bd6c47da612b32f3b3466ff98b41bbb132abfb230",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 164,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.04,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 723,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 733,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          139.6,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 761,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          122.07,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 1054,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 852,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 980,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 702,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 665,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.08,
+          124.9,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 851,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 688,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          139.6,
+          521.51,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 585,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 894,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 610,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.13,
+          520.71,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 646,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          168.27,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 694,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 958,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 340,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 738,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          155.52,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 621,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 837,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          75.94,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 919,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 958,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 866,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          120.19,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 971,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.34,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 1084,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 791,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 806,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          153.2,
+          518.74,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture02/contact-001-006.jpg",
+      "visual/lecture02/contact-007-012.jpg",
+      "visual/lecture02/contact-013-018.jpg",
+      "visual/lecture02/contact-019-024.jpg",
+      "visual/lecture02/contact-025-028.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l01-l04/VISUAL-QA.md"
+  },
+  "lecture03": {
+    "pages": 34,
+    "pdf_sha256": "86359b73db2dc09bf5e6a3cde0a7d3343e170b77a66211220c23c2a18cf67b71",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 486,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.16,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 1089,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 943,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.28,
+          519.16,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 967,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.12,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 640,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          139.21,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 425,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          517.83,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 664,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 954,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 724,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 626,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.67,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 797,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 544,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          126.53,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 611,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.44,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 660,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          522.42,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 709,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 811,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.34,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 749,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          523.39,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 685,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          155.52,
+          519.1,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 716,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 685,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          155.52,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 553,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 769,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.34,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 785,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.61,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 874,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 25,
+        "chars": 665,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 26,
+        "chars": 926,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 27,
+        "chars": 702,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 28,
+        "chars": 595,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          153.2,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 29,
+        "chars": 798,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          128.27,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 30,
+        "chars": 689,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 31,
+        "chars": 797,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.87,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 32,
+        "chars": 1129,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          521.07,
+          776.81
+        ]
+      },
+      {
+        "page": 33,
+        "chars": 885,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.87,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 34,
+        "chars": 484,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.24,
+          120.19,
+          518.74,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture03/contact-001-006.jpg",
+      "visual/lecture03/contact-007-012.jpg",
+      "visual/lecture03/contact-013-018.jpg",
+      "visual/lecture03/contact-019-024.jpg",
+      "visual/lecture03/contact-025-030.jpg",
+      "visual/lecture03/contact-031-034.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l01-l04/VISUAL-QA.md"
+  },
+  "lecture04": {
+    "pages": 24,
+    "pdf_sha256": "41ab6938e4053ec87822bf0b18f908a68ea7a2063bfd3bd25f3ea3e21cdc6178",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": [],
+    "page_metrics": [
+      {
+        "page": 1,
+        "chars": 475,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          171.81,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 2,
+        "chars": 867,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          74.95,
+          124.28,
+          519.94,
+          776.81
+        ]
+      },
+      {
+        "page": 3,
+        "chars": 768,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 4,
+        "chars": 639,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          136.54,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 5,
+        "chars": 494,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          127.31,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 6,
+        "chars": 771,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          127.31,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 7,
+        "chars": 778,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          74.95,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 8,
+        "chars": 788,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.61,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 9,
+        "chars": 648,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          152.68,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 10,
+        "chars": 706,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 11,
+        "chars": 727,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.28,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 12,
+        "chars": 683,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          71.01,
+          123.13,
+          518.74,
+          776.81
+        ]
+      },
+      {
+        "page": 13,
+        "chars": 657,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          522.29,
+          776.81
+        ]
+      },
+      {
+        "page": 14,
+        "chars": 596,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          152.73,
+          524.26,
+          776.81
+        ]
+      },
+      {
+        "page": 15,
+        "chars": 632,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 16,
+        "chars": 696,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 17,
+        "chars": 878,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          520.14,
+          776.81
+        ]
+      },
+      {
+        "page": 18,
+        "chars": 493,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          128.39,
+          518.75,
+          776.81
+        ]
+      },
+      {
+        "page": 19,
+        "chars": 719,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          123.61,
+          524.28,
+          776.81
+        ]
+      },
+      {
+        "page": 20,
+        "chars": 1050,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          123.13,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 21,
+        "chars": 875,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          152.73,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 22,
+        "chars": 776,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.54,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 23,
+        "chars": 1179,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.11,
+          124.28,
+          524.27,
+          776.81
+        ]
+      },
+      {
+        "page": 24,
+        "chars": 816,
+        "width": 595.276,
+        "height": 841.89,
+        "outside_page": "",
+        "near_edge": "",
+        "bounds": [
+          76.18,
+          124.28,
+          518.75,
+          776.81
+        ]
+      }
+    ],
+    "contacts": [
+      "visual/lecture04/contact-001-006.jpg",
+      "visual/lecture04/contact-007-012.jpg",
+      "visual/lecture04/contact-013-018.jpg",
+      "visual/lecture04/contact-019-024.jpg"
+    ],
+    "visual_status": "verified: all pages overview and targeted expanded inspection",
+    "visual_evidence": "l01-l04/VISUAL-QA.md"
+  }
+}

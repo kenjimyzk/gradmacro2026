@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "arithmetic": "exact fractions",
+  "coefficient_definition_comparisons": 1000,
+  "positive_feedback_direct_reduction_checks": 500,
+  "p_zero_limit_checks": 10,
+  "illustration": {
+    "direct_ratio": 0.4407730673316708,
+    "multiplier_ratio": 3.9702970297029703,
+    "total_ratio": 1.75
+  },
+  "scope": "new PE ratio explanation only; primitive model equations unchanged"
+}

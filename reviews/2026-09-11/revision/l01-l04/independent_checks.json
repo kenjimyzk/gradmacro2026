@@ -1,0 +1,477 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "source_sha256": {
+    "lecture01.qmd": "1af25248692270637ac4b8e53cdcd7e6d73988651b631ed39cbb1d50cb458297",
+    "lecture02.qmd": "e03918908d90d2b463421e7e2b3f7d8a96d70bc662c8eac1d59d6c4463656774",
+    "lecture03.qmd": "690c200af563e5324b76a3ee3adbf69749de0ee8c3b2438974864c6e7ff33a94",
+    "lecture04.qmd": "fdf31b66f2b9c5ec001618245b72ac162f99714a861cd9ae041c21c89cee85a2",
+    "solution.qmd": "7ffa732bbb6624fb48e362d073162940982724f39710a71ea4c51f0935b5af05",
+    "includes/assumption-matrix.qmd": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+    "includes/notation-concordance.qmd": "718bda3fcbd6936f7c3e8fc722b4fe946df248a441605458cf7caf093122f38f",
+    "figures/lecture02/ar1_irf_simulation.svg": "18b70384d5dd492393f66f7692c5437826f87241703ce333cd6c67b631076c0f",
+    "figures/lecture03/consumption_growth_simulation.svg": "2a8581492bb7abfff618da4745ec3090789677537dde7c6b74b02fc02495a693",
+    "data/lecture02/gdpc1.csv": "f7cfe97b773eef3bd354aa722fd632bcae10b30f43e5aefcc3de89b5e251c346"
+  },
+  "checks": {
+    "ar1_svg_formula_alignment": [
+      {
+        "rho": 0.5,
+        "max_abs_error_pixels": 0.0,
+        "status": "verified",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.5,
+            "formula": 0.5,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.25,
+            "formula": 0.25,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.125,
+            "formula": 0.125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.0625,
+            "formula": 0.0625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.03125,
+            "formula": 0.03125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.015625,
+            "formula": 0.015625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.0078125,
+            "formula": 0.0078125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.00390625,
+            "formula": 0.00390625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.001953125,
+            "formula": 0.001953125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.0009765625,
+            "formula": 0.0009765625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.00048828125,
+            "formula": 0.00048828125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.000244140625,
+            "formula": 0.000244140625,
+            "error_pixels": 0.0
+          }
+        ]
+      },
+      {
+        "rho": 0.8,
+        "max_abs_error_pixels": 4.444799515113118e-07,
+        "status": "verified",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.8,
+            "formula": 0.8,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.64,
+            "formula": 0.6400000000000001,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.5119999999999999,
+            "formula": 0.5120000000000001,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.4096,
+            "formula": 0.4096000000000001,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.32767999999999997,
+            "formula": 0.3276800000000001,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.262144,
+            "formula": 0.2621440000000001,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.20971519999999993,
+            "formula": 0.20971520000000007,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.16777215937500004,
+            "formula": 0.1677721600000001,
+            "error_pixels": 2.0000004496978363e-07
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.13421772812500005,
+            "formula": 0.13421772800000006,
+            "error_pixels": -3.999997488790541e-08
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.10737418124999998,
+            "formula": 0.10737418240000006,
+            "error_pixels": 3.6800003044845653e-07
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.08589934687500005,
+            "formula": 0.08589934592000005,
+            "error_pixels": -3.0559999686374795e-07
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.06871947812499997,
+            "formula": 0.06871947673600004,
+            "error_pixels": -4.444799515113118e-07
+          }
+        ]
+      },
+      {
+        "rho": 0.9,
+        "max_abs_error_pixels": 4.800000397153781e-07,
+        "status": "verified",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.9,
+            "formula": 0.9,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.8099999999999999,
+            "formula": 0.81,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.729,
+            "formula": 0.7290000000000001,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.6561,
+            "formula": 0.6561,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.59049,
+            "formula": 0.5904900000000001,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.5314409999999999,
+            "formula": 0.531441,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.47829689999999997,
+            "formula": 0.4782969000000001,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.430467209375,
+            "formula": 0.4304672100000001,
+            "error_pixels": 2.0000004496978363e-07
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.3874204875,
+            "formula": 0.3874204890000001,
+            "error_pixels": 4.800000397153781e-07
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.3486784406250001,
+            "formula": 0.3486784401000001,
+            "error_pixels": -1.679999854786729e-07
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.31381059687500007,
+            "formula": 0.31381059609000006,
+            "error_pixels": -2.5119999236267176e-07
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.2824295375,
+            "formula": 0.2824295364810001,
+            "error_pixels": -3.260799417148519e-07
+          }
+        ]
+      }
+    ],
+    "consumption_growth_svg_alignment_subpixel_tolerance": [
+      {
+        "gamma": 1,
+        "max_abs_error_pixels": 4.263256414560601e-13,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.96,
+            "formula": 0.96,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9792,
+            "formula": 0.9792,
+            "error_pixels": 0.0
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9984,
+            "formula": 0.9984,
+            "error_pixels": 0.0
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0175999999999998,
+            "formula": 1.0176,
+            "error_pixels": 4.263256414560601e-13
+          }
+        ]
+      },
+      {
+        "gamma": 2,
+        "max_abs_error_pixels": 0.41641154691507154,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.9799,
+            "formula": 0.9797958971132712,
+            "error_pixels": -0.41641154691507154
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9894999999999999,
+            "formula": 0.9895453501482385,
+            "error_pixels": 0.1814005929542759
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9992,
+            "formula": 0.9991996797437437,
+            "error_pixels": -0.0012810250250936406
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0088,
+            "formula": 1.0087616170334794,
+            "error_pixels": -0.15353186608206215
+          }
+        ]
+      },
+      {
+        "gamma": 5,
+        "max_abs_error_pixels": 0.12464286973460048,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.9919,
+            "formula": 0.9918688392825663,
+            "error_pixels": -0.12464286973460048
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9957999999999999,
+            "formula": 0.9958049504619619,
+            "error_pixels": 0.01980184784792982
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9996999999999999,
+            "formula": 0.9996797950031715,
+            "error_pixels": -0.08081998731381645
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0035,
+            "formula": 1.003495477703811,
+            "error_pixels": -0.01808918475592236
+          }
+        ]
+      }
+    ],
+    "lecture02_exercises": {
+      "ar1_0_through_4": [
+        1.0,
+        0.8,
+        0.6400000000000001,
+        0.5120000000000001,
+        0.4096000000000001
+      ],
+      "half_life": 3.1062837195053903,
+      "conditional_forecasts": [
+        3.8,
+        3.08
+      ],
+      "first_order_output": 0.012,
+      "triangular_matrix_eigenvalues": [
+        0.8,
+        1.05
+      ]
+    },
+    "lecture03_exercises": {
+      "discounted_asset_limits": {
+        "1.1": 2.5999999999999965,
+        "1.2": 0.0,
+        "1.3": -2.6000000000000023
+      },
+      "equity_price": 0.9000000000000001,
+      "riskfree_gross_return": 1.0,
+      "equity_expected_gross_return": 1.1111111111111112,
+      "sdf_return_covariance": -0.11111111111111116
+    },
+    "lecture04_equilibrium_grid": {
+      "cases": 192,
+      "max_level_equilibrium_residual": 1.1102230246251565e-15,
+      "max_exact_log_identity_error": 3.2612801348363973e-16,
+      "status": "verified"
+    },
+    "lecture04_exercise5_percent": [
+      {
+        "h": 0,
+        "a": 1.0,
+        "y": 0.7692307692307694,
+        "n": -0.3846153846153847,
+        "w": 1.153846153846154
+      },
+      {
+        "h": 1,
+        "a": 0.9,
+        "y": 0.6923076923076925,
+        "n": -0.34615384615384626,
+        "w": 1.0384615384615385
+      },
+      {
+        "h": 2,
+        "a": 0.81,
+        "y": 0.6230769230769232,
+        "n": -0.3115384615384616,
+        "w": 0.9346153846153847
+      }
+    ],
+    "lecture02_employment_counterexample": {
+      "parameters": {
+        "alpha": 0.4,
+        "phi": 1.0,
+        "gamma": 2.0,
+        "rho": 0.9,
+        "shock": 0.01
+      },
+      "n_impact_percent": -0.3846153846153847,
+      "n_next_percent": -0.3461538461538462,
+      "implication": "Persistence prolongs an employment decrease in the course's own model."
+    },
+    "lecture02_quadratic_welfare": [
+      {
+        "shock_scale": 0.01,
+        "exact_utility_change": -0.00015343927540378832,
+        "quadratic_approximation": -0.0001535,
+        "difference": 6.072459621166842e-08,
+        "error_divided_by_scale_cubed": 0.06072459621166842,
+        "exact_log_c_minus_log_n": -8.032397383251396e-05,
+        "second_order_log_c_minus_log_n": -7.999999999999999e-05
+      },
+      {
+        "shock_scale": 0.005,
+        "exact_utility_change": -3.836692319303392e-05,
+        "quadratic_approximation": -3.8375e-05,
+        "difference": 8.076806966078251e-09,
+        "error_divided_by_scale_cubed": 0.064614455728626,
+        "exact_log_c_minus_log_n": -2.0040247511122957e-05,
+        "second_order_log_c_minus_log_n": -1.9999999999999998e-05
+      },
+      {
+        "shock_scale": 0.0025,
+        "exact_utility_change": -9.592710035311036e-06,
+        "quadratic_approximation": -9.59375e-06,
+        "difference": 1.0399646889632484e-09,
+        "error_divided_by_scale_cubed": 0.06655774009364789,
+        "exact_log_c_minus_log_n": -5.005015443056539e-06,
+        "second_order_log_c_minus_log_n": -4.9999999999999996e-06
+      }
+    ],
+    "lecture04_rate_scaling": {
+      "steady_R": 1.04,
+      "R_change": 1e-06,
+      "exact_log_deviation": 9.615379992413302e-07,
+      "correct_first_order": 9.615384615384615e-07,
+      "previous_incorrect_approximation": 1e-06
+    }
+  }
+}

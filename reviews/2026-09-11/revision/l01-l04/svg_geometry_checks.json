@@ -1,0 +1,16 @@
+{
+  "source": "figures/lecture01/is_lm_equilibrium.svg",
+  "intersection": {
+    "x": 426.75401389236345,
+    "y": 255.2548204380602
+  },
+  "marker": {
+    "x": 426.754014,
+    "y": 255.25482,
+    "radius": 9.0
+  },
+  "distance_marker_to_intersection": 4.510901919470645e-07,
+  "intersection_is_inside_marker": true,
+  "IS_y_at_marker_x": 255.25482049974704,
+  "LM_y_at_marker_x": 255.2548203582249
+}

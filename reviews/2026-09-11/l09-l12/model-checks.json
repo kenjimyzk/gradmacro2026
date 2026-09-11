@@ -1,0 +1,64 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.4.4",
+  "l09": {
+    "max_finite_infinite_x_error": 3.169940365985642e-05,
+    "first_21_x_error": 2.2813277343602945e-08,
+    "first_21_pi_error": 4.328866657493657e-09,
+    "finite_horizon_T": 40,
+    "stable_root": 0.7034312234445121
+  },
+  "l10": {
+    "cases": 600,
+    "max_static_formula_error": 5.551115123125783e-17,
+    "exercise6_pi_p": -0.0006666666666666666,
+    "exercise6_pi_w": 0.0013333333333333333,
+    "exercise7_min_loss": 0.001
+  },
+  "l11": {
+    "cases": 600,
+    "max_formula_or_primitive_residual": 4.098943406916078e-13,
+    "max_redundant_typeS_budget_residual": 3.7903707950093235e-15,
+    "samples": [
+      {
+        "theta": 0.6543813135863041,
+        "x_primitive": -0.0032036046698851214,
+        "x_closed": -0.00320360466988512
+      },
+      {
+        "theta": -0.2022021140635537,
+        "x_primitive": -0.16268094740131053,
+        "x_closed": -0.16268094740131056
+      },
+      {
+        "theta": 0.24674010541920888,
+        "x_primitive": 0.024302103351555186,
+        "x_closed": 0.024302103351555193
+      },
+      {
+        "theta": -0.6473713150219473,
+        "x_primitive": -0.030403719253300487,
+        "x_closed": -0.030403719253300453
+      },
+      {
+        "theta": 0.3371547476705996,
+        "x_primitive": 0.04151650551463101,
+        "x_closed": 0.04151650551463102
+      }
+    ]
+  },
+  "l12": {
+    "draws": 400,
+    "max_identity_error": 2.7355895326763857e-13,
+    "direct_effect_counterexample": {
+      "beta": 0.99,
+      "p": 0.5,
+      "lambda": 0.3,
+      "chi": 2,
+      "actual_direct_ratio": 0.44077306733167076,
+      "population_share": 0.7,
+      "actual_multiplier_ratio": 3.9702970297029703,
+      "total_ratio": 1.7499999999999998
+    }
+  }
+}

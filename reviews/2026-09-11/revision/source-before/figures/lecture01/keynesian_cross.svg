@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="620" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">ケインジアン・クロス</title>
+  <desc id="desc">計画支出曲線と45度線の交点で均衡産出量が決まり、自律的需要の増加が乗数効果で産出量を増やす図。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#344054"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6fbe"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#ffffff"/>
+  <rect x="52" y="42" width="816" height="522" rx="14" fill="#f8fafc" stroke="#d9e0ea"/>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="92" y="86" font-size="26" font-weight="700" fill="#20242a">ケインジアン・クロス</text>
+    <text x="92" y="115" font-size="17" fill="#586579">計画支出曲線と45度線の交点で短期の均衡産出量が決まる</text>
+  </g>
+
+  <g stroke="#344054" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M 110 520 H 820"/>
+    <path d="M 110 520 V 88"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#344054">
+    <text x="805" y="552" font-size="18">Y</text>
+    <text x="72" y="130" font-size="18">PE</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M 128 508 L 742 98" stroke="#697386" stroke-width="3"/>
+    <path d="M 110 440 L 760 206" stroke="#2f6fbe" stroke-width="4"/>
+    <path d="M 110 370 L 760 136" stroke="#d9792f" stroke-width="4"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="703" y="124" font-size="17" fill="#697386">45度線</text>
+    <text x="768" y="211" font-size="18" fill="#2f6fbe" font-weight="700">PE_0</text>
+    <text x="768" y="141" font-size="18" fill="#d9792f" font-weight="700">PE_1</text>
+  </g>
+
+  <g stroke="#98a2b3" stroke-width="2" stroke-dasharray="6 6" fill="none">
+    <path d="M 360 350 V 520"/>
+    <path d="M 110 350 H 360"/>
+    <path d="M 586 199 V 520"/>
+    <path d="M 110 199 H 586"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="360" cy="350" r="7" fill="#2f6fbe"/>
+    <circle cx="586" cy="199" r="7" fill="#d9792f"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="372" y="343" font-size="17" fill="#2f6fbe" font-weight="700">E_0</text>
+    <text x="598" y="193" font-size="17" fill="#d9792f" font-weight="700">E_1</text>
+    <text x="338" y="548" font-size="17" fill="#2f6fbe">Y_0</text>
+    <text x="564" y="548" font-size="17" fill="#d9792f">Y_1</text>
+  </g>
+
+  <g stroke="#2f6fbe" stroke-width="3" fill="none" marker-end="url(#arrowBlue)">
+    <path d="M 378 560 H 568"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="398" y="592" font-size="17" fill="#2f6fbe" font-weight="700">乗数効果：ΔY &gt; ΔG</text>
+  </g>
+
+</svg>

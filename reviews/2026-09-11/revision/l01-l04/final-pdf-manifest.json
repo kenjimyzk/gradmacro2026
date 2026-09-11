@@ -1,0 +1,46 @@
+{
+  "lecture01": {
+    "pdf_sha256": "e90a016f9b271403425d38bab22f0cea6c8e7811a03409a6f0ecdf507d7353f7",
+    "pages": 31,
+    "all_pages_layout_overview_passed": true,
+    "overview_reviewer": "root final overview, l01-l04 focused recheck",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": []
+  },
+  "lecture02": {
+    "pdf_sha256": "3a3c3cd033f58d8e6a96576bd6c47da612b32f3b3466ff98b41bbb132abfb230",
+    "pages": 28,
+    "all_pages_layout_overview_passed": true,
+    "overview_reviewer": "l01-l04",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": []
+  },
+  "lecture03": {
+    "pdf_sha256": "86359b73db2dc09bf5e6a3cde0a7d3343e170b77a66211220c23c2a18cf67b71",
+    "pages": 34,
+    "all_pages_layout_overview_passed": true,
+    "overview_reviewer": "l01-l04",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": []
+  },
+  "lecture04": {
+    "pdf_sha256": "41ab6938e4053ec87822bf0b18f908a68ea7a2063bfd3bd25f3ea3e21cdc6178",
+    "pages": 24,
+    "all_pages_layout_overview_passed": true,
+    "overview_reviewer": "l01-l04",
+    "replacement_glyphs": 0,
+    "unresolved_refs": 0,
+    "missing_character_lines": [],
+    "box_messages": [],
+    "flagged_pages": []
+  }
+}

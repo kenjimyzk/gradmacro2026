@@ -42,9 +42,9 @@
     <text x="54" y="185" font-size="15">0.75</text>
     <text x="62" y="105" font-size="15">1</text>
   </g>
-  <polyline points="100,100 160,260 220,340 280,380 340,400 400,410 460,415 520,417.5 580,418.8 640,419.4 700,419.7 760,419.9 820,420" fill="none" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="100,100 160,164 220,215.2 280,256.96 340,290.77 400,317.86 460,339.43 520,356.55 580,370.23 640,381.18 700,389.94 760,396.95 820,402.56" fill="none" stroke="#379b55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="100,100 160,132 220,160.8 280,186.72 340,210.05 400,231.05 460,249.95 520,266.96 580,282.26 640,296.04 700,308.43 760,319.59 820,329.63" fill="none" stroke="#d9792f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="100,100.000000 160,260.000000 220,340.000000 280,380.000000 340,400.000000 400,410.000000 460,415.000000 520,417.500000 580,418.750000 640,419.375000 700,419.687500 760,419.843750 820,419.921875" fill="none" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="100,100.000000 160,164.000000 220,215.200000 280,256.160000 340,288.928000 400,315.142400 460,336.113920 520,352.891136 580,366.312909 640,377.050327 700,385.640262 760,392.512209 820,398.009767" fill="none" stroke="#379b55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="100,100.000000 160,132.000000 220,160.800000 280,186.720000 340,210.048000 400,231.043200 460,249.938880 520,266.944992 580,282.250493 640,296.025444 700,308.422899 760,319.580609 820,329.622548" fill="none" stroke="#d9792f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
     <rect x="620" y="82" width="250" height="92" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
     <line x1="642" y1="108" x2="690" y2="108" stroke="#2f6fbe" stroke-width="4"/>

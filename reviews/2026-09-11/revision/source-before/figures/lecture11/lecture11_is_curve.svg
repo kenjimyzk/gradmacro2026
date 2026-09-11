@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">RANKとTANKのIS曲線</title>
+  <desc id="desc">横軸に需給ギャップ、縦軸に自然実質利子率からの実質利子率乖離をとり、傾きマイナスガンマのRANKと、傾きマイナスガンマ・シータTのTANKを比較する。シータTは0.57。</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#34495e"/>
+    </marker>
+    <style>
+      .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .axis { stroke: #34495e; stroke-width: 2.4; marker-end: url(#axis-arrow); }
+      .tick { stroke: #52616f; stroke-width: 1.6; }
+      .grid { stroke: #d8dee8; stroke-width: 1.2; }
+      .zero { stroke: #9aa6b2; stroke-width: 1.5; stroke-dasharray: 6 7; }
+      .rank { stroke: #2f6fbe; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .tank { stroke: #d4533f; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .label { font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #253241; }
+      .ticktext { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #52616f; }
+      .math { font: 600 21px "Times New Roman", "STIX Two Text", serif; }
+      .direct { font: 700 21px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; paint-order: stroke; stroke: #ffffff; stroke-width: 6; stroke-linejoin: round; }
+      .ranktext { fill: #2369aa; }
+      .tanktext { fill: #c23e2d; }
+      .note { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .condition { fill: #eef4fb; stroke: #91a8c0; stroke-width: 1.5; rx: 8; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="36" y="26" width="1128" height="654" rx="18" fill="#f8fafc" stroke="#d9e0ea" stroke-width="1.6"/>
+  <text class="title" x="68" y="72">RANKとTANKのIS曲線</text>
+  <text class="subtitle" x="70" y="104">各モデルの自然実質利子率を基準に比較（再分配ショックと期待需給ギャップを固定）</text>
+
+  <line class="grid" x1="260" y1="150" x2="260" y2="570"/>
+  <line class="grid" x1="430" y1="150" x2="430" y2="570"/>
+  <line class="zero" x1="600" y1="150" x2="600" y2="570"/>
+  <line class="grid" x1="770" y1="150" x2="770" y2="570"/>
+  <line class="grid" x1="940" y1="150" x2="940" y2="570"/>
+  <line class="grid" x1="150" y1="210" x2="1050" y2="210"/>
+  <line class="grid" x1="150" y1="285" x2="1050" y2="285"/>
+  <line class="zero" x1="150" y1="360" x2="1050" y2="360"/>
+  <line class="grid" x1="150" y1="435" x2="1050" y2="435"/>
+  <line class="grid" x1="150" y1="510" x2="1050" y2="510"/>
+
+  <line class="axis" x1="150" y1="570" x2="1062" y2="570"/>
+  <line class="axis" x1="150" y1="570" x2="150" y2="138"/>
+
+  <line class="tick" x1="260" y1="570" x2="260" y2="579"/>
+  <line class="tick" x1="430" y1="570" x2="430" y2="579"/>
+  <line class="tick" x1="600" y1="570" x2="600" y2="579"/>
+  <line class="tick" x1="770" y1="570" x2="770" y2="579"/>
+  <line class="tick" x1="940" y1="570" x2="940" y2="579"/>
+  <text class="ticktext" x="252" y="602">−2</text>
+  <text class="ticktext" x="422" y="602">−1</text>
+  <text class="ticktext" x="595" y="602">0</text>
+  <text class="ticktext" x="765" y="602">1</text>
+  <text class="ticktext" x="935" y="602">2</text>
+
+  <line class="tick" x1="141" y1="210" x2="150" y2="210"/>
+  <line class="tick" x1="141" y1="285" x2="150" y2="285"/>
+  <line class="tick" x1="141" y1="360" x2="150" y2="360"/>
+  <line class="tick" x1="141" y1="435" x2="150" y2="435"/>
+  <line class="tick" x1="141" y1="510" x2="150" y2="510"/>
+  <text class="ticktext" x="111" y="216">2</text>
+  <text class="ticktext" x="111" y="291">1</text>
+  <text class="ticktext" x="111" y="366">0</text>
+  <text class="ticktext" x="100" y="441">−1</text>
+  <text class="ticktext" x="100" y="516">−2</text>
+
+  <path class="rank" d="M192 180 L1008 540"/>
+  <path class="tank" d="M192 257.4 L1008 462.6"/>
+
+  <text class="direct tanktext" x="710" y="375">TANK：傾き <tspan class="math">−γΘ<tspan baseline-shift="sub" font-size="13">T</tspan> = −0.57γ</tspan></text>
+  <text class="direct ranktext" x="720" y="458">RANK：傾き <tspan class="math">−γ</tspan></text>
+
+  <text class="label" x="485" y="638">需給ギャップ <tspan class="math">x<tspan baseline-shift="sub" font-size="13">t</tspan></tspan>（%）</text>
+  <text class="label" transform="translate(68 505) rotate(-90)">実質利子率ギャップ（%ポイント）</text>
+  <text class="math" x="190" y="138">RANK: r<tspan baseline-shift="sub" font-size="13">t</tspan> − r<tspan baseline-shift="super" font-size="13">f,R</tspan><tspan baseline-shift="sub" font-size="13">t</tspan></text>
+  <text class="math" x="190" y="166">TANK: r<tspan baseline-shift="sub" font-size="13">t</tspan> − r<tspan baseline-shift="super" font-size="13">f,T</tspan><tspan baseline-shift="sub" font-size="13">t</tspan></text>
+
+  <rect class="condition" x="716" y="116" width="368" height="54"/>
+  <text class="note" x="738" y="140">較正：Θ<tspan baseline-shift="sub" font-size="11">T</tspan> = 0.57</text>
+  <text class="note" x="738" y="162">0 &lt; Θ<tspan baseline-shift="sub" font-size="11">T</tspan> &lt; 1 ではTANKの方がフラット</text>
+  <text class="note" x="70" y="670">注：縦軸は、RANKでは r<tspan baseline-shift="sub" font-size="11">t</tspan>−r<tspan baseline-shift="super" font-size="11">f,R</tspan><tspan baseline-shift="sub" font-size="11">t</tspan>、TANKでは r<tspan baseline-shift="sub" font-size="11">t</tspan>−r<tspan baseline-shift="super" font-size="11">f,T</tspan><tspan baseline-shift="sub" font-size="11">t</tspan>。TANKの自然利子率は再分配ショックを含む。</text>
+</svg>

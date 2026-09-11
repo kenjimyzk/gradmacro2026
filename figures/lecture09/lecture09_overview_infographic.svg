@@ -36,12 +36,12 @@
   <rect x="58" y="142" width="250" height="138" class="box blue"/>
   <text x="82" y="181" class="label">1. 基本体系</text>
   <text x="82" y="216" class="math">x<tspan baseline-shift="sub" font-size="14">t</tspan><tspan baseline-shift="super" font-size="14">e</tspan>, π<tspan baseline-shift="sub" font-size="14">t</tspan>, r<tspan baseline-shift="sub" font-size="14">t</tspan></text>
-  <text x="82" y="248" class="body" font-size="15">IS + NKPC + フィッシャー関係</text>
+  <text x="82" y="242" class="body"><tspan x="82">IS + NKPC</tspan><tspan x="82" dy="24">+ フィッシャー関係</tspan></text>
 
   <rect x="365" y="142" width="250" height="138" class="box green"/>
   <text x="389" y="181" class="label">2. 神々の配剤</text>
   <text x="389" y="216" class="math">π<tspan baseline-shift="sub" font-size="14">t</tspan> = 0, x<tspan baseline-shift="sub" font-size="14">t</tspan><tspan baseline-shift="super" font-size="14">e</tspan> = 0</text>
-  <text x="389" y="248" class="body">インフレとギャップを同時安定化</text>
+  <text x="389" y="242" class="body"><tspan x="389">インフレとギャップを</tspan><tspan x="389" dy="24">同時安定化</tspan></text>
 
   <rect x="672" y="142" width="250" height="138" class="box red"/>
   <text x="696" y="181" class="label">3. 利子率ペッグ</text>
@@ -63,7 +63,7 @@
   <text x="698" y="399" class="label">6. コミットメント</text>
   <text x="698" y="430" class="math" font-size="18">κ<tspan baseline-shift="sub" font-size="12">x</tspan>ω<tspan baseline-shift="sub" font-size="12">p</tspan>π<tspan baseline-shift="sub" font-size="12">t</tspan> +</text>
   <text x="698" y="454" class="math" font-size="18">x<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">e</tspan> - x<tspan baseline-shift="sub" font-size="12">t-1</tspan><tspan baseline-shift="super" font-size="12">e</tspan> = 0 <tspan font-size="14">(t ≥ 1)</tspan></text>
-  <text x="698" y="480" class="body">履歴依存性と時間的非整合性</text>
+  <text x="698" y="479" class="body" style="font-size:15px">履歴依存性・時間的非整合性</text>
 
   <rect x="978" y="251" width="170" height="138" class="box blue"/>
   <text x="1002" y="290" class="label">7. Timeless</text>
@@ -76,7 +76,7 @@
   <path d="M795 280 C738 333 410 315 308 392" class="line"/>
   <path d="M310 429 C330 429 345 429 365 429" class="line"/>
   <path d="M619 429 C639 429 652 429 672 429" class="line"/>
-  <path d="M925 429 C971 407 994 385 1009 370" class="line"/>
+  <path d="M925 429 C951 409 957 370 976 351" class="line"/>
 
   <text x="60" y="565" class="small">読む順序：第8回の構造式を出発点に、望ましい配分、ターゲット条件、手段ルールによる実装を区別して学ぶ。</text>
 </svg>

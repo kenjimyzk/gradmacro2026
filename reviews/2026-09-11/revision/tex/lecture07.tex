@@ -1,0 +1,1135 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  japanese,
+  lualatex,
+  ja=standard,
+  12pt,
+  a4paper]{ltjsarticle}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{needspace}
+\hyphenation{Macroeconomics}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{目次}
+\else
+  \newcommand\contentsname{目次}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{図一覧}
+\else
+  \newcommand\listfigurename{図一覧}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{表一覧}
+\else
+  \newcommand\listtablename{表一覧}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{図}
+\else
+  \newcommand\figurename{図}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{表}
+\else
+  \newcommand\tablename{表}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{コード}
+\newcommand*\listoflistings{\listof{codelisting}{コード一覧}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  pdftitle={第7回：RANKモデルの基本構造},
+  pdfauthor={宮﨑憲治},
+  pdflang={ja},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{第7回：RANKモデルの基本構造}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{マクロ経済学B}
+\author{宮﨑憲治}
+\date{2026年度}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{目次}
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+
+\section{講義の目的}\label{ux8b1bux7fa9ux306eux76eeux7684}
+
+本講義では、代表的家計を仮定した基本的な\textbf{RANK（Representative
+Agent New
+Keynesian：代表的家計ニューケインジアン）モデル}を構築します。第6回で学んだ独占的競争モデルに\textbf{「価格硬直性（価格改定に伴う実物的な摩擦）」}と\textbf{「金融政策ルール（テイラー・ルール）」}を導入すると、それまでの実物モデル（\textbf{RBCモデルなど}）とは決定的に異なる現象が生じます。すなわち、中央銀行による名目利子率の操作が（\textbf{価格が瞬時に調整されないために}）実質利子率を動かし、その実際の実質利子率と経済の潜在的な基準である「自然利子率」との乖離が総需要を刺激または抑制して\textbf{「需給ギャップ（産出ギャップ）」}を生み出します。そして、この需給ギャップが企業の限界費用を変化させ、最終的にインフレ率を押し上げたり押し下げたりするという\textbf{金融政策の波及経路}が形成されます。
+
+本回では、モデルの数学的構造と経済学的直観を極めてクリアに見通すため、生産関数の資本分配率を
+\(\alpha=0\)（\textbf{線形生産技術}）とし、政府支出も存在しないシンプルな環境から出発します。\(\alpha=0\)
+とおくことで、第6回で扱った固定資本項 \(\bar{K}^\alpha\)
+や資本レントへの配慮が不要となり、労働市場と財市場の連動に集中できます（\textbf{投資や資本蓄積は本回でも導入しません}）。ここで学んだ基本的な波及メカニズムは、第8回において
+\(\alpha>0\)（\textbf{資本シェアの導入}）および政府支出を再導入した一般的な
+RANK モデルへとスムーズに拡張されます。
+
+図~\ref{fig-lecture07-overview}
+は、中央銀行の金融政策から実質利子率、需給ギャップ、実質限界費用を経てインフレ率へと至る一連の伝達経路を示しています。
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio]{lecture07_files/mediabag/figures/lecture07/lecture07_overview_infographic.pdf}
+
+}
+
+\caption{\label{fig-lecture07-overview}第7回講義の全体像：価格硬直性、実質限界費用、自然水準、動学的
+IS 曲線、NKフィリップス曲線、およびテイラー・ルールの相互連関。}
+
+\end{figure}%
+
+\Needspace{0.18\textheight}
+
+本講義で理解すべき重要ポイントは、以下の4点です。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Rotemberg
+  型価格調整費用}の定式化と、企業が直面する動学的最適化問題を理解する。
+\item
+  企業の価格設定条件をゼロインフレ定常状態の周りで対数線形化し、前向きな\textbf{ニューケインジアン（NK）フィリップス曲線}を導出する。
+\item
+  柔軟価格のもとで達成される\textbf{「自然産出量」}と\textbf{「自然利子率」}を定義し、現実の産出・利子率との差である\textbf{「需給ギャップ」}の動学方程式（\textbf{動学的
+  IS 曲線}）へ整理する。
+\item
+  家計のオイラー方程式、NKフィリップス曲線、およびテイラー・ルールからなる\textbf{「3本のニューケインジアン方程式体系」}を完成させ、金融政策が実物経済に与える影響と古典派の二分法の崩壊を理解する。
+\end{enumerate}
+
+\section{表記と基本設定}\label{ux8868ux8a18ux3068ux57faux672cux8a2dux5b9a}
+
+本ノートにおける表記慣例として、大文字は各変数の「水準（\textbf{Level}）」を表し、小文字はゼロインフレ定常状態からの「対数乖離（\textbf{Log-deviation}）」を表します。第7回では、分析を最も明快にするため
+\(\alpha=0\)、政府支出 \(G_t=0\)、全要素生産性の定常状態
+\(a=0\)、労働不効用の尺度パラメータ \(\nu=1\)
+と設定します。さらに、第6回で導入した\textbf{是正補助金（Optimal
+Pigouvian Subsidy）} \(\tau_p^*=1/(\psi-1)\)
+を継続して適用することにより、独占的競争に伴う非効率なマークアップの歪みを相殺し、定常状態の実質限界費用を
+\(MC=1\) に揃えます。この結果、定常状態の水準変数は \(N=Y=C=W=MC=1\)
+という極めて簡潔で美しい形に正規化されます。
+
+主な水準変数の定義は以下の通りです。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+経済学的な意味
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(C_t\) & 集計消費 \\
+\(N_t\) & 総労働投入 \\
+\(Y_t\) & 集計産出量 \\
+\(W_t\) & 実質賃金 \\
+\(MC_t\) & 実質限界費用 \\
+\(D_t(j), D_t\) & 中間財企業 \(j\) の実質配当およびそのマクロ集計値 \\
+\(V_t(j)\) & 中間財企業 \(j\) の配当落ち株式価値 \\
+\(J_t(j)\) & 当期配当を含む中間財企業 \(j\) の期首企業価値 \\
+\(P_t\) & 最終財の物価水準 \\
+\(P_t^I(j)\) & 中間財企業 \(j\) が設定する個別価格 \\
+\(Y_t^I(j)\) & 中間財企業 \(j\) の個別産出量 \\
+\(N_t(j)\) & 中間財企業 \(j\) の個別労働投入量 \\
+\(TX_t^I(j), TX_t^I\) & 中間財企業 \(j\)
+に課される一括税およびそのマクロ集計額 \\
+\(R_t^N\) & 粗名目利子率（\textbf{Gross Nominal Interest Rate}） \\
+\(\Pi_t\) & 粗インフレ率（\textbf{Gross Inflation
+Rate：\(P_t/P_{t-1}\)}） \\
+\(\Pi_t^I(j)\) & 中間財企業 \(j\)
+の個別価格の粗変化率（\textbf{\(P_t^I(j)/P_{t-1}^I(j)\)}） \\
+\(a_t\) & 全要素生産性ショックの対数乖離（\textbf{技術水準は
+\(\exp(a_t)\)}） \\
+\(C, N, Y, W, MC, R^N, \Pi\) &
+それぞれに対応するゼロインフレ定常状態の値 \\
+\end{longtable}
+}
+
+主な基礎パラメータの設定は以下の通りです。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+記号
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+経済学的な意味
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(0<\beta<1\) & 家計の主観的割引因子 \\
+\(\gamma>0\) &
+異時点間代替弾力性の逆数（\textbf{相対的リスク回避度}） \\
+\(\varphi>0\) & フリッシュ労働供給弾力性の逆数 \\
+\(\alpha=0\) & 線形生産技術に固定する生産関数の資本弾力性 \\
+\(\nu=1\) & 労働不効用水準の正規化定数 \\
+\(\psi>1\) & 中間財バラエティ間の代替弾力性 \\
+\(\eta>0\) & Rotemberg 型価格調整費用の規模パラメータ \\
+\(\tau_p\) & 中間財企業に対する売上比例補助金率 \\
+\(\phi>1\) &
+テイラー・ルールにおけるインフレ反応係数（\textbf{テイラー原則}） \\
+\(0\leq\rho_a,\rho_m<1\) &
+技術ショックおよび金融政策ショックの持続性パラメータ \\
+\end{longtable}
+}
+
+\section{モデルの構成要素}\label{ux30e2ux30c7ux30ebux306eux69cbux6210ux8981ux7d20}
+
+\subsection{価格調整費用}\label{ux4fa1ux683cux8abfux6574ux8cbbux7528}
+
+中間財企業 \(j\) は自社の利潤を最大化するように個別製品価格 \(P_t^I(j)\)
+を決定しますが、価格を変更する際にはメニューコストなどの実物的な摩擦に直面します。個別価格の粗変化率を
+\(z\) と表すとき、価格調整費用は総産出に比例する形で \[
+f_P(z)Y_t
+\]
+と定式化されます。代表的な\textbf{Rotemberg（1982）型}の二次費用関数は以下のように与えられます。
+\[
+f_P(z)=\frac{\eta}{2}(z-1)^2,
+\qquad
+\eta>0
+\] ここで、企業ごとの価格変化率は
+\(z=\Pi_t^I(j) \equiv P_t^I(j)/P_{t-1}^I(j)\)
+であり、全企業が同一の行動をとる対称均衡ではすべての企業で
+\(\Pi_t^I(j)=\Pi_t\) となります。
+
+この特定化の大きな利点は、物価が一定であるゼロインフレ定常状態（\(z=1\)）において、
+\[
+f_P(1)=0,
+\qquad
+f_P'(1)=0
+\]
+が満たされる点にあります。すなわち、定常状態では価格調整費用そのものだけでなく、限界調整費用も完全にゼロとなります（\textbf{\(\eta=0\)
+は価格調整費用が全く存在しない柔軟価格の極限ケースであり、本章のモデルとは別に扱います}）。価格調整費用パラメータが正（\(\eta>0\)）である限り、企業は「今期のマークアップを最適化すること」だけでなく、「今期価格を変更することが翌期以降の価格調整費用にどのような影響を及ぼすか」という\textbf{動学的な費用効果}を織り込んで前向きに価格を決定することになります。
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textbf{補足：Calvo 型価格硬直性との関係}}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+現代のマクロ経済学において、価格硬直性をモデル化するもう一つの標準的な手法が\textbf{Calvo（1983）型価格設定}です。Calvo
+型では、各期に価格を自由に改定できる企業がランダムに選ばれる一定割合に限られ、残りの企業は過去の価格を据え置きます。このため、経済全体で企業の提示価格がばらつき、個別価格の分布（\textbf{価格分散}）を状態変数として追跡する複雑さが生じます。
+
+これに対して本講義で採用する\textbf{Rotemberg（1982）型}は、すべての企業が毎期自由に価格を変更できる一方で、価格改定率に応じた実物費用を負担するという定式化をとります。これにより、全企業が常に同一の価格を設定する「対称均衡」を直接扱うことができ、価格分散を追跡することなく簡潔に企業の最適価格設定条件を導出できます。
+
+重要なことに、ゼロインフレの効率的定常状態の周りで一次近似（\textbf{対数線形化}）を行う限り、Calvo
+型から導かれるニューケインジアン・フィリップス曲線と、Rotemberg
+型から導かれるフィリップス曲線は\textbf{数学的に全く同一の構造}を持ちます。Calvo
+型の価格据え置き確率と Rotemberg 型の調整費用パラメータ \(\eta\)
+を、フィリップス曲線の傾きが一致するように対応づければ、一次近似体系における動学的なインパルス応答は完全に一致します。さらに、第9回で扱う二次の厚生損失関数についても、この対応関係のもとで両モデルの評価係数は一致することが知られています（\textbf{詳細な比較や定常状態の役割については
+Lombardo and Vestin 2008
+を参照してください}）。本講義では、初学者が直観を把握しやすく計算が明快な
+Rotemberg 型を一貫して採用します。
+
+\end{tcolorbox}
+
+\subsection{家計の行動}\label{ux5bb6ux8a08ux306eux884cux52d5}
+
+代表的家計の効用最大化問題から得られる一階条件は以下の通りです。 \[
+\begin{aligned}
+W_t&=-\frac{U_{N,t}}{U_{C,t}},\\
+1&=\mathbb{E}_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right],\\
+V_t(j)&=\mathbb{E}_t\left[Q_{t,t+1}\{V_{t+1}(j)+D_{t+1}(j)\}\right].
+\end{aligned}
+\] ここで、\(Q_{t,t+1}\)
+は家計の消費の限界効用比で定義される\textbf{確率的割引因子（Stochastic
+Discount Factor：SDF）}であり、 \[
+Q_{t,t+1}\equiv \beta\frac{U_{C,t+1}}{U_{C,t}}
+\]
+と表されます。名目債券に関するオイラー方程式（\textbf{第2式}）では、次期に実現する粗インフレ率
+\(\Pi_{t+1}\) で名目総利子率を割った \(R_t^N/\Pi_{t+1}\)
+が、債券の\textbf{事後実質粗収益率}を表します。これは時点 \(t\)
+では不確実であり、オイラー方程式はSDFとの積の期待値で評価しています。後述する一次近似では、事前実質利子率の定常状態からの乖離を
+\(r_t=r_t^N-\mathbb{E}_t\pi_{t+1}\) と表します。
+
+また、企業株式の保有に関する一階条件（\textbf{第3式}）において、多期間の確率的割引因子を
+\(Q_{t,t+i}\equiv \beta^i U_{C,t+i}/U_{C,t}\)
+と定義し、バブルの発生を排除する横断性条件（\textbf{Transversality
+Condition}）を適用して前方へ繰り返し代入すると、 \[
+V_t(j)
+=
+\mathbb{E}_t
+\left[
+\sum_{i=1}^{\infty}
+Q_{t,t+i}D_{t+i}(j)
+\right]
+\] が得られます。ここで \(V_t(j)\)
+は期首の配当支払いが行われた直後の\textbf{「配当落ち株式価値（Ex-dividend
+Stock
+Value）」}を表しています（\textbf{第3回で詳述した資産価格理論の構造です}）。本回では価格設定に必要な価値のタイミングのみを利用します。
+
+\subsection{中間財企業の行動}\label{ux4e2dux9593ux8ca1ux4f01ux696dux306eux884cux52d5}
+
+第7回では \(\alpha=0\)
+とするため、中間財企業の生産技術は労働に関して線形です。Dixit--Stiglitz
+型の最終財企業から直面する自社製品への需要関数と生産関数は以下のように与えられます。
+\[
+Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{P_t}\right)^{-\psi},
+\qquad
+Y_t^I(j)=\exp(a_t)N_t(j)
+\]
+線形生産技術のもとでは限界費用と平均可変費用が一致するため、実質限界費用
+\(MC_t\) と総労働費用は以下のように表されます。 \[
+MC_t= W_t\exp(-a_t),
+\qquad
+W_tN_t(j)=MC_tY_t^I(j)
+\] 政府は独占の非効率性を是正するために売上比例補助金 \(\tau_p\)
+を交付し、その財源は各企業への一括税 \(TX_t^I(j)\)
+によって賄われます。企業 \(j\)
+の実質配当（\textbf{実質利潤}）は次の通りです。 \[
+\begin{aligned}
+D_t(j)={}&
+(1+\tau_p)\frac{P_t^I(j)}{P_t}Y_t^I(j)
+-W_tN_t(j)\\
+&-f_P\left(\frac{P_t^I(j)}{P_{t-1}^I(j)}\right)Y_t
+-TX_t^I(j).
+\end{aligned}
+\] 企業は個別の価格や生産量を決定する際、一括税 \(TX_t^I(j)\)
+を所与（\textbf{自らの決定に依存しない外生的なもの}）として扱います。したがって、自社の現在および過去の相対価格
+\(s_t(j), s_{t-1}(j)\)、生産量、労働投入量に関する一括税の偏微分はすべてゼロとなります。
+
+価格設定の動学問題を解くため、中間財企業 \(j\) の相対価格を \[
+s_t(j)\equiv \frac{P_t^I(j)}{P_t}
+\]
+と定義します。このとき、自社価格の粗変化率は以下のように分解できます。
+\[
+\Pi_t^I(j)
+\equiv
+\frac{P_t^I(j)}{P_{t-1}^I(j)}
+=
+\frac{s_t(j)}{s_{t-1}(j)}\Pi_t
+\] ここで注目すべきは、前期の相対価格 \(s_{t-1}(j)\)
+が今期の価格調整費用に含まれている点です。したがって、企業にとって前期の相対価格は意思決定に影響を与える\textbf{「状態変数（State
+Variable）」}となります。
+
+企業の動学的最適化問題を定式化するため、当期の配当を含む\textbf{「期首企業価値（Cum-dividend
+Firm Value）」}を
+\(J_t(j)\)、配当支払い後の\textbf{「配当落ち企業価値」}を \(V_t(j)\)
+と区別します。両者の間には以下の関係が成り立ちます。 \[
+J_t(j)=D_t(j)+V_t(j),
+\qquad
+V_t(j)=\mathbb{E}_t\left[Q_{t,t+1}J_{t+1}(j)\right]
+\] これらを用いると、企業が解くべき動学的計画問題は以下の\textbf{Bellman
+方程式}として表現されます。 \[
+\begin{aligned}
+J_t(s_{t-1}(j))
+=\max_{s_t(j)}\Bigg\{
+&\left[(1+\tau_p)s_t(j)-MC_t\right]
+Y_ts_t(j)^{-\psi}\\
+&-f_P\left(
+\frac{s_t(j)}{s_{t-1}(j)}\Pi_t
+\right)Y_t
+-TX_t^I(j)\\
+&+\mathbb{E}_t\left[
+Q_{t,t+1}J_{t+1}(s_t(j))
+\right]
+\Bigg\}
+\end{aligned}
+\] 当期の選択変数 \(s_t(j)\) に関する一階条件（\textbf{FOC}）をとると、
+\[
+\begin{aligned}
+0={}&
+Y_ts_t(j)^{-\psi}
+\left[
+(1+\tau_p)(1-\psi)
++\psi\frac{MC_t}{s_t(j)}
+\right]\\
+&-Y_tf_P'\left(\Pi_t^I(j)\right)
+\frac{\Pi_t}{s_{t-1}(j)}\\
+&+\mathbb{E}_t\left[
+Q_{t,t+1}J_{s,t+1}(s_t(j))
+\right]
+\end{aligned}
+\] となります。ここで \(J_{s,t+1}\)
+は来期の期首企業価値をその状態変数（\textbf{今期選んだ相対価格
+\(s_t(j)\)}）で偏微分した限界継続価値です。一方、Bellman
+方程式に\textbf{包絡線定理（Envelope Theorem）}を適用すると、状態変数
+\(s_{t-1}(j)\) に関する微分は以下のようになります。 \[
+J_{s,t}(s_{t-1}(j))
+=
+Y_t f_P'\left(\Pi_t^I(j)\right)
+\frac{\Pi_t^I(j)}{s_{t-1}(j)}
+\] 今期選んだ \(s_t(j)\)
+は翌期において状態変数となるため、この包絡線条件を1期先送りした関係 \[
+J_{s,t+1}(s_t(j))
+=
+Y_{t+1} f_P'\left(\Pi_{t+1}^I(j)\right)
+\frac{\Pi_{t+1}^I(j)}{s_t(j)}
+\] を一階条件の期待値項へ代入することができます。
+
+すべての企業が同一の選択を行う\textbf{対称均衡（Symmetric
+Equilibrium）}では、すべての企業で \(s_t(j)=s_{t-1}(j)=1\)、かつ
+\(\Pi_t^I(j)=\Pi_t\) が成り立ちます。これらを代入して両辺を総産出
+\(Y_t\)
+で割ると、対称均衡における\textbf{非線形価格設定条件}が得られます。 \[
+\begin{aligned}
+\Pi_tf_P'(\Pi_t)={}&
+\psi\left[
+MC_t-(1+\tau_p)\left(1-\frac{1}{\psi}\right)
+\right]\\
+&+\mathbb{E}_t\left[
+Q_{t,t+1}\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}f_P'(\Pi_{t+1})
+\right]
+\end{aligned}
+\] この式は極めて豊かな経済学的直観を含んでいます。 -
+もし補助金が存在しない場合（\(\tau_p=0\)）、第1項の内側の定数項は
+\(1-1/\psi = (\psi-1)/\psi\) となります。 - 一方、是正補助金
+\(\tau_p^* = 1/(\psi-1)\) を交付すると、\((1+\tau_p^*)(1-1/\psi)=1\)
+となるため、第1項は \(\psi(MC_t - 1)\)
+へと単純化され、ゼロインフレ定常状態において実質限界費用が \(MC=1\)
+に正規化されます。 - 第6回の柔軟価格モデルでは毎期 \(MC_t=1\)
+が成立していましたが、価格調整費用が存在する本モデルでは、企業が価格を瞬時に調整できないため、実質限界費用
+\(MC_t\) は景気変動に応じて1の周りで変動することになります。
+
+\subsection{金融政策}\label{ux91d1ux878dux653fux7b56}
+
+中央銀行は、名目利子率を以下の\textbf{テイラー・ルール（Taylor
+Rule）}に従って設定します。 \[
+R_t^N=\frac{1}{\beta}\exp(-m_t)\Pi_t^\phi,
+\qquad
+\phi>1
+\] ここで、\(m_t\)
+は外生的な金融政策ショックであり、正の実現値（\(m_t>0\)）は同じインフレ率のもとで名目利子率を引き下げる\textbf{「金融緩和ショック」}を意味します。このショックは以下の一階自己回帰過程（\textbf{AR(1)過程}）に従います。
+\[
+m_t=\rho_m m_{t-1}+e_t^m,
+\qquad
+0\leq\rho_m<1
+\]
+
+パラメータ \(\phi>1\) は\textbf{テイラー原則（Taylor
+Principle）}と呼ばれ、中央銀行がインフレ率の上昇に対して名目利子率をそれ以上に（\textbf{1対1を超えて}）引き上げる積極的な姿勢を表します。事前的実質利子率は期待インフレ率にも依存するため、\(\phi>1\)
+が常に機械的に実質利子率を引き上げるわけではありませんが、この条件は前向きな期待を含むニューケインジアンモデルにおいて、インフレの自己実現的な発散や不決定性を防ぎ、\textbf{合理的期待均衡の一意性（局所決定性）}を担保する決定的な役割を果たします。
+
+\subsection{政府会計と資源制約}\label{ux653fux5e9cux4f1aux8a08ux3068ux8cc7ux6e90ux5236ux7d04}
+
+補助金の財源は企業に課される一括税によって賄われます。最終財企業のゼロ利潤条件を用いると、政府の予算制約式は
+\[
+\begin{aligned}
+TX_t^I
+&\equiv\int_0^1TX_t^I(j)\,dj\\
+&=\tau_p\int_0^1
+\frac{P_t^I(j)}{P_t}Y_t^I(j)\,dj
+=\tau_pY_t
+\end{aligned}
+\] となります。したがって、対称均衡における集計実質配当は \[
+D_t
+=Y_t-W_tN_t-f_P(\Pi_t)Y_t
+\]
+に戻ります。売上比例補助金と一括税は民間部門の内部での所得移転に過ぎないため集計的には相殺されますが、価格調整費用
+\(f_P(\Pi_t)Y_t\)
+は\textbf{実物的な資源の純損失（死荷重）}として経済から消費可能な資源を奪います。家計の予算制約と統合した経済全体の\textbf{総資源制約式}は以下のように与えられます。
+\[
+Y_t=C_t+f_P(\Pi_t)Y_t
+\] ここで、\(f_P(1)=0\) かつ \(f_P'(1)=0\)
+であるため、ゼロインフレ定常状態の周りで一次近似を行うと、価格調整費用による資源損失の一次項は完全に消失し、\(c_t=y_t\)
+という極めてシンプルな関係になります（\textbf{第8回ではここに政府購入
+\(G_t\) が加わり、\(Y_t=C_t+G_t+f_P(\Pi_t)Y_t\) と拡張されます}）。
+
+\section{非線形体系と定常状態}\label{ux975eux7ddaux5f62ux4f53ux7cfbux3068ux5b9aux5e38ux72b6ux614b}
+
+家計の消費から得る効用関数を以下のように定義します。 \[
+u(C)=
+\begin{cases}
+\dfrac{C^{1-\gamma}-1}{1-\gamma},&\gamma\neq1,\\[6pt]
+\log C,&\gamma=1
+\end{cases}
+\] 期間効用関数および消費の限界効用は \[
+U(C_t,N_t)=u(C_t)-\frac{N_t^{1+\varphi}}{1+\varphi},
+\qquad
+U_{C,t}=C_t^{-\gamma}
+\] です。労働不効用の尺度パラメータは \(\nu=1\) に正規化しています。
+
+第6回と同様に是正補助率 \(\tau_p^*=1/(\psi-1)\)
+を維持します。家計、企業、中央銀行の最適化行動、および資源制約から得られる非線形方程式は、以下の6本にまとめられます。
+\[
+\begin{aligned}
+1&=\mathbb{E}_t\left[
+\beta\left(\frac{C_{t+1}}{C_t}\right)^{-\gamma}
+\frac{R_t^N}{\Pi_{t+1}}
+\right],\\
+W_t&=N_t^\varphi C_t^\gamma,\\
+W_t&=MC_t\exp(a_t),\\
+Y_t&=\exp(a_t)N_t,\\
+Y_t&=C_t+f_P(\Pi_t)Y_t,\\
+R_t^N&=\frac{1}{\beta}\exp(-m_t)\Pi_t^\phi.
+\end{aligned}
+\] これに前節で導出した非線形価格設定条件、および外生ショック過程 \[
+a_t=\rho_a a_{t-1}+e_t^a,
+\qquad
+m_t=\rho_m m_{t-1}+e_t^m
+\]
+を加えることで、マクロ経済の配分ブロックが完全に閉じます。なお、配当落ち株価
+\(V_t(j)\)
+は、ここで得られた配分と企業価値評価式を用いて事後的に計算できます。
+
+\subsection{ゼロインフレ定常状態}\label{ux30bcux30edux30a4ux30f3ux30d5ux30ecux5b9aux5e38ux72b6ux614b}
+
+ショックが存在しない定常状態（\(a=m=0\)）において、物価が一定であるゼロインフレ定常状態（\(\Pi=1\)）を導出します。\(f_P(1)=0\)
+および \(f_P'(1)=0\)
+より価格調整費用がゼロとなるため、非線形価格設定条件から得られる定常状態の実質限界費用は以下のようになります。
+\[
+MC
+=(1+\tau_p)\left(1-\frac{1}{\psi}\right)
+\] 資源制約と線形生産技術から \(C=Y=N\) であり、企業の労働需要条件から
+\(W=MC\) です。これらを家計の労働供給条件
+\(W=N^\varphi C^\gamma = N^{\gamma+\varphi}\)
+に代入すると、一般的な補助率のもとでの定常状態水準は \[
+N=Y=C
+=MC^{1/(\gamma+\varphi)},
+\qquad
+W=MC
+\] と求まります。
+
+ここで是正補助率 \(\tau_p^*=1/(\psi-1)\) を適用すると、\(MC=1\)
+となります。これを \(\nu=1\)、\(\alpha=0\)、\(a=0\) のもとで評価すると、
+\[
+N=Y=C=W=MC=\Pi=1
+\]
+という極めて明快な定常状態が得られます。もし補助金が存在しない場合（\(\tau_p=0\)）は、\(MC=(\psi-1)/\psi<1\)
+となり、独占の歪みによって労働、産出、消費、実質賃金の定常水準はいずれも1を下回ります。本回では、この是正補助金のもとでの効率的な定常状態をベンチマークとし、価格硬直性と利子率の果たすマクロ的役割に焦点を絞ります。
+
+異時点間の消費選択条件において、定常状態では消費が一定（\(C_{t+1}=C_t\)）であるため、\(Q=\beta\)
+となります。実質粗利子率を \(R\) と書くと、 \[
+1=\beta R \implies R=\frac{1}{\beta}
+\]
+となります。定常状態ではインフレ率がゼロ（\(\Pi=1\)）であるため、粗名目利子率の定常状態も一致して
+\[
+R^N=\frac{1}{\beta}
+\]
+となります。ここで重要なのは、実物的な選好と技術によって定常状態の実物配分およびそれに整合的な実質利子率が一意に決定されている点です。名目利子率とインフレ率をどのように組み合わせてその実質利子率を実現するかは、金融政策ルールと価格設定行動によって決まります。
+
+\section{対数線形化と実質限界費用}\label{ux5bfeux6570ux7ddaux5f62ux5316ux3068ux5b9fux8ceaux9650ux754cux8cbbux7528}
+
+ゼロインフレ・是正補助金の定常状態の周りで各方程式を一次近似（\textbf{対数線形化}）します。名目利子率、インフレ率、および実質限界費用の対数乖離を以下のように定義します。
+\[
+\begin{aligned}
+r_t^N&\equiv\log\left(\frac{R_t^N}{1/\beta}\right),
+&\pi_t&\equiv\log\left(\frac{\Pi_t}{1}\right),\\
+mc_t&\equiv\log\left(\frac{MC_t}{MC}\right).
+\end{aligned}
+\]
+事前的実質利子率の対数乖離は、一次近似上\textbf{フィッシャー方程式（Fisher
+Equation）}を用いて \(r_t \equiv r_t^N - \mathbb{E}_t \pi_{t+1}\)
+と定義されます。本回の基準設定では \(MC=1\)、かつ \(Y=C=N=W=1\)
+であるため、その他の小文字もすべて対応する水準変数の定常状態からの対数乖離を表します。
+
+非線形価格設定条件を一般的な定常値 \(MC\) の周りで一次近似すると、 \[
+\eta\pi_t
+=\psi MC\,mc_t
++\beta\eta\mathbb{E}_t\pi_{t+1}
+\] が得られます。ここで、将来項に含まれる確率的割引因子 \(Q_{t,t+1}\)
+や産出成長率 \(Y_{t+1}/Y_t\) の一次変動は、定常状態の限界調整費用
+\(f_P'(1)=0\)
+と掛け合わされるため二次以上の微小項となって消失します。したがって、両辺を
+\(\eta\)
+で割ると、以下の\textbf{ニューケインジアン（NK）フィリップス曲線}が導かれます。
+\[
+\pi_t
+=\beta\mathbb{E}_t\pi_{t+1}
++\kappa_pmc_t,
+\qquad
+\kappa_p\equiv\frac{\psi MC}{\eta}
+\] 是正補助金定常状態（\(MC=1\)）のもとでは \(\kappa_p=\psi/\eta\)
+であり、無補助定常状態（\(MC=(\psi-1)/\psi\)）のもとでは
+\(\kappa_p=(\psi-1)/\eta\)
+となります。これは単なる表記の違いではなく、展開の基準とする定常状態の経済的歪みの有無を反映しています。
+
+対数線形化された条件をまとめると、以下の8本の方程式体系が得られます。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+名称
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+方程式
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+経済学的な意味
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+フィッシャー方程式 & \(r_t=r_t^N-\mathbb{E}_t\pi_{t+1}\) &
+実質金利の定義（\textbf{名目金利から期待インフレ率を控除}） \\
+オイラー方程式 & \(r_t=\gamma\mathbb{E}_t\Delta c_{t+1}\) &
+家計の異時点間の消費配分条件 \\
+労働供給条件 & \(w_t=\gamma c_t+\varphi n_t\) &
+賃金と限界代替率の一致条件 \\
+労働需要条件 & \(w_t=mc_t+a_t\) & 企業の労働需要と実質限界費用の関係 \\
+生産関数 & \(y_t=a_t+n_t\) & 線形技術のもとでの産出と労働の連動 \\
+総資源制約 & \(y_t=c_t\) & 価格調整費用の一次項が消失した財市場均衡 \\
+NKフィリップス曲線 & \(\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_p mc_t\)
+& 価格硬直性のもとでのインフレ率の決定 \\
+テイラー・ルール & \(r_t^N=\phi\pi_t-m_t\) &
+中央銀行の名目金利設定ルール \\
+技術ショック & \(a_t=\rho_a a_{t-1}+e_t^a\) &
+全要素生産性の自己回帰過程 \\
+金融政策ショック & \(m_t=\rho_m m_{t-1}+e_t^m\) &
+金融緩和ショックの自己回帰過程 \\
+\end{longtable}
+}
+
+この体系における内生変数は以下の8個です。 \[
+\{r_t,r_t^N,\pi_t,c_t,w_t,n_t,y_t,mc_t\}
+\] 外生状態変数は \(\{a_t, m_t\}\)
+の2個です。方程式の数と内生変数の数が一致していることは必要条件に過ぎず、有界な合理的期待解の一意性は自動的には保証されません。本モデルのように現在のインフレ率のみに反応する単純な政策ルールのもとでは、\(0<\beta<1\)、\(\gamma>0\)、\(\kappa_p>0\)
+の前提のもとで、テイラー原則 \(\phi>1\)
+が局所的な一意解の存在（\textbf{局所決定性}）を保証します（\textbf{金利平滑化項や産出反応項を追加する場合は、改めて
+Blanchard--Kahn 条件を検証する必要があります}）。
+
+資源制約式 \(c_t=y_t\)
+を用いると、オイラー方程式は産出を用いて以下のように書き直せます。 \[
+r_t=\gamma\left(\mathbb{E}_t y_{t+1}-y_t\right)
+\]
+
+\subsection{実質限界費用の解法}\label{ux5b9fux8ceaux9650ux754cux8cbbux7528ux306eux89e3ux6cd5}
+
+次に、実質限界費用 \(mc_t\)
+を産出と技術ショックのみで表現し、柔軟価格のもとでの基準水準との乖離へ整理します。
+
+まず、生産関数より労働投入量は以下のように表されます。 \[
+n_t=y_t-a_t
+\] これを家計の労働供給条件（\(c_t=y_t\) を代入したもの）に代入すると、
+\[
+w_t=\gamma y_t+\varphi(y_t-a_t)
+=(\gamma+\varphi)y_t-\varphi a_t
+\] が得られます。一方、企業の労働需要条件からは \[
+w_t=mc_t+a_t
+\] が成り立ちます。両式の実質賃金 \(w_t\)
+を消去して整理すると、実質限界費用について以下の関係式が得られます。 \[
+mc_t=
+(\gamma+\varphi)y_t-(1+\varphi)a_t
+\]
+この式はモデルを解く上で極めて重要な鍵となります。価格が硬直的な経済では、企業は直面する需要に応じて受動的に生産量を供給しなければなりません。産出
+\(y_t\)
+が拡大すると、必要な労働量が増大して家計の労働不効用が高まるだけでなく、消費の増加によって限界効用が低下するため、家計はより高い実質賃金を要求します（\textbf{\((\gamma+\varphi)y_t\)
+の項}）。その結果、企業の限界費用が押し上げられます。一方、技術進歩
+\(a_t\)
+が生じると、労働生産性が向上して単位あたりの必要労働量が減少するため、限界費用が直接的に引き下げられます（\textbf{\(-(1+\varphi)a_t\)
+の項}）。
+
+これを
+NKフィリップス曲線に代入すると、産出と技術で表されたインフレ動学方程式が得られます。
+\[
+\pi_t=
+\beta\mathbb{E}_t\pi_{t+1}
++\kappa_p\{(\gamma+\varphi)y_t-(1+\varphi)a_t\}
+\]
+
+\section{自然産出量・自然利子率・NK方程式}\label{ux81eaux7136ux7523ux51faux91cfux81eaux7136ux5229ux5b50ux7387nkux65b9ux7a0bux5f0f}
+
+\subsection{自然産出量と需給ギャップ}\label{ux81eaux7136ux7523ux51faux91cfux3068ux9700ux7d66ux30aeux30e3ux30c3ux30d7}
+
+\textbf{「自然産出量（Natural
+Output：\(y_t^f\)）」}とは、同じ実物ショックに直面しながらも、すべての企業が価格を完全に柔軟に改定できる場合に達成される産出水準を指します。本講義では是正補助金を導入しているため、柔軟価格のもとでは毎期
+\(MC_t=1\)、すなわち対数乖離で見て \[
+mc_t=0
+\]
+が常に成立します。したがって、この環境では自然産出量は独占の歪みも価格硬直性の歪みも存在しない\textbf{「パレート効率的な産出量（潜在生産量）」}と完全に一致します（\textbf{もし補助金がなければ、自然産出量は柔軟価格水準ではあっても独占の歪みが残る非効率な水準となります}）。
+
+\(mc_t=0\) を実質限界費用の決定式に代入すると、 \[
+0=
+(\gamma+\varphi)y_t^f
+-(1+\varphi)a_t
+\] となります。したがって、自然産出量は以下のように一意に求まります。 \[
+y_t^f=
+\frac{1+\varphi}{\gamma+\varphi}
+a_t
+\equiv
+\zeta_a a_t,
+\qquad
+\zeta_a\equiv
+\frac{1+\varphi}{\gamma+\varphi}
+\] この弾力性 \(\zeta_a\) は、第4回で学んだ固定資本・柔軟価格モデルを
+\(\alpha=0\)
+に特殊化した場合の技術ショックに対する産出反応と完全に一致します。
+
+ここで、現実の産出量と自然産出量との乖離として\textbf{「需給ギャップ（産出ギャップ：Output
+Gap）」}を \[
+x_t\equiv y_t-y_t^f
+\]
+と定義します。これを用いると、実質限界費用は以下のように極めて簡潔かつ美しく書き直せます。
+\[
+mc_t=
+(\gamma+\varphi)x_t
+\] すなわち、価格硬直性のもとでの実質限界費用の変動は、需給ギャップ
+\(x_t\) に完全に比例します。この関係を
+NKフィリップス曲線へ代入すると、おなじみの\textbf{需給ギャップ表示の新ケインジアン・フィリップス曲線}が得られます。
+\[
+\pi_t=\beta\mathbb{E}_t\pi_{t+1}+\kappa_x x_t
+\] ここで、ギャップに対するインフレの反応係数は \[
+\kappa_x\equiv
+\kappa_p(\gamma+\varphi)>0
+\] と定義されます。
+
+\subsection{自然利子率と動学的 IS
+曲線}\label{ux81eaux7136ux5229ux5b50ux7387ux3068ux52d5ux5b66ux7684-is-ux66f2ux7dda}
+
+\textbf{「自然利子率（Natural Rate of
+Interest：\(r_t^f\)）」}とは、価格が完全に柔軟な経済において自然産出量を達成する実質利子率を指します。これは中央銀行が直接設定できる政策金利ではなく、自然産出量の時間経路に沿った消費成長と整合的な\textbf{「実物的な基準金利（実質均衡利子率）」}です。
+
+オイラー方程式 \(r_t=\gamma\mathbb{E}_t(y_{t+1}-y_t)\)
+に自然産出量を代入すると、自然利子率は以下のように導かれます。 \[
+r_t^f
+=
+\gamma\mathbb{E}_t(y_{t+1}^f-y_t^f)
+\] 技術ショックが自己回帰過程 \(a_{t+1}=\rho_a a_t+e_{t+1}^a\)
+に従う場合、条件付き期待値は \(\mathbb{E}_t a_{t+1}=\rho_a a_t\)
+となるため、自然利子率は以下のように具体化されます。 \[
+r_t^f
+=
+\gamma\zeta_a(\rho_a-1)a_t
+\] 技術ショックが一時的であり \(0\leq\rho_a<1\)
+を満たす場合、正の技術ショック（\(a_t>0\)）は\textbf{自然利子率を低下させる}（\(r_t^f<0\)）という重要な性質を持ちます。この直観は次のように理解できます。当期に技術水準が上昇した後に将来にかけて元の水準へと戻る過程では、自然な消費水準は現在から将来にかけて低下していきます（\(\mathbb{E}_t y_{t+1}^f - y_t^f < 0\)）。家計に現在の高い消費を受け入れさせ、将来への貯蓄を抑制して資源を余すことなく消費させるためには、実質利子率が低下して今期の消費を促す必要があるためです。
+
+現実のオイラー方程式から自然利子率の式を差し引くと、需給ギャップに関する\textbf{動学的
+IS 曲線（Dynamic IS Curve）}が導かれます。 \[
+x_t=\mathbb{E}_t x_{t+1}
+-\frac{1}{\gamma}\left(r_t-r_t^f\right)
+\] さらに、フィッシャー方程式 \(r_t=r_t^N-\mathbb{E}_t\pi_{t+1}\)
+を用いて名目利子率と期待インフレ率で表すと、 \[
+x_t=\mathbb{E}_t x_{t+1}
+-\frac{1}{\gamma}
+\left(r_t^N-\mathbb{E}_t\pi_{t+1}-r_t^f\right)
+\] となります。
+
+\Needspace{0.50\textheight}
+
+\subsection{3本のニューケインジアン方程式}\label{ux672cux306eux30cbux30e5ux30fcux30b1ux30a4ux30f3ux30b8ux30a2ux30f3ux65b9ux7a0bux5f0f}
+
+以上の導出により、\(\alpha=0\)、政府支出なしの基本 RANK
+モデルは、以下の\textbf{3本のニューケインジアン方程式}へと集約されます。
+\[
+\begin{aligned}
+x_t
+&=
+\mathbb{E}_t x_{t+1}
+-\frac{1}{\gamma}(r_t-r_t^f),\\
+\pi_t
+&=
+\beta\mathbb{E}_t\pi_{t+1}
++\kappa_x x_t,\\
+r_t
+&=
+\phi\pi_t-\mathbb{E}_t\pi_{t+1}-m_t.
+\end{aligned}
+\] 各方程式の経済学的役割は以下の通りです。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{動学的 IS 曲線（第1式）}： 期待される将来の需給ギャップ
+  \(\mathbb{E}_t x_{t+1}\) を所与とすれば、実際の実質利子率 \(r_t\)
+  と自然利子率 \(r_t^f\)
+  の差（\textbf{実質金利ギャップ}）の拡大は、借入コストを高めて消費を抑制し、当期の需給ギャップ
+  \(x_t\) を押し下げます。
+\item
+  \textbf{新ケインジアン・フィリップス曲線（第2式）}： 需給ギャップ
+  \(x_t\)
+  が正（\textbf{総需要が潜在供給を超過}）であれば、企業の限界費用が上昇し、当期のインフレ率
+  \(\pi_t\)
+  を押し上げます。同時に、企業は前向きに価格を設定するため、期待将来インフレ率
+  \(\mathbb{E}_t \pi_{t+1}\) も当期のインフレ率を直接押し上げます。
+\item
+  \textbf{実質利子率表示のテイラー・ルール（第3式）}：
+  名目利子率のテイラー・ルールから期待インフレ率を差し引いたものであり、中央銀行の政策姿勢が実際の実質利子率をどのように決定するかを示します。
+\end{enumerate}
+
+この3本の方程式体系は、第1回で学んだマクロ経済学の伝統的な\textbf{AD-AS
+図}と直観的に対応づけて理解することができます。横軸に需給ギャップ
+\(x_t\)、縦軸にインフレ率 \(\pi_t\)
+をとると、NKフィリップス曲線は右上がりの\textbf{NK-AS
+曲線}となり、動学的 IS
+曲線とテイラー・ルールを連立させて実質金利を消去した関係は右下がりの\textbf{NK-AD
+曲線}となります。
+
+図~\ref{fig-lecture07-nk-ad-as}
+は、期待将来インフレ率、期待将来需給ギャップ、および自然利子率を所与とした場合の当期の条件付き関係を示しています。将来への期待が明示的に含まれているため、第1回の静学的な
+AD-AS
+曲線とは異なり、期待の形成と同時にシフトする動学的な曲線である点に注意が必要です。
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio]{lecture07_files/mediabag/figures/lecture07/nk_ad_as_mapping.pdf}
+
+}
+
+\caption{\label{fig-lecture07-nk-ad-as}NK版 AD-AS
+表現：期待を所与とし、NKフィリップス曲線を NK-AS、動学的 IS
+曲線とテイラー・ルールを合わせた関係を NK-AD
+として、需給ギャップとインフレ率の平面で読む。}
+
+\end{figure}%
+
+期待と自然利子率を所与とすれば、金融緩和ショック \(m_t>0\)
+は同一のインフレ率のもとで名目金利および実質金利を引き下げ、総需要を刺激して
+NK-AD
+曲線を右上方向へとシフトさせます。ただし、合理的期待均衡における最終的な反応を正確に求めるためには、将来の期待形成と当期の変数を連立させて同時に解く必要があります。
+
+\Needspace{0.30\textheight}
+
+\subsection{実際の利子率と古典派の二分法}\label{ux5b9fux969bux306eux5229ux5b50ux7387ux3068ux53e4ux5178ux6d3eux306eux4e8cux5206ux6cd5}
+
+第4回で扱った柔軟価格モデルでは、技術と選好という実物的な要因のみによって実物配分が完全に決定され、オイラー方程式はその消費経路に整合的な実質利子率を事後的に決めるに過ぎませんでした。名目利子率、インフレ率、物価水準といった名目変数の動きは実物変数の決定から完全に切り離されており、これが\textbf{「古典派の二分法（Classical
+Dichotomy）」}の本質でした。
+
+しかし、本回で導入した価格硬直性のもとでは、この二分法が短期的に崩壊します。中央銀行は以下のテイラー・ルールに従って名目利子率を設定します。
+\[
+r_t^N=\phi\pi_t-m_t
+\] これに対応する実際の実質利子率は、フィッシャー方程式より \[
+r_t=\phi\pi_t-m_t-\mathbb{E}_t\pi_{t+1}
+\] となります。期待される将来ギャップ \(\mathbb{E}_t x_{t+1}\)
+を所与とすれば、実際の実質利子率と自然利子率の差 \(r_t - r_t^f\)
+の拡大は当期の需給ギャップ \(x_t\)
+を抑制し、逆に実質利子率の低下は需給ギャップを刺激します。ただし、動学的
+IS 曲線 \[
+x_t-\mathbb{E}_t x_{t+1}
+=-\frac{1}{\gamma}(r_t-r_t^f)
+\] が示すように、当期の金利差だけで \(x_t\)
+の絶対的な正負が決まるわけではありません。例えば、たとえ当期に実質利子率が高く
+\(r_t>r_t^f\) であったとしても、将来の力強い好況が予想されて
+\(\mathbb{E}_t x_{t+1}\)
+が十分に大きな正の値をとれば、当期の需給ギャップ \(x_t\)
+は正となり得ます。将来の需給ギャップが平均的にゼロである（\(\mathbb{E}_t x_{t+1}=0\)）という追加的な前提が置かれて初めて、\(r_t>r_t^f\)
+から直ちに \(x_t<0\)（\textbf{不況}）を結論づけることができます。
+
+このように、価格硬直性が存在する経済では\textbf{金融政策が実物変数に強い影響を及ぼします}。中央銀行による名目利子率の変更は、期待インフレ率が瞬時に完全に調整しない限り実質利子率を動かします。そして、その実質利子率と自然利子率との乖離が動学的
+IS 曲線を通じて財への需要を刺激または抑制し、生み出された需給ギャップが
+NKフィリップス曲線を通じてインフレ率を動かしていくのです。
+
+\section{まとめと第8回への接続}\label{ux307eux3068ux3081ux3068ux7b2c8ux56deux3078ux306eux63a5ux7d9a}
+
+第7回では、\(\alpha=0\)、政府支出なしという最も純粋な設定のもとで、基本
+RANK モデルの理論的骨格を構築しました。Rotemberg
+型価格調整費用を導入することにより、企業は現在の利潤だけでなく「現在の価格変更が将来の価格改定費用に及ぼす影響」をも考慮して前向きに価格を設定するようになり、実質限界費用と期待将来インフレ率によって当期のインフレ率が決定される\textbf{ニューケインジアン・フィリップス曲線}が導かれました。
+
+また、是正補助金によってゼロインフレ定常状態の実質限界費用を \(MC=1\)
+に正規化しましたが、価格硬直性のもとでは現実の実質限界費用 \(MC_t\)
+は景気循環に応じて1の周りで変動します。中央銀行が操作する実際の実質利子率と実物的な基準である自然利子率とのギャップが需給ギャップを生み出し、需給ギャップが実質限界費用を通じてインフレ率を動かすという一連の伝達メカニズムを、\textbf{動学的
+IS
+曲線}、\textbf{NKフィリップス曲線}、および\textbf{実質金利表示のテイラー・ルール}という3本の方程式体系へ美しく整理しました。
+
+第8回では、この体系に資本分配率
+\(\alpha>0\)（\textbf{固定資本の存在}）と政府支出を再導入します。モデルの基礎パラメータを再定義するのではなく、
+\[
+\tilde{\gamma}=\frac{\gamma}{1-G_Y},
+\qquad
+\tilde{\varphi}=\frac{\varphi+\alpha}{1-\alpha}
+\] という\textbf{合成係数（Composite
+Coefficients）}を導入することにより、本回で導出した3本のニューケインジアン方程式の構造をそのまま完全に維持しながら一般化できることを示します。その際、自然産出量や自然利子率には技術ショックだけでなく政府支出ショックも直接組み込まれることになります。
+
+\Needspace{0.32\textheight}
+
+\section{参考文献}\label{ux53c2ux8003ux6587ux732e}
+
+\textbf{基本参考文献}
+
+予習では本回の講義ノートの本編と基本問題に目を通してください。以下は、各項目に示した論点を授業後に復習・深化させるための主要な学術文献です。
+
+\begin{itemize}
+\tightlist
+\item
+  Galí, Jordi (2015) \emph{Monetary Policy, Inflation, and the Business
+  Cycle} (2nd ed.). Princeton University Press. 第3章を参照。Calvo
+  型の価格設定からニューケインジアン・フィリップス曲線を導出する標準的なアプローチを確認するために最適。
+\item
+  Woodford, Michael (2003) \emph{Interest and Prices: Foundations of a
+  Theory of Monetary Policy}. Princeton University Press.
+  価格硬直性モデルにおける金融政策分析の金字塔的体系書。
+\item
+  Clarida, Richard, Jordi Galí, and Mark Gertler (1999) ``The Science of
+  Monetary Policy: A New Keynesian Perspective.'' \emph{Journal of
+  Economic Literature}, 37(4), 1661-1707.
+  \href{https://doi.org/10.1257/jel.37.4.1661}{doi}.
+  ニューケインジアン・アプローチによる金融政策分析のエッセンスを明快に解説したサーベイ論文。
+\end{itemize}
+
+\Needspace{0.30\textheight}
+
+\textbf{発展文献}
+
+\begin{itemize}
+\tightlist
+\item
+  Calvo, Guillermo A. (1983) ``Staggered Prices in a Utility-Maximizing
+  Framework.'' \emph{Journal of Monetary Economics}, 12(3), 383-398.
+  \href{https://doi.org/10.1016/0304-3932(83)90060-0}{doi}.
+  ランダムな価格改定確率に基づく価格硬直性定式化の原典。
+\item
+  Rotemberg, Julio J. (1982) ``Sticky Prices in the United States.''
+  \emph{Journal of Political Economy}, 90(6), 1187-1211.
+  \href{https://doi.org/10.1086/261117}{doi}.
+  本講義で採用している二次価格調整費用モデルの原典。
+\item
+  Lombardo, Giovanni, and David Vestin (2008) ``Welfare Implications of
+  Calvo vs.~Rotemberg-pricing Assumptions.'' \emph{Economics Letters},
+  100(2), 275-279.
+  \href{https://doi.org/10.1016/j.econlet.2008.02.008}{doi}. Calvo 型と
+  Rotemberg
+  型の局所的な動学的一致と、厚生評価において効率的定常状態が果たす決定的な役割を論証した論文。
+\item
+  Taylor, John B. (1993) ``Discretion versus Policy Rules in Practice.''
+  \emph{Carnegie-Rochester Conference Series on Public Policy}, 39,
+  195-214. \href{https://doi.org/10.1016/0167-2231(93)90009-L}{doi}.
+  金融政策の政策ルール（テイラー・ルール）を提唱した画期的な原典論文。
+\end{itemize}
+
+\Needspace{0.24\textheight}
+
+\section{演習問題}\label{ux6f14ux7fd2ux554fux984c}
+
+\subsection{基本問題}\label{ux57faux672cux554fux984c}
+
+\textbf{問1 {[}Core{]}：価格硬直性の直観}
+
+Rotemberg
+型価格調整費用が存在する場合、なぜ企業は「現在の実質限界費用」だけでなく「現在の価格設定が将来の価格改定費用に及ぼす影響」をも考慮して前向きに価格を決定するのか、その論理を説明しなさい。また、毎期自由に価格を改定できた第6回の柔軟価格モデルとの本質的な違いについても論じなさい。
+
+\Needspace{0.18\textheight}
+
+\textbf{問2 {[}Core{]}
+{[}Derivation{]}：価格設定条件とNKフィリップス曲線の導出}
+
+本文で導出した対称均衡における非線形価格設定条件 \[
+\begin{aligned}
+\Pi_tf_P'(\Pi_t)={}&
+\psi\left[
+MC_t-(1+\tau_p)\left(1-\frac{1}{\psi}\right)
+\right]\\
+&+\mathbb{E}_t\left[
+Q_{t,t+1}\frac{Y_{t+1}}{Y_t}
+\Pi_{t+1}f_P'(\Pi_{t+1})
+\right]
+\end{aligned}
+\] を出発点とします。二次費用関数 \(f_P(\Pi)=\eta(\Pi-1)^2/2\)
+と是正補助率 \(\tau_p^*=1/(\psi-1)\)
+を用い、ゼロインフレ定常状態（\(MC=1, \Pi=1\)）の周りで一次近似（対数線形化）を行うことで、
+\[
+\pi_t
+=\beta\mathbb{E}_t\pi_{t+1}
++\frac{\psi}{\eta}mc_t
+\] が導かれることを示しなさい。また、確率的割引因子 \(Q_{t,t+1}\)
+や産出成長率 \(Y_{t+1}/Y_t\)
+の一次変動がフィリップス曲線に残らない数学的・経済学的理由を述べなさい（\textbf{なお、Bellman
+方程式と包絡線条件から非線形条件を導く過程は本文の発展的な復習とし、本問では前提として用いてよい}）。
+
+\Needspace{0.18\textheight}
+
+\textbf{問3 {[}Core{]} {[}Derivation{]}：自然産出量と需給ギャップ}
+
+線形生産関数 \(y_t=a_t+n_t\)、家計の労働供給条件
+\(w_t=\gamma y_t+\varphi n_t\)、および企業の労働需要条件
+\(w_t=mc_t+a_t\) から、実質限界費用の決定式 \[
+mc_t=(\gamma+\varphi)y_t-(1+\varphi)a_t
+\] を導きなさい。さらに、柔軟価格条件 \(mc_t=0\) を課すことで自然産出量
+\(y_t^f\) を求め、需給ギャップ \(x_t \equiv y_t - y_t^f\)
+を用いて実質限界費用が \(mc_t=(\gamma+\varphi)x_t\)
+と表されることを示しなさい。
+
+\Needspace{0.18\textheight}
+
+\subsection{発展問題}\label{ux767aux5c55ux554fux984c}
+
+\textbf{問4 {[}Research extension{]}
+{[}Derivation{]}：自然利子率の導出と技術ショック}
+
+技術ショックが自己回帰過程 \(a_t=\rho_a a_{t-1}+e_t^a\)
+に従うと仮定します。自然産出量のもとでのオイラー方程式から、自然利子率が
+\[
+r_t^f=\gamma\zeta_a(\rho_a-1)a_t
+\]
+として導出されることを示しなさい。また、技術ショックが一時的である場合（\(0\leq\rho_a<1\)）、正の技術ショック（\(a_t>0\)）が自然利子率を引き下げる理由について、家計の消費平準化行動の観点から経済学的に説明しなさい。
+
+\Needspace{0.18\textheight}
+
+\textbf{問5 {[}Research extension{]}：3本のNK方程式と金融政策の波及経路}
+
+基本 RANK
+モデルを構成する3本のニューケインジアン方程式を提示し、期待将来ギャップを所与としたとき、実際の実質利子率と自然利子率の差が当期の需給ギャップを動かすメカニズムを説明しなさい。また、当期の
+\(r_t>r_t^f\)
+という条件だけで直ちに当期の需給ギャップが負（\(x_t<0\)）になると断定できるか否かを検討しなさい。さらに、期待将来変数と自然利子率を所与としたとき、金融緩和ショック
+\(m_t>0\) が NK-AD
+曲線をどちらの方向へシフトさせるかを述べ、合理的期待均衡において経済の正確な反応を求めるためには、なぜ将来期待を当期の変数と同時に連立させて解く必要があるのかを論じなさい。
+
+
+
+
+\end{document}

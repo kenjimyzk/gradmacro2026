@@ -1,0 +1,477 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "source_sha256": {
+    "lecture01.qmd": "372ff35999133075ffca65e22711688454f2141101ed529560bd5cd9fbb66474",
+    "lecture02.qmd": "cc5b262a82203d6d98e4de794b9b4380aa7f7ccbe7b6fc8af63f4575afc61776",
+    "lecture03.qmd": "690c200af563e5324b76a3ee3adbf69749de0ee8c3b2438974864c6e7ff33a94",
+    "lecture04.qmd": "11dadec19994da57655723c204afa0b271c8e971da5012cf8423cbfb9f053bc7",
+    "solution.qmd": "825ffb75a551718df79b9816ae90472553d8b1135cf86651575d6966ddb09b41",
+    "includes/assumption-matrix.qmd": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+    "includes/notation-concordance.qmd": "54b7286b29248aaa6a2dee2edd01d59d408d221aafe889aa3d7a0a8e060184a0",
+    "figures/lecture02/ar1_irf_simulation.svg": "42d31a7a85cd5ef1373f24fffb4af6b6ac45a85c0a28d1733215612fc4105554",
+    "figures/lecture03/consumption_growth_simulation.svg": "2a8581492bb7abfff618da4745ec3090789677537dde7c6b74b02fc02495a693",
+    "data/lecture02/gdpc1.csv": "f7cfe97b773eef3bd354aa722fd632bcae10b30f43e5aefcc3de89b5e251c346"
+  },
+  "checks": {
+    "ar1_svg_formula_alignment": [
+      {
+        "rho": 0.5,
+        "max_abs_error_pixels": 0.078125,
+        "status": "verified",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.5,
+            "formula": 0.5,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.25,
+            "formula": 0.25,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.125,
+            "formula": 0.125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.0625,
+            "formula": 0.0625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.03125,
+            "formula": 0.03125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.015625,
+            "formula": 0.015625,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.0078125,
+            "formula": 0.0078125,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.0037499999999999643,
+            "formula": 0.00390625,
+            "error_pixels": 0.05000000000001137
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.001875000000000071,
+            "formula": 0.001953125,
+            "error_pixels": 0.024999999999977263
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.0009375000000000355,
+            "formula": 0.0009765625,
+            "error_pixels": 0.012499999999988631
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.0003125000000000711,
+            "formula": 0.00048828125,
+            "error_pixels": 0.05624999999997726
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.0,
+            "formula": 0.000244140625,
+            "error_pixels": 0.078125
+          }
+        ]
+      },
+      {
+        "rho": 0.8,
+        "max_abs_error_pixels": 4.55023255552004,
+        "status": "failed",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.8,
+            "formula": 0.8,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.64,
+            "formula": 0.6400000000000001,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.5095000000000001,
+            "formula": 0.5120000000000001,
+            "error_pixels": 0.8000000000000114
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.40384375000000006,
+            "formula": 0.4096000000000001,
+            "error_pixels": 1.8419999999999845
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.31918749999999996,
+            "formula": 0.3276800000000001,
+            "error_pixels": 2.7176000000000613
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.25178124999999996,
+            "formula": 0.2621440000000001,
+            "error_pixels": 3.3160800000000563
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.19828124999999996,
+            "formula": 0.20971520000000007,
+            "error_pixels": 3.658864000000051
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.15553124999999995,
+            "formula": 0.1677721600000001,
+            "error_pixels": 3.9170912000000726
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.12131249999999998,
+            "formula": 0.13421772800000006,
+            "error_pixels": 4.12967296000005
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.09393750000000001,
+            "formula": 0.10737418240000006,
+            "error_pixels": 4.299738368000021
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.07203125000000003,
+            "formula": 0.08589934592000005,
+            "error_pixels": 4.437790694400007
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.05449999999999999,
+            "formula": 0.06871947673600004,
+            "error_pixels": 4.55023255552004
+          }
+        ]
+      },
+      {
+        "rho": 0.9,
+        "max_abs_error_pixels": 0.015008000000023003,
+        "status": "verified",
+        "points": [
+          {
+            "h": 0.0,
+            "plotted": 1.0,
+            "formula": 1.0,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 1.0,
+            "plotted": 0.9,
+            "formula": 0.9,
+            "error_pixels": 0.0
+          },
+          {
+            "h": 2.0,
+            "plotted": 0.8099999999999999,
+            "formula": 0.81,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "h": 3.0,
+            "plotted": 0.729,
+            "formula": 0.7290000000000001,
+            "error_pixels": 2.842170943040401e-14
+          },
+          {
+            "h": 4.0,
+            "plotted": 0.6560937499999999,
+            "formula": 0.6561,
+            "error_pixels": 0.0020000000000095497
+          },
+          {
+            "h": 5.0,
+            "plotted": 0.59046875,
+            "formula": 0.5904900000000001,
+            "error_pixels": 0.006800000000026785
+          },
+          {
+            "h": 6.0,
+            "plotted": 0.5314062500000001,
+            "formula": 0.531441,
+            "error_pixels": 0.011120000000005348
+          },
+          {
+            "h": 7.0,
+            "plotted": 0.47825000000000006,
+            "formula": 0.4782969000000001,
+            "error_pixels": 0.015008000000023003
+          },
+          {
+            "h": 8.0,
+            "plotted": 0.43043750000000003,
+            "formula": 0.4304672100000001,
+            "error_pixels": 0.009507200000030025
+          },
+          {
+            "h": 9.0,
+            "plotted": 0.3873749999999999,
+            "formula": 0.3874204890000001,
+            "error_pixels": 0.01455648000006704
+          },
+          {
+            "h": 10.0,
+            "plotted": 0.34865625,
+            "formula": 0.3486784401000001,
+            "error_pixels": 0.00710083200004874
+          },
+          {
+            "h": 11.0,
+            "plotted": 0.31378125000000007,
+            "formula": 0.31381059609000006,
+            "error_pixels": 0.009390748800001347
+          },
+          {
+            "h": 12.0,
+            "plotted": 0.28240625,
+            "formula": 0.2824295364810001,
+            "error_pixels": 0.0074516739200589655
+          }
+        ]
+      }
+    ],
+    "consumption_growth_svg_alignment_subpixel_tolerance": [
+      {
+        "gamma": 1,
+        "max_abs_error_pixels": 4.263256414560601e-13,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.96,
+            "formula": 0.96,
+            "error_pixels": 5.684341886080802e-14
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9792,
+            "formula": 0.9792,
+            "error_pixels": 0.0
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9984,
+            "formula": 0.9984,
+            "error_pixels": 0.0
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0175999999999998,
+            "formula": 1.0176,
+            "error_pixels": 4.263256414560601e-13
+          }
+        ]
+      },
+      {
+        "gamma": 2,
+        "max_abs_error_pixels": 0.41641154691507154,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.9799,
+            "formula": 0.9797958971132712,
+            "error_pixels": -0.41641154691507154
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9894999999999999,
+            "formula": 0.9895453501482385,
+            "error_pixels": 0.1814005929542759
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9992,
+            "formula": 0.9991996797437437,
+            "error_pixels": -0.0012810250250936406
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0088,
+            "formula": 1.0087616170334794,
+            "error_pixels": -0.15353186608206215
+          }
+        ]
+      },
+      {
+        "gamma": 5,
+        "max_abs_error_pixels": 0.12464286973460048,
+        "status": "verified",
+        "points": [
+          {
+            "R": 1.0,
+            "plotted": 0.9919,
+            "formula": 0.9918688392825663,
+            "error_pixels": -0.12464286973460048
+          },
+          {
+            "R": 1.02,
+            "plotted": 0.9957999999999999,
+            "formula": 0.9958049504619619,
+            "error_pixels": 0.01980184784792982
+          },
+          {
+            "R": 1.04,
+            "plotted": 0.9996999999999999,
+            "formula": 0.9996797950031715,
+            "error_pixels": -0.08081998731381645
+          },
+          {
+            "R": 1.06,
+            "plotted": 1.0035,
+            "formula": 1.003495477703811,
+            "error_pixels": -0.01808918475592236
+          }
+        ]
+      }
+    ],
+    "lecture02_exercises": {
+      "ar1_0_through_4": [
+        1.0,
+        0.8,
+        0.6400000000000001,
+        0.5120000000000001,
+        0.4096000000000001
+      ],
+      "half_life": 3.1062837195053903,
+      "conditional_forecasts": [
+        3.8,
+        3.08
+      ],
+      "first_order_output": 0.012,
+      "triangular_matrix_eigenvalues": [
+        0.8,
+        1.05
+      ]
+    },
+    "lecture03_exercises": {
+      "discounted_asset_limits": {
+        "1.1": 2.5999999999999965,
+        "1.2": 0.0,
+        "1.3": -2.6000000000000023
+      },
+      "equity_price": 0.9000000000000001,
+      "riskfree_gross_return": 1.0,
+      "equity_expected_gross_return": 1.1111111111111112,
+      "sdf_return_covariance": -0.11111111111111116
+    },
+    "lecture04_equilibrium_grid": {
+      "cases": 192,
+      "max_level_equilibrium_residual": 1.1102230246251565e-15,
+      "max_exact_log_identity_error": 3.2612801348363973e-16,
+      "status": "verified"
+    },
+    "lecture04_exercise5_percent": [
+      {
+        "h": 0,
+        "a": 1.0,
+        "y": 0.7692307692307694,
+        "n": -0.3846153846153847,
+        "w": 1.153846153846154
+      },
+      {
+        "h": 1,
+        "a": 0.9,
+        "y": 0.6923076923076925,
+        "n": -0.34615384615384626,
+        "w": 1.0384615384615385
+      },
+      {
+        "h": 2,
+        "a": 0.81,
+        "y": 0.6230769230769232,
+        "n": -0.3115384615384616,
+        "w": 0.9346153846153847
+      }
+    ],
+    "lecture02_employment_counterexample": {
+      "parameters": {
+        "alpha": 0.4,
+        "phi": 1.0,
+        "gamma": 2.0,
+        "rho": 0.9,
+        "shock": 0.01
+      },
+      "n_impact_percent": -0.3846153846153847,
+      "n_next_percent": -0.3461538461538462,
+      "implication": "Persistence prolongs an employment decrease in the course's own model."
+    },
+    "lecture02_quadratic_welfare": [
+      {
+        "shock_scale": 0.01,
+        "exact_utility_change": -0.00015343927540378832,
+        "quadratic_approximation": -0.0001535,
+        "difference": 6.072459621166842e-08,
+        "error_divided_by_scale_cubed": 0.06072459621166842,
+        "exact_log_c_minus_log_n": -8.032397383251396e-05,
+        "second_order_log_c_minus_log_n": -7.999999999999999e-05
+      },
+      {
+        "shock_scale": 0.005,
+        "exact_utility_change": -3.836692319303392e-05,
+        "quadratic_approximation": -3.8375e-05,
+        "difference": 8.076806966078251e-09,
+        "error_divided_by_scale_cubed": 0.064614455728626,
+        "exact_log_c_minus_log_n": -2.0040247511122957e-05,
+        "second_order_log_c_minus_log_n": -1.9999999999999998e-05
+      },
+      {
+        "shock_scale": 0.0025,
+        "exact_utility_change": -9.592710035311036e-06,
+        "quadratic_approximation": -9.59375e-06,
+        "difference": 1.0399646889632484e-09,
+        "error_divided_by_scale_cubed": 0.06655774009364789,
+        "exact_log_c_minus_log_n": -5.005015443056539e-06,
+        "second_order_log_c_minus_log_n": -4.9999999999999996e-06
+      }
+    ],
+    "lecture04_rate_scaling": {
+      "steady_R": 1.04,
+      "R_change": 1e-06,
+      "exact_log_deviation": 9.615379992413302e-07,
+      "correct_first_order": 9.615384615384615e-07,
+      "stated_approximation": 1e-06
+    }
+  }
+}
