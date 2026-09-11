@@ -1,0 +1,19 @@
+{
+  "ces_solution_discrete_integral_cases": 500,
+  "max_relative_aggregation_cost_error": 2.7755575615628914e-15,
+  "ces_pass": true,
+  "r_code": {
+    "lecture05": {
+      "chunks": 2,
+      "code_unchanged": true
+    },
+    "lecture08": {
+      "chunks": 1,
+      "code_unchanged": true
+    },
+    "lecture09": {
+      "chunks": 2,
+      "code_unchanged": true
+    }
+  }
+}

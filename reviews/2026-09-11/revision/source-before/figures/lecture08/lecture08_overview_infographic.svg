@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第8回講義の全体像</title>
+  <desc id="desc">家計、企業、政府・財政、金融政策の条件を同時に一般均衡へ集約し、柔軟価格の自然水準と3本のニューケインジアン方程式へ整理する図。固定資本は所与で、投資と資本蓄積は扱わない。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#596779"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="36" width="1020" height="574" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="80" font-size="31" font-weight="700" fill="#1f2937">第8回の地図：一般形のRANKモデル</text>
+    <text x="80" y="111" font-size="18" fill="#566273">4つの主体・制度の条件を同時に解き、自然水準と3本のNK方程式へ整理する</text>
+    <text x="1040" y="110" text-anchor="end" font-size="15" fill="#6b7280">固定資本は所与・投資と資本蓄積はなし</text>
+  </g>
+
+  <!-- Four model blocks feed jointly into equilibrium; they are not a causal chain. -->
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="80" y="143" width="220" height="142" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="326" y="143" width="220" height="142" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="572" y="143" width="220" height="142" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+    <rect x="818" y="143" width="220" height="142" rx="12" fill="#f6edf9" stroke="#8d5ab8" stroke-width="2"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="104" y="177" font-size="21" font-weight="700">家計</text>
+    <text x="104" y="207" font-size="16">Euler方程式・労働供給</text>
+    <text x="104" y="233" font-size="16">消費と実質利子率</text>
+    <text x="104" y="259" font-size="15" fill="#526070">需要の前向き性</text>
+
+    <text x="350" y="177" font-size="21" font-weight="700">企業</text>
+    <text x="350" y="207" font-size="16">固定資本を使う生産</text>
+    <text x="350" y="233" font-size="16">限界費用・価格設定</text>
+    <text x="350" y="259" font-size="15" fill="#526070">Rotemberg型価格調整</text>
+
+    <text x="596" y="177" font-size="21" font-weight="700">政府・財政</text>
+    <text x="596" y="207" font-size="16">政府支出 <tspan font-style="italic">G</tspan><tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="596" y="233" font-size="16">資源制約・財源</text>
+    <text x="596" y="259" font-size="15" fill="#526070">政府支出比率 <tspan font-style="italic">G</tspan><tspan baseline-shift="sub" font-size="11">Y</tspan></text>
+
+    <text x="842" y="177" font-size="21" font-weight="700">金融政策</text>
+    <text x="842" y="207" font-size="16">Taylor rule</text>
+    <text x="842" y="233" font-size="16">名目金利とインフレ率</text>
+    <text x="842" y="259" font-size="15" fill="#526070">政策ショック <tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="11">t</tspan></text>
+  </g>
+
+  <g stroke="#596779" stroke-width="2.4" fill="none" marker-end="url(#arrow)">
+    <path d="M 190 285 L 190 310 L 480 337"/>
+    <path d="M 436 285 L 436 315 L 520 337"/>
+    <path d="M 682 285 L 682 315 L 600 337"/>
+    <path d="M 928 285 L 928 310 L 640 337"/>
+  </g>
+  <text x="560" y="314" text-anchor="middle" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="14" fill="#596779">同時に満たす</text>
+
+  <g filter="url(#shadow)">
+    <rect x="338" y="338" width="444" height="94" rx="13" fill="#f1f4f8" stroke="#657386" stroke-width="2.2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" text-anchor="middle">
+    <text x="560" y="374" font-size="23" font-weight="700" fill="#20242a">一般均衡条件</text>
+    <text x="560" y="403" font-size="16" fill="#526070">固定資本分配率 <tspan font-style="italic">α</tspan> と政府支出比率 <tspan font-style="italic">G</tspan><tspan baseline-shift="sub" font-size="11">Y</tspan> を含む一般形</text>
+  </g>
+
+  <g stroke="#596779" stroke-width="2.6" fill="none" marker-end="url(#arrow)">
+    <path d="M 500 432 L 500 455 L 278 455 L 278 481"/>
+    <path d="M 620 432 L 620 455 L 842 455 L 842 481"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="14" fill="#596779">
+    <text x="352" y="449" text-anchor="middle">柔軟価格の基準</text>
+    <text x="768" y="449" text-anchor="middle">定常点の周りで線形化</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="116" y="482" width="324" height="95" rx="12" fill="#edf6f8" stroke="#27899a" stroke-width="2"/>
+    <rect x="680" y="482" width="324" height="95" rx="12" fill="#fff6dc" stroke="#c48a22" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="140" y="517" font-size="21" font-weight="700">自然水準</text>
+    <text x="140" y="547" font-size="16">自然産出量 <tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan> ・自然利子率 <tspan font-style="italic">r</tspan><tspan baseline-shift="sub" font-size="11">t</tspan><tspan baseline-shift="super" font-size="11">f</tspan></text>
+
+    <text x="704" y="517" font-size="21" font-weight="700">3本のNK方程式</text>
+    <text x="704" y="547" font-size="16">動学的IS・構造的NKPC・Taylor rule</text>
+  </g>
+</svg>

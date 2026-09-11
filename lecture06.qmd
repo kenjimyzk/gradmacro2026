@@ -75,8 +75,8 @@ lang: ja
 
 | 記号 | 定義・経済学的意味 |
 |---|---|
-| $\gamma > 0$ | 相対的リスク回避度（異時点間消費代替弾力性の逆数 $1/\gamma$） |
-| $\varphi > 0$ | 労働の限界不効用パラメータ（Frisch労働供給弾力性の逆数 $1/\varphi$） |
+| $\gamma > 0$ | 相対的リスク回避度（異時点間消費代替弾力性の逆数）。同弾力性は $1/\gamma$ |
+| $\varphi > 0$ | 労働の限界不効用パラメータ（Frisch労働供給弾力性の逆数）。同弾力性は $1/\varphi$ |
 | $\nu = 1$ | 労働不効用の尺度パラメータ（計算の簡素化のため $1$ に正規化） |
 | $0 \leq \alpha < 1$ | Cobb-Douglas生産関数における固定資本の分配率（資本シェア） |
 | $\rho$ | 一般的なCES関数における曲率パラメータ |
@@ -156,11 +156,19 @@ $$
 
 一般的な2つの生産要素（または財）$X_1, X_2$ を用いる対称的な CES 関数
 $$
-F(X_1, X_2) = \left[ \theta X_1^\rho + (1-\theta) X_2^\rho \right]^{\frac{1}{\rho}}, \qquad X_1, X_2 > 0, \quad 0 < \theta < 1, \quad \rho < 1, \quad \rho \neq 0
+\begin{gathered}
+F(X_1, X_2) = \left[ \theta X_1^\rho + (1-\theta) X_2^\rho \right]^{\frac{1}{\rho}},\\[4pt]
+X_1, X_2 > 0, \quad 0 < \theta < 1, \quad \rho < 1, \quad \rho \neq 0
+\end{gathered}
 $$
 を考えると、限界技術代替率（MRTS）および代替弾力性 $\sigma$ はそれぞれ以下のように計算されます。
 $$
-MRTS(X_1, X_2) \equiv \frac{F_{X_1}}{F_{X_2}} = \frac{\theta}{1-\theta} \left( \frac{X_1}{X_2} \right)^{\rho - 1}, \qquad \sigma \equiv \frac{d\ln(X_1/X_2)}{d\ln MRTS} = \frac{1}{1-\rho}.
+\begin{aligned}
+MRTS(X_1, X_2) &\equiv \frac{F_{X_1}}{F_{X_2}}
+ = \frac{\theta}{1-\theta} \left( \frac{X_1}{X_2} \right)^{\rho - 1},\\[6pt]
+\sigma &\equiv -\frac{d\ln(X_1/X_2)}{d\ln MRTS}
+ = \frac{1}{1-\rho}.
+\end{aligned}
 $$
 曲率パラメータ $\rho$ が $0$ に近づく極限（$\rho \to 0$）では Cobb--Douglas 関数（$\sigma \to 1$）に一致し、$\rho \to 1$ の極限では完全代替（$\sigma \to \infty$）に一致します。
 
@@ -175,13 +183,23 @@ $$
 
 各中間財企業は固定資本 $\bar{K}(j) = 1$ を物理的に保有しており、毎期の労働投入量 $N_t(j)$ のみを可変投入として最適に選択します。生産関数は Cobb-Douglas 型です。
 $$
-Y_t^I(j) = \exp(a_t) F(\bar{K}(j), N_t(j)) = \exp(a_t) \bar{K}(j)^\alpha N_t(j)^{1-\alpha} = \exp(a_t) N_t(j)^{1-\alpha}, \qquad \bar{K}(j)=1.
+\begin{aligned}
+Y_t^I(j) &= \exp(a_t) F(\bar{K}(j), N_t(j))\\
+&= \exp(a_t) \bar{K}(j)^\alpha N_t(j)^{1-\alpha}\\
+&= \exp(a_t) N_t(j)^{1-\alpha}, \qquad \bar{K}(j)=1.
+\end{aligned}
 $$
 固定資本の取引市場や投資は存在しないため、資本の生み出す収益（固定資本レント）は企業の利潤（配当）の一部として株主に帰属します。
 
 中間財企業 $j$ は、最終財部門から提示される個別需要曲線 $Y_t^I(j) = Y_t (P_t^I(j)/P_t)^{-\psi}$ を所与として、自社製品の販売価格 $P_t^I(j)$ と労働投入量 $N_t(j)$ を決定します。生産制約（需要を満たすための生産技術制約）にかかる実質ラグランジュ乗数を $MC_t(j)$ とおくと、企業 $j$ の実質利潤最大化問題のラグランジュ関数は次式で与えられます。
 $$
-\mathcal{L}_t(j) = \frac{P_t^I(j)}{P_t} Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi} - W_t N_t(j) + MC_t(j) \left[ \exp(a_t) N_t(j)^{1-\alpha} - Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi} \right].
+\begin{aligned}
+\mathcal{L}_t(j)
+&= \frac{P_t^I(j)}{P_t} Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi}
+ - W_t N_t(j)\\
+&\quad + MC_t(j) \left[ \exp(a_t) N_t(j)^{1-\alpha}
+ - Y_t \left( \frac{P_t^I(j)}{P_t} \right)^{-\psi} \right].
+\end{aligned}
 $$
 ここでラグランジュ乗数 $MC_t(j)$ は、生産量を限界的に1単位増やすために必要な実質費用、すなわち**実質限界費用（Real Marginal Cost）**の経済学的意味を持っています。
 
@@ -253,7 +271,7 @@ $$
 $$
 \frac{\partial TX_t^I(j)}{\partial P_t^I(j)} = \frac{\partial TX_t^I(j)}{\partial Y_t^I(j)} = \frac{\partial TX_t^I(j)}{\partial N_t(j)} = 0
 $$
-が厳密に成立します。もし税額が企業の売上や利益に連動してしまうと、それは比例税となって価格設定を再び歪めてしまいます。
+が厳密に成立します。税額が企業の売上に比例すれば、限界収入が変わり、価格設定に影響します。一方、すべての費用を控除した純利益に一定税率 $\tau_D \in [0,1)$ を課す場合は、税引後利益が税引前利益の正の定数倍 $(1-\tau_D)$ になるため、ここで扱う静学的な価格選択は変わりません。
 
 個別需要関数 $Y_t^I(j) = Y_t (P_t^I(j)/P_t)^{-\psi}$ を代入して価格 $P_t^I(j)$ に関する一階条件を求めると、
 $$
@@ -294,7 +312,12 @@ TX_t^I \equiv \int_0^1 TX_t^I(j) dj = \tau_p \int_0^1 \frac{P_t^I(j)}{P_t} Y_t^I
 $$
 となります。この政府予算の均衡条件を集計配当の式に代入すると、
 $$
-D_t \equiv \int_0^1 D_t(j) dj = (1+\tau_p) Y_t - W_t N_t - TX_t^I = (1+\tau_p) Y_t - W_t N_t - \tau_p Y_t = Y_t - W_t N_t
+\begin{aligned}
+D_t &\equiv \int_0^1 D_t(j) dj\\
+&= (1+\tau_p) Y_t - W_t N_t - TX_t^I\\
+&= (1+\tau_p) Y_t - W_t N_t - \tau_p Y_t\\
+&= Y_t - W_t N_t
+\end{aligned}
 $$
 となり、補助金と一括税はマクロ集計上、完全に相殺されます。
 
@@ -308,6 +331,7 @@ $$
 ## 数値例：$\psi=6$
 
 具体的な数値例として、マクロ経済学の実証研究で頻繁に用いられる代替弾力性 $\psi = 6$ のケースを考えてみましょう。
+
 - 構造的グロス・マークアップは $\mu^p = 6/(6-1) = 6/5 = 1.2$（$20\%$ のマークアップ）となります。
 - 補助金が存在しない場合、対称均衡の実質限界費用は $MC_t = 5/6 \simeq 0.833$ となり、完全競争より約 $16.7\%$ 低くなります。
 - 最適な是正補助率は $\tau_p^* = 1/(6-1) = 1/5 = 0.2$（$20\%$ の売上補助）となります。
@@ -385,7 +409,11 @@ $$
 
 なお、政府会計を統合した後の定常状態配当総額は、
 $$
-D^{MC} = Y^{MC} - W^{MC} N^{MC} = \left[ 1 - (1-\alpha)MC \right] Y^{MC} = (1 - MC) Y^{MC} + \alpha MC Y^{MC}
+\begin{aligned}
+D^{MC} &= Y^{MC} - W^{MC} N^{MC}\\
+&= \left[ 1 - (1-\alpha)MC \right] Y^{MC}\\
+&= (1 - MC) Y^{MC} + \alpha MC Y^{MC}
+\end{aligned}
 $$
 となります。無補助のもとで線形生産（$\alpha=0$）であれば $D^{MC} = (1/\psi)Y^{MC}$ という純粋な独占利潤となり、是正補助金（$MC=1$）を導入すると独占利潤は完全に消滅して資本レント $\alpha Y^{MC}$ のみが残ります。
 
@@ -493,6 +521,7 @@ $$
 **問5 ［Research extension］［Computation］：マークアップと是正補助金の具体的計算**
 
 中間財間の代替弾力性が $\psi = 6$ である経済を考えます。
+
 1. 補助金が存在しない場合の構造的グロス・マークアップ $\mu^p$ および対称均衡における実質限界費用 $MC$ の値を計算しなさい。
 2. マークアップのくさびを完全に相殺するための是正的売上比例補助率 $\tau_p^*$ の値を求めなさい。
 3. 是正補助金が導入されたもとで、実質限界費用 $MC$ および実際の販売価格と実質限界費用の比率がどのような値になるかを確かめなさい。

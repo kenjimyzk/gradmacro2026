@@ -1,0 +1,1556 @@
+---
+title: "練習問題解答"
+subtitle: "マクロ経済学B"
+author: "宮﨑憲治"
+date: "2026-04-01"
+date-format: "YYYY年度"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    theme: cosmo
+    html-math-method: katex
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption: [lualatex, ja=standard, 11pt, a4paper]
+    toc: true
+    number-sections: false
+    include-in-header:
+      text: |
+        \usepackage{needspace}
+lang: ja
+---
+
+# この解答集の使い方
+
+このファイルは、第1回から第12回までの全演習問題に対応する解答です。各問のタグは次の用途を表します。
+
+| タグ | 用途 |
+|---|---|
+| `[Core]` | 全員が授業後に確認する問題 |
+| `[Derivation]` | 式の導出を練習する問題。TAセッションにも適する |
+| `[Computation]` | 数値計算またはコードによる確認を含む問題 |
+| `[Research extension]` | 本編を越えた政策・厚生・決定性などの発展問題 |
+| `[第9回前に再訪]` | 第9回の厚生分析に入る前に読み直す問題 |
+
+解答は結論だけでなく、主要な代入と経済的な理由を示します。問題文の仮定と記号は各回の講義ノートに従います。
+
+```{=latex}
+\clearpage
+```
+
+# 第1回：学部マクロの復習
+
+## 基本問題
+
+### 問題1 `[Core] [Derivation]`：ケインジアン・クロス
+
+財市場均衡へ消費関数を代入すると、
+$$
+Y=C_0+c(Y-T)+\bar I+G
+$$
+なので、
+$$
+Y=\frac{C_0-cT+\bar I+G}{1-c}
+$$
+を得ます。したがって政府支出乗数と租税乗数は
+$$
+\frac{\partial Y}{\partial G}=\frac{1}{1-c},
+\qquad
+\frac{\partial Y}{\partial T}=-\frac{c}{1-c}
+$$
+です。$c$ が大きいほど、最初の所得増加のうち次の消費へ回る割合が大きくなり、支出と所得の連鎖が長く続きます。
+
+### 問題2 `[Core]`：IS--LMモデル
+
+政府支出の増加は、所与の利子率における財需要を増やすため IS 曲線を右へ動かします。貨幣供給と物価を固定すると、均衡は LM 曲線上を右上へ移動し、産出と利子率がともに上昇します。利子率上昇が民間投資を減らし、財政支出による産出増加の一部を相殺する効果がクラウディング・アウトです。LM 曲線が急なほど利子率上昇が大きく、産出増加は小さくなります。
+
+### 問題3 `[Core] [Derivation]`：フィリップス曲線と需給ギャップ
+
+オークン法則の近似を代入すると、
+$$
+\pi_t
+=\pi_t^e-\beta_{PC}(u_t-u_t^n)
+\simeq
+\pi_t^e+\beta_{PC}\eta x_t
+$$
+です。後続回では $x_t=y_t-y_t^f$ を使います。対数乖離で測れば、異なる定常産出水準のモデルでも百分率単位で比較でき、自然産出量を動かす技術・政府支出ショックと、実際の産出の循環的乖離を分けられます。
+
+## 発展問題
+
+### 問題4 `[Research extension]`：ルーカス批判
+
+過去の政策制度のもとで推定した誘導形の係数は、政策ルールが変わると家計や企業の期待・意思決定も変わるため不変とは限りません。したがって、その係数を固定して新しい政策を評価すると誤った反実仮想になりえます。政策評価には、選好・技術・制約などの構造パラメータと、期待形成を明示したモデルが必要です。ただし、構造モデルでも政策変更に対する不変性は仮定なので、制度変更後にも妥当かを検討する必要があります。
+
+```{=latex}
+\clearpage
+```
+
+# 第2回：時系列分析と対数近似
+
+## 基本問題
+
+### 問1 `[Core] [Computation]`：AR(1)のインパルス応答
+
+$y_0=1$ から再帰的に計算すると、
+$$
+(y_0,y_1,y_2,y_3,y_4)
+=(1,0.8,0.64,0.512,0.4096)
+$$
+です。半減期 $h_{1/2}$ は $0.8^{h_{1/2}}=1/2$ を満たすので、
+$$
+h_{1/2}=\frac{\ln(1/2)}{\ln(0.8)}\simeq3.11
+$$
+期です。
+
+### 問2 `[Core] [Computation]`：平均回帰
+
+条件付き平均は
+$$
+\mathbb E_t y_{t+h}=\mu+\rho^h(y_t-\mu)
+$$
+です。したがって、
+$$
+\mathbb E_t y_{t+1}=2+0.6(5-2)=3.8,
+\qquad
+\mathbb E_t y_{t+2}=2+0.6^2(5-2)=3.08
+$$
+となります。予測は長期平均2へ近づきます。
+
+### 問3 `[Core] [Computation] [Derivation]`：和の対数線形化
+
+第2回では、$c_t=\ln(C_t/C)$、$g_t=\ln(G_t/G)$ を各構成要素自身の対数偏差として定義しています。この定義のもとで、資源制約の一次近似は定常状態シェアを使って
+$$
+y_t\simeq\frac{C}{Y}c_t+\frac{G}{Y}g_t
+=0.8c_t+0.2g_t
+$$
+です。$c_t=0.01$、$g_t=0.02$ を代入すると $y_t\simeq0.012$ なので、産出は約1.2％高くなります。
+
+第5回では、政府支出ショックを $g_t=(G_t-G)/Y$ と定義し直します。この定義では、政府支出比率が $G/Y=0.2$ で政府支出が2％高いとき、$g_t\simeq0.2\times0.02=0.004$ です。したがって、$y_t\simeq0.8\times0.01+0.004=0.012$ となり、同じ結果が得られます。
+
+### 問4 `[Core] [Derivation]`：フィッシャー方程式
+
+事後実質総収益率の対数は
+$$
+r_{t+1}^{\mathrm{post}}=r_t^N-\pi_{t+1}
+$$
+です。$t$ 期の情報で期待を取ると、事前実質利子率は
+$$
+r_t=r_t^N-\mathbb E_t\pi_{t+1}
+$$
+となります。名目利子率と期待インフレ率が同じ幅だけ上昇すれば、その差である事前実質利子率は変わりません。
+
+### 問5 `[Core]`：GDPのトレンド、循環、定常性
+
+弱定常な系列として扱うのにより適しているのは、図の下段にあるHP循環成分です。上段の対数実質GDPには長期的な上昇トレンドがあり、その平均は時間を通じて一定ではありません。これに対して、HP循環成分は滑らかなトレンドからの対数乖離であり、ゼロの周りを変動する短期系列として構成されています。ただし、HPフィルターの適用だけで弱定常性が保証されるわけではなく、ここでは景気循環の統計的な尺度として用いています。
+
+モデル系列と比較するときは、実質GDPの集計値か一人当たり値かという変数定義、四半期という観測頻度、標本長をそろえます。そのうえで、モデル系列にもデータと同じ対数化と、四半期データの平滑化パラメータ $\lambda=1600$ を用いたHPフィルターを適用します。季節性を持たない標準的なモデル系列へ季節調整を機械的に施す必要はありませんが、季節調整済みデータに対応する観測概念をそろえる必要があります。データのHP循環成分とモデルの産出の対数偏差をともに $y_t$ と書く場合でも、理論上の産出ギャップ $x_t=y_t-y_t^f$ とは区別します。
+
+### 問6 `[Core] [Computation]`：状態空間表現と安定性
+
+$A$ は上三角行列なので、特性方程式は
+$$
+\det(A-\lambda I)
+=(0.8-\lambda)(1.05-\lambda)=0
+$$
+です。したがって、固有値は
+$$
+\lambda_1=0.8,
+\qquad
+\lambda_2=1.05
+$$
+です。$\lambda_2$ は単位円の外側にあるため、$A$ のスペクトル半径は $1.05>1$ です。実際、第2成分は $s_{2,t}=1.05^t s_{2,0}$ となるので、$s_{2,0}\neq0$ なら発散します。したがって、一般の初期状態に対して $s_t$ は定常状態へ収束しません。例外的に $s_{2,0}=0$、すなわち初期状態が安定固有空間に正確に乗っている場合だけ、$0.8^t$ の速さでゼロへ収束します。
+
+```{=latex}
+\clearpage
+```
+
+## 発展問題
+
+### 問7 `[第9回前に再訪] [Derivation]`：対数二次近似
+
+$X_t/X=e^{x_t}$ なので、
+$$
+\frac{X_t-X}{X}=e^{x_t}-1
+=x_t+\frac{x_t^2}{2}+O(x_t^3)
+$$
+です。効率的定常状態の周りでは、消費価値 $U_C C$ で正規化した期間効用は
+$$
+\frac{U(C_t,N_t)-U(C,N)}{U_C C}
+=c_t-n_t
++\frac{1-\gamma}{2}c_t^2
+-\frac{1+\varphi}{2}n_t^2
++O(3)
+$$
+と近似できます。一次まで $c_t=n_t=y_t$ と読める基本ケースでは一次項が相殺され、二次項は
+$$
+\frac{1-\gamma}{2}y_t^2
+-\frac{1+\varphi}{2}y_t^2
+=-\frac{\gamma+\varphi}{2}y_t^2
+$$
+です。さらに $c_t=y_t-\eta\pi_t^2/2+O(3)$ を代入すると、一次項 $c_t-n_t$ から価格調整費用による効用損失 $-\eta\pi_t^2/2$ が加わります。したがって、正規化効用の政策依存部分は
+$$
+-\frac{\gamma+\varphi}{2}y_t^2
+-\frac{\eta}{2}\pi_t^2
+$$
+です。この基本ケースでは $y_t^f=0$ なので $x_t=y_t$ です。符号を反転した厚生ロスは
+$$
+\ell_t
+=\frac12\left[(\gamma+\varphi)y_t^2+\eta\pi_t^2\right]
+$$
+となります。
+
+```{=latex}
+\clearpage
+```
+
+# 第3回：動学的最適化と資産価格
+
+## 基本問題
+
+### 問1 `[Core] [Derivation]`：消費配分と横断性条件
+
+2期間問題のオイラー方程式は
+$$
+\frac{1}{C_t}=\beta R\frac{1}{C_{t+1}}
+$$
+です。したがって、
+$$
+\frac{C_{t+1}}{C_t}=\beta R
+$$
+を得ます。$\beta R>1$ なら消費は増加し、$\beta R<1$ なら減少します。
+
+無限期間の追問では $\beta R=1$ なので、オイラー方程式は一定消費を要求します。一定消費 $C$ のもとで予算制約を反復すると、
+$$
+\lim_{N\to\infty}\frac{B_N}{R^N}
+=\frac{R}{R-1}\left[Y+(R-1)B_{-1}-C\right]
+=26(1.2-C)
+$$
+です。各候補を代入すると次のようになります。
+
+| 一定消費 $C$ | $\lim B_N/R^N$ | No-Ponzi条件 | 横断性条件 |
+|---:|---:|---|---|
+| 1.1 | 2.6 | 満たす | 満たさない |
+| 1.2 | 0 | 満たす | 満たす |
+| 1.3 | -2.6 | 満たさない | 満たさない |
+
+対数効用では横断性条件の左辺は $(1/C)\lim B_N/R^N$ なので、両条件を満たすのは $C=1.2$ です。この経路では $B_t=5$ が続きます。資産水準は正でも、その割引現在価値はゼロへ収束します。
+
+### 問2 `[Core] [Derivation]`：借入制約
+
+$B_t=\underline B$ で制約がバインドすると、貯蓄を限界的に増やす方向だけが実行可能です。その方向の効用変化が正でない条件は
+$$
+-u'(C_t)+\beta R u'(C_{t+1})\leq0
+$$
+なので、
+$$
+u'(C_t)\geq\beta R u'(C_{t+1})
+$$
+です。制約付き家計は現在消費を減らして将来へ移したいのではなく、むしろ追加で借りたい状態にあります。
+
+### 問3 `[Core] [Derivation]`：確率的オイラー方程式
+
+$R_t^f$ は $t$ 期に既知なので期待値の外へ出せます。よって
+$$
+1=R_t^f\mathbb E_tQ_{t,t+1}
+$$
+から、
+$$
+R_t^f=\frac{1}{\mathbb E_tQ_{t,t+1}}
+$$
+です。
+
+### 問4 `[Core] [Derivation]`：企業価値
+
+無バブル条件のもとで、企業価値は
+$$
+V_t^F
+=\sum_{i=1}^{\infty}\delta^iD
+=D\frac{\delta}{1-\delta}
+$$
+です。$\delta=1/R^f$ と置けば $V_t^F=D/(R^f-1)$ となり、学部で学ぶ永久配当の割引現在価値に一致します。
+
+## 発展問題
+
+### 問5 `[Computation] [Research extension]`：2状態の資産価格
+
+株価は
+$$
+V_t^F
+=\frac12(0.8)(1.5)+\frac12(1.2)(0.5)
+=0.9
+$$
+です。$\mathbb E_tQ_{t,t+1}=1$ なので、無リスク総収益率は $R_t^f=1$ です。株式収益率は好況で $1.5/0.9=5/3$、不況で $0.5/0.9=5/9$ なので、
+$$
+\mathbb E_tR_{t+1}^e
+=\frac12\frac53+\frac12\frac59
+=\frac{10}{9}\simeq1.111
+$$
+です。また資産価格条件より $\mathbb E_t(QR^e)=1$ であり、
+$$
+\operatorname{Cov}_t(Q,R^e)
+=1-(\mathbb E_tQ)(\mathbb E_tR^e)
+=-\frac19<0
+$$
+となります。したがって期待超過収益率 $10/9-1=1/9$ は正です。株式は限界効用の高い不況で低い収益を払うため、無リスク債より不況保険として劣ります。状態別ペイオフが一致しないので、株式買い・債券売りの取引には損失状態があり、裁定ではありません。
+
+### 問6 `[Derivation] [Research extension]`：状態変数と債券表記
+
+購入額 $B_t$ の次期ペイオフは $R_t^f(z_t)B_t$ です。したがって継続価値を $V^H(B_t,z_{t+1})$ とだけ書くと、同じ $B_t$ でも異なる $z_t$ が異なる次期富を生む情報が落ちます。次期の額面を $A_t\equiv R_t^f(z_t)B_t$、価格を $q_t^f(z_t)=1/R_t^f(z_t)$ とすれば、予算制約は
+$$
+C_t+q_t^f(z_t)A_t=Y(z_t)+A_{t-1}
+$$
+です。Bellman 方程式は
+$$
+V^H(A_{t-1},z_t)
+=\max_{A_t}
+\left\{
+u\!\left(Y(z_t)+A_{t-1}-q_t^f(z_t)A_t\right)
++\beta\mathbb E_tV^H(A_t,z_{t+1})
+\right\}.
+$$
+額面 $A_t$ 自体が次期の確定ペイオフなので、状態は $(A_t,z_{t+1})$ で十分です。
+
+```{=latex}
+\clearpage
+```
+
+# 第4回：資本蓄積のないRBCモデル
+
+## 基本問題
+
+### 問1 `[Core]`：概念確認
+
+家計の労働供給条件 $MRS_t=W_t$ は、消費で測った追加労働の不効用を実質賃金が補償することを表します。企業の労働需要条件 $W_t=MPN_t$ は、追加労働が生む産出価値と賃金費用が等しいことを表します。競争均衡では両条件が同時に成立するので、消費と余暇の限界代替率が労働の限界生産物に等しくなります。
+
+### 問2 `[Core] [Derivation]`：導出確認
+
+家計と企業の条件は
+$$
+N_t^\varphi C_t^\gamma
+=W_t
+=(1-\alpha)e^{a_t}N_t^{-\alpha}
+$$
+です。資源制約と生産関数から $C_t=e^{a_t}N_t^{1-\alpha}$ なので、
+$$
+N_t^{\varphi+\alpha+\gamma(1-\alpha)}
+=(1-\alpha)e^{(1-\gamma)a_t}.
+$$
+両辺を正の指数で解けば、
+$$
+N_t
+=\left[(1-\alpha)e^{(1-\gamma)a_t}\right]^{
+1/[\varphi+\alpha+\gamma(1-\alpha)]}
+$$
+を得ます。
+
+### 問3 `[Core]`：直観確認
+
+正の技術ショックに対する産出、消費、実質賃金の反応係数はすべて正です。労働反応は
+$$
+n_t
+=\frac{1-\gamma}{\varphi+\alpha+\gamma(1-\alpha)}a_t
+$$
+なので、$\gamma<1$ なら増加、$\gamma=1$ なら不変、$\gamma>1$ なら減少します。技術上昇は実質賃金を高める代替効果を生みますが、消費増加が労働を減らす所得効果も生みます。$\gamma$ が大きいほど後者が強くなります。
+
+### 問4 `[Core] [Derivation]`：固定資本と配当
+
+生産関数 $Y_t=e^{a_t}N_t^{1-\alpha}$ を労働で微分すると、$MPN_t=(1-\alpha)Y_t/N_t$ です。企業の労働需要条件 $W_t=MPN_t$ の両辺に $N_t$ を掛ければ、
+$$
+W_tN_t=(1-\alpha)Y_t
+$$
+です。利潤、すなわち固定資本へのレントは
+$$
+D_t=Y_t-W_tN_t=\alpha Y_t
+$$
+となります。$\alpha=0$ なら配当は全期でゼロです。無バブル条件のもとでは、株式価値は将来配当の割引現在価値に等しいので、$V_t=0$ です。
+
+## 発展問題
+
+### 問5 `[Research extension] [Computation]`：インパルス応答
+
+パラメータを代入すると、
+$$
+\zeta_a=\frac{2}{1+0.4+2(0.6)}=\frac{10}{13}\simeq0.7692,
+$$
+$$
+\kappa_n=\frac{\zeta_a-1}{1-\alpha}=-\frac5{13}\simeq-0.3846,
+\qquad
+\kappa_w=\frac{1-\alpha\zeta_a}{1-\alpha}=\frac{15}{13}\simeq1.1538.
+$$
+反応を％単位で示すと次の表になります。
+
+| $h$ | $a_{t+h}$ | $y_{t+h}$ | $n_{t+h}$ | $w_{t+h}$ |
+|---:|---:|---:|---:|---:|
+| 0 | 1.000 | 0.769 | -0.385 | 1.154 |
+| 1 | 0.900 | 0.692 | -0.346 | 1.038 |
+| 2 | 0.810 | 0.623 | -0.312 | 0.935 |
+
+### 問6 `[Research extension] [Derivation]`：自然実質利子率
+
+$c_t=\zeta_a a_t$ と $\mathbb E_ta_{t+1}=\rho_a a_t$ を
+$$
+r_t^f=\gamma\mathbb E_t(c_{t+1}-c_t)
+$$
+へ代入すると、
+$$
+r_t^f=\gamma\zeta_a(\rho_a-1)a_t
+$$
+です。$\rho_a$ が1に近いほど現在と将来の技術・消費水準の差が小さくなります。期待消費成長の落込みが小さいため、自然実質利子率の低下幅も小さくなります。
+
+### 問7 `[Research extension]`：第5回への接続
+
+$G_Y=G/Y=0$ かつ $g_t=(G_t-G)/Y=0$ なら、定常状態と変動の両方で $G_t=0$ です。したがって $Y_t=C_t+G_t$ は $Y_t=C_t$ に戻ります。民間債券が純供給ゼロなら、代表的家計の保有を集計すると債券は消え、利子率だけが消費経路と整合するように決まります。政府債務は家計にとって正の資産であり、集計しても消えません。ただし将来の一括税が債務を完全に裏づけ、家計が制約を受けなければ、国債発行時点だけを変えても実物配分は変わりません。
+
+```{=latex}
+\clearpage
+```
+
+# 第5回：政府部門
+
+## 基本問題
+
+### 問1 `[Core] [Derivation]`：政府の通時予算制約（確実性下）
+
+債務式を $B_t$ について解くと、
+$$
+B_t=\frac{PB_{t+1}}{R^f}+\frac{B_{t+1}}{R^f}.
+$$
+これを $i$ 期先まで反復すれば、
+$$
+B_t
+=\sum_{s=1}^{i}\frac{PB_{t+s}}{(R^f)^s}
++\frac{B_{t+i}}{(R^f)^i}.
+$$
+横断性条件により最後の項はゼロへ収束するので、
+$$
+B_t=\sum_{s=1}^{\infty}\frac{PB_{t+s}}{(R^f)^s}
+$$
+を得ます。$B_t$ は $t$ 期末の債務であり、その債務に対応する最初の償還とプライマリーバランスは $t+1$ 期に生じます。このため和は $t+1$ 期から始まります。不確実性下では、1期先の政府予算制約に $Q_{t,t+1}$ を掛けて条件付き期待値を取ります。$B_t$ は今期に既知であり、債券のオイラー方程式が成り立つので、
+$$
+\mathbb E_t\left[Q_{t,t+1}(B_{t+1}+PB_{t+1})\right]
+=B_t\mathbb E_t\left[Q_{t,t+1}\frac{R_t^N}{\Pi_{t+1}}\right]
+=B_t
+$$
+です。この関係を反復期待値の法則で先へ繰り返し、終端の債務のSDF割引価値がゼロへ収束する条件を使うと、
+$$
+B_t=\mathbb E_t\sum_{s=1}^{\infty}Q_{t,t+s}PB_{t+s}
+$$
+を得ます。
+
+### 問2 `[Core]`：一括税と政府購入
+
+一括税と一括移転は家計の限界条件へ直接入らず、代表的家計の生涯資源だけを移します。将来の一括税が国債を裏づける場合、国債発行は税負担の時点を変えるだけです。これに対し政府購入は民間が消費できる財を吸収し、$Y_t=C_t+G_t$ を通じて労働、産出、消費を変えます。
+
+国債発行時点の中立性には、少なくとも、(i) 無限に生きる代表的家計、(ii) 一括税、(iii) 完全な資本市場と借入制約なし、(iv) 家計と政府が同じ利子率で取引、(v) 将来税への合理的期待、(vi) 横断性条件と財政的裏づけが必要です。借入制約家計が存在すれば、現在の減税と将来の増税は消費時点を変え、中立性が破れます。
+
+### 問3 `[Core] [Derivation]`：対数線形化
+
+定常状態の資源制約は $Y=C+G$ です。一次近似すると、
+$$
+Yy_t=Cc_t+(G_t-G).
+$$
+$G_Y=G/Y$、$C/Y=1-G_Y$、$g_t=(G_t-G)/Y$ で割れば、
+$$
+y_t=(1-G_Y)c_t+g_t
+$$
+を得ます。
+
+## 発展問題
+
+### 問4 `[Research extension] [Computation]`：政府購入乗数
+
+正の政府購入ショックは家計の負の所得効果を生みます。民間消費は減り、労働と産出は増えます。労働増加により実質賃金は弱く低下し、$\alpha>0$ なら厳密に低下します。資本蓄積がないため、クラウドアウトは投資ではなく民間消費に現れます。
+
+反応係数は
+$$
+\zeta_g
+=\frac{\gamma(1-\alpha)}{(1-G_Y)(\alpha+\varphi)+\gamma(1-\alpha)}.
+$$
+$G_Y=0.2$、$\alpha=0.4$、$\gamma=\varphi=1$ では、
+$$
+\zeta_g=\frac{0.6}{0.8(1.4)+0.6}\simeq0.349.
+$$
+消費反応は $c_t=(y_t-g_t)/(1-G_Y)$ なので、係数は
+$$
+\frac{\zeta_g-1}{1-G_Y}
+=\frac{0.349-1}{0.8}\simeq-0.814
+$$
+です。
+
+### 問5 `[Research extension] [Derivation]`：税の帰着
+
+家計側課税では、企業が支払う税引前実質賃金を $W_t$ とすると、
+$$
+-\frac{U_{N,t}}{U_{C,t}}=(1-\tau_N^H)W_t,
+\qquad
+W_t=e^{a_t}F_N.
+$$
+企業側課税で家計の受取賃金を $\widetilde W_t$ とすると、
+$$
+-\frac{U_{N,t}}{U_{C,t}}=\widetilde W_t,
+\qquad
+(1+\tau_N^F)\widetilde W_t=e^{a_t}F_N.
+$$
+同じくさびを作る条件は
+$$
+1-\tau_N^H=\frac{1}{1+\tau_N^F}
+\quad\Longleftrightarrow\quad
+\tau_N^H=\frac{\tau_N^F}{1+\tau_N^F}.
+$$
+企業側税収は
+$$
+\tau_N^F\widetilde W_tN_t
+=\frac{\tau_N^F}{1+\tau_N^F}e^{a_t}F_NN_t
+=\tau_N^He^{a_t}F_NN_t,
+$$
+なので、家計側課税の税収と一致します。
+
+### 問6 `[Derivation] [Research extension]`：ラッファーカーブ
+
+各家計は測度ゼロなので、自分の労働選択が集計税収と一括移転を変える効果を無視します。労働供給、労働需要、資源制約をまとめると、
+$$
+N(\tau_N)
+=\left[(1-\tau_N)(1-\alpha)\right]^{
+1/[\varphi+\alpha+\gamma(1-\alpha)]}.
+$$
+$WN=(1-\alpha)Y=(1-\alpha)N^{1-\alpha}$ なので、
+$$
+TX(\tau_N)
+=\tau_N(1-\alpha)N(\tau_N)^{1-\alpha}
+=\mathcal A\tau_N(1-\tau_N)^\vartheta,
+$$
+$$
+\vartheta
+=\frac{1-\alpha}{\varphi+\alpha+\gamma(1-\alpha)},
+\qquad
+\mathcal A=(1-\alpha)^{1+\vartheta}.
+$$
+対数微分した一階条件
+$$
+\frac1{\tau_N}-\frac{\vartheta}{1-\tau_N}=0
+$$
+から、最大税収率は
+$$
+\tau_N^*=\frac{1}{1+\vartheta}
+=\frac{\varphi+\alpha+\gamma(1-\alpha)}
+{\varphi+\alpha+\gamma(1-\alpha)+1-\alpha}
+$$
+です。$\tau_N>\tau_N^*$ では、税率上昇による課税ベースの縮小が直接的な税率効果を上回ります。
+
+### 問7 `[Research extension]`：第6回への接続
+
+政府購入は財を最終用途として吸収するので資源制約が $Y_t=C_t+G_t$ になります。売上比例補助金は政府と企業の間の移転であり、一括税で同額を回収すれば実物資源を吸収しません。政府・企業・家計の予算制約を統合すると $Y_t=C_t$ が残ります。ただし補助金は企業の限界収入を $(1+\tau_p)$ 倍し、価格と限界費用の間のマークアップのくさびを変えます。
+
+```{=latex}
+\clearpage
+```
+
+# 第6回：独占的競争
+
+## 基本問題
+
+### 問1 `[Core]`：概念確認
+
+中間財需要の価格弾力性は $\psi$ です。$\psi$ が大きいほど、企業が相対価格を少し上げたとき需要が大きく減るため、価格を限界費用より高く設定する余地が小さくなります。グロス・マークアップ $\mu^p=\psi/(\psi-1)$ は $\psi$ とともに1へ低下します。
+
+### 問2 `[Core] [Derivation]`：中間財需要
+
+最終財企業は、価格指数を所与として費用
+$$
+\int_0^1P_t^I(j)Y_t^I(j)dj
+$$
+を最小化し、CES 集計量を $Y_t$ に固定します。制約の乗数を用いた一階条件から、各財の限界的な集計寄与に対する価格が共通になります。2財の条件の比を取ると
+$$
+\frac{Y_t^I(j)}{Y_t^I(k)}
+=\left(\frac{P_t^I(j)}{P_t^I(k)}\right)^{-\psi}.
+$$
+価格指数
+$$
+P_t=\left[\int_0^1P_t^I(j)^{1-\psi}dj\right]^{1/(1-\psi)}
+$$
+を使って集計すれば、
+$$
+Y_t^I(j)=Y_t\left(\frac{P_t^I(j)}{P_t}\right)^{-\psi}
+$$
+を得ます。
+
+### 問3 `[Core] [Derivation]`：価格設定の導出
+
+相対価格を $s=P_t^I(j)/P_t$、需要を $q(s)=Y_ts^{-\psi}$ と置きます。固定資本を1に正規化した生産関数は $q=e^{a_t}N^{1-\alpha}$ なので、補助金がない場合の総費用と実質利潤は
+$$
+\begin{aligned}
+\operatorname{TC}_t(q)
+&=W_t(q/e^{a_t})^{1/(1-\alpha)},\\
+D_t(j)&=s q(s)-\operatorname{TC}_t(q(s)).
+\end{aligned}
+$$
+実質限界費用は $MC_t(j)=\operatorname{TC}_t'(q(s))$ です。$\alpha>0$ では生産量とともに変わり、総費用も $MC_t(j)q(s)$ ではなく $(1-\alpha)MC_t(j)q(s)$ になります。
+
+設問の制約付き問題では、
+$$
+\mathcal L
+=sq(s)-W_tN
++MC_t(j)\bigl[e^{a_t}N^{1-\alpha}-q(s)\bigr]
+$$
+を用います。労働の一階条件から $MC_t(j)=W_t/[(1-\alpha)e^{a_t}N^{-\alpha}]$ となり、上の総費用の微分と一致します。$q'(s)=-\psi q(s)/s$ を使った価格の一階条件は
+$$
+\begin{aligned}
+0=\frac{\partial\mathcal L}{\partial s}
+&=q(s)+[s-MC_t(j)]q'(s)\\
+&=q(s)\left[1-\psi+\psi\frac{MC_t(j)}s\right].
+\end{aligned}
+$$
+総費用を代入した利潤を連鎖律で微分しても、同じ条件を得ます。したがって、
+$$
+\frac{P_t^I(j)}{P_t}
+=\frac{\psi}{\psi-1}MC_t(j).
+$$
+対称均衡では相対価格が1なので、
+$$
+MC_t=\frac{\psi-1}{\psi}=1-\frac1\psi
+$$
+です。
+
+### 問4 `[Core]`：政府会計
+
+一括税が企業自身の売上や価格選択に依存すると、その税は限界的な価格変更の収益を変え、一括税ではなくなります。企業の選択と独立に課す必要があります。最終財企業のゼロ利潤条件から中間財への総支払は $P_tY_t$ です。したがって売上比例補助金の総額は $\tau_pP_tY_t$、実質額では $\tau_pY_t$ であり、政府予算は
+$$
+TX_t^I=\tau_pY_t
+$$
+です。補助金と一括税は集計予算で相殺され、財を吸収しないので、財市場均衡は $Y_t=C_t$ のままです。
+
+## 発展問題
+
+### 問5 `[Research extension] [Computation]`：数値確認
+
+$\psi=6$ なら、
+$$
+\mu^p=\frac65=1.2,
+\qquad
+MC=\frac1{\mu^p}=\frac56\simeq0.833.
+$$
+是正補助率は
+$$
+\tau_p^*=\mu^p-1=\frac15=0.2.
+$$
+補助金導入後は $MC=(1+\tau_p^*)/\mu^p=1$ であり、実際の価格・限界費用比も1です。補助金が企業の限界収入を補うため、社会的な価格と限界費用が一致します。
+
+### 問6 `[Research extension]`：水準と変動
+
+無補助では $MC=1/\mu^p<1$ です。限界生産物に比べて家計へ支払われる実質賃金が低く、労働供給、産出、消費は完全競争定常状態より小さくなります。一方、価格が柔軟で $\mu^p$ と補助率が一定なら、$MC_t/MC=1$ が毎期成立します。定常状態からの対数乖離を取ると一定のマークアップは消えるため、技術ショックへの一次の百分率反応は完全競争モデルと一致します。ただし定常水準が違うので、絶対量の変化は同じとは限りません。
+
+```{=latex}
+\clearpage
+```
+
+# 第7回：基本RANKモデル
+
+## 基本問題
+
+### 問1 `[Core]`：価格硬直性の直観
+
+Rotemberg 費用は価格の変化率に依存します。当期価格は当期の相対価格と売上だけでなく、次期に価格を変更するときの基準価格にもなります。このため企業は現在の実質限界費用に加え、当期価格が将来の調整費用と企業価値へ与える効果を考えます。第6回の柔軟価格モデルでは調整費用がなく、各期に静学的なマークアップ条件だけを満たします。
+
+### 問2 `[Core] [Derivation]`：価格設定条件
+
+与えられた非線形条件の左辺は、$\Pi_t=1+\pi_t+O(2)$ と $f_P'(\Pi_t)=\eta(\Pi_t-1)$ を使うと、
+$$
+\Pi_tf_P'(\Pi_t)=\eta\pi_t+O(2)
+$$
+です。是正補助金のもとでは定常状態のマークアップ項が相殺され、$MC_t=1+mc_t+O(2)$ なので、右辺第1項は $\psi mc_t$ になります。将来項は、定常状態で $Q=\beta$、$Y_{t+1}/Y_t=1$ であることから、
+$$
+\beta\eta\mathbb E_t\pi_{t+1}
+$$
+です。$Q_{t,t+1}$ と $Y_{t+1}/Y_t$ の一次変動は、定常状態でゼロの $f_P'(1)$ と掛け合わされるため二次項になります。以上から、
+$$
+\eta\pi_t
+=\psi mc_t+\beta\eta\mathbb E_t\pi_{t+1},
+$$
+したがって
+$$
+\pi_t=\beta\mathbb E_t\pi_{t+1}+\frac{\psi}{\eta}mc_t
+$$
+を得ます。
+
+### 問3 `[Core] [Derivation]`：自然産出量と需給ギャップ
+
+$n_t=y_t-a_t$ と $c_t=y_t$ を労働供給へ代入すると、
+$$
+w_t=(\gamma+\varphi)y_t-\varphi a_t.
+$$
+これを $w_t=mc_t+a_t$ と等置すれば、
+$$
+mc_t=(\gamma+\varphi)y_t-(1+\varphi)a_t.
+$$
+柔軟価格では $mc_t=0$ なので、
+$$
+y_t^f=\frac{1+\varphi}{\gamma+\varphi}a_t.
+$$
+したがって、
+$$
+mc_t=(\gamma+\varphi)(y_t-y_t^f)
+=(\gamma+\varphi)x_t
+$$
+です。
+
+## 発展問題
+
+### 問4 `[Research extension] [Derivation]`：自然利子率
+
+$c_t^f=y_t^f=\zeta_a a_t$、$\zeta_a=(1+\varphi)/(\gamma+\varphi)$ です。柔軟価格配分のオイラー方程式へ代入すると、
+$$
+r_t^f
+=\gamma\mathbb E_t(c_{t+1}^f-c_t^f)
+=\gamma\zeta_a(\rho_a-1)a_t.
+$$
+$0\leq\rho_a<1$ の正の技術ショックは現在消費を将来消費より大きく押し上げるので、期待消費成長率は負になり、自然実質利子率が低下します。
+
+### 問5 `[Research extension]`：3本のNK方程式と金融政策
+
+基本体系は
+$$
+\begin{aligned}
+x_t&=\mathbb E_tx_{t+1}-\frac1\gamma(r_t-r_t^f),\\
+\pi_t&=\beta\mathbb E_t\pi_{t+1}+\kappa_xx_t,\\
+r_t&=\phi\pi_t-\mathbb E_t\pi_{t+1}-m_t.
+\end{aligned}
+$$
+期待将来ギャップ $\mathbb E_tx_{t+1}$ を所与とすれば、実質利子率ギャップの上昇は $x_t$ を押し下げます。ただし IS 曲線から直接分かるのは
+$$
+x_t-\mathbb E_tx_{t+1}=-\frac1\gamma(r_t-r_t^f)
+$$
+なので、$r_t>r_t^f$ だけでは $x_t<0$ とはいえません。例えば $\gamma=1$、$\mathbb E_tx_{t+1}=0.009$、$r_t-r_t^f=0.004$ なら、$x_t=0.005>0$ です。$\mathbb E_tx_{t+1}=0$ という追加条件のもとでは、$r_t>r_t^f$ から $x_t<0$ を結論できます。
+
+期待将来変数と自然利子率を固定すれば、$m_t>0$ は同じインフレ率のもとで実質利子率を下げるので NK--AD 曲線を右上へ動かします。しかし均衡では $m_t$ が将来の $x_{t+1}$ と $\pi_{t+1}$ の期待も変えます。正確な反応には、IS 曲線、NKフィリップス曲線、政策ルール、ショック過程を同時に解く必要があります。
+
+```{=latex}
+\clearpage
+```
+
+# 第8回：一般RANKモデル
+
+## 基本問題
+
+### 問1 `[Core]`：自然産出量と効率的産出量
+
+自然産出量は、同じ外生ショックのもとで価格が柔軟なら実現する産出です。需給ギャップ $x_t=y_t-y_t^f$ を使えば、技術や政府支出が自然産出量を動かす効果と、名目硬直性による乖離を分けられます。独占的競争のマークアップが残ると柔軟価格配分にも定常的な歪みがあるため、自然産出量は効率的産出量と一致しません。是正補助金はこのマークアップのくさびを相殺し、基準モデルで両者を一致させます。
+
+### 問2 `[Core] [Derivation]`：導出確認
+
+資源制約と生産関数から、
+$$
+c_t=\frac{y_t-g_t}{1-G_Y},
+\qquad
+n_t=\frac{y_t-a_t}{1-\alpha}.
+$$
+これらを労働供給 $w_t=\gamma c_t+\varphi n_t$ と労働需要 $w_t=mc_t+a_t-\alpha n_t$ へ代入すると、
+$$
+mc_t
+=\widetilde\gamma(y_t-g_t)
++\widetilde\varphi y_t-(\widetilde\varphi+1)a_t,
+$$
+$$
+\widetilde\gamma=\frac{\gamma}{1-G_Y},
+\qquad
+\widetilde\varphi=\frac{\varphi+\alpha}{1-\alpha}.
+$$
+係数をまとめれば、
+$$
+mc_t=(\widetilde\gamma+\widetilde\varphi)
+(y_t-\zeta_aa_t-\zeta_gg_t),
+$$
+$$
+\zeta_a=\frac{\widetilde\varphi+1}{\widetilde\varphi+\widetilde\gamma},
+\qquad
+\zeta_g=\frac{\widetilde\gamma}{\widetilde\varphi+\widetilde\gamma}.
+$$
+
+### 問3 `[Core] [Derivation]`：第7回の特殊ケース
+
+$\alpha=0$、$G_Y=0$ なら $\widetilde\gamma=\gamma$、$\widetilde\varphi=\varphi$ です。さらに $g_t=0$ と置くと、
+$$
+y_t^f=\frac{1+\varphi}{\gamma+\varphi}a_t
+$$
+となります。一般形の3式は
+$$
+\begin{aligned}
+x_t&=\mathbb E_tx_{t+1}-\frac1\gamma(r_t-r_t^f),\\
+\pi_t&=\beta\mathbb E_t\pi_{t+1}+\kappa_xx_t,\\
+r_t&=\phi\pi_t-\mathbb E_t\pi_{t+1}-m_t,
+\end{aligned}
+$$
+となり、第7回の体系に一致します。
+
+### 問4 `[Core]`：構造式と誘導形
+
+構造的NKフィリップス曲線
+$$
+\pi_t=\beta\mathbb E_t\pi_{t+1}+\kappa_xx_t
+$$
+は、任意の均衡経路で成立する企業の価格設定条件です。単一の AR(1) ショック $i$ のもとで $\pi_t$ と $x_t$ が同じ持続性 $\rho_i$ を持つと予想した場合に限り、$\mathbb E_t\pi_{t+1}=\rho_i\pi_t$ を代入して
+$$
+\pi_t^{(i)}=\frac{\kappa_x}{1-\beta\rho_i}x_t^{(i)}
+$$
+という誘導形を得ます。複数ショックが異なる持続性で同時に動けば、期待インフレは各成分の加重和になり、単一の $\rho_i$ と傾きでは表せません。
+
+## 発展問題
+
+### 問5 `[Derivation] [Research extension]`：政府支出ショック
+
+政府支出だけが動く場合、
+$$
+r_t^f=\widetilde\gamma(1-\rho_g)(1-\zeta_g)g_t.
+$$
+解を $x_t=b_gg_t$ と予想すると、
+$$
+\pi_t=\kappa_gx_t,
+\qquad
+\kappa_g=\frac{\kappa_x}{1-\beta\rho_g}.
+$$
+IS 曲線と政策ルールを等置して、
+$$
+x_t=(1-\zeta_g)\Omega_gg_t,
+\qquad
+\pi_t=\kappa_g(1-\zeta_g)\Omega_gg_t,
+$$
+$$
+\Omega_g
+=\frac{\widetilde\gamma(1-\rho_g)}
+{\kappa_g(\phi-\rho_g)+\widetilde\gamma(1-\rho_g)}
+$$
+を得ます。$\kappa_x\to\infty$ では $\Omega_g\to0$ なので $x_t\to0$、$y_t\to y_t^f=\zeta_gg_t$ です。$\kappa_x\to0$ では $\Omega_g\to1$ なので $x_t\to(1-\zeta_g)g_t$、$y_t=y_t^f+x_t\to g_t$ です。
+
+### 問6 `[Derivation] [Research extension]`：厚生ロスへの接続
+
+技術・政府支出ショックは、効率的な柔軟価格産出 $y_t^f=\zeta_aa_t+\zeta_gg_t$ 自体を動かします。したがって $y_t$ がゼロから離れることではなく、効率的配分から離れる
+$$
+x_t=y_t-y_t^f
+$$
+ことが資源配分上の損失です。二次近似前の損失を
+$$
+\frac12\left[(\widetilde\gamma+\widetilde\varphi)x_t^2
++\eta\pi_t^2\right]
+$$
+と書き、正の定数 $\widetilde\gamma+\widetilde\varphi$ で割ると、
+$$
+\frac12\left[x_t^2+\omega_p\pi_t^2\right],
+\qquad
+\omega_p=\frac{\eta}{\widetilde\gamma+\widetilde\varphi}
+$$
+となります。
+
+```{=latex}
+\clearpage
+```
+
+# 第9回：最適金融政策
+
+## 基本問題
+
+### 問1 `[Core]`：神々の配剤
+
+神々の配剤とは、インフレ安定化と厚生上の産出ギャップ安定化を同じ配分で達成できることです。是正補助金により自然配分と効率的配分が一致し、コストプッシュ・ウェッジがなければ、NKフィリップス曲線は
+$$
+\pi_t=\beta\mathbb E_t\pi_{t+1}+\kappa_xx_t^e
+$$
+です。$\pi_t=x_t^e=0$ を全期で置けば期待インフレもゼロとなり、この式を満たします。ロス関数の両項もゼロなので、この配分が最適です。
+
+### 問2 `[Core]`：利子率ペッグと不決定性
+
+名目利子率を固定すると、期待インフレの上昇は事前実質利子率を低下させます。低い実質利子率は需要と需給ギャップを押し上げ、NKフィリップス曲線を通じて現在のインフレも上げます。この自己実現的な期待経路を排除する政策フィードバックがありません。ゼロインフレ定常状態は均衡の一つですが、唯一の有界均衡ではありません。
+
+### 問3 `[Core] [Derivation]`：裁量政策
+
+ここでは内生的な所定状態がなく、外生状態のみに依存する Markov 裁量政策を考えるため、当期の選択に対して将来期待と継続価値を所与として扱います。
+
+制約を
+$$
+\pi_t-\beta\mathbb E_t\pi_{t+1}-\kappa_xx_t^e-u_t=0
+$$
+と書き、乗数を $\mu_t$ とします。一階条件は
+$$
+\omega_p\pi_t+\mu_t=0,
+\qquad
+x_t^e-\kappa_x\mu_t=0.
+$$
+第1式から $\mu_t=-\omega_p\pi_t$ なので、第2式へ代入して
+$$
+x_t^e+\kappa_x\omega_p\pi_t=0
+$$
+を得ます。
+
+### 問4 `[Core]`：コミットメントの履歴依存性
+
+コミットメントでは $\pi_t$ が今期のNKフィリップス曲線だけでなく、前期の制約の期待項 $-\beta\pi_t$ にも入ります。したがってインフレの一階条件には今期と前期の乗数が現れ、これを産出ギャップへ置き換えると
+$$
+\kappa_x\omega_p\pi_t+x_t^e-x_{t-1}^e=0
+$$
+となります。中央銀行が将来にも負の産出ギャップを残すと約束すれば、期待将来インフレが下がり、現在のインフレを小さい景気後退で抑えられます。$x_{t-1}^e$ は過去の約束を現在の政策へ結びつけます。
+
+## 発展問題
+
+### 問5 `[Computation] [Research extension]`：ショックの持続性
+
+裁量解は
+$$
+\pi_t^D
+=\frac{u_t}{1-\beta\rho_u+\kappa_x^2\omega_p},
+\qquad
+x_t^{e,D}
+=-\frac{\kappa_x\omega_p u_t}
+{1-\beta\rho_u+\kappa_x^2\omega_p}.
+$$
+$u_t$ のインパクトを固定すると、$\rho_u$ の上昇は分母を小さくするため、$\pi_t^D$ の正の反応と $x_t^{e,D}$ の負の反応の絶対値をともに大きくします。持続的なショックは将来インフレ期待も高めるため、当期のトレードオフが厳しくなります。ただし安定化バイアスはコミットメント解との厚生差なので、この裁量解だけからその差の単調性までは結論できません。
+
+### 問6 `[Research extension]`：通常のコミットメントとタイムレス・パースペクティブ
+
+通常のコミットメント計画では、前期制約が存在しない初期時点だけ
+$$
+\kappa_x\omega_p\pi_0+x_0^e=0
+$$
+であり、$t\geq1$ では
+$$
+\kappa_x\omega_p\pi_t+x_t^e-x_{t-1}^e=0
+$$
+です。タイムレス・パースペクティブは初期時点の特権を除き、$t=0$ にも後者を課します。このとき $x_{-1}^e$、または同値な前期乗数を過去の約束として引き継ぐ必要があります。政策当局が毎期その状態をゼロへ再設定できるなら、同じ履歴依存条件を継続する根拠が失われるからです。
+
+### 問7 `[Derivation] [Research extension]`：目標配分の実装
+
+目標配分を $(x_t^{e,*},\pi_t^*)$、それを支持する金利を $r_t^{N,*}$ とします。動学的 IS 曲線を目標配分に適用すると、
+$$
+r_t^*=r_t^e+\widetilde\gamma
+\left(\mathbb E_tx_{t+1}^{e,*}-x_t^{e,*}\right).
+$$
+フィッシャー関係を使えば、
+$$
+r_t^{N,*}
+=r_t^e+\widetilde\gamma
+\left(\mathbb E_tx_{t+1}^{e,*}-x_t^{e,*}\right)
++\mathbb E_t\pi_{t+1}^*.
+$$
+ターゲット条件は望ましい配分の組合せを表し、この式はその配分を均衡の一つとして支持する金利経路を表します。目標から外れた場合の金利反応までは定めていないため、これだけでは一意実装を保証しません。
+
+外生ショックの履歴に条件づけた目標計画を固定し、実際の逸脱を理由に目標を選び直さず、
+$$
+r_t^N=r_t^{N,*}+\phi(\pi_t-\pi_t^*),
+\qquad\phi>1
+$$
+とします。差を $d_t=x_t^e-x_t^{e,*}$、$p_t=\pi_t-\pi_t^*$ と置き、同じ外生ショックのもとで実際の条件と目標経路の条件を引くと、
+$$
+\begin{aligned}
+d_t&=\mathbb E_td_{t+1}
+-\frac1{\widetilde\gamma}
+\left(\phi p_t-\mathbb E_tp_{t+1}\right),\\
+p_t&=\beta\mathbb E_tp_{t+1}+\kappa_xd_t.
+\end{aligned}
+$$
+したがって $\mathbb E_t(d_{t+1},p_{t+1})'=A(\phi)(d_t,p_t)'$ であり、問8で確認するBK条件を満たします。前向き変数が2つで単位円外の固有値も2つなので、局所有界解は $d_t=p_t=0$ に一意に決まります。必要な状態の観測と金利の自由な設定が可能なら、上の手段ルールは目標配分を一意に実装します。
+
+### 問8 `[Derivation] [Research extension]`：決定性
+
+遷移行列は
+$$
+A(\phi)=
+\begin{bmatrix}
+1+\dfrac{\kappa_x}{\beta\widetilde\gamma}
+&\dfrac{\phi}{\widetilde\gamma}-\dfrac{1}{\beta\widetilde\gamma}\\
+-\dfrac{\kappa_x}{\beta}&\dfrac1\beta
+\end{bmatrix}.
+$$
+その特性多項式について、
+$$
+q(1)=\frac{\kappa_x(\phi-1)}{\beta\widetilde\gamma}>0,
+$$
+$$
+\operatorname{tr}A(\phi)
+=1+\frac1\beta+\frac{\kappa_x}{\beta\widetilde\gamma}>2,
+\qquad
+\det A(\phi)=\frac{1+\kappa_x\phi/\widetilde\gamma}{\beta}>1.
+$$
+固有値が実数なら、積と和が正で $q(1)>0$ なので2根は1の同じ側にあります。和が2を上回るため両根とも1より大きくなります。複素共役なら各根の絶対値は $\sqrt{\det A(\phi)}>1$ です。したがって単位円外の固有値は2個です。前向き変数 $(x_t^e,\pi_t)$ も2個なので、Blanchard--Kahn 条件を満たします。
+
+```{=latex}
+\Needspace{14\baselineskip}
+```
+
+### 問9 `[Research extension]`：二つのバイアス
+
+安定化バイアスは、コストプッシュショックのもとで裁量政策が将来政策を約束できず、同じ初期条件からのコミットメント政策に比べて期待割引厚生損失が大きくなる問題です。比較するのはインフレ率と厚生上の産出ギャップの加重二乗和であり、両変数の変動がそれぞれ大きくなるとは限りません。コミットメントは産出ギャップの反応を長く持続させ、その割引二乗和が増えても、インフレの安定化を通じて総損失を減らすことがあります。Barro--Gordon 型のインフレ・バイアスは、中央銀行が自然産出量を上回る目標を持つため、ショックがなくても予想された正の平均インフレが生じる問題です。本講義のロス関数は $x_t^e=0$ を目標とし、効率的産出量を上回る目標を置かないため、後者は生じません。
+
+```{=latex}
+\clearpage
+```
+
+# 第10回：価格・賃金硬直性とRANKモデル
+
+## 基本問題
+
+### 問1 `[Core] [Derivation]`：労働パッカー
+
+労働パッカーは所与の $N_t$ を最小費用で集計します。賃金指数を $W_t^N$ とすると、一階条件の比から
+$$
+\frac{N_t(h)}{N_t(k)}
+=\left(\frac{W_t^N(h)}{W_t^N(k)}\right)^{-\psi_w}
+$$
+です。賃金指数
+$$
+W_t^N
+=\left[\int_0^1W_t^N(h)^{1-\psi_w}dh\right]^{1/(1-\psi_w)}
+$$
+を使って集計すれば、
+$$
+N_t(h)=N_t\left(\frac{W_t^N(h)}{W_t^N}\right)^{-\psi_w}
+$$
+を得ます。
+
+### 問2 `[Core]`：賃金フィリップス曲線の符号
+
+$\mu_t^w=w_t-\gamma c_t-\varphi n_t$ は実質賃金が MRS を上回る賃金マークアップです。$\mu_t^w>0$ なら家計の賃金は需要に比べて高く、望ましい調整は相対賃金を引き下げる方向です。そのため当期の賃金インフレへの効果は負となり、
+$$
+\pi_t^w=\beta\mathbb E_t\pi_{t+1}^w-\kappa_w\mu_t^w
+$$
+となります。
+
+### 問3 `[Core] [Derivation]`：マークアップと需給ギャップ
+
+定義を足すと賃金 $w_t$ が消え、
+$$
+\begin{aligned}
+\mu_t^p+\mu_t^w
+&=a_t-\gamma y_t-\varphi(y_t-a_t)\\
+&=(1+\varphi)a_t-(\gamma+\varphi)y_t\\
+&=-(\gamma+\varphi)
+\left[y_t-\frac{1+\varphi}{\gamma+\varphi}a_t\right].
+\end{aligned}
+$$
+したがって $\mu_t^p+\mu_t^w=-(\gamma+\varphi)x_t$ です。
+
+### 問4 `[Core]`：名目賃金・物価・実質賃金
+
+実質賃金の変化は $\Delta w_t=\pi_t^w-\pi_t^p$ です。賃金インフレ率が価格インフレ率を上回る $\pi_t^w>\pi_t^p$ とき、実質賃金は上昇します。
+
+## 発展問題
+
+### 問5 `[Research extension] [Derivation]`：初期実質賃金と完全安定化
+
+**1. 自然実質賃金と状態の推移**
+
+柔軟価格の条件 $\mu_t^p=a_t-w_t=0$ から $w_t^f=a_t$ です。したがって、賃金インフレ恒等式より
+$$
+\begin{aligned}
+\widetilde w_t-\widetilde w_{t-1}
+&=(w_t-w_{t-1})-(a_t-a_{t-1})\\
+&=\pi_t^w-\pi_t^p-(a_t-a_{t-1}).
+\end{aligned}
+$$
+過去の実質賃金と当期の技術変化が、必要な名目賃金・物価の調整を制約します。
+
+**2. 全期の完全安定化**
+
+すべての期・履歴で両インフレ率をゼロとする計画では、将来インフレの期待もゼロです。$\kappa_p,\kappa_w>0$ なので、両フィリップス曲線は
+$$
+\mu_t^p=\mu_t^w=0
+$$
+を要求します。マークアップの和から $x_t=0$、価格マークアップの定義から $w_t=a_t$ です。一方、恒等式より $\Delta w_t=0$ なので、$w_t=w_{-1}$ が続きます。両立の必要条件は
+$$
+a_t=w_{-1}\qquad\text{すべての }t\geq0
+$$
+です。初期の $a_0$ と $w_{-1}$ が一致し、その後も技術が変わらないことが必要です。この場合は自然配分が一定なので、IS曲線を満たす実質・名目利子率の乖離をともにゼロとすることで、ゼロインフレの配分を支持できます。この支持だけで均衡の一意性を主張しているわけではありません。
+
+設問のショックでは、$a_0=0.01$ に対して $w_{-1}=0$ なので必要条件を満たさず、計画は実現できません。技術ショックがなく $a_t=0$ でも、$w_{-1}\ne0$ なら同じ問題が生じます。これは特定の金利ルールの失敗ではなく、実質賃金を変えるためには両インフレ率に差が必要なことから生じます。
+
+**3. 当期だけの安定化との違い**
+
+当期だけ両インフレ率がゼロでも、将来の期待インフレが非ゼロなら
+$$
+\kappa_p\mu_t^p=\beta\mathbb E_t\pi_{t+1}^p,
+\qquad
+\kappa_w\mu_t^w=\beta\mathbb E_t\pi_{t+1}^w
+$$
+であり、当期のマークアップはゼロとは限りません。2の結論には、全期にわたる計画が必要です。
+
+```{=latex}
+\Needspace{8\baselineskip}
+```
+
+### 問6 `[Research extension] [Derivation] [Computation]`：二つのインフレ率と柔軟性の極限
+
+**1. 条件付きのインフレ率**
+
+期待項がゼロなら $\mu_t^p=-\pi_t^p/\kappa_p$、$\mu_t^w=-\pi_t^w/\kappa_w$ です。両者の和を使うと
+$$
+\frac{\pi_t^p}{\kappa_p}+\frac{\pi_t^w}{\kappa_w}
+=(\gamma+\varphi)x_t.
+$$
+$\pi_t^w=\pi_t^p+\Delta w_t$ を代入して
+$$
+\begin{aligned}
+\pi_t^p&=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t-\frac{\kappa_p}{\kappa_p+\kappa_w}\Delta w_t,\\
+\pi_t^w&=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}
+(\gamma+\varphi)x_t+\frac{\kappa_w}{\kappa_p+\kappa_w}\Delta w_t
+\end{aligned}
+$$
+を得ます。
+
+**2. 数値例**
+
+$\bar\kappa=1/30$、$(\gamma+\varphi)x_t=0.02$ なので、
+$$
+\begin{aligned}
+\pi_t^p&=\frac{0.02}{30}-\frac23(0.002)
+=-\frac1{1500}\simeq-0.0006667,\\
+\pi_t^w&=\frac{0.02}{30}+\frac13(0.002)
+=\frac1{750}\simeq0.0013333.
+\end{aligned}
+$$
+100倍した一次近似の表示では、それぞれ約 $-0.0667$、$0.1333$ パーセントポイントです。両者の差は $0.002$ です。実質賃金を上げるための相対価格調整が、正の需給ギャップによる共通の上昇圧力を上回るため、価格インフレ率は負になります。
+
+**3. 柔軟化の極限**
+
+$\Delta w_t=0$ なら
+$$
+\pi_t^p=\pi_t^w=\bar\kappa(\gamma+\varphi)x_t,
+\qquad
+\bar\kappa=\frac{\kappa_p\kappa_w}{\kappa_p+\kappa_w}.
+$$
+$\kappa_i=\psi_i/\eta_i$ なので、他方の調整費用を正に固定すると、
+$$
+\begin{aligned}
+\eta_w\to0&\Rightarrow\kappa_w\to\infty
+\Rightarrow\bar\kappa\to\kappa_p,\\
+\eta_p\to0&\Rightarrow\kappa_p\to\infty
+\Rightarrow\bar\kappa\to\kappa_w.
+\end{aligned}
+$$
+それぞれ価格硬直性だけ、賃金硬直性だけの傾きを回収します。$\kappa_i\to0$ は調整費用が大きくなる方向であり、柔軟化とは逆です。これは $\Delta w_t=0$ とした合成係数の極限であり、柔軟な名目変数のインフレ率が必ずゼロになるという意味ではありません。
+
+```{=latex}
+\Needspace{6\baselineskip}
+```
+
+**4. 動学解との違い**
+
+$x_t$、$\Delta w_t$ と将来期待を条件として与えた関係であり、これらの変数をショックから求めていません。インパルス応答には、初期実質賃金、マークアップの定義、合理的期待、IS曲線、政策ルール、ショック過程を同時に満たす経路が必要です。
+
+### 問7 `[Research extension] [Derivation]`：実質賃金調整の費用下限
+
+**1. 恒等式だけを使った最小化**
+
+$\pi_t^w=\pi_t^p+\delta$ を代入すると、
+$$
+J_t=\frac12\left[\omega_p(\pi_t^p)^2
++\omega_w(\pi_t^p+\delta)^2\right].
+$$
+一階条件は $\omega_p\pi_t^p+\omega_w(\pi_t^p+\delta)=0$ です。二階微分は $\omega_p+\omega_w>0$ なので、最小点は一意に
+$$
+\pi_t^p=-\frac{\omega_w}{\omega_p+\omega_w}\delta,
+\qquad
+\pi_t^w=\frac{\omega_p}{\omega_p+\omega_w}\delta
+$$
+と決まります。代入すれば下限は
+$$
+J_t^{\min}=\frac12\frac{\omega_p\omega_w}{\omega_p+\omega_w}\delta^2.
+$$
+$\delta>0$ なら物価下落と名目賃金上昇を組み合わせて実質賃金を上げます。$\omega_w$ が相対的に大きいほど賃金インフレ率を小さくし、物価下落に調整を多く負担させます。
+
+**2. 数値と解釈**
+
+設問では $\omega_p=30$、$\omega_w=60$ なので、
+$$
+\pi_t^p=-\frac1{150}\simeq-0.006667,
+\qquad
+\pi_t^w=\frac1{300}\simeq0.003333,
+\qquad
+J_t^{\min}=0.001.
+$$
+インフレ率を100倍すると約 $-0.6667$、$0.3333$ パーセントポイントです。$J_t$ は正規化された損失であり、消費の百分率そのものではありません。
+
+この計算は、$\Delta w_t=\delta$ を満たす任意の動学的配分について、当期の名目調整損失がこれより小さくならないことを示します。両フィリップス曲線、IS曲線、初期状態や将来期待を制約に含めず、$x_t^2/2$ と将来の損失も目的から落としているため、この下限を達成する配分が元のモデルで実現可能とは限りません。したがって、動学的な最適政策や総厚生損失を求めたことにはなりません。
+
+```{=latex}
+\Needspace{6\baselineskip}
+```
+
+**3. 静学条件付き解との一致**
+
+問6で $x_t=0$、$\Delta w_t=\delta$ とすると、
+$$
+\pi_t^p=-\frac{\kappa_p}{\kappa_p+\kappa_w}\delta,
+\qquad
+\pi_t^w=\frac{\kappa_w}{\kappa_p+\kappa_w}\delta.
+$$
+$\delta\ne0$ のもとで1の配分と一致する条件は
+$$
+\frac{\kappa_p}{\kappa_p+\kappa_w}
+=\frac{\omega_w}{\omega_p+\omega_w}
+\quad\Longleftrightarrow\quad
+\kappa_p\omega_p=\kappa_w\omega_w.
+$$
+$\kappa_i\omega_i=\psi_i/(\gamma+\varphi)$ なので、$\psi_p=\psi_w$ と同値です。$\delta=0$ なら両方の解がゼロとなり、代替弾力性にかかわらず一致します。この一致も当期の静学条件に関するもので、動学的な最適性を保証しません。
+
+```{=latex}
+\clearpage
+```
+
+# 第11回：TANKモデルと価格硬直性
+
+## 基本問題
+
+### 問1 `[Core] [Derivation]`：集計と格差
+
+$\sigma_t^c=c_t^S-c_t^H$ から $c_t^S=c_t^H+\sigma_t^c$ です。集計式へ代入すると、
+$$
+c_t=\lambda c_t^H+(1-\lambda)(c_t^H+\sigma_t^c)
+=c_t^H+(1-\lambda)\sigma_t^c.
+$$
+したがって、
+$$
+c_t^H=c_t-(1-\lambda)\sigma_t^c,
+\qquad
+c_t^S=c_t^H+\sigma_t^c=c_t+\lambda\sigma_t^c
+$$
+です。
+
+### 問2 `[Core] [Derivation]`：分配変数を残したIS曲線
+
+$c_t^S=y_t+\lambda\sigma_t^c$ を Euler 方程式へ代入すると、
+$$
+r_t=\gamma\mathbb E_t\Delta y_{t+1}
++\gamma\lambda\mathbb E_t\Delta\sigma_{t+1}^c.
+$$
+これを $y_t$ について解き、$y_t=x_t+y_t^f$ と
+$$
+r_t^{f,R}=\gamma\mathbb E_t\Delta y_{t+1}^f
+$$
+を使えば、
+$$
+x_t=\mathbb E_tx_{t+1}
+-\frac1\gamma(r_t-r_t^{f,R})
++\lambda\mathbb E_t\Delta\sigma_{t+1}^c
+$$
+を得ます。$r_t^{f,R}$ は代表的家計の技術ショック基準から作った自然利子率なので、この段階では移転や消費格差を含みません。
+
+### 問3 `[Core] [Derivation]`：実質限界費用
+
+両家計が共通の柔軟実質賃金に直面すると、各タイプの労働供給条件を人口比で集計して
+$$
+w_t=\gamma c_t+\varphi n_t
+$$
+を得ます。個別の消費・労働格差は加重平均で相殺されます。$c_t=y_t$、$n_t=y_t-a_t$、労働需要 $w_t=mc_t+a_t$ を使うと、
+$$
+mc_t=(\gamma+\varphi)y_t-(1+\varphi)a_t.
+$$
+自然産出量 $y_t^f=(1+\varphi)a_t/(\gamma+\varphi)$ を引けば、
+$$
+mc_t=(\gamma+\varphi)(y_t-y_t^f)
+=(\gamma+\varphi)x_t
+$$
+です。格差は集計限界費用ではなく、IS 曲線を閉じる分配ブロックに残ります。
+
+### 問4 `[Core]`：RANKへの縮約
+
+$\lambda=0$ なら Type H は存在せず、$c_t^S=c_t$、$n_t^S=n_t$ です。このとき
+$$
+\Theta_T=1-\frac{\lambda\varphi}{1-\lambda}=1,
+\qquad
+r_t^{f,T}=r_t^{f,R}.
+$$
+閉じた IS 曲線は
+$$
+x_t=\mathbb E_tx_{t+1}-\frac1\gamma(r_t-r_t^{f,R})
+$$
+となります。NKフィリップス曲線と政策ルールはもともと第7回と共通なので、体系全体が RANK に戻ります。
+
+### 問5 `[Core] [Derivation]`：柔軟賃金の整合性条件
+
+両タイプの労働供給条件を引くと、
+$$
+\gamma\sigma_t^c+\varphi\sigma_t^n=0.
+$$
+$A_t=(d_t-z_t)/(1-\lambda)$ と置けば、もう一つの条件は $\sigma_t^c=\sigma_t^n+A_t$ です。$\sigma_t^n=-(\gamma/\varphi)\sigma_t^c$ を代入して、
+$$
+\sigma_t^c=\frac{\varphi}{\gamma+\varphi}A_t,
+\qquad
+\sigma_t^n=-\frac{\gamma}{\gamma+\varphi}A_t.
+$$
+すなわち、
+$$
+\sigma_t^c
+=\frac{\varphi}{\gamma+\varphi}\frac{d_t-z_t}{1-\lambda},
+\qquad
+\sigma_t^n
+=-\frac{\gamma}{\gamma+\varphi}\frac{d_t-z_t}{1-\lambda}.
+$$
+
+### 問6 `[Core] [Derivation]`：閉じたIS曲線とTANK自然利子率
+
+**1. 閉じたIS曲線**
+
+$d_t=-(\gamma+\varphi)x_t$ を問5の式へ代入すると、
+$$
+\sigma_t^c
+=-\frac{\varphi}{1-\lambda}x_t
+-\frac{\varphi}{(\gamma+\varphi)(1-\lambda)}z_t.
+$$
+これを開いた IS 曲線へ代入し、$\mathbb E_t\Delta x_{t+1}=\mathbb E_tx_{t+1}-x_t$ を整理します。$\Theta_T=1-\lambda\varphi/(1-\lambda)$ と置けば、
+$$
+x_t=\mathbb E_tx_{t+1}
+-\frac{1}{\gamma\Theta_T}(r_t-r_t^{f,R})
+-\frac{\lambda\varphi}
+{(\gamma+\varphi)(1-\lambda)\Theta_T}
+\mathbb E_t\Delta z_{t+1}.
+$$
+
+**2. TANK自然利子率**
+
+ここで
+$$
+r_t^{f,T}=r_t^{f,R}
+-\frac{\gamma\lambda\varphi}
+{(\gamma+\varphi)(1-\lambda)}
+\mathbb E_t\Delta z_{t+1}
+$$
+と定義すれば、
+$$
+x_t=\mathbb E_tx_{t+1}
+-\frac{1}{\gamma\Theta_T}(r_t-r_t^{f,T})
+$$
+です。柔軟価格では $x_t=0$ なので、$r_t=r_t^{f,T}$ と置けば分配変動を含む自然配分を支えられます。
+
+## 発展問題
+
+### 問7 `[Derivation] [Research extension]`：金融緩和ショック
+
+解を $x_t=\Omega_Tm_t$ と予想すると、NKフィリップス曲線から
+$$
+\pi_t=\kappa_mx_t,
+\qquad
+\kappa_m=\frac{\kappa_x}{1-\beta\rho_m}.
+$$
+政策ルールから $r_t=(\phi-\rho_m)\kappa_mx_t-m_t$、IS 曲線から $r_t=-\gamma\Theta_T(1-\rho_m)x_t$ です。両者を等置すると、
+$$
+x_t=\Omega_Tm_t,
+\qquad
+\Omega_T
+=\frac1{\kappa_m(\phi-\rho_m)+\gamma\Theta_T(1-\rho_m)}.
+$$
+RANK では $\Theta_T=1$ です。$0<\Theta_T<1$ なら TANK の分母が小さいため、$\Omega_T$ は RANK より大きくなります。しかし大きい $x_t$ と $\pi_t$ は安定化損失を増やしうるうえ、消費格差と労働格差も厚生へ影響します。反応の大きさだけでは厚生改善を判定できません。
+
+### 問8 `[Derivation] [Research extension]`：再分配ショックと自然利子率
+
+$\mathbb E_t\Delta z_{t+1}=-(1-\rho_z)z_t$ なので、
+$$
+r_t^{f,T}
+=\frac{\gamma\lambda\varphi}
+{(\gamma+\varphi)(1-\lambda)}(1-\rho_z)z_t.
+$$
+解を $x_t=\Omega_z^Tz_t$ と予想すると、
+$$
+\pi_t=\kappa_zx_t,
+\qquad
+\kappa_z=\frac{\kappa_x}{1-\beta\rho_z},
+\qquad
+r_t=(\phi-\rho_z)\kappa_zx_t.
+$$
+これらを閉じた IS 曲線へ代入して、
+$$
+\Omega_z^T
+=\frac{
+\dfrac{\gamma\lambda\varphi}{(\gamma+\varphi)(1-\lambda)}(1-\rho_z)
+}{
+\kappa_z(\phi-\rho_z)+\gamma\Theta_T(1-\rho_z)
+}.
+$$
+一時的な移転増加は現在の Type H 消費を増やし、将来の移転減少を見込ませるため、TANK 自然利子率を上げます。$\rho_z=1$ では平均回帰がなく、上の定常 AR(1) 解ではなく恒久変化の単位根問題として扱う必要があります。
+
+### 問9 `[Research extension]`：通常領域、特異点、反転領域
+
+$\Theta_T>0$ では実質利子率上昇が需要を下げ、標準的な総需要の符号が保たれます。この領域の単純ルールでは $\phi>1$ が標準的なテイラー原理です。$\Theta_T=0$ では、分配フィードバックを整理する際に $x_t$ の係数がゼロとなり、閉じた IS 曲線を $x_t$ について解けません。$\Theta_T<0$ では利子率係数の符号が反転し、利上げが需要を増やす形になるため、決定性条件も標準ケースから変わります。$\phi-\rho_m$ は閉形式解の一部分にすぎず、期待変数を含む系全体の固有値条件ではありません。したがって $\phi>\rho_m$ だけをテイラー原理とは呼べません。
+
+### 問10 `[Derivation] [Research extension]`：第12回への橋渡し
+
+$\tau_D=0$ を代入すると、
+$$
+\chi=1+\varphi,
+$$
+$$
+\Theta_D
+=\frac{1-\lambda(1+\varphi)}{1-\lambda}
+=1-\frac{\lambda\varphi}{1-\lambda}
+=\Theta_T.
+$$
+$\tau_D$ が上昇すると、
+$$
+\frac{\partial\chi}{\partial\tau_D}=-\frac\varphi\lambda<0,
+\qquad
+\frac{\partial\Theta_D}{\partial\tau_D}=\frac\varphi{1-\lambda}>0.
+$$
+したがって Type H 消費の集計所得への反応と PE 曲線の所得フィードバックは弱まり、通常領域では閉じた需要の利子率感応度 $1/(\gamma\Theta_D)$ も低下します。
+
+```{=latex}
+\clearpage
+```
+
+# 第12回：New Keynesian CrossとTANK
+
+## 基本問題
+
+### 問1 `[Core] [Derivation]`：RANKのPE曲線
+
+期待閉鎖 $\mathbb E_tc_{t+1}=pc_t$ を代入すると、
+$$
+(1-\beta p)c_t
+=(1-\beta)y_t-\frac\beta\gamma\widetilde r_t^R.
+$$
+したがって、PE 曲線は
+$$
+c_t=\omega_Ry_t+\Omega_R^D(-\widetilde r_t^R),
+$$
+$$
+\omega_R=\frac{1-\beta}{1-\beta p},
+\qquad
+\Omega_R^D=\frac{\beta}{\gamma(1-\beta p)}.
+$$
+財市場均衡 $c_t=y_t$ を使った総効果は
+$$
+\Omega_R
+=\frac{\Omega_R^D}{1-\omega_R}
+=\frac{1}{\gamma(1-p)}.
+$$
+
+全期に同じ期待閉鎖を課す場合は、Euler 方程式から $\widetilde r_t^R=-\gamma(1-p)c_t$ となり、$\mathbb E_t\widetilde r_{t+1}^R=p\widetilde r_t^R$ も必要です。したがって、$p$ と任意の実質利子率ギャップ経路を独立に指定するわけではありません。
+
+### 問2 `[Core] [Derivation]`：純配当移転ルールとType H消費
+
+移転ルールと純配当式を消費格差へ代入すると、
+$$
+\sigma_t^c
+=\frac{\varphi}{\gamma+\varphi}
+\frac{1-\tau_D/\lambda}{1-\lambda}d_t
+=-\frac{\varphi(1-\tau_D/\lambda)}{1-\lambda}y_t.
+$$
+集計関係 $c_t^H=c_t-(1-\lambda)\sigma_t^c$ と財市場均衡 $c_t=y_t$ を使えば、
+$$
+c_t^H
+=\left[1+\varphi\left(1-\frac{\tau_D}{\lambda}\right)\right]y_t
+=\chi y_t
+$$
+です。
+
+### 問3 `[Core] [Derivation]`：Type S消費
+
+集計式へ $c_t^H=\chi y_t$ を代入すると、
+$$
+y_t=\lambda\chi y_t+(1-\lambda)c_t^S.
+$$
+したがって、
+$$
+c_t^S=\frac{1-\lambda\chi}{1-\lambda}y_t
+=\Theta_Dy_t
+$$
+です。
+
+### 問4 `[Core] [Derivation]`：TANKの集計Euler方程式
+
+集計消費についても
+$$
+c_t^S=\frac{1-\lambda\chi}{1-\lambda}c_t
+$$
+と書けます。$\lambda$ と $\chi$ を一定とし、この関係を当期と次期の Type S Euler 方程式へ代入すると、
+$$
+\frac{1-\lambda\chi}{1-\lambda}c_t
+=\frac{1-\lambda\chi}{1-\lambda}\mathbb E_tc_{t+1}
+-\frac1\gamma\widetilde r_t^T.
+$$
+よって
+$$
+c_t=\mathbb E_tc_{t+1}
+-\frac1\gamma\frac{1-\lambda}{1-\lambda\chi}
+\widetilde r_t^T
+$$
+です。
+
+### 問5 `[Core] [Derivation]`：TANKのPE曲線
+
+ヒントの $y_t^S=\Theta_Dy_t$ と $\mathbb E_tc_{t+1}^S=\Theta_D\mathbb E_tc_{t+1}$ を Type S の再帰式へ代入し、$\Theta_D=(1-\lambda\chi)/(1-\lambda)$ を使うと、
+$$
+(1-\lambda)c_t^S
+=(1-\beta)(1-\lambda\chi)y_t
+-(1-\lambda)\frac\beta\gamma\widetilde r_t^T
++\beta(1-\lambda\chi)\mathbb E_tc_{t+1}.
+$$
+左辺に Type H 消費 $\lambda\chi y_t$ を足して集計すると、
+$$
+c_t
+=\left[1-\beta(1-\lambda\chi)\right]y_t
+-(1-\lambda)\frac\beta\gamma\widetilde r_t^T
++\beta(1-\lambda\chi)\mathbb E_tc_{t+1}.
+$$
+
+ここで用いた $c_t^H=\chi y_t$ は均衡の分配関係から得た縮約です。この PE 曲線の直接効果・所得フィードバックの分解は、その分配関係と期待の閉じ方に依存し、すべての個別最適化条件と市場条件を同時に保つ唯一の不均衡実験を意味しません。
+
+## 発展問題
+
+### 問6 `[Derivation] [Research extension]`：増幅条件
+
+通常符号領域では $1-\lambda\chi>0$ です。このとき
+$$
+\frac{1-\lambda}{1-\lambda\chi}>1
+\quad\Longleftrightarrow\quad
+\chi>1.
+$$
+$\chi=1+\varphi(1-\tau_D/\lambda)$、$\varphi>0$ なので、
+$$
+\chi>1
+\quad\Longleftrightarrow\quad
+\tau_D<\lambda.
+$$
+したがって、通常符号領域 $\lambda\chi<1$ の内部では、純配当変動の Type H への負荷率が人口比率より小さいと TANK の総効果が RANK を上回ります。
+
+### 問7 `[Research extension] [Computation]`：数値例
+
+$\lambda=0.3$、$\varphi=1$ なので、計算結果は次の通りです。
+
+| $\tau_D$ | $\chi$ | $\Theta_D$ | $\Omega_T/\Omega_R$ |
+|---:|---:|---:|---:|
+| $0$ | $2.000$ | $0.571$ | $1.750$ |
+| $0.30=\lambda$ | $1.000$ | $1.000$ | $1.000$ |
+| $0.45$ | $0.500$ | $1.214$ | $0.824$ |
+
+ここで $\chi=1+\varphi(1-\tau_D/\lambda)$、$\Theta_D=(1-\lambda\chi)/(1-\lambda)$、$\Omega_T/\Omega_R=(1-\lambda)/(1-\lambda\chi)$ を使いました。$\gamma=1$ と $p=0$ は各モデルの水準反応を計算するときに使いますが、この比率では相殺されます。
+
+### 問8 `[Research extension]`：反転領域
+
+$\lambda\chi>1$ なら $1-\lambda\chi<0$ なので、集計 Euler 方程式の
+$$
+-\frac1\gamma\frac{1-\lambda}{1-\lambda\chi}
+\widetilde r_t^T
+$$
+の係数は正になります。すなわち実質利子率ギャップの上昇が現在消費を増やす形です。Type S の標準的な代替効果より、Type H 所得と集計フィードバックの反転が強くなるため、通常の右下がりの総需要曲線として読めません。
+
+### 問9 `[Research extension]`：直接効果と間接効果
+
+実質利子率へ直接反応するのは Type S だけなので、PE 曲線の直接シフトには $1-\lambda$ が掛かり、RANK より小さくなります。一方、Type H 消費が現在所得へ強く反応すると PE 曲線の所得係数が大きくなり、45度線との交点で生じる間接的な所得乗数が増えます。通常領域で $\chi>1$ なら、後者が前者を上回り、総効果比 $(1-\lambda)/(1-\lambda\chi)$ が1を超えます。
+
+```{=latex}
+\clearpage
+```
+
+### 問10 `[Derivation] [Research extension]`：第11回への接続
+
+$\tau_D=0$ では $\chi=1+\varphi$ なので、
+$$
+\Theta_D
+=\frac{1-\lambda(1+\varphi)}{1-\lambda}
+=1-\frac{\lambda\varphi}{1-\lambda}
+=\Theta_T.
+$$
+これは純配当がすべて株式を保有する Type S に帰属し、Type H へ再分配されない第11回の所得帰着です。集計 Euler 方程式の実質利子率ギャップにかかる係数 $-1/(\gamma\Theta_D)$ は、第11回の閉じた TANK IS 曲線の係数 $-1/(\gamma\Theta_T)$ と一致します。一方、NKクロスの PE 曲線は横軸が現在所得 $y_t$、縦軸が計画消費 $c_t$ で、その傾きは $\omega_T$ です。これは、将来ギャップの期待を所与とした IS 曲線の利子率係数とは異なるものです。
+
+### 問11 `[Research extension]`：乗数と厚生
+
+$\Omega_T/\Omega_R>1$ は、同じ実質利子率ギャップに対する条件付き産出反応が大きいことだけを示します。実際の金融政策効果を評価するには、NKフィリップス曲線、名目利子率ルール、自然利子率とショック過程、期待形成を加え、インフレと政策金利を同時に決める必要があります。厚生評価には、集計産出だけでなく価格分散または価格調整費用、消費格差、労働格差、各家計タイプの効用ウェイトを含む二次厚生近似が必要です。したがって大きな乗数は政策余地を示しても、厚生が高いことを意味しません。

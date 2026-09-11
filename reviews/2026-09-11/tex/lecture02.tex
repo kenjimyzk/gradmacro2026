@@ -1,0 +1,1184 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  japanese,
+  lualatex,
+  ja=standard,
+  12pt,
+  a4paper]{ltjsarticle}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{needspace}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{目次}
+\else
+  \newcommand\contentsname{目次}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{図一覧}
+\else
+  \newcommand\listfigurename{図一覧}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{表一覧}
+\else
+  \newcommand\listtablename{表一覧}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{図}
+\else
+  \newcommand\figurename{図}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{表}
+\else
+  \newcommand\tablename{表}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{コード}
+\newcommand*\listoflistings{\listof{codelisting}{コード一覧}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  pdftitle={第2回：時系列分析と対数近似},
+  pdfauthor={宮﨑憲治},
+  pdflang={ja},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{第2回：時系列分析と対数近似}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{マクロ経済学B}
+\author{宮﨑憲治}
+\date{2026年度}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{目次}
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+
+\section{講義の目的}\label{ux8b1bux7fa9ux306eux76eeux7684}
+
+本講義では、動学的な現代マクロ経済モデルを読み解くために不可欠となる「時系列分析の基礎」と「対数近似の手法」を体系的に整理します。第3回以降では、家計や企業の動学的な最適化問題から導かれる非線形の均衡条件を、定常状態のまわりで線形に近似して分析を進めます。そのための基礎固めとして、本講義では次の4つのトピックを扱います：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{データと時系列分析の基礎}：米国GDPのトレンドと景気循環、弱定常性、ショックの持続性、自己相関、および条件付き予測
+\item
+  \textbf{ショックの波及メカニズム}：1次の自己回帰過程
+  AR(1)、インパルス応答関数、および線形状態空間表現
+\item
+  \textbf{対数線形近似の手法}：非線形な均衡方程式を定常状態のまわりで1次に線形化する計算技術
+\item
+  \textbf{対数二次近似の基礎（第9回の厚生分析で再訪）}：水準偏差と対数偏差の二次の差異、効用関数や価格調整費用に2階の項が残る理由
+\end{enumerate}
+
+本講義の中心的な学習目標は、モデルの動学的な振る舞いを理解するための「時系列分析の基礎」と「対数線形近似」を身につけることです。なお、第4のトピックである「対数二次近似」は、第9回の最適金融政策で用いる社会的ロス関数の導出を理解するための準備（参照用セクション）として収録しています。初読時にはこの節をスキップしても差し支えありませんが、第9回を学ぶ前に本節に戻り、1次の効果が相殺されて需給ギャップの2乗（\(x_t^2\)）とインフレ率の2乗（\(\pi_t^2\)）が残るメカニズムをぜひ確認してください。本講義では、まず自然産出量を動かす実物ショックが存在しない最も基本的なケースを扱い、技術ショック
+\(a_t\) や政府支出ショック \(g_t\)
+によって自然産出量自体が変動する一般的なケースは第8回で詳しく解説します。
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{lecture02_files/mediabag/figures/lecture02/lecture02_overview_infographic.pdf}
+
+}
+
+\caption{\label{fig-lecture02-overview}第2回講義の全体像：時系列データ、定常性、AR(1)、インパルス応答、状態空間表現、対数線形近似の有機的なつながり。}
+
+\end{figure}%
+
+図~\ref{fig-lecture02-overview}
+は、米国GDPの実データからトレンドと循環を確認した上で、定常性、ショックの持続性、状態空間表現、そして対数線形近似へと進む初読時のメインルートを示しています。対数二次近似は、このメインルートから発展する第9回向けの参照節という位置づけです。
+
+\section{米国GDPのトレンドと景気循環}\label{ux7c73ux56fdgdpux306eux30c8ux30ecux30f3ux30c9ux3068ux666fux6c17ux5faaux74b0}
+
+現実のGDPデータには長期的な経済成長の傾向（トレンド）が含まれているため、実額（水準値）のままでは短期的な景気循環の変動を正確に読み取ることが困難です。そこで変数を自然対数に変換すると、GDPの水準そのものが大きく異なる時代間であっても、変動の大きさを「比率（パーセント）」として一貫して比較できるようになります。図~\ref{fig-us-real-gdp-trend-cycle}
+は、米国の季節調整済み実質四半期GDPを自然対数で表し、Hodrick and
+Prescott (1997)
+によるHPフィルターを用いて、緩やかに推移する長期トレンドとそのまわりを上下する循環成分（景気循環）へと分解したものです。実質GDPが長期的に右肩上がりの上昇傾向をたどる一方で、循環成分はゼロを中心として周期的に変動していることが一目で分かります。
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{lecture02_files/mediabag/figures/lecture02/us_real_gdp_trend_cycle.pdf}
+
+}
+
+\caption{\label{fig-us-real-gdp-trend-cycle}米国実質GDPのトレンドと循環}
+
+\end{figure}%
+
+\textbf{注記：} 米国商務省経済分析局（BEA）/ セントルイス連銀FREDの
+\texttt{GDPC1}（2017年連鎖価格、10億ドル、季節調整済み年率、1947年第1四半期〜2026年第2四半期）を対数表示した系列です。下段のグラフはトレンドからの対数乖離を100倍した値であり、トレンドからのパーセント乖離（％偏差）を表しています。HPフィルターの平滑化パラメータには四半期データの標準値である
+\(\lambda=1600\) を適用しています（データ取得日：2026年8月15日）。
+
+長期のマクロ経済分析では、技術進歩、人口増加、資本蓄積といった、経済の持続的な成長経路を決定づける要因に焦点を当てます。これに対して短期のマクロ経済分析では、その基調的な成長経路からの一時的な乖離や、予期せぬショックが経済全体へと波及していく動学的なプロセスを追究します。本講義が主として対象とするのは、この短期分析の領域です。
+
+データの実証分析では、長期トレンドからの対数乖離を「景気循環の統計的な代理変数」として用います。一方、理論モデルにおいては、成長を続ける変数を技術水準や人口といった外生的な成長要因で割ることでまず定常化（Detrending）し、その定常化された均衡方程式を定常状態のまわりで対数線形近似します。
+
+\Needspace{10\baselineskip}
+
+マクロモデルのパラメータを決定するカリブレーションやモデルの妥当性を評価する際には、実際のデータから得られる循環成分の変動幅（標準偏差）、ショックの持続性（自己相関）、および他の変数との相関関係を、モデルがシミュレーションによって生成する対応系列の統計量と比較します。この比較を厳密に行うためには、集計値か一人当たり変数かという定義、データの観測頻度（四半期など）、およびサンプル期間を厳密にそろえる必要があります。HP循環成分を比較の基準とする場合、モデルから得られた時系列データに対しても、実データと全く同じ対数変換とHPフィルターを適用し、必要に応じて季節調整の有無も統一します。HP循環成分は理論モデルにおける「自然産出量からの需給ギャップ」そのものとは厳密には異なりますが、データと理論モデルを定量的に結びつけるための実証的な共通尺度として広く利用されています。
+
+この対応関係を明確にするため、本講義では、実データから抽出したGDP循環成分と、理論モデルにおける産出量の対数乖離の双方を、便宜的に同じ記号
+\(y_t\)
+で表すことがあります。同一の記号を用いるのは両者が理論上同一であることを意味するのではなく、カリブレーションにおける定量的な対応関係を示すための慣例です。なお、後続回において、自然産出量を基準として定義される理論上の産出ギャップ（需給ギャップ）については、\(x_t = y_t - y_t^f\)
+と明示的に記号を区別して議論を進めます。
+
+ただし、HPフィルターには「新しい観測データが追加されるとサンプルの末端付近におけるトレンド推定値が遡って変化してしまう（端点問題）」という統計的特性があります。さらに、フィルタリングの処理自体が系列の自己相関構造を変形させ、元のデータ生成過程には存在しない人工的な動学的パターンを生み出してしまう懸念も指摘されています（Hamilton,
+2018）。したがって、図の下段に観察される景気変動の持続性には、こうした統計的フィルターの特性が反映されている面もあることに留意が必要です。
+
+図の下段を観察すると、正または負の乖離が複数四半期にわたって持続的に続く局面が確認できます。このように「過去のショックの影響が時間を超えて尾を引く性質（持続性）」を、時点に左右されない普遍的な自己相関として要約するためには、時系列データの平均、分散、自己共分散が時間を通じて安定的であるかどうかを数学的に整理しておく必要があります。そこで次節では、「弱定常性」と「自己相関」の概念を導入します。
+
+\section{時系列データと定常性}\label{ux6642ux7cfbux5217ux30c7ux30fcux30bfux3068ux5b9aux5e38ux6027}
+
+\textbf{時系列データとモデルの見方}
+
+前節で確認した実質GDPの循環成分も、各四半期の観測値が時間の順序に沿って記録された「時系列（Time
+Series）」データです。GDP、個人消費、インフレ率、名目金利、労働投入量、技術水準といったマクロ経済変数は、単に特定の時点における値だけでなく、過去から現在へとどのように推移してきたかという時間経路が決定的に重要となります。短期マクロ分析では、「現在の変数の値が、過去の状態、現在発生したショック、そして将来への期待にどのように左右され、その影響が将来の経済にどのように残っていくか」を論理的に解明します。
+
+動学的な時系列モデルを読み解く際には、変数の捉え方として次の3つを明確に区別することが基本となります：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{水準（Level）}：\(Y_t\)、\(C_t\)、\(R_t\)
+  などの元の単位で測った変数
+\item
+  \textbf{基準からの乖離（Deviation）}：実データにおける長期トレンドからの乖離、または理論モデルにおける定常状態からのパーセント乖離
+\item
+  \textbf{成長率・変化率（Growth
+  Rate）}：\(\Delta \ln Y_t = \ln Y_t - \ln Y_{t-1}\)
+  のような前期比の変化率
+\end{enumerate}
+
+長期的な成長を伴うモデルを扱う場合、技術水準や人口などの成長要因で割ることで、変数をあらかじめ定常な形へと変換します。以下で用いる「定常状態からの乖離」という表現は、このように定常化された変数についての乖離を指しています。元の水準値の観点から見れば、これは「均衡成長経路からの乖離」に対応します。
+
+以下では、この対応関係を抽象化し、実データ系列と理論モデル系列の双方にそのまま適用できる一般的な時系列変数として
+\(y_t\) を用いて解説を進めます。
+
+\textbf{弱定常性（Weak Stationarity）}
+
+確率過程 \(\{y_t\}\)
+が「弱定常（共分散定常）」であるとは、その平均、分散、および自己共分散がカレンダー上の時点
+\(t\)
+に依存せず、時間を通じて一定に保たれていることを意味します。数学的には、以下の3つの条件がすべて満たされるとき、\(\{y_t\}\)
+は弱定常であると定義されます：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{平均が時間を通じて一定である}：\(\mathbb{E}[y_t] = \mu\)
+\item
+  \textbf{分散が時間を通じて一定である}：\(\operatorname{Var}(y_t) = \sigma_y^2\)
+\item
+  \textbf{自己共分散が時点 \(t\) ではなくラグの長さ \(k\)
+  だけに依存する}：\(\operatorname{Cov}(y_t, y_{t-k}) = \gamma_k\)
+\end{enumerate}
+
+例えばラグが1（\(k=1\)）の場合、2026年第2四半期とその直前四半期の間の共分散と、2010年第2四半期とその直前四半期の間の共分散が、カレンダー上の時代によらず同じ値（\(\gamma_1\)）として決まることを意味します。ただし注意すべき点として、弱定常性が直接保証しているのは「統計的モーメント（平均や共分散）の時間的な不変性」にとどまり、個別のショックが時間の経過とともに減衰してゼロに戻ることまでを自動的に意味するわけではありません。ショックが自然に減衰して定常状態へ回帰するためには、後述する安定なAR過程のような動学的な安定性条件が追加で満たされる必要があります。
+
+\textbf{定常性が重要となる理由}
+
+マクロ経済分析において弱定常性が極めて重要な役割を果たすのは、弱定常性が満たされて初めて、異なる時代にまたがる平均、分散、自己相関を「同一の母集団から生み出された共通の統計量」として比較・推定できるようになるためです。例えば、ラグ1の自己相関を1つの要約数値として算出できるのは、2時点間の関連性が暦上の絶対的な時間ではなく、時点間の時間的間隔（ラグ）だけに依存しているからです。
+
+現実の実質GDPや消費の水準値には長期的な成長トレンドが存在するため、元の水準データをそのまま弱定常な過程として扱うことはできません。そのため、実証分析ではトレンドを除去した循環系列を用い、成長理論モデルでは成長要因で割って定常化した変数について定常性を議論します。前節で導入したHP循環成分は短期変動を分析するための実用的な統計ツールですが、HPフィルターをかけたからといって循環成分の弱定常性が数学的に完全に保証されるわけではありません。なお、フィルター手法の選択や単位根検定の詳細な計量経済学的議論については、本講義の範囲を超えるためここでは深入りしません。
+
+現実のGDP循環成分は、経済に生じる様々なショックとそれに対する経済主体の複雑な反応が合わさった内生変数です。次節では、経済ショックの持続的な影響を記述するための最も基本的かつ重要な確率過程として、「1次の自己回帰過程
+AR(1)」を学びます。
+
+\Needspace{12\baselineskip}
+
+\section{AR(1)過程}\label{ar1ux904eux7a0b}
+
+\textbf{基本形}
+
+マクロ経済学において、経済ショックの動学的な持続性を表現するために最も標準的に用いられる確率過程が、1次の自己回帰過程（Autoregressive
+process of order 1, AR(1)）です。 \[
+y_t=(1-\rho)\mu+\rho y_{t-1}+\varepsilon_t,
+\qquad
+\varepsilon_t\sim i.i.d.(0,\sigma_\varepsilon^2)
+\] ここで、各パラメータおよび変数は以下を意味します：
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mu\)：過程の長期平均（定常値）
+\item
+  \(\rho\)：持続性パラメータ（自己回帰係数）
+\item
+  \(\varepsilon_t\)：時点 \(t\)
+  において新たに発生する予期せぬショック（平均0、分散
+  \(\sigma_\varepsilon^2\) のホワイトノイズ・イノベーション）
+\end{itemize}
+
+実証データにおいてGDP循環成分をAR(1)で推計する場合、\(\varepsilon_t\)
+は一歩先予測の誤差を表す統計的なイノベーションであり、必ずしも特定の経済ショックを直接意味するわけではありません。一方、DSGEモデルの外生ショック過程として用いる場合には、\(\varepsilon_t\)
+に「技術ショック」や「金融政策ショック」といった明確な構造的意味を与えて分析します。
+
+持続性パラメータの絶対値が1未満（\(|\rho|<1\)）であれば、過去に発生した無限のショックの加重和として表される因果的かつ一意な弱定常解が存在します。以下では、初期値もこの定常分布から生成されていると仮定します。なお、仮に任意の固定された初期値からスタートした場合であっても、時間経過とともに過程の分布は定常分布へと速やかに収束していきます。
+
+過程の平均は、方程式の両辺の期待値を取ることで簡単に確認できます： \[
+\mathbb{E}[y_t]
+=
+(1-\rho)\mu+\rho\mathbb{E}[y_{t-1}]
+\]
+弱定常解のもとではすべての時点で平均が等しい（\(\mathbb{E}[y_t]=\mathbb{E}[y_{t-1}]\)）ため、長期平均は
+\(\mathbb{E}[y_t]=\mu\) と求まります。
+
+\textbf{分散と自己相関}
+
+平均からの乖離を \(\tilde{y}_t\equiv y_t-\mu\)
+と定義すると、AR(1)過程は定数項のないシンプルな形に書き換えられます： \[
+\tilde{y}_t=\rho\tilde{y}_{t-1}+\varepsilon_t
+\] 定常状態における分散を \(\sigma_y^2\)
+とすると、両辺の分散をとることで \[
+\sigma_y^2
+=
+\rho^2\sigma_y^2+\sigma_\varepsilon^2
+\] が成り立ちます。これを \(\sigma_y^2\)
+について解くことで、定常分散の公式 \[
+\operatorname{Var}(y_t)
+=
+\frac{\sigma_\varepsilon^2}{1-\rho^2}
+\] が得られます。ここで、当期のショック \(\varepsilon_t\) は過去の実現値
+\(y_{t-1}, y_{t-2}, \ldots\)
+と全く無相関であるという性質を用いています。
+
+また、\(k\) 期離れた時点間の相関を表す \(k\) 次の自己相関係数は、 \[
+\operatorname{Corr}(y_t,y_{t-k})=\rho^k \qquad (k\geq0)
+\] となります。持続性パラメータ \(\rho\)
+が1に近いほど、過去に生じた変動の影響が将来へと強く引き継がれることになります。
+
+\Needspace{8\baselineskip}
+
+\textbf{条件付き予測と半減期}
+
+AR(1)過程の大きな利点の一つは、現時点 \(t\) で観察された値 \(y_t\)
+に基づいて、\(h\)
+期先の将来の期待値（条件付き予測値）を極めて容易に計算できる点です： \[
+\mathbb{E}_t[y_{t+h}]
+=
+\mu+\rho^h(y_t-\mu)
+\] \(|\rho|<1\) である限り、予測ホライズン \(h\) が大きくなるにつれて
+\(\rho^h \to 0\) となるため、将来の予測値は緩やかに長期平均 \(\mu\)
+へと回帰していきます（平均回帰性）。
+
+この関係式は、現在生じている平均からの乖離が将来どの程度のスピードで解消されていくかを評価する上で決定的な役割を果たします。例えば持続性が正（\(0<\rho<1\)）の場合、現在の乖離がちょうど半分にまで縮小するのに要する期間（\textbf{半減期}、Half-life）は、\(\rho^h = 0.5\)
+を解くことで次のように求まります： \[
+h_{1/2}
+=
+\frac{\ln(0.5)}{\ln(\rho)}
+\] 例えば、四半期データにおいて \(\rho=0.9\)
+であれば半減期は約6.6四半期（約1年半以上）にも及ぶのに対し、\(\rho=0.5\)
+であればわずか1四半期でショックの影響が半減します。
+
+\section{インパルス応答関数}\label{ux30a4ux30f3ux30d1ux30ebux30b9ux5fdcux7b54ux95a2ux6570}
+
+\textbf{AR(1)のインパルス応答}
+
+ここでは簡単化のため、平均がゼロである場合（または平均からの乖離
+\(\tilde{y}_t\) を改めて \(y_t\)
+と表記した場合）を考えます。\textbf{インパルス応答関数（Impulse Response
+Function,
+IRF）}とは、「ある時点で予期せぬショック（イノベーション）が1単位だけ発生したとき、その影響によって変数が将来にわたってどのように反応し、定常状態へと減衰していくか」を時間の関数として追跡したものです。
+
+定常状態（\(y_{-1}=0\)）にあるAR(1)過程 \[
+y_t=\rho y_{t-1}+\varepsilon_t
+\] に対して、\(t=0\)
+に大きさ1のショックが発生し（\(\varepsilon_0=1\)）、その後の期には新たなショックが一切発生しない（\(t\geq 1\)
+で
+\(\varepsilon_t=0\)）と仮定します。このとき、各期における変数の値は次のように逐次的に定まります：
+\[
+y_0=1,\qquad
+y_1=\rho,\qquad
+y_2=\rho^2,\qquad \ldots \qquad
+y_h=\rho^h
+\]
+したがって、AR(1)過程におけるショックのインパルス応答関数は、まさに幾何級数列
+\(\rho^h\) そのものとなります。
+
+次の図は、同じ大きさ（1単位）の初期ショックが与えられたときの反応経路を、持続性パラメータの違い（\(\rho=0.5, 0.8, 0.9\)）で比較したシミュレーション結果です。\(\rho\)
+が大きくなるほど、ショックの影響が長期にわたって色濃く残り、半減期も大幅に長期化することが視覚的にも確認できます。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{lecture02_files/mediabag/figures/lecture02/ar1_irf_simulation.pdf}
+
+}
+
+\caption{\label{fig-ar1-irf-simulation}AR(1)インパルス応答の数値シミュレーション：\(y_h=\rho^h\)
+とし、\(\rho=0.5,0.8,0.9\) の減衰経路を比較する。}
+
+\end{figure}%
+
+図~\ref{fig-ar1-irf-simulation}
+は、全く同じ1単位のショックであっても、持続性パラメータ \(\rho\)
+の値によって経済への影響の持続期間が劇的に異なることを示しています。
+
+なお、現実の実証データ（VARモデルなど）からインパルス応答関数を計測する場合には、観察された統計的イノベーションの中から特定の意味を持つ「構造ショック（例：真の金融政策引き締めショック）」を統計的に分離・特定するための「識別（Identification）」手続きが別途必要となります。
+
+\Needspace{10\baselineskip}
+
+\textbf{DSGEモデルでのインパルス応答と状態空間表現}
+
+現代のDSGEモデルにおいて、技術ショック、金融政策ショック、政府支出ショックといった経済を揺るがす外生ショックは、多くの場合このAR(1)過程として定式化されます。例えば、全要素生産性の対数乖離である技術ショック
+\(a_t\) は、 \[
+a_t=\rho_a a_{t-1}+\varepsilon_t^a
+\] と表現されます。持続性パラメータ \(\rho_a\)
+が高いほど、一度生じた技術革新の好影響は長期にわたって持続し、産出量や雇用の増加も長期にわたって持続することになります。
+
+定常状態のまわりで線形近似されたDSGEモデルの一般的な解は、以下のような\textbf{線形状態空間表現（Linear
+State-Space Representation）}としてコンパクトに記述できます： \[
+s_{t+1}=A s_t+B\varepsilon_{t+1}
+\] ここで、\(s_t\)
+は資本ストックや外生ショックなどの内生・外生の状態変数をまとめたベクトル、\(\varepsilon_{t+1}\)
+は予期せぬ経済ショックのベクトル、そして \(A\) と \(B\)
+はモデルの構造パラメータによって決まる行列です。さらに、産出量、インフレ率、名目金利といった家計や企業の意思決定によって決まる内生変数（制御変数・観測変数）のベクトルを
+\(z_t\) とすると、これらは状態変数の線形結合として \[
+z_t=C s_t
+\] という観測方程式で結びつけられます。
+
+この状態空間表現のもとでは、\(t+1\) 期に発生したショック
+\(\varepsilon_{t+1}\) が \(h\) 期後の状態変数 \(s_{t+1+h}\)
+に与える影響は、システム行列 \(A\) を繰り返し累乗した \[
+A^hB
+\] として極めて簡潔に計算できます。また、観測変数 \(z_{t+1+h}\)
+への波及効果は \(CA^hB\)
+となります。すなわち、複雑に見える多変数のマクロ経済モデルであっても、線形化によって「行列
+\(A\)
+をべき乗するだけ」で任意の変数に対するインパルス応答関数を瞬時に導出できるようになります。
+
+\section{安定性と差分方程式}\label{ux5b89ux5b9aux6027ux3068ux5deeux5206ux65b9ux7a0bux5f0f}
+
+\textbf{1変数の線形差分方程式と安定性}
+
+最も単純な1変数の同次線形差分方程式 \[
+x_{t+1}=a x_t
+\] を考えます。初期値を \(x_0\) とすると、任意の時点 \(t\) における解は
+\[
+x_t=a^t x_0
+\] と表されます。この解の挙動は、係数 \(a\)
+の絶対値によって完全に決定づけられます：
+
+\begin{itemize}
+\tightlist
+\item
+  \(|a|<1\) の場合：時間の経過とともに \(a^t \to 0\) となり、解 \(x_t\)
+  は初期値によらず安定して0（定常状態）へと収束する
+\item
+  \(|a|>1\) の場合：\(a^t\) が爆発的に増大し、解 \(x_t\)
+  は無限大へと発散する
+\item
+  なお、\(a<0\) かつ \(|a|<1\)
+  の場合は、符号を正負交互に反転させながら振動しつつ0へ収束する
+\end{itemize}
+
+この1変数の単純な安定性条件は、多変数へと拡張された対数線形化DSGEモデルにおいても中核的な役割を果たします。外生ショックのない自律的な状態遷移システム
+\[
+s_{t+1}=A s_t
+\] において、システム行列 \(A\) のすべての固有値（固有方程式
+\(\det(\lambda I - A) = 0\)
+の解）が複素平面上の単位円の内側（すなわち各固有値の絶対値が1未満）にあれば、新たなショックが発生しない限り、経済の状態変数ベクトル
+\(s_t\) は時間とともに必ず定常状態へと収束します。
+
+ただし、消費、インフレ率、資産価格のように「将来への期待」によって現在の値が決定される前向き変数（Forward-looking
+variables）を含む合理的期待モデルでは、「すべての固有値が単位円内にある」という条件をシステム全体にそのまま当てはめることはできません。合理的期待均衡が一意かつ安定して存在するためには、単位円の外側にある固有値の数（発散方向の自由度）と、前向き変数の数が厳密に一致していなければならないという\textbf{Blanchard--Kahn（1980）条件}が必要となります。本講義のこの段階では、まず状態遷移の基本的な安定性条件を理解し、前向き変数を含む合理的期待均衡の一意性決定ルールについては後続回で詳しく学びます。
+
+\textbf{前向き変数と期待形成}
+
+現代マクロ経済モデルには、消費者のオイラー方程式や企業の動学的価格設定（NKPC）のように、「将来の期待値」が現在の変数を決定する前向きな構造方程式が頻繁に登場します。その典型例として、次のような単純化した前向き差分方程式を考えます：
+\[
+x_t=\alpha\mathbb{E}_t x_{t+1}+u_t,
+\qquad 0<\alpha<1
+\] ここで \(u_t\) は当期の外生変数、\(\alpha\)
+は主観的割引因子などを反映した1未満のパラメータです。この式を有限の
+\(J\) 期間先まで繰り返し前向きに代入（Forward iteration）していくと、 \[
+x_t
+=
+\mathbb{E}_t
+\sum_{j=0}^{J}\alpha^j u_{t+j}
++\alpha^{J+1}\mathbb{E}_t x_{t+J+1}
+\]
+という関係が得られます。ここで、無限の未来において期待値が割引率を上回るスピードで発散することを禁じる「\textbf{無バブル条件（No-bubble
+condition）}」 \[
+\lim_{J\to\infty}
+\alpha^{J+1}\mathbb{E}_t x_{t+J+1}=0
+\] を課すと、右端の終端項が消失し、現在の変数 \(x_t\)
+は将来にわたる外生ショックの割引現在価値の総和として一意に決定されます：
+\[
+x_t
+=
+\mathbb{E}_t
+\sum_{j=0}^{\infty}\alpha^j u_{t+j}
+\]
+この数学的な境界条件は、第3回で学ぶ最適化問題の「横断性条件（Transversality
+condition）」や、ファイナンスにおける資産価格決定式（株価が将来の配当流の割引現在価値に等しくなる論理）と全く同一の構造を持っています。
+
+\section{対数線形近似}\label{ux5bfeux6570ux7ddaux5f62ux8fd1ux4f3c}
+
+ここまでは、線形化された動学方程式がすでに手元にあるという前提で、ショックの持続性やシステムの安定性を分析する方法を学んできました。ここからは、家計や企業の最適化行動から得られる非線形な均衡条件から、どのようにして線形システムを導き出すのか、その標準的な数学的手法である\textbf{対数線形近似（Log-linear
+approximation）}について解説します。
+
+対数線形近似とは、非線形な均衡条件を、定常状態のまわりにおける微小な乖離について1次のテイラー展開を行い、扱いやすい線形方程式へと置き換える手法です。次の概念図に示すように、水準値で書かれた非線形な方程式を対数偏差の線形関係へと変換することで、ショックの波及や動学的安定性を線形代数の枠組み（行列演算）で統一的に分析できるようになります。
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.92\linewidth,height=\textheight,keepaspectratio]{lecture02_files/mediabag/figures/lecture02/log_linearization_map.pdf}
+
+}
+
+\caption{\label{fig-log-linearization-map}対数線形近似の概念図：水準値の非線形方程式を定常状態のまわりでテイラー展開し、対数偏差で表された線形方程式へと変換する。}
+
+\end{figure}%
+
+図~\ref{fig-log-linearization-map}
+は、水準値の非線形方程式を定常状態のまわりで1次展開し、対数偏差の線形方程式へ置き換える一連のステップを整理したものです。
+
+\Needspace{12\baselineskip}
+
+\textbf{対数偏差の定義と経済学的意味}
+
+長期的に成長を続ける変数については、あらかじめ技術水準や人口などの成長要因で割ることで定常化しておきます。以下において大文字
+\(X_t\)
+は、このように定常化された変数（または最初から定常状態を持つ変数）を表し、その長期定常状態の値を
+\(X\)
+とします。元の水準値の観点から見れば、定常状態からの乖離は「均衡成長経路からの乖離」に対応します。
+
+このとき、定常状態からの\textbf{対数偏差（Log-deviation）} \(x_t\)
+を次のように定義します： \[
+x_t
+\equiv
+\ln X_t-\ln X
+=
+\ln\left(\frac{X_t}{X}\right)
+\]
+定常状態からの乖離が十分に小さいとき（\(|x_t|\ll 1\)）、1次テイラー近似
+\(\ln(1+\Delta) \approx \Delta\) より、 \[
+x_t
+=
+\ln\left(1+\frac{X_t-X}{X}\right)
+\approx
+\frac{X_t-X}{X}
+\] という極めて有用な近似関係が成り立ちます。すなわち、対数偏差
+\(x_t=0.01\) は、「変数 \(X_t\)
+がその定常状態から約1パーセント（\(+1\%\)）だけ高い水準にあること」を直観的に意味します。
+
+本講義以降では、変数の水準値を大文字（\(Y_t, C_t, N_t\)
+など）、定常状態からの対数偏差を小文字（\(y_t, c_t, n_t\)
+など）で書き分ける標準的な表記法を一貫して用います。例えば \(Y_t\)
+は（定常化後の）産出水準そのものを表し、\(y_t\)
+はその定常状態からのパーセント乖離を表します。
+
+\textbf{基本公式：積・商・べき乗}
+
+対数線形近似の最大の強みは、非線形な積、商、べき乗が、対数を取るだけで厳密に（近似誤差なしで）線形な足し算・引き算に変換できる点にあります：
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{積の変換}：\(Z_t=X_tY_t \implies z_t=x_t+y_t\)
+\item
+  \textbf{商の変換}：\(Z_t=X_t/Y_t \implies z_t=x_t-y_t\)
+\item
+  \textbf{べき乗の変換}：\(Z_t=X_t^\alpha \implies z_t=\alpha x_t\)
+\end{itemize}
+
+例えば、マクロ経済学で標準的なコブ＝ダグラス型生産関数 \[
+Y_t=\exp(a_t)K_t^\alpha N_t^{1-\alpha}
+\] を考えます。ここで \(a_t\)
+は定常値を0とする対数全要素生産性（技術ショック）です。この生産関数の両辺の自然対数を取って定常状態からの偏差を求めると、一切の近似誤差なく次の線形関係が得られます：
+\[
+y_t=a_t+\alpha k_t+(1-\alpha)n_t
+\]
+このように、非線形な生産関数が、各要素の対数偏差の単純な線形結合として美しく表されます。
+
+\Needspace{10\baselineskip}
+
+\textbf{和の対数線形近似：定常状態シェアによる加重平均}
+
+一方、足し算（和）で表された関係式を対数線形化する際には、1次のテイラー展開が必要となり、\textbf{定常状態における各要素の構成比（シェア）}が線形結合の係数として現れます。
+
+一例として、経済の資源制約式 \(Y_t=C_t+G_t\)
+を考えます。定常状態において正の値 \(C>0, G>0\) で \(Y=C+G\)
+が満たされているとします。各変数自身の定常状態からの対数偏差を \[
+y_t\equiv\ln\frac{Y_t}{Y},
+\qquad
+c_t\equiv\ln\frac{C_t}{C},
+\qquad
+g_t\equiv\ln\frac{G_t}{G}
+\] と定義すると、資源制約式の1次対数線形近似は次のようになります： \[
+y_t
+\simeq
+\frac{C}{Y}c_t+\frac{G}{Y}g_t
+\] ここで記号 \(\simeq\)
+は、2次以上の微小項を切り捨てた1次近似であることを表しています。
+
+この公式は、初学者が最も誤りやすいポイントの一つです。\(Y_t=C_t+G_t\)
+だからといって、対数偏差について単純に \(y_t=c_t+g_t\)
+と足し合わせることはできません。和を対数線形化する際には、必ず定常状態における各支出項のGDPシェア（\(C/Y\)
+や \(G/Y\)）で加重平均しなければならない点に注意してください。
+
+なお、第5回の講義ノートでは、政府支出ショックの大きさを産出量と同じスケールで比較しやすくするため、同じ記号
+\(g_t\) を対数偏差ではなく「定常産出に対する水準差の比率」として
+\(g_t\equiv(G_t-G)/Y\)
+と再定義します。この第5回の定義を採用した場合、資源制約式の1次近似は \[
+y_t
+\simeq
+\frac{C}{Y}c_t+g_t
+\]
+というさらにシンプルな形になります。ただし、この2つの定義の互換性が保たれるのは1次近似までであり、後述する2次近似では単純に置き換えることができません。本節の以下の二次近似の解説では、一貫して
+\(g_t=\ln(G_t/G)\) という政府支出自身の対数偏差を用います。
+
+\textbf{総収益率、インフレ率、およびフィッシャー方程式}
+
+金融変数や名目変数を扱う際には、1を加えた「粗収益率（Gross
+return）」と、百分率で表される「純利子率（Net
+rate）」を明確に区別することが重要です。
+
+時点 \(t\) に決定される粗名目利子率を \(R_t^N\)（純利子率を \(i_t\)
+とすると \(R_t^N=1+i_t\)）、\(t\) 期から \(t+1\)
+期にかけての粗インフレ率を \(\Pi_{t+1}=P_{t+1}/P_t\)（純インフレ率を
+\(\pi_{t+1}\) とすると
+\(\Pi_{t+1}=1+\pi_{t+1}\)）とします。このとき、名目安全債券に投資した家計が
+\(t+1\) 期に受け取る事後的な実質総収益率は \(R_t^N/\Pi_{t+1}\)
+と定義されます。
+
+それぞれの定常状態からの対数乖離を
+\(r_t^N\equiv \ln(R_t^N/R^N)\)、\(\pi_{t+1}\equiv \ln(\Pi_{t+1}/\Pi)\)
+と定義すると、実現した\textbf{事後実質利子率（Ex-post real interest
+rate）}の対数乖離 \(r_{t+1}^{\mathrm{post}}\)
+は、対数の商の公式から正確に次の引き算となります： \[
+r_{t+1}^{\mathrm{post}}
+=
+r_t^N-\pi_{t+1}
+\]
+
+さらに、第7回以降のニューケインジアン（NK）モデルにおいて、家計が消費や貯蓄の意思決定を行う時点
+\(t\) で直面する\textbf{事前実質利子率（Ex-ante real interest rate）}
+\(r_t\)
+は、将来のインフレ率に対する条件付き期待値を用いて次のように定義されます：
+\[
+r_t
+=
+r_t^N-\mathbb{E}_t\pi_{t+1}
+\]
+これは、学部マクロで学んだフィッシャー方程式（\(i \approx r + \pi^e\)）の対数線形版にほかなりません。事後実質利子率
+\(r_{t+1}^{\mathrm{post}}\) と事前実質利子率 \(r_t\)
+を厳密に書き分けることで、時点の添字と経済主体が持つ情報集合の違いが明確になります。
+
+第7回・第8回では、この事前実質利子率の関係が、家計の消費オイラー方程式、フィッシャー方程式、そして中央銀行のテイラー・ルールを有機的に結びつけ、3方程式NKモデルの利子率ブロックを構成することになります。
+
+\textbf{【初読時のガイド】}
+初読時の学習はここまでで十分です。次の「対数二次近似」セクションをスキップして、末尾の「まとめと第3回への接続」へ直接進んで構いません。
+
+\newpage
+
+\section{対数二次近似：第9回の厚生分析への準備}\label{ux5bfeux6570ux4e8cux6b21ux8fd1ux4f3cux7b2c9ux56deux306eux539aux751fux5206ux6790ux3078ux306eux6e96ux5099}
+
+\textbf{この節の読み方と位置づけ}
+
+この節で学ぶ計算手法は、第9回の「最適金融政策と厚生分析」で再び本格的に活用します。したがって、本講義の初読時にはこの節全体をスキップしていただいても全く問題ありません。目を通す場合は、「なぜ社会的ロス関数に需給ギャップの2乗（\(x_t^2\)）とインフレ率の2乗（\(\pi_t^2\)）が現れるのか」という結論の直観だけを把握し、数式導出の細部は第9回の講義を受講する前に改めて読み直してください。
+
+1次の対数線形近似は、定常状態からの乖離の1次項（傾き）のみを抽出する手法であり、大半の動学的均衡条件を解く上では十分な精度を持ちます。しかし、\textbf{中央銀行が最小化すべき社会的損失（厚生ロス）}や\textbf{企業の価格改定に伴う調整費用}のように、「効率的な定常状態のまわりでは1次の効果（限界的な余剰変化）がちょうどゼロとなり、2階の変動（ボラティリティ）こそが本質的な厚生悪化をもたらす」という重要な経済問題が存在します。このような政策評価を行う際には、1次近似では捉えきれないため、2次項までを厳密に考慮する\textbf{対数二次近似（Second-order
+approximation）}が不可欠となります。
+
+\subsection{対数偏差と水準偏差の二次近似}\label{ux5bfeux6570ux504fux5deeux3068ux6c34ux6e96ux504fux5deeux306eux4e8cux6b21ux8fd1ux4f3c}
+
+変数 \(X_t\) の定常状態を \(X\) とし、その対数偏差を \[
+x_t=\ln X_t-\ln X
+\] と定義します。このとき水準値は指数関数を用いて \[
+X_t=X\exp(x_t)
+\]
+と表せるため、定常状態からの水準の相対偏差（パーセント変化率）を2次のマクローリン展開すると、
+\[
+\frac{X_t-X}{X}
+=
+\exp(x_t)-1
+=
+x_t+\frac{1}{2}x_t^2+O(3)
+\] となります。1次近似では \((X_t-X)/X \approx x_t\)
+でしたが、2次近似に拡張すると、右辺に2次の補正項 \(+x_t^2/2\)
+が加わることが分かります。
+
+逆に、水準の相対偏差を \[
+\hat X_t\equiv\frac{X_t-X}{X}
+\] と定義した上で、これを対数偏差 \(x_t\) で表すために展開すると、 \[
+x_t
+=
+\ln(1+\hat X_t)
+=
+\hat X_t-\frac{1}{2}\hat X_t^2+O(3)
+\]
+となります。このように、対数偏差と水準偏差は1次近似の範囲では完全に一致しますが、2次近似に拡張した場合には、互いに符号の異なる2次の補正項を持つ点に注意が必要です。
+
+なお、ここで用いている記号 \(O(3)\)
+は、「3次以上の極めて小さな微小項（例えば \(x_t^3\)、\(x_t^2y_t\)
+など）」をまとめて省略したことを意味します。
+
+\subsection{積と和の二次近似：基本公式}\label{ux7a4dux3068ux548cux306eux4e8cux6b21ux8fd1ux4f3cux57faux672cux516cux5f0f}
+
+非線形な積や商は、自然対数を取ることで厳密に足し算・引き算へと変換されます。したがって、
+\[
+Z_t=X_tY_t
+\] という関係がある場合、対数偏差については \[
+z_t=x_t+y_t
+\]
+という関係が、1次近似だけでなく2次近似においても（さらには厳密解としても）一切の誤差なく成立します。2次項が現れるのは、この対数偏差を元の水準偏差へと書き戻す段階においてです：
+\[
+\frac{Z_t-Z}{Z}
+=
+\exp(z_t)-1
+=
+x_t+y_t+\frac{1}{2}(x_t+y_t)^2+O(3).
+\]
+
+一方、足し算（和）で表された関係式を2次近似する場合、2次の項にも定常状態のシェアが複雑に絡んできます。ここでも、各構成要素自身の定常状態からの対数偏差を
+\(c_t=\ln(C_t/C)\)、\(g_t=\ln(G_t/G)\) と定義します。経済の資源制約式
+\(Y_t=C_t+G_t\)（定常状態 \(Y=C+G\)）において、各支出の定常シェアを \[
+s_C\equiv\frac{C}{Y},
+\qquad
+s_G\equiv\frac{G}{Y},
+\qquad
+s_C+s_G=1
+\] とおきます。対数偏差を用いて資源制約を書き直すと、 \[
+\exp(y_t)
+=
+s_C\exp(c_t)+s_G\exp(g_t)
+\] となります。この両辺を2次までテイラー展開し、整理すると、 \[
+y_t
+=
+s_Cc_t+s_Gg_t
++\frac{1}{2}
+\left[
+s_Cc_t^2+s_Gg_t^2
+-(s_Cc_t+s_Gg_t)^2
+\right]
++O(3)
+\]
+という展開式が得られます。2変数の和の場合、角括弧の中身は分散の公式と同様に変形できるため、最終的に次のように美しく表現できます：
+\[
+y_t
+=
+s_Cc_t+s_Gg_t
++\frac{1}{2}s_Cs_G(c_t-g_t)^2
++O(3)
+\]
+
+1次近似の段階では、加重平均である \(y_t=s_Cc_t+s_Gg_t\)
+だけが残っていました。これに対し2次近似では、構成要素間の相対的な乖離（散らばり）の2乗を表す項
+\(\frac{1}{2}s_Cs_G(c_t-g_t)^2\)
+が追加されることが分かります。本講義の文脈で理解しておくべき核心は、「2次近似を行うと、単なる平均的な動きだけでなく、構成要素間の不均衡やばらつき自体が追加的な影響を及ぼすようになる」という直観です。
+
+\subsection{効用関数の二次近似と社会的ロス関数の導出}\label{ux52b9ux7528ux95a2ux6570ux306eux4e8cux6b21ux8fd1ux4f3cux3068ux793eux4f1aux7684ux30edux30b9ux95a2ux6570ux306eux5c0eux51fa}
+
+第9回で扱う中央銀行の目的関数（社会的ロス関数）は、代表的家計の生涯効用関数を2次近似することによって厳密に導出されます。ここでは、その基礎となる計算プロセスを確認します。
+
+本節では、まず論点を明確にするため、自然産出量を変動させる実物ショックが存在しない最も基本的なケースを想定します。したがって、価格が伸縮的な場合に達成される自然産出量は常に定常状態にとどまり、その対数偏差は
+\(y_t^f=0\) です。このとき、産出量の対数偏差 \(y_t\)
+は、自然産出量からの乖離である需給ギャップ \(x_t \equiv y_t - y_t^f\)
+と完全に一致します。
+
+代表的家計の1期間の効用関数を、標準的なCRRA型効用関数 \[
+U(C_t,N_t)
+=
+\frac{C_t^{1-\gamma}}{1-\gamma}
+-
+\frac{N_t^{1+\varphi}}{1+\varphi}
+\] とします。ここで
+\(\gamma>0\)（\(\gamma\neq1\)）は相対的リスク回避度（消費の異時点間代替弾力性の逆数）、\(\varphi\geq0\)
+は労働供給のフリッシュ弾力性の逆数です（\(\gamma=1\) の場合は極限として
+\(\ln C_t\) となります）。
+
+定常状態における消費の限界効用で測った消費の価値 \(U_C C\)
+で全体を割り引いて正規化し、対数偏差
+\(c_t=\ln(C_t/C)\)、\(n_t=\ln(N_t/N)\)
+を用いて2次近似を行うと、一般形は次のようになります： \[
+\frac{U(C_t,N_t)-U(C,N)}{U_C C}
+=
+c_t
++\frac{1-\gamma}{2}c_t^2
+-\omega_N
+\left[
+n_t+\frac{1+\varphi}{2}n_t^2
+\right]
++O(3)
+\] ここで、係数 \[
+\omega_N
+\equiv
+\frac{N^{1+\varphi}}{U_C C}
+\]
+は、定常状態における労働の限界不効用の大きさを、消費の限界効用で換算した相対ウェイトを表しています。
+
+以下では、厚生損失の基本形を直観的に導くため、経済が「効率的な定常状態（歪みのない理想的な状態）」にあると仮定します。線形な生産技術
+\(Y=N\) と政府支出のない資源制約 \(C=Y\)
+のもとでは、社会的最適な効率性条件から \(U_C C=N^{1+\varphi}\)
+が成り立つため、相対ウェイトはちょうど \(\omega_N=1\)
+となります（独占的競争が存在する経済であっても、適切な売上補助金によって定常状態のマークアップが相殺されていると想定します）。さらに、水準値の単位を正規化して
+\(C=N=1\) と置くことで、展開式は次のように簡素化されます： \[
+\frac{U(C_t,N_t)-U(C,N)}{U_C C}
+=
+c_t-n_t
++\frac{1-\gamma}{2}c_t^2
+-\frac{1+\varphi}{2}n_t^2
++O(3)
+\]
+なお、定常状態に市場の歪みが残っている一般的なケースでは、1次の効果が相殺されずに残るため、\(\omega_N\)
+を含めたより一般的な評価が必要となります。
+
+この基本ケースにおいても、価格硬直性が存在する経済では、予期せぬ金融政策ショックなどによって産出量
+\(y_t\) やインフレ率 \(\pi_t\)
+が定常状態から変動し得ます。生産技術が線形であるため、労働投入量の対数偏差は産出量と一致します（\(n_t=y_t\)）。また、政府支出が存在せず、定常状態において価格調整費用およびその1次の効果がゼロであると仮定すると、企業の価格改定に伴う実物資源の損失（Rotemberg型価格調整費用
+\(\frac{\eta}{2}\pi_t^2\)）を考慮した資源制約式は、2次近似のもとで次のように表されます：
+\[
+c_t
+=
+y_t-\frac{\eta}{2}\pi_t^2+O(3)
+\] ここで \(\eta>0\)
+は、第7回以降で登場するRotemberg型の価格調整費用パラメータです。価格調整費用自体がすでに2次の微小項であるため、2乗項
+\(c_t^2\) の中では単純に \(c_t=y_t\) と近似して差し支えありません。
+
+これらを先ほどの効用の2次展開式に代入すると、1次の項
+\(c_t - n_t = y_t - y_t = 0\)
+が見事に相殺されて完全に消去され、2次の項だけが生き残ります： \[
+\frac{U(C_t,N_t)-U(C,N)}{U_C C}
+=
+-\frac{\gamma+\varphi}{2}y_t^2
+-\frac{\eta}{2}\pi_t^2
++O(3)
+\] この基本ケースでは自然産出量ショックがないため \(y_t^f=0\)
+であり、\(y_t\) はそのまま需給ギャップ \(x_t\)
+に一致します。したがって、政策当局が最小化すべき1期間の社会的厚生損失（ロス関数）\(\ell_t\)
+は、符号を反転させることで次のように導出されます： \[
+\ell_t
+=
+\frac{1}{2}
+\left[
+(\gamma+\varphi)x_t^2+\eta\pi_t^2
+\right]
+\]
+
+この美しい結果は、第9回で学ぶ「最適金融政策」の目的関数の理論的支柱となります。すなわち、\textbf{「産出活動が自然な実力値から乖離することによる効用低下（需給ギャップの2乗
+\(x_t^2\)）」}と、\textbf{「価格調整の摩擦によって実物資源が無駄に浪費されることによる効用低下（インフレ率の2乗
+\(\pi_t^2\)）」}の双方が、家計の厚生を2次の精度で引き下げる主因であることを物語っています。
+
+ただし注意点として、ここで導出したのは「効率的な定常状態のまわりで、自然産出量ショックが存在しない特殊ケース」における期間効用近似です。確率的なショックが存在する一般的な動学モデルにおいて複数の政策ルールの優劣を2次の精度で比較する場合には、目的関数（効用）だけでなく、経済の政策決定関数（ポリシー・ファンクション）自体も2次まで厳密に解く必要があります（Schmitt-Grohé
+and Uribe, 2004）。
+
+さらに、第8回で学ぶRANKモデルでは、外生的な技術ショック \(a_t\)
+や政府支出ショック \(g_t\) が発生し、これらが自然産出量 \(y_t^f\)
+そのものを動学的に変動させます。その一般的なケースにおいても、定常状態の歪みが相殺されていれば、社会的ロス関数に入る産出項は
+\(y_t^2\) そのものではなく、自然産出量からの乖離である \[
+x_t=y_t-y_t^f
+\] となります。第8回では、この \(y_t^f\)
+が技術ショックや財政ショックの関数としてどのように理論的に決定されるかを明快に導出します。
+
+最後に、ロス関数の全体を正の定数 \(\gamma+\varphi\)
+で割っても最適政策の決定ルールは一切変わりません。したがって、標準的なマクロ経済学では、基本ケースのロス関数を次のように正規化して用いるのが一般的です：
+\[
+\ell_t
+\propto
+\frac{1}{2}
+\left(
+x_t^2+\omega_p\pi_t^2
+\right),
+\qquad
+\omega_p\equiv\frac{\eta}{\gamma+\varphi}
+\] ここで \(\omega_p\)
+は、産出の安定化に対して中央銀行がインフレの安定化をどれだけ重視するかを表す相対的な選好ウェイトとなります。
+
+\Needspace{12\baselineskip}
+
+\section{まとめと第3回への接続}\label{ux307eux3068ux3081ux3068ux7b2c3ux56deux3078ux306eux63a5ux7d9a}
+
+\textbf{初読時に押さえるべき重要ポイント}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{トレンドと景気循環}：現実の実質GDPには長期的な成長トレンドが存在する。HPフィルターから得られる循環成分は、実データと理論モデルを定量的に比較するための実証的な共通尺度である。ただし、自然産出量を基準とする理論上の産出ギャップ（\(x_t=y_t-y_t^f\)）とは概念上明確に区別する必要がある。
+\item
+  \textbf{弱定常性}：平均、分散、自己共分散がカレンダー上の時点に依存しないとき、時系列過程は弱定常である。ショックが時間とともに自然に減衰して消滅するためには、弱定常性に加えて動学的な安定性条件が満たされなければならない。
+\item
+  \textbf{AR(1)過程}：持続性パラメータが \(|\rho|<1\)
+  を満たすとき、因果的かつ一意な弱定常解が存在し、ショックの影響は
+  \(\rho^h\) の幾何級数的なスピードで定常状態へと減衰する。
+\item
+  \textbf{インパルス応答関数}：線形化された状態空間表現のもとでは、ショックの動学的な波及効果はシステム行列
+  \(A\) を繰り返し累乗（\(A^hB\) や
+  \(CA^hB\)）することによって瞬時に計算できる。
+\item
+  \textbf{動学的安定性}：所与の状態遷移方程式では、行列 \(A\)
+  のすべての固有値が単位円の内側にあることが収束の条件となる。前向き変数を含む合理的期待モデルでは、Blanchard--Kahn条件を別途確認する。
+\item
+  \textbf{対数線形近似}：積・商・べき乗は対数を取ることで厳密に線形化できる。一方、和の対数線形化では、定常状態における各要素の構成比（シェア）による加重平均となる。
+\end{enumerate}
+
+\textbf{第9回を学ぶ前に再訪すべきポイント}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{対数二次近似}：自然産出量を動かす実物ショックが存在しない効率的な定常状態のもとでは、\(y_t^f=0\)
+  かつ \(x_t=y_t\)
+  となり、家計の効用関数の2次展開から需給ギャップの2乗（\(x_t^2\)）とインフレ率の2乗（\(\pi_t^2\)）からなる社会的ロス関数が厳密に導出される。実物ショックが存在する一般的なケースでは、第8回において需給ギャップを
+  \(x_t=y_t-y_t^f\) として再定義する。
+\end{itemize}
+
+次回（第3回）は、現代動学マクロ経済学の根幹をなす「動学的最適化手法」を正面から学びます。有限期間のラグランジュ未定乗数法から出発し、無限期間への拡張、ベルマン方程式を用いたダイナミック・プログラミング、不確実性のもとでの意思決定、そして確率的割引因子（SDF）による資産価格付け条件へとステップアップしていきます。
+
+\section{参考文献}\label{ux53c2ux8003ux6587ux732e}
+
+\textbf{実証データ}
+
+\begin{itemize}
+\tightlist
+\item
+  U.S. Bureau of Economic Analysis (2026) ``Real Gross Domestic
+  Product'' (\texttt{GDPC1}), retrieved from
+  \href{https://fred.stlouisfed.org/series/GDPC1}{FRED, Federal Reserve
+  Bank of St.~Louis}, August 15, 2026.
+\end{itemize}
+
+\textbf{基本参考文献}
+
+予習の段階では本講義ノートの本編と基本問題に目を通してください。以下は、各トピックで扱った理論や手法をより深く復習・探求するための代表的な文献です。
+
+\begin{itemize}
+\tightlist
+\item
+  Hamilton, James D. (1994)
+  \href{https://www.jstor.org/stable/j.ctv14jx6sm}{\emph{Time Series
+  Analysis}}. Princeton University Press.
+  AR過程、定常性、インパルス応答関数に関する時系列分析の標準的な世界的名著。
+\item
+  Ljungqvist, Lars, and Thomas J. Sargent (2018)
+  \href{https://mitpress.mit.edu/9780262038669/recursive-macroeconomic-theory/}{\emph{Recursive
+  Macroeconomic Theory} (4th ed.)}. MIT Press.
+  動学モデルの状態空間表現、再帰的定式化、線形化手法の理論的背景を確認するための決定版教科書。
+\item
+  Galí, Jordi (2015) \emph{Monetary Policy, Inflation, and the Business
+  Cycle} (2nd ed.). Princeton University Press.
+  第2章において、家計や企業の非線形な最適化条件を対数線形近似する具体的な手順が極めて明快に解説されている。\href{https://crei.cat/wp-content/uploads/users/pages/ch2_slides_october_2015.pdf}{著者の第2章講義スライド}。
+\item
+  Hodrick, Robert J., and Edward C. Prescott (1997) ``Postwar U.S.
+  Business Cycles: An Empirical Investigation.'' \emph{Journal of Money,
+  Credit and Banking}, 29(1), 1-16.
+  \href{https://doi.org/10.2307/2953682}{doi}
+  実質GDPのトレンド・循環分解と、データとモデル系列に同一のフィルター処理を施す現代的評価手法の原典。
+\end{itemize}
+
+\newpage
+
+\textbf{発展的文献}
+
+\begin{itemize}
+\tightlist
+\item
+  Blanchard, Olivier J., and Charles M. Kahn (1980) ``The Solution of
+  Linear Difference Models under Rational Expectations.''
+  \emph{Econometrica}, 48(5), 1305-1311.
+  \href{https://doi.org/10.2307/1912186}{doi}
+  合理的期待モデルにおける一意な安定均衡の存在条件（Blanchard--Kahn条件）を確立した金字塔的論文。
+\item
+  Schmitt-Grohé, Stephanie, and Martín Uribe (2004) ``Solving Dynamic
+  General Equilibrium Models Using a Second-Order Approximation to the
+  Policy Function.'' \emph{Journal of Economic Dynamics and Control},
+  28(4), 755-775.
+  \href{https://doi.org/10.1016/S0165-1889(03)00043-5}{doi}
+  DSGEモデルにおいて2次近似を用いた厳密な厚生評価を行うための標準的手法を提示した重要論文。
+\item
+  Judd, Kenneth L. (1998)
+  \href{https://mitpress.mit.edu/9780262547741/numerical-methods-in-economics/}{\emph{Numerical
+  Methods in Economics}}. MIT Press.
+  高次の摂動法や数値計算アルゴリズムを数学的に深く学ぶための専門書。
+\item
+  Hamilton, James D. (2018) ``Why You Should Never Use the
+  Hodrick-Prescott Filter.'' \emph{Review of Economics and Statistics},
+  100(5), 831-843. \href{https://doi.org/10.1162/rest_a_00706}{doi}
+  HPフィルターが抱える端点問題やスプリアスな動学関係の生成リスクを批判的に検証した論文。\href{https://econweb.ucsd.edu/~jhamilto/hp.pdf}{著者公開草稿}。
+\end{itemize}
+
+\section{演習問題}\label{ux6f14ux7fd2ux554fux984c}
+
+\subsection{基本問題}\label{ux57faux672cux554fux984c}
+
+\subsubsection{問1 {[}Core{]}
+{[}Computation{]}：AR(1)のインパルス応答}\label{ux554f1-core-computationar1ux306eux30a4ux30f3ux30d1ux30ebux30b9ux5fdcux7b54}
+
+次のAR(1)過程を考えます： \[
+y_t=0.8y_{t-1}+\varepsilon_t
+\] 初期状態を \(y_{-1}=0\) とし、\(t=0\) において1単位のショック
+\(\varepsilon_0=1\)
+が発生し、その後の期間（\(t\geq 1\)）では新たなショックが発生しない（\(\varepsilon_t=0\)）と仮定します。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(t=0, 1, 2, 3, 4\) における変数の値 \(y_t\) をそれぞれ計算しなさい。
+\item
+  このショックの影響が初期値の半分にまで減衰するのに要する期間（半減期
+  \(h_{1/2}\)）を求めなさい。
+\end{enumerate}
+
+\subsubsection{問2 {[}Core{]}
+{[}Computation{]}：平均回帰と条件付き予測}\label{ux554f2-core-computationux5e73ux5747ux56deux5e30ux3068ux6761ux4ef6ux4ed8ux304dux4e88ux6e2c}
+
+次のAR(1)過程を考えます： \[
+y_t=(1-\rho)\mu+\rho y_{t-1}+\varepsilon_t,
+\qquad
+\rho=0.6,\quad \mu=2
+\] 現時点 \(t\) において \(y_t=5\)
+が観察されたとします。この情報のもとでの1期先および2期先の条件付き予測値
+\(\mathbb{E}_t[y_{t+1}]\) と \(\mathbb{E}_t[y_{t+2}]\)
+をそれぞれ求めなさい。
+
+\subsubsection{問3 {[}Core{]} {[}Computation{]}
+{[}Derivation{]}：資源制約の対数線形化}\label{ux554f3-core-computation-derivationux8cc7ux6e90ux5236ux7d04ux306eux5bfeux6570ux7ddaux5f62ux5316}
+
+経済の資源制約式 \(Y_t=C_t+G_t\)
+を考えます。本講義の定義に従い、\(c_t=\ln(C_t/C)\)、\(g_t=\ln(G_t/G)\)
+とします。定常状態において民間消費シェアが \(C/Y=0.8\)、政府支出シェアが
+\(G/Y=0.2\) であるとします。ある四半期において、消費 \(C_t\)
+が定常状態から1パーセント高く、政府支出 \(G_t\)
+が定常状態から2パーセント高いとき、総産出量 \(Y_t\)
+は定常状態からおよそ何パーセント高い水準にあると推定されますか。1次の対数線形近似式を用いて計算しなさい。
+
+\subsubsection{問4 {[}Core{]}
+{[}Derivation{]}：フィッシャー方程式と事前・事後実質利子率}\label{ux554f4-core-derivationux30d5ux30a3ux30c3ux30b7ux30e3ux30fcux65b9ux7a0bux5f0fux3068ux4e8bux524dux4e8bux5f8cux5b9fux8ceaux5229ux5b50ux7387}
+
+名目安全債券の来期における事後的な実質総収益率が \(R_t^N/\Pi_{t+1}\)
+で与えられるとします。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  この式の自然対数をとることで、定常状態からの対数乖離について事後実質利子率
+  \(r_{t+1}^{\mathrm{post}}\)、名目利子率 \(r_t^N\)、およびインフレ率
+  \(\pi_{t+1}\) の間に成り立つ恒等式を導出しなさい。
+\item
+  将来のインフレ期待値 \(\mathbb{E}_t\pi_{t+1}\)
+  を導入し、事前実質利子率 \(r_t\)
+  の定義式（対数線形版フィッシャー方程式）を導きなさい。
+\item
+  中央銀行が名目金利を引き上げたとしても、市場の期待インフレ率がそれと全く同じ幅だけ上昇した場合、事前実質利子率はどのように変化するかを説明しなさい。
+\end{enumerate}
+
+\Needspace{11\baselineskip}
+
+\subsubsection{問5
+{[}Core{]}：GDPのトレンド、景気循環、および弱定常性}\label{ux554f5-coregdpux306eux30c8ux30ecux30f3ux30c9ux666fux6c17ux5faaux74b0ux304aux3088ux3073ux5f31ux5b9aux5e38ux6027}
+
+図~\ref{fig-us-real-gdp-trend-cycle}
+において、上段に示された「対数実質GDPの水準系列」と、下段に示された「HPフィルターによる循環成分系列」を比較します。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  統計的な「弱定常過程」として扱うのにより適しているのはどちらの系列ですか。系列の平均が時間に依存しているかどうかに言及して説明しなさい。
+\item
+  HP循環成分の統計量（標準偏差や自己相関など）を理論モデルのシミュレーション結果と比較する際、モデル側の系列に対してそろえておくべき「変数定義」および「データ変換処理」を具体的に挙げなさい。
+\end{enumerate}
+
+\Needspace{12\baselineskip}
+
+\subsubsection{問6 {[}Core{]}
+{[}Computation{]}：多変数システムの線形状態空間表現と安定性}\label{ux554f6-core-computationux591aux5909ux6570ux30b7ux30b9ux30c6ux30e0ux306eux7ddaux5f62ux72b6ux614bux7a7aux9593ux8868ux73feux3068ux5b89ux5b9aux6027}
+
+新たな外生ショックが存在しない自律的な2変数の状態遷移方程式 \[
+s_{t+1}=As_t,
+\qquad
+A=
+\begin{pmatrix}
+0.8 & 0.2\\
+0 & 1.05
+\end{pmatrix}
+\] を考えます。システム行列 \(A\)
+の固有値をすべて求め、この動学システムが時間とともに定常状態（\(s=0\)）へと自律的に収束するかどうかを論理的に判定しなさい。
+
+\subsection{発展問題}\label{ux767aux5c55ux554fux984c}
+
+\subsubsection{問7 {[}第9回前に再訪{]}
+{[}Derivation{]}：対数二次近似と社会的ロス関数}\label{ux554f7-ux7b2c9ux56deux524dux306bux518dux8a2a-derivationux5bfeux6570ux4e8cux6b21ux8fd1ux4f3cux3068ux793eux4f1aux7684ux30edux30b9ux95a2ux6570}
+
+定常状態からの対数偏差 \(x_t=\ln X_t-\ln X\)
+が十分に微小であると仮定します。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  水準の相対偏差 \((X_t-X)/X\) を \(x_t\)
+  について2次までマクローリン展開し、1次項と2次項を導出しなさい。
+\item
+  自然産出量を変動させる実物ショックが存在せず、1次の精度で
+  \(c_t=n_t=y_t\)
+  が成り立つ効率的定常状態の基本ケースにおいて、代表的家計の正規化された効用の2次近似式が
+  \(-\frac{\gamma+\varphi}{2}y_t^2\) に帰着することを確認しなさい。
+\item
+  Rotemberg型の価格調整費用が資源制約式に
+  \(c_t=y_t-\frac{\eta}{2}\pi_t^2+O(3)\)
+  として反映されるとき、政策当局が最小化すべき社会的厚生損失関数が
+  \(\ell_t=\frac{1}{2}\left[(\gamma+\varphi)y_t^2+\eta\pi_t^2\right]\)
+  として導かれる論理を平易に説明しなさい。
+\end{enumerate}
+
+
+
+
+\end{document}

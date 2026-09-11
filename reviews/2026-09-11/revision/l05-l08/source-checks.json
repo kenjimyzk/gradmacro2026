@@ -1,0 +1,26 @@
+{
+  "lecture05": {
+    "qmd_sha256": "3ee2b01bb3bf5ea671f0c73077cbe82e02b497e7c2d012098711c88fb63772b3",
+    "r_chunk_count": 2,
+    "r_executable_body_unchanged": true,
+    "math_blocks_paired": true
+  },
+  "lecture06": {
+    "qmd_sha256": "5f3bbb7098b1b64b8a2dd03381454fba4ad13e58a48e4a7251ead3f43447a5bc",
+    "r_chunk_count": 0,
+    "r_executable_body_unchanged": true,
+    "math_blocks_paired": true
+  },
+  "lecture07": {
+    "qmd_sha256": "8b75b6bda790244f907a4ad327b0f65030e97a990ebbb9b09683389fa824dc90",
+    "r_chunk_count": 0,
+    "r_executable_body_unchanged": true,
+    "math_blocks_paired": true
+  },
+  "lecture08": {
+    "qmd_sha256": "ab9cdb2a7468468174f87368d4719315d88521869ba14306276a7a9c16924d2b",
+    "r_chunk_count": 1,
+    "r_executable_body_unchanged": true,
+    "math_blocks_paired": true
+  }
+}

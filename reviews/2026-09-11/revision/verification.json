@@ -1,0 +1,571 @@
+{
+  "status": "complete",
+  "documents": 13,
+  "pdf_pages": 412,
+  "pdf_layout": "all pages overview and targeted expanded inspection",
+  "pdf_missing_glyphs": 0,
+  "pdf_overfull": 0,
+  "pdf_outside_or_near_edge": 0,
+  "html_math_spans": 4590,
+  "html_math_syntax_errors": 0,
+  "html_browser_layout": "not run",
+  "inputs": {
+    "マクロ経済学B_シラバス案.qmd": {
+      "before": "f49b111096bbfd605d9e503add7d4e6a29cc6ca11d2095bbef545dad5a4494fd",
+      "after": "f49b111096bbfd605d9e503add7d4e6a29cc6ca11d2095bbef545dad5a4494fd",
+      "changed": false
+    },
+    "lecture08.qmd": {
+      "before": "9882e93cffb53c3199e3b20ba769ef9b034dd5835b6850608e954da43a549726",
+      "after": "ab9cdb2a7468468174f87368d4719315d88521869ba14306276a7a9c16924d2b",
+      "changed": true
+    },
+    "lecture09.qmd": {
+      "before": "13c461b1a8a99b5b8f18dc9bf67ac2bf3e8dd15eb50feb98ce60156ed6cc41fe",
+      "after": "13c461b1a8a99b5b8f18dc9bf67ac2bf3e8dd15eb50feb98ce60156ed6cc41fe",
+      "changed": false
+    },
+    "lecture04.qmd": {
+      "before": "11dadec19994da57655723c204afa0b271c8e971da5012cf8423cbfb9f053bc7",
+      "after": "7c7569e1eef459fdaf502a078b56797402fe42726ed891fb484b750b95a990af",
+      "changed": true
+    },
+    "lecture10.qmd": {
+      "before": "c87f7ee13779b0b0d6101e7120010537c2fe05891d5ea6d883a19e8823b062ab",
+      "after": "428a1edfb162060f78db06a86b162fe842295a19bee4e039329edfb53d9d9e6f",
+      "changed": true
+    },
+    "lecture11.qmd": {
+      "before": "8ff753ee547b3b2899b86762b8750bdf990eddf2f8758491a3aa9c70e7c73c0e",
+      "after": "d3252fa0e65bd6475faa59b961875e3d2d473fc3d292f907be9e490b85d0bfe0",
+      "changed": true
+    },
+    "lecture05.qmd": {
+      "before": "a2560ccd0e007a2b2fee034a901dd5788ba4b5a19d3f348f012cd9c1e6efcfaa",
+      "after": "3ee2b01bb3bf5ea671f0c73077cbe82e02b497e7c2d012098711c88fb63772b3",
+      "changed": true
+    },
+    "lecture07.qmd": {
+      "before": "f56f1329bc94bdeeeeb575aa7cf12611e5486bd97ba6776898b5c4c2dc2e5507",
+      "after": "8b75b6bda790244f907a4ad327b0f65030e97a990ebbb9b09683389fa824dc90",
+      "changed": true
+    },
+    "lecture06.qmd": {
+      "before": "80413a95f4a6920336725c9428bfd2ed25416a14bbd39d27a55ce3bedb72a196",
+      "after": "5f3bbb7098b1b64b8a2dd03381454fba4ad13e58a48e4a7251ead3f43447a5bc",
+      "changed": true
+    },
+    "lecture12.qmd": {
+      "before": "9c3a0e1baaa8a593fcf08dd45a11ce70465ad134d49c609e3fd60e04a6e293f9",
+      "after": "272298af562bb7933e638bac42c1cce38eb4b06d2bc78475fdbc584a48c519e2",
+      "changed": true
+    },
+    "lecture02.qmd": {
+      "before": "cc5b262a82203d6d98e4de794b9b4380aa7f7ccbe7b6fc8af63f4575afc61776",
+      "after": "82fe392596c84d251a7f0153365384456ecd9bd562e2fc0634d9fa9b223c976c",
+      "changed": true
+    },
+    "lecture03.qmd": {
+      "before": "690c200af563e5324b76a3ee3adbf69749de0ee8c3b2438974864c6e7ff33a94",
+      "after": "690c200af563e5324b76a3ee3adbf69749de0ee8c3b2438974864c6e7ff33a94",
+      "changed": false
+    },
+    "solution.qmd": {
+      "before": "825ffb75a551718df79b9816ae90472553d8b1135cf86651575d6966ddb09b41",
+      "after": "7ffa732bbb6624fb48e362d073162940982724f39710a71ea4c51f0935b5af05",
+      "changed": true
+    },
+    "lecture01.qmd": {
+      "before": "372ff35999133075ffca65e22711688454f2141101ed529560bd5cd9fbb66474",
+      "after": "f1661f1b34585286d9ba01f5082960b26ed690d4f7dfce0e8eb7cd6977bfe230",
+      "changed": true
+    },
+    "includes/assumption-matrix.qmd": {
+      "before": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+      "after": "97194945526263faf0540e7ec3e6b32bfad23fae0c799c91afa9b952d4b9738b",
+      "changed": false
+    },
+    "includes/notation-concordance.qmd": {
+      "before": "54b7286b29248aaa6a2dee2edd01d59d408d221aafe889aa3d7a0a8e060184a0",
+      "after": "718bda3fcbd6936f7c3e8fc722b4fe946df248a441605458cf7caf093122f38f",
+      "changed": true
+    },
+    "figures/lecture04/lecture04_overview_infographic.svg": {
+      "before": "094e6fe6462a7512503bb6c9dafdf1e4581f066a0d2ce3dbe63b9065c3774854",
+      "after": "094e6fe6462a7512503bb6c9dafdf1e4581f066a0d2ce3dbe63b9065c3774854",
+      "changed": false
+    },
+    "figures/lecture03/sdf_asset_pricing_map.svg": {
+      "before": "795bd70ea0e2e2e6ad21951563e46568a1fdf93f0ebe6d6476f446189e1c7656",
+      "after": "795bd70ea0e2e2e6ad21951563e46568a1fdf93f0ebe6d6476f446189e1c7656",
+      "changed": false
+    },
+    "figures/lecture03/lecture03_overview_infographic.svg": {
+      "before": "6ab0a672f1778a576631ad99523dcce2f785dae1beb7a31a76fc3437397f4608",
+      "after": "6ab0a672f1778a576631ad99523dcce2f785dae1beb7a31a76fc3437397f4608",
+      "changed": false
+    },
+    "figures/lecture03/consumption_growth_simulation.svg": {
+      "before": "2a8581492bb7abfff618da4745ec3090789677537dde7c6b74b02fc02495a693",
+      "after": "2a8581492bb7abfff618da4745ec3090789677537dde7c6b74b02fc02495a693",
+      "changed": false
+    },
+    "figures/lecture02/log_linearization_map.svg": {
+      "before": "2454d1b14af7e784168eec8f17660a2b73820607245dae90856087b93bb595b8",
+      "after": "5eff58a140ece685680cc4dc037fd66cfe192dce3332b0373123bb02f11f46ec",
+      "changed": true
+    },
+    "figures/lecture02/ar1_irf_simulation.svg": {
+      "before": "42d31a7a85cd5ef1373f24fffb4af6b6ac45a85c0a28d1733215612fc4105554",
+      "after": "18b70384d5dd492393f66f7692c5437826f87241703ce333cd6c67b631076c0f",
+      "changed": true
+    },
+    "figures/lecture02/lecture02_overview_infographic.svg": {
+      "before": "a653ba5cc8a33eff4a9a126d013633daa39776ea9e16445f505b87162fc266b6",
+      "after": "5e44b444af56eab3370559b66c1ebc7c640e1774f955719cd296f0f1b5bfcc1f",
+      "changed": true
+    },
+    "figures/lecture02/us_real_gdp_trend_cycle.svg": {
+      "before": "12c838081f0ea5c1466a99b06d6edc7797aa3323dc6451f88b2b0269601dd668",
+      "after": "12c838081f0ea5c1466a99b06d6edc7797aa3323dc6451f88b2b0269601dd668",
+      "changed": false
+    },
+    "figures/lecture05/lecture05_overview_infographic.svg": {
+      "before": "fa19c2bf245c4f60b65f2f81be97ab9bca9104915f506c19e78c804631bdce70",
+      "after": "fa19c2bf245c4f60b65f2f81be97ab9bca9104915f506c19e78c804631bdce70",
+      "changed": false
+    },
+    "figures/lecture11/lecture11_overview_infographic.svg": {
+      "before": "be1ce89bc89c9e635ebc7f1400c729825461d6d0111f4e7e6b1654cf387e32ea",
+      "after": "be1ce89bc89c9e635ebc7f1400c729825461d6d0111f4e7e6b1654cf387e32ea",
+      "changed": false
+    },
+    "figures/lecture11/lecture11_shock_numerical.svg": {
+      "before": "7e9e400d30626db3f4c7120fc8d3ad81e804bf804d2bf36f5ff8900cffddff6a",
+      "after": "7e9e400d30626db3f4c7120fc8d3ad81e804bf804d2bf36f5ff8900cffddff6a",
+      "changed": false
+    },
+    "figures/lecture11/lecture11_is_curve.svg": {
+      "before": "9efef3bc58dbc9250bed2ec7c50c09f68bcc97e84056090cc12d1d3dc10144f3",
+      "after": "9efef3bc58dbc9250bed2ec7c50c09f68bcc97e84056090cc12d1d3dc10144f3",
+      "changed": false
+    },
+    "figures/lecture10/lecture10_static_case_slopes.svg": {
+      "before": "cf0e7c44f88dce95e8865ab30680df14ae95821359df94e95a4be57b205123f1",
+      "after": "cf0e7c44f88dce95e8865ab30680df14ae95821359df94e95a4be57b205123f1",
+      "changed": false
+    },
+    "figures/lecture10/lecture10_overview_infographic.svg": {
+      "before": "5232ae88ad1c8cffe8ed4509cf0cf3fef28b1c26ca32e9cc7b565dacef06667a",
+      "after": "5232ae88ad1c8cffe8ed4509cf0cf3fef28b1c26ca32e9cc7b565dacef06667a",
+      "changed": false
+    },
+    "figures/lecture07/nk_ad_as_mapping.svg": {
+      "before": "f1df19e134662cc8a4f522c08887f9ee4af0695b76306a428cfc3030077d6aab",
+      "after": "f1df19e134662cc8a4f522c08887f9ee4af0695b76306a428cfc3030077d6aab",
+      "changed": false
+    },
+    "figures/lecture07/lecture07_overview_infographic.svg": {
+      "before": "1371e28274de6ac044692b49d56f933e0112fd5159b5c8134d0720b41396ae18",
+      "after": "1371e28274de6ac044692b49d56f933e0112fd5159b5c8134d0720b41396ae18",
+      "changed": false
+    },
+    "figures/lecture09/lecture09_overview_infographic.svg": {
+      "before": "2662f84f3787acd77916009992250ddb9ce696b318a281f312e75f85c8445bf3",
+      "after": "0d088ba693faf320627d230d011f92dc8706b3e2ae80986703a4f04df9bd4cd2",
+      "changed": true
+    },
+    "figures/lecture08/lecture08_overview_infographic.svg": {
+      "before": "dbef60577325c4b1abf661223795ad48b443b05d5152c4ccb5c3d41b7ef0343c",
+      "after": "dbef60577325c4b1abf661223795ad48b443b05d5152c4ccb5c3d41b7ef0343c",
+      "changed": false
+    },
+    "figures/lecture08/nk_ad_as_shock_comparison.svg": {
+      "before": "99c11faddd726a54f16a5606eded8f4e960f735f3687857ea7c65748e9f55ace",
+      "after": "99c11faddd726a54f16a5606eded8f4e960f735f3687857ea7c65748e9f55ace",
+      "changed": false
+    },
+    "figures/lecture06/lecture06_overview_infographic.svg": {
+      "before": "c39b930f08e57abe1eeee063520510c3bb683e9c9a91bb49ce4eb133dda6bd97",
+      "after": "c39b930f08e57abe1eeee063520510c3bb683e9c9a91bb49ce4eb133dda6bd97",
+      "changed": false
+    },
+    "figures/lecture01/phillips_curve_expectations.svg": {
+      "before": "210b8633323df3e600487478c9acd9d8fbc50fad0c6f7809e35db37cb6f19baf",
+      "after": "064dbf15697c657708e6e2f47122542738ad9bcd68afb97918053211ac19c8b2",
+      "changed": true
+    },
+    "figures/lecture01/keynesian_cross.svg": {
+      "before": "2eddd6bf566d5c3a84618cffd52bcabbf0f36525fed02363e52623883d01b319",
+      "after": "2eddd6bf566d5c3a84618cffd52bcabbf0f36525fed02363e52623883d01b319",
+      "changed": false
+    },
+    "figures/lecture01/lecture01_overview_infographic.svg": {
+      "before": "f351d957024253de1f1a2516f43fddc5d7f1ac0eb2f0cf94f3b0cac2ecff7e0e",
+      "after": "edbc88fda8c0b7b42723c6689dadece163dd87dfba6a5e2df3071d03f36f926d",
+      "changed": true
+    },
+    "figures/lecture01/ad_as_equilibrium.svg": {
+      "before": "1c28a29a7862dfdee41efd4688f93281faad952e8dcdee5db46a37b2eca01ebe",
+      "after": "1c28a29a7862dfdee41efd4688f93281faad952e8dcdee5db46a37b2eca01ebe",
+      "changed": false
+    },
+    "figures/lecture01/is_lm_equilibrium.svg": {
+      "before": "52367f1b4fee3a5980fe806d21f69b4b724916bd027a4bb368f6814e8d78d569",
+      "after": "5668ff67c6959b7d5b3aa3e65694a69af132df890e527b97b1c532909193c39b",
+      "changed": true
+    },
+    "figures/lecture01/lucas_critique_flow.svg": {
+      "before": "c1e027ee3209e18c8aad0aed255021284e5599231f29ffb19407c329a6f185b0",
+      "after": "e3b60953a2d67fa7c16df0eea06c4783c15d6fe3fadb6d6a4e5d8c6a7d83f625",
+      "changed": true
+    },
+    "figures/lecture12/lecture12_overview_infographic.svg": {
+      "before": "c31de99876bbd3ce5b7138d64bb79afa774bba2195c75a046cb4ff0ed771e222",
+      "after": "c31de99876bbd3ce5b7138d64bb79afa774bba2195c75a046cb4ff0ed771e222",
+      "changed": false
+    },
+    "figures/lecture12/course_roadmap.svg": {
+      "before": "e843d4cb43032b1417cb8ad0996ce742f0691b305edd1be164ca411de074c37c",
+      "after": "e843d4cb43032b1417cb8ad0996ce742f0691b305edd1be164ca411de074c37c",
+      "changed": false
+    },
+    "figures/lecture12/rank_nk_cross.svg": {
+      "before": "77fca2749f5f80b3d79a3ec23aaeb7fa22ac32837dfb95b10107b5f20993fff6",
+      "after": "77fca2749f5f80b3d79a3ec23aaeb7fa22ac32837dfb95b10107b5f20993fff6",
+      "changed": false
+    },
+    "figures/lecture12/chi_tax_rule.svg": {
+      "before": "9c79eadb33c5e6a6cd9c7ccd2234b474fbd69d97be07b2ec21fc851a19303814",
+      "after": "9c79eadb33c5e6a6cd9c7ccd2234b474fbd69d97be07b2ec21fc851a19303814",
+      "changed": false
+    },
+    "figures/lecture12/multiplier_ratio.svg": {
+      "before": "7e89bacdb50b0d3a81e0e8bbb8ec2f33fdfdca441bd779f9b3c1b9cba0bd0b3e",
+      "after": "7e89bacdb50b0d3a81e0e8bbb8ec2f33fdfdca441bd779f9b3c1b9cba0bd0b3e",
+      "changed": false
+    },
+    "figures/lecture12/tank_nk_cross.svg": {
+      "before": "515a74e79e90892f0c93b8fd177f8e14d5f26951300f469276b70f674a6630a3",
+      "after": "515a74e79e90892f0c93b8fd177f8e14d5f26951300f469276b70f674a6630a3",
+      "changed": false
+    },
+    "scripts/render-lecture.R": {
+      "before": "bd909bca2ce7fb6c01c97df29fb7ccf0c030bd2a0ee346eaa38384e06a57976a",
+      "after": "bd909bca2ce7fb6c01c97df29fb7ccf0c030bd2a0ee346eaa38384e06a57976a",
+      "changed": false
+    },
+    "scripts/setup-graphics.R": {
+      "before": "408587be7db16ed3a36f634c172bb7e292d3a5fcf983c9274d5652ee8abc7f46",
+      "after": "408587be7db16ed3a36f634c172bb7e292d3a5fcf983c9274d5652ee8abc7f46",
+      "changed": false
+    },
+    "scripts/japanese-graphics.R": {
+      "before": "816374b6ee9c152760f3e144c8b481771bbfadfcce8cd08d342ec37c9811c69c",
+      "after": "816374b6ee9c152760f3e144c8b481771bbfadfcce8cd08d342ec37c9811c69c",
+      "changed": false
+    },
+    "scripts/check-graphics.R": {
+      "before": "8a2e7f5daa966e2291d955ae19bc85985ee900f8c775dbae144df717e2e1b488",
+      "after": "8a2e7f5daa966e2291d955ae19bc85985ee900f8c775dbae144df717e2e1b488",
+      "changed": false
+    },
+    "scripts/lecture02/generate_us_real_gdp_hp.py": {
+      "before": "0c34f5bce2e5b1b84f9660ba462f23d5d979f3a0e2f484030bcbb102458d1f91",
+      "after": "0c34f5bce2e5b1b84f9660ba462f23d5d979f3a0e2f484030bcbb102458d1f91",
+      "changed": false
+    },
+    "scripts/lecture12/generate_nk_cross.py": {
+      "before": "d238c84a6df93918d4caa0cf18887064915c07130ed55f563cee989a47eb4b71",
+      "after": "d238c84a6df93918d4caa0cf18887064915c07130ed55f563cee989a47eb4b71",
+      "changed": false
+    }
+  },
+  "delivered": {
+    "lecture01": {
+      "pages": 31,
+      "files": {
+        "lecture01.pdf": "e90a016f9b271403425d38bab22f0cea6c8e7811a03409a6f0ecdf507d7353f7",
+        "lecture01.html": "ba9c4c8f1c933e29271209f98585f70c193a7316ef6e827f8b29b7ede9bd3f07",
+        "lecture01_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture01_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture01_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture01_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture01_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture01_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture01_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture01_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture01_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture01_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture01_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture01_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture01_files/mediabag/figures/lecture01/ad_as_equilibrium.pdf": "9d3105e28e1c6b8ff12c23261ddad5cd642dce502ef662a8ec65b4b893b28486",
+        "lecture01_files/mediabag/figures/lecture01/is_lm_equilibrium.pdf": "b6c3668a92729ec5f7c1b31aab89839b068f8693d4793e6c5e86b6846426d18f",
+        "lecture01_files/mediabag/figures/lecture01/keynesian_cross.pdf": "0ac06b5a867faa8637680794b2efc2c789e858776792b58373d02e4783946a55",
+        "lecture01_files/mediabag/figures/lecture01/lecture01_overview_infographic.pdf": "48f84f7e8fa1ec890b06f4d882dfdccf0e5187fd0bba21f7fd70a6031e099ece",
+        "lecture01_files/mediabag/figures/lecture01/lucas_critique_flow.pdf": "8e1ed859bae52d83798d4b3456e06833c0536409c36be6a07742146fce55704b",
+        "lecture01_files/mediabag/figures/lecture01/phillips_curve_expectations.pdf": "b1cf0a2eee3eb69a3cec5f3293872dc8a9c2232b8dcf921a273a46413b89cf2e"
+      }
+    },
+    "lecture02": {
+      "pages": 28,
+      "files": {
+        "lecture02.pdf": "3a3c3cd033f58d8e6a96576bd6c47da612b32f3b3466ff98b41bbb132abfb230",
+        "lecture02.html": "2bbe3369d0ed3252b510ec7946fb79b78d0b81a9080dee09c87402efd55ec5f9",
+        "lecture02_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture02_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture02_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture02_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture02_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture02_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture02_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture02_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture02_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture02_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture02_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture02_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture02_files/mediabag/figures/lecture02/ar1_irf_simulation.pdf": "d4dd1e1dc137c3df414f209df9dbc80b59c0510cce5429c0e3d3f9caf4435f3f",
+        "lecture02_files/mediabag/figures/lecture02/lecture02_overview_infographic.pdf": "96802f881a7dc2903e9ef1e61a6c76ec4888bfc2c2343315ae03d1be499da192",
+        "lecture02_files/mediabag/figures/lecture02/log_linearization_map.pdf": "da6433d82932e496e30ee3748e0045bc2f3ad6b4ce253e226fac6140e3072689",
+        "lecture02_files/mediabag/figures/lecture02/us_real_gdp_trend_cycle.pdf": "c742fc0c4ded21e7fed106194f4c1f62261d2db0af7bed15157ce828a88f2af5"
+      }
+    },
+    "lecture03": {
+      "pages": 34,
+      "files": {
+        "lecture03.pdf": "86359b73db2dc09bf5e6a3cde0a7d3343e170b77a66211220c23c2a18cf67b71",
+        "lecture03.html": "28097873e9a2e17084f93c1d7be2d949759e7b5fd4b1d3b3a750584021e4cec9",
+        "lecture03_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture03_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture03_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture03_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture03_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture03_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture03_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture03_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture03_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture03_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture03_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture03_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture03_files/mediabag/figures/lecture03/consumption_growth_simulation.pdf": "fcd446951c300f857a9228a0c282349a3346556ce37ca7bd72d6a44e292fda87",
+        "lecture03_files/mediabag/figures/lecture03/lecture03_overview_infographic.pdf": "348b159a2d7e05ba0d8656fa1577b6345fd5b0a8f023c1a2cd97cbc003dd4464",
+        "lecture03_files/mediabag/figures/lecture03/sdf_asset_pricing_map.pdf": "f6d7872c6e0fdd2de03f79c54ccd5b584a393ad7ae0dad722c2155cf17170eb2"
+      }
+    },
+    "lecture04": {
+      "pages": 24,
+      "files": {
+        "lecture04.pdf": "41ab6938e4053ec87822bf0b18f908a68ea7a2063bfd3bd25f3ea3e21cdc6178",
+        "lecture04.html": "e40a36efeed72157ee77cc7bde093aa2db8c0f0aa73669b20b49638438ec4f88",
+        "lecture04_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture04_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture04_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture04_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture04_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture04_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture04_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture04_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture04_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture04_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture04_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture04_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture04_files/mediabag/figures/lecture04/lecture04_overview_infographic.pdf": "1e8bf374ea6a26ddeabfdda91e48c41714069176cf315823eef0d9fa6addddfc"
+      }
+    },
+    "lecture05": {
+      "pages": 28,
+      "files": {
+        "lecture05.pdf": "c3c40e0d5ac038a375eb94da558b10a59de60489d9897bf8326964de21b357dd",
+        "lecture05.html": "131e23ff4de68dd6dfa1ce2a9d640015e3cd560571c96efdd0a71991ff96ae3f",
+        "lecture05_files/figure-html/fig-laffer-curve-1.png": "f9f19598e74dcc00884bcd7f981179423fbcd5986ec1c029e9edc5a2492d74dc",
+        "lecture05_files/figure-pdf/fig-laffer-curve-1.pdf": "5bcb31d143cea7307a7e57a2631a9abb6cf7e99ebe4b019d006629ea65f45f3e",
+        "lecture05_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture05_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture05_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture05_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture05_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture05_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture05_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture05_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture05_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture05_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture05_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture05_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture05_files/mediabag/figures/lecture05/lecture05_overview_infographic.pdf": "508351bc109cc2186f3f41c704e9d260f076c41b93378299f4182624a61e71e3"
+      }
+    },
+    "lecture06": {
+      "pages": 21,
+      "files": {
+        "lecture06.pdf": "cb05b50e0dbd424f74ffebc3e5a62f992745d1b8f49fcff1b568643920c35c5b",
+        "lecture06.html": "5725db718e1a3aabbf73b195e9e190010b984484643f99d8fd9c5c9b90997bbd",
+        "lecture06_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture06_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture06_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture06_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture06_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture06_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture06_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture06_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture06_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture06_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture06_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture06_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture06_files/mediabag/figures/lecture06/lecture06_overview_infographic.pdf": "e473a61ea650628f4729296c65179201b8044cdec6eed0a76aff5f491e8590aa"
+      }
+    },
+    "lecture07": {
+      "pages": 25,
+      "files": {
+        "lecture07.pdf": "fb835bbd2c36282395cb8b7f76979c86350d79a14c2de1dad2cb8eb27d9f400a",
+        "lecture07.html": "6e51c7ba553e8fdf05915c2ca9b45bec06eca9827d41edb12242b6e6f865e30b",
+        "lecture07_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture07_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture07_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture07_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture07_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture07_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture07_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture07_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture07_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture07_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture07_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture07_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture07_files/mediabag/figures/lecture07/lecture07_overview_infographic.pdf": "876d07488c14ab9dc82dcc851b7a29b9ca86364a60c5e0ca1768ef7b311f5715",
+        "lecture07_files/mediabag/figures/lecture07/nk_ad_as_mapping.pdf": "22adbc7533add828df430933dea09546c7edfc5d0941310f792694b6c5418954"
+      }
+    },
+    "lecture08": {
+      "pages": 28,
+      "files": {
+        "lecture08.pdf": "8809d056429513f4197ffaf11ff01d9359cda8c8d356d54cb154b5109e8df70b",
+        "lecture08.html": "5ea1b43ace7a7a6f3e40dc19b7ff217c5e6bfb289bd4f56df0291d2c89a90dda",
+        "lecture08_files/figure-html/fig-rank-irf-numerical-1.png": "6c91c9100b6cb05a828bd63be6bd831f1a539abc39fcc891732c14b647211f5e",
+        "lecture08_files/figure-pdf/fig-rank-irf-numerical-1.pdf": "c0de92368a6540d36f9bb3e9b6e0dd7f31dc0b19e2f4ebee0e8bb151f6d58c89",
+        "lecture08_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture08_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture08_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture08_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture08_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture08_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture08_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture08_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture08_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture08_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture08_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture08_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture08_files/mediabag/figures/lecture08/lecture08_overview_infographic.pdf": "b486257db2697f58f5fed6d7271f312f1f4a8727d69af643df22b87d957b90d2",
+        "lecture08_files/mediabag/figures/lecture08/nk_ad_as_shock_comparison.pdf": "d4f8c3ebaa70c38573114316a6b7e4573d596a6728cee4a5c211cf860916a43d"
+      }
+    },
+    "lecture09": {
+      "pages": 33,
+      "files": {
+        "lecture09.pdf": "8f714ab58e4e7c139c6688a6c5bac637c5e3e66fb1f59f8ba6eb9a52703d4d7e",
+        "lecture09.html": "c712bea632afa9f47d7dce8a9f365f606fa7bcc545cfa5807d04da3ad225b763",
+        "lecture09_files/figure-html/fig-lecture09-discretion-timeless-irf-1.png": "6d4561278042de2f811d5f5832a4c4c4a7e8acb9b1abb3ee88d509cc65ddb8aa",
+        "lecture09_files/figure-pdf/fig-lecture09-discretion-timeless-irf-1.pdf": "c3b5d8036cc692599ff49403f5c68dab95931c34c725ee78f3a5f2a9ceb58cfa",
+        "lecture09_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture09_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture09_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture09_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture09_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture09_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture09_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture09_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture09_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture09_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture09_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture09_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture09_files/mediabag/figures/lecture09/lecture09_overview_infographic.pdf": "edc8f9d16b719891de9de78faae738162594f2dac4693e942e1a76610be1f5e2"
+      }
+    },
+    "lecture10": {
+      "pages": 28,
+      "files": {
+        "lecture10.pdf": "ac806a07ab6f61e5d52ca46b116b536f7dad1898343b5b6d00df8ec51f17c4cf",
+        "lecture10.html": "6666f724bf3d6f5ae255596c544b4dbd64abab6064f0f4b951860a9d0cb576b1",
+        "lecture10_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture10_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture10_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture10_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture10_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture10_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture10_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture10_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture10_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture10_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture10_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture10_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture10_files/mediabag/figures/lecture10/lecture10_overview_infographic.pdf": "9e2709d404a305c2740e4a14c5cfa4b13ee9140705cf29dce76a5b585ad28f68",
+        "lecture10_files/mediabag/figures/lecture10/lecture10_static_case_slopes.pdf": "782620b15b47c2586346908918299ba411af8da2bdb25a52b9f3d3121c4611e4"
+      }
+    },
+    "lecture11": {
+      "pages": 38,
+      "files": {
+        "lecture11.pdf": "ee2dbc85a1d0a0364d30c79346e93a3fa667375dc9f85ef3259d5abcb7bb47c3",
+        "lecture11.html": "89ee0b79c165518bbf85505e53a04f2a71d883e134aa87e1c863a91f782595a0",
+        "lecture11_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture11_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture11_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture11_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture11_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture11_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture11_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture11_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture11_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture11_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture11_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture11_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture11_files/mediabag/figures/lecture11/lecture11_is_curve.pdf": "43229bad07c335ce2ee816f89aec39a72c7f3a2a289f97d37d455ffb1601f970",
+        "lecture11_files/mediabag/figures/lecture11/lecture11_overview_infographic.pdf": "a902dc54adfd79465de2eeb83f101d17c467771af59e61ccffe1605d6d6e213a",
+        "lecture11_files/mediabag/figures/lecture11/lecture11_shock_numerical.pdf": "cab736e5c9d08db88e01482f1c1051551ec28606cef035ca1e837ba8991dd7e4"
+      }
+    },
+    "lecture12": {
+      "pages": 51,
+      "files": {
+        "lecture12.pdf": "d23330b9ac4992441f600424d1054890c123b0afdc3c1facbd93d77773f6533c",
+        "lecture12.html": "f2188cafeb2c18089c998a6a7948657ff3260a43329a9e979a0a9dcc92fa0c8d",
+        "lecture12_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "lecture12_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "lecture12_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "lecture12_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "lecture12_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "lecture12_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "lecture12_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "lecture12_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "lecture12_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "lecture12_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "lecture12_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "lecture12_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae",
+        "lecture12_files/mediabag/figures/lecture12/chi_tax_rule.pdf": "8fde6cd7785cf9d8e5e3a85d269a9c4f57ba1fde24d77837c1ec0489f484c3b4",
+        "lecture12_files/mediabag/figures/lecture12/course_roadmap.pdf": "b8f4abbb87852a140c73b2af0f4a708ea0016307daa5a409f3379adbb715a698",
+        "lecture12_files/mediabag/figures/lecture12/lecture12_overview_infographic.pdf": "ce14d5268b555cd0cad8fb84809a534f4e670260be0ceafb995293320061ffa4",
+        "lecture12_files/mediabag/figures/lecture12/multiplier_ratio.pdf": "72a1f7d07b6b7edb9d70a768f2fcc70b5b11af757e543aa3eae6fe12fd46d85c",
+        "lecture12_files/mediabag/figures/lecture12/rank_nk_cross.pdf": "83d8b37af56c3aacdbb58aa9e0d27dcd2876f5881100e1ced6eba67272f905fe",
+        "lecture12_files/mediabag/figures/lecture12/tank_nk_cross.pdf": "9c928b4f3476d0c0b7d68126adffd7271e362580c5e65a07fbc7f7421215f1db"
+      }
+    },
+    "solution": {
+      "pages": 43,
+      "files": {
+        "solution.pdf": "e36c7281b3b453753306a2c0b59655950df9f12e9d32b3e12ba6fb7a2d2342b8",
+        "solution.html": "2d93fc7791153e5a687b0e6b2055c88d98ebe37d4e0d07e0465cecf6ed9a182f",
+        "solution_files/libs/bootstrap/bootstrap-c2e55264ed47ce3b2e0326a2269f9400.min.css": "07e7387acabda8887b8695e96acc6d27feb95c523129b96ef09f6850a9848d8c",
+        "solution_files/libs/bootstrap/bootstrap-icons.css": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a",
+        "solution_files/libs/bootstrap/bootstrap-icons.woff": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15",
+        "solution_files/libs/bootstrap/bootstrap.min.js": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5",
+        "solution_files/libs/clipboard/clipboard.min.js": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9",
+        "solution_files/libs/quarto-html/anchor.min.js": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b",
+        "solution_files/libs/quarto-html/popper.min.js": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0",
+        "solution_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css": "4973a76eb0de3b99bc67687ab2ecea249e552bae328dd8a952dad89732e9ec18",
+        "solution_files/libs/quarto-html/quarto.js": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6",
+        "solution_files/libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+        "solution_files/libs/quarto-html/tippy.css": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678",
+        "solution_files/libs/quarto-html/tippy.umd.min.js": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+      }
+    }
+  }
+}

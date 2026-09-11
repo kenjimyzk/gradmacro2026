@@ -1,0 +1,262 @@
+{
+  "lecture01": {
+    "returncode": 0,
+    "seconds": 18.63,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture01.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "372ff35999133075ffca65e22711688454f2141101ed529560bd5cd9fbb66474",
+    "pdf_sha256": "ba3e58de0fc82e0a792fa915a648df56a12276b282b4334d52b6a95e480dea58"
+  },
+  "lecture02": {
+    "returncode": 0,
+    "seconds": 16.67,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture02.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "cc5b262a82203d6d98e4de794b9b4380aa7f7ccbe7b6fc8af63f4575afc61776",
+    "pdf_sha256": "e8aeb38afcaa1131d7aba1c8a3c156a51eef4ddff1b13ce4ae3bf0c7eaead2a8"
+  },
+  "lecture04": {
+    "returncode": 0,
+    "seconds": 17.54,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture04.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "11dadec19994da57655723c204afa0b271c8e971da5012cf8423cbfb9f053bc7",
+    "pdf_sha256": "9b09a83114f53c9464eeddde6fa38af70d6a7b06d9c45b10eabadd07e765dc8d"
+  },
+  "lecture03": {
+    "returncode": 0,
+    "seconds": 18.57,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture03.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "690c200af563e5324b76a3ee3adbf69749de0ee8c3b2438974864c6e7ff33a94",
+    "pdf_sha256": "2406128c2aed4e631e48536dcd505cc79d919e9f1adec3e6a634597aabb035b8"
+  },
+  "lecture06": {
+    "returncode": 0,
+    "seconds": 17.04,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture06.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "80413a95f4a6920336725c9428bfd2ed25416a14bbd39d27a55ce3bedb72a196",
+    "pdf_sha256": "799e2a3ebdbaa3f6865f4e0763b5fb4e4ab86904d56750f8023e61bbc6b703ef"
+  },
+  "lecture05": {
+    "returncode": 0,
+    "seconds": 18.39,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture05.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "a2560ccd0e007a2b2fee034a901dd5788ba4b5a19d3f348f012cd9c1e6efcfaa",
+    "pdf_sha256": "ba302addfd0ead1e29080cefa62a2a8ef5e73f0a2ec3b8fc1a26400659b4d7a7"
+  },
+  "lecture07": {
+    "returncode": 0,
+    "seconds": 17.01,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture07.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "f56f1329bc94bdeeeeb575aa7cf12611e5486bd97ba6776898b5c4c2dc2e5507",
+    "pdf_sha256": "f042a08c13a2b9318b3e85a482fefa5af1241748eedf122870f566b8526cea56"
+  },
+  "lecture10": {
+    "returncode": 0,
+    "seconds": 16.18,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture10.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "c87f7ee13779b0b0d6101e7120010537c2fe05891d5ea6d883a19e8823b062ab",
+    "pdf_sha256": "6e3fa62217c605dc9f4f1975ce0931b53bd031bd04860bf0f15364021a3ac3a0"
+  },
+  "lecture08": {
+    "returncode": 0,
+    "seconds": 18.82,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture08.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "9882e93cffb53c3199e3b20ba769ef9b034dd5835b6850608e954da43a549726",
+    "pdf_sha256": "9083ad2e90448a56aa614067fc0d693f3d3872f315f1b8bbf7d6924b58531183"
+  },
+  "lecture09": {
+    "returncode": 0,
+    "seconds": 18.67,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture09.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "13c461b1a8a99b5b8f18dc9bf67ac2bf3e8dd15eb50feb98ce60156ed6cc41fe",
+    "pdf_sha256": "ddf5115214e9583bb5ca873be48d2a59c9fe09dfc57cca088fdf4c56f5e85d78"
+  },
+  "lecture11": {
+    "returncode": 0,
+    "seconds": 18.44,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture11.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "8ff753ee547b3b2899b86762b8750bdf990eddf2f8758491a3aa9c70e7c73c0e",
+    "pdf_sha256": "9814d92828c0256fe82efb15e34d351002bd0bf1724210b096f7148cedfde2e7"
+  },
+  "solution": {
+    "returncode": 0,
+    "seconds": 16.99,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "solution.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "825ffb75a551718df79b9816ae90472553d8b1135cf86651575d6966ddb09b41",
+    "pdf_sha256": "5b75ca958738896007d8a85b4967ef4b143c0c56451888f7b7fef9675b747782"
+  },
+  "lecture12": {
+    "returncode": 0,
+    "seconds": 20.93,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture12.qmd",
+      "--to",
+      "pdf",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "9c3a0e1baaa8a593fcf08dd45a11ce70465ad134d49c609e3fd60e04a6e293f9",
+    "pdf_sha256": "82bd7a2e18099fad0ccec011295ad62a1099ae608dd7dac55b98c15e6c4519ef"
+  }
+}

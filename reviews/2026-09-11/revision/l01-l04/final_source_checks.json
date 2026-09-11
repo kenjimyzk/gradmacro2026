@@ -1,0 +1,8 @@
+{
+  "source_sha256": "f1661f1b34585286d9ba01f5082960b26ed690d4f7dfce0e8eb7cd6977bfe230",
+  "content_unchanged_except_pagination": true,
+  "standalone_bold_headings": 33,
+  "needspace_guards": 33,
+  "guard_splits_heading_chain": false,
+  "local_widow_guard_for_three_item_list": true
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">規模0.01のショックに対する数値例</title>
+  <desc id="desc">RANKの金融緩和、TANKの金融緩和、TANKの再分配ショックについて、需給ギャップ、インフレ率、実質利子率の当期反応を比較する棒グラフ。</desc>
+  <defs>
+    <style>
+      .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .axis { stroke: #34495e; stroke-width: 2.2; }
+      .grid { stroke: #d8dee8; stroke-width: 1.2; }
+      .zero { stroke: #5f6b76; stroke-width: 2; }
+      .bar-x { fill: #4f7fb3; stroke: #285a8e; stroke-width: 1.8; }
+      .bar-pi { fill: #e98a2e; stroke: #ad5911; stroke-width: 1.8; }
+      .bar-r { fill: #5aa454; stroke: #2f742b; stroke-width: 1.8; }
+      .label { font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #253241; }
+      .group { font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #253241; }
+      .group-sub { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .ticktext { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #52616f; }
+      .legend { font: 600 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #34495e; }
+      .math { font: 600 19px "Times New Roman", "STIX Two Text", serif; fill: #253241; }
+      .value { font: 700 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #253241; paint-order: stroke; stroke: #ffffff; stroke-width: 4; stroke-linejoin: round; }
+      .note { font: 400 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; fill: #566273; }
+      .unitbox { fill: #eef4fb; stroke: #91a8c0; stroke-width: 1.5; rx: 8; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+  <rect x="36" y="26" width="1128" height="676" rx="18" fill="#f8fafc" stroke="#d9e0ea" stroke-width="1.6"/>
+  <text class="title" x="68" y="70">規模0.01のショックに対する当期反応</text>
+  <text class="subtitle" x="70" y="101">通常領域（0 &lt; Θ<tspan baseline-shift="sub" font-size="12">T</tspan> &lt; 1）の較正では、TANKの金融緩和への反応が大きい</text>
+
+  <rect class="bar-x" x="70" y="121" width="22" height="16" rx="2"/>
+  <text class="legend" x="103" y="136"><tspan class="math">x<tspan baseline-shift="sub" font-size="12">t</tspan></tspan>：需給ギャップ（%）</text>
+  <rect class="bar-pi" x="330" y="121" width="22" height="16" rx="2"/>
+  <text class="legend" x="363" y="136"><tspan class="math">π<tspan baseline-shift="sub" font-size="12">t</tspan></tspan>：インフレ率（%ポイント）</text>
+  <rect class="bar-r" x="670" y="121" width="22" height="16" rx="2"/>
+  <text class="legend" x="703" y="136"><tspan class="math">r<tspan baseline-shift="sub" font-size="12">t</tspan></tspan>：実質利子率（%ポイント）</text>
+
+  <line class="grid" x1="145" y1="170" x2="1090" y2="170"/>
+  <line class="grid" x1="145" y1="250" x2="1090" y2="250"/>
+  <line class="grid" x1="145" y1="330" x2="1090" y2="330"/>
+  <line class="grid" x1="145" y1="410" x2="1090" y2="410"/>
+  <line class="zero" x1="145" y1="490" x2="1090" y2="490"/>
+  <line class="grid" x1="145" y1="570" x2="1090" y2="570"/>
+  <line class="axis" x1="145" y1="152" x2="145" y2="618"/>
+
+  <text class="ticktext" x="105" y="176">2.0</text>
+  <text class="ticktext" x="105" y="256">1.5</text>
+  <text class="ticktext" x="105" y="336">1.0</text>
+  <text class="ticktext" x="105" y="416">0.5</text>
+  <text class="ticktext" x="119" y="496">0</text>
+  <text class="ticktext" x="95" y="576">−0.5</text>
+  <text class="label" transform="translate(61 495) rotate(-90)">当期反応</text>
+
+  <!-- RANK: monetary easing -->
+  <rect class="bar-x" x="210" y="261.2" width="58" height="228.8"/>
+  <rect class="bar-pi" x="278" y="445.2" width="58" height="44.8"/>
+  <rect class="bar-r" x="346" y="490" width="58" height="115.2"/>
+  <text class="value" x="217" y="252">1.43</text>
+  <text class="value" x="285" y="436">0.28</text>
+  <text class="value" x="349" y="628">−0.72</text>
+
+  <!-- TANK: monetary easing -->
+  <rect class="bar-x" x="520" y="158.8" width="58" height="331.2"/>
+  <rect class="bar-pi" x="588" y="424.4" width="58" height="65.6"/>
+  <rect class="bar-r" x="656" y="490" width="58" height="94.4"/>
+  <text class="value" x="527" y="150">2.07</text>
+  <text class="value" x="595" y="415">0.41</text>
+  <text class="value" x="659" y="607">−0.59</text>
+
+  <!-- TANK: transfer -->
+  <rect class="bar-x" x="830" y="454.8" width="58" height="35.2"/>
+  <rect class="bar-pi" x="898" y="483.6" width="58" height="6.4"/>
+  <rect class="bar-r" x="966" y="483.6" width="58" height="6.4"/>
+  <text class="value" x="837" y="445">0.22</text>
+  <text class="value" x="905" y="473">0.04</text>
+  <text class="value" x="973" y="473">0.04</text>
+
+  <text class="group" x="212" y="658">RANK：金融緩和</text>
+  <text class="group-sub" x="250" y="684"><tspan class="math">m<tspan baseline-shift="sub" font-size="11">t</tspan> = 0.01</tspan></text>
+  <text class="group" x="522" y="658">TANK：金融緩和</text>
+  <text class="group-sub" x="560" y="684"><tspan class="math">m<tspan baseline-shift="sub" font-size="11">t</tspan> = 0.01</tspan></text>
+  <text class="group" x="836" y="658">TANK：再分配</text>
+  <text class="group-sub" x="872" y="684"><tspan class="math">z<tspan baseline-shift="sub" font-size="11">t</tspan> = 0.01</tspan></text>
+
+  <rect class="unitbox" x="792" y="48" width="324" height="48"/>
+  <text class="note" x="812" y="68">単位：x<tspan baseline-shift="sub" font-size="11">t</tspan> は%、π<tspan baseline-shift="sub" font-size="11">t</tspan> と r<tspan baseline-shift="sub" font-size="11">t</tspan> は%ポイント</text>
+  <text class="note" x="812" y="88">棒上の数値はこの単位に対応</text>
+</svg>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">単一AR(1)ショック下の均衡応答</title>
+  <desc id="desc">金融緩和、技術進歩、政府支出の各ショックに対する需給ギャップとインフレ率の均衡応答方向を比較する。灰色の破線円はショックのない基準、青色の実線矢印はショック後を表す。この図は構造的な供給曲線ではなく、単一AR(1)ショック下の誘導形を示す。</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="response-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6fbe"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="36" width="1020" height="574" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="78" font-size="30" font-weight="700" fill="#1f2937">単一AR(1)ショック下の均衡応答</text>
+    <text x="80" y="109" font-size="17" fill="#566273">矢印は誘導形が与える反応方向。構造的NKPCの傾きを表す曲線ではない</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="14" fill="#526070">
+    <circle cx="690" cy="101" r="8" fill="#ffffff" stroke="#9aa4b2" stroke-width="2.2" stroke-dasharray="4 3"/>
+    <text x="706" y="106">灰破線＝基準</text>
+    <line x1="833" y1="101" x2="866" y2="101" stroke="#2f6fbe" stroke-width="3.5" marker-end="url(#response-arrow)"/>
+    <text x="879" y="106">青実線＝ショック後</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="78" y="136" width="300" height="389" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+    <rect x="410" y="136" width="300" height="389" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+    <rect x="742" y="136" width="300" height="389" rx="12" fill="#ffffff" stroke="#d9e0ea"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="104" y="174" font-size="22" font-weight="700" fill="#1f2937">金融緩和ショック</text>
+    <text x="104" y="201" font-size="16" fill="#566273"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="11">t</tspan> &gt; 0</text>
+
+    <text x="436" y="174" font-size="22" font-weight="700" fill="#1f2937">技術進歩ショック</text>
+    <text x="436" y="201" font-size="16" fill="#566273"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="11">t</tspan> &gt; 0</text>
+
+    <text x="768" y="174" font-size="22" font-weight="700" fill="#1f2937">政府支出ショック</text>
+    <text x="768" y="201" font-size="16" fill="#566273"><tspan font-style="italic">g</tspan><tspan baseline-shift="sub" font-size="11">t</tspan> &gt; 0</text>
+  </g>
+
+  <!-- Axes are centered at the zero-shock steady state. -->
+  <g stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#axis-arrow)">
+    <line x1="112" y1="390" x2="350" y2="390"/>
+    <line x1="228" y1="470" x2="228" y2="227"/>
+    <line x1="444" y1="390" x2="682" y2="390"/>
+    <line x1="560" y1="470" x2="560" y2="227"/>
+    <line x1="776" y1="390" x2="1014" y2="390"/>
+    <line x1="892" y1="470" x2="892" y2="227"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#303640" font-size="15">
+    <text x="351" y="397" font-style="italic">x<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="217" y="221" font-style="italic">π<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="683" y="397" font-style="italic">x<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="549" y="221" font-style="italic">π<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="1015" y="397" font-style="italic">x<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="881" y="221" font-style="italic">π<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+  </g>
+
+  <!-- Zero-shock benchmarks: dashed rings, labeled directly. -->
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#6b7280" font-size="13">
+    <circle cx="228" cy="390" r="10" fill="#ffffff" stroke="#9aa4b2" stroke-width="2.4" stroke-dasharray="4 3"/>
+    <text x="237" y="411">基準</text>
+    <circle cx="560" cy="390" r="10" fill="#ffffff" stroke="#9aa4b2" stroke-width="2.4" stroke-dasharray="4 3"/>
+    <text x="569" y="411">基準</text>
+    <circle cx="892" cy="390" r="10" fill="#ffffff" stroke="#9aa4b2" stroke-width="2.4" stroke-dasharray="4 3"/>
+    <text x="901" y="411">基準</text>
+  </g>
+
+  <!-- Shock-response vectors. -->
+  <g fill="none" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" marker-end="url(#response-arrow)">
+    <line x1="238" y1="378" x2="294" y2="307"/>
+    <line x1="550" y1="400" x2="496" y2="451"/>
+    <line x1="902" y1="378" x2="958" y2="307"/>
+  </g>
+  <g fill="#2f6fbe" filter="url(#shadow)">
+    <circle cx="294" cy="307" r="6"/>
+    <circle cx="496" cy="451" r="6"/>
+    <circle cx="958" cy="307" r="6"/>
+  </g>
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="14" font-weight="700" fill="#2f6fbe">
+    <text x="303" y="297">ショック後</text>
+    <text x="443" y="449">ショック後</text>
+    <text x="967" y="297">ショック後</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="104" y="486" font-size="18" font-weight="700" fill="#2f6fbe"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↑　<tspan font-style="italic">π</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↑</text>
+    <text x="104" y="510" font-size="14" fill="#566273">実質利子率低下 → 需要拡大</text>
+
+    <text x="436" y="486" font-size="18" font-weight="700" fill="#2f6fbe"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↓　<tspan font-style="italic">π</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↓</text>
+    <text x="436" y="510" font-size="14" fill="#566273">自然産出量 <tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="10">t</tspan><tspan baseline-shift="super" font-size="10">f</tspan> は上昇</text>
+
+    <text x="768" y="486" font-size="18" font-weight="700" fill="#2f6fbe"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↑　<tspan font-style="italic">π</tspan><tspan baseline-shift="sub" font-size="12">t</tspan> ↑</text>
+    <text x="768" y="510" font-size="14" fill="#566273">政府需要の増加 → 総需要拡大</text>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <rect x="80" y="543" width="960" height="48" rx="9" fill="#eef3f8" stroke="#cdd7e3"/>
+    <text x="100" y="565" font-size="15" font-weight="700" fill="#303640">構造的NKPC：</text>
+    <text x="228" y="565" font-size="15" fill="#303640"><tspan font-style="italic">π</tspan><tspan baseline-shift="sub" font-size="10">t</tspan> = <tspan font-style="italic">βE</tspan><tspan baseline-shift="sub" font-size="10">t</tspan>[<tspan font-style="italic">π</tspan><tspan baseline-shift="sub" font-size="10">t+1</tspan>] + <tspan font-style="italic">κ</tspan><tspan baseline-shift="sub" font-size="10">x</tspan><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="10">t</tspan></text>
+    <text x="100" y="584" font-size="13" fill="#566273">各矢印はこの構造式そのものではなく、単一AR(1)ショックを解いた後の誘導形（均衡反応）。長さは比較対象ではない</text>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+  <title id="title">第4回講義の全体像</title>
+  <desc id="desc">固定資本を1に正規化し、資本蓄積のないRBCモデルで、家計と企業の条件、市場均衡、技術ショック、実物配分、自然利子率、第5回への接続を示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <rect x="50" y="34" width="1020" height="574" rx="18" fill="#f8fafc" stroke="#d9e0ea"/>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
+    <text x="80" y="78" font-size="31" font-weight="700" fill="#1f2937">第4回の地図：固定資本のRBCモデル</text>
+    <text x="80" y="111" font-size="18" fill="#566273">固定資本 K̄ = 1、資本蓄積なし。技術ショックが実物配分と自然利子率を動かす</text>
+  </g>
+
+  <g stroke="#526070" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 320 239 L 398 239"/>
+    <path d="M 800 239 L 722 239"/>
+    <path d="M 560 329 C 560 373 430 365 430 406"/>
+    <path d="M 280 477 L 328 477"/>
+    <path d="M 530 477 L 578 477"/>
+    <path d="M 790 477 L 838 477"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
+    <rect x="90" y="150" width="230" height="178" rx="12" fill="#eaf2ff" stroke="#2f6fbe" stroke-width="2"/>
+    <rect x="400" y="140" width="320" height="188" rx="12" fill="#eef8ef" stroke="#379b55" stroke-width="2"/>
+    <rect x="800" y="150" width="230" height="178" rx="12" fill="#fff3e8" stroke="#d9792f" stroke-width="2"/>
+
+    <rect x="80" y="408" width="200" height="138" rx="12" fill="#f7eefc" stroke="#8b5aa8" stroke-width="2"/>
+    <rect x="330" y="408" width="200" height="138" rx="12" fill="#edf7ff" stroke="#4f86ad" stroke-width="2"/>
+    <rect x="580" y="408" width="210" height="138" rx="12" fill="#fff7df" stroke="#ba8b24" stroke-width="2"/>
+    <rect x="840" y="408" width="200" height="138" rx="12" fill="#f2f4f8" stroke="#697386" stroke-width="2"/>
+  </g>
+
+  <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" fill="#20242a">
+    <text x="116" y="187" font-size="22" font-weight="700">家計</text>
+    <text x="116" y="220" font-size="17">消費 C<tspan baseline-shift="sub" font-size="12">t</tspan> と労働 N<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="116" y="251" font-size="17">労働供給</text>
+    <text x="116" y="280" font-size="18" font-weight="700">MRS<tspan baseline-shift="sub" font-size="13">t</tspan> = W<tspan baseline-shift="sub" font-size="13">t</tspan></text>
+    <text x="116" y="309" font-size="15" fill="#566273">消費と余暇の選択</text>
+
+    <text x="430" y="178" font-size="22" font-weight="700">市場均衡</text>
+    <text x="430" y="211" font-size="17">Y<tspan baseline-shift="sub" font-size="12">t</tspan> = C<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="430" y="241" font-size="17">B<tspan baseline-shift="sub" font-size="12">t</tspan> = 0、Θ<tspan baseline-shift="sub" font-size="12">t</tspan> = 1</text>
+    <text x="430" y="281" font-size="21" font-weight="700">MRS<tspan baseline-shift="sub" font-size="14">t</tspan> = W<tspan baseline-shift="sub" font-size="14">t</tspan> = MPN<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+    <text x="430" y="311" font-size="15" fill="#566273">労働供給と労働需要が一致</text>
+
+    <text x="826" y="187" font-size="22" font-weight="700">企業</text>
+    <text x="826" y="218" font-size="17">固定資本 K̄ = 1</text>
+    <text x="826" y="246" font-size="15" fill="#566273">資本蓄積はない</text>
+    <text x="826" y="276" font-size="17">生産 Y<tspan baseline-shift="sub" font-size="12">t</tspan> = e<tspan baseline-shift="super" font-size="12">a<tspan baseline-shift="sub" font-size="9">t</tspan></tspan>N<tspan baseline-shift="sub" font-size="12">t</tspan><tspan baseline-shift="super" font-size="12">1−α</tspan></text>
+    <text x="826" y="309" font-size="18" font-weight="700">W<tspan baseline-shift="sub" font-size="13">t</tspan> = MPN<tspan baseline-shift="sub" font-size="13">t</tspan></text>
+
+    <text x="101" y="443" font-size="20" font-weight="700">技術ショック</text>
+    <text x="101" y="478" font-size="16">a<tspan baseline-shift="sub" font-size="11">t</tspan> = ρ<tspan baseline-shift="sub" font-size="11">a</tspan>a<tspan baseline-shift="sub" font-size="11">t−1</tspan> + e<tspan baseline-shift="super" font-size="11">a</tspan><tspan baseline-shift="sub" font-size="11">t</tspan></text>
+    <text x="101" y="516" font-size="15" fill="#566273">生産性の変化</text>
+
+    <text x="351" y="443" font-size="20" font-weight="700">実物配分</text>
+    <text x="351" y="478" font-size="17">N<tspan baseline-shift="sub" font-size="12">t</tspan>、Y<tspan baseline-shift="sub" font-size="12">t</tspan>、C<tspan baseline-shift="sub" font-size="12">t</tspan>、W<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="351" y="516" font-size="15" fill="#566273">所得効果と代替効果</text>
+
+    <text x="602" y="443" font-size="20" font-weight="700">自然利子率</text>
+    <text x="602" y="478" font-size="16">r<tspan baseline-shift="sub" font-size="11">t</tspan> = γ E<tspan baseline-shift="sub" font-size="11">t</tspan>(c<tspan baseline-shift="sub" font-size="11">t+1</tspan> − c<tspan baseline-shift="sub" font-size="11">t</tspan>)</text>
+    <text x="602" y="516" font-size="15" fill="#566273">期待消費成長で決まる</text>
+
+    <text x="861" y="443" font-size="20" font-weight="700">第5回へ</text>
+    <text x="861" y="478" font-size="17">Y<tspan baseline-shift="sub" font-size="12">t</tspan> = C<tspan baseline-shift="sub" font-size="12">t</tspan> + G<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="861" y="516" font-size="15" fill="#566273">政府支出を加える</text>
+
+    <text x="80" y="583" font-size="16" fill="#566273">技術ショック → 実物配分 → 自然利子率 → 財政政策の分析</text>
+  </g>
+</svg>

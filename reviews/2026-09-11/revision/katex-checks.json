@@ -1,0 +1,60 @@
+{
+  "katexVersion": "0.17.0",
+  "total": 4590,
+  "results": {
+    "lecture01": {
+      "formulas": 180,
+      "parsed": 180
+    },
+    "lecture02": {
+      "formulas": 301,
+      "parsed": 301
+    },
+    "lecture03": {
+      "formulas": 375,
+      "parsed": 375
+    },
+    "lecture04": {
+      "formulas": 365,
+      "parsed": 365
+    },
+    "lecture05": {
+      "formulas": 331,
+      "parsed": 331
+    },
+    "lecture06": {
+      "formulas": 268,
+      "parsed": 268
+    },
+    "lecture07": {
+      "formulas": 278,
+      "parsed": 278
+    },
+    "lecture08": {
+      "formulas": 293,
+      "parsed": 293
+    },
+    "lecture09": {
+      "formulas": 316,
+      "parsed": 316
+    },
+    "lecture10": {
+      "formulas": 325,
+      "parsed": 325
+    },
+    "lecture11": {
+      "formulas": 441,
+      "parsed": 441
+    },
+    "lecture12": {
+      "formulas": 556,
+      "parsed": 556
+    },
+    "solution": {
+      "formulas": 561,
+      "parsed": 561
+    }
+  },
+  "errors": [],
+  "scope": "Syntax/renderToString check with local KaTeX; not browser layout or CDN availability"
+}

@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-11",
+  "timezone": "Asia/Tokyo",
+  "git_commit": "6a2492ded70f5e0a96edf9f78c357220674b4479",
+  "source_files_unchanged": 58,
+  "protected_changed": [],
+  "rendered_documents": 13,
+  "rendered_pages": 412,
+  "all_pages_rasterized_and_overviewed": true,
+  "whole_document_microscopic_proofread": false,
+  "contact_sheets": 76,
+  "overfull_messages": 12,
+  "missing_character_messages": 1,
+  "unresolved_pdf_references": 0,
+  "paper_edge_clipping": {
+    "lecture05": [
+      17
+    ]
+  },
+  "r_clean_execution": [
+    "lecture05",
+    "lecture08",
+    "lecture09"
+  ],
+  "source_edits_applied": false,
+  "existing_distribution_outputs_replaced": false,
+  "report": "/Users/kenjimyzk/work/gradmacro2026/LECTURE_REVIEW_2026-09-11.md",
+  "reports": [
+    "l01-l04/REVIEW.md",
+    "l01-l04/VISUAL.md",
+    "l05-l08/REVIEW.md",
+    "l05-l08/VISUAL.md",
+    "l09-l12/REVIEW.md",
+    "l09-l12/VISUAL.md",
+    "VISUAL-solution.md"
+  ],
+  "local_report_links_checked": 51,
+  "missing_report_links": []
+}

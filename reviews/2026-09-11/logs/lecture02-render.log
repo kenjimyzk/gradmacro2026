@@ -1,0 +1,50 @@
+pandoc 
+  to: latex
+  output-file: lecture02.tex
+  standalone: true
+  pdf-engine: lualatex
+  variables:
+    graphics: true
+    tables: true
+  default-image-extension: pdf
+  toc: true
+  toc-depth: 1
+  number-sections: true
+  
+metadata
+  block-headings: true
+  title: 第2回：時系列分析と対数近似
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  lang: ja
+  documentclass: ltjsarticle
+  classoption:
+    - a4paper
+    - 12pt
+    - ja=standard
+    - lualatex
+  latex-auto-install: false
+  keep-tex: true
+  latex-clean: false
+  
+
+Rendering PDF
+running lualatex - 1
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+  luaotfload | db : Font names database not found, generating new one.
+  luaotfload | db : This can take several minutes; please be patient.
+running lualatex - 2
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+running lualatex - 3
+  This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+   restricted system commands enabled.
+  
+
+Output created: lecture02.pdf
+

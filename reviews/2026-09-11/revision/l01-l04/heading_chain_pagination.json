@@ -1,0 +1,10 @@
+{
+  "moved": [
+    {
+      "preceding_heading_chain": "# 総需要管理政策",
+      "action": "move Needspace before full preceding heading chain"
+    }
+  ],
+  "no_needspace_after_immediate_markdown_heading": true,
+  "non_pagination_content_unchanged": true
+}

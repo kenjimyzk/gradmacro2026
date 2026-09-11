@@ -1,0 +1,27 @@
+[
+  {
+    "section": "## 財政政策",
+    "bold_heading": "**拡張的財政政策の主な手段：**",
+    "action": "move Needspace before Markdown section heading"
+  },
+  {
+    "section": "## 政策の有効性",
+    "bold_heading": "**古典派の二分法（長期的な視点）：**",
+    "action": "move Needspace before Markdown section heading"
+  },
+  {
+    "section": "### リアル・ビジネス・サイクル（RBC）理論",
+    "bold_heading": "**主な特徴：**",
+    "action": "move Needspace before Markdown section heading"
+  },
+  {
+    "section": "### ニューケインジアン・マクロ経済学",
+    "bold_heading": "**主な特徴：**",
+    "action": "move Needspace before Markdown section heading"
+  },
+  {
+    "section": "# 参考文献",
+    "bold_heading": "**基本参考文献**",
+    "action": "move Needspace before Markdown section heading"
+  }
+]
