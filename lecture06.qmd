@@ -446,15 +446,15 @@ $$
 
 **基本参考文献**
 
-- Dixit, Avinash K., and Joseph E. Stiglitz (1977) "Monopolistic Competition and Optimum Product Diversity." *American Economic Review*, 67(3), pp. 297--308. [出版社公開版](https://www.aeaweb.org/aer/top20/67.3.297-308.pdf). ［**CES集計関数と独占的競争の基礎理論を確立した不朽の原著論文**］
-- Blanchard, Olivier J., and Nobuhiro Kiyotaki (1987) "Monopolistic Competition and the Effects of Aggregate Demand." *American Economic Review*, 77(4), pp. 647--666. [JSTOR](https://www.jstor.org/stable/1814537). ［**独占的競争とメニューコストをマクロ経済学に導入し、総需要管理政策の有効性を示した記念碑的研究**］
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. ［**第3章が独占的競争から価格硬直性へとつなぐ最も標準的な教科書解説**］
+- Dixit, Avinash K., and Joseph E. Stiglitz (1977) "Monopolistic Competition and Optimum Product Diversity." *American Economic Review*, 67(3), pp. 297--308. [出版社公開版](https://www.aeaweb.org/aer/top20/67.3.297-308.pdf). **CES集計関数と独占的競争の基礎理論を確立した不朽の原著論文**
+- Blanchard, Olivier J., and Nobuhiro Kiyotaki (1987) "Monopolistic Competition and the Effects of Aggregate Demand." *American Economic Review*, 77(4), pp. 647--666. [JSTOR](https://www.jstor.org/stable/1814537). **独占的競争とメニューコストをマクロ経済学に導入し、総需要管理政策の有効性を示した記念碑的研究**
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. **第3章が独占的競争から価格硬直性へとつなぐ最も標準的な教科書解説**
 
 **発展文献**
 
 - Spence, Michael (1976) "Product Selection, Fixed Costs, and Monopolistic Competition." *Review of Economic Studies*, 43(2), pp. 217--235. [doi](https://doi.org/10.2307/2297319)
-- Rotemberg, Julio J., and Michael Woodford (1997) "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy." *NBER Macroeconomics Annual*, 12, pp. 297--346. [doi](https://doi.org/10.1086/654340). ［**独占的競争モデルを現代の金融政策評価へと応用した先駆的研究**］
-- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. ［**独占的競争と歪みの厚生分析を極限まで精緻化した金字塔的大著**］
+- Rotemberg, Julio J., and Michael Woodford (1997) "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy." *NBER Macroeconomics Annual*, 12, pp. 297--346. [doi](https://doi.org/10.1086/654340). **独占的競争モデルを現代の金融政策評価へと応用した先駆的研究**
+- Woodford, Michael (2003) *Interest and Prices: Foundations of a Theory of Monetary Policy*. Princeton University Press. **独占的競争と歪みの厚生分析を極限まで精緻化した金字塔的大著**
 
 ```{=latex}
 \Needspace{0.45\textheight}

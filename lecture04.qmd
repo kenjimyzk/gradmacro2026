@@ -528,8 +528,8 @@ $$
 
 **基本文献**
 
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. ［**第2章が資本蓄積のない柔軟価格モデルと自然実質利子率の最も標準的な参照先**］
-- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. ［**実物ショックの伝播メカニズムと標準的な動学モデルの比較**］
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. **第2章が資本蓄積のない柔軟価格モデルと自然実質利子率の最も標準的な参照先**
+- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. **実物ショックの伝播メカニズムと標準的な動学モデルの比較**
 
 **発展文献：資本蓄積を含む古典的RBCモデル**
 

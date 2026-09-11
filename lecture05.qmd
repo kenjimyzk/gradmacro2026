@@ -601,16 +601,16 @@ par(op)
 
 **基本参考文献**
 
-- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. ［**政府支出ショック、租税の経済効果、およびリカード等価定理の最も標準的な教科書解説**］
-- Barro, Robert J. (1974) "Are Government Bonds Net Wealth?" *Journal of Political Economy*, 82(6), pp. 1095-1117. [doi](https://doi.org/10.1086/260266). ［**リカードの中立命題を現代マクロ経済学に定着させた記念碑的論文**］
-- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. ［**第3章が基本NKモデルの標準的参照先であり、政府支出を導入する第8回への橋渡し**］
+- Romer, David (2019) *Advanced Macroeconomics* (5th ed.). McGraw-Hill. **政府支出ショック、租税の経済効果、およびリカード等価定理の最も標準的な教科書解説**
+- Barro, Robert J. (1974) "Are Government Bonds Net Wealth?" *Journal of Political Economy*, 82(6), pp. 1095-1117. [doi](https://doi.org/10.1086/260266). **リカードの中立命題を現代マクロ経済学に定着させた記念碑的論文**
+- Galí, Jordi (2015) *Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications* (2nd ed.). Princeton University Press. **第3章が基本NKモデルの標準的参照先であり、政府支出を導入する第8回への橋渡し**
 
 **発展文献**
 
-- Baxter, Marianne, and Robert G. King (1993) "Fiscal Policy in General Equilibrium." *American Economic Review*, 83(3), pp. 315-334. [著者公開版](https://people.bu.edu/mbaxter/papers/fpol.pdf). ［**資本蓄積を内生化した動学的一般均衡における財政乗数の先駆的研究**］
+- Baxter, Marianne, and Robert G. King (1993) "Fiscal Policy in General Equilibrium." *American Economic Review*, 83(3), pp. 315-334. [著者公開版](https://people.bu.edu/mbaxter/papers/fpol.pdf). **資本蓄積を内生化した動学的一般均衡における財政乗数の先駆的研究**
 - Aiyagari, S. Rao, Lawrence J. Christiano, and Martin Eichenbaum (1992) "The Output, Employment, and Interest Rate Effects of Government Consumption." *Journal of Monetary Economics*, 30(1), pp. 73-86. [doi](https://doi.org/10.1016/0304-3932(92)90045-4)
-- Leeper, Eric M. (1991) "Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies." *Journal of Monetary Economics*, 27(1), pp. 129-147. [doi](https://doi.org/10.1016/0304-3932(91)90007-B). ［**物価水準の財政理論（FTPL）の基礎となる金融・財政レジームの分類**］
-- Trabandt, Mathias, and Harald Uhlig (2011) "The Laffer Curve Revisited." *Journal of Monetary Economics*, 58(4), pp. 305-327. [doi](https://doi.org/10.1016/j.jmoneco.2011.07.003). ［**資本蓄積と内生的成長を考慮したラッファーカーブの定量的推計**］
+- Leeper, Eric M. (1991) "Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies." *Journal of Monetary Economics*, 27(1), pp. 129-147. [doi](https://doi.org/10.1016/0304-3932(91)90007-B). **物価水準の財政理論（FTPL）の基礎となる金融・財政レジームの分類**
+- Trabandt, Mathias, and Harald Uhlig (2011) "The Laffer Curve Revisited." *Journal of Monetary Economics*, 58(4), pp. 305-327. [doi](https://doi.org/10.1016/j.jmoneco.2011.07.003). **資本蓄積と内生的成長を考慮したラッファーカーブの定量的推計**
 
 ```{=latex}
 \clearpage
