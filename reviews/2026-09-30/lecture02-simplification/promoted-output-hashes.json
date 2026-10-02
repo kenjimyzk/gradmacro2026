@@ -1,0 +1,22 @@
+{
+  "lecture02": {
+    "pdf": {
+      "path": "/Users/kenjimyzk/work/gradmacro2026/lecture02.pdf",
+      "sha256": "d91637934d051866dd382c9c052242c5b0b9b35be1ef066fc1b8c3f2eb62dc58"
+    },
+    "html": {
+      "path": "/Users/kenjimyzk/work/gradmacro2026/lecture02.html",
+      "sha256": "0c13e7d99487dc302855bbfa7d50a0ed360b940aee1dc49e79fb8e9a2a882228"
+    }
+  },
+  "solution": {
+    "pdf": {
+      "path": "/Users/kenjimyzk/work/gradmacro2026/solution.pdf",
+      "sha256": "a51a14f4448efc616fbb219300ffc83100c1309900314694df48016ad8d0070e"
+    },
+    "html": {
+      "path": "/Users/kenjimyzk/work/gradmacro2026/solution.html",
+      "sha256": "189f2acfe01fb5b884a619da3e1bd6961c75ab19aec7f5e7c444d092bb1c401d"
+    }
+  }
+}

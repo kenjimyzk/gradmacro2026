@@ -9,3 +9,7 @@ site_libs/
 materials/
 /.quarto/
 **/*.quarto_ipynb
+
+# Local lecture recording and audio
+/video/GMT20260922-111227_Recording_1680x892.mp4
+/video/audio_16k_mono.wav

@@ -47,9 +47,9 @@
     <text x="870" y="228" font-size="17">ショックの波及</text>
     <text x="870" y="253" font-size="17">ρᵗ で減衰</text>
     <text x="870" y="278" font-size="17">政策効果の形</text>
-    <text x="242" y="448" font-size="23" font-weight="700">状態空間</text>
-    <text x="242" y="478" font-size="17"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="12">t+1</tspan><tspan> = A</tspan><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="12">t</tspan><tspan> + Bε</tspan><tspan baseline-shift="sub" font-size="12">t+1</tspan></text>
-    <text x="242" y="503" font-size="17">固有値で安定性を読む</text>
+    <text x="242" y="448" font-size="23" font-weight="700">1変数の安定性</text>
+    <text x="242" y="478" font-size="17"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="12">t+1</tspan><tspan> = a</tspan><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="242" y="503" font-size="17">|a| &lt; 1 なら0へ収束</text>
     <text x="666" y="448" font-size="23" font-weight="700">対数線形近似</text>
     <text x="666" y="478" font-size="17">非線形条件を線形化</text>
     <text x="666" y="503" font-size="17">第4回以降のDSGE分析へ</text>

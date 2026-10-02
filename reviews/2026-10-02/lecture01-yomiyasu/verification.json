@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "unchanged": true,
+    "count": 1
+  },
+  "display_math": {
+    "unchanged": true,
+    "count": 20
+  },
+  "inline_math": {
+    "unchanged": true,
+    "count": 100
+  },
+  "code_blocks": {
+    "unchanged": true,
+    "count": 38
+  },
+  "headings": {
+    "unchanged": true,
+    "count": 46
+  },
+  "tables": {
+    "unchanged": true,
+    "count": 23
+  },
+  "figures": {
+    "unchanged": true,
+    "count": 6
+  },
+  "includes": {
+    "unchanged": true,
+    "count": 2
+  },
+  "links": {
+    "unchanged": true,
+    "count": 11
+  },
+  "hash_before": "7f25fd26cbd2739d61143197a35a0d5dc6a59cd778f27e1a9d2f5fc98b523841",
+  "hash_after": "69ebd7e74a1dc5f91b0084bffdcff3a04adbbaeba66cd09422afddc6b003d83b"
+}

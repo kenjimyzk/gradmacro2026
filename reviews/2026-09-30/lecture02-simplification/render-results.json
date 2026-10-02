@@ -1,0 +1,64 @@
+{
+  "lecture02": {
+    "returncode": 0,
+    "seconds": 10.57,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "lecture02.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "519cf50296a93858b043b302aa2605f26c5bd9771ce1aaf8b23862ad7122fd22",
+    "outputs": {
+      "html": {
+        "path": "/var/folders/gg/bhhs5n316gjfc4f55jzf3rbc0000gn/T/gradmacro-lecture02-20260930-37bwda2m/lecture02.html",
+        "bytes": 105268,
+        "sha256": "0c13e7d99487dc302855bbfa7d50a0ed360b940aee1dc49e79fb8e9a2a882228"
+      },
+      "pdf": {
+        "path": "/var/folders/gg/bhhs5n316gjfc4f55jzf3rbc0000gn/T/gradmacro-lecture02-20260930-37bwda2m/lecture02.pdf",
+        "bytes": 630177,
+        "sha256": "d91637934d051866dd382c9c052242c5b0b9b35be1ef066fc1b8c3f2eb62dc58"
+      }
+    }
+  },
+  "solution": {
+    "returncode": 0,
+    "seconds": 11.26,
+    "command": [
+      "Rscript",
+      "--vanilla",
+      "scripts/render-lecture.R",
+      "solution.qmd",
+      "--to",
+      "all",
+      "-M",
+      "latex-auto-install:false",
+      "-M",
+      "keep-tex:true",
+      "-M",
+      "latex-clean:false"
+    ],
+    "source_sha256": "77956aaca56ddf031e57ea2ea8dcd2e3dd1472abdc81a3b81fedbcabc7832f6d",
+    "outputs": {
+      "html": {
+        "path": "/var/folders/gg/bhhs5n316gjfc4f55jzf3rbc0000gn/T/gradmacro-lecture02-20260930-37bwda2m/solution.html",
+        "bytes": 156194,
+        "sha256": "189f2acfe01fb5b884a619da3e1bd6961c75ab19aec7f5e7c444d092bb1c401d"
+      },
+      "pdf": {
+        "path": "/var/folders/gg/bhhs5n316gjfc4f55jzf3rbc0000gn/T/gradmacro-lecture02-20260930-37bwda2m/solution.pdf",
+        "bytes": 388400,
+        "sha256": "a51a14f4448efc616fbb219300ffc83100c1309900314694df48016ad8d0070e"
+      }
+    }
+  }
+}

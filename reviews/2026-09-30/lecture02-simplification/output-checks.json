@@ -1,0 +1,69 @@
+{
+  "lecture02": {
+    "pages": 29,
+    "local_html_assets_checked": 17,
+    "math_spans": 331,
+    "material_tex_warnings": [],
+    "locations": {
+      "第2回の地図": [
+        3
+      ],
+      "1変数の線形差分": [
+        12
+      ],
+      "前向き変数と期待": [
+        13
+      ],
+      "無バブル条件": [
+        13,
+        14,
+        28
+      ],
+      "初読時に押さえる": [
+        24
+      ],
+      "AR(1)ショックと前向き方程式": [
+        28
+      ],
+      "問7[": [
+        29
+      ]
+    },
+    "source_sha256": "519cf50296a93858b043b302aa2605f26c5bd9771ce1aaf8b23862ad7122fd22"
+  },
+  "solution": {
+    "pages": 44,
+    "local_html_assets_checked": 13,
+    "math_spans": 573,
+    "material_tex_warnings": [],
+    "locations": {
+      "第2回の地図": [],
+      "1変数の線形差分": [],
+      "前向き変数と期待": [],
+      "無バブル条件": [
+        10,
+        13,
+        16
+      ],
+      "初読時に押さえる": [],
+      "AR(1)ショックと前向き方程式": [
+        1,
+        10
+      ],
+      "問7[": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        16,
+        19,
+        29,
+        35,
+        39,
+        43
+      ]
+    },
+    "source_sha256": "77956aaca56ddf031e57ea2ea8dcd2e3dd1472abdc81a3b81fedbcabc7832f6d"
+  }
+}

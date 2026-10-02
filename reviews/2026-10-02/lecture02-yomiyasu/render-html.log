@@ -1,0 +1,25 @@
+pandoc 
+  to: html
+  output-file: lecture02.html
+  standalone: true
+  section-divs: true
+  html-math-method: katex
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  number-sections: true
+  
+metadata
+  document-css: false
+  link-citations: true
+  lang: ja
+  title: 第2回：時系列分析と対数近似
+  subtitle: マクロ経済学B
+  author: 宮﨑憲治
+  date: '2026-04-01'
+  date-format: YYYY年度
+  theme: cosmo
+  
+Output created: lecture02.html
+
