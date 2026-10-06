@@ -322,22 +322,32 @@ $$
 $$
 となります。したがって期待超過収益率 $10/9-1=1/9$ は正です。株式は限界効用の高い不況で低い収益を払うため、無リスク債より不況保険として劣ります。状態別ペイオフが一致しないので、株式買い・債券売りの取引には損失状態があり、裁定ではありません。
 
-### 問6 `[Derivation] [Research extension]`：状態変数と債券表記
+### 問6 `[Derivation] [Research extension]`：変動利子率と状態変数
 
-購入額 $B_t$ の次期ペイオフは $R_t^f(z_t)B_t$ です。したがって継続価値を $V^H(B_t,z_{t+1})$ とだけ書くと、同じ $B_t$ でも異なる $z_t$ が異なる次期富を生む情報が落ちます。次期の額面を $A_t\equiv R_t^f(z_t)B_t$、価格を $q_t^f(z_t)=1/R_t^f(z_t)$ とすれば、予算制約は
+$R_t^f=R^f(z_t)$ は $t$ 期に確定し、購入額 $B_t$ の次期ペイオフは $R_t^fB_t$ です。したがって継続価値を $V^H(B_t,z_{t+1})$ とだけ書くと、同じ $B_t$ でも購入時の利子率が異なれば次期の受取額が異なる情報が落ちます。
+
+前期の購入額に適用される利子率 $R_{t-1}^f$ を状態に加え、$t$ 期の状態を $(B_{t-1},R_{t-1}^f,z_t)$ とします。予算制約は
 $$
-C_t+q_t^f(z_t)A_t=Y(z_t)+A_{t-1}
+C_t+B_t=R_{t-1}^fB_{t-1}+Y(z_t)
 $$
-です。Bellman 方程式は
+です。消費を予算制約から代入すると、Bellman 方程式は
 $$
-V^H(A_{t-1},z_t)
-=\max_{A_t}
-\left\{
-u\!\left(Y(z_t)+A_{t-1}-q_t^f(z_t)A_t\right)
-+\beta\mathbb E_tV^H(A_t,z_{t+1})
-\right\}.
+\begin{aligned}
+&V^H(B_{t-1},R_{t-1}^f,z_t)=\max_{B_t}\Bigl\{\\
+&\quad U\!\left(R_{t-1}^fB_{t-1}+Y(z_t)-B_t\right)
++\beta\mathbb E_t\left[V^H(B_t,R_t^f,z_{t+1})\right]\Bigr\}.
+\end{aligned}
 $$
-額面 $A_t$ 自体が次期の確定ペイオフなので、状態は $(A_t,z_{t+1})$ で十分です。
+最大化は、消費が効用関数の定義域に入り、所定の資産制約を満たす $B_t$ について行います。次期の状態は $(B_t,R_t^f,z_{t+1})$ なので、債券購入時に確定した利子率も引き継がれます。
+
+利子率が一定の $R_t^f=R$ なら、利子率を状態変数として記録する必要はありません。状態変数を $(B_{t-1},z_t)$ の2つとする Bellman 方程式
+$$
+\begin{aligned}
+&V^H(B_{t-1},z_t)=\max_{B_t}\Bigl\{U\!\left(RB_{t-1}+Y(z_t)-B_t\right)\\
+&\quad+\beta\mathbb E_t\left[V^H(B_t,z_{t+1})\right]\Bigr\}.
+\end{aligned}
+$$
+に戻ります。
 
 ```{=latex}
 \clearpage
