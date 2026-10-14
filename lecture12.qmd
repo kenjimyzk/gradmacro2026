@@ -970,6 +970,7 @@ $$
 **問7 [Research extension] [Computation]：数値例の比較計算**
 
 共通パラメータを $\beta=0.99, \gamma=1, \varphi=1, \lambda=0.30, p=0$ とする。以下の 3 つの制度ケースについて、$\chi$、$\Theta_D$、および総需要比率 $\Omega_T / \Omega_R$ の数値を計算し、結果を比較・評価しなさい。
+
 1. $\tau_D = 0$
 2. $\tau_D = \lambda = 0.30$
 3. $\tau_D = 0.45$
