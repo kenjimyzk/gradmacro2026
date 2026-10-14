@@ -37,6 +37,8 @@ lang: ja
 
 解答は結論だけでなく、主要な代入と経済的な理由を示します。問題文の仮定と記号は各回の講義ノートに従います。
 
+第4回の講義ノートに合わせ、異時点間消費代替弾力性をEIS（Elasticity of Intertemporal Substitution）、Frisch（フリッシュ）労働供給弾力性をFE（Frisch Elasticity）と略記します。FEは、消費の限界効用を一定に保ったときの実質賃金の変化に対する労働供給の弾力性です。第4回の効用関数では $\mathrm{EIS}=1/\gamma$、$\mathrm{FE}=1/\varphi$ です。
+
 ```{=latex}
 \clearpage
 ```
@@ -286,17 +288,17 @@ $$
 $$
 R_t=\frac{1}{\mathbb E_tQ_{t,t+1}}
 $$
-です。
+です。$\mathbb E_tQ_{t,t+1}$ は、翌期に確実に消費財1単位を受け取る債券の当期価格を表します。この価格が高いほど、無リスク総利子率 $R_t$ は低くなります。
 
 ### 問4 `[Core] [Derivation]`：企業価値
 
 無バブル条件のもとで、企業価値は
 $$
-V_t^F
+V_t
 =\sum_{i=1}^{\infty}\delta^iD
 =D\frac{\delta}{1-\delta}
 $$
-です。$\delta=1/R$ と置けば $V_t^F=D/(R-1)$ となり、学部で学ぶ永久配当の割引現在価値に一致します。
+です。$\delta=1/R$ と置けば $V_t=D/(R-1)$ となり、学部で学ぶ永久配当の割引現在価値に一致します。
 
 ## 発展問題
 
@@ -304,7 +306,7 @@ $$
 
 株価は
 $$
-V_t^F
+V_t
 =\frac12(0.8)(1.5)+\frac12(1.2)(0.5)
 =0.9
 $$
@@ -316,9 +318,9 @@ $$
 $$
 です。
 
-株式1株の購入代金 $V_t^F=0.9$ を借り入れると、当期の純支出は $0.9-0.9=0$ です。翌期には借入元利金 $R_tV_t^F=0.9$ を返済するため、純受取額は
+株式1株の購入代金 $V_t=0.9$ を借り入れると、当期の純支出は $0.9-0.9=0$ です。翌期には借入元利金 $R_tV_t=0.9$ を返済するため、純受取額は
 $$
-X_{t+1}-R_tV_t^F=
+X_{t+1}-R_tV_t=
 \begin{cases}
 0.6, & \text{好況},\\
 -0.4, & \text{不況}.
@@ -326,14 +328,14 @@ X_{t+1}-R_tV_t^F=
 $$
 不況では損失が出るので、この取引は裁定ではありません。SDFで評価した純受取額は
 $$
-\mathbb E_t\left[Q_{t,t+1}(X_{t+1}-R_tV_t^F)\right]
+\mathbb E_t\left[Q_{t,t+1}(X_{t+1}-R_tV_t)\right]
 =\tfrac12(0.8)(0.6)+\tfrac12(1.2)(-0.4)=0
 $$
 となり、本文の無裁定条件と整合しています。
 
 ### 問6 `[Derivation] [Research extension]`：変動利子率と状態変数
 
-$R_t=R(z_t)$ は $t$ 期に確定し、購入額 $B_t$ の次期ペイオフは $R_tB_t$ です。したがって継続価値を $V^H(B_t,z_{t+1})$ とだけ書くと、同じ $B_t$ でも購入時の利子率が異なれば次期の受取額が異なる情報が落ちます。
+$R_t=R(z_t)$ は $t$ 期に確定し、購入額 $B_t$ の次期ペイオフは $R_tB_t$ です。したがって継続価値を $J(B_t,z_{t+1})$ とだけ書くと、同じ $B_t$ でも購入時の利子率が異なれば次期の受取額が異なる情報が落ちます。
 
 前期の購入額に適用される利子率 $R_{t-1}$ を状態に加え、$t$ 期の状態を $(B_{t-1},R_{t-1},z_t)$ とします。予算制約は
 $$
@@ -342,9 +344,9 @@ $$
 です。消費を予算制約から代入すると、Bellman 方程式は
 $$
 \begin{aligned}
-&V^H(B_{t-1},R_{t-1},z_t)=\max_{B_t}\Bigl\{\\
+&J(B_{t-1},R_{t-1},z_t)=\max_{B_t}\Bigl\{\\
 &\quad U\!\left(R_{t-1}B_{t-1}+Y(z_t)-B_t\right)
-+\beta\mathbb E_t\left[V^H(B_t,R_t,z_{t+1})\right]\Bigr\}.
++\beta\mathbb E_t\left[J(B_t,R_t,z_{t+1})\right]\Bigr\}.
 \end{aligned}
 $$
 最大化は、消費が効用関数の定義域に入り、所定の資産制約を満たす $B_t$ について行います。次期の状態は $(B_t,R_t,z_{t+1})$ なので、債券購入時に確定した利子率も引き継がれます。
@@ -352,8 +354,8 @@ $$
 利子率が一定の $R_t=R$ なら、利子率を状態変数として記録する必要はありません。状態変数を $(B_{t-1},z_t)$ の2つとする Bellman 方程式
 $$
 \begin{aligned}
-&V^H(B_{t-1},z_t)=\max_{B_t}\Bigl\{U\!\left(RB_{t-1}+Y(z_t)-B_t\right)\\
-&\quad+\beta\mathbb E_t\left[V^H(B_t,z_{t+1})\right]\Bigr\}.
+&J(B_{t-1},z_t)=\max_{B_t}\Bigl\{U\!\left(RB_{t-1}+Y(z_t)-B_t\right)\\
+&\quad+\beta\mathbb E_t\left[J(B_t,z_{t+1})\right]\Bigr\}.
 \end{aligned}
 $$
 に戻ります。
