@@ -91,7 +91,6 @@ lang: ja
 | $MRTS(X_1, X_2)$ | $F_{X_1}/F_{X_2}$ | 投入要素間の技術的限界代替率 |
 | $\mu^p$ | $\psi/(\psi-1) > 1$ | 中間財需要の弾力性が決定する構造的グロス・マークアップ |
 | $MC$ | $(1+\tau_p)/\mu^p$ | 柔軟価格・対称均衡における定常的な実質限界費用 |
-| $\Theta_N$ | $\varphi+\alpha+\gamma(1-\alpha)$ | 定常状態解および対数線形解に共通して現れる実物側の分母定数 |
 
 # Dixit--Stiglitz 型の最終財集計
 
@@ -382,27 +381,27 @@ $$
 $$
 N^\varphi \left( N^{1-\alpha} \right)^\gamma = MC (1-\alpha) N^{-\alpha} \implies N^{\varphi + \alpha + \gamma(1-\alpha)} = MC (1-\alpha)
 $$
-が得られます。第4回と同様に実物側の分母パラメータを $\Theta_N \equiv \varphi + \alpha + \gamma(1-\alpha) > 0$ と定義すると、独占的競争のもとでの定常状態水準値（上付き添字 $MC$）が一意に求まります。
+が得られます。分母 $\varphi+\alpha+\gamma(1-\alpha)$ は正なので、$N$ について解くと、独占的競争のもとでの定常状態水準値（上付き添字 $MC$）が一意に求まります。
 $$
 \begin{aligned}
-N^{MC} &= \left[ MC (1-\alpha) \right]^{\frac{1}{\Theta_N}},\\
-Y^{MC} &= (N^{MC})^{1-\alpha} = \left[ MC (1-\alpha) \right]^{\frac{1-\alpha}{\Theta_N}},\\
+N^{MC} &= \left[ MC (1-\alpha) \right]^{\frac{1}{\varphi+\alpha+\gamma(1-\alpha)}},\\
+Y^{MC} &= (N^{MC})^{1-\alpha} = \left[ MC (1-\alpha) \right]^{\frac{1-\alpha}{\varphi+\alpha+\gamma(1-\alpha)}},\\
 C^{MC} &= Y^{MC},\\
-W^{MC} &= MC (1-\alpha) (N^{MC})^{-\alpha} = \left[ MC (1-\alpha) \right]^{\frac{\varphi + \gamma(1-\alpha)}{\Theta_N}}.
+W^{MC} &= MC (1-\alpha) (N^{MC})^{-\alpha} = \left[ MC (1-\alpha) \right]^{\frac{\varphi + \gamma(1-\alpha)}{\varphi+\alpha+\gamma(1-\alpha)}}.
 \end{aligned}
 $$
 
 ここで、第4回で求めた完全競争の定常状態水準（$MC = 1$ のケース、上付き添字 $0$）
 $$
-N^0 = (1-\alpha)^{\frac{1}{\Theta_N}}, \qquad Y^0 = C^0 = (N^0)^{1-\alpha}, \qquad W^0 = (1-\alpha) (N^0)^{-\alpha}
+N^0 = (1-\alpha)^{\frac{1}{\varphi+\alpha+\gamma(1-\alpha)}}, \qquad Y^0 = C^0 = (N^0)^{1-\alpha}, \qquad W^0 = (1-\alpha) (N^0)^{-\alpha}
 $$
 と本モデルの定常状態との比率を計算すると、以下の極めて明快な関係式が得られます。
 $$
 \begin{aligned}
-\frac{N^{MC}}{N^0} &= MC^{\frac{1}{\Theta_N}},\\
-\frac{Y^{MC}}{Y^0} &= MC^{\frac{1-\alpha}{\Theta_N}},\\
-\frac{C^{MC}}{C^0} &= MC^{\frac{1-\alpha}{\Theta_N}},\\
-\frac{W^{MC}}{W^0} &= MC^{1 - \frac{\alpha}{\Theta_N}} = MC^{\frac{\varphi + \gamma(1-\alpha)}{\Theta_N}}.
+\frac{N^{MC}}{N^0} &= MC^{\frac{1}{\varphi+\alpha+\gamma(1-\alpha)}},\\
+\frac{Y^{MC}}{Y^0} &= MC^{\frac{1-\alpha}{\varphi+\alpha+\gamma(1-\alpha)}},\\
+\frac{C^{MC}}{C^0} &= MC^{\frac{1-\alpha}{\varphi+\alpha+\gamma(1-\alpha)}},\\
+\frac{W^{MC}}{W^0} &= MC^{1 - \frac{\alpha}{\varphi+\alpha+\gamma(1-\alpha)}} = MC^{\frac{\varphi + \gamma(1-\alpha)}{\varphi+\alpha+\gamma(1-\alpha)}}.
 \end{aligned}
 $$
 補助金が存在しない場合、実質限界費用は $MC = 1/\mu^p < 1$ です。したがって、指数の各項がすべて正であることから、**労働投入量、産出量、民間消費、実質賃金のすべてが、完全競争定常状態に比べて厳密に低い水準へと押し下げられる**ことが確認できます。これが独占力（マークアップ）の存在がもたらす長期的な実物厚生の損失です。是正補助金 $\tau_p = \tau_p^*$ を導入すると $MC = 1$ となり、これらすべての比率は $1$ に復帰します。
@@ -441,9 +440,9 @@ $$
 この方程式系は、第4回の完全競争モデルにおける対数線形方程式系と完全に同一です。したがって、技術ショック $a_t$ に対する各マクロ変数の対数線形解も全く同一となります。
 $$
 \begin{aligned}
-n_t &= \frac{1-\gamma}{\Theta_N} a_t,\\
-y_t = c_t &= \frac{1+\varphi}{\Theta_N} a_t,\\
-w_t &= \frac{\gamma+\varphi}{\Theta_N} a_t.
+n_t &= \frac{1-\gamma}{\varphi+\alpha+\gamma(1-\alpha)} a_t,\\
+y_t = c_t &= \frac{1+\varphi}{\varphi+\alpha+\gamma(1-\alpha)} a_t,\\
+w_t &= \frac{\gamma+\varphi}{\varphi+\alpha+\gamma(1-\alpha)} a_t.
 \end{aligned}
 $$
 
