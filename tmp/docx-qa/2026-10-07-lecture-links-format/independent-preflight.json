@@ -1,0 +1,32 @@
+{
+  "file": "/Users/kenjimyzk/work/gradmacro2026/講義リンク（マクロ経済学B）.docx",
+  "sha256": "e98dd0d7b318126e23126cfefcc6b904ef59255afbc767b142c867eca741ed1a",
+  "diagnostics": [],
+  "verification": {
+    "word_open": "not_performed",
+    "layout": "not_performed",
+    "preservation": "not_performed",
+    "full_schema": "not_performed"
+  },
+  "external_targets_fetched": 0,
+  "scope": "focused_read_only_structural_preflight",
+  "parts_checked": 11,
+  "xml_parts_checked": 11,
+  "input_unchanged": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "structural_status": "pass"
+  },
+  "baseline": {
+    "file": "/Users/kenjimyzk/work/gradmacro2026/tmp/docx-qa/2026-10-07-lecture-links-format/before-format.docx",
+    "sha256": "877d8b7bdd8ff2cb9f1d07e95e456860a81c0fcfd6491a191fe9ac53cf5fdfec",
+    "summary": {
+      "errors": 0,
+      "warnings": 0,
+      "structural_status": "pass"
+    },
+    "input_unchanged": true,
+    "comparison": "exact_diagnostic_match_only; not a content-preservation check"
+  }
+}

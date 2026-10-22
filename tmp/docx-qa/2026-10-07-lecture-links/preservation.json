@@ -1,0 +1,26 @@
+{
+  "original_sha256": "e468d55eafad4e0c92d9c51e98edd951db6b3d5e5f5eb5d09d8b3b6be46a6fc0",
+  "final_sha256": "877d8b7bdd8ff2cb9f1d07e95e456860a81c0fcfd6491a191fe9ac53cf5fdfec",
+  "changed_parts": [
+    "word/document.xml",
+    "word/_rels/document.xml.rels"
+  ],
+  "original_paragraphs_preserved": true,
+  "added_paragraphs": 6,
+  "new_hyperlinks": 2,
+  "heading": "第3回リンク",
+  "word_normal_open": false,
+  "word_corruption_prompt": false,
+  "word_window_path": "/Users/kenjimyzk/work/gradmacro2026/講義リンク（マクロ経済学B）.docx",
+  "hash_after_word_open": "91e4e383ef3c24d8f04657140a00083173b9809ddb9a98582a7a923ef4ea035b",
+  "added_content_exact_match": true,
+  "new_hyperlink_targets_exact_match": true,
+  "added_link_paragraph_alignment": "left",
+  "word_normal_open_before_alignment_adjustment": true,
+  "final_render_pages": 2,
+  "final_render_all_pages_visually_checked": true,
+  "render_fontconfig": "/Users/kenjimyzk/work/gradmacro2026/tmp/docx-qa/2026-10-07-lecture-links/fontconfig/fonts.conf",
+  "final_word_reopen": "not verified; computer-use service timeout",
+  "final_content_preservation_pass": true,
+  "final_link_target_verification_pass": true
+}
