@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" role="img" aria-labelledby="title desc">
   <title id="title">NK版AD-AS表現</title>
-  <desc id="desc">期待将来インフレを所与とし、横軸を需給ギャップ、縦軸をインフレ率に取る。条件付きNKフィリップス曲線をNK-AS、IS曲線とテイラー・ルールを合わせた関係をNK-ADとして示す。</desc>
+  <desc id="desc">翌期の需給ギャップとインフレ率の期待値、および自然利子率を所与とする。横軸は需給ギャップ、縦軸はインフレ率。上向きの直線がNK-AS、下向きの直線がNK-AD。金融緩和ショックでNK-ADが右上へ平行移動し、NK-ASとの交点が右上に移る。</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#526070"/>
@@ -17,7 +17,7 @@
   <rect x="48" y="42" width="884" height="520" rx="16" fill="#f8fafc" stroke="#d9e0ea"/>
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
     <text x="82" y="88" font-size="30" font-weight="700" fill="#1f2937">NK版 AD-AS 表現</text>
-    <text x="82" y="119" font-size="18" fill="#566273">期待将来インフレを所与として、需給ギャップとインフレ率の関係を読む</text>
+    <text x="82" y="119" font-size="18" fill="#566273">翌期の需給ギャップとインフレ率の期待値、および自然利子率を所与とする</text>
     <text x="430" y="143" font-size="16" fill="#6b2b24">条件付きNK-AS：π<tspan baseline-shift="sub" font-size="11">t</tspan> − β𝔼<tspan baseline-shift="sub" font-size="11">t</tspan>π<tspan baseline-shift="sub" font-size="11">t+1</tspan> = κ<tspan baseline-shift="sub" font-size="11">x</tspan>&#160;x<tspan baseline-shift="sub" font-size="11">t</tspan></text>
   </g>
 
@@ -42,19 +42,19 @@
   <text x="108" y="158" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" fill="#20242a">π<tspan baseline-shift="sub" font-size="14">t</tspan></text>
   <text x="367" y="505" font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="17" fill="#566273">x<tspan baseline-shift="sub" font-size="12">t</tspan> = 0</text>
 
-  <path d="M 196 420 C 286 362 412 282 596 188" fill="none" stroke="#d45d48" stroke-width="5" stroke-linecap="round"/>
-  <path d="M 196 198 C 316 254 456 330 604 422" fill="none" stroke="#2f6fbe" stroke-width="5" stroke-linecap="round"/>
-  <path d="M 252 176 C 372 232 512 308 660 400" fill="none" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
-  <circle cx="392" cy="306" r="8" fill="#20242a" filter="url(#shadow)"/>
-  <circle cx="432" cy="284" r="8" fill="#2f6fbe" filter="url(#shadow)"/>
-  <path d="M 402 300 L 426 286" fill="none" stroke="#2f6fbe" stroke-width="2.4" marker-end="url(#arrow-blue)"/>
+  <line x1="190" y1="430" x2="610" y2="178" stroke="#d45d48" stroke-width="5" stroke-linecap="round"/>
+  <line x1="190" y1="210" x2="610" y2="420" stroke="#2f6fbe" stroke-width="5" stroke-linecap="round"/>
+  <line x1="250" y1="174" x2="640" y2="369" stroke="#2f6fbe" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <circle cx="390" cy="310" r="8" fill="#20242a" filter="url(#shadow)"/>
+  <circle cx="450" cy="274" r="8" fill="#2f6fbe" filter="url(#shadow)"/>
+  <path d="M 405 318 L 445 294" fill="none" stroke="#2f6fbe" stroke-width="2.4" marker-end="url(#arrow-blue)"/>
 
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif">
-    <text x="504" y="205" font-size="20" font-weight="700" fill="#d45d48">NK-AS</text>
+    <text x="504" y="192" font-size="20" font-weight="700" fill="#d45d48">NK-AS</text>
     <text x="472" y="420" font-size="20" font-weight="700" fill="#2f6fbe">NK-AD</text>
     <text x="474" y="445" font-size="15" fill="#214d85">IS＋テイラー・ルール</text>
-    <text x="446" y="274" font-size="16" fill="#2f6fbe">金融緩和など</text>
-    <text x="446" y="296" font-size="16" fill="#2f6fbe">NK-AD は右上へ</text>
+    <text x="507" y="263" font-size="16" fill="#2f6fbe">金融緩和後の</text>
+    <text x="507" y="286" font-size="16" font-weight="700" fill="#2f6fbe">NK-AD</text>
   </g>
 
   <g font-family="Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif" filter="url(#shadow)">
@@ -69,7 +69,7 @@
     <text x="732" y="320" font-size="19" font-weight="700">横軸</text>
     <text x="732" y="348" font-size="16">産出 Y ではなく</text>
     <text x="732" y="370" font-size="16">需給ギャップ x<tspan baseline-shift="sub" font-size="11">t</tspan></text>
-    <text x="732" y="438" font-size="19" font-weight="700">均衡</text>
+    <text x="732" y="438" font-size="19" font-weight="700">条件付き均衡</text>
     <text x="732" y="466" font-size="16">NK-AS と NK-AD の</text>
     <text x="732" y="488" font-size="16">交点で決まる</text>
   </g>
